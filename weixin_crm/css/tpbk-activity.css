@@ -1,0 +1,101 @@
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+
+#lantern_slide {
+	BORDER-RIGHT: #ccc 1px solid; 
+	PADDING-RIGHT: 3px; 
+	BORDER-TOP: #ccc 1px solid; 
+	PADDING-LEFT: 3px; 
+	PADDING-BOTTOM: 3px; 
+	OVERFLOW: hidden; 
+	BORDER-LEFT: #ccc 1px solid; 
+	WIDTH: 345px;
+	PADDING-TOP: 3px; 
+	BORDER-BOTTOM: #ccc 1px solid; 
+	HEIGHT: 170px
+}
+
+#bimg {
+	FILTER: progid:DXImageTransform.Microsoft.Fade ( duration=0.5,overlap=1.0 ); 
+	OVERFLOW: hidden; 
+	HEIGHT: 170px
+}
+#info {
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 14px; 
+	LINE-HEIGHT: 34px; 
+	TEXT-ALIGN: center
+}
+.lkff A {
+	COLOR: #fff; 
+	TEXT-DECORATION: none
+}
+.lkff A:hover {
+	COLOR: #fff; 
+	TEXT-DECORATION: none
+}
+#simg {
+	PADDING-LEFT: 9px
+}
+#simg DIV {
+	FONT-SIZE: 12px; 
+	BACKGROUND: #d6d6d6; 
+	FLOAT: left; 
+	WIDTH: 18px; 
+	CURSOR: pointer; 
+	COLOR: #fff; 
+	LINE-HEIGHT: 18px; 
+	MARGIN-RIGHT: 1px; 
+	HEIGHT: 18px; 
+	TEXT-ALIGN: center
+}
+#simg .f1 {
+	BACKGROUND: #6f6f6f
+}
+.dis {
+	DISPLAY: block
+}
+.undis {
+	DISPLAY: none
+}
+.lkff {
+	WIDTH: 170px
+}
+
+#font_hd {
+	filter:alpha(opacity=70);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	MARGIN-TOP: -25px;
+        margin-left: 0px;
+	BACKGROUND: #343434;	
+	WIDTH: 100%; 
+	HEIGHT: 20px
+}
+#font_hd TD {
+	OVERFLOW: hidden; 
+	HEIGHT: 20px
+}
+.pic {
+	OVERFLOW: hidden
+}
+.pic .dis A {
+	DISPLAY: block; 
+	FONT-SIZE: 262px; 
+	OVERFLOW: hidden; 
+	WIDTH: 345px;
+	FONT-FAMILY: Arial; 
+	HEIGHT: 170px;
+	TEXT-ALIGN: center
+}
+.pic .dis A IMG {
+	MAX-WIDTH: 345px;
+}
+#font_hd TD A {
+	FONT-SIZE: 12px; 
+	WIDTH: 240px;
+	LINE-HEIGHT: 25px; 
+	HEIGHT: 25px
+}

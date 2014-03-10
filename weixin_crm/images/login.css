@@ -1,0 +1,36 @@
+body{margin:0; padding:0; font-size:9pt;font-family:"微软雅黑";background-color:#FBFBFB;}
+#login{margin:0 auto;width:320px;height:400px;position:absolute;top:140px;left:50%;margin:0 0 0 -160px;}
+.login_name{font-size:26px;text-align:center;}
+.login_name span{color:#21759B;}
+#top_left{width:691px; height:89px; float:left;}
+#top_left img {margin-left:33px;}
+#top_center{width:248px; height:89px; background:url(login_05.gif); float:left;}
+
+#center_left{width:691px; height:190px; background:url(login_09.gif); float:left;}
+#center_middle{width:248px; height:190px;background:url(login_13.gif) repeat-y;}
+#center_right{width:36px; height:190px; float:right; background:url(login_11.gif);}
+
+#down_left{width:691px; height:89px; float:left; margin-top:15px;}
+#down_center{width:248px; height:89px; background:url(login_16.gif); float:left;}
+#inf{width:691px; height:38px; background:url(login_18.gif) no-repeat; }
+.inf_text{display:block; width:100px; height:20px; font-size:16px; font-weight:bolder; color:#fff; margin-left:17px; margin-top:12px; float:left;}
+.copyright{display:block; float:left; margin-left:17px; margin-top:15px;}
+
+#user{ margin-left:25px; margin-top:25px; height:56px;}
+#password{margin-left:25px; margin-top:15px; height:56px;}
+/*input{width:120px; height:18px; border:solid 1px #aca7a7; font-size:9pt;}*/
+#btn{margin:18px 28px 0 25px;height:28px;width:183px;*margin:18px 28px 0 50px;}
+#btn div{float:left;margin:0 5px 0 0;height:25px;line-height:25px;}
+#btn a{display:block; line-height:25px;width:50px; float:right; margin:0 0 0 15px;text-align:center;text-decoration:none;
+background: -webkit-linear-gradient(#2887B3, #1F688A);background: -moz-linear-gradient(#2887B3, #1F688A);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF2887B3,endColorstr=#FF1F688A);color:#ffffff;border-radius:6px;box-shadow:0 1px 5px #dddddd;}
+#btn a:hover{color:#eeeeee;}
+#btn a:active{margin:1px 0 0 15px;}
+
+#btn .login_reset{border:1px solid #cccccc;display:block;width:48px;height:25px;line-height:24px; float:right; margin:0 0 0 15px;text-align:center;text-decoration:none;
+background: -webkit-linear-gradient(#FFFFFF, #E6E6E5);background: -moz-linear-gradient(#FFFFFF, #E6E6E5);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF,endColorstr=#FFE6E6E5);color:#666666;border-radius:6px;box-shadow:0 1px 5px #dddddd;}
+#btn .login_reset:hover{color:#333333;cursor:pointer;}
+#btn .login_reset:active{margin:1px 0 0 15px;}
+
+.login_frame{font-size:14px;border:1px solid #dddddd;width:300px;height:220px;background-color: #ffffff;border-radius:2px;margin:20px auto 0 auto;box-shadow:0px 4px 10px #dddddd;color:#777777;}
+.login_frame input[type="text"],input[type="password"]{width:242px;height:32px;line-height:32px;border-radius:3px;border:1px solid #dddddd;background:#fbfbfb;padding:0 5px;font-size:16px;color:#666666;font-weight:bold;box-shadow:1px 1px 5px #eeeeee inset;*margin:0 0 0 -25px;}
+

@@ -1,0 +1,198 @@
+/*
+    Document   : main
+    Created on : 2012-5-18, 14:54:15
+    Author     : mesiade
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+* {margin:0;padding:0;}
+body{font-family:"微软雅黑";}
+a{
+	color:#000;text-decoration:none;
+	&:hover{color:#56B4EF;text-decoration:underline;cursor:pointer;}
+}
+.floatleft{float:left;}.floatright{float:right;}
+::-moz-selection {
+	background: #E8F0F6;	
+}
+::-webkit-selection {
+	background: #E8F0F6;	
+}
+::selection {
+	background: #E8F0F6;	
+}
+
+input[type="checkbox"]{margin:0 7px 0 10px;}
+input[type="radio"]{margin:0 7px 0 0;}
+
+.manager_main{min-width:800px;min-height:500px;margin:0 15px 80px 15px;}
+.manager_title{font-size:24px;margin:5px 0 0 0;font-weight:normal;letter-spacing:1px;background-color: #ededed;padding:12px 0 12px 15px;}
+
+.manager_overview{padding:15px 0 10px 5px;font-size:12px;}
+.manage_num{color:#999999;}.manage_man{color:#21759B;}
+
+.manage_select{
+  select{width:130px;height:24px;border:1px solid #cccccc;border-radius:2px;line-height:24px;padding:2px;}
+}
+input[type="submit"]{
+  border-radius:8px;border:1px solid #cccccc;background:#ffffff;color:#666666;padding:3px 5px;background: -webkit-linear-gradient(#FFFFFF, #E6E6E5);background: -moz-linear-gradient(#FFFFFF, #E6E6E5);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF,endColorstr=#FFE6E6E5)";
+  &:hover{border:1px solid #999999;cursor:pointer;}
+  &:active{background: -webkit-linear-gradient(#E6E6E5, #FFFFFF);background: -moz-linear-gradient(#E6E6E5, #FFFFFF);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFE6E6E5,endColorstr=#FFFFFFFF)";}
+}
+input[type="button"]{
+  border-radius:8px;border:1px solid #cccccc;background:#ffffff;color:#666666;padding:3px 5px;background: -webkit-linear-gradient(#FFFFFF, #E6E6E5);background: -moz-linear-gradient(#FFFFFF, #E6E6E5);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF,endColorstr=#FFE6E6E5)";
+  &:hover{border:1px solid #999999;cursor:pointer;}
+  &:active{background: -webkit-linear-gradient(#E6E6E5, #FFFFFF);background: -moz-linear-gradient(#E6E6E5, #FFFFFF);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFE6E6E5,endColorstr=#FFFFFFFF)";}
+  &.important_button{
+    border-radius:8px;background:#216F94;color:#ffffff;padding:3px 5px;background: -webkit-linear-gradient(#298BB9, #216F94);background: -moz-linear-gradient(#298BB9, #216F94);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF298BB9,endColorstr=#FF216F94)";
+    &:hover{color:#eeeeee;}
+    &:active{background: -webkit-linear-gradient(#216F94, #298BB9);background: -moz-linear-gradient(#216F94, #298BB9);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF216F94,endColorstr=#FF298BB9)";}
+  }
+}
+.manage_list{
+  border:1px solid #dddddd;width:100%;margin:20px 0;
+  thead{
+    tr{
+      th{border-bottom:1px solid #dddddd;height:18px;line-height:18px;padding:8px 0;font-size:14px;color:#21759B;font-weight:normal;background: -webkit-linear-gradient(#F8F8F8, #EDEDED);background: -moz-linear-gradient(#F8F8F8, #EDEDED);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFF8F8F8,endColorstr=#FFEDEDED)";}
+    }
+  }
+  tbody{
+    tr{   height:38px;
+      td{
+        text-align:center;font-size:12px;height:18px;line-height:18px;border-bottom:1px solid #dddddd;padding:10px 0;overflow:auto;
+        a{
+          color:#21759B;
+          &:hover{color:#D54E21;text-decoration:none;}
+        }
+      }
+    }
+  }
+  tfoot{
+    tr{
+      td{text-align:center;height:18px;line-height:18px;padding:8px 0;font-size:14px;color:#21759B;font-weight:normal;background: -webkit-linear-gradient(#F8F8F8, #EDEDED);background: -moz-linear-gradient(#F8F8F8, #EDEDED);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFF8F8F8,endColorstr=#FFEDEDED)";}
+    }
+  }
+}
+.manager_add{
+  width:600px;height:600px;padding:10px;font-size:12px;
+  h6{margin:15px 0;font-size:14px;}
+  p{margin:20px 0 35px 0;}
+  .manager_info{
+    margin:0 0 30px 15px;width:600px;height:25px;
+    span{width:120px;display: block;float:left;line-height:25px;}
+    input{float:left;width:292px;height:17px;border:1px solid #dddddd;border-radius:3px;padding:3px;}    
+    select{float:left;margin:0;padding:2px;border:1px solid #dddddd;border-radius:3px;margin:0;width:80px;}
+  }
+    input[type="submit"]{color:#ffffff;background: -webkit-linear-gradient(#298BB9, #206D92);background: -moz-linear-gradient(#298BB9, #206D92);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF298BB9,endColorstr=#FF206D92)";}
+}
+
+
+
+/*成员权限*/
+
+.member_cache{
+  padding:10px 0 0 10px;
+  h6{margin:15px 0;font-size:14px;}
+  p{margin:20px 0;padding:0 0 0 8px;font-size:14px;}
+}
+
+.member_list{
+  border:1px solid #dddddd;width:100%;margin:20px 0;
+  thead{
+    tr{
+      th{border-bottom:1px solid #dddddd;height:18px;line-height:18px;padding:8px 0;font-size:14px;color:#21759B;font-weight:normal;background: -webkit-linear-gradient(#F8F8F8, #EDEDED);background: -moz-linear-gradient(#F8F8F8, #EDEDED);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFF8F8F8,endColorstr=#FFEDEDED)";}
+    }
+  }
+  tbody{
+    tr{height:38px;
+      &.auth_title{
+        td{background: -webkit-linear-gradient(#F8F8F7, #E3E3E3);background: -moz-linear-gradient(#F8F8F7, #E3E3E3);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFF8F8F7,endColorstr=#FFE3E3E3)";font-weight:bold;font-size:14px;}
+      }
+      td{
+        text-align:center;font-size:12px;height:18px;line-height:18px;border-bottom:1px solid #dddddd;padding:10px 0;overflow:auto;border-right:1px solid #dddddd;background:#f4f4f4;box-shadow:1px 0 0 #ffffff,0 1px 0 #ffffff;
+      }
+    }
+  }
+  tfoot{
+    tr{
+      td{text-align:center;height:18px;line-height:18px;padding:8px 0;font-size:14px;color:#21759B;font-weight:normal;background: -webkit-linear-gradient(#F8F8F8, #EDEDED);background: -moz-linear-gradient(#F8F8F8, #EDEDED);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFF8F8F8,endColorstr=#FFEDEDED)";}
+    }
+  }
+}
+
+
+
+
+/* 权限 */
+.cache_main{
+  width:auto;height:600px;padding:10px;font-size:12px;
+  h6{margin:15px 0;font-size:14px;}
+  p{margin:20px 0;padding:0 0 0 8px;font-size:14px;}
+  .manager_info{
+    margin:0 0 30px 15px;width:600px;height:25px;
+    span{width:120px;display: block;float:left;line-height:25px;}
+    input{float:left;width:292px;height:17px;border:1px solid #dddddd;border-radius:3px;padding:3px;}    
+    select{float:left;margin:0;padding:2px;border:1px solid #dddddd;border-radius:3px;margin:0;width:80px;}
+  }
+    input[type="submit"]{color:#ffffff;background: -webkit-linear-gradient(#298BB9, #206D92);background: -moz-linear-gradient(#298BB9, #206D92);filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF298BB9,endColorstr=#FF206D92)";}
+}
+
+.clear_cache{border-radius:5px;background-color:#F5F5F5;border:1px solid #DFDFDF;box-shadow:0 1px 0 #FFFFFF inset;margin:35px 0 0 0;}
+.clear_cache_title{padding:7px 10px;font-size:15px;font-weight:bold;background: -webkit-linear-gradient(#F9F9F9, #ECECEC);background: -moz-linear-gradient(#F9F9F9, #ECECEC);border-bottom:1px solid #DFDFDF;box-shadow:0 1px 0 #FFFFFF;color:#464646;filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFF9F9F9,endColorstr=#FFECECEC)";}
+.clear_cache_content{
+  padding:10px;text-align:center;
+  input[type="checkbox"]{margin:20px 8px 20px 10px;}
+  input[type="submit"]{margin:10px 0;}
+  span{*top:-20px;*position:relative;}
+}
+
+
+/*新游频道*/
+
+
+
+
+.page{
+   padding:0px 0 8px 5px;
+   a{color:#21759B;font-size:14px;
+     &:hover{color:#D54E21;text-decoration:none;}
+    }
+}
+
+
+#tagname{border:1px solid #dddddd;padding:3px;}
+#tagHtml{margin:0 0 10px 0;line-height:24px;}
+#gamename{border:1px solid #dddddd;padding:3px;}
+#tag_name{border:1px solid #dddddd;padding:3px;}
+
+.hasDatepicker{border:1px solid #dddddd;padding:3px 5px;margin:0 3px;}
+.insert_newGame_news{margin:7px 0 15px 0;}
+.form2 input[type="text"]{border:1px solid #dddddd;padding:2px 5px;border-radius: 3px 3px 3px 3px;}
+
+.skill_tips{
+  padding:0 0 10px 10px;
+  h6{margin:5px 0;font-size:14px;}
+  p{margin:6px 0;padding:0 0 0 8px;font-size:12px;}
+}
+
+
+
+
+/*游戏中心*/
+#search_game{border: 1px solid #DDDDDD;margin: 0 3px;padding: 3px 5px;}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+
+####架构文件夹说明#######
+
+Config   配置文件夹
+
+	bootstrap  引导 文件夹
+
+		bootstrap.php  引导文件
+
+		core.php       版本 接口文件
+
+		defined.php    系统变量定义文件
+
+		Dispatcher.class.php   路由文件
+
+		error_list.php  错误代码 文件
+
+		extends.php    扩展函数库 
+
+
+Controllers  控制器
+
+Logs     日志文件夹
+
+	Info   api调用 返回 sql 语句 日志记录
+
+	
+Plug     插件库
+
+Model    模型库
+
+
+##### PHP 方法,变量,命名 文件 以及 文件夹 命名##########
+
+
+方法 使用驼峰的规则 命名为简易的英文单词的拼接 如用户信息  即为userInfo 
+
+变量 命名为简易的全部小写的英文单词的拼接  可以在英文单词之间使用下划线 也可以使用驼峰的形式  即为user_info  userInfo
+
+Controllers 文件夹   新建目录 目录首字母大写 如需要创建关于用户的文件夹  即User文件夹
+
+	php控制器 命名   如需要新建一个关于用户的控制器php文件 即用户的英文单词＋Controller.class.php 首字母大写
+
+Model  文件夹  创建模型库  模型库 对应 为数据库的表名  1个模型库 对应 一张表
+
+规则使用驼峰的形式
+
+命名为 首字母大写 ＋ Model.class.php
+
+如我需要创建个关于用户积分的模型库
+
+表名为 weixin_user_integration  去除表前缀  即 weixin
+
+命名为userIntegrationModel.class.php
