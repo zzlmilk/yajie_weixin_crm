@@ -12,13 +12,13 @@ class userController implements User {
 		$result = $userModel->initialize();
 
 
-		assign('name','1234');
+		$_ENV['smary']->assign('name','1234');
 
-		set_page(__FUNCTION__);
+		$_ENV['smary']->set_page(__FUNCTION__);
 
-		set_dir('user');
+		$_ENV['smary']->set_dir('user');
 
-		display();
+		$_ENV['smary']->display();
 
 	}
 

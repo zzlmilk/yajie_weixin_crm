@@ -7,6 +7,10 @@ class userModel extends Basic {
 
 		$this->child_name = 'user';
 
+		print_r($_ENV);
+
+		die;
+
 		parent::__construct();
 
     }

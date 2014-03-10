@@ -7,12 +7,15 @@
 
 include_once 'database.php';
 
-$_ENV['DBNAME'] = $_ENV['database']['admin']['DBNAME'];
 
-$_ENV['USER'] = $_ENV['database']['admin']['USER'];
+$sorce = (!empty($_SESSION['sorce'])) ? $_SESSION['sorce'] :'admin';
 
-$_ENV['PASSWORD'] = $_ENV['database']['admin']['PASSWORD'];
+$_ENV['DBNAME'] = $_ENV['database'][$sorce]['DBNAME'];
 
-$_ENV['DBHOST'] = $_ENV['database']['admin']['DBHOST'];
+$_ENV['USER'] = $_ENV['database'][$sorce]['USER'];
+
+$_ENV['PASSWORD'] = $_ENV['database'][$sorce]['PASSWORD'];
+
+$_ENV['DBHOST'] = $_ENV['database'][$sorce]['DBHOST'];
 
 ?>

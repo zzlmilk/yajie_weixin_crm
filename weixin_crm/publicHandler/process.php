@@ -1,10 +1,8 @@
 <?php
 
-include '../include.php';
+include_once '../include.php';
 
 header("Content-type:text/html;charset=utf-8");
-
-
 
 
 if (isset($_GET['login'])) {
@@ -16,6 +14,9 @@ if (isset($_GET['login'])) {
 
 if (isset($_POST['user'])) {
 
+
+
+
     $admin = new adminModel();
 
     $ad['account'] = $_POST['user'];
@@ -23,11 +24,13 @@ if (isset($_POST['user'])) {
     $ad['account_password'] = $_POST['password'];
 
     $admin->initialize($ad);
-    
+
+
+
+
     if ($admin->vars_number > 0) {
 
         $souce = $admin->vars['compang_id'];
-
 
         $company = new companyModel();
 
@@ -44,22 +47,13 @@ if (isset($_POST['user'])) {
         $_SESSION['user_name'] = $admin->vars['account'];
 
 
-        /**
-         * 根据来源 切换数据库
-         */
+        $_SESSION['sorce'] = $token;
 
-        $_ENV['DBNAME'] = $_ENV['database'][$token]['DBNAME'];
 
-        $_ENV['DBHOST'] = $_ENV['database'][$token]['DBHOST'];
 
-        $_ENV['USER'] = $_ENV['database'][$token]['USER'];
+      
 
-        $_ENV['PASSWORD'] = $_ENV['database'][$token]['PASSWORD'];
-
-        /**
-         *  end  
-         */
-
+      
         echo '<script type="text/javascript">window.location="'.WebSiteUrl.'";</script>';
     } else {
         echo '<script type="text/javascript">alert("用户名或密码错误！");window.location="'.WebSiteUrl.'";</script>';
