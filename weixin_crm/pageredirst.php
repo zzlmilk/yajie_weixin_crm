@@ -2,6 +2,7 @@
 
 require_once 'include.php';
 
+
 if (!empty($_REQUEST['action'])) {
 
     $action = $_REQUEST['action'] . 'Controller';
@@ -12,6 +13,9 @@ if (!empty($_REQUEST['action'])) {
         $function = 'index';
     }
   
+  
+
+
     $pageController = new $action();
 
     $pageController->$function();

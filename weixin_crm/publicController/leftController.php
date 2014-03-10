@@ -6,8 +6,6 @@ class leftController  {
 
 	public function left(){
 
-
-
 		$_ENV['smarty']->setDirTemplates('');
 
 		$_ENV['smarty']->display('left');

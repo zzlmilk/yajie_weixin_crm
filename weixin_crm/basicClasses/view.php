@@ -10,7 +10,6 @@ class view {
 
     protected $tVar;
 
-
     public function initView(){
 
         if(!$this->smarty){
@@ -49,12 +48,7 @@ class view {
 
             $displayPage = $page;
 
-        } else{
-
-            $displayPage = $this->display_page;
-
         }
-
 
         if(!file_exists($this->smarty->template_dir)){
 
@@ -99,7 +93,17 @@ class view {
     public function setDirTemplates($dir){
 
 
-        $this->smarty_dir =  '';
+        if(!empty($dir)){
+
+             $this->smarty_dir =  $dir;
+
+        } else{
+
+             $this->smarty_dir =  '';
+
+        }
+
+       
     }
 
 }

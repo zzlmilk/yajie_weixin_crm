@@ -1,10 +1,6 @@
 <?php
 
-
-
 session_start();
-
-
 
 include_once 'config/defined.php';
 

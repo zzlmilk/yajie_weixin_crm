@@ -17,11 +17,7 @@
 
         <script>
 
-
-         var root = '{$WebSiteUrl}';
-
-
-           
+         var root = '{$WebSiteUrl}';           
         </script>
         {literal} 
 

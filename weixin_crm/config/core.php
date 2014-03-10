@@ -1,17 +1,18 @@
 <?php
 
 
-
 /**
  * 数据库 环境变量 配置
  */
 
-$_ENV['DBNAME'] = 'weixin';
+include_once 'database.php';
 
-$_ENV['USER'] = 'root';
+$_ENV['DBNAME'] = $_ENV['database']['admin']['DBNAME'];
 
-$_ENV['PASSWORD'] = '';
+$_ENV['USER'] = $_ENV['database']['admin']['USER'];
 
-$_ENV['DBHOST'] = 'localhost';
+$_ENV['PASSWORD'] = $_ENV['database']['admin']['PASSWORD'];
+
+$_ENV['DBHOST'] = $_ENV['database']['admin']['DBHOST'];
 
 ?>

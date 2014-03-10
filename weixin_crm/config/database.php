@@ -8,5 +8,6 @@ $database = array(
 
 );
 
-return $database;
+$_ENV['database'] = $database;
+
 ?>
