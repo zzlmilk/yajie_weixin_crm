@@ -7,7 +7,6 @@ class userModel extends Basic {
 
 		$this->child_name = 'user';
 
-
 		parent::__construct();
 
     }
