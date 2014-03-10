@@ -216,7 +216,7 @@
                                     <img id="xiaotu3" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                 </td>
                                 <td width="85%">
-                                    <a href="{$URLCONTROLLER}/slide.php?type=2" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">礼品列表</a>
+                                    <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">礼品列表</a>
                                 </td>
 
                             </tr>
