@@ -9,13 +9,10 @@ if (isset($_GET['login'])) {
 
     session_unset();
 
-    echo '<script type="text/javascript">window.location="../login.html";</script>';
+   echo '<script type="text/javascript">window.location="'.WebSiteUrl.'";</script>';
 }
 
 if (isset($_POST['user'])) {
-
-
-
 
     $admin = new adminModel();
 
@@ -44,7 +41,7 @@ if (isset($_POST['user'])) {
 
         $_SESSION['weixin_crm_user_id'] = $admin->vars['admin_id'];
 
-        $_SESSION['user_name'] = $admin->vars['account'];
+        $_SESSION['user_name'] = $admin->vars['admin_name'];
 
 
         $_SESSION['sorce'] = $token;

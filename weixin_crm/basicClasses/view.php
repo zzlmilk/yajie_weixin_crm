@@ -2,13 +2,13 @@
 
 class view {
 
-	private $smarty;
+	public $smarty;
     
-    private $display_page;
+    public $display_page;
 
-    private $smarty_dir;
+    public $smarty_dir;
 
-    protected $tVar;
+    public $tVar;
 
     public function initView(){
 
@@ -64,6 +64,8 @@ class view {
 
         }
 
+
+       $this->smarty->assign('uname',$_SESSION['user_name']);
      
        $this->smarty->assign('ROOTPATH', ROOTPATH);
 
@@ -88,7 +90,6 @@ class view {
         }
 
     }
-
 
     public function setDirTemplates($dir){
 

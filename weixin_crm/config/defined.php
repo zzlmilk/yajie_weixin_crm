@@ -20,7 +20,7 @@ defined('WebSiteUrl') or define('WebSiteUrl', 'http://localhost/yajie_weixin_crm
 
 defined('URLCONTROLLER') or define('URLCONTROLLER', WebSiteUrl.'/publicController');
 
-defined('URLHANDLER') or define('URLHANDLER', WebSiteUrl.'publicHandler');
+defined('URLHANDLER') or define('URLHANDLER', WebSiteUrl.'/publicHandler');
 
 defined('FOOTBASIC') or define('FOOTBASIC',  ROOTPATH . 'basicClasses/');
 

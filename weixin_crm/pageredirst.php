@@ -13,9 +13,7 @@ if (!empty($_REQUEST['action'])) {
         $function = 'index';
     }
   
-  
-
-
+ 
     $pageController = new $action();
 
     $pageController->$function();
