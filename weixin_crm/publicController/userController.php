@@ -11,15 +11,9 @@ class userController implements User {
 
 		$result = $userModel->initialize();
 
-
-		$_ENV['smary']->assign('name','1234');
-
-		$_ENV['smary']->set_page(__FUNCTION__);
-
-		$_ENV['smary']->set_dir('user');
-
-		$_ENV['smary']->display();
-
+		$_ENV['smarty']->setDirTemplates('user');
+		$_ENV['smarty']->assign('name','1234');
+		$_ENV['smarty']->display('userList');
 	}
 
 
