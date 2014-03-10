@@ -11,16 +11,13 @@ class userController implements User {
 		$result = $userModel->initialize();
 
 		$_ENV['smarty']->setDirTemplates('user');
-<<<<<<< HEAD
 
 		$_ENV['smarty']->assign('name','1234');
 
 		$_ENV['smarty']->display('userList');
 
-=======
 		$_ENV['smarty']->assign('name','1234');
 		$_ENV['smarty']->display('userList');
->>>>>>> 5066812e6b07419f9416fed27ce6e28187cb2f28
 	}
 
 
