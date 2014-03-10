@@ -1,16 +1,16 @@
 <?php
 
-require FOOT . 'Smarty/libs/Smarty.class.php';
+require ROOTPATH . 'Smarty/libs/Smarty.class.php';
 
 $smarty = new Smarty();
 
-$smarty->template_dir = FOOT . "/templates";
+$smarty->template_dir = ROOTPATH . "templates";
 
-$smarty->compile_dir = FOOT . "/templates_c";
+$smarty->compile_dir = ROOTPATH . "templates_c";
 
-$smarty->config_dir = FOOT . "Smarty/templates/config";
+$smarty->config_dir = ROOTPATH . "Smarty/templates/config";
 
-$smarty->cache_dir = FOOT . "Smarty/templates/cache";
+$smarty->cache_dir = ROOTPATH . "Smarty/templates/cache";
 
 $smarty->caching = false;
 ?>

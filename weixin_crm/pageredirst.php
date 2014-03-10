@@ -11,11 +11,7 @@ if (!empty($_REQUEST['action'])) {
     } else {
         $function = 'index';
     }
-
-    set_dir($_REQUEST['action']);
-
-    set_page($function);
-    
+  
     $pageController = new $action();
 
     $pageController->$function();

@@ -29,7 +29,7 @@ if (!isset($_SESSION['user_id'])) {
     <frameset rows="30,*" cols="*" frameborder="no" border="0" framespacing="0">
         <frame src="files/top.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
         <frameset cols="150,*" frameborder="no" border="0" framespacing="0">
-            <frame src="<?php  echo WebSiteUrl  ?>/files/left.php" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
+            <frame src="<?php  echo WebSiteUrl  ?>/pageredirst.php?action=left&functionname=left" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
             <frame src="files/mainfra.html" name="mainFrame" id="mainFrame" title="mainFrame" />
         </frameset>
     </frameset>

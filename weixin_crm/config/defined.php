@@ -1,28 +1,32 @@
 <?php
 
-define(FOOT_, $_SERVER['DOCUMENT_ROOT']);
+
+ini_set('display_errors', '1');
+
+define('ROOT', $_SERVER['DOCUMENT_ROOT']);
+
+
+defined('PROJECT') or define('PROJECT', '/yajie_weixin_crm/weixin_crm/');
 
 //error_reporting(E_ALL ^ E_NOTICE);
 
-ini_set('display_errors', '0');
+defined('ROOTPATH') or define('ROOTPATH',  ROOT . PROJECT);
 
-defined('FOOT') or define('FOOT',  FOOT_ . '/weixin_crm/');
-
-defined('WebSiteUrl') or define('WebSiteUrl', 'http://localhost/weixin_crm');
+defined('WebSiteUrl') or define('WebSiteUrl', 'http://localhost/yajie_weixin_crm/weixin_crm');
 
 defined('URLCONTROLLER') or define('URLCONTROLLER', WebSiteUrl.'/publicController');
 
-defined('URLHANDLER') or define('URLHANDLER', WebSiteUrl.'/publicHandler');
+defined('URLHANDLER') or define('URLHANDLER', WebSiteUrl.'publicHandler');
 
-defined('FOOTBASIC') or define('FOOTBASIC',  FOOT_ . '/weixin_crm/basicClasses/');
+defined('FOOTBASIC') or define('FOOTBASIC',  ROOTPATH . 'basicClasses/');
 
-defined('FOOTCLASS') or define('FOOTCLASS',  FOOT_ . '/weixin_crm/Model/');
+defined('FOOTCLASS') or define('FOOTCLASS',  ROOTPATH . 'Model/');
 
-defined('FOOTCONTROLLER') or define('FOOTCONTROLLER',  FOOT_ . '/weixin_crm/publicController/');
+defined('FOOTCONTROLLER') or define('FOOTCONTROLLER',  ROOTPATH . 'publicController/');
 
-defined('FOOTINTERFACE') or define('FOOTINTERFACE',  FOOT_ . '/weixin_crm/Interface/');
+defined('FOOTINTERFACE') or define('FOOTINTERFACE',  ROOTPATH . 'Interface/');
 
-defined('FOOTFILES') or define('FOOTFILES',  FOOT_ . '/weixin_crm/files/');
+defined('FOOTFILES') or define('FOOTFILES',  ROOTPATH . '/files/');
 
 if ($handle = opendir(FOOTBASIC)) {
     /* to include all files that in the class folder what a way to include classes!!! */
