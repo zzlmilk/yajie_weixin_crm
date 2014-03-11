@@ -20,7 +20,8 @@ class TestController extends BaseController {
 	public function submitRegister(){
 
 		$data = array();
-		$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
+		//$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
+		$data['open_id'] = $_POST['open_id'];
 		$data['source'] = 'company';
 		$data['user_name'] = $_POST['userName'];
 		$data['sex'] = $_POST['gender'];
@@ -30,6 +31,7 @@ class TestController extends BaseController {
 
 		//print_r($data);
 		//transferData(APIURL.'/user/add','post',$data);
+
 
 		$resultRename = transferData(APIURL.'/user/able_user/','post',$data);
 		$res = json_decode($resultRename,true);
