@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-10 17:03:02
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-11 09:46:15
          compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:744077772531d7fc6a54f41-70551952%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:994197243531e6ae7c03fa0-21469451%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '87573d4006c313532643eff1ecd959d6be07427c' => 
     array (
       0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1394442148,
+      1 => 1394502372,
     ),
   ),
-  'nocache_hash' => '744077772531d7fc6a54f41-70551952',
+  'nocache_hash' => '994197243531e6ae7c03fa0-21469451',
   'function' => 
   array (
   ),
@@ -170,7 +170,26 @@ $_smarty_tpl->decodeProperties(array (
                                     <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" onclick="tupian('1')">用户列表</a>
                                 </td>
-
+                            </tr>
+                            <tr>
+                                <td width="15%" height="20">
+                                    <img id="xiaotu2" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                </td>
+                                <td width="85%">
+                                    <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">积分管理</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="15%" height="20">
+                                    <img id="xiaotu3" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                </td>
+                                <td width="85%">
+                                    <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">消费管理</a>
+                                </td>
                             </tr>
                         </table>
 
@@ -234,9 +253,20 @@ $_smarty_tpl->decodeProperties(array (
                                 </td>
                                 <td width="85%">
                                     <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">礼品列表</a>
+/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">大转盘礼品列表</a>
                                 </td>
 
+                            </tr>
+
+                            <tr>
+                                <td width="15%" height="20">
+                                    <img id="xiaotu4" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                </td>
+                                <td width="85%">
+                                    <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" onclick="tupian('4')">刮刮卡礼品列表</a>
+                                </td>
                             </tr>
 
                         </table>

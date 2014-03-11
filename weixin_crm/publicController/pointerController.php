@@ -1,10 +1,8 @@
 <?php
 
 
+class pointerController{
 
 
-
-
-
-
+}
 ?>

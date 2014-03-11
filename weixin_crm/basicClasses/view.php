@@ -93,7 +93,6 @@ class view {
 
     public function setDirTemplates($dir){
 
-
         if(!empty($dir)){
 
              $this->smarty_dir =  $dir;

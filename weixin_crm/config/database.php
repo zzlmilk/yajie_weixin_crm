@@ -6,6 +6,7 @@ $database = array(
 
 	'company'=>array('DBNAME'=>'weixin_company','DBHOST'=>'localhost','USER'=>'root','PASSWORD'=>'123456')
 
+
 );
 
 $_ENV['database'] = $database;
