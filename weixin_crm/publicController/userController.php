@@ -4,6 +4,7 @@ class userController implements User {
 
     // 用户列表 界面
     public function userList() {
+          $userModel = new userModel();
         $userModel->initialize();
         $result = $userModel->vars_all;
         var_dump($result);
@@ -17,6 +18,7 @@ class userController implements User {
         if (is_array($data) && count($data) > 0) {
 
             $userModel = new userModel();
+
 
             $userModel->insert($data);
         }
