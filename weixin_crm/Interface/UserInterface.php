@@ -23,6 +23,16 @@ interface User{
 	 */
 
 	public function addMoney($user_id,$money);
+	/**
+	 *  减少用户积分 
+	 *  user_id  int  用户id    intergration  需用户减少的积分
+	 */
+	public  function reductionPointer($user_id,$integration);
+	/**
+	 *  减少用户金钱 
+	 *  user_id  int  用户id    money  需用户减少的积分
+	 */
+	public  function reductionMoney($user_id,$money);
 
 }
 

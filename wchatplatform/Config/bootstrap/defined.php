@@ -3,6 +3,8 @@
 /**
  * 路径定义
  */
+
+
 defined('ROOT_DIR') or define('ROOT_DIR', dirname($_SERVER['SCRIPT_FILENAME']) . '/');
 defined('WebSiteName') or define('WebSiteName', 'wchatplatform');
 defined('ModelName') or define('ModelName', 'Model');
@@ -22,7 +24,7 @@ defined('URL_PATHINFO_DEPR') or define('URL_PATHINFO_DEPR', '/');
 
 defined('URL_MODEL') or define('URL_MODEL', '0'); //url模式 0为默认模式  1 为 pathinfo模式
 
-defined('WebSiteUrl') or define('WebSiteUrl', 'http://'.$_SERVER['HTTP_HOST'].'/'.WebSiteName);
+defined('WebSiteUrl') or define('WebSiteUrl', 'http://'.$_SERVER['HTTP_HOST'].'/yajie_weixin_crm/'.WebSiteName);
 
 
 defined('WebSiteUrlPublic') or define('WebSiteUrlPublic', 'http://'.$_SERVER['HTTP_HOST'].'/'.WebSiteName.'/public');
@@ -32,10 +34,10 @@ defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH','ORIG_PATH_INFO,RED
 /**
  * 关闭报错信息 把报错信息存储到错误文件中
  */
- ini_set("display_errors", 1);
+ ini_set("display_errors", 0);
  // ini_set("log_errors", "On");
  // ini_set("error_log", ROOT_DIR . Logs . '/Error/error.log');
- defined('APIURL')or define('APIURL','http://localhost/cloudWeiXin');
+ defined('APIURL')or define('APIURL','http://192.168.0.106/yajie_weixin_crm/weixin_api');
 
 
 

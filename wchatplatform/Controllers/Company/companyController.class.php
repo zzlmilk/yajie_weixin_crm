@@ -8,7 +8,8 @@ class CompanyController extends BaseController {
 
     private $bigArray = array(
 
-        'test'=>array('name'=>'test',type=>'php'),
+        'test'=>array('name'=>'test','type'=>'text','text'=>'<a href="">请点击这里</a>>'),
+
     );
 
 
