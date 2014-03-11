@@ -24,7 +24,7 @@ defined('URL_PATHINFO_DEPR') or define('URL_PATHINFO_DEPR', '/');
 
 defined('URL_MODEL') or define('URL_MODEL', '0'); //url模式 0为默认模式  1 为 pathinfo模式
 
-defined('WebSiteUrl') or define('WebSiteUrl', 'http://'.$_SERVER['HTTP_HOST'].'/'.WebSiteName);
+defined('WebSiteUrl') or define('WebSiteUrl', 'http://'.$_SERVER['HTTP_HOST'].'/yajie_weixin_crm/'.WebSiteName);
 
 
 defined('WebSiteUrlPublic') or define('WebSiteUrlPublic', 'http://'.$_SERVER['HTTP_HOST'].'/'.WebSiteName.'/public');
@@ -37,7 +37,11 @@ defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH','ORIG_PATH_INFO,RED
  ini_set("display_errors", 0);
  // ini_set("log_errors", "On");
  // ini_set("error_log", ROOT_DIR . Logs . '/Error/error.log');
+<<<<<<< HEAD
 defined('APIURL')or define('APIURL','http://112.124.25.155/weixin_api');
+=======
+ defined('APIURL')or define('APIURL','http://localhost/yajie_weixin_crm/weixin_api');
+>>>>>>> origin
 
 
 

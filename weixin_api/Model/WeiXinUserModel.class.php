@@ -3,6 +3,16 @@
 class WeiXinUserModel extends Basic {
 
 
+
+	public function __construct() {
+
+		$this->child_name = 'weixin_user';
+
+		parent::__construct();
+
+    }
+
+
 	public function getWeixinUserInfo($open_id,$user_id){
 
 
@@ -33,6 +43,8 @@ class WeiXinUserModel extends Basic {
 				$data['openid'] = $user_array['openid'];
 
 				$data['sex'] = $user_array['sex'];
+
+				$data['nickname'] = $user_array['nickname'];
 
 				$data['language'] = $user_array['language'];
 

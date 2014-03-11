@@ -22,14 +22,19 @@ class Basic extends Query {
 
     protected $error;
 
-    protected $mem;
-    // protected $child_name;
+   
+    protected $child_name;
+
     protected $error_code = 0;
 
     public function __construct() {
         try {
 
-            parent::__constructor($this->tableName);
+
+             
+
+
+            parent::__constructor($this->child_name);
 
         } catch (Exception $e) {
             echo $e;

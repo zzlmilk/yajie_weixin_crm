@@ -13,9 +13,7 @@ class  UserController implements User {
 
 				$user = new UserModel();
 
-				$userInfo = $user->insertUser($_REQUEST);
-
-				AssemblyJson($userInfo);
+				$user->insertUser($_REQUEST);
 
 			} else{
 
@@ -41,6 +39,9 @@ class  UserController implements User {
 
 			$user->ableUserRegister($_REQUEST['open_id']);
 
+		} else{
+
+			echoErrorCode(10002);
 		}
 
 	}
