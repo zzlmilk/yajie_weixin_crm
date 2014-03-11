@@ -99,16 +99,16 @@ class userController implements User {
                 $moneyNumber = $_POST['moneyNumber'];
                 switch ($_POST["moneyType"]) {
                     case "deductMoney":
-                        $moneyConturlRequest = $this->addMoney($userId, $moneyNumber * (-1));
+                        $moneyConturlRequest = $this->reductionMoney($userId, $moneyNumber);
                         break;
                     case "recharge":
                         $moneyConturlRequest = $this->addMoney($userId, $moneyNumber);
                         break;
                 }
-                if ($moneyConturlRequest > 0) {
+                
                     echo "操作成功！";
                     $this->moneyManage();
-                }
+                
             } else {
                 
             }
@@ -120,11 +120,6 @@ class userController implements User {
         if (is_array($data) && count($data) > 0) {
 
             $userModel = new userModel();
-<<<<<<< HEAD
-=======
-
->>>>>>> 6864e0808c4da8677bb4bebf5e7dfa5d35f3664d
-
             $returnVal = $userModel->insert($data);
             return $returnVal;
         }
@@ -247,11 +242,11 @@ class userController implements User {
 
                 $user->vars['user_integration'] = $userPointer;
 
-<<<<<<< HEAD
+
             $record['fraction'] = $money;
-=======
+
                 $user->updateVars();
->>>>>>> 6864e0808c4da8677bb4bebf5e7dfa5d35f3664d
+
 
             }
 
