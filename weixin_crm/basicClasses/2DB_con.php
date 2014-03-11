@@ -47,18 +47,18 @@ class Query extends DB_Mysql_search {
     protected $like_string = '';
     protected $limit_string;
 
-    function __construct($table) {
-        $this->table = $table;
+    function __construct() {
 
         $this->convertor = new Convertor;
 
-        $this->dbhost = $_ENV['DBHOST'];
+         $this->dbhost = $_ENV['DBHOST'];
 
         $this->user = $_ENV['USER'];
 
         $this->pass = $_ENV['PASSWORD'];
 
         $this->dbname = $_ENV['DBNAME'];
+
     }
 
     public function changeDataTable($table) {
