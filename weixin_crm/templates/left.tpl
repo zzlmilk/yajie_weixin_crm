@@ -216,9 +216,18 @@
                                     <img id="xiaotu3" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                 </td>
                                 <td width="85%">
-                                    <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">礼品列表</a>
+                                    <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">大转盘礼品列表</a>
                                 </td>
 
+                            </tr>
+
+                            <tr>
+                                <td width="15%" height="20">
+                                    <img id="xiaotu4" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                </td>
+                                <td width="85%">
+                                    <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" onclick="tupian('4')">刮刮卡礼品列表</a>
+                                </td>
                             </tr>
 
                         </table>
