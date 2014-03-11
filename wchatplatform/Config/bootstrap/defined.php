@@ -37,7 +37,7 @@ defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH','ORIG_PATH_INFO,RED
  ini_set("display_errors", 0);
  // ini_set("log_errors", "On");
  // ini_set("error_log", ROOT_DIR . Logs . '/Error/error.log');
- defined('APIURL')or define('APIURL','http://localhost/cloudWeiXin');
+ defined('APIURL')or define('APIURL','http://192.168.0.106/yajie_weixin_crm/weixin_api');
 
 
 
