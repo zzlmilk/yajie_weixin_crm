@@ -149,7 +149,7 @@
                                     <img id="xiaotu2" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                 </td>
                                 <td width="85%">
-                                    <a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=pointManage" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">积分管理</a>
+                                    <a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=pointAndMoneyManage" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">积分消费管理</a>
                                 </td>
                             </tr>
                             <tr>
@@ -157,7 +157,7 @@
                                     <img id="xiaotu3" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                 </td>
                                 <td width="85%">
-                                    <a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=moneyManage" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">消费管理</a>
+                                    <a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=moneyManage" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">添加用户</a>
                                 </td>
                             </tr>
                         </table>

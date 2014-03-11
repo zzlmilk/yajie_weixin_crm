@@ -13,6 +13,52 @@ class userController implements User {
         $_ENV['smarty']->display('userList');
     }
 
+    //显示搜索页面
+    public function pointAndMoneyManage() {
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $userModel = new userModel();
+            $userModel->initialize("user_phone = '" . $_POST['userPhone'] . "'");
+            $result = $userModel->vars;
+            if ($userModel->vars_number <= 0) {
+                echo "1";
+            } else {
+                header('Content-type: application/json');
+               $jsonResult= json_encode($result);
+                echo $jsonResult;
+            }
+        } else {
+            $_ENV['smarty']->setDirTemplates('user');
+            $_ENV['smarty']->display('manageView');
+        }
+    } 
+    public function contrulUserResource(){
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $resourceNumber=$_POST["resourceNumber"];
+            $userId=$_POST['postUserId'];
+            $conturlType=$_POST['conturlType'];
+            switch ($conturlType){
+                case "addPoint":
+                      $this->addPointer($userId, $resourceNumber);
+                break;
+                case "minPoint":
+                    $this->reductionPointer($userId, $resourceNumber);
+                break;
+                case "addMoney":
+                    $this->addMoney($userId, $resourceNumber);
+                break;
+                case "minMoney":
+                    $this->reductionMoney($userId, $resourceNumber);
+                break;
+            }
+            header('Content-type: application/json');
+            $rerurnArray['resourceNumber']=$resourceNumber;
+            $rerurnArray['conturlType']=$conturlType;
+            $jsonReturn=  json_encode($rerurnArray);
+            echo $jsonReturn;
+        }
+    } 
+
     //编辑用户信息
     public function userEdit() {
         $errorFlag = true;
@@ -29,8 +75,8 @@ class userController implements User {
                     $userPointData = $userPointerRecord->vars_all;
                 } else {
                     $userPointData = 0;
-                }       
-                $userPointerRecord->addCondition("user_id='$userId' and record_type=2",1);
+                }
+                $userPointerRecord->addCondition("user_id='$userId' and record_type=2", 1);
                 $userPointerRecord->initialize();
                 if ($userPointerRecord->vars_number > 0) {
                     $userMoneyData = $userPointerRecord->vars_all;
@@ -63,8 +109,6 @@ class userController implements User {
                 $upDatas['user_phone'] = $_POST['user_phone'];
                 $upDatas['birthday'] = $_POST['birthday'];
                 $upDatas['sex'] = $_POST['sex'];
-                $upDatas['user_money'] = $_POST['user_money'];
-                $upDatas['user_integration'] = $_POST['user_integration'];
                 $this->updateUser($upDatas, $userId);
                 $this->userList();
             } else {
@@ -107,16 +151,16 @@ class userController implements User {
                         $moneyConturlRequest = $this->addMoney($userId, $moneyNumber);
                         break;
                 }
-                
-                    echo "操作成功！";
-                    $this->moneyManage();
-                
+
+                echo "操作成功！";
+                $this->moneyManage();
             } else {
                 
             }
         }
     }
-        public function pointConturl() {
+
+    public function pointConturl() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($_POST["pointNumber"] >= 0) {
                 $userId = $_POST['userId'];
@@ -129,15 +173,15 @@ class userController implements User {
                         $moneyConturlRequest = $this->addPointer($userId, $pointNumber);
                         break;
                 }
-                
-                    echo "操作成功！";
-                    $this->pointManage();
-                
+
+                echo "操作成功！";
+                $this->pointManage();
             } else {
                 
             }
         }
     }
+
     public function addUser($data) {
 
         if (is_array($data) && count($data) > 0) {
@@ -164,21 +208,19 @@ class userController implements User {
     }
 
     public function deleteUser($user_id) {
-        
-        if(!empty($user_id) && $user_id > 0 ){
+
+        if (!empty($user_id) && $user_id > 0) {
 
             $user = new userModel();
 
-            $user->initialize('user_id = '.$user_id);
+            $user->initialize('user_id = ' . $user_id);
 
-            if($user->vars_number > 0 ){
+            if ($user->vars_number > 0) {
 
                 $user_pointer_record = new userPointerRecordModel();
 
                 $user_pointer_record->deleteRecord($user_id);
-
             }
-
         }
     }
 
@@ -195,7 +237,7 @@ class userController implements User {
      */
     public function addPointer($user_id, $integration) {
 
-        if(!empty($user_id) && $user_id >0 && $integration > 0){
+        if (!empty($user_id) && $user_id > 0 && $integration > 0) {
 
             $user = new userModel();
 
@@ -209,21 +251,19 @@ class userController implements User {
 
                 $user_pointer_record = new userPointerRecordModel();
 
-                $user_pointer_record->addRecord($user_id,1,(int)$integration,'crm');
+                $user_pointer_record->addRecord($user_id, 1, (int) $integration, 'crm');
             }
-
         }
-
     }
+
     /**
      *  添加充值金额
      *  user_id  int   用户id  
      *  money    int   增加的充值金额
      */
-
     public function addMoney($user_id, $money) {
 
-        if($user_id > 0  && !empty($user_id) && $money >0 ){
+        if ($user_id > 0 && !empty($user_id) && $money > 0) {
 
             $user = new userModel();
 
@@ -237,9 +277,8 @@ class userController implements User {
 
                 $user_pointer_record = new userPointerRecordModel();
 
-                $user_pointer_record->addRecord($user_id,2,(int)$money,'crm');
+                $user_pointer_record->addRecord($user_id, 2, (int) $money, 'crm');
             }
-
         }
     }
 
@@ -247,65 +286,60 @@ class userController implements User {
      * 减少用户积分
      * user_id  int  用户id  intergration  int 用户积分 
      */
-    public function  reductionPointer($user_id,$integration){
+    public function reductionPointer($user_id, $integration) {
 
-        if(!empty($user_id) &&  $user_id > 0  && $integration > 0 ){
+        if (!empty($user_id) && $user_id > 0 && $integration > 0) {
 
             $user = new userModel();
 
-            $user->initialize('user_id = '.$user_id);
+            $user->initialize('user_id = ' . $user_id);
 
-            if($user->vars_number > 0 ){
+            if ($user->vars_number > 0) {
 
-                $userPointer = $user->vars['user_integration'] -  $integration;
+                $userPointer = $user->vars['user_integration'] - $integration;
 
-                if($userPointer < 0){
+                if ($userPointer < 0) {
 
                     $userPointer = 0;
-
                 }
 
                 $user->vars['user_integration'] = $userPointer;
                 $user->updateVars();
                 $user_pointer_record = new userPointerRecordModel();
-                $misIntegration=-1*$integration;
-                $user_pointer_record->addRecord($user_id,1,$misIntegration,'crm');
-
+                $misIntegration = -1 * $integration;
+                $user_pointer_record->addRecord($user_id, 1, $misIntegration, 'crm');
             }
-
         }
     }
 
-     /**
+    /**
      * 减少用户金额
      * user_id  int  用户id  money  int 用户积分 
      */
-    public function  reductionMoney($user_id,$money){
+    public function reductionMoney($user_id, $money) {
 
-        if(!empty($user_id) &&  $user_id > 0  && $money > 0 ){
+        if (!empty($user_id) && $user_id > 0 && $money > 0) {
 
             $user = new userModel();
 
-            $user->initialize('user_id = '.$user_id);
+            $user->initialize('user_id = ' . $user_id);
 
-            if($user->vars_number > 0 ){
+            if ($user->vars_number > 0) {
 
-                $userMoney = $user->vars['user_money'] -  $money;
+                $userMoney = $user->vars['user_money'] - $money;
 
-                if($userMoney < 0){
+                if ($userMoney < 0) {
 
                     $userMoney = 0;
-
                 }
 
                 $user->vars['user_money'] = $userMoney;
 
                 $user->updateVars();
                 $user_pointer_record = new userPointerRecordModel();
-                $misMoney=$money*-1;
-                $user_pointer_record->addRecord($user_id,2,$misMoney,'crm');
+                $misMoney = $money * -1;
+                $user_pointer_record->addRecord($user_id, 2, $misMoney, 'crm');
             }
-
         }
     }
 

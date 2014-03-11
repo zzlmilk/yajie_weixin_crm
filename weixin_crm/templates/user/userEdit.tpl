@@ -12,8 +12,8 @@
                 <option value="2" selected="selected">女</option>
             {/if}
         </select><br>
-        客户余额：<input type="text" value="{$userData.user_money}" name="user_money" readonly="readonly" id="userMoney"><br>
-        客户积分：<input type="text" value="{$userData.user_integration}" name="user_integration" readonly="readonly" id="userIntegration"><br>
+        客户余额：<input type="text" value="{$userData.user_money}" name="user_money" readonly="readonly" disabled="no" id="userMoney"><br>
+        客户积分：<input type="text" value="{$userData.user_integration}" name="user_integration" readonly="readonly" disabled="no" id="userIntegration"><br>
         <input type="hidden" value="{$userData.user_id}" name="user_id" id="user_id">
         <button onclick="submit();">保存修改</button></a>
 </form>
