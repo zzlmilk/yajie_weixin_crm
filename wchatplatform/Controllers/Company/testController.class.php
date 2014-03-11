@@ -20,9 +20,7 @@ class TestController extends BaseController {
 	public function submitRegister(){
 
 
-		print_r($_POST);
-
-		die;
+		
 
 		// $data = array();
 		// $data['open_id'] = 'openId';
