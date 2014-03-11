@@ -24,11 +24,27 @@
 {if $userMoneyData eq 0}
     暂无消费数据
 {else}
+        <h1>消费详情</h1>
+    {foreach from=$userMoneyData item=MoneyData key=key}
+        NO:     {$key+1}
+        数量: {$MoneyData.fraction}
+        来源:  {$MoneyData.source}
+        日期:{$MoneyData.create_time|date_format:"%Y-%m-%d %H:%M"}
+        <br>
+    {/foreach}
 {/if}
 <br>
 {if $userPointData eq 0}
     暂无积分数据
 {else}
+        <h1>积分详情</h1>
+    {foreach from=$userPointData item=PointData key=key}
+        NO:     {$key+1}
+        数量: {$PointData.fraction}
+        来源:  {$PointData.source}
+        日期:{$PointData.create_time|date_format:"%Y-%m-%d %H:%M"}
+        <br>
+    {/foreach}
 {/if}
 
 

@@ -29,8 +29,9 @@ class userController implements User {
                     $userPointData = $userPointerRecord->vars_all;
                 } else {
                     $userPointData = 0;
-                }
-                $userPointerRecord->initialize("user_id='$userId' and record_type=2");
+                }       
+                $userPointerRecord->addCondition("user_id='$userId' and record_type=2",1);
+                $userPointerRecord->initialize();
                 if ($userPointerRecord->vars_number > 0) {
                     $userMoneyData = $userPointerRecord->vars_all;
                 } else {
@@ -115,7 +116,28 @@ class userController implements User {
             }
         }
     }
-
+        public function pointConturl() {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if ($_POST["pointNumber"] >= 0) {
+                $userId = $_POST['userId'];
+                $pointNumber = $_POST['pointNumber'];
+                switch ($_POST["pointType"]) {
+                    case "deductPoint":
+                        $moneyConturlRequest = $this->reductionPointer($userId, $pointNumber);
+                        break;
+                    case "addPoint":
+                        $moneyConturlRequest = $this->addPointer($userId, $pointNumber);
+                        break;
+                }
+                
+                    echo "操作成功！";
+                    $this->pointManage();
+                
+            } else {
+                
+            }
+        }
+    }
     public function addUser($data) {
 
         if (is_array($data) && count($data) > 0) {
@@ -187,7 +209,7 @@ class userController implements User {
 
                 $user_pointer_record = new userPointerRecordModel();
 
-                $user_pointer_record->addRecord($user_id,1,$integration,'crm');
+                $user_pointer_record->addRecord($user_id,1,(int)$integration,'crm');
             }
 
         }
@@ -215,7 +237,7 @@ class userController implements User {
 
                 $user_pointer_record = new userPointerRecordModel();
 
-                $user_pointer_record->addRecord($user_id,2,$money,'crm');
+                $user_pointer_record->addRecord($user_id,2,(int)$money,'crm');
             }
 
         }
@@ -244,12 +266,10 @@ class userController implements User {
                 }
 
                 $user->vars['user_integration'] = $userPointer;
-
-
-            $record['fraction'] = $money;
-
                 $user->updateVars();
-
+                $user_pointer_record = new userPointerRecordModel();
+                $misIntegration=-1*$integration;
+                $user_pointer_record->addRecord($user_id,1,$misIntegration,'crm');
 
             }
 
@@ -281,7 +301,9 @@ class userController implements User {
                 $user->vars['user_money'] = $userMoney;
 
                 $user->updateVars();
-
+                $user_pointer_record = new userPointerRecordModel();
+                $misMoney=$money*-1;
+                $user_pointer_record->addRecord($user_id,2,$misMoney,'crm');
             }
 
         }

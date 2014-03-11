@@ -12,11 +12,11 @@ class userPointerRecordModel extends Basic{
 
 	public function addRecord( $user_id, $type, $fraction, $source ) {
 
-		if ( $user_id > 0 && $fraction >0 && $type > 0 ) {
+		if ( $user_id > 0 && is_int($fraction)  && $type > 0 ) {
 
 			$record['user_id'] = $user_id;
 
-			$record['record_type'] = 2;
+			$record['record_type'] = $type;
 
 			$record['fraction'] = $fraction;
 
