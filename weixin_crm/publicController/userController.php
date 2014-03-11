@@ -4,23 +4,66 @@ class userController implements User {
 
     // 用户列表 界面
     public function userList() {
-          $userModel = new userModel();
+        $userModel = new userModel();
         $userModel->initialize();
         $result = $userModel->vars_all;
-        var_dump($result);
         $_ENV['smarty']->setDirTemplates('user');
         $_ENV['smarty']->assign('userInfo', $result);
         $_ENV['smarty']->display('userList');
+    }
+
+    public function userEdit() {
+        $errorFlag = true;
+        if (isset($_GET['userId'])) {
+            $userId = $_GET['userId'];
+            $userModel = new userModel();
+            $userModel->initialize("user_id=$userId");
+            $userCount = $userModel->vars_number;
+            if ($userCount > 0) {
+                $userData = $userModel->vars;
+            } else {
+                $errorFlag = FALSE;
+                $errorMessage = "未搜索到该用户请刷新后重试";
+            }
+        } else {
+            $errorFlag = FALSE;
+            $errorMessage = "非法的登入请重试";
+        }
+        $_ENV['smarty']->setDirTemplates('user');
+        $returnData = $errorFlag ? $userData : $errorMessage;
+        $_ENV['smarty']->assign('userData', $returnData);
+        $_ENV['smarty']->assign('errorFlag', $errorFlag);
+        $_ENV['smarty']->display('userEdit');
+    }
+
+    public function userUpdata() {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if (isset($_POST)) {
+                $userId=$_POST['user_id'];
+                $upDatas['user_name']       =   $_POST['user_name'];
+                $upDatas['user_phone']      =   $_POST['user_phone'];
+                $upDatas['birthday']        =   $_POST['birthday'];
+                $upDatas['sex']             =   $_POST['sex'];
+                $upDatas['user_money']      =   $_POST['user_money'];
+                $upDatas['user_integration'] =  $_POST['user_integration'];
+                $this->updateUser($upDatas,$userId);
+                $this->userList();
+            } else {
+                
+            }
+        } else {
+            
+        }
     }
 
     public function addUser($data) {
 
         if (is_array($data) && count($data) > 0) {
 
-         $userModel = new userModel();
-          
+            $userModel = new userModel();
 
-            $userModel->insert($data);
+          $returnVal=  $userModel->insert($data);
+          return $returnVal;
         }
     }
 
