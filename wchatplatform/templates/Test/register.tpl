@@ -86,7 +86,7 @@
 				  <div class="form-group" style=" margin-right: 3em;">
 				    <label for="inputEmail3" class="col-sm-2 control-label">&nbsp;&nbsp;&nbsp;&nbsp;姓名</label>
 				    <div class="col-sm-10">
-				      <input type="name" class="form-control" id="inputname3" name="userName" placeholder="请输入姓名">
+				      <input type="name" class="form-control" id="inputname3" name="userName" placeholder="请输入姓名">{$open_id}
 				    </div>
 				  </div>
 

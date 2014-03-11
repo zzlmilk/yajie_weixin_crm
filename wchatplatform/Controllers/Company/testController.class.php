@@ -1,13 +1,12 @@
 <?php
 
-
-
 class TestController extends BaseController {
 
 
 	public function register(){
 
-
+		$this->assign('open_id',$_REQUEST['open_id']);
+		
 		$this->display();
 	}
 
@@ -16,10 +15,14 @@ class TestController extends BaseController {
 		$this->assign('open_id',$_REQUEST['open_id']);
 
 		$this->display();
-
 	}		
-	
+
 	public function submitRegister(){
+
+
+		print_r($_POST);
+
+		die;
 
 		// $data = array();
 		// $data['open_id'] = 'openId';
