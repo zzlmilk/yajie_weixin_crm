@@ -1,0 +1,2 @@
+Mar 11 11:23:32 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/add
+{"error":{"error_status":10001,"status_info":"open_id \u548c  \u6765\u6e90 \u7f3a\u5c11"}}

@@ -66,6 +66,8 @@ class BaseController {
 
         }
 
+        $this->smarty->assign('websiteUrl',WebSiteUrl);
+
         $this->smarty->assign('WebSiteUrlPublic',WebSiteUrlPublic);
         $this->smarty->display($displayPage. '.tpl');
     }

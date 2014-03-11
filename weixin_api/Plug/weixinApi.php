@@ -10,7 +10,7 @@ class weixinApi {
 	private $publicUrl = 'https://api.weixin.qq.com/cgi-bin/';
 
 
-	private $serverUrl = '';
+	private $serverUrl = 'https://api.weixin.qq.com/cgi-bin/message/custom/send?';
 
 
 	public function getToken($appId,$secret){
@@ -44,9 +44,17 @@ class weixinApi {
 		
 	}
 
-	public function sendCustom($open_id){
+	public function sendCustom($open_id,$token,$content){
 
-		$url = $this->publicUrl.'message/custom/send?access_token=';
+		$url = $this->publicUrl.'message/custom/send?access_token='.$token;
+
+		$jsonArray['touser'] = $open_id;
+
+		$jsonArray['msgtype'] = 'text';
+
+		$jsonArray['text'] = array('content'=>$content);
+
+		transferData($url,'post',json_encode($jsonArray));
 
 	}
 

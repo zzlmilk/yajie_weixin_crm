@@ -1,7 +1,7 @@
 <?php
 
 
-class OrderController  implements Order{
+class GiftController  implements gift{
 
 
 	/**
@@ -11,7 +11,7 @@ class OrderController  implements Order{
 
 	public function  add(){
 
-		
+
 	}
 
 
