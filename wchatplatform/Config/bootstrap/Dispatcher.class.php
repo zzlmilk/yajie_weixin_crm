@@ -69,15 +69,23 @@ class Dispatcher {
 
         if(count($pathArray) <= 2) {
 
+
+            defined('MODULE_DIR') or define('MODULE_DIR', ucfirst($pathArray[0]));
+
+
             defined('MODULE_NAME_CONTROLLER') or define('MODULE_NAME_CONTROLLER', ucfirst($pathArray[0]).'Controller');
 
         } else{
 
             array_shift($pathArray);
 
+            defined('MODULE_DIR') or define('MODULE_DIR', ucfirst($pathArray[0]));
+
             defined('MODULE_NAME_CONTROLLER') or define('MODULE_NAME_CONTROLLER', ucfirst($pathArray[0]).'Controller');
 
         }
+
+      
 
         array_shift($pathArray);
         

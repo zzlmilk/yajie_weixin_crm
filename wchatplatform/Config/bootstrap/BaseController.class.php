@@ -23,7 +23,7 @@ class BaseController {
 
             $this->display_page = ACTION_NAME;
 
-            $this->smarty_dir = MODULE_DIR_NAME;
+            $this->smarty_dir = MODULE_DIR;
 
             $this->smarty->template_dir = ROOT_DIR . 'templates/' . $this->smarty_dir . '/';
 
@@ -40,12 +40,13 @@ class BaseController {
 
         $this->initView();
 
-
+       
         if(!file_exists($this->smarty->template_dir)){
 
             mkdir($this->smarty->template_dir);
 
             chmod($this->smarty->template_dir,0777);
+
 
         }
 
