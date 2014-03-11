@@ -16,7 +16,6 @@ class userController implements User {
 
         if (is_array($data) && count($data) > 0) {
 
-
             $userModel = new userModel();
 
             $userModel->insert($data);
@@ -40,6 +39,21 @@ class userController implements User {
 
     public function deleteUser($user_id) {
         
+        if(!empty($user_id) && $user_id > 0 ){
+
+            $user = new userModel();
+
+            $user->initialize('user_id = '.$user_id);
+
+            if($user->vars_number > 0 ){
+
+                $user_pointer_record = new userPointerRecordModel();
+
+                $user_pointer_record->deleteRecord($user_id);
+
+            }
+
+        }
     }
 
     public function searchUser() {
@@ -55,56 +69,111 @@ class userController implements User {
      */
     public function addPointer($user_id, $integration) {
 
-        $user = new userModel();
+        if(!empty($user_id) && $user_id >0 && $integration > 0){
 
-        $user->initialize('user_id = ' . $user_id);
+            $user = new userModel();
 
-        if ($user->vars_number > 0) {
+            $user->initialize('user_id = ' . $user_id);
 
-            $user->vars['user_integration']+=$pointer;
+            if ($user->vars_number > 0) {
 
-            $user_pointer_record = new userPointerRecordModel();
+                $user->vars['user_integration']+=$integration;
 
-            $record['user_id'] = $user_id;
+                $user_pointer_record = new userPointerRecordModel();
 
-            $record['record_type'] = 1;
+                $user_pointer_record->addRecord($user_id,1,$integration,'crm');
+            }
 
-            $record['fraction'] = $integration;
-
-            $record['source'] = 'crm';
-
-            $record['create_time'] = time();
-
-            $user_pointer_record->insert($record);
         }
+
     }
+    /**
+     *  添加充值金额
+     *  user_id  int   用户id  
+     *  money    int   增加的充值金额
+     */
 
     public function addMoney($user_id, $money) {
 
+        if($user_id > 0  && !empty($user_id) && $money >0 ){
 
-        $user = new userModel();
+            $user = new userModel();
 
-        $user->initialize('user_id = ' . $user_id);
+            $user->initialize('user_id = ' . $user_id);
 
-        if ($user->vars_number > 0) {
+            if ($user->vars_number > 0) {
 
-            $user->vars['user_money']+=$money;
+                $user->vars['user_money']+=$money;
 
-            $user->updateVars();
+                $user->updateVars();
 
-            $user_pointer_record = new userPointerRecordModel();
+                $user_pointer_record = new userPointerRecordModel();
 
-            $record['user_id'] = $user_id;
+                $user_pointer_record->addRecord($user_id,2,$money,'crm');
+            }
 
-            $record['record_type'] = 2;
+        }
+    }
 
-            $record['fraction'] = $integration;
+    /**
+     * 减少用户积分
+     * user_id  int  用户id  intergration  int 用户积分 
+     */
+    public function  reductionPointer($user_id,$integration){
 
-            $record['source'] = 'crm';
+        if(!empty($user_id) &&  $user_id > 0  && $integration > 0 ){
 
-            $record['create_time'] = time();
+            $user = new userModel();
 
-            $user_pointer_record->insert($record);
+            $user->initialize('user_id = '.$user_id);
+
+            if($user->vars_number > 0 ){
+
+                $userPointer = $user->vars['user_integration'] -  $integration;
+
+                if($userPointer < 0){
+
+                    $userPointer = 0;
+
+                }
+
+                $user->vars['user_integration'] = $userPointer;
+
+                $user->updateVars();
+
+            }
+
+        }
+    }
+
+     /**
+     * 减少用户金额
+     * user_id  int  用户id  money  int 用户积分 
+     */
+    public function  reductionMoney($user_id,$money){
+
+        if(!empty($user_id) &&  $user_id > 0  && $money > 0 ){
+
+            $user = new userModel();
+
+            $user->initialize('user_id = '.$user_id);
+
+            if($user->vars_number > 0 ){
+
+                $userMoney = $user->vars['user_money'] -  $money;
+
+                if($userMoney < 0){
+
+                    $userMoney = 0;
+
+                }
+
+                $user->vars['user_money'] = $userMoney;
+
+                $user->updateVars();
+
+            }
+
         }
     }
 
