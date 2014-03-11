@@ -4,7 +4,7 @@ class userController implements User {
 
     // 用户列表 界面
     public function userList() {
-          $userModel = new userModel();
+           $userModel = new userModel();
         $userModel->initialize();
         $result = $userModel->vars_all;
         var_dump($result);
@@ -80,6 +80,8 @@ class userController implements User {
             if ($user->vars_number > 0) {
 
                 $user->vars['user_integration']+=$integration;
+
+                $user->updateVars();
 
                 $user_pointer_record = new userPointerRecordModel();
 
