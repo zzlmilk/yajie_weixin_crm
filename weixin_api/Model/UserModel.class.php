@@ -4,6 +4,14 @@
 class UserModel  extends Basic {
 
 
+		public function __construct() {
+
+		$this->child_name = 'user';
+
+		parent::__construct();
+
+    }
+
 	/**
 	 * 判断用户是否已经注册
 	 */
@@ -34,17 +42,17 @@ class UserModel  extends Basic {
 	 * 注册用户  并调用获取微信用户信息接口
 	 */
 
-	public function insertUser($data){
+	public function insertUser($val){
 
-		$data['user_name'] = $_REQUEST['user_name'];
+		$data['user_name'] = $val['user_name'];
 
-		$data['user_phone'] = $_REQUEST['user_phone'];
+		$data['user_phone'] = $val['user_phone'];
 
-		$data['sex'] = $_REQUEST['sex'];
+		$data['sex'] = $val['sex'];
 
-		$data['birthday'] = $_REQUEST['birthday'];
+		$data['birthday'] = $val['birthday'];
 
-		$data['user_open_id'] = $_REQUEST['open_id'];
+		$data['user_open_id'] = $val['open_id'];
 
 		$user = new UserModel();
 
@@ -55,17 +63,17 @@ class UserModel  extends Basic {
 			$data['user_id'] = $user_id;
 
 		}
-		$userInfo['user'] = arrayToObject($data);
 
+		$userInfo['user'] = arrayToObject($data,0);
 		/**
 		 *  获取微信用户
 		 */
 
 		$weixinUser = new WeiXinUserModel();
 
-		$weixinArray = $weixinUser->getWeixinUserInfo($_REQUEST['open_id'],$user_id);
+		$weixinArray = $weixinUser->getWeixinUserInfo($val['open_id'],$user_id);
 
-		$userInfo['weixin_user'] = arrayToObject($weixinArray);
+		$userInfo['weixin_user'] = arrayToObject($weixinArray,0);
 
 		AssemblyJson($userInfo);
 
