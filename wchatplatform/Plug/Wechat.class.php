@@ -465,7 +465,7 @@ class Wechat {
 
                 $sendData = $this->getRev()->getRevContent();
 
-                $this->returnWeixin($sendData,$array);
+                $this->returnWeixin($sendData,$array,$userCode);
                 break;
 
             case Wechat::MSGTYPE_EVENT:
@@ -523,7 +523,7 @@ class Wechat {
     }
     // 返回到微信
 
-    private function returnWeixin($text,$WeixinArray) {
+    private function returnWeixin($text,$WeixinArray,$open_id) {
   
         if (!empty($WeixinArray[$text])) {
 
@@ -570,7 +570,9 @@ class Wechat {
 
                 case 'text':
 
-                    $this->text($applytext)->reply();
+                    $text = str_replace('{$open_id}', $open_id, $applytext);
+
+                    $this->text($text)->reply();
 
                     die;
 

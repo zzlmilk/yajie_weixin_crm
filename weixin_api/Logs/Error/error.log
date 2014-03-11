@@ -1,0 +1,93 @@
+[11-Mar-2014 16:57:11 Asia/Shanghai] PHP Fatal error:  Class UserController contains 3 abstract methods and must therefore be declared abstract or implement the remaining methods (user::get_info, user::get_info_all, user::revise_user) in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Controllers/User/UserController.class.php on line 106
+[11-Mar-2014 16:57:11 Asia/Shanghai] PHP Fatal error:  Class UserController contains 3 abstract methods and must therefore be declared abstract or implement the remaining methods (user::get_info, user::get_info_all, user::revise_user) in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Controllers/User/UserController.class.php on line 106
+[11-Mar-2014 16:57:11 Asia/Shanghai] PHP Fatal error:  Class UserController contains 3 abstract methods and must therefore be declared abstract or implement the remaining methods (user::get_info, user::get_info_all, user::revise_user) in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Controllers/User/UserController.class.php on line 106
+[11-Mar-2014 17:01:45 Asia/Shanghai] PHP Warning:  fopen(/Users/Lev/Sites/yajie_weixin_crm/weixin_api/Logs/Info/2014_03_11.log): failed to open stream: Permission denied in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 111
+[11-Mar-2014 17:01:45 Asia/Shanghai] PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 112
+[11-Mar-2014 17:01:45 Asia/Shanghai] PHP Warning:  fputs() expects parameter 1 to be resource, boolean given in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 113
+[11-Mar-2014 17:01:45 Asia/Shanghai] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 114
+[11-Mar-2014 17:09:22 Asia/Shanghai] PHP Notice:  Undefined property: UserModel::$tableName in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php on line 32
+[11-Mar-2014 17:09:22 Asia/Shanghai] PHP Notice:  Undefined property: UserModel::$tableName in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php on line 32
+[11-Mar-2014 17:10:27 Asia/Shanghai] PHP Notice:  Undefined property: UserModel::$tableName in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php on line 32
+[11-Mar-2014 17:10:27 Asia/Shanghai] PHP Notice:  Undefined property: UserModel::$tableName in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php on line 32
+[11-Mar-2014 17:11:43 Asia/Shanghai] PHP Warning:  Missing argument 1 for Query::__constructor(), called in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php on line 37 and defined in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php on line 46
+[11-Mar-2014 17:11:43 Asia/Shanghai] PHP Notice:  Undefined variable: table in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php on line 47
+[11-Mar-2014 17:11:43 Asia/Shanghai] PHP Warning:  Missing argument 1 for Query::__constructor(), called in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php on line 37 and defined in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php on line 46
+[11-Mar-2014 17:11:43 Asia/Shanghai] PHP Notice:  Undefined variable: table in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php on line 47
+[11-Mar-2014 17:11:58 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'No such file or directory' in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:64
+Stack trace:
+#0 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php(89): DB_Mysql->connect()
+#1 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_Mysql->prepare('SELECT * FROM w...')
+#2 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(45): Query->selectQuery()
+#3 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(59): Basic->getVar()
+#4 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Model/UserModel.class.php(24): Basic->initialize('user_open_id li...')
+#5 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Controllers/User/UserController.class.php(42): UserModel->ableUserRegister('ocpOotwOr44N8_z...')
+#6 [internal function]: UserController->able_user()
+#7 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php(75): call_user_func(Array)
+#8 /Users/Lev/Sites/yajie_w in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 64
+[11-Mar-2014 17:12:33 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'No such file or directory' in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:64
+Stack trace:
+#0 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php(89): DB_Mysql->connect()
+#1 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_Mysql->prepare('SELECT * FROM w...')
+#2 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(45): Query->selectQuery()
+#3 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(59): Basic->getVar()
+#4 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Model/UserModel.class.php(24): Basic->initialize('user_open_id li...')
+#5 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Controllers/User/UserController.class.php(42): UserModel->ableUserRegister('ocpOotwOr44N8_z...')
+#6 [internal function]: UserController->able_user()
+#7 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php(75): call_user_func(Array)
+#8 /Users/Lev/Sites/yajie_w in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 64
+[11-Mar-2014 17:12:42 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'Unknown column 'user_open_id' in 'where clause'' in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(45): Query->selectQuery()
+#2 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(59): Basic->getVar()
+#3 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Model/UserModel.class.php(24): Basic->initialize('user_open_id li...')
+#4 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Controllers/User/UserController.class.php(42): UserModel->ableUserRegister('ocpOotwOr44N8_z...')
+#5 [internal function]: UserController->able_user()
+#6 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php(75): call_user_func(Array)
+#7 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php(40): website->initializationTest( in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[11-Mar-2014 17:13:23 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'No such file or directory' in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:64
+Stack trace:
+#0 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php(89): DB_Mysql->connect()
+#1 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_Mysql->prepare('SELECT * FROM w...')
+#2 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(45): Query->selectQuery()
+#3 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(59): Basic->getVar()
+#4 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Model/UserModel.class.php(24): Basic->initialize('user_open_id li...')
+#5 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Controllers/User/UserController.class.php(42): UserModel->ableUserRegister('ocpOotwOr44N8_z...')
+#6 [internal function]: UserController->able_user()
+#7 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php(75): call_user_func(Array)
+#8 /Users/Lev/Sites/yajie_w in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 64
+[11-Mar-2014 17:13:35 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'Unknown column 'user_open_id' in 'where clause'' in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(45): Query->selectQuery()
+#2 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(59): Basic->getVar()
+#3 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Model/UserModel.class.php(24): Basic->initialize('user_open_id li...')
+#4 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Controllers/User/UserController.class.php(42): UserModel->ableUserRegister('ocpOotwOr44N8_z...')
+#5 [internal function]: UserController->able_user()
+#6 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php(75): call_user_func(Array)
+#7 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php(40): website->initializationTest( in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[11-Mar-2014 17:24:21 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'Unknown column 'open_id' in 'field list'' in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:145
+Stack trace:
+#0 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(300): DB_MysqlStatement->executeInsert()
+#1 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(143): Query->insertQuery(Array)
+#2 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Model/UserModel.class.php(59): Basic->insert(Array)
+#3 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Controllers/User/UserController.class.php(16): UserModel->insertUser(Array)
+#4 [internal function]: UserController->add()
+#5 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php(75): call_user_func(Array)
+#6 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php(40): website->initializationTest()
+#7 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/index.php(10): website->run()
+#8 {main}
+  thrown in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 145
+[11-Mar-2014 17:24:47 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'Unknown column 'open_id' in 'field list'' in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:145
+Stack trace:
+#0 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(300): DB_MysqlStatement->executeInsert()
+#1 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(143): Query->insertQuery(Array)
+#2 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Model/UserModel.class.php(59): Basic->insert(Array)
+#3 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Controllers/User/UserController.class.php(16): UserModel->insertUser(Array)
+#4 [internal function]: UserController->add()
+#5 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php(75): call_user_func(Array)
+#6 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php(40): website->initializationTest()
+#7 /Users/Lev/Sites/yajie_weixin_crm/weixin_api/index.php(10): website->run()
+#8 {main}
+  thrown in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 145
+[11-Mar-2014 17:30:40 Asia/Shanghai] PHP Notice:  Operation timed out after 4552 milliseconds with 0 out of 0 bytes received in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 479

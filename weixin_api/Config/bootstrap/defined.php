@@ -32,13 +32,14 @@ defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH','ORIG_PATH_INFO,RED
 ini_set("display_errors", 1);
 ini_set("log_errors", "On");
 ini_set("error_log", ROOT_DIR . Logs . '/Error/error.log');
-defined('DBNAME') or define('DBNAME','weixin');
+
+defined('DBNAME') or define('DBNAME','weixin_company');
 
 defined('USER') or define('USER', 'root');
 
-defined('PASSWORD') or define('PASSWORD', '');
+defined('PASSWORD') or define('PASSWORD', '123456');
 
-defined('DBHOST') or define('DBHOST', 'localhost');
+defined('DBHOST') or define('DBHOST', '127.0.0.1');
 
 
 defined('Develop') or define('Develop', 1)

@@ -7,7 +7,7 @@ class CompanyController extends BaseController {
     private $sercet = 'afc26fbaff69f7ce8c3c2a1cabdf0047';
 
     private $bigArray = array(
-
+        'page'=>array('name'=>'1234','type'=>'text','text'=>'<a href="http://112.124.25.155/wchatplatform/?g=company&a=test&v=index&open_id={$open_id}">请点击这里</a>'),
         'test'=>array('name'=>'test','type'=>'text','text'=>'<a href="">请点击这里</a>>'),
 
     );
@@ -23,8 +23,8 @@ class CompanyController extends BaseController {
     public function index() {
 
 
-
-        transferData(APIURL.'/user/add','post',$data);
+       
+        // $result = transferData(APIURL.'/user/add','post',$data);
 
         $weChat = new Wechat();
 

@@ -321,10 +321,6 @@ function curlGet($url){
     
     $ch = curl_init(); 
 
-    echo $url;
-
-    die;
-
     curl_setopt_array($ch, $defaults); 
 
     if( ! $result = curl_exec($ch)) 

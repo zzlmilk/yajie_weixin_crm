@@ -7,27 +7,17 @@ class  UserController implements User {
 	 */
 	public function add(){
 
-
 		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])){
 
-			$weixinApi = new weixinApi();
+			if(!empty($_REQUEST['user_name']) && !empty($_REQUEST['user_phone']) && !empty($_REQUEST['sex']) && !empty($_REQUEST['birthday'])){
 
-			$token_json = $weixinApi->getToken('wxe7878882ea37482b','afc26fbaff69f7ce8c3c2a1cabdf0047');
+				$user = new UserModel();
 
-			$token_array = json_decode($token_json,true);
+				$user->insertUser($_REQUEST);
 
-			if(is_array($token_array)){
+			} else{
 
-				$token = $token_array['access_token'];
-
-				/**
-				 * 获取用户信息
-				 */
-
-				$user_json = $weixinApi->getUserInfo($_REQUEST['open_id'],$token);
-
-				AssemblyJson($user_json);
-
+				echoErrorCode(20001);
 			}
 
 		} else{
@@ -37,53 +27,82 @@ class  UserController implements User {
 		}
 
 	}
-
 	/**
-	 * 获取单个用户信息  v1
+	 * 判断用户是否已被注册
 	 */
 
-	public function get_info(){
+	public function able_user(){
 
+		if(!empty($_REQUEST['open_id'])){
 
-	}
+			$user = new UserModel();
 
+			$user->ableUserRegister($_REQUEST['open_id']);
 
+		} else{
 
-	/**
-	 *  获取全部用户信息  v1
-	 *   page   分页  默认为20条数据
-	 */
-
-	public function get_info_all(){
-
-
+			echoErrorCode(10002);
+		}
 
 	}
-
-
-
-	/**
-	 * 修改用户信息  v1
-	 */
-
-	public function  revise_user(){
-
-
-	}
-
-
 	/**
 	 * 用户积分 累加  v1
 	 */
 
 	public function add_user_integration(){
 
+		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['integration'])){
 
+			$user = new UserModel();
+
+			$user->addUserIntegration($_REQUEST['open_id'],$_REQUEST['integration']);
+
+		}
+
+	}
+	/**
+	 * 用户金额 累加  v1
+	 */
+	public function add_user_money(){
+
+		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['money'])){
+
+			$user = new UserModel();
+
+			$user->addUserMoney($_REQUEST['open_id'],$_REQUEST['money']);
+
+		}
 
 	}
 
+	/**
+	 * 减少用户积分
+	 */
+	public function reduction_user_integration(){
 
+		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['integration'])){
 
+			$user = new UserModel();
+
+			$user->reductionUserIntegration($_REQUEST['open_id'],$_REQUEST['integration']);
+
+		}
+
+	}
+	/**
+	 * 减少用户金额
+	 */
+	public function reduction_user_money(){
+
+		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['money'])){
+
+			$user = new UserModel();
+
+			$user->reductionUserMoney($_REQUEST['open_id'],$_REQUEST['money']);
+
+		}
+
+	}
 
 }
 ?>
