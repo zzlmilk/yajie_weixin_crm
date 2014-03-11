@@ -32,13 +32,11 @@ class TestController extends BaseController {
 		//print_r($data);
 		//transferData(APIURL.'/user/add','post',$data);
 
-
 		$resultRename = transferData(APIURL.'/user/able_user/','post',$data);
 		$res = json_decode($resultRename,true);
 
 		if($res['success'] == 1){
 			$resultRegister = transferData(APIURL.'/user/add','post',$data);
-
 			$resultRegister = json_decode($resultRegister,true);
 
 			if($resultRegister['user']['user_id'] > 0){
