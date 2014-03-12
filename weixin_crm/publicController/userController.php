@@ -4,16 +4,63 @@ class userController implements User {
 
     // 用户列表 界面
     public function userList() {
-
+        $pageSize = 3;
         $userModel = new userModel();
+        $userModel->initialize();
+        $userNumber = $userModel->vars_number;
+        $userModel->addOffset(0, $pageSize);
         $userModel->initialize();
         $result = $userModel->vars_all;
         $_ENV['smarty']->setDirTemplates('user');
         $_ENV['smarty']->assign('userInfo', $result);
+        $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userListPage";
+        $page = $_ENV['smarty']->getPages($url, 1, $userNumber, $pageSize);
+        $_ENV['smarty']->assign('pages', $page);
         $_ENV['smarty']->display('userList');
     }
 
-    //显示搜索页面
+    //查询用户
+    public function seachUsers() {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (!empty($_POST['selectText'])) {
+                $phone = $_POST['selectText'];
+                $userModel = new userModel();
+                $userModel->initialize("user_phone = '" . $phone . "'");
+                if ($userModel->vars_number == 1) {
+                    $reVal = $userModel->vars;
+                    $_GET['userId'] = $reVal["user_id"];
+                    $this->userEdit();
+                } else {
+                    header(WebSiteUrl . "/pageredirst.php?action=user&functionname=userList");
+                    echo "未找到对应的手机号码请确认后重新输入";
+                }
+            }
+        }
+    }
+
+    public function userListPage() {
+        if (isset($_GET["page"])) {
+            $pageSize = 3;
+            $pageNumber = $_GET["page"];
+            $userModel = new userModel();
+            $userModel->initialize();
+            $userNumber = $userModel->vars_number;
+            $dateCount = $pageSize * ($pageNumber - 1);
+            $userModel->addOffset($dateCount, $pageSize);
+            $userModel->initialize();
+            $result = $userModel->vars_all;
+            $_ENV['smarty']->setDirTemplates('user');
+            $_ENV['smarty']->assign('userInfo', $result);
+            $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userListPage";
+            $page = $_ENV['smarty']->getPages($url, $pageNumber, $userNumber, $pageSize);
+            $_ENV['smarty']->assign('pages', $page);
+            $_ENV['smarty']->display('userList');
+        } else {
+            $this->userList();
+        }
+    }
+
+    //显示用户搜索页面
     public function pointAndMoneyManage() {
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -24,40 +71,42 @@ class userController implements User {
                 echo "1";
             } else {
                 header('Content-type: application/json');
-               $jsonResult= json_encode($result);
+                $jsonResult = json_encode($result);
                 echo $jsonResult;
             }
         } else {
             $_ENV['smarty']->setDirTemplates('user');
             $_ENV['smarty']->display('manageView');
         }
-    } 
-    public function contrulUserResource(){
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $resourceNumber=$_POST["resourceNumber"];
-            $userId=$_POST['postUserId'];
-            $conturlType=$_POST['conturlType'];
-            switch ($conturlType){
+    }
+
+    //用户分数&余额加减
+    public function contrulUserResource() {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $resourceNumber = $_POST["resourceNumber"];
+            $userId = $_POST['postUserId'];
+            $conturlType = $_POST['conturlType'];
+            switch ($conturlType) {
                 case "addPoint":
-                      $this->addPointer($userId, $resourceNumber);
-                break;
+                    $this->addPointer($userId, $resourceNumber);
+                    break;
                 case "minPoint":
                     $this->reductionPointer($userId, $resourceNumber);
-                break;
+                    break;
                 case "addMoney":
                     $this->addMoney($userId, $resourceNumber);
-                break;
+                    break;
                 case "minMoney":
                     $this->reductionMoney($userId, $resourceNumber);
-                break;
+                    break;
             }
             header('Content-type: application/json');
-            $rerurnArray['resourceNumber']=$resourceNumber;
-            $rerurnArray['conturlType']=$conturlType;
-            $jsonReturn=  json_encode($rerurnArray);
+            $rerurnArray['resourceNumber'] = $resourceNumber;
+            $rerurnArray['conturlType'] = $conturlType;
+            $jsonReturn = json_encode($rerurnArray);
             echo $jsonReturn;
         }
-    } 
+    }
 
     //编辑用户信息
     public function userEdit() {
@@ -117,6 +166,40 @@ class userController implements User {
         } else {
             
         }
+    }
+
+    public function userManage() {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $returnFlag = false;
+            if (empty($_POST['user_name'])) {
+                $returnFlag = true;
+            } else if (empty($_POST['user_phone']) || !ctype_digit($_POST['user_phone'])) {
+                $returnFlag = true;
+            } else if (empty($_POST['birthday'])) {
+                $returnFlag = true;
+            } else if (empty($_POST['user_money']) || !ctype_digit($_POST['user_money'])) {
+                $returnFlag = true;
+            } else if (empty($_POST['user_integration']) || !ctype_digit($_POST['user_integration'])) {
+                $returnFlag = true;
+            } else {
+                $insertUserData['user_name'] = $_POST['user_name'];
+                $insertUserData['user_phone'] = $_POST['user_phone'];
+                $insertUserData['birthday'] = $_POST['birthday'];
+                $insertUserData['user_money'] = $_POST['user_money'];
+                $insertUserData['user_integration'] = $_POST['user_integration'];
+                $insertUserData['sex'] = $_POST['sex'];
+                $returnVal = $this->addUser($insertUserData);
+                if ($returnVal > 0) {
+                    echo" chenggong";
+                } else {
+                    echo 'failed';
+                }
+            }
+        } else {
+            $_ENV['smarty']->setDirTemplates('user');
+            $_ENV['smarty']->display('addUser');
+        }
+        //  $_ENV['smarty']->assign('userInfo', $result);
     }
 
     //积分信息界面

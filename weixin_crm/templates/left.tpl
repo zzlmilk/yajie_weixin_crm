@@ -157,7 +157,7 @@
                                     <img id="xiaotu3" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                 </td>
                                 <td width="85%">
-                                    <a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=moneyManage" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">添加用户</a>
+                                    <a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userManage" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">添加用户</a>
                                 </td>
                             </tr>
                         </table>
