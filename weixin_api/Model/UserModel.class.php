@@ -4,7 +4,7 @@
 class UserModel  extends Basic {
 
 
-		public function __construct() {
+	public function __construct() {
 
 		$this->child_name = 'user';
 
@@ -85,9 +85,7 @@ class UserModel  extends Basic {
 
 	public function addUserIntegration($open_id,$integration){
 
-
 		if(!empty($open_id) && !empty($integration) && $integration > 0){
-
 
 			$UserModel = new UserModel();
 
@@ -199,6 +197,20 @@ class UserModel  extends Basic {
 
 			}
 		}
+
+	}
+
+	/**
+	 * 
+	 */
+
+	public function getUserInfo($open_id){
+
+		$this->addCondition('user_open_id like "'.$open_id.'"',1);
+
+		$this->initialize();
+
+		return $this->vars;
 
 	}
 }

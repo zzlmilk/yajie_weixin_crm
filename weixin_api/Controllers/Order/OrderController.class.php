@@ -11,24 +11,56 @@ class OrderController  implements Order{
 
 	public function  add(){
 
+		if(!empty($_REQUEST['source'])){
+
+
+			if(!empty($_REQUEST['open_id'])  && !empty($_REQUEST['merchandise_id'])){
+
+				if(!empty($_REQUEST['order_money']) && $_REQUEST['order_money'] > 0){
+
+					$user = new userModel();
+
+					$userInfo = $user->getUserInfo($_REQUEST['open_id']);
+
+					$orderModel = new OrderModel();
+
+					$orderInfo['order'] =  $orderModel->crearteOrder($_REQUEST,$userInfo);
+
+					$orderInfo['user']  = arrayToObject($userInfo);
+
+					AssemblyJson($orderInfo);
+
+				}
+
+			}
+
+		}
 		
 	}
 
-
 	/**
-	 * 获取订单商品信息
+	 * 修改订单状态  将状态修改为成功支付
 	 */
-	public function list_merchandise(){
 
+	public function revise_order_state(){
 
-		
+		if(!empty($_REQUEST['source'])){
+
+			if(!empty($_REQUEST['order_number'])){
+
+				$orderModel = new OrderModel();
+
+				$state = $orderModel->updateOrderState($_REQUEST['order_number']);
+
+				$array['state'] = 1;
+
+				AssemblyJson($array);
+
+			}
+
+		}
+
 	}
-
-
-	/**
-	 * 
-	 */
-
 
 }
 

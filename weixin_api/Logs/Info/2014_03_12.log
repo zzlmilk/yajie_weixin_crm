@@ -1,0 +1,64 @@
+Mar 12 11:55:57 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/user/add/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=company&user_name=jinglingchang&user_phone=13524446830&sex=1&birthday=627321600
+insert into weixin_company.user (user_name,user_phone,sex,birthday,user_open_id) values('jinglingchang','13524446830','1','627321600','ocpOot-COx7UruiqEfag_Lny7dlc')
+Mar 12 11:56:08 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/user/add/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=company&user_name=jinglingchang&user_phone=13524446830&sex=1&birthday=627321600
+insert into weixin_company.user (user_name,user_phone,sex,birthday,user_open_id) values('jinglingchang','13524446830','1','627321600','ocpOot-COx7UruiqEfag_Lny7dlc')
+Mar 12 11:56:10 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/user/add/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=company&user_name=jinglingchang&user_phone=13524446830&sex=1&birthday=627321600
+insert into weixin_company.weixin_user (subscribe,openid,sex,nickname,language,city,province,country,headimgurl,subscribe_time) values('1','ocpOot-COx7UruiqEfag_Lny7dlc','1','翟晓平','zh_CN','Zhabei','Shanghai','China','http://wx.qlogo.cn/mmopen/XO8x9Zlj37jegeeurt8SKHnauY0SiaDkhr32sILKRpXjYujIrTzX2ecfP6BvKmFURPzH5034VvA3OmaO2Fw4oCuY5KX2CiaLfH/0','1393574640')
+Mar 12 11:56:10 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/add/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=company&user_name=jinglingchang&user_phone=13524446830&sex=1&birthday=627321600
+{"user":{"user_name":"jinglingchang","user_phone":"13524446830","sex":"1","birthday":"627321600","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_id":2},"weixin_user":{"subscribe":1,"openid":"ocpOot-COx7UruiqEfag_Lny7dlc","sex":1,"nickname":"\u7fdf\u6653\u5e73","language":"zh_CN","city":"Zhabei","province":"Shanghai","country":"China","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/XO8x9Zlj37jegeeurt8SKHnauY0SiaDkhr32sILKRpXjYujIrTzX2ecfP6BvKmFURPzH5034VvA3OmaO2Fw4oCuY5KX2CiaLfH\/0","subscribe_time":1393574640}}
+Mar 12 12:05:38 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/add/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=company&merchandise_id=1&order_money=1
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 12 12:05:57 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/add/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=company&merchandise_id=1&order_money=1
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 12 12:05:57 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/order/add/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=company&merchandise_id=1&order_money=1
+insert into weixin_company.order (user_id,user_phone,merchandise_id,order_type,order_state,order_time,order_money,order_code) values('2','13524446830','1','1','0','1394597157','1','20140312120557')
+Mar 12 12:07:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/add/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=company&merchandise_id=1&order_money=1
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 12 12:08:36 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/add/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=company&merchandise_id=1&order_money=1
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 12 12:08:43 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/add/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=company&merchandise_id=1&order_money=1
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 12 12:08:43 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/order/add/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=company&merchandise_id=1&order_money=1
+insert into weixin_company.order (user_id,user_phone,merchandise_id,order_type,order_state,order_time,order_money,order_code) values('2','13524446830','1','1','0','1394597323','1','20140312120843')
+Mar 12 12:10:35 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+SELECT * FROM weixin_company.order  WHERE 1  AND order_code like "20140312120843"     
+Mar 12 12:10:35 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+
+Mar 12 12:10:35 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+{"state":1,"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 12 12:14:02 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+SELECT * FROM weixin_company.order  WHERE 1  AND order_code like "20140312120843"     
+Mar 12 12:14:02 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+
+Mar 12 12:14:02 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+{"state":1,"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 12 12:14:27 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+SELECT * FROM weixin_company.order  WHERE 1  AND order_code like "20140312120843"     
+Mar 12 12:14:27 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+
+Mar 12 12:14:27 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+{"state":1,"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 12 12:14:32 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+SELECT * FROM weixin_company.order  WHERE 1  AND order_code like "20140312120843"     
+Mar 12 12:14:32 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+
+Mar 12 12:14:32 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+{"state":1,"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 12 12:15:13 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+SELECT * FROM weixin_company.order  WHERE 1  AND order_code like "20140312120843"     
+Mar 12 12:15:35 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+SELECT * FROM weixin_company.order  WHERE 1  AND order_code like "20140312120843"     
+Mar 12 12:15:44 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+SELECT * FROM weixin_company.order  WHERE 1  AND order_code like "20140312120843"     
+Mar 12 12:15:44 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+
+Mar 12 12:21:28 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+SELECT * FROM weixin_company.order  WHERE 1  AND order_code like "20140312120843"     
+Mar 12 12:21:28 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+UPDATE weixin_company.order SET order_state='1' WHERE 1  AND order_code like "20140312120843"
+Mar 12 12:21:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+SELECT * FROM weixin_company.order  WHERE 1  AND order_code like "20140312120843"     
+Mar 12 12:21:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+UPDATE weixin_company.order SET order_state='1' WHERE 1  AND order_code like "20140312120843"
+Mar 12 12:21:53 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/revise_order_state/?order_number=20140312120843&source=company
+{"state":1}
