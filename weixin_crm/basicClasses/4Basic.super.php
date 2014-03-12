@@ -25,11 +25,8 @@ class Basic extends Query {
             }
 //            $this->mem =  new Memcache;
 //            $this->mem->connect('127.0.0.1', 11211) or die ("Could not connect");
-
-            $this->table = $this->child_name;
-            
+           $this->table = $this->child_name;
             parent::__construct();
-            
         } catch (Exception $e) {
             echo $e;
         }
