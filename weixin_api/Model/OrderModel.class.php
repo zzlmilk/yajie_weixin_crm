@@ -38,7 +38,7 @@ class OrderModel  extends Basic{
 
     	$data['order_money'] = $result['order_money'];
 
-    	$data['order_code'] = date('Ymdhis');
+    	$data['order_code'] = date('Ymdhis').rand(10,99);
 
     	$this->insert($data);
 
