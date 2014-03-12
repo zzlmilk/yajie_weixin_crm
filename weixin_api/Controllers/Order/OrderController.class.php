@@ -1,14 +1,11 @@
 <?php
 
-
 class OrderController  implements Order{
 
 
 	/**
 	 * 下订单
 	 */
-
-
 	public function  add(){
 
 		if(!empty($_REQUEST['source'])){
