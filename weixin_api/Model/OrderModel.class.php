@@ -26,6 +26,10 @@ class OrderModel  extends Basic{
 
     	$data['merchandise_id'] = $result['merchandise_id'];
 
+        $data['appointment_time'] = $result['appointment_time'];
+
+        $data['appointment_object'] = $result['appointment_object'];
+
     	$data['order_type'] = 1;
 
     	$data['order_state'] = 0;

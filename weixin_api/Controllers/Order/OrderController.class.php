@@ -13,23 +13,32 @@ class OrderController  implements Order{
 
 		if(!empty($_REQUEST['source'])){
 
-
 			if(!empty($_REQUEST['open_id'])  && !empty($_REQUEST['merchandise_id'])){
 
 				if(!empty($_REQUEST['order_money']) && $_REQUEST['order_money'] > 0){
 
-					$user = new userModel();
+					if(!empty($_REQUEST['appointment_time'])){
 
-					$userInfo = $user->getUserInfo($_REQUEST['open_id']);
+						$user = new userModel();
 
-					$orderModel = new OrderModel();
+						$userInfo = $user->getUserInfo($_REQUEST['open_id']);
 
-					$orderInfo['order'] =  $orderModel->crearteOrder($_REQUEST,$userInfo);
+						$orderModel = new OrderModel();
 
-					$orderInfo['user']  = arrayToObject($userInfo);
+						$orderInfo['order'] =  $orderModel->crearteOrder($_REQUEST,$userInfo);
 
-					AssemblyJson($orderInfo);
+						$orderInfo['user']  = arrayToObject($userInfo);
 
+						AssemblyJson($orderInfo);
+
+					} else{
+
+						echoErrorCode(30002);
+					}
+				}else{
+
+
+					echoErrorCode(30001);
 				}
 
 			}
