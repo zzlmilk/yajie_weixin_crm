@@ -15,7 +15,7 @@
         客户余额：<input type="text" value="{$userData.user_money}" name="user_money" readonly="readonly" disabled="no" id="userMoney"><br>
         客户积分：<input type="text" value="{$userData.user_integration}" name="user_integration" readonly="readonly" disabled="no" id="userIntegration"><br>
         <input type="hidden" value="{$userData.user_id}" name="user_id" id="user_id">
-        <button onclick="submit();">保存修改</button></a>
+        <button id="saveChangeButton" >保存修改</button></a>
 </form>
 
 {else}
@@ -24,7 +24,7 @@
 {if $userMoneyData eq 0}
     暂无消费数据
 {else}
-        <h1>消费详情</h1>
+    <h1>消费详情</h1>
     {foreach from=$userMoneyData item=MoneyData key=key}
         NO:     {$key+1}
         数量: {$MoneyData.fraction}
@@ -37,7 +37,7 @@
 {if $userPointData eq 0}
     暂无积分数据
 {else}
-        <h1>积分详情</h1>
+    <h1>积分详情</h1>
     {foreach from=$userPointData item=PointData key=key}
         NO:     {$key+1}
         数量: {$PointData.fraction}
@@ -46,5 +46,38 @@
         <br>
     {/foreach}
 {/if}
+<script src="{$WebSiteUrl}/js/jquery-1.9.1.js"></script>
+<script src="{$WebSiteUrl}/js/rexexTest.js"></script>
+<script>
+    $("#saveChangeButton").click(function(){
+    var errorMessage="";
+    var alertFlag=false;
+    if($("#userName").val()==""){
+    errorMessage+="用户名字不能为空 \r\n";
+    alertFlag=true;
+}
+if($("#userPhone").val()==""){
+errorMessage+="手机号码不能为空 \r\n";
+alertFlag=true;
+}
+else if(!getMobilPhoneRegex($("#userPhone").val())){
+errorMessage+="手机号码错误 \r\n";
+alertFlag=true;
+}
+if($("#userBirthday").val()==""){
+errorMessage+="生日不能为空 \r\n";
+alertFlag=true;
+}
+else if(!getDateRegex($("#userBirthday").val())){
+errorMessage+="日期格式错误(yyyy-mm-dd) \r\n";
+alertFlag=true;
+}
+if(alertFlag){ 
+alert(errorMessage);
+return false;
+}
+})
+     
+</script>
 
 
