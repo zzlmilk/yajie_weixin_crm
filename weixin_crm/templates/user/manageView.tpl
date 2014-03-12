@@ -29,7 +29,7 @@
 <div style="text-align: center; padding-top: 100px;">
     <div>
         <input type="text" class="seachInput"  placeholder="请输入电话号码" id="userPhone"/>
-        <button id="getUser" class="seachButton">搜索</button>
+        <button id="getUser" class="seachButton" accesskey="Enter">搜索</button>
     </div>
     <div style="margin-top: 50px; display: none;" id="userData">
         <div class="userDateArea">

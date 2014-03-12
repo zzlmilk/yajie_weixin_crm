@@ -105,6 +105,61 @@ class view {
 
        
     }
+    public function getPages( $targetUrl, $page, $dateCount, $pageSize=10) {
+       $str="";
+        $init = 1;
+        $page_len = 8;
+        $page_count = ceil($dateCount / $pageSize);
+        $maxPage = $page_count;
+        $pages = $page_count;
+        if (empty($page) || $page < 0) {  //判断传送的页码
+            $page = 1;
+        } else {
+
+        }
+        $offset = $pageSize * ($page - 1);
+        $page_len = ($page_len % 2) ? $page_len : $page_len + 1; //页码个数
+        $pageoffset = ($page_len - 1) / 2; //页码个数左右偏移量
+        $key1 = '<div class="page">';
+        $key1.="<span>$page/$pages</span>&nbsp;";    //第几页,共几页
+        if ($page != 1) {
+            $key1.="&nbsp;&nbsp;<a href=\"" . $targetUrl . "&page=1&" . $str . "\">首页</a> ";     //第一页
+            $key1.="&nbsp;&nbsp;<a href=\"" . $targetUrl . "&page=" . ($page - 1) . "&" . $str . "\">上一页</a>"; //上一页
+        } else {
+            $key1.="&nbsp;&nbsp;首页 "; //第一页
+            $key1.="&nbsp;&nbsp;上一页"; //上一页
+        }
+        if ($pages > $page_len) {//如果当前页小于等于左偏移
+            if ($page <= $pageoffset) {
+                $init = 1;
+                $maxPage = $page_len;
+            } else {//如果当前页大于左偏移/如果当前页码右偏移超出最大分页数
+                if ($page + $pageoffset >= $pages + 1) {
+                    $init = $pages - $page_len + 1;
+                } else {//左右偏移都存在时的计算
+                    $init = $page - $pageoffset;
+                    $maxPage = $page + $pageoffset;
+                }
+            }
+        }
+        for ($i = $init; $i <= $maxPage; $i++) {
+            if ($i == $page) {
+                $key1.=' <span>' . $i . '</span>';
+            } else {
+                $key1.=" <a href=\"" . $targetUrl . "&page=" . $i . "&" . $str . "\">" . $i . "</a>";
+            }
+        }
+
+        if ($page != $pages) {
+            $key1.=" &nbsp;&nbsp;<a href=" . $targetUrl . "&page=" . ($page + 1) . "&" . $str . ">下一页</a> "; //下一页
+            $key1.="&nbsp;&nbsp;<a href=" . $targetUrl . "&page={$pages}&" . $str . ">最后一页</a>"; //最后一页
+        } else {
+            $key1.="&nbsp;&nbsp;下一页 "; //下一页
+            $key1.="&nbsp;&nbsp;最后一页"; //最后一页
+        }
+        $key1.='</div>';
+        return $key1;
+    }
 
 }
 
