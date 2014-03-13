@@ -10,6 +10,11 @@ class TestController extends BaseController {
 		$this->display();
 	}
 
+	public function ativating(){
+
+		
+		$this->display();
+	}
 	public function index(){
 
 		//$this->assign('open_id',$_REQUEST['open_id']);
