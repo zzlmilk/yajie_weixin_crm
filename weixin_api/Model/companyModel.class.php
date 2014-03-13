@@ -3,7 +3,13 @@
 class companyModel extends Basic{
 
 
-	protected  $tableName = 'company';
+	public function __construct() {
+
+		$this->child_name = 'company';
+
+		parent::__construct();
+
+    }
 
 
 

@@ -51,11 +51,15 @@ class  UserController implements User {
 
 	public function add_user_integration(){
 
-		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['integration'])){
+		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['integration']) && !empty($_REQUEST['source'])){
 
 			$user = new UserModel();
 
 			$user->addUserIntegration($_REQUEST['open_id'],$_REQUEST['integration']);
+
+		} else{
+
+			echoErrorCode(10003);
 
 		}
 
@@ -65,14 +69,17 @@ class  UserController implements User {
 	 */
 	public function add_user_money(){
 
-		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['money'])){
+		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['money'])  && !empty($_REQUEST['source'])){
 
 			$user = new UserModel();
 
 			$user->addUserMoney($_REQUEST['open_id'],$_REQUEST['money']);
 
-		}
+		} else{
 
+			echoErrorCode(10004);
+
+		}
 	}
 
 	/**
@@ -80,25 +87,34 @@ class  UserController implements User {
 	 */
 	public function reduction_user_integration(){
 
-		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['integration'])){
+		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['integration'])  && !empty($_REQUEST['source'])){
 
 			$user = new UserModel();
 
 			$user->reductionUserIntegration($_REQUEST['open_id'],$_REQUEST['integration']);
 
+		} else{
+
+			echoErrorCode(10003);
+
 		}
 
 	}
+	
 	/**
 	 * 减少用户金额
 	 */
 	public function reduction_user_money(){
 
-		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['money'])){
+		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['money'])  && !empty($_REQUEST['source'])){
 
 			$user = new UserModel();
 
 			$user->reductionUserMoney($_REQUEST['open_id'],$_REQUEST['money']);
+
+		} else{
+
+			echoErrorCode(10004);
 
 		}
 

@@ -29,7 +29,7 @@
 <div style="text-align: center; padding-top: 100px;">
     <div>
         <input type="text" class="seachInput"  placeholder="请输入电话号码" id="userPhone"/>
-        <button id="getUser" class="seachButton">搜索</button>
+        <button id="getUser" class="seachButton" accesskey="Enter">搜索</button>
     </div>
     <div style="margin-top: 50px; display: none;" id="userData">
         <div class="userDateArea">
@@ -60,6 +60,7 @@
 
 
 <script src="{$WebSiteUrl}/js/jquery-1.9.1.js"></script>
+<script src="{$WebSiteUrl}/js/rexexTest.js"></script>
 <script>
     $("#getUser").click(function(){ 
     $("#errorPrint").html("");
@@ -71,8 +72,8 @@
 },
 success:function(rData){
 if(rData=="1"){
-    $("#errorPrint").html("未寻找到结果，请确认后重试");
-    $("#userData").css("display","none");
+$("#errorPrint").html("未寻找到结果，请确认后重试");
+$("#userData").css("display","none");
 }
 else{
 $("#userData").css("display","block");
@@ -129,6 +130,17 @@ $("#moneyConturl").css("display","none");
 return false;
 });
 $("#checkDate").click(function(){
+var errorMessage="";
+var alertFlag=false;
+
+if(!getIntRegex($("#resourceNumber").val())||$("#resourceNumber").val()<0){
+errorMessage+="金额必须为数字或者大于0 \r\n";
+alertFlag=true;
+}
+if(alertFlag){
+alert(errorMessage);
+}
+else{
 $.ajax({
 url:"{$WebSiteUrl}/pageredirst.php?action=user&functionname=contrulUserResource",
 type:"post",
@@ -139,6 +151,10 @@ conturlType:$("#conturlType").val()
 },
 success:function(rData){
 //alert(JSON.stringify(rData));
+if(rData=="numberError"){
+    alert("金额错误");
+    return false;
+}
 var nowPoints= ($("#points").html())*1;
 var nowMoney= ($("#money").html())*1;
 switch(rData['conturlType']){
@@ -171,6 +187,7 @@ $("#resourceNumber").val("");
 //        $("#money").html(rData["user_money"]);
 //        $("#userId").val(rData["user_id"]);
 }
-})
+});
+}
 })
 </script>

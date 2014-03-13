@@ -260,7 +260,7 @@ class Query extends DB_Mysql_search {
             $update = 'UPDATE ' . $this->dbname . '.' . $this->table . ' SET ' . $this->update_string . ' WHERE 1 ' . $this->condition_string;
             //echo '<br>'.$update.'<br>';
             $this->prepare($update)->execute();
-            log_write($select, $this->log_file,'SQL');
+            log_write($update, $this->log_file,'SQL');
         }
     }
 
