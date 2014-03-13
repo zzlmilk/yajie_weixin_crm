@@ -40,11 +40,11 @@ errorMessage+="日期格式错误(yyyy-mm-dd) \r\n";
 alertFlag=true;
 }
 
-    if(!getIntRegex($("#userMoney").val()||$("#userMoney").val()<0)){
+    if(!getIntRegex($("#userMoney").val())||$("#userMoney").val()<0){
         errorMessage+="金额必须为数字或者大于0 \r\n";
         alertFlag=true;
     }
-        if(!getIntRegex($("#userIntegration").val()||$("#userIntegration").val()<0)){
+        if(!getIntRegex($("#userIntegration").val())||$("#userIntegration").val()<0){
         errorMessage+="积分必须为数字或者大于0 \r\n";
         alertFlag=true;
     }

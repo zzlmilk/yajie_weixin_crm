@@ -31,10 +31,10 @@ class userController implements User {
                     $_GET['userId'] = $reVal["user_id"];
                     $this->userEdit();
                 } else {
-                    echo "未找到对应的手机号码请确认后重新输入<a href='".WebSiteUrl."/pageredirst.php?action=user&functionname=userList'>返回</a>";
+                    echo "未找到对应的手机号码请确认后重新输入<a href='" . WebSiteUrl . "/pageredirst.php?action=user&functionname=userList'>返回</a>";
                 }
-            }else{
-                 echo "手机号码不能为空，请确认后重新输入<a href='".WebSiteUrl."/pageredirst.php?action=user&functionname=userList'>返回</a>";
+            } else {
+                echo "手机号码不能为空，请确认后重新输入<a href='" . WebSiteUrl . "/pageredirst.php?action=user&functionname=userList'>返回</a>";
             }
         }
     }
@@ -85,27 +85,31 @@ class userController implements User {
     public function contrulUserResource() {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $resourceNumber = $_POST["resourceNumber"];
-            $userId = $_POST['postUserId'];
-            $conturlType = $_POST['conturlType'];
-            switch ($conturlType) {
-                case "addPoint":
-                    $this->addPointer($userId, $resourceNumber);
-                    break;
-                case "minPoint":
-                    $this->reductionPointer($userId, $resourceNumber);
-                    break;
-                case "addMoney":
-                    $this->addMoney($userId, $resourceNumber);
-                    break;
-                case "minMoney":
-                    $this->reductionMoney($userId, $resourceNumber);
-                    break;
+            if ((empty($resourceNumber) || !ctype_digit($resourceNumber)) && $resourceNumber != "0") {
+                echo "numberError";
+            } else {
+                $userId = $_POST['postUserId'];
+                $conturlType = $_POST['conturlType'];
+                switch ($conturlType) {
+                    case "addPoint":
+                        $this->addPointer($userId, $resourceNumber);
+                        break;
+                    case "minPoint":
+                        $this->reductionPointer($userId, $resourceNumber);
+                        break;
+                    case "addMoney":
+                        $this->addMoney($userId, $resourceNumber);
+                        break;
+                    case "minMoney":
+                        $this->reductionMoney($userId, $resourceNumber);
+                        break;
+                }
+                header('Content-type: application/json');
+                $rerurnArray['resourceNumber'] = $resourceNumber;
+                $rerurnArray['conturlType'] = $conturlType;
+                $jsonReturn = json_encode($rerurnArray);
+                echo $jsonReturn;
             }
-            header('Content-type: application/json');
-            $rerurnArray['resourceNumber'] = $resourceNumber;
-            $rerurnArray['conturlType'] = $conturlType;
-            $jsonReturn = json_encode($rerurnArray);
-            echo $jsonReturn;
         }
     }
 
@@ -170,7 +174,7 @@ class userController implements User {
     }
 
     public function userManage() {
-      
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $returnFlag = false;
             if (empty($_POST['user_name'])) {
@@ -179,9 +183,9 @@ class userController implements User {
                 $returnFlag = true;
             } else if (empty($_POST['birthday'])) {
                 $returnFlag = true;
-            } else if ((empty($_POST['user_money']) || !ctype_digit($_POST['user_money']))&&$_POST['user_money']!="0") {
+            } else if ((empty($_POST['user_money']) || !ctype_digit($_POST['user_money'])) && $_POST['user_money'] != "0") {
                 $returnFlag = true;
-            } else if ((empty($_POST['user_integration']) || !ctype_digit($_POST['user_integration']))&&$_POST['user_integration']!="0") {
+            } else if ((empty($_POST['user_integration']) || !ctype_digit($_POST['user_integration'])) && $_POST['user_integration'] != "0") {
                 $returnFlag = true;
             } else {
                 $insertUserData['user_name'] = $_POST['user_name'];
