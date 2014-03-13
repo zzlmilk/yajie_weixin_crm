@@ -45,6 +45,11 @@ class TestController extends BaseController {
 		echo "123";
 	}
 
+	public function ativating(){
+
+		
+		$this->display();
+	}
 	public function index(){
 
 		//$this->assign('open_id',$_REQUEST['open_id']);

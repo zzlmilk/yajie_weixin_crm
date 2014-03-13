@@ -21,6 +21,7 @@
     <div class="selectBar"><input type="text" style="width:300px;" placeholder="请输入手机号查询" id="selectText" name="selectText"><button>查询</button></div>
     <div class="sortBar">排序：<input type="radio" name="sortType" value="point">积分&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sortType" value="money">余额</div>
     <div style="height: 100px;"></div>
+</form>
     <div class="dataArea">
         {foreach from=$userInfo item=userInfo1 key=key}
             <p>
@@ -33,5 +34,4 @@
             </p>
         {/foreach}
     </div>
-</form>
     {$pages}

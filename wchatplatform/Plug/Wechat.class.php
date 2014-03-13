@@ -450,7 +450,7 @@ class Wechat {
     public function sendmessage($array,$info) {
 
 
-         $ExtendsPHP = ROOT_DIR.'Extends/'.$info['companyInfo']['token'].'.php';
+        $ExtendsPHP = ROOT_DIR.'Extends/'.$info['companyInfo']['token'].'.php';
 
 
         include $ExtendsPHP;
