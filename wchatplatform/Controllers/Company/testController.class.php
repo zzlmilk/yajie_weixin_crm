@@ -2,12 +2,47 @@
 
 class TestController extends BaseController {
 
+   public function __construct() {
+
+        header("Content-type:text/html;charset=utf-8");
+
+
+        $this->assign('open_id',$_REQUEST['open_id']);
+    }
+
 
 	public function register(){
 
-		$this->assign('open_id',$_REQUEST['open_id']);
+		
 		
 		$this->display();
+	}
+
+	public function bigWheelPage(){
+
+
+		$this->display();
+
+	}
+
+	
+
+
+	public function  guaguaka(){
+
+		$this->display();
+
+	}
+
+	public function getBigWheel(){
+
+
+		$token = $_REQUEST['token'];
+		$ac = $_REQUEST['ac'];
+		$tid = $_REQUEST['tid'];
+		$t = $_REQUEST['t'];
+
+		echo "123";
 	}
 
 	public function index(){
