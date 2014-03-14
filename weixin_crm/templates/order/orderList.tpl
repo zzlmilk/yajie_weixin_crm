@@ -8,7 +8,7 @@
     }
 </style>
 <table class="table table-condensed">
-    <tr><th>预约编号</th><th>预约金额</th><th>预约日期</th><th>预约备注</th><th>指定预约</th><th>商品id(名称)</th><th>预约者电话</th><th>预约方式</th><th>是否付款</th><th>预约日期</th><th>编辑</th><th>删除</th></tr>
+    <tr><th>预约编号</th><th>预约金额</th><th>预约日期</th><th>预约备注</th><th>指定预约</th><th>商品id(名称)</th><th>预约者电话</th><th>预约方式</th><th>是否付款</th><th>提交日期</th><th>编辑</th><th>删除</th></tr>
     {foreach from=$orderList item=orderInfo key=key}
         <tr>
             <td>{$orderInfo.order_code}</td>
