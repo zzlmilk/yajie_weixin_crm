@@ -1,13 +1,25 @@
 
 
-       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<a href='{$websiteUrl}?g=company&a=test&v=register&open_id={$open_id}'>注册</a>
+<style type="text/css">
 
-<a>大转盘</a>
+.aaaa{
 
-<a>刮刮卡</a>
+	font-size: 10em;
+}
+</style>
 
-<a>激活</a>
+<div class='aaaa'>
 
-<a>订单</a>
+	<a href='{$websiteUrl}?g=company&a=test&v=register&open_id={$open_id}'>注册</a>
+
+	<a href='{$websiteUrl}?g=company&a=test&v=bigWheelPage&open_id={$open_id}'>大转盘</a>
+
+	<a  href='{$websiteUrl}?g=company&a=test&v=guaguaka&open_id={$open_id}'>刮刮卡</a>
+
+	<a>激活</a>
+
+	<a>订单</a>
+
+</div>

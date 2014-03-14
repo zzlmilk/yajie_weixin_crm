@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-11 09:46:15
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-12 18:23:03
          compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:994197243531e6ae7c03fa0-21469451%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:140164380953203587b2a978-58313996%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '87573d4006c313532643eff1ecd959d6be07427c' => 
     array (
       0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1394502372,
+      1 => 1394619711,
     ),
   ),
-  'nocache_hash' => '994197243531e6ae7c03fa0-21469451',
+  'nocache_hash' => '140164380953203587b2a978-58313996',
   'function' => 
   array (
   ),
@@ -21,7 +21,7 @@ $_smarty_tpl->decodeProperties(array (
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title></title>
         <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/js/jquery.js"></script>
+/js/jquery-1.9.1.js"></script>
         <style type="text/css">
    
             body {
@@ -168,7 +168,7 @@ $_smarty_tpl->decodeProperties(array (
                                 </td>
                                 <td width="85%">
                                     <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" onclick="tupian('1')">用户列表</a>
+/pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" onclick="tupian('1')">客户信息</a>
                                 </td>
                             </tr>
                             <tr>
@@ -178,7 +178,7 @@ $_smarty_tpl->decodeProperties(array (
                                 </td>
                                 <td width="85%">
                                     <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">积分管理</a>
+/pageredirst.php?action=user&functionname=pointAndMoneyManage" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">积分消费管理</a>
                                 </td>
                             </tr>
                             <tr>
@@ -188,7 +188,7 @@ $_smarty_tpl->decodeProperties(array (
                                 </td>
                                 <td width="85%">
                                     <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">消费管理</a>
+/pageredirst.php?action=user&functionname=moneyManage" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">添加用户</a>
                                 </td>
                             </tr>
                         </table>
