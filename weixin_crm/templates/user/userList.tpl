@@ -3,7 +3,7 @@
     .selectBar{
 
         text-align: center;  
-        
+
     }
     .dataArea{
         text-align: left;
@@ -15,6 +15,12 @@
         width:350px;
         margin: 0 auto;
     }
+    table tr>th{
+        text-align: center;
+    }
+       table tr>td{
+        text-align: center;
+    }
 </style>
 <form action="{$WebSiteUrl}/pageredirst.php?action=user&functionname=seachUsers" method="post">
     <div style="height: 50px;"></div>
@@ -22,16 +28,21 @@
     <div class="sortBar">排序：<input type="radio" name="sortType" value="point">积分&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sortType" value="money">余额</div>
     <div style="height: 100px;"></div>
 </form>
-    <div class="dataArea">
+<div class="dataArea">
+    <table class="table table-condensed">
+        <tr><th>姓名</th><th>电话</th><th>生日</th><th>余额</th><th>积分</th><th>编辑</th></tr>
         {foreach from=$userInfo item=userInfo1 key=key}
-            <p>
-                name:{$userInfo1.user_name}
-                phone:{$userInfo1.user_phone}
-                birthday:{$userInfo1.birthday}
-                money:{$userInfo1.user_money}
-                integration:{$userInfo1.user_integration}
-                edit:<a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userEdit&userId={$userInfo1.user_id}"><button >编辑</button></a>
-            </p>
+            <tr>
+                <td>{$userInfo1.user_name}</td>
+                <td>{$userInfo1.user_phone}</td>
+                <td>{$userInfo1.birthday}</td>
+                <td>{$userInfo1.user_money}</td>
+                <td>{$userInfo1.user_integration}</td>
+                <td><a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userEdit&userId={$userInfo1.user_id}"><button >编辑</button></a></td>
+
+            </tr>
         {/foreach}
-    </div>
-    {$pages}
+    </table>
+        <div style="text-align: center">{$pages}</div> 
+</div>
+
