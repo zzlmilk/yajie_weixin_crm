@@ -27,7 +27,7 @@ defined('URL_MODEL') or define('URL_MODEL', '0'); //url模式 0为默认模式  
 defined('WebSiteUrl') or define('WebSiteUrl', 'http://'.$_SERVER['HTTP_HOST'].'/yajie_weixin_crm/'.WebSiteName);
 
 
-defined('WebSiteUrlPublic') or define('WebSiteUrlPublic', 'http://'.$_SERVER['HTTP_HOST'].'/'.WebSiteName.'/public');
+defined('WebSiteUrlPublic') or define('WebSiteUrlPublic', 'http://'.$_SERVER['HTTP_HOST'].'/yajie_weixin_crm/'.WebSiteName.'/public');
 
 
 defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH','ORIG_PATH_INFO,REDIRECT_PATH_INFO,REDIRECT_URL');
