@@ -6,10 +6,6 @@ interface  gift{
 
 	public function  updateGift($data);
 
-	public function addGift($data);
-
-	public function deleteGift($data);
-
 	/**
 	 *  获取刮刮卡礼品列表
 	 */

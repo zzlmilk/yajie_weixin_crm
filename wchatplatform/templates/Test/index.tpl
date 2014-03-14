@@ -18,7 +18,7 @@
 
 	<a  href='{$websiteUrl}?g=company&a=test&v=guaguaka&open_id={$open_id}'>刮刮卡</a>
 
-	<a>激活</a>
+	<a href='{$websiteUrl}?g=company&a=test&v=ativating&open_id={$open_id}'>激活</a>
 
 	<a>订单</a>
 

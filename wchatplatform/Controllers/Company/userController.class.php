@@ -23,10 +23,14 @@ class UserController extends BaseController {
 
     public function userInfo(){
 
-
-
     	$this->display();
 
+    }
+
+
+    public function userJf(){
+
+        $this->display();
     }
 
 
