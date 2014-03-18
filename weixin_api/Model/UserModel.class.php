@@ -97,7 +97,7 @@ class UserModel  extends Basic {
 
 				$UserModel->update($data);
 
-				AssemblyJson($data);
+				return $data;
 
 			}
 		}
@@ -123,7 +123,7 @@ class UserModel  extends Basic {
 
 				$UserModel->update($data);
 				
-				AssemblyJson($data);
+				return $data;
 
 			}
 		}
@@ -159,7 +159,7 @@ class UserModel  extends Basic {
 
 				$UserModel->update($data);
 
-				AssemblyJson($data);
+				return $data;
 
 			}
 		}
@@ -193,7 +193,7 @@ class UserModel  extends Basic {
 
 				$UserModel->update($data);
 				
-				AssemblyJson($data);
+				return $data;
 
 			}
 		}
@@ -201,7 +201,7 @@ class UserModel  extends Basic {
 	}
 
 	/**
-	 * 
+	 * 获取用户资料
 	 */
 
 	public function getUserInfo($open_id){
@@ -213,6 +213,20 @@ class UserModel  extends Basic {
 		return $this->vars;
 
 	}
+
+	public function updateInfo($data,$user_id){
+
+		$user = new userModel();
+
+		$user->initialize('user_id = '.$user_id);
+
+		if($user->vars_number >0){
+
+			$user->update($data);
+
+		}
+	}
+
 }
 
 ?>

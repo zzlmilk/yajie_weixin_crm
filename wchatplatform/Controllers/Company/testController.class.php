@@ -6,6 +6,7 @@ class TestController extends BaseController {
     public $userOpenId;
     public $postData;
     public $errorMessage = "";
+
     //兑换列表
     public function getExchangeList() {
 
@@ -13,27 +14,46 @@ class TestController extends BaseController {
 
         $this->display();
     }
+
     //兑换物品详情
     public function exchangeGoods() {
         $this->display();
     }
+
     //预约
+
+
+
+    public function __construct() {
+
+        header("Content-type:text/html;charset=utf-8");
+
+
+        $this->assign('open_id', $_REQUEST['open_id']);
+    }
+
+    /**
+     * 下订单 和修改订单
+     */
     public function order() {
-        $this->userOpenId=$_REQUEST['open_id'];
+        $this->userOpenId = $_REQUEST['open_id'];
         if (isset($_GET['checkReturn'])) {
             $this->assign("checkReturn", $_GET['checkReturn']);
             $this->assign("returnVal", $_POST);
         }
-        $selectReturnVal = $this->getReturnValue(APIURL."/order/get_merchandise", "get");
+        $selectReturnVal = $this->getReturnValue(APIURL . "/order/get_merchandise", "get");
         $selectVal = json_decode($selectReturnVal, true);
         //var_dump($selectReturnVal);
         $this->assign("selectVal", $selectVal);
         $this->assign('open_id', $_REQUEST['open_id']);
         $this->display();
     }
-    //查看订单
+
+    /**
+     *  查看订单
+     */
     public function orderCheck() {
-        $this->userOpenId=$_REQUEST['open_id'];
+        $this->userOpenId = $_REQUEST['open_id'];
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //预处理post发送的值
             foreach ($_POST as $key => $val) {
@@ -112,9 +132,9 @@ class TestController extends BaseController {
         $this->assign('open_id', $_REQUEST['open_id']);
         $this->display();
     }
-    //取消订单
+
     public function cancelOrder() {
-        $this->userOpenId=$_REQUEST['open_id'];
+        $this->userOpenId = $_REQUEST['open_id'];
         if ($this->errorMessage != "") {
             $this->assign("errorMessage", "您已经有激活的订单，请修改或者取消后再进行预约");
             $this->errorMessage = "";
@@ -169,7 +189,7 @@ class TestController extends BaseController {
     }
 
     public function getAllOrder() {
-        $this->userOpenId=$_REQUEST['open_id'];
+        $this->userOpenId = $_REQUEST['open_id'];
         $postUserDate['source'] = "company";
         $postUserDate['open_id'] = $this->userOpenId;
         $DateValue = transferData(APIURL . "/order/get_order_all", "post", $postUserDate);
@@ -192,6 +212,9 @@ class TestController extends BaseController {
         $this->display();
     }
 
+    /**
+     * 提交注册
+     */
     public function submitRegister() {
 
         $data = array();
@@ -222,14 +245,6 @@ class TestController extends BaseController {
 
             echo "error";
         }
-    }
-
-    public function __construct() {
-
-        header("Content-type:text/html;charset=utf-8");
-
-
-        $this->assign('open_id', $_REQUEST['open_id']);
     }
 
     public function bigWheelPage() {

@@ -55,7 +55,9 @@ class  UserController implements User {
 
 			$user = new UserModel();
 
-			$user->addUserIntegration($_REQUEST['open_id'],$_REQUEST['integration']);
+			$data = $user->addUserIntegration($_REQUEST['open_id'],$_REQUEST['integration']);
+
+			AssemblyJson($data);
 
 		} else{
 
@@ -73,7 +75,9 @@ class  UserController implements User {
 
 			$user = new UserModel();
 
-			$user->addUserMoney($_REQUEST['open_id'],$_REQUEST['money']);
+			$data = $user->addUserMoney($_REQUEST['open_id'],$_REQUEST['money']);
+
+			AssemblyJson($data);
 
 		} else{
 
@@ -91,7 +95,9 @@ class  UserController implements User {
 
 			$user = new UserModel();
 
-			$user->reductionUserIntegration($_REQUEST['open_id'],$_REQUEST['integration']);
+			$data = $user->reductionUserIntegration($_REQUEST['open_id'],$_REQUEST['integration']);
+
+			AssemblyJson($data);
 
 		} else{
 
@@ -110,13 +116,57 @@ class  UserController implements User {
 
 			$user = new UserModel();
 
-			$user->reductionUserMoney($_REQUEST['open_id'],$_REQUEST['money']);
+			$data = $user->reductionUserMoney($_REQUEST['open_id'],$_REQUEST['money']);
+
+			AssemblyJson($data);
 
 		} else{
 
 			echoErrorCode(10004);
 
 		}
+
+	}
+
+	/**
+	 * 获取用户资料
+	 */
+
+	public function get_info(){
+
+		if(!empty($_REQUEST['source']) && !empty($_REQUEST['open_id'])){
+
+			$user = new userModel();
+
+			$userInfo = $user->getUserInfo($_REQUEST['open_id']);
+
+			if(count($userInfo) > 0){
+
+				$array['user'] = arrayToObject($userInfo,0);
+
+				AssemblyJson($array);
+
+			}
+
+		}
+
+	}
+
+
+	public function updateInfo($data,$user_id){
+
+		if(is_array($data) && count($data)>0){
+
+			$user = new userModel();
+
+			$user->updateInfo($data,$user_id);
+
+			$array['res'] = 1;
+
+
+			AssemblyJson($array);
+		}
+
 
 	}
 
