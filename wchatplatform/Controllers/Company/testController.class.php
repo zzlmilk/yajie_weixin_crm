@@ -3,6 +3,20 @@
 class TestController extends BaseController {
 
 
+
+     public function __construct() {
+
+        header("Content-type:text/html;charset=utf-8");
+
+
+        $this->assign('open_id',$_REQUEST['open_id']);
+    }
+
+
+    /**
+     * 下订单 和修改订单
+     */
+
     public function order() {
         if(isset($_GET[checkReturn])){
             
@@ -12,6 +26,11 @@ class TestController extends BaseController {
         
         $this->display();
     }
+
+
+    /**
+     *  查看订单
+     */
 
     public function orderCheck() {
         foreach ($_POST as $key => $val) {
@@ -28,12 +47,14 @@ class TestController extends BaseController {
             $returnVal["$key"] = $val;
         }
 
-
-        header("Content-Type:text/html;charset=utf8");
         $this->assign("returnVal", $returnVal);
         $this->display();
     }
 
+
+    /**
+     * 注册现实
+     */
     public function register() {
 
         $this->assign('open_id', $_REQUEST['open_id']);
@@ -47,6 +68,10 @@ class TestController extends BaseController {
 
         $this->display();
     }
+
+    /**
+     * 提交注册
+     */
 
     public function submitRegister() {
 
@@ -78,15 +103,6 @@ class TestController extends BaseController {
 
             echo "error";
         }
-    }
-
-
-   public function __construct() {
-
-        header("Content-type:text/html;charset=utf-8");
-
-
-        $this->assign('open_id',$_REQUEST['open_id']);
     }
 
 	public function bigWheelPage(){

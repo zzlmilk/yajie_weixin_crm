@@ -183,26 +183,26 @@
                             <table id="subtree2" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                                 <tr>
                                     <td width="15%" height="20">
-                                        <img id="xiaotu2" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                        <img id="xiaotu4" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">订单管理</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('4')">订单管理</a>
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td width="15%" height="20">
-                                        <img id="xiaotu2" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                        <img id="xiaotu5" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">新增预约</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
                                     </td>
 
                                 </tr>
                             </table>
 
 
-                            <!--                    积分开始-->
+                            <!--                    微游戏开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table3">
                                 <tr>
                                     <td height="29" onclick="list('3')">
@@ -222,24 +222,103 @@
                             <table id="subtree3" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                                 <tr>
                                     <td width="15%" height="20">
-                                        <img id="xiaotu3" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                        <img id="xiaotu6" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">大转盘礼品列表</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('6')">大转盘礼品列表</a>
                                     </td>
 
                                 </tr>
 
                                 <tr>
                                     <td width="15%" height="20">
-                                        <img id="xiaotu4" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                        <img id="xiaotu7" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" onclick="tupian('4')">刮刮卡礼品列表</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" onclick="tupian('7')">刮刮卡礼品列表</a>
                                     </td>
                                 </tr>
 
                             </table>
+
+
+
+
+
+                            <!--                   兑换开始-->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table4">
+                                <tr>
+                                    <td height="29" onclick="list('4')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img4" id="img4" src="{$WebSiteUrl}/images/ico04.gif" width="8" height="11">
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >兑换管理</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree4" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu8" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('6')">礼品列表</a>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu9" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" onclick="tupian('7')">兑换记录</a>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+
+
+
+ <!--                   兑换开始-->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table5">
+                                <tr>
+                                    <td height="29" onclick="list('5')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img5" id="img5" src="{$WebSiteUrl}/images/ico04.gif" width="8" height="11">
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >问卷管理</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree5" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu10" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('6')">问卷列表</a>
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+
+
                         </td>
                     </tr>
                 </table>
