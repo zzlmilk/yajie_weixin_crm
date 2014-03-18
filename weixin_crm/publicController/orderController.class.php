@@ -5,11 +5,25 @@ class orderController {
     public function getOrderlist() {
         
         $orderModel = new orderModel();
+        $joinString=' LEFT JOIN merchandise ON merchandise.merchandise_id = order.merchandise_id ';
+        $orderModel->addJoin($joinString);
         $orderModel->initialize();
        $orderList= $orderModel->vars_all;
         $_ENV['smarty']->setDirTemplates('order');
         $_ENV['smarty']->assign('orderList', $orderList);
         $_ENV['smarty']->display('orderList');
+    }
+    public function editOrder(){
+        
+    }
+    public function orderAdd(){
+        $merchandise=new MerchandiseModel();
+        $merchandise->initialize();
+        $merchandiseIteams=$merchandise->vars_all;
+        var_dump($merchandiseIteams);
+        $_ENV['smarty']->setDirTemplates('order');
+        $_ENV['smarty']->assign('merchandiseIteams', $merchandiseIteams);
+        $_ENV['smarty']->display('orderAdd');
     }
     public function cancelReservation(){
        if(isset($_GET['orderCode'])){
