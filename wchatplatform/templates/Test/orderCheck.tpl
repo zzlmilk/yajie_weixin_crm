@@ -49,14 +49,14 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label">所选项目</label>
                 <div class="col-sm-10">
-                    <p class="form-control-static">{$returnVal.orderMerchandise}</p>
-                    <input type="hidden" name="orderMerchandise" value="{$returnVal.orderMerchandise}      {$returnVal.needMoney}">
+                    <p class="form-control-static">{$returnVal.merchandiseIteams}</p>
+                    <input type="hidden" name="orderMerchandise" value="{$returnVal.orderMerchandise}">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">费用</label>
                 <div class="col-sm-10">
-                    <p class="form-control-static">{$returnVal.needMoney}</p>
+                    <p class="form-control-static">{$returnVal.needMoney}元</p>
                 </div>
             </div>
             <div class="form-group">
@@ -74,7 +74,7 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-10">
-                <button type="" onclick="javascript:return 0;" class="btn btn-primary">支&nbsp;&nbsp;&nbsp;付</button>
+                <button type="button" onclick="" class="btn btn-primary">支&nbsp;&nbsp;&nbsp;付</button>
                 <button type="submit" class="btn btn-primary">修&nbsp;&nbsp;&nbsp;改</button>
                 </div>
             </div>
