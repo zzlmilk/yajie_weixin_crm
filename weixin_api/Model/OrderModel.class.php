@@ -14,6 +14,36 @@ class OrderModel  extends Basic{
     }
 
 
+    public function updateOrder($result,$userInfo){
+
+
+        $this->clearUp();
+
+        $this->initialize('order_code like "'.$result['order_code'].'"');
+
+        if($this->vars_number > 0 ){
+
+
+           $data['merchandise_id'] = $result['merchandise_id'];
+
+            $data['appointment_time'] = $result['appointment_time'];
+
+            $data['appointment_object'] = $result['appointment_object'];
+
+            $data['order_number'] = $result['order_number'];
+
+            $data['order_state'] = 0;
+
+            $this->update($data);
+
+            return $data;
+
+
+        }
+
+    }
+
+
     /**
      * 创建订单
      */
@@ -36,7 +66,9 @@ class OrderModel  extends Basic{
 
     	$data['order_time'] = time();
 
-    	$data['order_money'] = $result['order_money'];
+    	$data['order_number'] = $result['order_number'];
+
+        $data['order_state'] = 0;
 
     	$data['order_code'] = date('Ymdhis').rand(10,99);
 
@@ -46,9 +78,9 @@ class OrderModel  extends Basic{
     }
 
     /**
-     * 修改订单状态
+     * 修改订单状态 0为正在进行  1为完成 2为删除订单
      */
-    public function updateOrderState($orderNumber){
+    public function updateOrderState($orderNumber,$data){
 
 
         $order = new OrderModel();
@@ -59,13 +91,90 @@ class OrderModel  extends Basic{
 
         if($order->vars_number > 0 ){
 
-            $update['order_state'] = 1;
+            $order->update($data);
+
+            return 1;
+
+        }
+    }
+
+
+     /**
+     * 修改订单支付状态
+     */
+    public function updateOrderPayState($orderNumber,$data){
+
+
+        $order = new OrderModel();
+
+        $order->addCondition('order_code like "'.$orderNumber.'"',1);
+
+        $order->initialize();
+
+        if($order->vars_number > 0 ){
+
+            $update['order_pay_state'] = $data;
 
             $order->update($update);
 
             return 1;
 
         }
+    }
+
+    /**
+     *  获取订单
+     */
+
+    public function getOrderInfo($user_id,$state,$number =0){
+
+
+        if(!empty($user_id) && $user_id >0){
+
+            $order = new orderModel();
+
+            if($number > 0){
+
+
+                $order->randOffset($number);
+
+            }
+
+            $order->initialize('user_id = '.$user_id.' and order_state = '.$state);
+
+            if($order->vars_number > 0){
+
+                return $order->vars;
+
+            }
+
+        }
+
+
+    }
+
+
+     /**
+     *  获取所有订单
+     */
+
+    public function getOrderInfoAll($user_id,$state){
+
+        if(!empty($user_id) && $user_id >0){
+
+            $order = new orderModel();
+
+            $order->initialize('user_id = '.$user_id);
+
+            if($order->vars_number > 0){
+
+                return $order->vars_all;
+
+            }
+
+        }
+
+
     }
 
 }
