@@ -7,6 +7,16 @@ class TestController extends BaseController {
     public $postData;
     public $errorMessage = "";
 
+
+    public function __construct() {
+
+        header("Content-type:text/html;charset=utf-8");
+
+
+        $this->assign('open_id',$_REQUEST['open_id']);
+    }
+
+
     public function getExchangeList() {
 
         $this->assign("returnVal", "aaaa");
@@ -15,16 +25,8 @@ class TestController extends BaseController {
     }
 
     public function exchangeGoods() {
+
         $this->display();
-    }
-
-
-     public function __construct() {
-
-        header("Content-type:text/html;charset=utf-8");
-
-
-        $this->assign('open_id',$_REQUEST['open_id']);
     }
 
 
@@ -227,7 +229,6 @@ class TestController extends BaseController {
 
         //print_r($data);
         //transferData(APIURL.'/user/add','post',$data);
-
         $resultRename = transferData(APIURL . '/user/able_user/', 'post', $data);
         $res = json_decode($resultRename, true);
 
@@ -238,10 +239,15 @@ class TestController extends BaseController {
             if ($resultRegister['user']['user_id'] > 0) {
 
                 // 注册成功后跳转会员中心
+
+
+                echo '用户注册成功';
             }
         } else {
 
-            echo "error";
+            echo "用户已存在";
+
+            die;
         }
     }
 
@@ -253,17 +259,15 @@ class TestController extends BaseController {
 
 	}
 
-    public function bigWheelPage() {
-
-
-
-        $this->display();
-    }
-
     public function guaguaka() {
 
         $this->display();
     }
+
+
+    /**
+     * 
+     */
 
     public function getBigWheel() {
 
@@ -275,6 +279,11 @@ class TestController extends BaseController {
 
         echo "123";
     }
+
+
+    /**
+     *  激活页面
+     */
 
     public function ativating() {
 
@@ -323,6 +332,17 @@ class TestController extends BaseController {
             curl_close($curl); //关闭curl
             return $result;
         }
+    }
+
+
+    /**
+     * 问卷 页面显示
+     */
+
+    public function Questionnaire(){
+
+        $this->display();
+
     }
 
 }
