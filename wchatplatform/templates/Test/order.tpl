@@ -213,7 +213,6 @@ $(this).submit();
 $("#orderMerchandiseHtml").val($("#orderMerchandise").find("option:first").html());
 //alert($("#orderDate").val());
 $("#orderMerchandise").change(function(){
-alert($(this).find("option:selected").html());
 $("#orderMerchandiseHtml").val($(this).find("option:selected").html());
 });
 $("#orderTime").datetimepicker({

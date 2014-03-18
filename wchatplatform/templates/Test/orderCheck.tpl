@@ -29,7 +29,7 @@
     <body>
         
         <div class="cardBackground">
-            <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=test&v=order&checkReturn=1">
+            <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=test&v=order&checkReturn=1&open_id={$open_id}">
                 <div style="height: 10px;"></div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">人数</label>

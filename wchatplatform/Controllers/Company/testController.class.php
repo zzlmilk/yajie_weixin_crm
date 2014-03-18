@@ -7,7 +7,6 @@ class TestController extends BaseController {
     public $postData;
     public $errorMessage = "";
 
-
     public function __construct() {
 
         header("Content-type:text/html;charset=utf-8");
@@ -16,30 +15,29 @@ class TestController extends BaseController {
         $this->assign('open_id',$_REQUEST['open_id']);
     }
 
-
+    //兑换列表
     public function getExchangeList() {
 
-        $this->assign("returnVal", "aaaa");
-
         $this->display();
+
     }
 
+    //兑换物品详情
     public function exchangeGoods() {
-
         $this->display();
-    }
 
+    }
 
     /**
      * 下订单 和修改订单
      */
-
     public function order() {
+        $this->userOpenId = $_REQUEST['open_id'];
         if (isset($_GET['checkReturn'])) {
             $this->assign("checkReturn", $_GET['checkReturn']);
             $this->assign("returnVal", $_POST);
         }
-        $selectReturnVal = $this->getReturnValue("http://192.168.0.111/yajie_weixin_crm/weixin_api/order/get_merchandise", "get");
+        $selectReturnVal = $this->getReturnValue(APIURL . "/order/get_merchandise", "get");
         $selectVal = json_decode($selectReturnVal, true);
         //var_dump($selectReturnVal);
         $this->assign("selectVal", $selectVal);
@@ -47,12 +45,11 @@ class TestController extends BaseController {
         $this->display();
     }
 
-
     /**
      *  查看订单
      */
-
     public function orderCheck() {
+        $this->userOpenId = $_REQUEST['open_id'];
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //预处理post发送的值
             foreach ($_POST as $key => $val) {
@@ -123,19 +120,17 @@ class TestController extends BaseController {
             $MerchandiseValue = json_decode($MerchandiseValue, true);
             $returnVal['merchandiseIteams'] = $MerchandiseValue['merchandise']['merchandise_name'];
             $returnVal['needMoney'] = $MerchandiseValue['merchandise']['merchandise_money'];
-            $returnVal['orderMerchandise']=$orderString['merchandise_id'];
-            $returnVal['orderObject']=$orderString['appointment_object'];
+            $returnVal['orderMerchandise'] = $orderString['merchandise_id'];
+            $returnVal['orderObject'] = $orderString['appointment_object'];
         }
         header("Content-Type:text/html;charset=utf8");
         $this->assign("returnVal", $returnVal);
+        $this->assign('open_id', $_REQUEST['open_id']);
         $this->display();
     }
 
-
-    /**
-     * 注册现实
-     */
     public function cancelOrder() {
+        $this->userOpenId = $_REQUEST['open_id'];
         if ($this->errorMessage != "") {
             $this->assign("errorMessage", "您已经有激活的订单，请修改或者取消后再进行预约");
             $this->errorMessage = "";
@@ -183,19 +178,21 @@ class TestController extends BaseController {
                 $activateOrderValue["order"]['needMoney'] = $MerchandiseValue['merchandise']['merchandise_money'];
 
                 $this->assign("returnVal", $activateOrderValue["order"]);
+                $this->assign('open_id', $_REQUEST['open_id']);
                 $this->display("cancelOrder");
             }
         }
     }
 
     public function getAllOrder() {
+        $this->userOpenId = $_REQUEST['open_id'];
         $postUserDate['source'] = "company";
-        $postUserDate['open_id'] = $_REQUEST["open_id"];
+        $postUserDate['open_id'] = $this->userOpenId;
         $DateValue = transferData(APIURL . "/order/get_order_all", "post", $postUserDate);
         $DateValue = json_decode($DateValue, TRUE);
         var_dump($DateValue);
+        $this->display();
     }
-
 
     public function register() {
 
@@ -214,7 +211,6 @@ class TestController extends BaseController {
     /**
      * 提交注册
      */
-
     public function submitRegister() {
 
         $data = array();
@@ -260,6 +256,12 @@ class TestController extends BaseController {
 	}
 
     public function guaguaka() {
+
+        $this->display();
+
+    }
+    public function bigWheelPage() {
+
 
         $this->display();
     }

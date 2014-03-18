@@ -30,6 +30,7 @@
 
         <div class="cardBackground">
             <input type="hidden" value="{$WebSiteUrl}" id="webSiteUrl">
+            <input type="hidden" value="{$open_id}" id="openId">
             <div style="color:  red;">{$errorMessage}</div>
             <form id="orderForm" method='post' role="form" action="{$WebSiteUrl}?g=company&a=test&v=cancelOrder&toCancel=1">
                 <div style="height: 10px;"></div>
@@ -86,12 +87,13 @@
     </body>
     <script>
         var webSiteUrl=$("#webSiteUrl").val();
+        var openId=$("#openId").val();
         $("#revise").click(function(){
-        $("#orderForm").attr("action", webSiteUrl+"?g=company&a=test&v=order&checkReturn=1");
+        $("#orderForm").attr("action", webSiteUrl+"?g=company&a=test&v=order&checkReturn=1&open_id="+openId);
         $("#orderForm").submit();
     });
     $("#cancel").click(function(){
-    $("#orderForm").attr("action", webSiteUrl+"?g=company&a=test&v=cancelOrder&toCancel=1");
+    $("#orderForm").attr("action", webSiteUrl+"?g=company&a=test&v=cancelOrder&toCancel=1&open_id="+openId);
     $("#orderForm").submit();
 });
     
