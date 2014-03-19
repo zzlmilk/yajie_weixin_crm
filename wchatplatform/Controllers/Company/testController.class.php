@@ -3,26 +3,32 @@
 class TestController extends BaseController {
 
     public $userData;
-    public $userOpenId;
+    public $userOpenId = "ocpOot-COx7UruiqEfag_Lny7dlc";
     public $postData;
     public $errorMessage = "";
 
     //兑换列表
     public function getExchangeList() {
-
-        $this->assign("returnVal", "aaaa");
-
+        $exchangeList = $this->getReturnValue(APIURL . "/exchange/get_exchange_list?source=company&open_id=" . $this->userOpenId, "get");
+        $exchangeList = json_decode($exchangeList, true);
+        var_dump($exchangeList);
+        $this->assign("exchangeList", $exchangeList);
         $this->display();
     }
 
     //兑换物品详情
     public function exchangeGoods() {
+
+        $exchangeItem = $this->getReturnValue(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
+        $exchangeItem = json_decode($exchangeItem, true);
+        var_dump($exchangeItem["exchange_info"]);
+        $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
         $this->display();
     }
 
-    //预约
-
-
+    public function changeGoods() {
+        
+    }
 
     public function __construct() {
 
@@ -133,6 +139,7 @@ class TestController extends BaseController {
         $this->display();
     }
 
+    //取消订单
     public function cancelOrder() {
         $this->userOpenId = $_REQUEST['open_id'];
         if ($this->errorMessage != "") {
@@ -194,7 +201,8 @@ class TestController extends BaseController {
         $postUserDate['open_id'] = $this->userOpenId;
         $DateValue = transferData(APIURL . "/order/get_order_all", "post", $postUserDate);
         $DateValue = json_decode($DateValue, TRUE);
-        var_dump($DateValue);
+        var_dump($DateValue['order']);
+        $this->assign("orders", $DateValue['order']);
         $this->display();
     }
 

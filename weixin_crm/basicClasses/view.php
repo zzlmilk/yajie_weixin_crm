@@ -120,14 +120,14 @@ class view {
         $offset = $pageSize * ($page - 1);
         $page_len = ($page_len % 2) ? $page_len : $page_len + 1; //页码个数
         $pageoffset = ($page_len - 1) / 2; //页码个数左右偏移量
-        $key1 = '<div class="page">';
-        $key1.="<span>$page/$pages</span>&nbsp;";    //第几页,共几页
+        $key1 = '<ul class="pagination">';
+       // $key1.="<span>$page/$pages</span>&nbsp;";    //第几页,共几页
         if ($page != 1) {
-            $key1.="&nbsp;&nbsp;<a href=\"" . $targetUrl . "&page=1&" . $str . "\">首页</a> ";     //第一页
-            $key1.="&nbsp;&nbsp;<a href=\"" . $targetUrl . "&page=" . ($page - 1) . "&" . $str . "\">上一页</a>"; //上一页
+          //  $key1.="&nbsp;&nbsp;<a href=\"" . $targetUrl . "&page=1&" . $str . "\">首页</a> ";     //第一页
+            $key1.="<li><a href=\"" . $targetUrl . "&page=" . ($page - 1) . "&" . $str . "\">&laquo;</a></li>"; //上一页
         } else {
-            $key1.="&nbsp;&nbsp;首页 "; //第一页
-            $key1.="&nbsp;&nbsp;上一页"; //上一页
+          //  $key1.="&nbsp;&nbsp;首页 "; //第一页
+            $key1.="<li  class='disabled'><a>&laquo;</a></li>"; //上一页
         }
         if ($pages > $page_len) {//如果当前页小于等于左偏移
             if ($page <= $pageoffset) {
@@ -144,20 +144,20 @@ class view {
         }
         for ($i = $init; $i <= $maxPage; $i++) {
             if ($i == $page) {
-                $key1.=' <span>' . $i . '</span>';
+                $key1.=' <li class="active"><span>' . $i . '</span></li>';
             } else {
-                $key1.=" <a href=\"" . $targetUrl . "&page=" . $i . "&" . $str . "\">" . $i . "</a>";
+                $key1.=" <li><a href=\"" . $targetUrl . "&page=" . $i . "&" . $str . "\">" . $i . "</a></li>";
             }
         }
 
         if ($page != $pages) {
-            $key1.=" &nbsp;&nbsp;<a href=" . $targetUrl . "&page=" . ($page + 1) . "&" . $str . ">下一页</a> "; //下一页
-            $key1.="&nbsp;&nbsp;<a href=" . $targetUrl . "&page={$pages}&" . $str . ">最后一页</a>"; //最后一页
+            $key1.=" <li><a href=" . $targetUrl . "&page=" . ($page + 1) . "&" . $str . ">&raquo;</a></li>"; //下一页
+          //  $key1.="&nbsp;&nbsp;<a href=" . $targetUrl . "&page={$pages}&" . $str . ">最后一页</a>"; //最后一页
         } else {
-            $key1.="&nbsp;&nbsp;下一页 "; //下一页
-            $key1.="&nbsp;&nbsp;最后一页"; //最后一页
+            $key1.="<li class='disabled'><a>&raquo;</a></li> "; //下一页
+          //  $key1.="&nbsp;&nbsp;最后一页"; //最后一页
         }
-        $key1.='</div>';
+        $key1.='</ul>';
         return $key1;
     }
 
