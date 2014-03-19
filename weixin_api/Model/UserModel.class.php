@@ -39,43 +39,76 @@ class UserModel  extends Basic {
 	}
 
 	/**
+	 * 判断手机是否已经注册
+	 */
+
+	public function ableUserPhone($phone){
+
+		$this->clearUp();
+
+		$this->initialize('user_phone = '.$phone);
+
+		if($this->vars_number > 0){
+
+			return 1;
+
+		} else{
+
+			return 0;
+		}
+
+	}
+
+	/**
 	 * 注册用户  并调用获取微信用户信息接口
 	 */
 
 	public function insertUser($val){
 
-		$data['user_name'] = $val['user_name'];
+	   $result = $this->ableUserPhone($val['user_phone']);
 
-		$data['user_phone'] = $val['user_phone'];
+	   if($result == 0){
 
-		$data['sex'] = $val['sex'];
+	   		$data['user_name'] = $val['user_name'];
 
-		$data['birthday'] = $val['birthday'];
+			$data['user_phone'] = $val['user_phone'];
 
-		$data['user_open_id'] = $val['open_id'];
+			$data['sex'] = $val['sex'];
 
-		$user = new UserModel();
+			$data['birthday'] = $val['birthday'];
 
-		$user_id = $user->insert($data);
+			$data['user_open_id'] = $val['open_id'];
 
-		if($user_id > 0){
+			$user = new UserModel();
 
-			$data['user_id'] = $user_id;
+			$user_id = $user->insert($data);
 
-		}
+			if($user_id > 0){
 
-		$userInfo['user'] = arrayToObject($data,0);
-		/**
-		 *  获取微信用户
-		 */
+				$data['user_id'] = $user_id;
 
-		$weixinUser = new WeiXinUserModel();
+			}
 
-		$weixinArray = $weixinUser->getWeixinUserInfo($val['open_id'],$user_id);
+			$userInfo['user'] = arrayToObject($data,0);
+			/**
+			 *  获取微信用户
+			 */
 
-		$userInfo['weixin_user'] = arrayToObject($weixinArray,0);
+			$weixinUser = new WeiXinUserModel();
 
-		AssemblyJson($userInfo);
+			$weixinArray = $weixinUser->getWeixinUserInfo($val['open_id'],$user_id);
+
+			$userInfo['weixin_user'] = arrayToObject($weixinArray,0);
+
+			AssemblyJson($userInfo);
+
+	   } else{
+
+	   		echoErrorCode(20003);
+
+	   }
+
+		
 
 	}
 
