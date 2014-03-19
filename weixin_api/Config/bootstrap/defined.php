@@ -37,7 +37,7 @@ defined('DBNAME') or define('DBNAME','weixin_company');
 
 defined('USER') or define('USER', 'root');
 
-defined('PASSWORD') or define('PASSWORD', '');
+defined('PASSWORD') or define('PASSWORD', '123456');
 
 defined('DBHOST') or define('DBHOST', '127.0.0.1');
 

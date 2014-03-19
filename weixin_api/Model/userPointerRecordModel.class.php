@@ -13,7 +13,7 @@ class userPointerRecordModel extends Basic{
 
     }
 
-    public function  addRecord($user_id,$type,$fraction,$source,$id){
+    public function  addRecord($user_id,$type,$fraction,$source,$id  = ''){
 
     	$data['user_id'] = $user_id;
 
