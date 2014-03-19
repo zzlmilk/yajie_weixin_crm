@@ -7,35 +7,35 @@ class TestController extends BaseController {
     public $postData;
     public $errorMessage = "";
 
-    //兑换列表
-    public function getExchangeList() {
-        $exchangeList = $this->getReturnValue(APIURL . "/exchange/get_exchange_list?source=company&open_id=" . $this->userOpenId, "get");
-        $exchangeList = json_decode($exchangeList, true);
-        var_dump($exchangeList);
-        $this->assign("exchangeList", $exchangeList);
-        $this->display();
-    }
-
-    //兑换物品详情
-    public function exchangeGoods() {
-
-        $exchangeItem = $this->getReturnValue(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
-        $exchangeItem = json_decode($exchangeItem, true);
-        var_dump($exchangeItem["exchange_info"]);
-        $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
-        $this->display();
-    }
-
-    public function changeGoods() {
-        
-    }
-
     public function __construct() {
 
         header("Content-type:text/html;charset=utf-8");
 
 
         $this->assign('open_id', $_REQUEST['open_id']);
+        //$this->userOpenId=$_REQUEST['open_id'];
+    }
+
+    //兑换列表
+    public function getExchangeList() {
+        //$this->userOpenId = $_REQUEST['open_id'];
+        $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=company&open_id=" . $this->userOpenId, "get");
+        $exchangeList = json_decode($exchangeList, true);
+        var_dump($exchangeList);
+        $this->assign("exchangeList", $exchangeList);
+
+
+        $this->display();
+    }
+
+    //兑换物品详情
+    public function exchangeGoods() {
+       // $this->userOpenId = $_REQUEST['open_id'];
+        $exchangeItem =transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
+        $exchangeItem = json_decode($exchangeItem, true);
+        var_dump($exchangeItem["exchange_info"]);
+        $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
+        $this->display();
     }
 
     /**
@@ -47,7 +47,7 @@ class TestController extends BaseController {
             $this->assign("checkReturn", $_GET['checkReturn']);
             $this->assign("returnVal", $_POST);
         }
-        $selectReturnVal = $this->getReturnValue(APIURL . "/order/get_merchandise", "get");
+        $selectReturnVal = transferData(APIURL . "/order/get_merchandise", "get");
         $selectVal = json_decode($selectReturnVal, true);
         //var_dump($selectReturnVal);
         $this->assign("selectVal", $selectVal);
@@ -201,7 +201,6 @@ class TestController extends BaseController {
         $postUserDate['open_id'] = $this->userOpenId;
         $DateValue = transferData(APIURL . "/order/get_order_all", "post", $postUserDate);
         $DateValue = json_decode($DateValue, TRUE);
-        var_dump($DateValue['order']);
         $this->assign("orders", $DateValue['order']);
         $this->display();
     }
@@ -237,7 +236,6 @@ class TestController extends BaseController {
 
         //print_r($data);
         //transferData(APIURL.'/user/add','post',$data);
-
         $resultRename = transferData(APIURL . '/user/able_user/', 'post', $data);
         $res = json_decode($resultRename, true);
 
@@ -248,10 +246,15 @@ class TestController extends BaseController {
             if ($resultRegister['user']['user_id'] > 0) {
 
                 // 注册成功后跳转会员中心
+
+
+                echo '用户注册成功';
             }
         } else {
 
-            echo "error";
+            echo "用户已存在";
+
+            die;
         }
     }
 
@@ -266,6 +269,9 @@ class TestController extends BaseController {
         $this->display();
     }
 
+    /**
+     * 
+     */
     public function getBigWheel() {
 
 
@@ -277,53 +283,30 @@ class TestController extends BaseController {
         echo "123";
     }
 
+    /**
+     *  激活页面
+     */
     public function ativating() {
 
 
         $this->display();
     }
 
-    function getReturnValue($url, $curlType = "get", $postValue = "") {
-        if ($curlType == "get") {
-            $ch = curl_init();
-            $timeout = 5;
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-            //在需要用户检测的网页里需要增加下面两行
-            //curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-            //curl_setopt($ch, CURLOPT_USERPWD, US_NAME.":".US_PWD); 
-            $contents = curl_exec($ch);
-            curl_close($ch);
-            return $contents;
-        } else if ($curlType == "post") {
-            $header = array(
-                'Accept:*/*',
-                'Accept-Charset:GBK,utf-8;q=0.7,*;q=0.3',
-                'Accept-Encoding:gzip,deflate,sdch',
-                'Accept-Language:zh-CN,zh;q=0.8',
-                'Connection:keep-alive',
-                'Host:' . $this->host,
-                'Origin:' . $this->origin,
-                'Referer:' . $this->referer,
-                'X-Requested-With:XMLHttpRequest'
-            );
-            $curl = curl_init(); //启动一个curl会话
-            curl_setopt($curl, CURLOPT_URL, $url); //要访问的地址
-            curl_setopt($curl, CURLOPT_HTTPHEADER, $header); //设置HTTP头字段的数组
-            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0); //对认证证书来源的检查
-            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 1); //从证书中检查SSL加密算法是否存在
-            curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1); //使用自动跳转
-            curl_setopt($curl, CURLOPT_AUTOREFERER, 1); //自动设置Referer
-            curl_setopt($curl, CURLOPT_POST, 1); //发送一个常规的Post请求
-            curl_setopt($curl, CURLOPT_POSTFIELDS, $postValue); //Post提交的数据包
-            curl_setopt($curl, CURLOPT_TIMEOUT, 30); //设置超时限制防止死循环
-            curl_setopt($curl, CURLOPT_HEADER, 0); //显示返回的Header区域内容
-            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1); //获取的信息以文件流的形式返回
-            $result = curl_exec($curl); //执行一个curl会话
-            curl_close($curl); //关闭curl
-            return $result;
-        }
+    /**
+     * 问卷 页面显示
+     */
+    public function Questionnaire() {
+
+        $this->display();
+    }
+
+    //兑换物品
+    public function changeGoods() {
+        $this->userOpenId = $_REQUEST['open_id'];
+        $postDate["source"] = "company";
+        $postDate['open_id'] = $this->userOpenId;
+
+        $exchangeList = $this->getReturnValue(APIURL . "/exchange/redeem", "post");
     }
 
 }

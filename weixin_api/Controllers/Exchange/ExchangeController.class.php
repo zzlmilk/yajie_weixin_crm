@@ -46,7 +46,7 @@ class ExchangeController implements exchange {
 
 			$exchangeInfoArray = $exchangeModel->getExchangeInfo($_REQUEST['exchange_id']);
 
-			if(count($exchangeListArray) > 0 ){
+			if(count($exchangeInfoArray) > 0 ){
 
 				$exchangeArray = array();
 
@@ -123,6 +123,10 @@ class ExchangeController implements exchange {
 					}
 
 					AssemblyJson($exchangeArray);
+
+				} else{
+
+					echoErrorCode(104);
 				}
 
 			}

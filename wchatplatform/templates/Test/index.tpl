@@ -3,7 +3,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <style type="text/css">
-
+ body{
+            Font-size=62.5%;
+        }
 .aaaa{
 
 	font-size: 10em;
@@ -20,6 +22,15 @@
 
 	<a href='{$websiteUrl}?g=company&a=test&v=ativating&open_id={$open_id}'>激活</a>
 
-	<a>订单</a>
+	<a href='{$websiteUrl}?g=company&a=test&v=order&open_id={$open_id}'>订单以及修改订单</a>
+
+
+	<a href='{$websiteUrl}?g=company&a=test&v=orderCheck&open_id={$open_id}'>查看订单</a>
+
+	<a href='{$websiteUrl}?g=company&a=user&v=userCenter&open_id={$open_id}'>个人用户</a>
+
+	<a href='{$websiteUrl}?g=company&a=user&v=exchangeGoods&open_id={$open_id}'>兑换</a>
+
+	<a href='{$websiteUrl}?g=company&a=user&v=Questionnaire&open_id={$open_id}'>问卷</a>
 
 </div>

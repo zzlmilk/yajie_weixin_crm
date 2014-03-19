@@ -21,7 +21,6 @@ class MerchandiseModel extends Basic{
 
     	if($this->vars_number > 0 ){
 
-
     		return $this->vars_all;
 
     	}

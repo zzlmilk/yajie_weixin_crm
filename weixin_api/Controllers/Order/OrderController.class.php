@@ -10,7 +10,7 @@ class OrderController  implements Order{
 	 */
 	public function  add(){
 
-		$_REQUEST['open_id'] = $this->open_id;
+		//$_REQUEST['open_id'] = $this->open_id;
 
 		if(!empty($_REQUEST['source'])){
 
@@ -67,7 +67,7 @@ class OrderController  implements Order{
 
 	public function revise_order(){
 
-		$_REQUEST['open_id'] = $this->open_id;
+		//$_REQUEST['open_id'] = $this->open_id;
 
 		if(!empty($_REQUEST['source'])){
 
@@ -169,7 +169,7 @@ class OrderController  implements Order{
 	public function get_order(){
 
 
-		$_REQUEST['open_id'] = $this->open_id;
+		//$_REQUEST['open_id'] = $this->open_id;
 
 
 		if(!empty($_REQUEST['source'])  && !empty($_REQUEST['open_id'])){
@@ -205,7 +205,7 @@ class OrderController  implements Order{
 
 	public function get_order_all(){
 
-		$_REQUEST['open_id'] = $this->open_id;
+		//$_REQUEST['open_id'] = $this->open_id;
 
 		if(!empty($_REQUEST['source'])  && !empty($_REQUEST['open_id'])){
 
@@ -288,6 +288,8 @@ class OrderController  implements Order{
 		$merchandise_list = new MerchandiseModel();
 
 		$merchandise_list_ = $merchandise_list->getMerchandise();
+
+		
 
 		if(count($merchandise_list_) > 0 ){
 
