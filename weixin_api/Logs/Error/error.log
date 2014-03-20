@@ -1,0 +1,10 @@
+[18-Mar-2014 08:34:11 UTC] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'Access denied for user ''@'localhost' (using password: NO)' in C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\DB\1DB.class.php:64
+Stack trace:
+#0 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\DB\1DB.class.php(89): DB_Mysql->connect()
+#1 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\DB\2DB_con.php(213): DB_Mysql->prepare('SELECT * FROM w...')
+#2 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\DB\4Basic.super.php(45): Query->selectQuery()
+#3 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\DB\4Basic.super.php(59): Basic->getVar()
+#4 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Model\UserModel.class.php(211): Basic->initialize()
+#5 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Controllers\Exchange\ExchangeController.class.php(103): UserModel->getUserInfo('ocpOot-COx7Urui...')
+#6 [internal function]: ExchangeController->user_exchange_record()
+#7 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\bootstrap\bootstrap.php(75):  in C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\DB\1DB.class.php on line 64
