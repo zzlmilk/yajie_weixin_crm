@@ -302,7 +302,7 @@
                                                     <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >问卷管理</a>
                                                 </td>
                                             </tr>
-                                        </table>
+                                        </table> 
                                     </td>
                                 </tr>
                             </table>

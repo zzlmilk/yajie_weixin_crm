@@ -138,7 +138,7 @@
 				</div>
 				<div class="rowLocation">
 				  	<label for="inputPassword3" class="control-label col-sm-2 fontStyle">当前二等奖概率</label>
-				  	<input type="text" ReadOnly="true" id="gift_two_probability"  name='gift_two_probability' class="form-control nowProbability" value="{$giftSetting.gift_two_probability}" placeholder="所显示为当前概率"> 
+				  	<input type="text" ReadOnly="true" id="gift_two_probability"  name='gift_two_probability' class="form-control nowProbability" value="{$giftSetting.gift_two_probability}" placeholder="所显示为当前概率">  
 				  	<button type="button" class="btn btn-warning" id="editTwoProbability" style=" letter-spacing: 0.2em;">修改</button>
 				</div>
 				<div class="rowLocation">
