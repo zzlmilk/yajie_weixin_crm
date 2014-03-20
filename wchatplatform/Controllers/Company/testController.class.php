@@ -12,7 +12,7 @@ class TestController extends BaseController {
         header("Content-type:text/html;charset=utf-8");
 
 
-        $this->assign('open_id', $_REQUEST['open_id']);
+       //   $this->assign('open_id', $_REQUEST['open_id']);
         //$this->userOpenId=$_REQUEST['open_id'];
     }
 
@@ -30,8 +30,8 @@ class TestController extends BaseController {
 
     //兑换物品详情
     public function exchangeGoods() {
-       // $this->userOpenId = $_REQUEST['open_id'];
-        $exchangeItem =transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
+        // $this->userOpenId = $_REQUEST['open_id'];
+        $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
         $exchangeItem = json_decode($exchangeItem, true);
         var_dump($exchangeItem["exchange_info"]);
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
@@ -302,11 +302,15 @@ class TestController extends BaseController {
 
     //兑换物品
     public function changeGoods() {
-        $this->userOpenId = $_REQUEST['open_id'];
-        $postDate["source"] = "company";
-        $postDate['open_id'] = $this->userOpenId;
-
-        $exchangeList = $this->getReturnValue(APIURL . "/exchange/redeem", "post");
+        //$this->userOpenId = $_REQUEST['open_id'];
+        if (isset($_GET['goodsId'])) {
+            $goodsId=$_GET['goodsId'];
+            $postDate["source"] = "company";
+            $postDate['open_id'] = $this->userOpenId;
+            $postDate['id'] = $goodsId;
+            $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
+            var_dump($exchangeList);
+        }
     }
 
 }

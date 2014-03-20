@@ -2,6 +2,8 @@
 
 class exchangeController implements exchange {
 
+    public $errorMessage = '';
+
     public function ExchangeList() {
         $exchangeModel = new exchangeModel();
         $exchangeModel->initialize();
@@ -13,6 +15,7 @@ class exchangeController implements exchange {
 
     public function addExchangeItem() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
             $imageReturnVal = $this->addImage("exampleInputFile");
             if ($imageReturnVal["state"] == 0) {
                 $insertData['exchange_name'] = $_POST['exchange_name'];
@@ -24,10 +27,14 @@ class exchangeController implements exchange {
                 $this->addExchange($insertData);
                 $this->ExchangeList();
             } else {
-                
+
+                $_SERVER["REQUEST_METHOD"] = "GET";
+                $this->errorMessage = $imageReturnVal['message'];
+                $this->addExchangeItem();
             }
         } else {
             $_ENV['smarty']->setDirTemplates('exchange');
+            $_ENV['smarty']->assign('errorMessage', $this->errorMessage);
             // $_ENV['smarty']->assign('exchangeList', $exchangeList);
             $_ENV['smarty']->display('addExchangeItem');
         }
@@ -66,7 +73,7 @@ class exchangeController implements exchange {
                 }
                 $this->updateExchange($updateVal, $_GET["ItemId"]);
                 $this->ExchangeList();
-            }else{
+            } else {
                 $this->ExchangeList();
             }
         }
