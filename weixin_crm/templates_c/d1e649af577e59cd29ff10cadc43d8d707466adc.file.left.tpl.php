@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 12:47:24
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 17:30:20
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1177620299532a72dc5d4185-36508144%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:324348900532ab52c5c1596-07748866%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd1e649af577e59cd29ff10cadc43d8d707466adc' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1395290843,
+      1 => 1395307817,
     ),
   ),
-  'nocache_hash' => '1177620299532a72dc5d4185-36508144',
+  'nocache_hash' => '324348900532ab52c5c1596-07748866',
   'function' => 
   array (
   ),
@@ -348,7 +348,7 @@ $_smarty_tpl->decodeProperties(array (
 /images/ico04.gif" width="8" height="11">
                                                 </td>
                                                 <td width="85%">
-                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >问卷管理</a>
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >任务管理</a>
                                                 </td>
                                             </tr>
                                         </table>
@@ -356,14 +356,38 @@ $_smarty_tpl->decodeProperties(array (
                                 </tr>
                             </table>
                             <table id="subtree5" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
-                                <tr>
+                                  <tr>
                                     <td width="15%" height="20">
-                                        <img id="xiaotu10" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <img id="xiaotu15" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
                                         <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('10')">问卷列表</a>
+/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('15')">每日签到</a>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu16" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('16')">活动</a>
+                                    </td>
+
+                                </tr>
+
+                                 <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu17" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('17')">问卷</a>
                                     </td>
 
                                 </tr>
@@ -371,6 +395,98 @@ $_smarty_tpl->decodeProperties(array (
                             </table>
 
 
+
+<!--                   兑换开始-->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table6">
+                                <tr>
+                                    <td height="29" onclick="list('6')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img6" id="img6" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico04.gif" width="8" height="11">
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >系统管理</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree6" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu11" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('11')">微信数据</a>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu12" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('12')">管理员账号</a>
+                                    </td>
+
+                                </tr>
+
+                                   <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu13" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('13')">重置账户密码</a>
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+
+
+<!--                   兑换开始-->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table7">
+                                <tr>
+                                    <td height="29" onclick="list('7')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img7" id="img7" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico04.gif" width="8" height="11">
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >短信模块</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree7" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu14" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('14')">客服短信</a>
+                                    </td>
+
+                                </tr>
+
+                            </table>
 
                         </td>
                     </tr>

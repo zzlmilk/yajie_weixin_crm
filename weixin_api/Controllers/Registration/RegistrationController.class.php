@@ -1,10 +1,6 @@
 <?php
 
-
 class RegistrationController  implements registration{
-
-
-
 
 	/**
 	 * 用户签到
@@ -18,9 +14,12 @@ class RegistrationController  implements registration{
 
 			$userInfo = $user->getUserInfo($_REQUEST['open_id']);
 
-			$user_registeration = new UserRegistrationModel();
+			if(count($userInfo) > 0){
 
-			$user_registeration->getUserRegisteration($userInfo['user_id']);
+				$user_registeration = new UserRegistrationModel();
+
+				$user_registeration->getUserRegisteration($userInfo['user_id']);
+			}
 
 		} else{
 
@@ -29,10 +28,5 @@ class RegistrationController  implements registration{
 		}
 
 	}
-
-
 }
-
-
-
 ?>
