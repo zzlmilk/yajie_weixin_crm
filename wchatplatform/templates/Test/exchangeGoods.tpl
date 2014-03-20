@@ -25,20 +25,15 @@
     </head>
     <body>
         <div class="registerWarp">
-             <div ><img src="{$WebSiteUrlPublic}/company/exchangeImage/174Small.jpg"></div>
-             <div>
-                 aaaa<br>
-                 旅行箱 2500p<br>
-                 <div style="text-align: left;">
-                     简介简介简介简介简介简介简介简介简介简介
-                     简介简介简介简介简介简介简介简介简介简介
-                     简介简介简介简介简介简介简介简介简介简介
-                     简介简介简介简介简介简介简介简介简介简介
-                     简介简介简介简介简介简介简介简介简介简介
-                     简介简介简介简介简.....
-                 </div>
-                 <p><button type="button" class="btn btn-primary btn-xs">兑换</button></p>
-             </div>
+            <div ><img src="{$WebSiteUrlPublic}/company/exchangeImage/174Small.jpg"></div>
+            <div>
+                <p>{$exchangeInfo.exchange_summary}</p>
+                <p>{$exchangeInfo.exchange_name} {$exchangeInfo.exchange_integration}p</p>
+                <div style="text-align: left;">
+                    
+                </div>
+                <p><a href="{$exchangeInfo.exchange_id}"><button type="button" class="btn btn-primary btn-xs">兑换</button></a></p>
+            </div>
         </div>
     </body>
 </html>

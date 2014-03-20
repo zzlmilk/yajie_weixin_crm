@@ -2,6 +2,8 @@
 
 class userController implements User {
 
+    public $errorMessage = "";
+
     // 用户列表 界面
     public function userList() {
         $pageSize = 3;
@@ -16,12 +18,14 @@ class userController implements User {
         $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userListPage";
         $page = $_ENV['smarty']->getPages($url, 1, $userNumber, $pageSize);
         $_ENV['smarty']->assign('pages', $page);
+        $_ENV['smarty']->assign('errorMessage', $this->errorMessage);
         $_ENV['smarty']->display('userList');
     }
 
     //查询用户
     public function seachUsers() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $errorFlag=true;
             if (!empty($_POST['selectText'])) {
                 $phone = $_POST['selectText'];
                 $userModel = new userModel();
@@ -29,13 +33,19 @@ class userController implements User {
                 if ($userModel->vars_number == 1) {
                     $reVal = $userModel->vars;
                     $_GET['userId'] = $reVal["user_id"];
-                    $this->userEdit();
+                     $errorFlag=false;
+                    
                 } else {
-                    echo "未找到对应的手机号码请确认后重新输入<a href='" . WebSiteUrl . "/pageredirst.php?action=user&functionname=userList'>返回</a>";
+                    $this->errorMessage = "未找到对应的手机号码请确认后重新输入";
                 }
             } else {
-                echo "手机号码不能为空，请确认后重新输入<a href='" . WebSiteUrl . "/pageredirst.php?action=user&functionname=userList'>返回</a>";
+                $this->errorMessage = "手机号码不能为空，请确认后重新输入";
             }
+        }
+        if($errorFlag){
+            $this->userList();
+        }else{
+            $this->userEdit();
         }
     }
 
@@ -55,6 +65,7 @@ class userController implements User {
             $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userListPage";
             $page = $_ENV['smarty']->getPages($url, $pageNumber, $userNumber, $pageSize);
             $_ENV['smarty']->assign('pages', $page);
+            
             $_ENV['smarty']->display('userList');
         } else {
             $this->userList();

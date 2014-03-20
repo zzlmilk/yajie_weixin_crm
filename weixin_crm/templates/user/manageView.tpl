@@ -4,53 +4,74 @@
         width: 340px;
         height: 30px;
     }
+    .userMangerTitle{
+        color: rgb(91,91,91);
+        font-size: 25px;
+        margin-top: 15px;
+        text-align: center;
+    }
     .seachButton{
         height: 30px;
     }
     .userDateArea{
         padding-left: 25px;
-        width:390px;
+        width:30%;
+        min-width: 280px;
         margin: 0 auto;
         text-align: left;
         border: 1px solid #000;
     }
     .buttonStyle{
+        line-height:15px;
         width: 30px;
         height: 30px;
     }
     .numberSpan{
-        width: 40px;
+        width: 50px;
         display: inline-block;
     }
     .inlinDisplay{
         display: inline-block;
     }
+    .groupInput{
+        width: 30%;
+        margin: 0 auto;
+    }
+    .inlineWidth{
+        width: 150px !important;
+        height: auto;
+    }
 </style>
+<div class="userMangerTitle">客户信息管理</div>
+
 <div style="text-align: center; padding-top: 100px;">
-    <div>
-        <input type="text" class="seachInput"  placeholder="请输入电话号码" id="userPhone"/>
-        <button id="getUser" class="seachButton" accesskey="Enter">搜索</button>
+    <div class="input-group groupInput">
+        <input type="text" class="form-control" style="" placeholder="请输入电话号码" id="userPhone" name="selectText">
+        <span class="input-group-btn">
+            <button class="btn btn-default"id="getUser" accesskey="Enter" type="button">搜索</button>
+        </span>
+
     </div>
     <div style="margin-top: 50px; display: none;" id="userData">
         <div class="userDateArea">
             <p><div class="inlinDisplay">手机号：</div><div class="inlinDisplay" id="phoneNum"></div></p>
-            <p><div class="inlinDisplay">剩余积分：</div><div id="points" class="numberSpan"></div><button id="pointsAdd" class="buttonStyle">+</button><button id="pointsMin" class="buttonStyle">-</button></p>
-            <p><div class="inlinDisplay">剩余金额：</div><div id="money" class="numberSpan"></div><button id="moneyAdd" class="buttonStyle">+</button><button id="moneyMin" class="buttonStyle">-</button></p>
+            <p><div class="inlinDisplay">剩余积分：</div><div id="points" class="numberSpan"></div><button id="pointsAdd" class="buttonStyle btn btn-info">+</button> <button id="pointsMin" class="buttonStyle btn btn-info">-</button></p>
+            <p><div class="inlinDisplay">剩余金额：</div><div id="money" class="numberSpan"></div><button id="moneyAdd" class="buttonStyle btn btn-info">+</button> <button id="moneyMin" class="buttonStyle btn btn-info">-</button></p>
             <input type="hidden" value="none" id="userId" name="userId">         
         </div>
     </div>
     <div id="errorPrint"></div>
 </div>
 
-<div id="moneyConturl" style="display: none; border: #000 1px solid;position: fixed; left:50%;top: 25%; background-color: #eaeaea; width:300px;height: 200px;">
-    <div style="width:200px; margin: 0 auto;">
-        <h1 id="moneyConturlType"></h1>
+<div id="moneyConturl" style="display: none;border: #000 1px solid;position: fixed; left:50%;top: 25%; background-color: #eaeaea; width:300px;height: 200px;">
+    <div  style="width:200px; margin: 0 auto;">
+        <h1 style="color: rgb(91,91,91);" id="moneyConturlType"></h1>
 
-        <p><span>手机号：</span><span id="userName"></span></p>
-        <p><span>数量：</span><input type="text" id="resourceNumber" name="resourceNumber" placeholder="请填写金额" value=""></p>
+        <p><label for="" class="control-label">手机号：</label><label id="userName" class="control-label"></label></p>
+        <p class="input-group"><label for="resourceNumber" class="control-label">数量：</label><input type="text" id="resourceNumber" class="inlineWidth form-control " name="resourceNumber" placeholder="请填写金额" value=""></p>
         <input type="hidden" value="none" id="postUserId" name="postUserId">
         <input type="hidden" value="error" id="conturlType" name="conturlType">
-        <button id="checkDate">确认提交</button><button id="closeDiv">关闭</button>
+        <button id="checkDate" class="btn btn-warning btn-sm">确认提交</button> <button id="closeDiv" class="btn btn-warning btn-sm">关闭</button>
 
     </div>
 </div>
@@ -152,8 +173,8 @@ conturlType:$("#conturlType").val()
 success:function(rData){
 //alert(JSON.stringify(rData));
 if(rData=="numberError"){
-    alert("金额错误");
-    return false;
+alert("金额错误");
+return false;
 }
 var nowPoints= ($("#points").html())*1;
 var nowMoney= ($("#money").html())*1;

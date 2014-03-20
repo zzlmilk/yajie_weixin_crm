@@ -1,0 +1,10 @@
+Mar 20 11:01:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 20 11:01:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 20 11:01:46 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+{"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 20 11:12:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 20 11:12:31 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+{"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
