@@ -8,7 +8,9 @@
             body {
                 margin: 0;background:url(images/menu-shadow.png) repeat-y right top #eeeeee;
             }
-
+            #xiaotu,#xiaotu1,#xiaotu2,#xiaotu3,#xiaotu4,#xiaotu5,#xiaotu6,#xiaotu7,#xiaotu8,#xiaotu9,#xiaotu10{
+                padding-left: 9px;
+            }
 
         </style>
         <link href="{$WebSiteUrl}/css/css.css" rel="stylesheet" type="text/css">
@@ -100,7 +102,7 @@
                                             <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td width="25%" rowspan="2">
-                                                        <img src="{$WebSiteUrl}/images/ico02.gif" width="35" height="35">
+                                                        <img src="{$WebSiteUrl}/images/ico02.gif" width="50" height="50">
                                                     </td>
                                                     <td width="75%" height="22" class="left-font01">
                                                         您好，<span class="left-font02">{$uname}</span>
@@ -195,11 +197,8 @@
                                         <img id="xiaotu5" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-<<<<<<< HEAD
                                         <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
-=======
                                         <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=orderAdd" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">新增预约</a>
->>>>>>> be6077b892d897e8ffbf9c3c0d775ce5e65a9195
                                     </td>
 
                                 </tr>

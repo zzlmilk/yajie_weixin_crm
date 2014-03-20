@@ -39,7 +39,7 @@ class giftController implements gift {
 	  					$data['gift_one_probability'] = $_POST['gift_one_probability'];
 						$data['gift_two_probability'] = $_POST['gift_two_probability'];
 						$data['gift_three_probability'] = $_POST['gift_three_probability'];
-						$giftSettingModel->update($update);
+						$giftSettingModel->update($data);
 
 	  				}
 
