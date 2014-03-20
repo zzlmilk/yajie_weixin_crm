@@ -95,18 +95,18 @@ $(function() {
 	var steps = [];
 
 	//产生0-100随机数
-	var max = 100;
-	var min = 1;
-	var randNum = parseInt(Math.random() * max + min ) ;
-	// alert(randNum);
-	if (randNum < 3) {
+	// var max = 100;
+	// var min = 1;
+	// var randNum = parseInt(Math.random() * max + min ) ;
+	// // alert(randNum);
+	// if (randNum < 3) {
 
 		var lostDeg = [126,246];
 		
-	}else{
+	// }else{
 
-		var lostDeg = [36, 66, 96, 156, 186, 216, 276, 306, 336];
-	}
+	// 	var lostDeg = [36, 66, 96, 156, 186, 216, 276, 306, 336];
+	// }
 	
 	var prizeDeg = [6, 126, 246];
 
@@ -196,6 +196,7 @@ $(function() {
 				}, 1)
 			},
 			success: function(data) {
+				 // alert(data.gift_id);
 				if (data.error == "invalid") {
 					alert("您已经抽了 3 次奖。");
 					count = 3;
