@@ -50,17 +50,16 @@ class ExchangeModel extends Basic {
 
     /**
      * 兑换接口  $result['id'] 为兑换物品id open_id 为微信公众平台id
+     *  $able  如为1时  则  无需 扣除 积分
      */
 
-    public function redeem($result){
-
+    public function redeem($result,$able = 0){
 
         if(!empty($result['id']) && $result['id'] > 0  && !empty($result['open_id'])){
 
             $this->clearUp();
 
             $this->initialize('exchange_id = '.$result['id']);
-
 
             if($this->vars_number > 0){
 
@@ -70,7 +69,14 @@ class ExchangeModel extends Basic {
 
                 if(count($userinfo) > 0){
 
-                    $exchange_integration = $this->vars['exchange_integration'];
+                    if($able == 1) {
+
+                        $exchange_integration = 0;
+
+                    } else{
+
+                        $exchange_integration = $this->vars['exchange_integration'];
+                    }
 
                     /**
                      * 判断兑换类型  如为实物 则 需要填写特定字段
@@ -116,7 +122,16 @@ class ExchangeModel extends Basic {
 
                         $userPointerRecord = new userPointerRecordModel();
 
-                        $user_record = $userPointerRecord->addRecord($userinfo['user_id'],1,'-'.$this->vars['exchange_integration'],'exchange',$result['id']);
+                        if($able == 1){
+
+                            $user_record = $userPointerRecord->addRecord($userinfo['user_id'],1,'-'.$exchange_integration,'gift',$result['id']);
+
+                        } else{
+
+                            $user_record = $userPointerRecord->addRecord($userinfo['user_id'],1,'-'.$exchange_integration,'exchange',$result['id']);
+                        }
+
+                        
 
                         $array['user_record'] = arrayToObject($user_record,0);
 

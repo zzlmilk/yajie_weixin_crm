@@ -29,9 +29,47 @@ class weixinEvent {
 
 		if(!empty($info['subscribe'])){
 
-		    $text = $info['subscribe'];
+		    // $text = $info['subscribe'];
 		  
-		    $wechat->text($text)->reply();
+		    // $wechat->text($text)->reply();
+
+
+		     switch ($info['subscribe']['type']) {
+
+                case 'news':
+
+                    $image_json = json_decode($info['subscribe']['text'], true);
+
+                    $wechat->news($image_json)->reply();
+
+                    die;
+
+                    break;
+
+                case 'text':
+
+                    $text = str_replace('{$open_id}', $open_id, $info['subscribe']['text']);
+
+                    $wechat->text($text)->reply();
+
+                    die;
+
+                    break;
+
+                case 'php':
+
+                        $functions = $array['name'];
+
+                        $weixinEvent = new weixinEvent();
+
+                        $weixinEvent->$functions();
+                    die;
+
+                    break;
+                    
+                default :
+                     $this->text($info['subscribe']['text'])->reply();
+            }
 		}
 
 	}

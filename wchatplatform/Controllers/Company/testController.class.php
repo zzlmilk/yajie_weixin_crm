@@ -211,41 +211,57 @@ class TestController extends BaseController {
     /**
      * 提交注册
      */
-    public function submitRegister() {
+   public function submitRegister(){
 
-        $data = array();
-        //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
-        $data['open_id'] = $_POST['open_id'];
-        $data['source'] = 'company';
-        $data['user_name'] = $_POST['userName'];
-        $data['sex'] = $_POST['gender'];
-        $data['user_phone'] = $_POST['phoneNumber'];
-        // $data['password'] = $_POST['password'];
-        $data['birthday'] = strtotime($_POST['year'] . $_POST['month'] . $_POST['date']);
+        header("Content-type:text/html;charset=utf-8");
 
-        //print_r($data);
-        //transferData(APIURL.'/user/add','post',$data);
-        $resultRename = transferData(APIURL . '/user/able_user/', 'post', $data);
-        $res = json_decode($resultRename, true);
+        $mobilephone = $_POST['phoneNumber'];
 
-        if ($res['success'] == 1) {
-            $resultRegister = transferData(APIURL . '/user/add', 'post', $data);
-            $resultRegister = json_decode($resultRegister, true);
+        $userName = $_POST['userName'];
+        if (!empty($userName)) {
+             if(preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/",$mobilephone)){   
+                $data = array();
+                //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
+                $data['open_id'] = $_POST['open_id'];
+                $data['source'] = 'company';
+                $data['user_name'] = $_POST['userName'];
+                $data['sex'] = $_POST['gender'];
+                $data['user_phone'] = $_POST['phoneNumber'];
+                $data['birthday'] = strtotime($_POST['year'].$_POST['month'].$_POST['date']);
 
-            if ($resultRegister['user']['user_id'] > 0) {
-
-                // 注册成功后跳转会员中心
+                $resultRename = transferData(APIURL.'/user/able_user/','post',$data);
+                $res = json_decode($resultRename,true);
 
 
-                echo '用户注册成功';
-            }
-        } else {
+                if($res['success'] == 1){
+                    $resultRegister = transferData(APIURL.'/user/add','post',$data);
+                    $resultRegister = json_decode($resultRegister,true);
 
-            echo "用户已存在";
+                    if($resultRegister['user']['user_id'] > 0){
+                        echo "注册成功";
+                        // 注册成功后跳转会员中心
+                    }
 
-            die;
+                }else{
+
+                    echo "已被注册过";
+
+                }
+
+                }else{   
+
+                echo "格式不正确";
+            }   
+
+
+        }else{
+
+            echo "用户名不能为空";
         }
+
     }
+
+
 
 
 	public function bigWheelPage(){
@@ -260,11 +276,7 @@ class TestController extends BaseController {
         $this->display();
 
     }
-    public function bigWheelPage() {
-
-
-        $this->display();
-    }
+  
 
 
     /**
