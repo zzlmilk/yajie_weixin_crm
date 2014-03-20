@@ -134,20 +134,20 @@
 				<div class="rowLocation">
 				  	<label for="inputPassword3" class="control-label col-sm-2 fontStyle">当前一等奖概率</label>
 				  	<input type="text" ReadOnly="true" name='gift_one_probability' id="gift_one_probability" class="form-control nowProbability" value="{$giftSetting.gift_one_probability}" placeholder="所显示为当前概率">
-				  	<button type="button" class="btn btn-primary" id="editOneProbability" style=" letter-spacing: 0.2em;">修改</button>
+				  	<button type="button" class="btn btn-warning" id="editOneProbability" style=" letter-spacing: 0.2em;">修改</button>
 				</div>
 				<div class="rowLocation">
 				  	<label for="inputPassword3" class="control-label col-sm-2 fontStyle">当前二等奖概率</label>
 				  	<input type="text" ReadOnly="true" id="gift_two_probability"  name='gift_two_probability' class="form-control nowProbability" value="{$giftSetting.gift_two_probability}" placeholder="所显示为当前概率">
-				  	<button type="button" class="btn btn-primary" id="editTwoProbability" style=" letter-spacing: 0.2em;">修改</button>
+				  	<button type="button" class="btn btn-warning" id="editTwoProbability" style=" letter-spacing: 0.2em;">修改</button>
 				</div>
 				<div class="rowLocation">
 				  	<label for="inputPassword3" class="control-label col-sm-2 fontStyle">当前三等奖概率</label>
 				  	<input type="text" ReadOnly="true" id="gift_three_probability"  name='gift_three_probability'  class="form-control nowProbability" value="{$giftSetting.gift_three_probability}" placeholder="所显示为当前概率">
-				  	<button type="button" class="btn btn-primary" id="editThreeProbability" style=" letter-spacing: 0.2em;">修改</button>
+				  	<button type="button" class="btn btn-warning" id="editThreeProbability" style=" letter-spacing: 0.2em;">修改</button>
 				</div>
 
-				<div style=" margin-top: 3em;margin-left: 30.5em;">
+				<div style=" margin-top: 3em;margin-left: 31.5em;">
 				  	<button type="submit" class="btn btn-primary" id="submitProbabilityInfo" style=" letter-spacing: 0.2em;"   onclick='$("form1").submit();' >提交信息</button>
 				</div>
 
