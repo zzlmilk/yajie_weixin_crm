@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-12 02:02:58
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-19 07:03:28
          compiled from "/Users/Lev/Sites/yajie_weixin_crm/wchatplatform/templates/Test/register.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1065238777531fc0527d9a90-76641954%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:261994835532941404e5129-21395281%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'dc802cbc4a98a53bb9422221830dbfc9abfdf07e' => 
     array (
       0 => '/Users/Lev/Sites/yajie_weixin_crm/wchatplatform/templates/Test/register.tpl',
-      1 => 1394531540,
+      1 => 1395212605,
     ),
   ),
-  'nocache_hash' => '1065238777531fc0527d9a90-76641954',
+  'nocache_hash' => '261994835532941404e5129-21395281',
   'function' => 
   array (
   ),
@@ -64,6 +64,7 @@ $_smarty_tpl->decodeProperties(array (
 		}
 		document.write("</select> 日 ")
     }
+    
 
     </script>
 
@@ -75,8 +76,6 @@ $_smarty_tpl->decodeProperties(array (
     	.registerWarp{
 			margin: 0 auto;
 			margin-top: 2em;
-			
-
     	}
 
     	.form-control{
@@ -109,6 +108,11 @@ $_smarty_tpl->decodeProperties(array (
 				    </div>
 				  </div>
 
+				  
+
+				  <input type="hidden" name="open_id" value="<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+" />
+
 
 				  <div class="form-group" style=" margin-right: 3em;">
 				    <label for="inputPassword3" class="col-sm-2 control-label">&nbsp;&nbsp;&nbsp;&nbsp;性别</label>
@@ -132,7 +136,7 @@ $_smarty_tpl->decodeProperties(array (
 				  <div class="form-group" style=" margin-right: 3em;">
 				    <label for="inputPassword3" class="col-sm-2 control-label">手机号&nbsp;&nbsp;</label>
 				    <div class="col-sm-10">
-				      <input type="name" class="form-control" id="inputPassword3" name="phoneNumber" placeholder="请输入手机号码">
+				      <input type="name" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="请输入手机号码">
 				    </div>
 				  </div>
 
@@ -143,12 +147,12 @@ $_smarty_tpl->decodeProperties(array (
 				    </div>
 				  </div>
 
-				  <div class="form-group" style=" margin-right: 3em;">
+<!-- 				  <div class="form-group" style=" margin-right: 3em;">
 				    <label for="inputPassword3" class="col-sm-2 control-label">&nbsp;&nbsp;&nbsp;&nbsp;密码</label>
 				    <div class="col-sm-10">
 				      <input type="password" class="form-control" id="inputPassword3" name="password" placeholder="请输入密码">
 				    </div>
-				  </div>
+				  </div> -->
 
 
 				  <div class="form-group" style=" margin-right: 3em;">
