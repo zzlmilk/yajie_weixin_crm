@@ -1,0 +1,12 @@
+Mar 19 18:44:33 [SQL]_null_127.0.0.1_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel?source=12312
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Mar 19 18:44:33 [SQL]_null_127.0.0.1_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel?source=12312
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Mar 19 18:44:33 [RETURN]_null_127.0.0.1_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel?source=12312
+{"gift_id":3}
+Mar 19 18:45:14 [SQL]_null_127.0.0.1_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel?source=12312
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Mar 19 18:45:14 [SQL]_null_127.0.0.1_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel?source=12312
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Mar 19 18:45:14 [RETURN]_null_127.0.0.1_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel?source=12312
+{"gift_id":6}

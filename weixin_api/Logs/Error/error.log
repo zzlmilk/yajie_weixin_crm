@@ -92,3 +92,15 @@ Stack trace:
 [19-Mar-2014 18:13:25 Asia/Shanghai] PHP Fatal error:  Call to a member function addUserIntegration() on a non-object in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php on line 110
 [19-Mar-2014 18:13:37 Asia/Shanghai] PHP Notice:  Undefined variable: result in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php on line 108
 [19-Mar-2014 18:18:25 Asia/Shanghai] PHP Parse error:  parse error in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php on line 121
+[19-Mar-2014 18:44:00 Asia/Shanghai] PHP Warning:  fopen(/Users/Lev/Sites/yajie_weixin_crm/weixin_api/Logs/Info/2014_03_19.log): failed to open stream: Permission denied in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 111
+[19-Mar-2014 18:44:00 Asia/Shanghai] PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 112
+[19-Mar-2014 18:44:00 Asia/Shanghai] PHP Warning:  fputs() expects parameter 1 to be resource, boolean given in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 113
+[19-Mar-2014 18:44:00 Asia/Shanghai] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 114
+[19-Mar-2014 18:44:00 Asia/Shanghai] PHP Warning:  fopen(/Users/Lev/Sites/yajie_weixin_crm/weixin_api/Logs/Info/2014_03_19.log): failed to open stream: Permission denied in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 111
+[19-Mar-2014 18:44:00 Asia/Shanghai] PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 112
+[19-Mar-2014 18:44:00 Asia/Shanghai] PHP Warning:  fputs() expects parameter 1 to be resource, boolean given in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 113
+[19-Mar-2014 18:44:00 Asia/Shanghai] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 114
+[19-Mar-2014 18:44:00 Asia/Shanghai] PHP Warning:  fopen(/Users/Lev/Sites/yajie_weixin_crm/weixin_api/Logs/Info/2014_03_19.log): failed to open stream: Permission denied in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 111
+[19-Mar-2014 18:44:00 Asia/Shanghai] PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 112
+[19-Mar-2014 18:44:00 Asia/Shanghai] PHP Warning:  fputs() expects parameter 1 to be resource, boolean given in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 113
+[19-Mar-2014 18:44:00 Asia/Shanghai] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /Users/Lev/Sites/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php on line 114
