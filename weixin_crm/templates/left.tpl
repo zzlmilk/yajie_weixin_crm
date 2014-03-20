@@ -296,7 +296,7 @@
                                         <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td width="15%">
-                                                    <img name="img5" id="img5" src="{$WebSiteUrl}/images/ico04.gif" width="8" height="11">
+                                                    <img name="img5" id="img5" src="{$WebSiteUrl}/images/ico04.gif" width="8" height="11"> 
                                                 </td>
                                                 <td width="85%">
                                                     <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >问卷管理</a>
