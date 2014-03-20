@@ -26,7 +26,7 @@
             .inlinDisplay{
                 display: inline-block;
             }
-            .tableSize td{
+            td{
                 width: 50%;
             }
         </style>
@@ -34,25 +34,42 @@
     <body>
         <div class="registerWarp">
             <table class="tableSize table table-condensed table-bordered">
-                <tr>
-                    <td>
-                        <div > <a href="{$WebSiteUrl}?g=company&a=test&v=exchangeGoods&goodsId=1"><img src="{$WebSiteUrlPublic}/company/exchangeImage/174Small.jpg"></a></div>
-                        <div>
-                            aaaa<br>
-                            旅行箱 2500p<br>
-                            <button type="submit" class="btn btn-primary btn-xs">兑换</button>
-                        </div>
-                    </td>
-                    <td>
-                        <div ><a href="{$WebSiteUrl}?g=company&a=test&v=exchangeGoods&goodsId=2"> <img src="{$WebSiteUrlPublic}/company/exchangeImage/184Small.jpg"></a></div>
-                        <div >                      
-                            aaaa<br>
-                            雨伞 500p<br>
-                            <button type="button" class="btn btn-primary btn-xs">兑换</button>
-                        </div>
-                    </td>
-                </tr>
+                {foreach from=$exchangeList item=exchangeItem key=key}
+                    {if $key%2 eq 0}
+                        <tr>
+                        {/if}
+
+
+
+
+                        <td style="">
+                            <div > <a href="{$WebSiteUrl}?g=company&a=test&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}"><img width="80" height="80" src="{$WebSiteUrlPublic}/company/exchangeImage/174Small.jpg"></a></div>
+                            <div style="width: 100px;word-wrap: break-word; word-break: normal; margin: 0 auto;">
+                                <p class="summary"> {$exchangeItem.exchange_summary}</p>
+                                <p>{$exchangeItem.exchange_name} {$exchangeItem.exchange_integration}p</p>
+                            </div>
+                            <a  href="{$WebSiteUrl}?g=company&a=test&v=changeGoods&goodsId={$exchangeItem.exchange_id}"><button type="submit" class="btn btn-primary btn-xs">兑换</button></a>
+
+                        </td>
+
+
+
+                        {if ($key+1)%2 eq 0}
+                        </tr>
+                    {/if}
+
+
+                {/foreach}
             </table>
         </div>
     </body>
+    <script>
+        $(".summary").each(function(){
+       var len=$(this).html().length;
+        if(len>=15){
+        var nowString= $(this).html().substr(0, 11)
+        $(this).html(nowString+"...");
+    }
+})
+    </script>
 </html>

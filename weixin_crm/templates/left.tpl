@@ -197,8 +197,13 @@
                                         <img id="xiaotu5" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
+<<<<<<< HEAD
                                         <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
                                         <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=orderAdd" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">新增预约</a>
+=======
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=orderAdd" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
+
+>>>>>>> 51f852ba72ff53276c2d78b1deef2f913ed6e1e8
                                     </td>
 
                                 </tr>
@@ -271,7 +276,7 @@
                                         <img id="xiaotu8" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('6')">礼品列表</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=ExchangeList" target="mainFrame" class="left-fontSmall" onclick="tupian('6')">礼品列表</a>
                                     </td>
 
                                 </tr>
@@ -281,7 +286,7 @@
                                         <img id="xiaotu9" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" onclick="tupian('7')">兑换记录</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=addExchangeItem" target="mainFrame" class="left-fontSmall" onclick="tupian('7')">添加礼品</a>
                                     </td>
                                 </tr>
 
