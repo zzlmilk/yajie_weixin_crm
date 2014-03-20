@@ -121,7 +121,7 @@
 
 
 				
-				<div style="color: rgb(240,173,78);margin-top: 1em;text-indent: 1em;">
+				<div style="color: #428bca; margin-top: 1em;text-indent: 1em;">
 					提示: 概率的配置信息必须换算成小数填写,每个奖品概率须介于0～1之间!
 				</div>
 

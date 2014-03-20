@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-12 18:23:03
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-19 17:17:25
          compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:140164380953203587b2a978-58313996%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1358119709532960a585cf53-86165678%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '87573d4006c313532643eff1ecd959d6be07427c' => 
     array (
       0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1394619711,
+      1 => 1395212508,
     ),
   ),
-  'nocache_hash' => '140164380953203587b2a978-58313996',
+  'nocache_hash' => '1358119709532960a585cf53-86165678',
   'function' => 
   array (
   ),
@@ -23,11 +23,13 @@ $_smarty_tpl->decodeProperties(array (
         <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /js/jquery-1.9.1.js"></script>
         <style type="text/css">
-   
+
             body {
                 margin: 0;background:url(images/menu-shadow.png) repeat-y right top #eeeeee;
             }
-            
+            #xiaotu,#xiaotu1,#xiaotu2,#xiaotu3,#xiaotu4,#xiaotu5,#xiaotu6,#xiaotu7,#xiaotu8,#xiaotu9,#xiaotu10{
+                padding-left: 9px;
+            }
 
         </style>
         <link href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -37,7 +39,7 @@ $_smarty_tpl->decodeProperties(array (
 
         <script>
 
-         var root = '<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+            var root = '<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 ';           
         </script>
          
@@ -108,173 +110,273 @@ $_smarty_tpl->decodeProperties(array (
                 $('.tableDefault').css('display','none');
                 $('#' + name1).css('display','block');
             }
-        </script>
-        <div class="left_background">
-            <div class="left_act_bg"></div>
-            <table width="150" border="0" cellpadding="0" cellspacing="0" class="left-table01">
-                <tr>
-                    <td>
-                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin:0 0 5px 0;">
-                            <tr>
-                                <td width="207" height="55" style="background:#ECECEC;border-bottom:1px solid #DDDDDD;">
-                                    <div>
-                                        <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                <td width="25%" rowspan="2">
-                                                    <img src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/images/ico02.gif" width="35" height="35">
-                                                </td>
-                                                <td width="75%" height="22" class="left-font01">
-                                                    您好，<span class="left-font02"><?php echo $_smarty_tpl->getVariable('uname')->value;?>
+            </script>
+            <div class="left_background">
+                <div class="left_act_bg"></div>
+                <table width="150" border="0" cellpadding="0" cellspacing="0" class="left-table01">
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin:0 0 5px 0;">
+                                <tr>
+                                    <td width="207" height="55" style="background:#ECECEC;border-bottom:1px solid #DDDDDD;">
+                                        <div>
+                                            <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td width="25%" rowspan="2">
+                                                        <img src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico02.gif" width="50" height="50">
+                                                    </td>
+                                                    <td width="75%" height="22" class="left-font01">
+                                                        您好，<span class="left-font02"><?php echo $_smarty_tpl->getVariable('uname')->value;?>
 </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td height="22" class="left-font01">
-                                                    [&nbsp;<a href="<?php echo $_smarty_tpl->getVariable('URLHANDLER')->value;?>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="22" class="left-font01">
+                                                        [&nbsp;<a href="<?php echo $_smarty_tpl->getVariable('URLHANDLER')->value;?>
 /process.php?login=0" target="_top" class="left-font01">退出</a>&nbsp;]
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                            <!--                    用户开始-->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table1">
+                                <tr>
+                                    <td height="29" onclick="list('1')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img1" id="img1" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico04.gif" width="8" height="11">
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >用户管理</a>
                                                 </td>
                                             </tr>
                                         </table>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-
-
- <!--                    用户开始-->
-                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table1">
-                            <tr>
-                                <td height="29" onclick="list('1')">
-                                    <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                        <tr>
-                                            <td width="15%">
-                                                <img name="img1" id="img1" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/images/ico04.gif" width="8" height="11">
-                                            </td>
-                                            <td width="85%">
-                                                <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >用户管理</a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                        <table id="subtree1" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
-                            <tr>
-                                <td width="15%" height="20">
-                                    <img id="xiaotu1" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree1" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu1" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/ico06.gif" width="8" height="12">
-                                </td>
-                                <td width="85%">
-                                    <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" onclick="tupian('1')">客户信息</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="15%" height="20">
-                                    <img id="xiaotu2" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu2" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/ico06.gif" width="8" height="12">
-                                </td>
-                                <td width="85%">
-                                    <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=user&functionname=pointAndMoneyManage" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">积分消费管理</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="15%" height="20">
-                                    <img id="xiaotu3" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu3" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/ico06.gif" width="8" height="12">
-                                </td>
-                                <td width="85%">
-                                    <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=user&functionname=moneyManage" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">添加用户</a>
-                                </td>
-                            </tr>
-                        </table>
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=user&functionname=userManage" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">添加用户</a>
+                                    </td>
+                                </tr>
+                            </table>
 
 
-                         <!--                    积分开始-->
-                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table2">
-                            <tr>
-                                <td height="29" onclick="list('2')">
-                                    <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                        <tr>
-                                            <td width="15%">
-                                                <img name="img2" id="img2" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                            <!--                    积分开始-->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table2">
+                                <tr>
+                                    <td height="29" onclick="list('2')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img2" id="img2" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/ico04.gif" width="8" height="11">
-                                            </td>
-                                            <td width="85%">
-                                                <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >积分管理</a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                        <table id="subtree2" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
-                            <tr>
-                                <td width="15%" height="20">
-                                    <img id="xiaotu2" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >预约管理</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree2" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu4" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/ico06.gif" width="8" height="12">
-                                </td>
-                                <td width="85%">
-                                    <a href="<?php echo $_smarty_tpl->getVariable('URLCONTROLLER')->value;?>
-/slide.php?type=2" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">111</a>
-                                </td>
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('4')">订单管理</a>
+                                    </td>
 
-                            </tr>
-                        </table>
+                                </tr>
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu5" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=order&functionname=orderAdd" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">新增预约</a>
+                                    </td>
+
+                                </tr>
+                            </table>
 
 
-                        <!--                    积分开始-->
-                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table3">
-                            <tr>
-                                <td height="29" onclick="list('3')">
-                                    <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                        <tr>
-                                            <td width="15%">
-                                                <img name="img3" id="img3" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                            <!--                    微游戏开始-->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table3">
+                                <tr>
+                                    <td height="29" onclick="list('3')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img3" id="img3" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/ico04.gif" width="8" height="11">
-                                            </td>
-                                            <td width="85%">
-                                                <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >微游戏管理</a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                        <table id="subtree3" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
-                            <tr>
-                                <td width="15%" height="20">
-                                    <img id="xiaotu3" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >微游戏管理</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree3" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu6" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/ico06.gif" width="8" height="12">
-                                </td>
-                                <td width="85%">
-                                    <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">大转盘礼品列表</a>
-                                </td>
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('6')">大转盘礼品列表</a>
+                                    </td>
 
-                            </tr>
+                                </tr>
 
-                            <tr>
-                                <td width="15%" height="20">
-                                    <img id="xiaotu4" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu7" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/ico06.gif" width="8" height="12">
-                                </td>
-                                <td width="85%">
-                                    <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" onclick="tupian('4')">刮刮卡礼品列表</a>
-                                </td>
-                            </tr>
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" onclick="tupian('7')">刮刮卡礼品列表</a>
+                                    </td>
+                                </tr>
 
-                        </table>
-                    </td>
-                </tr>
-            </table>
+                            </table>
 
 
-        </div>
-    </body>
-</html>
+
+
+
+                            <!--                   兑换开始-->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table4">
+                                <tr>
+                                    <td height="29" onclick="list('4')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img4" id="img4" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico04.gif" width="8" height="11">
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >兑换管理</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree4" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu8" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('6')">礼品列表</a>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu9" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" onclick="tupian('7')">兑换记录</a>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+
+
+
+ <!--                   兑换开始-->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table5">
+                                <tr>
+                                    <td height="29" onclick="list('5')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img5" id="img5" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico04.gif" width="8" height="11">
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >问卷管理</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree5" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu10" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('6')">问卷列表</a>
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+
+
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+        </body>
+    </html>

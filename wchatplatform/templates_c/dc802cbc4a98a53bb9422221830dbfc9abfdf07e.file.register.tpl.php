@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-19 07:03:28
+         compiled from "/Users/Lev/Sites/yajie_weixin_crm/wchatplatform/templates/Test/register.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:261994835532941404e5129-21395281%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'dc802cbc4a98a53bb9422221830dbfc9abfdf07e' => 
+    array (
+      0 => '/Users/Lev/Sites/yajie_weixin_crm/wchatplatform/templates/Test/register.tpl',
+      1 => 1395212605,
+    ),
+  ),
+  'nocache_hash' => '261994835532941404e5129-21395281',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 
 <!DOCTYPE html>
 <html> 
@@ -80,7 +98,8 @@
     <boby>
 	        <div class="registerWarp">
 
-	        	<form class="form-horizontal"  method='post' role="form" action="{$WebSiteUrl}?g=company&a=test&v=submitRegister">
+	        	<form class="form-horizontal"  method='post' role="form" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=company&a=test&v=submitRegister">
 
 				  <div class="form-group" style=" margin-right: 3em;">
 				    <label for="inputEmail3" class="col-sm-2 control-label">&nbsp;&nbsp;&nbsp;&nbsp;姓名</label>
@@ -91,7 +110,8 @@
 
 				  
 
-				  <input type="hidden" name="open_id" value="{$open_id}" />
+				  <input type="hidden" name="open_id" value="<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+" />
 
 
 				  <div class="form-group" style=" margin-right: 3em;">
