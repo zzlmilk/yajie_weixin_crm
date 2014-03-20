@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-12 15:05:41
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-19 13:35:54
          compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/gift/getCardList.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:548383463532007453c3025-43023757%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     '1bba5c902928a6d22b1779f8c0467bf117cf2303' => 
     array (
       0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/gift/getCardList.tpl',
-      1 => 1394606927,
+      1 => 1395193105,
     ),
   ),
   'nocache_hash' => '548383463532007453c3025-43023757',

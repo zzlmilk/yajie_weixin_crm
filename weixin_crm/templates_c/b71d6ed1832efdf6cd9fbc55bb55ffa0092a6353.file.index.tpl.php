@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-10 16:42:34
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 12:07:51
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2124946405531d7afa606570-04819138%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     'b71d6ed1832efdf6cd9fbc55bb55ffa0092a6353' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/index.tpl',
-      1 => 1394436661,
+      1 => 1395286473,
     ),
   ),
   'nocache_hash' => '2124946405531d7afa606570-04819138',
@@ -26,11 +26,11 @@ $_smarty_tpl->decodeProperties(array (
     <frameset rows="30,*" cols="*" frameborder="no" border="0" framespacing="0">
         <frame src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /files/top.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
-        <frameset cols="150,*" frameborder="no" border="0" framespacing="0">
+        <frameset cols="200,*" frameborder="no" border="0" framespacing="0">
             <frame src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=left&functionname=left" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
             <frame src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/files/mainfra.html" name="mainFrame" id="mainFrame" title="mainFrame" />
+/files/mainfra.html" scrolling="No" name="mainFrame" id="mainFrame" title="mainFrame" />
         </frameset>
     </frameset>
     <noframes>

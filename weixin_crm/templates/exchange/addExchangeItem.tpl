@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">    
 <style>
     .labelWidth{
@@ -19,7 +20,14 @@
     }
 </style>
 <div class="userMangerTitle">添加礼品</div>
-<div id="errorMessage" class="alert alert-danger errorMessage"></div>
+{if $errorMessage neq ''}
+    <div id="errorMessage" style="display: block;" class="alert alert-danger errorMessage">
+        {$errorMessage}
+    </div>
+{else}
+    <div id="errorMessage"class="alert alert-danger errorMessage">
+    </div>
+{/if}
 <div style="margin-left:15px;margin-top:15px;">
     <div style="width: 300px; margin: 0 auto;">
         <form class="form-horizontal" action="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=addExchangeItem" enctype="multipart/form-data" method="Post">

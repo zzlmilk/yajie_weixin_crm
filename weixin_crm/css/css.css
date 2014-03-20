@@ -31,6 +31,7 @@ a.top-font01:hover {
     border-top-width: 2px;
     border-top-style: solid;
     border-top-color: #B8C9D6;
+    width: 100%;
 }
 .left-table02 {
     margin-top: 8px;
@@ -41,7 +42,7 @@ a.top-font01:hover {
     text-decoration: none;
     padding:0 10px;
 }
-.left-table03 {text-indent:7px;font-family: "����";font-size:12px;color:#555555;text-decoration:none;background-color:#ECECEC;border-top:1px solid #fdfdfd;border-bottom:1px solid #dddddd;}
+.left-table03 {text-indent:7px;font-family: "����";height: 42;font-size:12px;color:#555555;text-decoration:none;background-color:#ECECEC;border-top:1px solid #fdfdfd;border-bottom:1px solid #dddddd;}
 .left-table03:hover{background-color:#E4E4E4;cursor:pointer;}
 a.left-table03:hover {
     background-image: url(../images/nav03.gif);
@@ -57,8 +58,9 @@ a.left-table03:hover {
 
 .left-font01 {
     font-family: "����";
-    font-size: 12px;
+    font-size: 14px;
     color: #448CCB;
+    padding-left: 2px;
     text-decoration: none;
     filter: DropShadow(Color=#FFFFFF, OffX=1, OffY=1);
 }
@@ -80,15 +82,17 @@ a.left-font01:hover {
 }
 .left-font03 {
     font-family: "����";
-    font-size: 12px;
+    font-size: 14px;
     color:#21759B;
     text-decoration: none;
+    letter-spacing: 2px;
     font-weight:bold;
 }
 a.left-font03:hover {
     font-family: "����";
-    font-size: 12px;
+    font-size: 14px;
     color:#D54E21;
+    letter-spacing: 2px;
     text-decoration: none;
 }
 .left-font04{    
@@ -861,14 +865,17 @@ a.newfont03:hover {
 
 .left-fontSmall {
     font-family: "����";
-    font-size: 12px;
+    font-size: 13px;
     color:#21759B;
+    letter-spacing: 2px;
     text-decoration: none;
     *margin:0 0 0 -10px;
+
 }
 a.left-fontSmall:hover {
     font-family: "����";
-    font-size: 12px;
+    font-size: 13px;
+    letter-spacing: 2px;
     color:#D54E21;
     text-decoration: none;
 }

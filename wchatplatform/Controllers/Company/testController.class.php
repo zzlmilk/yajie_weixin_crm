@@ -12,7 +12,7 @@ class TestController extends BaseController {
         header("Content-type:text/html;charset=utf-8");
 
 
-        $this->assign('open_id', $_REQUEST['open_id']);
+       //   $this->assign('open_id', $_REQUEST['open_id']);
         //$this->userOpenId=$_REQUEST['open_id'];
     }
 
@@ -30,8 +30,8 @@ class TestController extends BaseController {
 
     //兑换物品详情
     public function exchangeGoods() {
-       // $this->userOpenId = $_REQUEST['open_id'];
-        $exchangeItem =transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
+        // $this->userOpenId = $_REQUEST['open_id'];
+        $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
         $exchangeItem = json_decode($exchangeItem, true);
         var_dump($exchangeItem["exchange_info"]);
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
@@ -222,15 +222,14 @@ class TestController extends BaseController {
     /**
      * 提交注册
      */
-   public function submitRegister(){
 
-        header("Content-type:text/html;charset=utf-8");
+    public function submitRegister(){
 
         $mobilephone = $_POST['phoneNumber'];
 
         $userName = $_POST['userName'];
         if (!empty($userName)) {
-             if(preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/",$mobilephone)){   
+                    if(preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/",$mobilephone)){   
                 $data = array();
                 //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
                 $data['open_id'] = $_POST['open_id'];
@@ -272,10 +271,6 @@ class TestController extends BaseController {
 
     }
 
-    public function bigWheelPage() {
-
-<<<<<<< HEAD
-
 
 	public function bigWheelPage(){
 
@@ -284,21 +279,12 @@ class TestController extends BaseController {
 
 	}
 
-    public function guaguaka() {
-=======
->>>>>>> 51f852ba72ff53276c2d78b1deef2f913ed6e1e8
 
-        $this->display();
-    }
-<<<<<<< HEAD
-  
-=======
 
     public function guaguaka() {
 
         $this->display();
     }
->>>>>>> 51f852ba72ff53276c2d78b1deef2f913ed6e1e8
 
     /**
      * 
@@ -333,11 +319,15 @@ class TestController extends BaseController {
 
     //兑换物品
     public function changeGoods() {
-        $this->userOpenId = $_REQUEST['open_id'];
-        $postDate["source"] = "company";
-        $postDate['open_id'] = $this->userOpenId;
-
-        $exchangeList = $this->getReturnValue(APIURL . "/exchange/redeem", "post");
+        //$this->userOpenId = $_REQUEST['open_id'];
+        if (isset($_GET['goodsId'])) {
+            $goodsId=$_GET['goodsId'];
+            $postDate["source"] = "company";
+            $postDate['open_id'] = $this->userOpenId;
+            $postDate['id'] = $goodsId;
+            $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
+            var_dump($exchangeList);
+        }
     }
 
 }

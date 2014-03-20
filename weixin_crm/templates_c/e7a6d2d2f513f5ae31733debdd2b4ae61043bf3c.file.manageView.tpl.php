@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-12 13:51:15
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-19 13:36:24
          compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/user/manageView.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2072691158531ff5d339cf76-00357179%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     'e7a6d2d2f513f5ae31733debdd2b4ae61043bf3c' => 
     array (
       0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/user/manageView.tpl',
-      1 => 1394603459,
+      1 => 1395193105,
     ),
   ),
   'nocache_hash' => '2072691158531ff5d339cf76-00357179',
@@ -47,7 +47,7 @@ $_smarty_tpl->decodeProperties(array (
 <div style="text-align: center; padding-top: 100px;">
     <div>
         <input type="text" class="seachInput"  placeholder="请输入电话号码" id="userPhone"/>
-        <button id="getUser" class="seachButton">搜索</button>
+        <button id="getUser" class="seachButton" accesskey="Enter">搜索</button>
     </div>
     <div style="margin-top: 50px; display: none;" id="userData">
         <div class="userDateArea">
@@ -79,6 +79,8 @@ $_smarty_tpl->decodeProperties(array (
 
 <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /js/jquery-1.9.1.js"></script>
+<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/js/rexexTest.js"></script>
 <script>
     $("#getUser").click(function(){ 
     $("#errorPrint").html("");
@@ -91,8 +93,8 @@ $_smarty_tpl->decodeProperties(array (
 },
 success:function(rData){
 if(rData=="1"){
-    $("#errorPrint").html("未寻找到结果，请确认后重试");
-    $("#userData").css("display","none");
+$("#errorPrint").html("未寻找到结果，请确认后重试");
+$("#userData").css("display","none");
 }
 else{
 $("#userData").css("display","block");
@@ -149,6 +151,17 @@ $("#moneyConturl").css("display","none");
 return false;
 });
 $("#checkDate").click(function(){
+var errorMessage="";
+var alertFlag=false;
+
+if(!getIntRegex($("#resourceNumber").val())||$("#resourceNumber").val()<0){
+errorMessage+="金额必须为数字或者大于0 \r\n";
+alertFlag=true;
+}
+if(alertFlag){
+alert(errorMessage);
+}
+else{
 $.ajax({
 url:"<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=user&functionname=contrulUserResource",
@@ -160,6 +173,10 @@ conturlType:$("#conturlType").val()
 },
 success:function(rData){
 //alert(JSON.stringify(rData));
+if(rData=="numberError"){
+    alert("金额错误");
+    return false;
+}
 var nowPoints= ($("#points").html())*1;
 var nowMoney= ($("#money").html())*1;
 switch(rData['conturlType']){
@@ -192,6 +209,7 @@ $("#resourceNumber").val("");
 //        $("#money").html(rData["user_money"]);
 //        $("#userId").val(rData["user_id"]);
 }
-})
+});
+}
 })
 </script>

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-13 11:35:20
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-19 13:35:39
          compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/gift/getBigWheelList.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:38587593853212778898947-40285508%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:77757516553292cab3aed32-10444533%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '2392a9ca46282240cffd4dc09ef90d753f21c43c' => 
     array (
       0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/gift/getBigWheelList.tpl',
-      1 => 1394677441,
+      1 => 1395207162,
     ),
   ),
-  'nocache_hash' => '38587593853212778898947-40285508',
+  'nocache_hash' => '77757516553292cab3aed32-10444533',
   'function' => 
   array (
   ),
@@ -139,7 +139,7 @@ $_smarty_tpl->decodeProperties(array (
 
 
 				
-				<div style="color: rgb(240,173,78);margin-top: 1em;text-indent: 1em;">
+				<div style="color: #428bca; margin-top: 1em;text-indent: 1em;">
 					提示: 概率的配置信息必须换算成小数填写,每个奖品概率须介于0～1之间!
 				</div>
 

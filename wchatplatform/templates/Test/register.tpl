@@ -46,6 +46,7 @@
 		}
 		document.write("</select> 日 ")
     }
+    
 
     </script>
 
@@ -92,6 +93,10 @@
 				    </div>
 				  </div>
 
+				  
+
+				  <input type="hidden" name="open_id" value="{$open_id}" />
+
 
 				  <div class="form-group" style=" margin-right: 3em;">
 				    <label for="inputPassword3" class="col-sm-2 control-label">&nbsp;&nbsp;&nbsp;&nbsp;性别</label>
@@ -115,7 +120,7 @@
 				  <div class="form-group" style=" margin-right: 3em;">
 				    <label for="inputPassword3" class="col-sm-2 control-label">手机号&nbsp;&nbsp;</label>
 				    <div class="col-sm-10">
-				      <input type="name" class="form-control" id="inputPassword3" name="phoneNumber" placeholder="请输入手机号码">
+				      <input type="name" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="请输入手机号码">
 				    </div>
 				  </div>
 
@@ -125,14 +130,6 @@
 				    	<script>getYearMonthDate();</script>
 				    </div>
 				  </div>
-
-				<!--   <div class="form-group" style=" margin-right: 3em;">
-				    <label for="inputPassword3" class="col-sm-2 control-label">&nbsp;&nbsp;&nbsp;&nbsp;密码</label>
-				    <div class="col-sm-10">
-				      <input type="password" class="form-control" id="inputPassword3" name="password" placeholder="请输入密码">
-				    </div>
-				  </div> -->
-
 
 				  <div class="form-group" style=" margin-right: 3em;">
 				    <div class="col-sm-offset-2 col-sm-10" style="margin-left: 4em;">
