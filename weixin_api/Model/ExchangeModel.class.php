@@ -44,7 +44,6 @@ class ExchangeModel extends Basic {
 
         }
 
-
     }
 
 
@@ -90,7 +89,6 @@ class ExchangeModel extends Basic {
 
                             if(!empty($result['real_name']) && !empty($result['province_id']) && !empty($result['city_id']) && !empty($result['area_id']) && !empty($result['street'])){
 
-
                                 $updateUser['province_id'] = $result['province_id'];
 
                                 $updateUser['city_id'] = $result['city_id'];
@@ -103,10 +101,22 @@ class ExchangeModel extends Basic {
 
                                 $userModel->updateInfo($updateUser,$userinfo['user_id']);
 
+                            } else{
+
+                                /**
+                                 *  用户无收货地址
+                                 */
+
+                                $array['exchange_info'] = $this->vars;
+
+                                return $array;
+
                             }
+
                         }
 
                     }
+
 
                     if($userinfo['user_integration'] >= $exchange_integration ){
 
@@ -131,9 +141,9 @@ class ExchangeModel extends Basic {
                             $user_record = $userPointerRecord->addRecord($userinfo['user_id'],1,'-'.$exchange_integration,'exchange',$result['id']);
                         }
 
-                        
-
                         $array['user_record'] = arrayToObject($user_record,0);
+
+                        $array['exchange_info'] = $this->vars;
 
                         return $array;
 

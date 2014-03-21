@@ -141,7 +141,7 @@ class exchangeController implements exchange {
 
             $expName = substr(strrchr($fileName, "."), 0);
             $fileUpDateTime = date("ymdhis" . rand(0, 800));
-            $storeDir = "/yajie_weixin_crm/weixin_crm/giftImages/";
+            $storeDir = GIFTIMAGEDIR;
             $overWrite = 1;
             $uploadsize = $_FILES[$fileRequestName]['size'];
             $fileSizeMax = 1024 * 1024 * 9;
@@ -155,7 +155,7 @@ class exchangeController implements exchange {
                 $requestMessage = '文件重名';
                 $eventFlag = TRUE;
                 //return false;
-            } else if (!move_uploaded_file($fileTmp, $_SERVER["DOCUMENT_ROOT"] . $storeDir . $fileUpDateTime . $expName)) {
+            } else if (!move_uploaded_file($fileTmp, $storeDir . $fileUpDateTime . $expName)) {
                 $requestMessage = '文件无法复制';
                 $eventFlag = TRUE;
                 //return false;

@@ -167,6 +167,59 @@ class  UserController implements User {
 			AssemblyJson($array);
 		}
 
+	}
+
+
+	/**
+	 * 
+	 */
+
+	public function update_user_address(){
+
+
+		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])){
+
+
+			if(!empty($_REQUEST['user_phone']) && !empty($_REQUEST['province_id']) && !empty($_REQUEST['city_id']) && !empty($_REQUEST['area_id']) && !empty($_REQUEST['street']) && !empty($_REQUEST['real_name'])){
+
+				$user = new userModel();
+
+				$userInfo = $user->getUserInfo($_REQUEST['open_id']);
+
+				if(count($userInfo) > 0){
+
+					$update = array();
+
+					$update_field = array('user_phone','province_id','city_id','area_id','street','real_name');
+
+					foreach($update_field as $v){
+
+						$update[$v] = $_REQUEST[$v];
+
+					}
+					
+					if(count($update) > 0 ){
+
+						$this->updateInfo($update);
+					}
+
+				} else{
+
+					echoErrorCode(10005);
+
+				}
+
+			} else{
+
+				echoErrorCode(105);
+
+			}
+
+		}else{
+
+			echoErrorCode(105);
+
+		}
 
 	}
 

@@ -2,7 +2,9 @@
 
 interface  gift{
 
+	
 	public function  getGiftList($type);
+
 
 	public function  updateGift($data);
 

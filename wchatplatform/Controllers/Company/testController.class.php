@@ -12,7 +12,11 @@ class TestController extends BaseController {
         header("Content-type:text/html;charset=utf-8");
 
 
+<<<<<<< HEAD
         //   $this->assign('open_id', $_REQUEST['open_id']);
+=======
+        $this->assign('open_id', $_REQUEST['open_id']);
+>>>>>>> d2801a038034b4fa4d263e363746d2a40b91fdb1
         //$this->userOpenId=$_REQUEST['open_id'];
     }
 
@@ -30,8 +34,8 @@ class TestController extends BaseController {
 
     //兑换物品详情
     public function exchangeGoods() {
-        // $this->userOpenId = $_REQUEST['open_id'];
-        $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
+       // $this->userOpenId = $_REQUEST['open_id'];
+        $exchangeItem =transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
         $exchangeItem = json_decode($exchangeItem, true);
         var_dump($exchangeItem["exchange_info"]);
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
@@ -228,6 +232,7 @@ class TestController extends BaseController {
 
         $userName = $_POST['userName'];
         if (!empty($userName)) {
+<<<<<<< HEAD
             if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $mobilephone)) {
                 $data = array();
                 //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
@@ -259,10 +264,51 @@ class TestController extends BaseController {
                 echo "格式不正确";
             }
         } else {
+=======
+                if(preg_match("/^13[0-9]{1}[0-9]{8}$|15[01289]{1}[0-9]{8}$|189[0-9]{8}$/",$mobilephone)){   
+                        $data = array();
+                        //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
+                        $data['open_id'] = $_POST['open_id'];
+                        $data['source'] = 'company';
+                        $data['user_name'] = $_POST['userName'];
+                        $data['sex'] = $_POST['gender'];
+                        $data['user_phone'] = $_POST['phoneNumber'];
+                        $data['birthday'] = strtotime($_POST['year'].$_POST['month'].$_POST['date']);
+
+                        $resultRename = transferData(APIURL.'/user/able_user/','post',$data);
+                        $res = json_decode($resultRename,true);
+
+
+                        if($res['success'] == 1){
+                            $resultRegister = transferData(APIURL.'/user/add','post',$data); 
+                            $resultRegister = json_decode($resultRegister,true);
+
+                            if($resultRegister['user']['user_id'] > 0){
+                                echo "注册成功";
+                                // 注册成功后跳转会员中心
+                            }
+
+                        }else{
+
+                        echo "已被注册过";
+
+                        }
+
+                }else{   
+
+                    echo "号码格式不正确";
+                }   
+
+        }else{
+>>>>>>> d2801a038034b4fa4d263e363746d2a40b91fdb1
 
             echo "用户名不能为空";
         }
     }
+
+    /**
+    *大转盘 页面方法
+    */
 
     public function bigWheelPage() {
 
@@ -276,17 +322,19 @@ class TestController extends BaseController {
     }
 
     /**
-     * 
+     * 大转盘 ajax 方法
      */
     public function getBigWheel() {
-
 
         $token = $_REQUEST['token'];
         $ac = $_REQUEST['ac'];
         $tid = $_REQUEST['tid'];
         $t = $_REQUEST['t'];
 
-        echo "123";
+        $resultPro = transferData(APIURL.'/gift/get_probability_wheel/?source=1234','get');
+        // $res = json_decode($resultPro,true);
+        print_r($resultPro);
+        // echo "123";
     }
 
     /**
@@ -298,6 +346,7 @@ class TestController extends BaseController {
         $this->display();
     }
 
+
     /**
      * 问卷 页面显示
      */
@@ -308,6 +357,7 @@ class TestController extends BaseController {
 
     //兑换物品
     public function changeGoods() {
+<<<<<<< HEAD
         //$this->userOpenId = $_REQUEST['open_id'];
         if (isset($_GET['goodsId'])) {
             $postDate["source"] = "company";
@@ -333,6 +383,13 @@ class TestController extends BaseController {
             var_dump($exchangeItem);
             die;
         }
+=======
+        $this->userOpenId = $_REQUEST['open_id'];
+        $postDate["source"] = "company";
+        $postDate['open_id'] = $this->userOpenId;
+
+        $exchangeList = $this->getReturnValue(APIURL . "/exchange/redeem", "post");
+>>>>>>> d2801a038034b4fa4d263e363746d2a40b91fdb1
     }
 
     public function locationCheck() {

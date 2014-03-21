@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html> 
     <head>
@@ -49,6 +48,7 @@
     <style>
         body{
             Font-size=62.5%;
+             background-color: rgb(243,237,227);
         }
         .ativatingWarp{
             /*border: solid 1px red;*/
@@ -60,6 +60,7 @@
             position: absolute;
             margin-left: -11em;  
             margin-top: -5px;
+
 
         }
         .phoneNumberStyle{

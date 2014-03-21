@@ -314,7 +314,7 @@ function curlGet($url){
 
         CURLOPT_RETURNTRANSFER => TRUE, 
 
-        CURLOPT_TIMEOUT => 4,
+        CURLOPT_TIMEOUT => 14,
         
         CURLOPT_FOLLOWLOCATION=> 1
     ); 

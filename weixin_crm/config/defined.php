@@ -1,7 +1,7 @@
 <?php
 
 
-ini_set('display_errors', '0');
+ini_set('display_errors', '1');
 
 
 session_start();
@@ -25,6 +25,9 @@ defined('URLHANDLER') or define('URLHANDLER', WebSiteUrl.'/publicHandler');
 defined('FOOTBASIC') or define('FOOTBASIC',  ROOTPATH . 'basicClasses/');
 
 defined('FOOTCLASS') or define('FOOTCLASS',  ROOTPATH . 'Model/');
+
+defined('GIFTIMAGEDIR') or define('GIFTIMAGEDIR',  ROOTPATH . 'giftImages/');
+
 
 defined('FOOTCONTROLLER') or define('FOOTCONTROLLER',  ROOTPATH . 'publicController/');
 
