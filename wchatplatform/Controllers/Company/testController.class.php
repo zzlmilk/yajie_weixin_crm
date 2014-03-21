@@ -12,7 +12,7 @@ class TestController extends BaseController {
         header("Content-type:text/html;charset=utf-8");
 
 
-       //   $this->assign('open_id', $_REQUEST['open_id']);
+        $this->assign('open_id', $_REQUEST['open_id']);
         //$this->userOpenId=$_REQUEST['open_id'];
     }
 
@@ -30,8 +30,8 @@ class TestController extends BaseController {
 
     //兑换物品详情
     public function exchangeGoods() {
-        // $this->userOpenId = $_REQUEST['open_id'];
-        $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
+       // $this->userOpenId = $_REQUEST['open_id'];
+        $exchangeItem =transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
         $exchangeItem = json_decode($exchangeItem, true);
         var_dump($exchangeItem["exchange_info"]);
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
@@ -222,72 +222,61 @@ class TestController extends BaseController {
     /**
      * 提交注册
      */
-
     public function submitRegister(){
 
         $mobilephone = $_POST['phoneNumber'];
 
         $userName = $_POST['userName'];
         if (!empty($userName)) {
-                    if(preg_match("/^13[0-9]{1}[0-9]{8}$|15[01289]{1}[0-9]{8}$|189[0-9]{8}$/",$mobilephone)){   
-                $data = array();
-                //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
-                $data['open_id'] = $_POST['open_id'];
-                $data['source'] = 'company';
-                $data['user_name'] = $_POST['userName'];
-                $data['sex'] = $_POST['gender'];
-                $data['user_phone'] = $_POST['phoneNumber'];
-                $data['birthday'] = strtotime($_POST['year'].$_POST['month'].$_POST['date']);
+                if(preg_match("/^13[0-9]{1}[0-9]{8}$|15[01289]{1}[0-9]{8}$|189[0-9]{8}$/",$mobilephone)){   
+                        $data = array();
+                        //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
+                        $data['open_id'] = $_POST['open_id'];
+                        $data['source'] = 'company';
+                        $data['user_name'] = $_POST['userName'];
+                        $data['sex'] = $_POST['gender'];
+                        $data['user_phone'] = $_POST['phoneNumber'];
+                        $data['birthday'] = strtotime($_POST['year'].$_POST['month'].$_POST['date']);
 
-                $resultRename = transferData(APIURL.'/user/able_user/','post',$data);
-                $res = json_decode($resultRename,true);
+                        $resultRename = transferData(APIURL.'/user/able_user/','post',$data);
+                        $res = json_decode($resultRename,true);
 
 
-                if($res['success'] == 1){
-                    $resultRegister = transferData(APIURL.'/user/add','post',$data);
-                    $resultRegister = json_decode($resultRegister,true);
+                        if($res['success'] == 1){
+                            $resultRegister = transferData(APIURL.'/user/add','post',$data); 
+                            $resultRegister = json_decode($resultRegister,true);
 
-                    if($resultRegister['user']['user_id'] > 0){
-                        echo "注册成功";
-                        // 注册成功后跳转会员中心
-                    }
+                            if($resultRegister['user']['user_id'] > 0){
+                                echo "注册成功";
+                                // 注册成功后跳转会员中心
+                            }
 
-                }else{
+                        }else{
 
-                    echo "已被注册过";
+                        echo "已被注册过";
 
-                }
+                        }
 
                 }else{   
 
-                echo "格式不正确";
-            }   
-
+                    echo "号码格式不正确";
+                }   
 
         }else{
 
             echo "用户名不能为空";
         }
-
     }
 
-<<<<<<< HEAD
     /**
     *大转盘 页面方法
     */
 
     public function bigWheelPage() {
-=======
-
-	public function bigWheelPage(){
 
 
-		$this->display();
-
-	}
->>>>>>> 987782db522972fac87fe0b670574bb63d14b4f7
-
-
+        $this->display();
+    }
 
     public function guaguaka() {
 
@@ -330,15 +319,11 @@ class TestController extends BaseController {
 
     //兑换物品
     public function changeGoods() {
-        //$this->userOpenId = $_REQUEST['open_id'];
-        if (isset($_GET['goodsId'])) {
-            $goodsId=$_GET['goodsId'];
-            $postDate["source"] = "company";
-            $postDate['open_id'] = $this->userOpenId;
-            $postDate['id'] = $goodsId;
-            $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
-            var_dump($exchangeList);
-        }
+        $this->userOpenId = $_REQUEST['open_id'];
+        $postDate["source"] = "company";
+        $postDate['open_id'] = $this->userOpenId;
+
+        $exchangeList = $this->getReturnValue(APIURL . "/exchange/redeem", "post");
     }
 
 }
