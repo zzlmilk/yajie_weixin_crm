@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-19 17:17:25
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 12:51:14
          compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1358119709532960a585cf53-86165678%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1735386010532a73c23e03a1-24864856%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '87573d4006c313532643eff1ecd959d6be07427c' => 
     array (
       0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1395212508,
+      1 => 1395290855,
     ),
   ),
-  'nocache_hash' => '1358119709532960a585cf53-86165678',
+  'nocache_hash' => '1735386010532a73c23e03a1-24864856',
   'function' => 
   array (
   ),
@@ -234,13 +234,11 @@ $_smarty_tpl->decodeProperties(array (
                                     <td width="85%">
                                         <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
-                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=order&functionname=orderAdd" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">新增预约</a>
+
                                     </td>
 
                                 </tr>
                             </table>
-
 
                             <!--                    微游戏开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table3">
@@ -316,7 +314,7 @@ $_smarty_tpl->decodeProperties(array (
                                     </td>
                                     <td width="85%">
                                         <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('6')">礼品列表</a>
+/pageredirst.php?action=exchange&functionname=ExchangeList" target="mainFrame" class="left-fontSmall" onclick="tupian('6')">礼品列表</a>
                                     </td>
 
                                 </tr>
@@ -328,7 +326,7 @@ $_smarty_tpl->decodeProperties(array (
                                     </td>
                                     <td width="85%">
                                         <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" onclick="tupian('7')">兑换记录</a>
+/pageredirst.php?action=exchange&functionname=addExchangeItem" target="mainFrame" class="left-fontSmall" onclick="tupian('7')">添加礼品</a>
                                     </td>
                                 </tr>
 
@@ -345,13 +343,13 @@ $_smarty_tpl->decodeProperties(array (
                                             <tr>
                                                 <td width="15%">
                                                     <img name="img5" id="img5" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/images/ico04.gif" width="8" height="11">
+/images/ico04.gif" width="8" height="11"> 
                                                 </td>
                                                 <td width="85%">
                                                     <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >问卷管理</a>
                                                 </td>
                                             </tr>
-                                        </table>
+                                        </table> 
                                     </td>
                                 </tr>
                             </table>
@@ -362,8 +360,7 @@ $_smarty_tpl->decodeProperties(array (
 /images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('6')">问卷列表</a>
+                                        <a target="mainFrame" class="left-fontSmall" onclick="tupian('6')">问卷列表</a>
                                     </td>
 
                                 </tr>
