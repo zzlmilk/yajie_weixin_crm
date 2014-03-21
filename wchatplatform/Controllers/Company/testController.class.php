@@ -12,17 +12,14 @@ class TestController extends BaseController {
         header("Content-type:text/html;charset=utf-8");
 
 
-<<<<<<< HEAD
-        //   $this->assign('open_id', $_REQUEST['open_id']);
-=======
-        $this->assign('open_id', $_REQUEST['open_id']);
->>>>>>> d2801a038034b4fa4d263e363746d2a40b91fdb1
-        //$this->userOpenId=$_REQUEST['open_id'];
+
+//   $this->assign('open_id', $_REQUEST['open_id']);
+//$this->userOpenId=$_REQUEST['open_id'];
     }
 
-    //兑换列表
+//兑换列表
     public function getExchangeList() {
-        //$this->userOpenId = $_REQUEST['open_id'];
+//$this->userOpenId = $_REQUEST['open_id'];
         $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=company&open_id=" . $this->userOpenId, "get");
         $exchangeList = json_decode($exchangeList, true);
         var_dump($exchangeList);
@@ -32,10 +29,10 @@ class TestController extends BaseController {
         $this->display();
     }
 
-    //兑换物品详情
+//兑换物品详情
     public function exchangeGoods() {
-       // $this->userOpenId = $_REQUEST['open_id'];
-        $exchangeItem =transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
+// $this->userOpenId = $_REQUEST['open_id'];
+        $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
         $exchangeItem = json_decode($exchangeItem, true);
         var_dump($exchangeItem["exchange_info"]);
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
@@ -53,7 +50,7 @@ class TestController extends BaseController {
         }
         $selectReturnVal = transferData(APIURL . "/order/get_merchandise", "get");
         $selectVal = json_decode($selectReturnVal, true);
-        //var_dump($selectReturnVal);
+//var_dump($selectReturnVal);
         $this->assign("selectVal", $selectVal);
         $this->assign('open_id', $_REQUEST['open_id']);
         $this->display();
@@ -65,7 +62,7 @@ class TestController extends BaseController {
     public function orderCheck() {
         $this->userOpenId = $_REQUEST['open_id'];
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            //预处理post发送的值
+//预处理post发送的值
             foreach ($_POST as $key => $val) {
                 if ($key == "orderDateInput") {
                     $valCache = explode(" ", $val);
@@ -74,14 +71,14 @@ class TestController extends BaseController {
                 }
                 $returnVal["$key"] = $val;
             }
-            //查询预约项目所需金额
+//查询预约项目所需金额
             $merchandiseDate['source'] = 'company';
             $merchandiseDate['merchandise_id'] = $returnVal['orderMerchandise'];
             $merchandise = transferData(APIURL . "/order/get_merchandise_info", "post", $merchandiseDate);
             $merchandise = json_decode($merchandise, TRUE);
             $returnVal['merchandiseIteams'] = $merchandise['merchandise']['merchandise_name'];
             $returnVal['needMoney'] = $merchandise['merchandise']['merchandise_money'];
-            //
+//
             $postTime = strtotime($returnVal["orderDateInput"] . " " . $returnVal["orderTimeInput"]);
             $postDate["source"] = "company";
             $postDate["open_id"] = $this->userOpenId;
@@ -143,7 +140,7 @@ class TestController extends BaseController {
         $this->display();
     }
 
-    //取消订单
+//取消订单
     public function cancelOrder() {
         $this->userOpenId = $_REQUEST['open_id'];
         if ($this->errorMessage != "") {
@@ -218,7 +215,7 @@ class TestController extends BaseController {
 
     public function index() {
 
-        //$this->assign('open_id',$_REQUEST['open_id']);
+//$this->assign('open_id',$_REQUEST['open_id']);
 
         $this->display();
     }
@@ -232,10 +229,10 @@ class TestController extends BaseController {
 
         $userName = $_POST['userName'];
         if (!empty($userName)) {
-<<<<<<< HEAD
+
             if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $mobilephone)) {
                 $data = array();
-                //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
+//$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
                 $data['open_id'] = $_POST['open_id'];
                 $data['source'] = 'company';
                 $data['user_name'] = $_POST['userName'];
@@ -253,7 +250,7 @@ class TestController extends BaseController {
 
                     if ($resultRegister['user']['user_id'] > 0) {
                         echo "注册成功";
-                        // 注册成功后跳转会员中心
+// 注册成功后跳转会员中心
                     }
                 } else {
 
@@ -264,52 +261,15 @@ class TestController extends BaseController {
                 echo "格式不正确";
             }
         } else {
-=======
-                if(preg_match("/^13[0-9]{1}[0-9]{8}$|15[01289]{1}[0-9]{8}$|189[0-9]{8}$/",$mobilephone)){   
-                        $data = array();
-                        //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
-                        $data['open_id'] = $_POST['open_id'];
-                        $data['source'] = 'company';
-                        $data['user_name'] = $_POST['userName'];
-                        $data['sex'] = $_POST['gender'];
-                        $data['user_phone'] = $_POST['phoneNumber'];
-                        $data['birthday'] = strtotime($_POST['year'].$_POST['month'].$_POST['date']);
 
-                        $resultRename = transferData(APIURL.'/user/able_user/','post',$data);
-                        $res = json_decode($resultRename,true);
-
-
-                        if($res['success'] == 1){
-                            $resultRegister = transferData(APIURL.'/user/add','post',$data); 
-                            $resultRegister = json_decode($resultRegister,true);
-
-                            if($resultRegister['user']['user_id'] > 0){
-                                echo "注册成功";
-                                // 注册成功后跳转会员中心
-                            }
-
-                        }else{
-
-                        echo "已被注册过";
-
-                        }
-
-                }else{   
-
-                    echo "号码格式不正确";
-                }   
-
-        }else{
->>>>>>> d2801a038034b4fa4d263e363746d2a40b91fdb1
 
             echo "用户名不能为空";
         }
     }
 
     /**
-    *大转盘 页面方法
-    */
-
+     * 大转盘 页面方法
+     */
     public function bigWheelPage() {
 
 
@@ -331,10 +291,10 @@ class TestController extends BaseController {
         $tid = $_REQUEST['tid'];
         $t = $_REQUEST['t'];
 
-        $resultPro = transferData(APIURL.'/gift/get_probability_wheel/?source=1234','get');
-        // $res = json_decode($resultPro,true);
+        $resultPro = transferData(APIURL . '/gift/get_probability_wheel/?source=1234', 'get');
+// $res = json_decode($resultPro,true);
         print_r($resultPro);
-        // echo "123";
+// echo "123";
     }
 
     /**
@@ -346,7 +306,6 @@ class TestController extends BaseController {
         $this->display();
     }
 
-
     /**
      * 问卷 页面显示
      */
@@ -355,9 +314,9 @@ class TestController extends BaseController {
         $this->display();
     }
 
-    //兑换物品
+//兑换物品
     public function changeGoods() {
-<<<<<<< HEAD
+
         //$this->userOpenId = $_REQUEST['open_id'];
         if (isset($_GET['goodsId'])) {
             $postDate["source"] = "company";
@@ -383,19 +342,12 @@ class TestController extends BaseController {
             var_dump($exchangeItem);
             die;
         }
-=======
-        $this->userOpenId = $_REQUEST['open_id'];
-        $postDate["source"] = "company";
-        $postDate['open_id'] = $this->userOpenId;
-
-        $exchangeList = $this->getReturnValue(APIURL . "/exchange/redeem", "post");
->>>>>>> d2801a038034b4fa4d263e363746d2a40b91fdb1
     }
 
     public function locationCheck() {
         $getProvince = transferData(APIURL . "/area/get_area", "get");
         $getProvince = json_decode($getProvince, true);
-        $this->assign("provinceValue",$getProvince);
+        $this->assign("provinceValue", $getProvince);
         $this->display();
     }
 
