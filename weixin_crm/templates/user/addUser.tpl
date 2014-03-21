@@ -8,7 +8,7 @@
     }
     .userMangerTitle{
         color: rgb(91,91,91);
-        font-size: 25px;
+        font-size: 2.5em;
         margin-top: 15px;
         text-align: center;
     }
@@ -109,5 +109,11 @@ $("#errorMessage").html(errorMessage);
 return false;
 }
 })
-     
+$("#userPhone").on("input",function(){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+
+$("#userPhone").val(cutString);
+}
+}); 
 </script>

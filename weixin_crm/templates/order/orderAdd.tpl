@@ -9,7 +9,7 @@
 <style>
     .userMangerTitle{
         color: rgb(91,91,91);
-        font-size: 25px;
+         font-size: 2.5em;
         margin-top: 15px;
         text-align: center;
     }

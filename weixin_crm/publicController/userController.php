@@ -25,7 +25,7 @@ class userController implements User {
     //查询用户
     public function seachUsers() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $errorFlag=true;
+            $errorFlag = true;
             if (!empty($_POST['selectText'])) {
                 $phone = $_POST['selectText'];
                 $userModel = new userModel();
@@ -33,8 +33,7 @@ class userController implements User {
                 if ($userModel->vars_number == 1) {
                     $reVal = $userModel->vars;
                     $_GET['userId'] = $reVal["user_id"];
-                     $errorFlag=false;
-                    
+                    $errorFlag = false;
                 } else {
                     $this->errorMessage = "未找到对应的手机号码请确认后重新输入";
                 }
@@ -42,9 +41,9 @@ class userController implements User {
                 $this->errorMessage = "手机号码不能为空，请确认后重新输入";
             }
         }
-        if($errorFlag){
+        if ($errorFlag) {
             $this->userList();
-        }else{
+        } else {
             $this->userEdit();
         }
     }
@@ -65,7 +64,7 @@ class userController implements User {
             $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userListPage";
             $page = $_ENV['smarty']->getPages($url, $pageNumber, $userNumber, $pageSize);
             $_ENV['smarty']->assign('pages', $page);
-            
+
             $_ENV['smarty']->display('userList');
         } else {
             $this->userList();
@@ -87,7 +86,15 @@ class userController implements User {
                 echo $jsonResult;
             }
         } else {
+            $userPointerRecordModel = new userPointerRecordModel();
+            $userPointerRecordModel->addOffset(0, 5);
+            $joinString = ' LEFT JOIN user ON user_points_record.user_id = user.user_id ';
+            $userPointerRecordModel->addJoin($joinString);
+            $userPointerRecordModel->addOrderBy("record_id desc");
+            $userPointerRecordModel->initialize();
+            $pointRecordShow = $userPointerRecordModel->vars_all;
             $_ENV['smarty']->setDirTemplates('user');
+            $_ENV['smarty']->assign('pointRecordData', $pointRecordShow);
             $_ENV['smarty']->display('manageView');
         }
     }
@@ -115,9 +122,17 @@ class userController implements User {
                         $this->reductionMoney($userId, $resourceNumber);
                         break;
                 }
+                $userPointerRecordModel = new userPointerRecordModel();
+                $userPointerRecordModel->addOffset(0, 5);
+                $joinString = ' LEFT JOIN user ON user_points_record.user_id = user.user_id ';
+                $userPointerRecordModel->addJoin($joinString);
+                $userPointerRecordModel->addOrderBy("record_id desc");
+                $userPointerRecordModel->initialize();
+                $pointRecordShow = $userPointerRecordModel->vars_all;
                 header('Content-type: application/json');
                 $rerurnArray['resourceNumber'] = $resourceNumber;
                 $rerurnArray['conturlType'] = $conturlType;
+                $rerurnArray['recordList'] = $pointRecordShow;
                 $jsonReturn = json_encode($rerurnArray);
                 echo $jsonReturn;
             }

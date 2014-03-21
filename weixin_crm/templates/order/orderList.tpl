@@ -1,5 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+<link href="{$WebSiteUrl}/css/minimal/blue.css" rel="stylesheet">
 <style>
     table tr>th{
         text-align: center;
@@ -13,7 +14,7 @@
     }
     .userMangerTitle{
         color: rgb(91,91,91);
-        font-size: 25px;
+        font-size: 2.5em;
         margin-top: 15px;
         text-align: center;
     }
@@ -35,6 +36,8 @@
 
         </div>
     </div>
+    <div style="height: 15px;"></div>
+    <div class="sortBar"><label for="inputPassword3" class="control-label">排序：</label><input type="radio" name="sortType" id="point" value="point">&nbsp;<label for="point" class="control-label">预约时间</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sortType" id="money" value="money">&nbsp;<label for="money" class="control-label">生成时间</label></div>
     <div style="height: 15px;"></div>
     {if $errorMessage neq ""}
         <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label">{$errorMessage}</label></div>
@@ -87,3 +90,12 @@
     </table>
 </div>
 <div style="text-align: center">{$pages}</div> 
+<script src="{$WebSiteUrl}/js/jquery-1.9.1.js"></script>
+<script src="{$WebSiteUrl}/js/icheck.min.js"></script>
+<script>
+    $('input').iCheck({
+    checkboxClass: 'icheckbox_minimal-blue',
+    radioClass: 'iradio_minimal-blue',
+    increaseArea: '20%' // optional
+}); 
+</script>

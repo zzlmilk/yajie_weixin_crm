@@ -54,17 +54,20 @@
             </div>
 
             <div class="form-group"> 
-                <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品简介：</label>
+                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品简介：</label>
                 <div class="col-sm-2">
                     <input type="text" class="form-control inputWidth" value="" name="exchange_summary" id="exchangeSummary">
                 </div>
             </div>
             <div class="form-group">
-                <label for="exampleInputFile" class="col-sm-2 control-label labelWidth">礼品图片</label>
-                <input class=" inputWidth" style="padding-left: 25px;" name="exampleInputFile"  type="file" id="exampleInputFile">
+                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品图片</label>
+                <div class="col-sm-2">
+                    <input class="" style=" margin-left: 15px;width: 72px;" name="exampleInputFile"  type="file" id="exampleInputFile">
+                </div>
             </div>
             <div class="form-group"> 
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品详情：</label>
+
                 <div class="col-sm-2">
                     <textarea  class="form-control inputWidth" rows="3"name="exchangez_details" id="exchangezDetails"></textarea>
                 </div>

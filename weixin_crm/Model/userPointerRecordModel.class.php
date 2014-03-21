@@ -25,7 +25,6 @@ class userPointerRecordModel extends Basic{
 			$record['create_time'] = time();
 
 			$user_pointer_record = new userPointerRecordModel();
-
 			$user_pointer_record->insert( $record );
 		}
 	}
