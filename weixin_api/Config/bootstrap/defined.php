@@ -29,7 +29,7 @@ defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH','ORIG_PATH_INFO,RED
 /**
  * 关闭报错信息 把报错信息存储到错误文件中
  */
-ini_set("display_errors", 1);
+ini_set("display_errors", 0);
 ini_set("log_errors", "On");
 ini_set("error_log", ROOT_DIR . Logs . '/Error/error.log');
 
@@ -37,7 +37,7 @@ defined('DBNAME') or define('DBNAME','weixin_company');
 
 defined('USER') or define('USER', 'root');
 
-defined('PASSWORD') or define('PASSWORD', '123456');
+defined('PASSWORD') or define('PASSWORD', '');
 
 defined('DBHOST') or define('DBHOST', '127.0.0.1');
 

@@ -26,6 +26,9 @@ defined('FOOTBASIC') or define('FOOTBASIC',  ROOTPATH . 'basicClasses/');
 
 defined('FOOTCLASS') or define('FOOTCLASS',  ROOTPATH . 'Model/');
 
+defined('GIFTIMAGEDIR') or define('GIFTIMAGEDIR',  ROOTPATH . 'giftImages/');
+
+
 defined('FOOTCONTROLLER') or define('FOOTCONTROLLER',  ROOTPATH . 'publicController/');
 
 defined('FOOTINTERFACE') or define('FOOTINTERFACE',  ROOTPATH . 'Interface/');

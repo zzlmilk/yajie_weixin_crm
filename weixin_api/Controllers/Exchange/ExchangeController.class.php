@@ -1,9 +1,6 @@
 <?php
 
-
-
 class ExchangeController implements exchange {
-
 
 
 	/**
@@ -119,7 +116,6 @@ class ExchangeController implements exchange {
 						$exchangeArray[$k]['exchange_record'] = arrayToObject($v,0);
 
 						$exchangeArray[$k]['exchange_info'] = arrayToObject($exchangeInfoArray,0);
-
 					}
 
 					AssemblyJson($exchangeArray);

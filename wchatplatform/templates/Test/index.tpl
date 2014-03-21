@@ -29,8 +29,8 @@
 
 	<a href='{$websiteUrl}?g=company&a=user&v=userCenter&open_id={$open_id}'>个人用户</a>
 
-	<a href='{$websiteUrl}?g=company&a=user&v=exchangeGoods&open_id={$open_id}'>兑换</a>
+	<a href='{$websiteUrl}?g=company&a=test&v=getExchangeList&open_id={$open_id}'>兑换</a>
 
-	<a href='{$websiteUrl}?g=company&a=user&v=Questionnaire&open_id={$open_id}'>问卷</a>
+	<a href='{$websiteUrl}?g=company&a=test&v=Questionnaire&open_id={$open_id}'>问卷</a>
 
 </div>

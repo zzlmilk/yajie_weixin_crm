@@ -2,6 +2,8 @@
 
 class exchangeController implements exchange {
 
+    public $errorMessage = '';
+
     public function ExchangeList() {
         $exchangeModel = new exchangeModel();
         $exchangeModel->initialize();
@@ -13,6 +15,7 @@ class exchangeController implements exchange {
 
     public function addExchangeItem() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
             $imageReturnVal = $this->addImage("exampleInputFile");
             if ($imageReturnVal["state"] == 0) {
                 $insertData['exchange_name'] = $_POST['exchange_name'];
@@ -24,10 +27,14 @@ class exchangeController implements exchange {
                 $this->addExchange($insertData);
                 $this->ExchangeList();
             } else {
-                
+
+                $_SERVER["REQUEST_METHOD"] = "GET";
+                $this->errorMessage = $imageReturnVal['message'];
+                $this->addExchangeItem();
             }
         } else {
             $_ENV['smarty']->setDirTemplates('exchange');
+            $_ENV['smarty']->assign('errorMessage', $this->errorMessage);
             // $_ENV['smarty']->assign('exchangeList', $exchangeList);
             $_ENV['smarty']->display('addExchangeItem');
         }
@@ -66,7 +73,7 @@ class exchangeController implements exchange {
                 }
                 $this->updateExchange($updateVal, $_GET["ItemId"]);
                 $this->ExchangeList();
-            }else{
+            } else {
                 $this->ExchangeList();
             }
         }
@@ -134,7 +141,7 @@ class exchangeController implements exchange {
 
             $expName = substr(strrchr($fileName, "."), 0);
             $fileUpDateTime = date("ymdhis" . rand(0, 800));
-            $storeDir = "/yajie_weixin_crm/weixin_crm/giftImages/";
+            $storeDir = GIFTIMAGEDIR;
             $overWrite = 1;
             $uploadsize = $_FILES[$fileRequestName]['size'];
             $fileSizeMax = 1024 * 1024 * 9;
@@ -148,7 +155,7 @@ class exchangeController implements exchange {
                 $requestMessage = '文件重名';
                 $eventFlag = TRUE;
                 //return false;
-            } else if (!move_uploaded_file($fileTmp, $_SERVER["DOCUMENT_ROOT"] . $storeDir . $fileUpDateTime . $expName)) {
+            } else if (!move_uploaded_file($fileTmp, $storeDir . $fileUpDateTime . $expName)) {
                 $requestMessage = '文件无法复制';
                 $eventFlag = TRUE;
                 //return false;
