@@ -8,7 +8,7 @@
             body {
                 margin: 0;background:url(images/menu-shadow.png) repeat-y right top #eeeeee;
             }
-            #xiaotu,#xiaotu1,#xiaotu2,#xiaotu3,#xiaotu4,#xiaotu5,#xiaotu6,#xiaotu7,#xiaotu8,#xiaotu9,#xiaotu10{
+            #xiaotu,#xiaotu1,#xiaotu2,#xiaotu3,#xiaotu4,#xiaotu5,#xiaotu6,#xiaotu7,#xiaotu8,#xiaotu9,#xiaotu10,#xiaotu11,#xiaotu12,#xiaotu13,#xiaotu14,#xiaotu15,#xiaotu16,#xiaotu17,#xiaotu18,#xiaotu19,#xiaotu20{
                 padding-left: 9px;
             }
 
@@ -197,14 +197,10 @@
                                         <img id="xiaotu5" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-<<<<<<< HEAD
                                         <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
 
-=======
 
                                         <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
-                                       
->>>>>>> 987782db522972fac87fe0b670574bb63d14b4f7
                                     </td>
 
                                 </tr>
@@ -338,11 +334,8 @@
                                         <img id="xiaotu17" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-<<<<<<< HEAD
                                         <a target="mainFrame" class="left-fontSmall" onclick="tupian('6')">问卷列表</a>
-=======
                                         <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('17')">问卷</a>
->>>>>>> 987782db522972fac87fe0b670574bb63d14b4f7
                                     </td>
 
                                 </tr>
