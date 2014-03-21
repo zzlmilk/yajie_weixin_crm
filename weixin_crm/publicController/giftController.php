@@ -19,10 +19,6 @@ class giftController implements gift {
 	**/
 	public function updateGiftRate(){
 
-		
-		//print_r($_REQUEST)
-		
-
 		if(!empty($_REQUEST['gift_type']) && $_REQUEST['gift_type'] > 0 ){
 
 			$giftSettingModel = new giftSettingModel();
@@ -34,12 +30,16 @@ class giftController implements gift {
 
 	  				$data = array();
 
-	  				if(!empty($_REQUEST['gift_one_probability']) && !empty($_REQUEST['gift_two_probability']) && !empty($_REQUEST['gift_three_probability'])){
+	  				if($_REQUEST['gift_one_probability'] != null && $_REQUEST['gift_two_probability']!= null && $_REQUEST['gift_three_probability']!= null){
+
 
 	  					$data['gift_one_probability'] = $_POST['gift_one_probability'];
 						$data['gift_two_probability'] = $_POST['gift_two_probability'];
 						$data['gift_three_probability'] = $_POST['gift_three_probability'];
+
 						$giftSettingModel->update($data);
+
+						echo "<script>alert('修改成功');</script>";
 
 	  				}
 

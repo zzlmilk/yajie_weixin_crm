@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 07:13:17
-         compiled from "/Users/Lev/Sites/yajie_weixin_crm/wchatplatform/templates/Test/bigWheelPage.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:665622113532a950d3a4844-44262314%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 09:46:35
+         compiled from "/Users/Lev/Sites/yajie_weixin_crm/wchatplatform/templates/Test/bigwheelpage.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2052338214532ab8fb500e48-35757788%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '038984cbd35c3b20b3f466481252866f66dc7e85' => 
+    'b2c72925f14e66676a277483940e4345d37ad66d' => 
     array (
-      0 => '/Users/Lev/Sites/yajie_weixin_crm/wchatplatform/templates/Test/bigWheelPage.tpl',
-      1 => 1395299594,
+      0 => '/Users/Lev/Sites/yajie_weixin_crm/wchatplatform/templates/Test/bigwheelpage.tpl',
+      1 => 1395308794,
     ),
   ),
-  'nocache_hash' => '665622113532a950d3a4844-44262314',
+  'nocache_hash' => '2052338214532ab8fb500e48-35757788',
   'function' => 
   array (
   ),
@@ -85,11 +85,11 @@ $_smarty_tpl->decodeProperties(array (
 					<div class="Detail">
 						<p>一等奖：网时奖励200小时 。奖品数量：3</p>
 						<p>二等奖：网时奖励100小时 。奖品数量：5</p>
-						<p>三等奖：广播台免费点首歌 。奖品数量：10</p>
+						<!-- <p>三等奖：广播台免费点首歌 。奖品数量：10</p> -->
 					</div>
 				</div>
 			</div>
-			<div class="boxcontent boxyellow">
+<!-- 			<div class="boxcontent boxyellow">
 				<div class="box">
 					<div class="title-green">活动说明：</div>
 					<div class="Detail">
@@ -97,7 +97,7 @@ $_smarty_tpl->decodeProperties(array (
 						<p>我们的中奖率高达33.3%！！</p>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 	</div>
@@ -198,10 +198,6 @@ $(function() {
 			alert("您已经抽了 3 次奖。");
 			return
 		}
-		if (prize != null) {
-			alert("亲，你不能再参加本次活动了喔！下次再来吧~");
-			return
-		}
 
 		$.ajax({
 			url: webUrl+"?g=company&a=test&v=getBigWheel",
@@ -253,10 +249,7 @@ $(function() {
 				// 	start()
 				// }
 
-				prize = null;
-					start()
-
-
+				start()
 				running = false;
 				count++
 			},

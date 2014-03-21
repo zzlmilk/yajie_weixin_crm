@@ -121,8 +121,9 @@
 
 
 				
-				<div style="color: #428bca; margin-top: 1em;text-indent: 1em;">
-					提示: 概率的配置信息必须换算成小数填写,每个奖品概率须介于0～1之间!
+				<div style="color: #428bca; margin-top: 1em; padding-left: 1.5em; width: 50%;">
+					提示: 概率的配置信息目前只给出一 二 三等奖的概率配置, 概率以百分比计算,所填概率之和必须小于100, 一百减去一二三等奖概率之和剩余概率由其他项平均分配!
+					<br /><b style=" color: rgb(240,173,78)">注:所填写的概率必须为整数</b>
 				</div>
 
 				<!-- 概率配置模块 -->

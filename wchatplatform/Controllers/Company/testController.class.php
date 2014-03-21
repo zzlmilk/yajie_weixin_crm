@@ -228,7 +228,7 @@ class TestController extends BaseController {
 
         $userName = $_POST['userName'];
         if (!empty($userName)) {
-                    if(preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/",$mobilephone)){   
+                    if(preg_match("/^13[0-9]{1}[0-9]{8}$|15[01289]{1}[0-9]{8}$|189[0-9]{8}$/",$mobilephone)){   
                 $data = array();
                 //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
                 $data['open_id'] = $_POST['open_id'];
@@ -270,6 +270,10 @@ class TestController extends BaseController {
 
     }
 
+    /**
+    *大转盘 页面方法
+    */
+
     public function bigWheelPage() {
 
 
@@ -282,17 +286,19 @@ class TestController extends BaseController {
     }
 
     /**
-     * 
+     * 大转盘 ajax 方法
      */
     public function getBigWheel() {
-
 
         $token = $_REQUEST['token'];
         $ac = $_REQUEST['ac'];
         $tid = $_REQUEST['tid'];
         $t = $_REQUEST['t'];
 
-        echo "123";
+        $resultPro = transferData(APIURL.'/gift/get_probability_wheel/?source=1234','get');
+        // $res = json_decode($resultPro,true);
+        print_r($resultPro);
+        // echo "123";
     }
 
     /**
@@ -303,6 +309,7 @@ class TestController extends BaseController {
 
         $this->display();
     }
+
 
     /**
      * 问卷 页面显示

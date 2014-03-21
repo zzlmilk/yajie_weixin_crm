@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 10:01:28
+         compiled from "/Users/Lev/Sites/yajie_weixin_crm/wchatplatform/templates/Test/ativating.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2049764671532abc78698263-15156339%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '3741fe7af6be1837ee1b7958185218f13f8789bf' => 
+    array (
+      0 => '/Users/Lev/Sites/yajie_weixin_crm/wchatplatform/templates/Test/ativating.tpl',
+      1 => 1395309685,
+    ),
+  ),
+  'nocache_hash' => '2049764671532abc78698263-15156339',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 
 <!DOCTYPE html>
 <html> 

@@ -64,11 +64,11 @@
 					<div class="Detail">
 						<p>一等奖：网时奖励200小时 。奖品数量：3</p>
 						<p>二等奖：网时奖励100小时 。奖品数量：5</p>
-						<p>三等奖：广播台免费点首歌 。奖品数量：10</p>
+						<!-- <p>三等奖：广播台免费点首歌 。奖品数量：10</p> -->
 					</div>
 				</div>
 			</div>
-			<div class="boxcontent boxyellow">
+<!-- 			<div class="boxcontent boxyellow">
 				<div class="box">
 					<div class="title-green">活动说明：</div>
 					<div class="Detail">
@@ -76,14 +76,14 @@
 						<p>我们的中奖率高达33.3%！！</p>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 	</div>
 <script src="{$WebSiteUrlPublic}/company/bigWheelFiles/jquery.js" type="text/javascript"></script> 
 <script type="text/javascript">
 
-
+var gift_id;
 var webUrl = '{$websiteUrl}';
 $(function() {
 	window.requestAnimFrame = (function() {
@@ -100,15 +100,17 @@ $(function() {
 	// var randNum = parseInt(Math.random() * max + min ) ;
 	// // alert(randNum);
 	// if (randNum < 3) {
-
-		var lostDeg = [126,246];
 		
-	// }else{
+		
+
+	// }else{    (n-1)*30+6
 
 	// 	var lostDeg = [36, 66, 96, 156, 186, 216, 276, 306, 336];
 	// }
 	
 	var prizeDeg = [6, 126, 246];
+
+	var lostDeg = [];
 
 	var prize, sncode;
 	var count = 0;
@@ -157,7 +159,7 @@ $(function() {
 		deg = deg || lostDeg[parseInt(lostDeg.length * Math.random())];
 		running = true;
 		clearInterval(timer);
-		totalDeg = 360 * 5 + deg;
+		totalDeg = 360 * 3 + deg;
 		steps = [];
 		now = 0;
 		countSteps();
@@ -171,10 +173,6 @@ $(function() {
 		if (running) return;
 		if (count >= 3) {
 			alert("您已经抽了 3 次奖。");
-			return
-		}
-		if (prize != null) {
-			alert("亲，你不能再参加本次活动了喔！下次再来吧~");
 			return
 		}
 
@@ -197,31 +195,38 @@ $(function() {
 			},
 			success: function(data) {
 				 // alert(data.gift_id);
-				if (data.error == "invalid") {
-					alert("您已经抽了 3 次奖。");
-					count = 3;
-					clearInterval(timer);
-					return
-				}
-				if (data.error == "getsn") {
-					alert('本次活动你已经中过奖，本次只显示你上次抽奖结果!兑奖SN码为:' + data.sn);
-					count = 3;
-					clearInterval(timer);
-					prize = data.prizetype;
-					sncode = data.sn;
-					start(prizeDeg[data.prizetype - 1]);
-					return
-				}
-				if (data.success) {
-					prize = data.prizetype;
-					sncode = data.sn;
-					start(prizeDeg[data.prizetype - 1])
-				} else {
-					prize = null;
-					start()
-				}
+				 gift_id = data.gift_id;
 
+				 var temp = (parseInt(gift_id) - 1) *30 +6;
+				 
+				 lostDeg.push(temp);
+				
 
+				// if (data.error == "invalid") {
+				// 	alert("您已经抽了 3 次奖。");
+				// 	count = 3;
+				// 	clearInterval(timer);
+				// 	return
+				
+				// if (data.error == "getsn") {
+				// 	alert('本次活动你已经中过奖，本次只显示你上次抽奖结果!兑奖SN码为:' + data.sn);
+				// 	count = 3;
+				// 	clearInterval(timer);
+				// 	prize = data.prizetype;
+				// 	sncode = data.sn;
+				// 	start(prizeDeg[data.prizetype - 1]);
+				// 	return
+				// }
+				// if (data.success) {
+				// 	prize = data.prizetype;
+				// 	sncode = data.sn;
+				// 	start(prizeDeg[data.prizetype - 1])
+				// } else {
+				// 	prize = null;
+				// 	start()
+				// }
+
+				start()
 				running = false;
 				count++
 			},
@@ -235,6 +240,8 @@ $(function() {
 		})
 	})
 });
+
+
 $("#save-btn").bind("click", function() {
 	var btn = $(this);
 	var tel = $("#tel").val();
