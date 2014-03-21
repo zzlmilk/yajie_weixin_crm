@@ -11,10 +11,10 @@
     <script src="{$WebSiteUrlPublic}/company/dist/ratchet.js"></script>
   </head>
   <body>
-    <header class="bar bar-nav">
-      <!-- <a class="icon icon-refresh pull-right" style='color: white;'></a> -->
-      <h1 class="title" style=''>会员中心</h1>
-    </header>
+ <!--    <header class="bar bar-nav">
+      <a class="icon icon-refresh pull-right" style='color: white;'></a>
+      <h1 class="title">会员中心</h1>
+    </header> -->
     
    <!--  <div class="bar bar-footer">
       <a class="icon icon-compose pull-right" href="#composeModal"></a>
@@ -22,7 +22,7 @@
     </div> -->
 
 
-    <div class="content">
+    <div class="content"  style='background-color: rgb(243,237,227);'>
      
       <ul class="table-view">
         <li class="table-view-cell media">
@@ -37,7 +37,7 @@
           <a class="push-right" href="inbox.html" data-transition="slide-in">
           <!--   <span class="media-object icon icon-star-filled pull-left"></span> -->
             <div class="media-body">
-                 兑换信息
+                 优惠信息
             </div>
           </a>
         </li>
@@ -45,7 +45,7 @@
           <a class="push-right" href="inbox.html" data-transition="slide-in">
            <!--  <span class="media-object icon icon-trash pull-left"></span> -->
             <div class="media-body">
-              会员健康结果
+              积分和消费
             </div>
           </a>
         </li>
@@ -54,10 +54,41 @@
           <a class="push-right" href="inbox.html" data-transition="slide-in">
            <!--  <span class="media-object icon icon-trash pull-left"></span> -->
             <div class="media-body">
-              问卷结果
+              兑换信息
             </div>
           </a>
         </li>
+
+        <li class="table-view-cell media">
+          <a class="push-right" href="inbox.html" data-transition="slide-in">
+           <!--  <span class="media-object icon icon-trash pull-left"></span> -->
+            <div class="media-body">
+              订单信息
+            </div>
+          </a>
+        </li>
+
+        <li class="table-view-cell media">
+          <a class="push-right" href="inbox.html" data-transition="slide-in">
+           <!--  <span class="media-object icon icon-trash pull-left"></span> -->
+            <div class="media-body">
+              会员健康信息
+            </div>
+          </a>
+        </li>
+
+        <li class="table-view-cell media">
+          <a class="push-right" href="inbox.html" data-transition="slide-in">
+           <!--  <span class="media-object icon icon-trash pull-left"></span> -->
+            <div class="media-body">
+              我的任务
+            </div>
+          </a>
+        </li>
+
+
+
+
       </ul>
 
 
