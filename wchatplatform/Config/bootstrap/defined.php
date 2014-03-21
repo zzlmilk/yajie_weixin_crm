@@ -40,18 +40,17 @@ defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH','ORIG_PATH_INFO,RED
 
 //defined('APIURL')or define('APIURL','http://112.124.25.155/weixin_api');
 
-<<<<<<< HEAD
+
  defined('APIURL')or define('APIURL','http://localhost/yajie_weixin_crm/weixin_api');
-=======
-<<<<<<< HEAD
-defined('APIURL')or define('APIURL','http://localhost/yajie_weixin_crm/weixin_api');
-=======
- defined('APIURL')or define('APIURL','http://192.168.0.111/yajie_weixin_crm/weixin_api');
->>>>>>> 987782db522972fac87fe0b670574bb63d14b4f7
+
+ //defined('APIURL')or define('APIURL','http://localhost/yajie_weixin_crm/weixin_api');
+
+ //defined('APIURL')or define('APIURL','http://192.168.0.111/yajie_weixin_crm/weixin_api');
 
 
 
->>>>>>> 51f852ba72ff53276c2d78b1deef2f913ed6e1e8
+
+
 
 defined('VAR_MODULE') or define('VAR_MODULE','a');
 
