@@ -1,11 +1,13 @@
 <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+<link href="{$WebSiteUrl}/css/minimal/blue.css" rel="stylesheet">
+
 <style>
     body{
         overflow-x: hidden;
     }
     .userMangerTitle{
         color: rgb(91,91,91);
-        font-size: 25px;
+        font-size: 2.5em;
         margin-top: 15px;
         text-align: center;
     }
@@ -52,9 +54,9 @@
         </div>
     </div>
     <div style="height:15px;"></div>
-    <div class="sortBar"><label for="inputPassword3" class="control-label">排序：</label><input type="radio" name="sortType" id="point" value="point"><label for="point" class="control-label">积分</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sortType" id="money" value="money"><label for="money" class="control-label">余额</label></div>
-    {if $errorMessage neq ""}
-    <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label">{$errorMessage}</label></div>
+    <div class="sortBar"><label for="inputPassword3" class="control-label">排序：</label><input type="radio" name="sortType" id="point" value="point">&nbsp;<label for="point" class="control-label">积分</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sortType" id="money" value="money">&nbsp;<label for="money" class="control-label">余额</label></div>
+        {if $errorMessage neq ""}
+        <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label">{$errorMessage}</label></div>
     {/if}
     <div style="height: 30px;"></div>
 </form>
@@ -76,4 +78,20 @@
     </table>
 </div>
 <div style="text-align: center">{$pages}</div> 
+<script src="{$WebSiteUrl}/js/jquery-1.9.1.js"></script>
+<script src="{$WebSiteUrl}/js/rexexTest.js"></script>
+<script src="{$WebSiteUrl}/js/icheck.min.js"></script>
+<script>
+    $('input').iCheck({
+    checkboxClass: 'icheckbox_minimal-blue',
+    radioClass: 'iradio_minimal-blue',
+    increaseArea: '20%' // optional
+}); 
+$("#selectText").on("input",function(){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
 
+$("#selectText").val(cutString);
+}
+});
+</script>

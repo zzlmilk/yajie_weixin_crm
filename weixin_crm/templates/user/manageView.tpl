@@ -4,9 +4,23 @@
         width: 340px;
         height: 30px;
     }
+    .dataArea{
+        text-align: left;
+        width: 60%;
+        min-width: 500px;
+        margin: 0 auto;
+        height: 190px;
+    }
+    table tr>th{
+        text-align: center;
+    }
+    table tr>td{
+        text-align: center;
+        vertical-align:middle !important;
+    }
     .userMangerTitle{
         color: rgb(91,91,91);
-        font-size: 25px;
+        font-size: 2.5em;
         margin-top: 15px;
         text-align: center;
     }
@@ -42,7 +56,7 @@
         height: auto;
     }
 </style>
-<div class="userMangerTitle">客户信息管理</div>
+<div class="userMangerTitle">积分信息管理</div>
 
 <div style="text-align: center; padding-top: 100px;">
     <div class="input-group groupInput">
@@ -61,6 +75,30 @@
         </div>
     </div>
     <div id="errorPrint"></div>
+    <div style="height: 40px;"></div>
+    <div class="dataArea">
+        <table class="table table-striped" id="dataRecored">
+            <thead><tr><th>用户名</th><th>用户电话</th><th>数量</th><th>操作类型</th><th>来源</th><th>时间</th></tr></thead>
+            <tbody class="dataRecoredValue">
+                {foreach from=$pointRecordData item=RecordData key=key}
+                    <tr >
+                        <td>{$RecordData.user_name}</td>
+                        <td>{$RecordData.user_phone}</td>
+                        <td>{$RecordData.fraction}</td>
+                        <td>
+                            {if $RecordData.record_type eq 1}
+                                积分
+                            {else}
+                                余额
+                            {/if}
+                        </td>
+                        <td>{$RecordData.source}</td>
+                        <td>{$RecordData.create_time|date_format:"%Y-%m-%d %H:%M"}</td>
+                    </tr>
+                {/foreach}
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <div id="moneyConturl" style="display: none;border: #000 1px solid;position: fixed; left:50%;top: 25%; background-color: #eaeaea; width:300px;height: 200px;">
@@ -176,6 +214,28 @@ if(rData=="numberError"){
 alert("金额错误");
 return false;
 }
+
+var recoredLength=rData['recordList'].length;
+var recoredValue=rData['recordList'];
+$('.dataRecoredValue').html("");
+for(var i=0;i<recoredLength;i++){
+var addString="<tr>";
+addString+="<td>"+recoredValue[i]["user_name"]+"</td>";
+addString+="<td>"+recoredValue[i]["user_phone"]+"</td>";
+addString+="<td>"+recoredValue[i]["fraction"]+"</td>";
+if(recoredValue[i]["record_type"]=="1"){
+addString+="<td>积分</td>";
+}
+else{
+addString+="<td>余额</td>";
+}
+addString+="<td>"+recoredValue[i]["source"]+"</td>";
+var createTime=recoredValue[i]["create_time"]
+var formatTime=timeToString(createTime*1000,1);
+addString+="<td>"+formatTime+"</td>";
+addString+="</tr>";
+$('.dataRecoredValue').append(addString);
+}
 var nowPoints= ($("#points").html())*1;
 var nowMoney= ($("#money").html())*1;
 switch(rData['conturlType']){
@@ -203,6 +263,7 @@ break;
 }
 $("#closeDiv").trigger("click"); 
 $("#resourceNumber").val("");
+
 //        $("#phoneNum").html(rData["user_phone"]);
 //        $("#points").html(rData["user_integration"]);
 //        $("#money").html(rData["user_money"]);
@@ -211,4 +272,29 @@ $("#resourceNumber").val("");
 });
 }
 })
+$("#userPhone").on("input",function(){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+
+$("#userPhone").val(cutString);
+}
+});
+
+function timeToString(timeVal,typeNumber){
+timeVal=parseInt(timeVal);
+var dateTimeVal=new Date(timeVal)
+var timeYear=dateTimeVal.getFullYear();
+var timeMonth=dateTimeVal.getMonth();
+var timeDay=dateTimeVal.getDate();
+var timeHour=dateTimeVal.getHours();
+var timeMin=dateTimeVal.getMinutes();
+var returnTimeString='';
+switch(typeNumber){
+case "1":
+case 1:
+returnTimeString=timeYear+"-"+timeMonth+"-"+timeDay+" "+timeHour+":"+timeMin;
+break;
+}
+return returnTimeString;
+}
 </script>

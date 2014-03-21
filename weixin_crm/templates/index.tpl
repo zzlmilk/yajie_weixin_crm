@@ -8,8 +8,8 @@
     <frameset rows="30,*" cols="*" frameborder="no" border="0" framespacing="0">
         <frame src="{$WebSiteUrl}/files/top.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
         <frameset cols="200,*" frameborder="no" border="0" framespacing="0">
-            <frame src="{$WebSiteUrl}/pageredirst.php?action=left&functionname=left" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
-            <frame src="{$WebSiteUrl}/files/mainfra.html" scrolling="No" name="mainFrame" id="mainFrame" title="mainFrame" />
+            <frame src="{$WebSiteUrl}/pageredirst.php?action=left&functionname=left" name="leftFrame"  noresize="noresize" id="leftFrame" title="leftFrame" />
+            <frame src="{$WebSiteUrl}/files/mainfra.html"  name="mainFrame" id="mainFrame" title="mainFrame" />
         </frameset>
     </frameset>
     <noframes>

@@ -72,12 +72,13 @@
                 </div>
             </div>
 
-            <p style="text-align: center;"><button id="addButton" class="btn btn-info">确认添加</button></p>
+            <p style="text-align: center;"><button id="addButton" class="btn btn-info">确认修改</button></p>
         </form>
     </div>
 </div>
 <script src="{$WebSiteUrl}/js/jquery-1.9.1.js"></script>
 <script src="{$WebSiteUrl}/js/rexexTest.js"></script>
+<script src="{$WebSiteUrl}/js/buttonDisable.js"></script>
 <script>
     $("#addButton").click(function(){
     $("#errorMessage").hide();
@@ -102,5 +103,6 @@ $("#errorMessage").html(errorMessage);
 return false;
 }
 })
+buttonDisable($("#addButton"));
      
 </script>

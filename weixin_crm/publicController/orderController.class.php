@@ -81,10 +81,12 @@ class orderController {
             if (!empty($_POST['selectText'])) {
                 $orderCode = $_POST['selectText'];
                 $orderModel = new orderModel();
-                $orderModel->initialize("order_code = '" . $orderCode . "'");
-                if ($orderModel->vars_number == 1) {
-                    $reVal = $orderModel->vars;
-                    $_GET['orderCode'] = $reVal["order_code"];
+                $joinString = ' LEFT JOIN merchandise ON merchandise.merchandise_id = order.merchandise_id ';
+                $orderModel->addJoin($joinString);
+                $orderModel->initialize("order_state<=0 and (order_code = '" . $orderCode . "' or user_phone = '" . $orderCode . "')");
+                if ($orderModel->vars_number>0) {
+                    $reVal = $orderModel->vars_all;
+
                     $errorFlag = false;
                 } else {
                     $this->errorMessage = "未找到对应的订单号码请确认后重新输入";
@@ -96,7 +98,9 @@ class orderController {
         if ($errorFlag) {
             $this->getOrderlist();
         } else {
-            $this->orderEdit();
+            $_ENV['smarty']->setDirTemplates('order');
+            $_ENV['smarty']->assign('orderList', $reVal);
+            $_ENV['smarty']->display('orderList');
         }
     }
 
