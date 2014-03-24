@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 17:30:20
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-24 11:46:16
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:324348900532ab52c5c1596-07748866%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:704333517532faa884b1455-33910268%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd1e649af577e59cd29ff10cadc43d8d707466adc' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1395307817,
+      1 => 1395631225,
     ),
   ),
-  'nocache_hash' => '324348900532ab52c5c1596-07748866',
+  'nocache_hash' => '704333517532faa884b1455-33910268',
   'function' => 
   array (
   ),
@@ -82,9 +82,6 @@ $_smarty_tpl->decodeProperties(array (
                 var objectobj=document.all(name1);
                 var imgobj=document.all(name2);
                 var tableObj = 'table' + idstr;
-
-
-               
 
                 if(objectobj.style.display=="none"){
                     for(i=1;i<100;i++){

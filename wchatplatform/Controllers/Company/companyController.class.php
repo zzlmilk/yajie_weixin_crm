@@ -10,10 +10,9 @@ class CompanyController extends BaseController {
         'page'=>array('name'=>'1234','type'=>'text','text'=>'<a href="http://112.124.25.155/wchatplatform/?g=company&a=test&v=index&open_id={$open_id}">请点击这里</a>'),
         'test'=>array('name'=>'test','type'=>'php','text'=>'<a href="">请点击这里</a>>'),
 
-        '1'=>array('type'=>'image','text'=>'[{"Title":"\u6211\u7684\u8d26\u6237","Description":"","Url":"","PicUrl":"http:\/\/112.124.25.155\/wchatplatform\/public\/company\/image\/2011071223051083.jpg"}]'),
+       
 
     );
-
 
     private $companyInfo = array('companyInfo'=>array('token'=>'company',''),'subscribe'=>array('type'=>'news','text'=>'[{"Title":"\u6c5f\u897f\u519c\u4fe1\u793e\u5ba2\u6237\u7ba1\u7406","Description":"","Url":"","PicUrl":"http:\/\/112.124.25.155\/wchatplatform\/public\/company\/image\/2011071223051083.jpg"}]'));
 
@@ -22,28 +21,8 @@ class CompanyController extends BaseController {
         header("Content-type:text/html;charset=utf-8");
     }
 
-    public function aaaa(){
-
-
-        $array['Title'] = '江西农信社客户管理';
-
-        $array['Description'] = '';
-
-        $array['Url'] = '';
-
-        $array['PicUrl'] = 'http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg';
-
-
-        echo json_encode($array);
-
-    }
 
     public function index() {
-
-
-       
-        // $result = transferData(APIURL.'/user/add','post',$data);
-
 
         $weChat = new Wechat();
 
@@ -57,91 +36,70 @@ class CompanyController extends BaseController {
         $arr = array( 
             'button' =>array(
                 array(
-                    'name'=>urlencode("我"),
+                    'name'=>urlencode("会员尊享"),
                     'sub_button'=>array(
                         array(
-                            'name'=>urlencode("登录"),
+                            'name'=>urlencode("成为会员"),
                             'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=login'
+                            'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dcompany%26a%3Duser%26v%3Dindex%26action%3Dregister&response_type=code&scope=snsapi_base&state=123#wechat_redirect'
                         ),
                         array(
-                            'name'=>urlencode("注销"),
-                            'type'=>'click',
-                            'key'=>'user_logout'
+                            'name'=>urlencode("我要预约"),
+                            'type'=>'view',
+                            'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dcompany%26a%3Duser%26v%3Dindex%26action%3Dorder&response_type=code&scope=snsapi_base&state=123#wechat_redirect'
                         ),
                         array(
-                            'name'=>urlencode("二维码名片"),
+                            'name'=>urlencode("我要兑换"),
                             'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=codeCard'
+                            'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dcompany%26a%3Duser%26v%3Dindex%26action%3DgetExchangeList&response_type=code&scope=snsapi_base&state=123#wechat_redirect'
                         ),
                         array(
-                            'name'=>urlencode("我要申请"),
+                            'name'=>urlencode("我要签到"),
                             'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=apply'
+                            'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dcompany%26a%3Duser%26v%3Dindex%26action%3Duserlogin&response_type=code&scope=snsapi_base&state=123#wechat_redirect'
+                        ),
+                        array(
+                            'name'=>urlencode("我的中心"),
+                            'type'=>'view',
+                            'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dcompany%26a%3Duser%26v%3Dindex%26action%3DuserCenter&response_type=code&scope=snsapi_base&state=123#wechat_redirect'
                         )
                     )
                 ),
                 array(
-                    'name'=>urlencode("服务维护"),
+                    'name'=>urlencode("精彩活动"),
                     'sub_button'=>array(
                        
                          array(
-                            'name'=>urlencode("我有提醒"),
+                            'name'=>urlencode("近期活动"),
                             'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=tixing'
+                            'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dcompany%26a%3Dgame%26v%3Dactivity&response_type=code&scope=snsapi_base&state=123#wechat_redirect'
                         ),
 
                         array(
-                            'name'=>urlencode("客户关系"),
+                            'name'=>urlencode("大转盘"),
                             'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=kehu'
+                            'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dcompany%26a%3Dgame%26v%3DbigWheelPage&response_type=code&scope=snsapi_base&state=123#wechat_redirect'
                         ),
                         array(
-                            'name'=>urlencode("客户评价"),
+                            'name'=>urlencode("刮刮卡"),
                             'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=kehupingjia'
-                        ),
-                      
-                        array(
-                            'name'=>urlencode("客户产品策略"),
-                            'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=chanpingcelue'
+                            'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dcompany%26a%3Dcompany%26v%3Dguaguaka&response_type=code&scope=snsapi_base&state=123#wechat_redirect'
                         ),
                       
                         array(
-                            'name'=>urlencode("客户服务策略"),
+                            'name'=>urlencode("问卷"),
                             'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=fuwucelue'
+                            'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dcompany%26a%3Dcompany%26v%3DQuestionnaire&response_type=code&scope=snsapi_base&state=123#wechat_redirect'
                         )
                     )
                 ),
                 array(
-                    'name'=>urlencode("雅捷精彩"),
+                    'name'=>urlencode("服务中心"),
                     'sub_button'=>array(
                         array(
-                            'name'=>urlencode("重要通知"),
+                            'name'=>urlencode("商户联系方式"),
                             'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=importantNotice'
-                        ),
-                        array(
-                            'name'=>urlencode("地图导航"),
-                            'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=mapNavigation'
-                        ),
-                        array(
-                            'name'=>urlencode("经理签到"),
-                            'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=managerRegistration'
-                        ),
-                        array(
-                            'name'=>urlencode("营销工具"),
-                            'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=marketingTools'
-                        ),
-                        array(
-                            'name'=>urlencode("关于"),
-                            'type'=>'view',
-                            'url'=>'http://112.124.25.155/wchatplatform?a=company&v=about'
+                            'url'=>'http://112.124.25.155/wchatplatform?g=company&a=company&v='
                         )
                     )
                 )
