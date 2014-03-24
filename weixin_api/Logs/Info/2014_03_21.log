@@ -1,0 +1,120 @@
+Mar 21 12:10:38 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:10:38 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:10:38 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+{"res":"0","error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 21 12:10:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:10:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:10:50 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+{"res":"0","error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 21 12:11:39 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:11:39 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:11:39 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+{"res":"0","error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 21 12:11:58 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:11:58 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:11:58 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+{"res":"0","error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 21 12:12:00 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:12:00 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:12:00 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+{"res":"0","error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 21 12:12:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:12:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:12:05 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+insert into weixin_company.user_registration (user_id,day,today_able,registration_time) values('1','0','1','1395331200')
+Mar 21 12:12:05 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+{"res":"0"}
+Mar 21 12:12:18 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:12:18 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:12:18 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:12:18 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:12:18 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+{"error":{"error_status":50001,"status_info":"\u4eca\u5929\u5df2\u7ecf\u7b7e\u5230\u8fc7\u4e86\uff5e\uff5e\uff5e"}}
+Mar 21 12:12:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:12:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:12:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:12:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:12:45 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+{"error":{"error_status":50001,"status_info":"\u4eca\u5929\u5df2\u7ecf\u7b7e\u5230\u8fc7\u4e86\uff5e\uff5e\uff5e"}}
+Mar 21 12:12:58 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:12:58 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:12:58 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:12:58 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:12:58 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+{"error":{"error_status":50001,"status_info":"\u4eca\u5929\u5df2\u7ecf\u7b7e\u5230\u8fc7\u4e86\uff5e\uff5e\uff5e"}}
+Mar 21 12:14:17 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:14:17 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:14:17 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:14:17 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1 and registration_time = 1395331200     
+Mar 21 12:14:17 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+{"error":{"error_status":50001,"status_info":"\u4eca\u5929\u5df2\u7ecf\u7b7e\u5230\u8fc7\u4e86\uff5e\uff5e\uff5e"}}
+Mar 21 12:14:32 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:14:32 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:14:32 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:14:32 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1 and registration_time = 1395417600     
+Mar 21 12:14:32 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:14:32 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+UPDATE weixin_company.user_registration SET day='1', today_able='1', registration_time='1395331200' WHERE 1  AND user_id = 1
+Mar 21 12:17:34 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:17:34 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:17:34 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:17:34 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1 and registration_time = 1395417600     
+Mar 21 12:17:34 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:17:34 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+UPDATE weixin_company.user_registration SET day='2', today_able='1', registration_time='1395331200' WHERE 1  AND user_id = 1
+Mar 21 12:17:34 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.registration_day  WHERE 1  AND day = 2     
+Mar 21 12:17:34 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:17:34 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+UPDATE weixin_company.user SET user_integration='333' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Mar 21 12:17:34 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','20','gift','','1395375454')
+Mar 21 12:17:34 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+{"user":{"user_integration":333},"record":{"user_id":"1","record_type":1,"fraction":"20","source":"gift","exchange_id":"","create_time":1395375454},"res":"0"}
+Mar 21 12:18:09 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 21 12:18:09 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+Mar 21 12:18:09 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+insert into weixin_company.user_registration (user_id,day,today_able,registration_time) values('1','0','1','1395331200')
+Mar 21 12:18:09 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/user_registeration/?open_id=ocpOot-COx7UruiqEfag_Lny7dlc&source=124
+{"res":"0"}

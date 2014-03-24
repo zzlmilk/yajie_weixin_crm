@@ -18,8 +18,7 @@ class BaseController {
             // 载入  smarty 文件
             require_once ROOT_DIR . 'Config/bootstrap/smarty.php';
 
-            $this->smarty = $smarty;
-
+            $this->smarty = $smarty;    
 
             $this->display_page = ACTION_NAME;
 

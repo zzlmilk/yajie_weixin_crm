@@ -12,6 +12,20 @@ class RegistrationDayModel  extends Basic {
 
     }
 
+    public function getAward($day){
+
+    	$awardDay = new RegistrationDayModel();
+
+    	$awardDay->initialize('day = '.$day);
+
+    	if($awardDay->vars_number > 0){
+
+    		return $awardDay->vars;
+
+    	} 
+
+    }
+
 }
 
 

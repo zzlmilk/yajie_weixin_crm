@@ -18,7 +18,7 @@ class RegistrationController  implements registration{
 
 				$user_registeration = new UserRegistrationModel();
 
-				$user_registeration->getUserRegisteration($userInfo['user_id']);
+				$user_registeration->getUserRegisteration($userInfo);
 			}
 
 		} else{

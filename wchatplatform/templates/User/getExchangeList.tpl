@@ -43,12 +43,12 @@
 
 
                         <td style="">
-                            <div > <a href="{$WebSiteUrl}?g=company&a=test&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}"><img width="80" height="80" src="{$WebSiteUrlPublic}/company/exchangeImage/174Small.jpg"></a></div>
+                            <div > <a href="{$WebSiteUrl}?g=company&a=user&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}"><img width="80" height="80" src="{$WebSiteUrlPublic}/company/exchangeImage/174Small.jpg"></a></div>
                             <div style="width: 100px;word-wrap: break-word; word-break: normal; margin: 0 auto;">
                                 <p class="summary"> {$exchangeItem.exchange_summary}</p>
                                 <p>{$exchangeItem.exchange_name} {$exchangeItem.exchange_integration}p</p>
                             </div>
-                            <a  href="{$WebSiteUrl}?g=company&a=test&v=changeGoods&goodsId={$exchangeItem.exchange_id}"><button type="submit" class="btn btn-primary btn-xs">兑换</button></a>
+                            <a  href="{$WebSiteUrl}?g=company&a=user&v=changeGoods&goodsId={$exchangeItem.exchange_id}"><button type="submit" class="btn btn-primary btn-xs">兑换</button></a>
 
                         </td>
 

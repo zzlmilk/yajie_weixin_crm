@@ -17,12 +17,12 @@ class  UserController implements User {
 
 			} else{
 
-				echoErrorCode(20001);
+				echoErrorCode(105);
 			}
 
 		} else{
 
-			echoErrorCode(10001);
+			echoErrorCode(105);
 
 		}
 

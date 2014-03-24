@@ -80,7 +80,7 @@
     <boby>
 	        <div class="registerWarp">
 
-	        	<form class="form-horizontal"  method='post' role="form" action="{$WebSiteUrl}?g=company&a=test&v=submitRegister">
+	        	<form class="form-horizontal"  method='post' role="form" action="{$WebSiteUrl}?g=company&a=user&v=submitRegister">
 
 
 	        		<input type="hidden" name="open_id" value="{$open_id}" />

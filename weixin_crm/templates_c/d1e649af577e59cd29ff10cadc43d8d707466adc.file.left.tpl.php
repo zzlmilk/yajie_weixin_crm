@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 17:30:20
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-24 11:46:16
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:324348900532ab52c5c1596-07748866%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:704333517532faa884b1455-33910268%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd1e649af577e59cd29ff10cadc43d8d707466adc' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1395307817,
+      1 => 1395631225,
     ),
   ),
-  'nocache_hash' => '324348900532ab52c5c1596-07748866',
+  'nocache_hash' => '704333517532faa884b1455-33910268',
   'function' => 
   array (
   ),
@@ -40,6 +40,88 @@ $_smarty_tpl->decodeProperties(array (
         <script>
 
             var root = '<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+<<<<<<< HEAD
+';           
+        </script>
+         
+
+
+            <script language='JavaScript' type="text/javascript">
+
+
+            
+
+
+            function isIE(){
+                if (window.navigator.userAgent.toLowerCase().indexOf("msie")>=1)
+                    return true;
+                else
+                    return false;
+            }
+
+            function tupian(idt){
+                var nametu="xiaotu"+idt;
+                var tp = document.getElementById(nametu);
+                tp.src=root+"/images/ico05.gif";
+
+                for(var i=0;i<200;i++)
+                {
+
+                    var nametu2="xiaotu"+i;
+                    if(i!=idt*1)
+                    {
+                        var tp2=document.getElementById('xiaotu'+i);
+                        if(tp2!=undefined)
+                        {tp2.src=root+"/images/ico06.gif";}
+                    }
+                }
+            }
+
+            function list(idstr){
+                var name1="subtree"+idstr;
+                var name2="img"+idstr;
+                var objectobj=document.all(name1);
+                var imgobj=document.all(name2);
+                var tableObj = 'table' + idstr;
+
+                if(objectobj.style.display=="none"){
+                    for(i=1;i<100;i++){
+                        var name3="img"+i;
+                        var name="subtree"+i;
+                        var o=document.all(name);
+                        if(o!=undefined){
+                            o.style.display="none";
+                            var image=document.all(name3);
+                            //alert(image);
+                            image.src=root+"/images/ico04.gif";
+                        }
+                    }
+                    objectobj.style.display="block";
+                    imgobj.src=root+"/images/ico03.gif";
+                }
+                else{
+                    objectobj.style.display="none";
+                    imgobj.src=root+"/images/ico04.gif";
+                }
+
+
+                $('.tableDefault').css('display','none');
+                $('#' + name1).css('display','block');
+            }
+            </script>
+            <div class="left_background">
+                <div class="left_act_bg"></div>
+                <table width="150" border="0" cellpadding="0" cellspacing="0" class="left-table01">
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin:0 0 5px 0;">
+                                <tr>
+                                    <td width="207" height="55" style="background:#ECECEC;border-bottom:1px solid #DDDDDD;">
+                                        <div>
+                                            <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td width="25%" rowspan="2">
+=======
 ';           
         </script>
          
@@ -123,6 +205,7 @@ $_smarty_tpl->decodeProperties(array (
                                             <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td width="25%" rowspan="2">
+>>>>>>> 85fae111a4fdd11ef49c2f94124945649fd32b6a
                                                         <img src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/ico02.gif" width="50" height="50">
                                                     </td>

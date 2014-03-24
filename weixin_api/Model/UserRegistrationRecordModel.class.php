@@ -1,7 +1,5 @@
 <?php
 
-
-
 class UserRegistrationRecordModel  extends Basic {
 
 
@@ -13,28 +11,21 @@ class UserRegistrationRecordModel  extends Basic {
 
     }
 
+    public function addRecord($user_id){
 
-    public function getUserContinuousRegistration($user_id){
+    	if(!empty($user_id) && $user_id > 0){
 
-    	$pre_time =  mktime(0,0,0) - 86400;
+    		$data['user_id'] = $user_id;
 
-    	$record = new UserRegistrationRecordModel();
+    		$data['record_time'] = time();
 
-    	$record->initialize('user_id = '.$user_id.' and registration_time = '.$pre_time);
+            $this->insert($data);
 
-    	if($record->vars_number > 0){
-
-    		return 1;
-
-    	} else{
-
-    		return 0;
-
+            return $data;
     	}
 
     }
 
 }
-
 
 ?>

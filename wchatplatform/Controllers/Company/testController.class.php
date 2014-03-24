@@ -2,19 +2,9 @@
 
 class TestController extends BaseController {
 
-    public $userData;
-    public $userOpenId = "ocpOot-COx7UruiqEfag_Lny7dlc";
-    public $postData;
-    public $errorMessage = "";
-
     public function __construct() {
 
         header("Content-type:text/html;charset=utf-8");
-
-
-
-//   $this->assign('open_id', $_REQUEST['open_id']);
-//$this->userOpenId=$_REQUEST['open_id'];
     }
 
 //兑换列表
@@ -372,7 +362,7 @@ class TestController extends BaseController {
 
     public function updateUserLocation() {
         if (isset($_POST["gNumber"])) {
-            
+
             if (ctype_digit($_POST["gNumber"])) {
                 $postData['user_phone'] = $_POST["user_phone"];
                 $postData['province_id'] = $_POST["province_id"];
@@ -384,7 +374,7 @@ class TestController extends BaseController {
                 $postData['source'] = "company";
                 $updateUserLocation = transferData(APIURL . "/user/update_user_address", "post", $postData);
                 var_dump($updateUserLocation);
-                $_GET['goodsId']=$_POST["gNumber"];
+                $_GET['goodsId'] = $_POST["gNumber"];
                 $this->changeGoodsResult();
             } else {
                 echo"参数错误";
@@ -405,8 +395,17 @@ class TestController extends BaseController {
             echo '错误的进入方式';
         }
     }
-    public function changeScuessList(){
+
+    public function changeScuessList() {
         $this->display();
+    }
+
+    public function addIntegration() {
+        $postDate["source"] = "company";
+        $postDate['open_id'] ="ocpOot-COx7UruiqEfag_Lny7dlc";
+        $postDate['integration'] =500;
+        $exchangeList = transferData(APIURL . "/user/add_user_integration", "post", $postDate);
+        var_dump($exchangeList);
     }
 
 }
