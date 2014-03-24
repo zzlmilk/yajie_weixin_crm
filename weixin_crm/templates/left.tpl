@@ -62,9 +62,6 @@
                 var imgobj=document.all(name2);
                 var tableObj = 'table' + idstr;
 
-
-               
-
                 if(objectobj.style.display=="none"){
                     for(i=1;i<100;i++){
                         var name3="img"+i;
