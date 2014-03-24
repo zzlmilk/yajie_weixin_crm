@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 12:09:32
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-24 12:26:30
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/addUser.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1441890654532a69fcf40452-64942390%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1941898497532fb3f6d000e0-14381572%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c48c6ec5da0c8efc88e51a75905e3474ef4d151e' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/addUser.tpl',
-      1 => 1395286473,
+      1 => 1395634259,
     ),
   ),
-  'nocache_hash' => '1441890654532a69fcf40452-64942390',
+  'nocache_hash' => '1941898497532fb3f6d000e0-14381572',
   'function' => 
   array (
   ),
@@ -26,7 +26,7 @@ $_smarty_tpl->decodeProperties(array (
     }
     .userMangerTitle{
         color: rgb(91,91,91);
-        font-size: 25px;
+        font-size: 2.5em;
         margin-top: 15px;
         text-align: center;
     }
@@ -130,5 +130,11 @@ $("#errorMessage").html(errorMessage);
 return false;
 }
 })
-     
+$("#userPhone").on("input",function(){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+
+$("#userPhone").val(cutString);
+}
+}); 
 </script>

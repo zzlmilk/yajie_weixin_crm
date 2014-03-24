@@ -35,6 +35,9 @@ defined('FOOTINTERFACE') or define('FOOTINTERFACE',  ROOTPATH . 'Interface/');
 
 defined('FOOTFILES') or define('FOOTFILES',  ROOTPATH . '/files/');
 
+
+$_ENV['file_url'] = WebSiteUrl;
+
 if ($handle = opendir(FOOTBASIC)) {
     /* to include all files that in the class folder what a way to include classes!!! */
     while (false !== ($file = readdir($handle))) {
