@@ -8,7 +8,7 @@
             body {
                 margin: 0;background:url(images/menu-shadow.png) repeat-y right top #eeeeee;
             }
-            #xiaotu,#xiaotu1,#xiaotu2,#xiaotu3,#xiaotu4,#xiaotu5,#xiaotu6,#xiaotu7,#xiaotu8,#xiaotu9,#xiaotu10{
+            #xiaotu,#xiaotu1,#xiaotu2,#xiaotu3,#xiaotu4,#xiaotu5,#xiaotu6,#xiaotu7,#xiaotu8,#xiaotu9,#xiaotu10,#xiaotu11,#xiaotu12,#xiaotu13,#xiaotu14,#xiaotu15,#xiaotu16,#xiaotu17,#xiaotu18,#xiaotu19,#xiaotu20{
                 padding-left: 9px;
             }
 
@@ -84,7 +84,7 @@
 
 
                 $('.tableDefault').css('display','none');
-                $('#' + name1).css('display','block');
+                $('#' + name1).show();
             }
             </script>{/literal}
             <div class="left_background">
@@ -195,13 +195,12 @@
                                     </td>
                                     <td width="85%">
 
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
-                                       
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=orderAdd" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
+
                                     </td>
 
                                 </tr>
                             </table>
-
 
                             <!--                    微游戏开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table3">
@@ -295,13 +294,13 @@
                                         <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td width="15%">
-                                                    <img name="img5" id="img5" src="{$WebSiteUrl}/images/ico04.gif" width="8" height="11">
+                                                    <img name="img5" id="img5" src="{$WebSiteUrl}/images/ico04.gif" width="8" height="11"> 
                                                 </td>
                                                 <td width="85%">
                                                     <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >任务管理</a>
                                                 </td>
                                             </tr>
-                                        </table>
+                                        </table> 
                                     </td>
                                 </tr>
                             </table>
@@ -331,6 +330,7 @@
                                         <img id="xiaotu17" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
+                                        <a target="mainFrame" class="left-fontSmall" onclick="tupian('6')">问卷列表</a>
                                         <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('17')">问卷</a>
                                     </td>
 

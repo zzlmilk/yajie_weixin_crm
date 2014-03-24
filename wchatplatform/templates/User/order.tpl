@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta content="initial-scale=1.0; maximum-scale=4.0; user-scalable=no;" name="viewport">
         <meta name="viewport" content="width=device-width,user-scalable=yes" />
@@ -21,6 +20,7 @@
         <style>
             body{
                 Font-size=62.5%;
+                 background-color: rgb(243,237,227);
             }
             .registerWarp{
                 margin: 0 auto;
@@ -92,9 +92,9 @@
                 {else}
                     <form class=""  method='post' role="form" action="{$WebSiteUrl}?g=company&a=test&v=orderCheck&open_id={$open_id}"><!-- action=""-->
                     {/if}
-                    <div class="form-group" style=" margin-right: 3em;">
-                        <table class='table-bordered col-sm-10' style="margin-left:1em;width:100%;">
-                            <tr>
+                    <div class="form-group" style="width: 100%;">
+                        <table class='table-bordered col-sm-10' style="width:100%;">
+                            <tr style="background-color: #fff;height: 4em;">
                                 <td id="porpleNum" rowspan="2" style="text-align: center" width="30%">
                                     <label for="" class="">人数</label>
                                     {if $checkReturn eq 1}
@@ -107,13 +107,15 @@
                                         <span id="porpleCount">1</span>
                                         <input type=hidden value="1" id="porpleCountSubmit" name="porpleCountSubmit"/>
                                     {/if}
+                                    <div>
                                     <span class="glyphicon glyphicon-chevron-down floatIconTextDown"></span>
+                                    </div>
                                 </td>
                                 <td>              
                                     <div id="orderDate" class=" date form_datetime ">
-                                        <label for="inputPassword" class="col-sm-2 control-label">日期</label>
+                                        <label for="inputPassword" style=" height: 3em; line-height: 3em;"  class="col-sm-2 control-label">日期</label>
                                         {if $checkReturn eq 1}
-                                            <input id="orderDateInput" name="orderDateInput"  class="form-control lineDis"  type="text" value="{$returnVal.orderDateInput}" readonly>
+                                            <input id="orderDateInput" name="orderDateInput"  class="form-control lineDis"  style=" margin-top: -3.2em;" type="text" value="{$returnVal.orderDateInput}" readonly>
                                         {else}
                                             <input id="orderDateInput" name="orderDateInput"  class="form-control lineDis"  type="text" value="" readonly>
                                         {/if}
@@ -123,13 +125,13 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr id="timesAlert">
+                            <tr id="timesAlert" style=" background-color: #fff;height: 4em;">
 
                                 <td >                        
                                     <div id="orderTime" class="date form_datetime ">
-                                        <label for="orderTime" class="col-sm-2 control-label">时间</label>
+                                        <label for="orderTime" style=" height: 3em; line-height: 3em;" class="col-sm-2 control-label">时间</label>
                                         {if $checkReturn eq 1}
-                                            <input id="orderTimeInput" name="orderTimeInput"  class="form-control lineDis"  type="text" value="{$returnVal.orderTimeInput}" readonly>
+                                            <input id="orderTimeInput" name="orderTimeInput"  class="form-control lineDis" style=" margin-top: -3.2em;"  type="text" value="{$returnVal.orderTimeInput}" readonly>
                                         {else}
                                             <input id="orderTimeInput" name="orderTimeInput"  class="form-control lineDis"  type="text" value="" readonly>
                                         {/if}
@@ -142,8 +144,9 @@
                         </table>
                     </div>
 
-                    <div style="height: 100px;"></div>
-                    <div class="form-group" style=" margin-right: 3em;">
+                    <div style="height: 7em;"></div>
+            <div style=" width: 100%; background-color: #fff;height: 14em;">
+                    <div class="form-group" style=" margin-right: 3em; margin-top: 2em; background-color: #fff">
                         <label for="orderMerchandise" class="col-sm-3 control-label">项目</label>
                         <div class="col-sm-10">
                             <select  class="form-control" id="orderMerchandise" name="orderMerchandise" >
@@ -157,7 +160,7 @@
                         </div>
                         <input type="hidden" value="" name="orderMerchandiseHtml" id="orderMerchandiseHtml">
                     </div>
-                    <div class="form-group" style=" margin-right: 3em;">
+                    <div class="form-group" style=" margin-right: 3em;background-color: #fff">
                         <label for="orderObject" class="col-sm-2 control-label">指定</label>
                         <div class="col-sm-10">
                             {if $checkReturn eq 1}
@@ -167,11 +170,13 @@
                             {/if}
                         </div>
                     </div>
-                    <div class="form-group" style=" margin-right: 3em;">
-                        <div class="col-sm-offset-2 col-sm-10" style="margin-left: 4em;">
-                            <button id="submitOrder"  class="btn btn-primary">预&nbsp;&nbsp;&nbsp;约</button>
+                        <div class="form-group" style=" margin-right: 3em;">
+                            <div class="col-sm-offset-2 col-sm-10" style="margin-left: 4em;">
+                                <button id="submitOrder"  class="btn btn-primary">预&nbsp;&nbsp;&nbsp;约</button>
+                            </div>
                         </div>
-                    </div>
+
+            </div>
                 </form>
 
         </div>

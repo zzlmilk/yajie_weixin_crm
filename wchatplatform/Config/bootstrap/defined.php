@@ -40,9 +40,9 @@ defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH','ORIG_PATH_INFO,RED
 
 //defined('APIURL')or define('APIURL','http://112.124.25.155/weixin_api');
 
-defined('APIURL')or define('APIURL','http://'.$_SERVER['HTTP_HOST'].'/yajie_weixin_crm/weixin_api');
+//defined('APIURL')or define('APIURL','http://'.$_SERVER['HTTP_HOST'].'/yajie_weixin_crm/weixin_api');
 
-//defined('APIURL')or define('APIURL','http://192.168.0.111/yajie_weixin_crm/weixin_api');
+defined('APIURL')or define('APIURL','http://192.168.0.111/yajie_weixin_crm/weixin_api');
 
 defined('VAR_MODULE') or define('VAR_MODULE','a');
 

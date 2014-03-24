@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-19 13:36:20
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 17:47:01
          compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1031163075532121568dfd04-25004126%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1792316613532ab91589bab1-98111371%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6fa0d02d05ed00ff3bcbf8f7c03cae976c1c2bda' => 
     array (
       0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl',
-      1 => 1395193105,
+      1 => 1395281291,
     ),
   ),
-  'nocache_hash' => '1031163075532121568dfd04-25004126',
+  'nocache_hash' => '1792316613532ab91589bab1-98111371',
   'function' => 
   array (
   ),
@@ -18,6 +18,15 @@ $_smarty_tpl->decodeProperties(array (
 )); /*/%%SmartyHeaderCode%%*/?>
 <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
 <style>
+    body{
+        overflow-x: hidden;
+    }
+    .userMangerTitle{
+        color: rgb(91,91,91);
+        font-size: 25px;
+        margin-top: 15px;
+        text-align: center;
+    }
     .selectBar{
 
         text-align: center;  
@@ -28,27 +37,50 @@ $_smarty_tpl->decodeProperties(array (
         width: 60%;
         min-width: 500px;
         margin: 0 auto;
+        height: 190px;
     }
     .sortBar{
-        width:350px;
+        width: 30%;
         margin: 0 auto;
     }
     table tr>th{
         text-align: center;
     }
-       table tr>td{
+    table tr>td{
         text-align: center;
+        vertical-align:middle !important;
+    }
+    .groupInput{
+        width: 30%;
+        margin: 0 auto;
     }
 </style>
+<div class="userMangerTitle">客户信息管理</div>
+<div style="height: 50px;"></div>
 <form action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=user&functionname=seachUsers" method="post">
-    <div style="height: 50px;"></div>
-    <div class="selectBar"><input type="text" style="width:300px;" placeholder="请输入手机号查询" id="selectText" name="selectText"><button>查询</button></div>
-    <div class="sortBar">排序：<input type="radio" name="sortType" value="point">积分&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sortType" value="money">余额</div>
-    <div style="height: 100px;"></div>
+
+    <div style="">
+
+        <div class="input-group groupInput">
+            <input type="text" class="form-control" style="" placeholder="请输入手机号查询" id="selectText" name="selectText">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">查询</button>
+            </span>
+
+        </div>
+    </div>
+    <div style="height:15px;"></div>
+    <div class="sortBar"><label for="inputPassword3" class="control-label">排序：</label><input type="radio" name="sortType" id="point" value="point"><label for="point" class="control-label">积分</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sortType" id="money" value="money"><label for="money" class="control-label">余额</label></div>
+    <?php if ($_smarty_tpl->getVariable('errorMessage')->value!=''){?>
+    <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label"><?php echo $_smarty_tpl->getVariable('errorMessage')->value;?>
+</label></div>
+    <?php }?>
+    <div style="height: 30px;"></div>
 </form>
+
 <div class="dataArea">
-    <table class="table table-condensed">
+    <table class="table table-striped">
         <tr><th>姓名</th><th>电话</th><th>生日</th><th>余额</th><th>积分</th><th>编辑</th></tr>
         <?php  $_smarty_tpl->tpl_vars['userInfo1'] = new Smarty_Variable;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
@@ -70,12 +102,12 @@ if (count($_from) > 0){
 </td>
                 <td><a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=user&functionname=userEdit&userId=<?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_id'];?>
-"><button >编辑</button></a></td>
+"><button class="btn btn-warning">编辑</button></a></td>
 
             </tr>
         <?php }} ?>
     </table>
-        <div style="text-align: center"><?php echo $_smarty_tpl->getVariable('pages')->value;?>
-</div> 
 </div>
+<div style="text-align: center"><?php echo $_smarty_tpl->getVariable('pages')->value;?>
+</div> 
 

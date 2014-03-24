@@ -359,6 +359,41 @@ class UserController extends BaseController {
     }
 
 
+    //兑换物品
+    public function changeGoods() {
+
+        //$this->userOpenId = $_REQUEST['open_id'];
+        if (isset($_GET['goodsId'])) {
+            $postDate["source"] = "company";
+            $postDate['open_id'] = $this->userOpenId;
+            $goodsId = $_GET['goodsId'];
+            $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
+            $exchangeItem = json_decode($exchangeItem, true);
+            if ($exchangeItem['exchange_info']["exchange_type"] == "1") {
+                $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
+                $userInfo = json_decode($userInfo, TRUE);
+                if ($userInfo['user']['province_id'] == "0") {
+                    //填写信息
+                } else {
+                    //显示地址页面
+                }
+            } else {
+                $postDate["source"] = "company";
+                $postDate['open_id'] = $this->userOpenId;
+                $postDate['id'] = $goodsId;
+                $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
+                var_dump($exchangeList);
+            }
+            var_dump($exchangeItem);
+            die;
+        }
+    }
+    public function locationCheck() {
+        $getProvince = transferData(APIURL . "/area/get_area", "get");
+        $getProvince = json_decode($getProvince, true);
+        $this->assign("provinceValue", $getProvince);
+        $this->display();
+    }
 
 
 }

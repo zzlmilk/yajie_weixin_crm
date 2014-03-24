@@ -61,18 +61,20 @@ class gameController extends BaseController  {
         $this->display();
     }
 
-    /**
-     * 
+       /**
+     * 大转盘 ajax 方法
      */
     public function getBigWheel() {
-
 
         $token = $_REQUEST['token'];
         $ac = $_REQUEST['ac'];
         $tid = $_REQUEST['tid'];
         $t = $_REQUEST['t'];
 
-        echo "123";
+        $resultPro = transferData(APIURL . '/gift/get_probability_wheel/?source=1234', 'get');
+// $res = json_decode($resultPro,true);
+        print_r($resultPro);
+// echo "123";
     }
 
    
