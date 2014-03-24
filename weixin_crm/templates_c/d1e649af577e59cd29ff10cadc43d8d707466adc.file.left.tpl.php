@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-24 11:46:16
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-24 16:31:00
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:704333517532faa884b1455-33910268%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1987397613532fed44d33760-67432185%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd1e649af577e59cd29ff10cadc43d8d707466adc' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1395631225,
+      1 => 1395649583,
     ),
   ),
-  'nocache_hash' => '704333517532faa884b1455-33910268',
+  'nocache_hash' => '1987397613532fed44d33760-67432185',
   'function' => 
   array (
   ),
@@ -27,7 +27,7 @@ $_smarty_tpl->decodeProperties(array (
             body {
                 margin: 0;background:url(images/menu-shadow.png) repeat-y right top #eeeeee;
             }
-            #xiaotu,#xiaotu1,#xiaotu2,#xiaotu3,#xiaotu4,#xiaotu5,#xiaotu6,#xiaotu7,#xiaotu8,#xiaotu9,#xiaotu10{
+            #xiaotu,#xiaotu1,#xiaotu2,#xiaotu3,#xiaotu4,#xiaotu5,#xiaotu6,#xiaotu7,#xiaotu8,#xiaotu9,#xiaotu10,#xiaotu11,#xiaotu12,#xiaotu13,#xiaotu14,#xiaotu15,#xiaotu16,#xiaotu17,#xiaotu18,#xiaotu19,#xiaotu20{
                 padding-left: 9px;
             }
 
@@ -40,7 +40,6 @@ $_smarty_tpl->decodeProperties(array (
         <script>
 
             var root = '<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-<<<<<<< HEAD
 ';           
         </script>
          
@@ -106,7 +105,7 @@ $_smarty_tpl->decodeProperties(array (
 
 
                 $('.tableDefault').css('display','none');
-                $('#' + name1).css('display','block');
+                $('#' + name1).show();
             }
             </script>
             <div class="left_background">
@@ -121,91 +120,6 @@ $_smarty_tpl->decodeProperties(array (
                                             <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td width="25%" rowspan="2">
-=======
-';           
-        </script>
-         
-
-
-            <script language='JavaScript' type="text/javascript">
-
-
-            
-
-
-            function isIE(){
-                if (window.navigator.userAgent.toLowerCase().indexOf("msie")>=1)
-                    return true;
-                else
-                    return false;
-            }
-
-            function tupian(idt){
-                var nametu="xiaotu"+idt;
-                var tp = document.getElementById(nametu);
-                tp.src=root+"/images/ico05.gif";
-
-                for(var i=0;i<200;i++)
-                {
-
-                    var nametu2="xiaotu"+i;
-                    if(i!=idt*1)
-                    {
-                        var tp2=document.getElementById('xiaotu'+i);
-                        if(tp2!=undefined)
-                        {tp2.src=root+"/images/ico06.gif";}
-                    }
-                }
-            }
-
-            function list(idstr){
-                var name1="subtree"+idstr;
-                var name2="img"+idstr;
-                var objectobj=document.all(name1);
-                var imgobj=document.all(name2);
-                var tableObj = 'table' + idstr;
-
-
-               
-
-                if(objectobj.style.display=="none"){
-                    for(i=1;i<100;i++){
-                        var name3="img"+i;
-                        var name="subtree"+i;
-                        var o=document.all(name);
-                        if(o!=undefined){
-                            o.style.display="none";
-                            var image=document.all(name3);
-                            //alert(image);
-                            image.src=root+"/images/ico04.gif";
-                        }
-                    }
-                    objectobj.style.display="block";
-                    imgobj.src=root+"/images/ico03.gif";
-                }
-                else{
-                    objectobj.style.display="none";
-                    imgobj.src=root+"/images/ico04.gif";
-                }
-
-
-                $('.tableDefault').css('display','none');
-                $('#' + name1).css('display','block');
-            }
-            </script>
-            <div class="left_background">
-                <div class="left_act_bg"></div>
-                <table width="150" border="0" cellpadding="0" cellspacing="0" class="left-table01">
-                    <tr>
-                        <td>
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin:0 0 5px 0;">
-                                <tr>
-                                    <td width="207" height="55" style="background:#ECECEC;border-bottom:1px solid #DDDDDD;">
-                                        <div>
-                                            <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                                <tr>
-                                                    <td width="25%" rowspan="2">
->>>>>>> 85fae111a4fdd11ef49c2f94124945649fd32b6a
                                                         <img src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/ico02.gif" width="50" height="50">
                                                     </td>
@@ -317,13 +231,12 @@ $_smarty_tpl->decodeProperties(array (
                                     <td width="85%">
 
                                         <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
-                                       
+/pageredirst.php?action=order&functionname=orderAdd" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
+
                                     </td>
 
                                 </tr>
                             </table>
-
 
                             <!--                    微游戏开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table3">
@@ -428,13 +341,13 @@ $_smarty_tpl->decodeProperties(array (
                                             <tr>
                                                 <td width="15%">
                                                     <img name="img5" id="img5" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/images/ico04.gif" width="8" height="11">
+/images/ico04.gif" width="8" height="11"> 
                                                 </td>
                                                 <td width="85%">
                                                     <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >任务管理</a>
                                                 </td>
                                             </tr>
-                                        </table>
+                                        </table> 
                                     </td>
                                 </tr>
                             </table>
@@ -458,8 +371,24 @@ $_smarty_tpl->decodeProperties(array (
                                     </td>
                                     <td width="85%">
                                         <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('16')">活动</a>
+/pageredirst.php?action=activty&functionname=activty" target="mainFrame" class="left-fontSmall" onclick="tupian('16')">活动</a>
                                     </td>
+
+
+
+                                </tr>
+
+                                   <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu20" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=activty&functionname=addactivty" target="mainFrame" class="left-fontSmall" onclick="tupian('20')">添加活动</a>
+                                    </td>
+
+                                    
 
                                 </tr>
 
@@ -469,6 +398,7 @@ $_smarty_tpl->decodeProperties(array (
 /images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
+                                        <a target="mainFrame" class="left-fontSmall" onclick="tupian('6')">问卷列表</a>
                                         <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('17')">问卷</a>
                                     </td>

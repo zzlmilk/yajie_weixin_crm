@@ -1,30 +1,45 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 12:11:28
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-24 12:26:27
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/manageView.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1523624949532a6a70048483-04780193%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2032957147532fb3f3c0eab2-86509418%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0c10b76d6ea35b97d169e39191bd023b52995d3f' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/manageView.tpl',
-      1 => 1395286473,
+      1 => 1395634259,
     ),
   ),
-  'nocache_hash' => '1523624949532a6a70048483-04780193',
+  'nocache_hash' => '2032957147532fb3f3c0eab2-86509418',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+<?php if (!is_callable('smarty_modifier_date_format')) include '/web/www/yajie_weixin_crm/weixin_crm/Smarty/libs/plugins/modifier.date_format.php';
+?><link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
 <style>
     .seachInput{
         width: 340px;
         height: 30px;
     }
+    .dataArea{
+        text-align: left;
+        width: 60%;
+        min-width: 500px;
+        margin: 0 auto;
+        height: 190px;
+    }
+    table tr>th{
+        text-align: center;
+    }
+    table tr>td{
+        text-align: center;
+        vertical-align:middle !important;
+    }
     .userMangerTitle{
         color: rgb(91,91,91);
-        font-size: 25px;
+        font-size: 2.5em;
         margin-top: 15px;
         text-align: center;
     }
@@ -60,7 +75,7 @@ $_smarty_tpl->decodeProperties(array (
         height: auto;
     }
 </style>
-<div class="userMangerTitle">客户信息管理</div>
+<div class="userMangerTitle">积分信息管理</div>
 
 <div style="text-align: center; padding-top: 100px;">
     <div class="input-group groupInput">
@@ -79,6 +94,41 @@ $_smarty_tpl->decodeProperties(array (
         </div>
     </div>
     <div id="errorPrint"></div>
+    <div style="height: 40px;"></div>
+    <div class="dataArea">
+        <table class="table table-striped" id="dataRecored">
+            <thead><tr><th>用户名</th><th>用户电话</th><th>数量</th><th>操作类型</th><th>来源</th><th>时间</th></tr></thead>
+            <tbody class="dataRecoredValue">
+                <?php  $_smarty_tpl->tpl_vars['RecordData'] = new Smarty_Variable;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('pointRecordData')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if (count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['RecordData']->key => $_smarty_tpl->tpl_vars['RecordData']->value){
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['RecordData']->key;
+?>
+                    <tr >
+                        <td><?php echo $_smarty_tpl->tpl_vars['RecordData']->value['user_name'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['RecordData']->value['user_phone'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['RecordData']->value['fraction'];?>
+</td>
+                        <td>
+                            <?php if ($_smarty_tpl->tpl_vars['RecordData']->value['record_type']==1){?>
+                                积分
+                            <?php }else{ ?>
+                                余额
+                            <?php }?>
+                        </td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['RecordData']->value['source'];?>
+</td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['RecordData']->value['create_time'],"%Y-%m-%d %H:%M");?>
+</td>
+                    </tr>
+                <?php }} ?>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <div id="moneyConturl" style="display: none;border: #000 1px solid;position: fixed; left:50%;top: 25%; background-color: #eaeaea; width:300px;height: 200px;">
@@ -198,6 +248,28 @@ if(rData=="numberError"){
 alert("金额错误");
 return false;
 }
+
+var recoredLength=rData['recordList'].length;
+var recoredValue=rData['recordList'];
+$('.dataRecoredValue').html("");
+for(var i=0;i<recoredLength;i++){
+var addString="<tr>";
+addString+="<td>"+recoredValue[i]["user_name"]+"</td>";
+addString+="<td>"+recoredValue[i]["user_phone"]+"</td>";
+addString+="<td>"+recoredValue[i]["fraction"]+"</td>";
+if(recoredValue[i]["record_type"]=="1"){
+addString+="<td>积分</td>";
+}
+else{
+addString+="<td>余额</td>";
+}
+addString+="<td>"+recoredValue[i]["source"]+"</td>";
+var createTime=recoredValue[i]["create_time"]
+var formatTime=timeToString(createTime*1000,1);
+addString+="<td>"+formatTime+"</td>";
+addString+="</tr>";
+$('.dataRecoredValue').append(addString);
+}
 var nowPoints= ($("#points").html())*1;
 var nowMoney= ($("#money").html())*1;
 switch(rData['conturlType']){
@@ -225,6 +297,7 @@ break;
 }
 $("#closeDiv").trigger("click"); 
 $("#resourceNumber").val("");
+
 //        $("#phoneNum").html(rData["user_phone"]);
 //        $("#points").html(rData["user_integration"]);
 //        $("#money").html(rData["user_money"]);
@@ -233,4 +306,29 @@ $("#resourceNumber").val("");
 });
 }
 })
+$("#userPhone").on("input",function(){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+
+$("#userPhone").val(cutString);
+}
+});
+
+function timeToString(timeVal,typeNumber){
+timeVal=parseInt(timeVal);
+var dateTimeVal=new Date(timeVal)
+var timeYear=dateTimeVal.getFullYear();
+var timeMonth=dateTimeVal.getMonth();
+var timeDay=dateTimeVal.getDate();
+var timeHour=dateTimeVal.getHours();
+var timeMin=dateTimeVal.getMinutes();
+var returnTimeString='';
+switch(typeNumber){
+case "1":
+case 1:
+returnTimeString=timeYear+"-"+timeMonth+"-"+timeDay+" "+timeHour+":"+timeMin;
+break;
+}
+return returnTimeString;
+}
 </script>

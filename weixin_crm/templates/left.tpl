@@ -320,8 +320,22 @@
                                         <img id="xiaotu16" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('16')">活动</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=activty" target="mainFrame" class="left-fontSmall" onclick="tupian('16')">活动</a>
                                     </td>
+
+
+
+                                </tr>
+
+                                   <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu20" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=addactivty" target="mainFrame" class="left-fontSmall" onclick="tupian('20')">添加活动</a>
+                                    </td>
+
+                                    
 
                                 </tr>
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 12:09:31
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-24 12:26:30
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:744768707532a69fbb3d071-55080090%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     '120908fcda3ce0be13949e77fdd9eb22d2c1655f' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl',
-      1 => 1395281078,
+      1 => 1395634259,
     ),
   ),
   'nocache_hash' => '744768707532a69fbb3d071-55080090',
@@ -17,13 +17,16 @@ $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
 <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+<link href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/css/minimal/blue.css" rel="stylesheet">
+
 <style>
     body{
         overflow-x: hidden;
     }
     .userMangerTitle{
         color: rgb(91,91,91);
-        font-size: 25px;
+        font-size: 2.5em;
         margin-top: 15px;
         text-align: center;
     }
@@ -71,9 +74,9 @@ $_smarty_tpl->decodeProperties(array (
         </div>
     </div>
     <div style="height:15px;"></div>
-    <div class="sortBar"><label for="inputPassword3" class="control-label">排序：</label><input type="radio" name="sortType" id="point" value="point"><label for="point" class="control-label">积分</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sortType" id="money" value="money"><label for="money" class="control-label">余额</label></div>
-    <?php if ($_smarty_tpl->getVariable('errorMessage')->value!=''){?>
-    <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label"><?php echo $_smarty_tpl->getVariable('errorMessage')->value;?>
+    <div class="sortBar"><label for="inputPassword3" class="control-label">排序：</label><input type="radio" name="sortType" id="point" value="point">&nbsp;<label for="point" class="control-label">积分</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sortType" id="money" value="money">&nbsp;<label for="money" class="control-label">余额</label></div>
+        <?php if ($_smarty_tpl->getVariable('errorMessage')->value!=''){?>
+        <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label"><?php echo $_smarty_tpl->getVariable('errorMessage')->value;?>
 </label></div>
     <?php }?>
     <div style="height: 30px;"></div>
@@ -110,4 +113,23 @@ if (count($_from) > 0){
 </div>
 <div style="text-align: center"><?php echo $_smarty_tpl->getVariable('pages')->value;?>
 </div> 
+<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/js/jquery-1.9.1.js"></script>
+<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/js/rexexTest.js"></script>
+<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/js/icheck.min.js"></script>
+<script>
+    $('input').iCheck({
+    checkboxClass: 'icheckbox_minimal-blue',
+    radioClass: 'iradio_minimal-blue',
+    increaseArea: '20%' // optional
+}); 
+$("#selectText").on("input",function(){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
 
+$("#selectText").val(cutString);
+}
+});
+</script>
