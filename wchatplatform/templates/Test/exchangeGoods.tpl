@@ -32,7 +32,7 @@
                 <div style="text-align: left;">
                     
                 </div>
-                <p><a href="{$exchangeInfo.exchange_id}"><button type="button" class="btn btn-primary btn-xs">兑换</button></a></p>
+                <p><a href="{$WebSiteUrl}?g=company&a=test&v=changeGoods&goodsId={$exchangeInfo.exchange_id}"><button type="button" class="btn btn-primary btn-xs">兑换</button></a></p>
             </div>
         </div>
     </body>

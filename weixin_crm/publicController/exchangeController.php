@@ -35,7 +35,7 @@ class exchangeController implements exchange {
         } else {
             $_ENV['smarty']->setDirTemplates('exchange');
             $_ENV['smarty']->assign('errorMessage', $this->errorMessage);
-            // $_ENV['smarty']->assign('exchangeList', $exchangeList);
+// $_ENV['smarty']->assign('exchangeList', $exchangeList);
             $_ENV['smarty']->display('addExchangeItem');
         }
     }
@@ -114,7 +114,7 @@ class exchangeController implements exchange {
     }
 
     function addImage($fileRequestName) {
-        $extNameArray = array('jpg', 'png', 'bmp');
+        $extNameArray = array('jpg', 'png');
         $extFlag = false;
         $eventFlag = FALSE;
         if (isset($_FILES[$fileRequestName])) {
@@ -133,44 +133,72 @@ class exchangeController implements exchange {
 
             $fileTmp = $_FILES[$fileRequestName]['tmp_name'];
             $imageinfo = getimagesize($fileTmp);
-            if ($imageinfo[0] != 88 || $imageinfo[1] != 88) {
-                $requestMessage = '非法的图片大小';
+            if ($imageinfo[0] != $imageinfo[1]) {
+                $requestMessage = '请上传正方形图片';
                 $eventFlag = TRUE;
-            }
-
-
-            $expName = substr(strrchr($fileName, "."), 0);
-            $fileUpDateTime = date("ymdhis" . rand(0, 800));
-            $storeDir = GIFTIMAGEDIR;
-            $overWrite = 1;
-            $uploadsize = $_FILES[$fileRequestName]['size'];
-            $fileSizeMax = 1024 * 1024 * 9;
-
-
-            if ($uploadsize > $fileSizeMax) {
-                $requestMessage = '文件超出大小';
+            } else if ($imageinfo[0] < 88 || $imageinfo[1] < 88) {
+                $requestMessage = '请上传大于88*88且小于176*176的图片';
                 $eventFlag = TRUE;
-                //return false;
-            } else if (file_exists($storeDir . $fileName) && !$overWrite) {
-                $requestMessage = '文件重名';
+            } else if ($imageinfo[0] > 176 || $imageinfo[1] > 176) {
+                $requestMessage = '请上传大于88*88且小于176*176的图片';
                 $eventFlag = TRUE;
-                //return false;
-            } else if (!move_uploaded_file($fileTmp, $storeDir . $fileUpDateTime . $expName)) {
-                $requestMessage = '文件无法复制';
-                $eventFlag = TRUE;
-                //return false;
-            } else {
-                
             }
             if ($eventFlag) {
                 $runType["state"] = 1;
                 $runType["message"] = $requestMessage;
                 return $runType;
             } else {
-                $runType["state"] = 0;
-                $imgUrl = $fileUpDateTime . $expName;
-                $runType["message"] = $imgUrl;
-                return $runType;
+                $expName = substr(strrchr($fileName, "."), 0);
+                $fileUpDateTime = date("ymdhis" . rand(0, 800));
+                $storeDir = GIFTIMAGEDIR;
+                $overWrite = 1;
+                $uploadsize = $_FILES[$fileRequestName]['size'];
+                $fileSizeMax = 1024 * 1024 * 9;
+
+
+                if ($uploadsize > $fileSizeMax) {
+                    $requestMessage = '文件超出大小';
+                    $eventFlag = TRUE;
+//return false;
+                } else if (file_exists($storeDir . $fileName) && !$overWrite) {
+                    $requestMessage = '文件重名';
+                    $eventFlag = TRUE;
+//return false;
+                } else if (!move_uploaded_file($fileTmp, $storeDir . $fileUpDateTime . $expName)) {
+                    $requestMessage = '文件无法复制';
+                    $eventFlag = TRUE;
+//return false;
+                } else {
+                    if (strtolower($fileNameExtension) == "jpg") {
+                        $src = imagecreatefromjpeg($storeDir . $fileUpDateTime . $expName);
+                        $imgWidth = $imageinfo[0];
+                        $imgHeight = $imageinfo[1];
+                        $changeSize = 88;
+                        $image = imagecreatetruecolor($changeSize, $changeSize);
+                        imagecopyresampled($image, $src, 0, 0, 0, 0, $changeSize, $changeSize, $imgWidth, $imgHeight);
+                        imagejpeg($image, $storeDir."small/" . $fileUpDateTime . $expName);
+                        imagedestroy($image);
+                    } else if (strtolower($fileNameExtension) == "png") {
+                        $src = imagecreatefrompng($storeDir . $fileUpDateTime . $expName);
+                        $imgWidth = $imageinfo[0];
+                        $imgHeight = $imageinfo[1];
+                        $changeSize = 88;
+                        $image = imagecreatetruecolor($changeSize, $changeSize);
+                        imagecopyresampled($image, $src, 0, 0, 0, 0, $changeSize, $changeSize, $imgWidth, $imgHeight);
+                        imagepng($image,$storeDir."small/" . $fileUpDateTime . $expName);
+                        imagedestroy($image);
+                    }
+                }
+                if ($eventFlag) {
+                    $runType["state"] = 1;
+                    $runType["message"] = $requestMessage;
+                    return $runType;
+                } else {
+                    $runType["state"] = 0;
+                    $imgUrl = $fileUpDateTime. $expName;
+                    $runType["message"] = $imgUrl;
+                    return $runType;
+                }
             }
         } else {
             

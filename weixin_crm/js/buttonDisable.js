@@ -99,4 +99,13 @@ function buttonDisable(buttonObject){
             buttonObject.prop("disabled",true);
         }  
     });
+    $(":file").change(function(){
+        
+        if($(this).val()!=""){
+            buttonObject.prop("disabled",false);
+        }else{
+            buttonObject.prop("disabled",true);
+        }  
+    })
+    
 }

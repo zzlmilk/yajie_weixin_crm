@@ -22,11 +22,8 @@ class TestController extends BaseController {
 //$this->userOpenId = $_REQUEST['open_id'];
         $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=company&open_id=" . $this->userOpenId, "get");
         $exchangeList = json_decode($exchangeList, true);
-        var_dump($exchangeList);
         $this->assign("exchangeList", $exchangeList);
-
-
-        $this->display();
+        $this->display("getExchangeList");
     }
 
 //兑换物品详情
@@ -317,37 +314,98 @@ class TestController extends BaseController {
 //兑换物品
     public function changeGoods() {
 
-        //$this->userOpenId = $_REQUEST['open_id'];
+//$this->userOpenId = $_REQUEST['open_id'];
         if (isset($_GET['goodsId'])) {
             $postDate["source"] = "company";
             $postDate['open_id'] = $this->userOpenId;
             $goodsId = $_GET['goodsId'];
-            $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
+            $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $goodsId, "get");
             $exchangeItem = json_decode($exchangeItem, true);
             if ($exchangeItem['exchange_info']["exchange_type"] == "1") {
                 $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
                 $userInfo = json_decode($userInfo, TRUE);
                 if ($userInfo['user']['province_id'] == "0") {
-                    //填写信息
+                    $this->locationCheck(); //填写信息              
                 } else {
-                    //显示地址页面
+                    var_dump("aaaaaaa");              //显示地址页面          
                 }
             } else {
-                $postDate["source"] = "company";
-                $postDate['open_id'] = $this->userOpenId;
-                $postDate['id'] = $goodsId;
-                $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
-                var_dump($exchangeList);
+                $this->changeGoodsResult();
             }
-            var_dump($exchangeItem);
-            die;
         }
     }
 
     public function locationCheck() {
         $getProvince = transferData(APIURL . "/area/get_area", "get");
         $getProvince = json_decode($getProvince, true);
+        array_pop($getProvince);
+        $getTown = $this->getAreaMessage($getProvince[0]['area_id']);
+        $getTown = json_decode($getTown, true);
+        $getArea = $this->getAreaMessage($getTown[0]['area_id']);
+        $getArea = json_decode($getArea, true);
         $this->assign("provinceValue", $getProvince);
+        $this->assign("townValue", $getTown);
+        $this->assign("areaValue", $getArea);
+        $this->assign("goodsId", $_GET['goodsId']);
+        $this->display("locationCheck");
+    }
+
+    public function getAreaMessage($areaId = 0) {
+        $requestFlag = true;
+
+        if (isset($_REQUEST["areaId"])) {
+            $areaId = $_REQUEST["areaId"];
+            $requestFlag = FALSE;
+        } else {
+            $areaId = $areaId;
+        }
+        $postDate['area_id'] = $areaId;
+        $getArea = transferData(APIURL . "/area/get_area", "post", $postDate);
+        if ($requestFlag) {
+            return $getArea;
+        } else {
+            header("Content-type: application/json");
+
+            echo $getArea;
+        }
+    }
+
+    public function updateUserLocation() {
+        if (isset($_POST["gNumber"])) {
+            
+            if (ctype_digit($_POST["gNumber"])) {
+                $postData['user_phone'] = $_POST["user_phone"];
+                $postData['province_id'] = $_POST["province_id"];
+                $postData['city_id'] = $_POST["city_id"];
+                $postData['area_id'] = $_POST["area_id"];
+                $postData['street'] = $_POST["street"];
+                $postData['real_name'] = $_POST["real_name"];
+                $postData['open_id'] = $this->userOpenId;
+                $postData['source'] = "company";
+                $updateUserLocation = transferData(APIURL . "/user/update_user_address", "post", $postData);
+                var_dump($updateUserLocation);
+                $_GET['goodsId']=$_POST["gNumber"];
+                $this->changeGoodsResult();
+            } else {
+                echo"参数错误";
+            }
+        } else {
+            echo "错误";
+        }
+    }
+
+    public function changeGoodsResult() {
+        if (isset($_GET['goodsId'])) {
+            $postDate["source"] = "company";
+            $postDate['open_id'] = $this->userOpenId;
+            $postDate['id'] = $_REQUEST['goodsId'];
+            $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
+            $this->getExchangeList();
+        } else {
+            echo '错误的进入方式';
+        }
+    }
+    public function changeScuessList(){
         $this->display();
     }
 
