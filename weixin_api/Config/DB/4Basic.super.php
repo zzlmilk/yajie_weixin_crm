@@ -30,10 +30,6 @@ class Basic extends Query {
     public function __construct() {
         try {
 
-
-             
-
-
             parent::__constructor($this->child_name);
 
         } catch (Exception $e) {
