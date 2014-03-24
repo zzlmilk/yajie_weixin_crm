@@ -5,12 +5,42 @@ class exchangeController implements exchange {
     public $errorMessage = '';
 
     public function ExchangeList() {
+        $pageSize = 3;
         $exchangeModel = new exchangeModel();
+        $exchangeModel->initialize();
+        $exchangeNumber = $exchangeModel->vars_number;
+        $exchangeModel->addOffset(0, $pageSize);
         $exchangeModel->initialize();
         $exchangeList = $exchangeModel->vars_all;
         $_ENV['smarty']->setDirTemplates('exchange');
         $_ENV['smarty']->assign('exchangeList', $exchangeList);
+        $url = WebSiteUrl . "/pageredirst.php?action=exchange&functionname=ExchangeListPage";
+        $page = $_ENV['smarty']->getPages($url, 1, $exchangeNumber, $pageSize);
+        $_ENV['smarty']->assign('pages', $page);
         $_ENV['smarty']->display('ExchangeList');
+    }
+
+    public function ExchangeListPage() {
+        if (isset($_GET["page"])) {
+            $pageSize = 3;
+            $pageNumber = $_GET["page"];
+            $exchangeModel = new exchangeModel();
+            $exchangeModel->initialize();
+            $exchangeNumber = $exchangeModel->vars_number;
+            $dateCount = $pageSize * ($pageNumber - 1);
+            $exchangeModel->addOffset($dateCount, $pageSize);
+            $exchangeModel->initialize();
+            $exchangeList = $exchangeModel->vars_all;
+            $_ENV['smarty']->setDirTemplates('exchange');
+            $_ENV['smarty']->assign('exchangeList', $exchangeList);
+            $url = WebSiteUrl . "/pageredirst.php?action=exchange&functionname=ExchangeListPage";
+            $page = $_ENV['smarty']->getPages($url, $pageNumber, $exchangeNumber, $pageSize);
+            $_ENV['smarty']->assign('pages', $page);
+
+            $_ENV['smarty']->display('ExchangeList');
+        } else {
+            $this->ExchangeList();
+        }
     }
 
     public function addExchangeItem() {
@@ -176,7 +206,7 @@ class exchangeController implements exchange {
                         $changeSize = 88;
                         $image = imagecreatetruecolor($changeSize, $changeSize);
                         imagecopyresampled($image, $src, 0, 0, 0, 0, $changeSize, $changeSize, $imgWidth, $imgHeight);
-                        imagejpeg($image, $storeDir."small/" . $fileUpDateTime . $expName);
+                        imagejpeg($image, $storeDir . "small/" . $fileUpDateTime . $expName);
                         imagedestroy($image);
                     } else if (strtolower($fileNameExtension) == "png") {
                         $src = imagecreatefrompng($storeDir . $fileUpDateTime . $expName);
@@ -185,7 +215,7 @@ class exchangeController implements exchange {
                         $changeSize = 88;
                         $image = imagecreatetruecolor($changeSize, $changeSize);
                         imagecopyresampled($image, $src, 0, 0, 0, 0, $changeSize, $changeSize, $imgWidth, $imgHeight);
-                        imagepng($image,$storeDir."small/" . $fileUpDateTime . $expName);
+                        imagepng($image, $storeDir . "small/" . $fileUpDateTime . $expName);
                         imagedestroy($image);
                     }
                 }
@@ -195,7 +225,7 @@ class exchangeController implements exchange {
                     return $runType;
                 } else {
                     $runType["state"] = 0;
-                    $imgUrl = $fileUpDateTime. $expName;
+                    $imgUrl = $fileUpDateTime . $expName;
                     $runType["message"] = $imgUrl;
                     return $runType;
                 }

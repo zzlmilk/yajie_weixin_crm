@@ -65,14 +65,16 @@
                 </div>
 
             </div>
-            <div class="form-group">
-                <label for="exampleInputFile" class="col-sm-2 control-label labelWidth">礼品图片:</label>
-                <input class=" inputWidth" style="padding-left: 25px;" name="exampleInputFile"  type="file" id="exampleInputFile">
-                <div id="picDiv"><img style="margin-left: 25px;" src="{$WebSiteUrl}/giftImages/{$exchageValue.exchange_image}" width="88" height="88"></div>
 
-            </div>
+            <label for="exampleInputFile"style="padding-left: 0px;" class="col-sm-2 control-label labelWidth">礼品图片:</label>
+            <br>
+            <input class=" inputWidth" style="margin-left: 35%" style="margin-top:  15px;width: 72px;" name="exampleInputFile"  type="file" id="exampleInputFile">
+            <div style="height: 15px"></div>
+            <div id="picDiv"><img style="margin-left: 35%" src="{$WebSiteUrl}/giftImages/{$exchageValue.exchange_image}" width="88" height="88"></div>
+            <div style="height: 15px"></div>
+
             <div class="form-group"> 
-                <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品详情：</label>
+                <label for="inputEmail3"  class="col-sm-2 control-label labelWidth">礼品详情：</label>
                 <div class="col-sm-2">
                     <textarea  class="form-control inputWidth" rows="3"name="exchangez_details" id="exchangezDetails">{$exchageValue.exchangez_details}</textarea>
                 </div>

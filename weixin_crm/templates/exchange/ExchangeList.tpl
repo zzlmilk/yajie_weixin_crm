@@ -11,7 +11,7 @@
         text-align: left;
         min-width: 500px;
         margin: 0 auto;
-        height: 190px;
+        height: 350px;
     }
     table tr>th{
         text-align: center;
@@ -30,7 +30,7 @@
 <div class="userMangerTitle">礼品列表</div>
 <div style="height: 50px;"></div>
 <div class="dataArea">
-    <table class="table table-striped">
+    <table class="table table-striped" >
         <tr><th>礼品图片</th><th>礼品名称</th><th>礼品类型</th><th>兑换积分</th><th>物品简介</th><th>详细介绍</th><th style="display: none">id</th><th>编辑</th><th>删除</th></tr>
         {foreach from=$exchangeList item=exchangeIteam key=key}
             <tr>
@@ -46,10 +46,10 @@
                 <td>{$exchangeIteam.exchange_integration}</td>
                 <td>{$exchangeIteam.exchange_summary}</td>
                 <td>{$exchangeIteam.exchangez_details}</td>
-                 <td  style="display: none">{$exchangeIteam.exchange_id}</td>
+                <td  style="display: none">{$exchangeIteam.exchange_id}</td>
                 <td><a href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=editExchangeItem&ItemId={$exchangeIteam.exchange_id}"><button class="btn btn-warning">编辑</button></a></td>
                 <td><button data-toggle="modal" data-target="#myModal" class="deleteButton btn btn-danger">删除</button></td>
-               
+
             </tr>
         {/foreach}
     </table>
@@ -63,7 +63,7 @@
                     <h4 class="modal-title" id="myModalLabel">你确认删除这条信息么？</h4>
                 </div>
                 <div class="modal-body">
-                 </div>
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     <a id="checkButton" href=""><button type="button" class="btn btn-primary">确认</button></a>
@@ -73,6 +73,7 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 </div>
+<div style="text-align: center">{$pages}</div> 
 <script>
     $(".deleteButton").click(function (){
     var alertTitle=new Array();
