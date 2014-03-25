@@ -124,7 +124,7 @@ class view {
        // $key1.="<span>$page/$pages</span>&nbsp;";    //第几页,共几页
         if ($page != 1) {
           //  $key1.="&nbsp;&nbsp;<a href=\"" . $targetUrl . "&page=1&" . $str . "\">首页</a> ";     //第一页
-            $key1.="<li><a href=\"" . $targetUrl . "&page=" . ($page - 1) . "&" . $str . "\">&laquo;</a></li>"; //上一页
+            $key1.="<li class='usablePage'><a href=\"" . $targetUrl . "&page=" . ($page - 1) . "&" . $str . "\">&laquo;</a></li>"; //上一页
         } else {
           //  $key1.="&nbsp;&nbsp;首页 "; //第一页
             $key1.="<li  class='disabled'><a>&laquo;</a></li>"; //上一页
@@ -146,12 +146,12 @@ class view {
             if ($i == $page) {
                 $key1.=' <li class="active"><span>' . $i . '</span></li>';
             } else {
-                $key1.=" <li><a href=\"" . $targetUrl . "&page=" . $i . "&" . $str . "\">" . $i . "</a></li>";
+                $key1.=" <li class='usablePage'><a href=\"" . $targetUrl . "&page=" . $i . "&" . $str . "\">" . $i . "</a></li>";
             }
         }
 
         if ($page != $pages) {
-            $key1.=" <li><a href=" . $targetUrl . "&page=" . ($page + 1) . "&" . $str . ">&raquo;</a></li>"; //下一页
+            $key1.=" <li class='usablePage'><a href=" . $targetUrl . "&page=" . ($page + 1) . "&" . $str . ">&raquo;</a></li>"; //下一页
           //  $key1.="&nbsp;&nbsp;<a href=" . $targetUrl . "&page={$pages}&" . $str . ">最后一页</a>"; //最后一页
         } else {
             $key1.="<li class='disabled'><a>&raquo;</a></li> "; //下一页

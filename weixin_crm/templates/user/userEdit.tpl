@@ -123,6 +123,8 @@
             </tr>
         {/foreach}
     </table>
+    <div id="pageMoney">{$pageMoney}</div>
+
 {/if}
 <br>
 {if $userPointData eq 0}
@@ -140,6 +142,7 @@
             </tr>
         {/foreach}
     </table>
+    <div id="pointerPage">{$pagePointer}</div>
 {/if}
 <script src="{$WebSiteUrl}/js/rexexTest.js"></script>
 <script src="{$WebSiteUrl}/js/buttonDisable.js"></script>
@@ -216,6 +219,21 @@ $(".modal-body").html(WarringStr);
 //修改按钮
 buttonDisable($("#saveChangeButton"));
 //禁用按钮结束
+//积分分页
+$("#pageMoney .usablePage a").click(function(){
+alert("a");
+var requestUrl=$(this).attr("href");
+$.post(
+requestUrl,
+{
+    userId:$("#user_id").val()
+},
+function(rData){
+$("#pageMoney").html(rData["page"]);
+
+})
+return false;
+});
  
 </script>
 
