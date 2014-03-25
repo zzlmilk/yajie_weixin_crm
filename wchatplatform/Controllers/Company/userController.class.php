@@ -47,18 +47,7 @@ class UserController extends BaseController {
 
     }
 
-    //兑换物品
-    public function changeGoods() {
-        //$this->userOpenId = $_REQUEST['open_id'];
-        if (isset($_GET['goodsId'])) {
-            $goodsId=$_GET['goodsId'];
-            $postDate["source"] = "company";
-            $postDate['open_id'] = $this->userOpenId;
-            $postDate['id'] = $goodsId;
-            $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
-            var_dump($exchangeList);
-        }
-    }
+   
 
 
 
@@ -388,11 +377,83 @@ class UserController extends BaseController {
             die;
         }
     }
+
+    
     public function locationCheck() {
         $getProvince = transferData(APIURL . "/area/get_area", "get");
         $getProvince = json_decode($getProvince, true);
         $this->assign("provinceValue", $getProvince);
         $this->display();
+    }
+
+
+    /**
+     * 签到
+     */
+
+    public function registration(){
+
+        $array = $this->userRegistration();
+
+        $today_time = mktime(0,0,0);
+
+
+        if($today_time == $array['registration_time']){
+
+            $array['res'] = 1;
+
+        } else{
+
+
+            $array['res'] = 0;
+
+        }
+
+        $this->assign('info',$array);
+
+        $this->display('registration');
+
+    }
+
+
+    /**
+     * 获取用户签到信息 api
+     */
+
+    public function userRegistration(){
+
+
+
+        $postDate["source"] = "company";
+        $postDate['open_id'] = $this->userOpenId;
+
+
+        $userRegistration = transferData(APIURL . "/registration/get_registeration", "post",$postDate);
+
+        $userRegistration_ = json_decode($userRegistration, true);
+
+
+        return $userRegistration_['res'];
+
+    }
+
+    /**
+     * 用户签到接口
+     */
+
+    public function registrationAction(){
+
+        $postDate["source"] = "company";
+
+        $postDate['open_id'] = $this->userOpenId;
+
+        $userRegistrationA = transferData(APIURL . "/registration/user_registeration", "post",$postDate);
+
+        $userRegistration_info = json_decode($userRegistrationA, true);
+
+        $this->registration();
+
+       
     }
 
 

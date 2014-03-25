@@ -85,9 +85,9 @@ class ExchangeModel extends Basic {
 
                     if($this->vars['exchange_type'] == 1){
 
-                        if(empty($userinfo['street']) && empty($userinfo['real_name']) && empty($userinfo['province_id']) && empty($userinfo['city_id']) && empty($userinfo['area_id'])){
+                        if(empty($userinfo['street']) && empty($userinfo['real_name']) && empty($userinfo['province_id']) && empty($userinfo['city_id']) && empty($userinfo['area_id']) && empty($userinfo['address_phone'])){
 
-                            if(!empty($result['real_name']) && !empty($result['province_id']) && !empty($result['city_id']) && !empty($result['area_id']) && !empty($result['street'])){
+                            if(!empty($result['real_name']) && !empty($result['province_id']) && !empty($result['city_id']) && !empty($result['area_id']) && !empty($result['street']) && !empty($result['address_phone'])){
 
                                 $updateUser['province_id'] = $result['province_id'];
 
@@ -98,6 +98,8 @@ class ExchangeModel extends Basic {
                                 $updateUser['street'] = $result['street'];
 
                                 $updateUser['real_name'] = $result['real_name'];
+
+                                $updateUser['address_phone'] = $result['address_phone'];
 
                                 $userModel->updateInfo($updateUser,$userinfo['user_id']);
 

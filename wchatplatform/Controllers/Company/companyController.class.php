@@ -10,8 +10,6 @@ class CompanyController extends BaseController {
         'page'=>array('name'=>'1234','type'=>'text','text'=>'<a href="http://112.124.25.155/wchatplatform/?g=company&a=test&v=index&open_id={$open_id}">请点击这里</a>'),
         'test'=>array('name'=>'test','type'=>'php','text'=>'<a href="">请点击这里</a>>'),
 
-       
-
     );
 
     private $companyInfo = array('companyInfo'=>array('token'=>'company',''),'subscribe'=>array('type'=>'news','text'=>'[{"Title":"\u6c5f\u897f\u519c\u4fe1\u793e\u5ba2\u6237\u7ba1\u7406","Description":"","Url":"","PicUrl":"http:\/\/112.124.25.155\/wchatplatform\/public\/company\/image\/2011071223051083.jpg"}]'));

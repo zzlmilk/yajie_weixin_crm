@@ -4,7 +4,7 @@
 class gameController extends BaseController  {
 
 
-    private $open_id;
+    private $userOpenId;
 
 
     public function __construct() {
@@ -84,6 +84,13 @@ class gameController extends BaseController  {
      */
     public function Questionnaire() {
 
+
+        $all = $this->getQuesion();
+
+        $this->assign('info',$all['question']);
+
+        $this->assign('title',$all['title']);
+
         $this->display();
     }
 
@@ -94,7 +101,61 @@ class gameController extends BaseController  {
 
     public function activity(){
 
+        $info = $this->getActivity();
+        
+        $this->assign('today_time',mktime(0,0,0));
+        $this->assign('info',$info);
         $this->display();
+
+    }
+
+
+    public function getQuesion(){
+
+        $quesionAll = transferData(APIURL . "/question/get_question", "get");
+
+        $quesionResult = json_decode($quesionAll, true);
+
+        return $quesionResult;
+    }
+
+
+    public function getActivity(){
+
+        $ActivityJson = transferData(APIURL . "/activity/get_activity?source=company", "get");
+
+        $ActivityArray = json_decode($ActivityJson, true);
+
+        return $ActivityArray;
+    }
+
+
+    public function uploadQuestion(){
+
+
+        $postDate["source"] = "company";
+
+        $postDate['open_id'] = $this->userOpenId;
+
+        $postDate['field'] = $_REQUEST['title'];
+
+        $array =  explode(',', $_REQUEST['title']);
+
+        foreach ($array as $key => $value) {
+            # code...
+
+            $postDate['quesion_'.$value] = $_REQUEST[$value];
+        }
+
+        print_r($postDate);
+
+
+        $quesionResultJson = transferData(APIURL . "/question/add_question", "post",$postDate);
+
+        $quesionResultArray = json_decode($quesionResultJson, true);
+
+
+        print_r($quesionResultArray);
 
     }
 

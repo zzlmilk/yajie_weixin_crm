@@ -2,6 +2,9 @@
 
 ob_start();
 
+date_default_timezone_set('PRC');
+
+
 /**
  *  自动加载 配置文件
  * @param type $filePath  路径地址
@@ -278,6 +281,7 @@ function  transferData($url,$method,$data =''){
 
 function curlPost($url,$post = null,$options = array()){
 
+
     $defaults = array( 
 
         CURLOPT_POST => 1, 
@@ -293,10 +297,14 @@ function curlPost($url,$post = null,$options = array()){
 
     $ch = curl_init(); 
 
+    $result = '';
+
     curl_setopt_array($ch, ($options + $defaults)); 
 
     if( ! $result = curl_exec($ch)) 
     { 
+
+      
         trigger_error(curl_error($ch)); 
     } 
     curl_close($ch); 

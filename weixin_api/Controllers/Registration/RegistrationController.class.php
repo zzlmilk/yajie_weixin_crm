@@ -28,5 +28,37 @@ class RegistrationController  implements registration{
 		}
 
 	}
+
+	/**
+	 * 获取用户签到信息
+	 */
+
+	public function get_registeration(){
+
+
+		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])){
+
+			$user = new userModel();
+
+			$userInfo = $user->getUserInfo($_REQUEST['open_id']);
+
+			
+			if(count($userInfo) > 0){
+
+				$user_registeration = new UserRegistrationModel();
+
+				$array = $user_registeration->getUserRegisterationInfo($userInfo);
+
+				$json['res'] = arrayToObject($array,0);
+
+				AssemblyJson($json);
+			}
+
+		} else{
+
+			echoErrorCode(105);
+
+		}
+	}
 }
 ?>

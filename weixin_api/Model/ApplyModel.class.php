@@ -1,7 +1,5 @@
 <?php
 
-
-
 class ApplyModel extends basic{
 
 		public function __construct() {
@@ -12,18 +10,17 @@ class ApplyModel extends basic{
 
     }
 
-
     /**
      * 获取用户申请信息
      */
 
-    public function getInfoAll($user_id){
+    public function getInfoAll($id){
 
-        if(!empty($user_id)){
+        if(!empty($id)){
 
             $this->clearUp();
 
-             $this->initialize();
+             $this->initialize('activity_id = '.$id);
 
              return $this->vars_all;
 
@@ -39,12 +36,15 @@ class ApplyModel extends basic{
 
     	if(count($activity_info) > 0){
 
+        $activity->setIncApplyNumber($data['activity_id']);
 
     		$insert['activity_id'] = $activity_info['activity_id'];
 
     		$insert['real_name'] = $data['real_name'];
 
     		$insert['user_phone'] = $data['user_phone'];
+
+        $insert['apply_time'] = time();
 
 
   			$this->insert($insert);
