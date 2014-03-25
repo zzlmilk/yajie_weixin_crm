@@ -287,7 +287,7 @@
 
 
 
- <!--                   兑换开始-->
+                            <!--                   兑换开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table5">
                                 <tr>
                                     <td height="29" onclick="list('5')">
@@ -305,12 +305,12 @@
                                 </tr>
                             </table>
                             <table id="subtree5" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
-                                  <tr>
+                                <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu15" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('15')">每日签到</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=registration&functionname=registrationCount" target="mainFrame" class="left-fontSmall" onclick="tupian('15')">签到统计</a>
                                     </td>
 
                                 </tr>
@@ -327,7 +327,7 @@
 
                                 </tr>
 
-                                   <tr>
+                                <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu20" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
@@ -335,17 +335,17 @@
                                         <a href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=addactivty" target="mainFrame" class="left-fontSmall" onclick="tupian('20')">添加活动</a>
                                     </td>
 
-                                    
+
 
                                 </tr>
 
-                                 <tr>
+                                <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu17" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a target="mainFrame" class="left-fontSmall" onclick="tupian('6')">问卷列表</a>
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('17')">问卷</a>
+
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=question&functionname=questionCount" target="mainFrame" class="left-fontSmall" onclick="tupian('17')">问卷统计</a>
                                     </td>
 
                                 </tr>
@@ -354,7 +354,7 @@
 
 
 
-<!--                   兑换开始-->
+                            <!--                   兑换开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table6">
                                 <tr>
                                     <td height="29" onclick="list('6')">
@@ -392,7 +392,7 @@
 
                                 </tr>
 
-                                   <tr>
+                                <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu13" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
@@ -406,7 +406,7 @@
 
 
 
-<!--                   兑换开始-->
+                            <!--                   兑换开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table7">
                                 <tr>
                                     <td height="29" onclick="list('7')">
@@ -429,7 +429,54 @@
                                         <img id="xiaotu14" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('14')">客服短信</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=SMS&functionname=SMSindex" target="mainFrame" class="left-fontSmall" onclick="tupian('14')">客服短信</a>
+                                    </td>
+
+                                </tr>
+
+                            </table>
+                            <!--                   兑换开始-->
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table8">
+                                <tr>
+                                    <td height="29" onclick="list('8')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img8" id="img8" src="{$WebSiteUrl}/images/ico04.gif" width="8" height="11">
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >优惠模块</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree8" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu15" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=promoCodeCheck" target="mainFrame" class="left-fontSmall" onclick="tupian('15')">验证优惠码</a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu16" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=SMS&functionname=SMSindex" target="mainFrame" class="left-fontSmall" onclick="tupian('16')">生成优惠码</a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu17" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=SMS&functionname=SMSindex" target="mainFrame" class="left-fontSmall" onclick="tupian('17')">优惠码列表</a>
                                     </td>
 
                                 </tr>

@@ -144,6 +144,22 @@
     </table>
     <div id="pointerPage">{$pagePointer}</div>
 {/if}
+{if $userRegistrationValue eq 0}
+    <!--    暂无积分数据-->
+{else}
+    <!--    <h1>用户行为记录</h1>
+        <table class="table table-striped">
+            <tr><th>序号</th><th>日期</th><th>行为</th></tr>
+    {foreach from=$userRegistrationValue item=userRegistration key=key}
+        <tr>
+            <td>{$key+1}</td>
+            <td>{$userRegistration.record_time|date_format:"%Y-%m-%d %H:%M"}</td>
+            <td>签到</td>
+        </tr>
+    {/foreach}
+</table>-->
+<!--    <div id="pointerPage">{$pagePointer}</div>-->
+{/if}
 <script src="{$WebSiteUrl}/js/rexexTest.js"></script>
 <script src="{$WebSiteUrl}/js/buttonDisable.js"></script>
 <script>
@@ -221,20 +237,18 @@ buttonDisable($("#saveChangeButton"));
 //禁用按钮结束
 //积分分页
 $("#pageMoney .usablePage a").click(function(){
-alert("a");
+$("#pageMoney").html("");
 var requestUrl=$(this).attr("href");
 $.post(
 requestUrl,
 {
-    userId:$("#user_id").val()
+userId:$("#user_id").val()
 },
 function(rData){
 $("#pageMoney").html(rData["page"]);
-
-})
+});
 return false;
 });
- 
 </script>
 
 

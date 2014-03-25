@@ -146,7 +146,7 @@ class view {
             if ($i == $page) {
                 $key1.=' <li class="active"><span>' . $i . '</span></li>';
             } else {
-                $key1.=" <li class='usablePage'><a href=\"" . $targetUrl . "&page=" . $i . "&" . $str . "\">" . $i . "</a></li>";
+                $key1.=" <li class='usablePage'><a disabled href=\"" . $targetUrl . "&page=" . $i . "&" . $str . "\">" . $i . "</a></li>";
             }
         }
 
