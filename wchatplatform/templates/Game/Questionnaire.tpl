@@ -19,6 +19,7 @@
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
+          <script src="{$WebSiteUrlPublic}/company/script/jquery.form.js"></script>
 
        <title>问卷调查</title>
     </head>
@@ -40,7 +41,7 @@
     <boby>
             <div class="registerWarp">
 
-                <form class="form-horizontal"  method='post' role="form"  action="{$WebSiteUrl}?g=company&a=game&v=uploadQuestion">
+                <form id='questionForm' class="form-horizontal"  method='post' role="form"  action="{$WebSiteUrl}?g=company&a=game&v=uploadQuestion" name='questionForm'>
 
                     <input type='hidden' name='title' id='title' value='{$title}'>
 
@@ -63,7 +64,7 @@
                             {if $infos.question_type == 0}
 
                                  <div class="col-sm-10">
-                                   <input type="text" class="form-control"  placeholder="例如：张三" id='{$infos.question_id}' name='{$infos.question_id}'>
+                                   <input type="text" class="form-control"  placeholder="例如：张三" id='question_{$infos.question_id}' name='{$infos.question_id}'>
                                  </div>
 
                             {elseif $infos.question_type == 1}
@@ -72,7 +73,7 @@
 
                                      <div class="radio-inline">
 
-                                       <input type="radio" name="{$infos.question_id}" id="{$infos.question_id}" value="{$v}" checked>
+                                       <input type="radio" name="{$infos.question_id}" id="question_{$infos.question_id}" value="{$v}" checked >
                                         {$v}
                                      </div>
 
@@ -103,7 +104,7 @@
                             {if $infos.question_type == 0}
 
                                  <div class="col-sm-10">
-                                   <input type="text" class="form-control" id="inputEmail3" placeholder="例如：张三" id='{$infos.question_id}' name='{$infos.question_id}'>
+                                   <input type="text" class="form-control" id="inputEmail3" placeholder="例如：张三" id='question_{$infos.question_id}' name='{$infos.question_id}'>
                                  </div>
 
                             {elseif $infos.question_type == 1}
@@ -112,7 +113,7 @@
 
                                      <div class="radio-inline">
 
-                                       <input type="radio" name="{$infos.question_id}" id="{$infos.question_id}" value="{$v}" checked>
+                                       <input type="radio" name="{$infos.question_id}" id="question_{$infos.question_id}" value="{$v}" checked>
                                         {$v}
                                      </div>
 
@@ -125,7 +126,7 @@
                                 {foreach from=$infos.question_answer_2 item=v}
 
                                       <label class="checkbox-inline">
-                                      <input type="checkbox" id="{$infos.question_id}" name="{$infos.question_id}" value='{$v}'> {$v}
+                                      <input type="checkbox" id="question_{$infos.question_id}" name="{$infos.question_id}" value='{$v}'> {$v}
                                       </label>
 
                                 {/foreach}
@@ -135,23 +136,18 @@
                                {elseif $infos.question_type == 3}
 
                                 <div style=" padding-left: 1em;">
-                                    <textarea class="form-control" rows="3" name='{$infos.question_id}'></textarea>
+                                    <textarea id='question_{$infos.question_id}' class="form-control" rows="3" name='{$infos.question_id}'></textarea>
                                 </div>
 
 
                             {/if}
 
                             </div>
-
-
-                       
-                        
-
                         {/if}
                    {/foreach}
                           
                 <!-- <div style=" padding-left: 1em;"> -->
-                    <button type="submit" class="btn btn-primary">提&nbsp;&nbsp;&nbsp;交</button>
+                    <button type="button" class="btn btn-primary" id='buttonSubmit'>提&nbsp;&nbsp;&nbsp;交</button>
                 <!-- </div> -->
                         </fieldset>
                     </div>
@@ -165,6 +161,36 @@
     
    
 </html>
+<script>
+  
+  var title = $('#title').val();
 
+  var titleArray = title.split(',');
+
+  var number = 0;
+
+  $('#buttonSubmit').click(function(){
+
+     $("#questionForm").ajaxSubmit({
+        
+        success: function(data) {
+
+          if(data == 'success'){
+
+              alert('报名成功');
+          } else{
+
+             alert(data);
+          }
+        },
+        error: function(xhr) {
+
+            alert(xhr.responseText);
+        }
+    });
+    
+  })
+
+</script>
 </body>
 </html>

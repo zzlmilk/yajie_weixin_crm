@@ -166,7 +166,10 @@
               </div>
 
 
-                <form action='{$WebSiteUrl}?g=company&a=game&v=applyAction' class="form-horizontal" role="form" style=" padding-left: 1.8em; ">
+                <form action='{$WebSiteUrl}?g=company&a=game&v=applyAction' class="form-horizontal" method='post'role="form" style=" padding-left: 1.8em; ">
+                  
+
+                  <input type="hidden" name='id' id='id' value='{$info.activity_id}'>
                   <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label"style=" font-size: 1.2em; margin-bottom: 0.5em;">真实姓名</label>
                     <div class="col-sm-10">
@@ -214,8 +217,6 @@
 
               return false;
           }
-
-
 
       })
 

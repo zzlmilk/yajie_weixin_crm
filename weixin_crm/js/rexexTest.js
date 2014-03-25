@@ -3,7 +3,7 @@ function getDateRegex(data){
    return regex.test(data);
 }
 function getMobilPhoneRegex(data){
-     var regex= /^1[3|4|5|8][0-9]\d{4,8}$/;
+     var regex= /^1[3|4|5|8][0-9]\d{8}$/;
      return regex.test(data);
 }
 function getIntRegex(data){

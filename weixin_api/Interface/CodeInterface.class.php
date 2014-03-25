@@ -1,7 +1,7 @@
 <?php
 
 
-interface Apply{
+interface Code{
 
 
 

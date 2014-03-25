@@ -15,13 +15,8 @@ class gameController extends BaseController  {
 
             $this->userOpenId = $_REQUEST['open_id'];
 
-        } else{
-
-            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
-
-        }
-
-         $this->assign('open_id',$this->userOpenId);
+        } 
+        $this->assign('open_id',$this->userOpenId);
     }
 
     /**
@@ -104,8 +99,9 @@ class gameController extends BaseController  {
         $info = $this->getActivity();
         
         $this->assign('today_time',mktime(0,0,0));
-        $this->assign('info',$info);
-        $this->display();
+        $this->assign('info',$info['info']);
+        $this->assign('record',$info['record']);
+        $this->display('activity');
 
     }
 
@@ -132,7 +128,6 @@ class gameController extends BaseController  {
 
     public function uploadQuestion(){
 
-
         $postDate["source"] = "company";
 
         $postDate['open_id'] = $this->userOpenId;
@@ -142,22 +137,70 @@ class gameController extends BaseController  {
         $array =  explode(',', $_REQUEST['title']);
 
         foreach ($array as $key => $value) {
-            # code...
+                
+            if(empty($_REQUEST[$value])){
+
+                echo '第'.$value.'题必须填写';
+
+                die;
+            }
 
             $postDate['quesion_'.$value] = $_REQUEST[$value];
         }
-
-        print_r($postDate);
-
 
         $quesionResultJson = transferData(APIURL . "/question/add_question", "post",$postDate);
 
         $quesionResultArray = json_decode($quesionResultJson, true);
 
-
-        print_r($quesionResultArray);
+        echo 'success';
 
     }
+
+
+    public function applyAction(){
+
+        $phone = $_REQUEST['user_phone'];
+
+        if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $phone)) {
+
+            $postDate["source"] = "company";
+
+            $postDate['user_phone'] = $phone;
+
+            $postDate['real_name'] = $_REQUEST['real_name'];
+
+            $postDate['activity_id'] = $_REQUEST['id'];
+
+            $applyResultJson = transferData(APIURL . "/apply/addApply", "post",$postDate);
+
+            $applyResultArray = json_decode($applyResultJson, true);
+
+            $this->activity();
+
+        }  else{
+
+            echo '手机号码错误';
+        }
+
+    }
+
+    public function code(){
+
+       $code =  $this->getRandCode();
+       
+       echo $code['code_name'];
+
+    }
+
+      public function getRandCode(){
+
+        $codeJson = transferData(APIURL . "/code/get_code?source=company", "get");
+
+        $codeArray = json_decode($codeJson, true);
+
+        return $codeArray;
+    }
+
 
     
 }

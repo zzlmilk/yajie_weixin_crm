@@ -134,6 +134,7 @@ class orderController {
             if (isset($_POST)) {
                 $orderCode = $_POST['order_code'];
                 $upDatas['appointment_time'] = strtotime($_POST['orderTime']);
+                 $upDatas["appointment_object"] = $_POST['appointment_object'];
                 $upDatas["orders_remarks"] = $_POST['orders_remarks'];
                 $upDatas["merchandise_id"] = $_POST['merchandise_id'];
                 $upDatas["user_phone"] = $_POST['user_phone'];

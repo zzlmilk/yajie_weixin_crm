@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-25 11:41:39
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-25 12:16:18
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Game/activity.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5449484005330faf3075c02-19531288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:17956449475331031225bff9-56473163%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f84bb5c0cdf9dca453665858f34bba1224d2d1a5' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Game/activity.tpl',
-      1 => 1395718898,
+      1 => 1395720960,
     ),
   ),
-  'nocache_hash' => '5449484005330faf3075c02-19531288',
+  'nocache_hash' => '17956449475331031225bff9-56473163',
   'function' => 
   array (
   ),
@@ -197,7 +197,11 @@ if (count($_from) > 0){
 
 
                 <form action='<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-?g=company&a=game&v=applyAction' class="form-horizontal" role="form" style=" padding-left: 1.8em; ">
+?g=company&a=game&v=applyAction' class="form-horizontal" method='post'role="form" style=" padding-left: 1.8em; ">
+                  
+
+                  <input type="hidden" name='id' id='id' value='<?php echo $_smarty_tpl->getVariable('info')->value['activity_id'];?>
+'>
                   <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label"style=" font-size: 1.2em; margin-bottom: 0.5em;">真实姓名</label>
                     <div class="col-sm-10">
@@ -239,6 +243,12 @@ if (count($_from) > 0){
           }
 
 
+          if(user_phone == ''){
+
+            alert('手机号码必须填写！！！！');
+
+              return false;
+          }
 
       })
 

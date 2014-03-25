@@ -93,7 +93,24 @@
                     </div>
                 </div>
                 <input type="hidden" value="{$orderData.order_code}" name="order_code" id="user_id">
-                <p style="text-align: center;"> <button id="saveChangeButton" class="btn btn-info">保存修改</button></p>
+                <p style="text-align: center;"> <button data-toggle="modal" data-target="#myModal" type="button" id="saveChangeButton" class="btn btn-info">保存修改</button></p>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" >
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">你确认修改这条信息么？</h4>
+                            </div>
+                            <div class="modal-body">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <a id="checkButton" href=""><button type="submit" class="btn btn-primary">确认</button></a>
+                                <input type="hidden" id="deleteUrl" value="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=exchangeItemDelete&ItemId="  />
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
             </form>
         </div>
     {else}
@@ -132,6 +149,38 @@ if(alertFlag){
 $("#errorMessage").show();
 $("#errorMessage").html(errorMessage);
 return false;
+}
+else{
+$(".modal-body").html("");
+var alertTitle=new Array();
+var alertText=new Array();
+var WarringStr ="";
+//var textObject=$(this).parent().parent().find("td");
+$(".labelWidth").each(function(index){
+alertTitle[index]=$(this).html();
+})
+$(".inputWidth").each(function(index){
+if(this.tagName=="SELECT"){
+alertText[index]=$(this).find("option:selected").html();
+}
+else{
+if($(this).val()==""){
+alertText[index]="未填写";
+}
+else{
+alertText[index]=$(this).val();
+}
+}
+});
+
+for (var i=0 ;i<alertTitle.length;i++){
+WarringStr+="<div class='form-group'><label  class=' control-label labelWidth'>"+alertTitle[i]+"</label>"
++"<label  class='control-label labelWidth'>"+alertText[i]+"</label>"
++"</div>";
+}
+var deleteUrl=$("#deleteUrl").val();
+$("#checkButton").attr("href", deleteUrl+alertText[6]);                
+$(".modal-body").html(WarringStr);
 }
 })
 //禁用按钮  

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-25 11:14:34
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-25 14:10:45
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Test/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1960552315330f49ab17029-40720065%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:21262430653311de5688763-17403853%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bfa0b7dd63912b577d87c19067542fa542f2fc8b' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Test/index.tpl',
-      1 => 1395712678,
+      1 => 1395727760,
     ),
   ),
-  'nocache_hash' => '1960552315330f49ab17029-40720065',
+  'nocache_hash' => '21262430653311de5688763-17403853',
   'function' => 
   array (
   ),
@@ -76,6 +76,10 @@ $_smarty_tpl->decodeProperties(array (
 	<a href='<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
 ?g=company&a=user&v=registration&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
 '>签到</a>
+
+	<a href='<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
+?g=company&a=game&v=code&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+'>优惠码</a>
 
 
 </div>

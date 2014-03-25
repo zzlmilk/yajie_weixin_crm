@@ -17,6 +17,9 @@ class ApplyController implements Apply{
 			$info = $apply->addApply($_REQUEST);
 
 			AssemblyJson($info);
+		} else{
+
+			echoErrorCode(105);
 		}
 
 	}

@@ -49,7 +49,7 @@ class RegistrationController  implements registration{
 
 				$array = $user_registeration->getUserRegisterationInfo($userInfo);
 
-				$json['res'] = arrayToObject($array,0);
+				$json = arrayToObject($array,0);
 
 				AssemblyJson($json);
 			}

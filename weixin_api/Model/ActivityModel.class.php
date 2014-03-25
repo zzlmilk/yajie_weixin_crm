@@ -10,6 +10,18 @@ class ActivityModel extends basic{
 
     }
 
+    public function getInfoActivity($id){
+
+$activity = new ActivityModel();
+
+        $activity->initialize('activity_id = '.$id);
+
+        if($activity->vars_number > 0){
+
+            return $activity->vars;
+        }
+
+    }
 
     public function getActivity(){
 
@@ -25,11 +37,11 @@ class ActivityModel extends basic{
 
         $apply_record = $apply->getInfoAll($activity->vars['activity_id']);
 
-    	$info = $this->secIncReadNumber($activity->vars);
+    	$info['info'] = arrayToObject($this->secIncReadNumber($activity->vars),0);
 
         $info['record'] = $apply_record;
 
-        return arrayToObject($info,0);
+        return $info;
     }
 
 
