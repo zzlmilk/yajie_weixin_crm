@@ -65,11 +65,14 @@
                 <form method="post" action="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=promoCodeCheck">
                     <div class='textStyle form-group'><label  class=' control-label labelWidth'>请输入优惠码：</label>
                         <input  class='form-control inputStyle' value="" name="promoCode" id="promoCode">
-                        <button type="submit" class="btn btn-primary">确认</button>
+                        <button type="submit" id="subButton" class="btn btn-primary">确认</button>
                     </div>
                     {if $responseMessage neq ""}
-                        <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label">{$responseMessage}</label></div>
+                        <div class="sortBar alert alert-warning"><label  id="responseMessage" class="control-label">{$responseMessage}</label></div>
+                    {else}
+                        <div style="display: none;" id="responseMessage"class="sortBar alert alert-warning"><label   class="control-label"></label></div>
                     {/if}
+
                 </form>
             </div>
 
@@ -77,3 +80,16 @@
         </div>
     </body>
 </html>
+<script>
+    $("#subButton").click(function(){
+    $("#responseMessage").show();
+    if($("#promoCode").val()==""){
+     
+    $("#responseMessage").html("验证码不能为空");
+   
+    return false;
+}
+    
+})
+    
+</script>
