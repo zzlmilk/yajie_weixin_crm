@@ -1,7 +1,7 @@
 <?php
 
 
-class ApplyController implements Apply{
+class CodeController implements Code{
 
 
 
@@ -22,27 +22,17 @@ class ApplyController implements Apply{
 	}
 
 	/**
-	 * 获取用户优惠吗记录
+	 * 获取优惠吗
 	 */
 	public function get_code(){
 
-		if(!empty($_REQUEST['source']) && !empty($_REQUEST['open_id'])){
+		if(!empty($_REQUEST['source'])){
 
-			$apply = new ApplyModel();
+			$code = new  PromoCodeModel();
 
-			$apply_all = $apply->getInfoAll($_REQUEST['open_id']);
+			$code = $code->getCode();
 
-			$apply_array = array();
-
-			foreach($apply_all as $k=>$v){
-
-				$apply_array[$k] = arrayToObject($v,0);
-
-			}
-
-			$array['apply_record'] = $apply_array;
-
-			AssemblyJson($array);
+			AssemblyJson($code);
 
 		}
 

@@ -213,6 +213,29 @@ class UserRegistrationModel  extends Basic {
 
     }
 
+    /**
+     * 
+     */
+
+    public function getUserRegisterationInfo($userInfo){
+
+        $userRecord = new UserRegistrationModel();
+
+        $userRecord->initialize('user_id = '.$userInfo['user_id']);
+
+        if($userRecord->vars_number > 0){
+
+
+            return $userRecord->vars;
+
+        } else{
+
+            echoErrorCode('50002');
+        }
+
+
+    }
+
 }
 
 ?>

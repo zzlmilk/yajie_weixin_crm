@@ -79,6 +79,8 @@ class UserModel  extends Basic {
 
 			$data['user_open_id'] = $val['open_id'];
 
+			$data['address_phone'] = $val['user_phone'];
+
 			$user = new UserModel();
 
 			$user_id = $user->insert($data);

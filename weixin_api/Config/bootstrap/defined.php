@@ -5,7 +5,7 @@
  */
 defined('ROOT_DIR') or define('ROOT_DIR', dirname($_SERVER['SCRIPT_FILENAME']) . '/');
 
-defined('WebSiteName') or define('WebSiteName', 'cloudWeiXin');
+defined('WebSiteName') or define('WebSiteName', 'weixin_api');
 
 defined('ModelName') or define('ModelName', 'Model');
 
@@ -29,11 +29,11 @@ defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH','ORIG_PATH_INFO,RED
 /**
  * 关闭报错信息 把报错信息存储到错误文件中
  */
-ini_set("display_errors", 0);
+ini_set("display_errors", 1);
 
-ini_set("log_errors", "On");
+// ini_set("log_errors", "On");
 
-ini_set("error_log", ROOT_DIR . Logs . '/Error/error.log');
+// ini_set("error_log", ROOT_DIR . Logs . '/Error/error.log');
 
 defined('DBNAME') or define('DBNAME','weixin_company');
 

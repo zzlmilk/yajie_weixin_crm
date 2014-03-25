@@ -1,0 +1,905 @@
+Mar 25 12:15:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/apply/addApply
+SELECT * FROM weixin_company.activity  WHERE 1  AND activity_id = 2     
+Mar 25 12:15:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/apply/addApply
+SELECT * FROM weixin_company.activity  WHERE 1  AND activity_id = 2     
+Mar 25 12:15:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/apply/addApply
+UPDATE weixin_company.activity SET activity_id='2', activity_name='活动1', activity_begin_time='0', activity_end_time='1395763200', ctime='1395718320', activity_html='<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">时间:&nbsp;3月22日下午14点</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">地点:&nbsp;上海市普陀区万航渡后路65号脊安堂</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">地铁:&nbsp;11号隆德路3号口出站上曹杨路桥下桥左转200米即到，耗时6分钟</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">公交:&nbsp;966终点站对面，941，13，45曹家渡下</span><br />
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">很多人都知道自己颈椎不好，腰椎不好，可是，人体的脊椎是一节一节的，到底是哪一个位置出现了问题呢？</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">现在，跟随脊安堂来学习检测吧！学会了检测，就避免了一些盲目的判断！也就更有针对性的解决！</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">1．80%的慢性病起源于脊柱错位，比如高血压、冠心病、胃病、糖尿病、心脏病等等，可是慢性病你是没有办法在一开始就知道的，等到形成慢性病，甚至不可逆的慢性病，再如何矫正也于事无补，到时只能解决疼痛而不能治本，所谓上医治未病，亚健康就是慢性病的开始；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">2．您学会了，了解了我们的原理（请记住，这是目前最先进的理念，普通按摩没有可比性），才会帮助我们进行宣传和推广，而网络时代，您的帮助对我们来说极其重要；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">3．现代社会的颈椎、胸椎、腰椎、骨盆错位的情况数不胜数，我们只担心大家在错误的理念下，浪费金钱、浪费时间、耽误治疗时机；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">4．非常重要的一点，也是您最关心的一点：我们是有真的效果，而且立竿见影，所以我们希望您看到，成为我们的义务推广员，同时也让您和您的家人、朋友不再陷入误区。</span><br />
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">何谓美式整脊？</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">整脊医学起源于美国，已有百年历史，属脊柱神经医学范畴，亦称美式脊椎矫正术。</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">医疗认可～在美国，有三种具有独立诊断权、行医权的医生，其中一种是脊椎矫正师。美国各大主要医疗保险机构及其保险险种，均认可脊椎矫正治疗。较著名的有：全美老年及无工作能力者保险、医疗补助计划、蓝盾蓝十字等。&nbsp;极为普遍的、所有的车祸医疗保险，均认可脊椎矫正治疗。</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">世卫组织认定～美式整脊疗法是世界卫生组织认定的脊椎病治疗方法，作为西方的一种传统自然绿色疗法，它注重人体的整体研究，注重人体内部各器官及组织的相互关系，寻求一种维护、修复自然生理与物理平衡的方法，主要集中在对脊椎关节矫正和整理上，所以称为美式整脊。</span><br />
+<p>
+	<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">从根本上解决问题～美式整脊术认为脊柱是人体的第二条生命线，在人体内占据着中枢部位，影响着人类的健康。当脊椎压迫了神经之后，大脑的功能就不能有效地行使，会相应的造成功能性紊乱，从而影响了人体的健康。许多疾病直接和间接的与脊神经受到压迫有关。</span> 
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_21489.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_50769.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_46501.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_37593.jpg\" alt=\"\" /> 
+</div>
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\"></span> 
+<p>
+	<br />
+</p>', read_number='6', apply_number='4' WHERE 1  AND activity_id = 2
+Mar 25 12:15:05 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/apply/addApply
+insert into weixin_company.apply (activity_id,real_name,user_phone,apply_time) values('2','翟晓平','13524446830','1395720905')
+Mar 25 12:15:05 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/apply/addApply
+{"source":"company","user_phone":"13524446830","real_name":"\u7fdf\u6653\u5e73","activity_id":"2"}
+Mar 25 12:15:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+SELECT * FROM weixin_company.activity  WHERE 1     ORDER BY ctime DESC  LIMIT 1 
+Mar 25 12:15:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+SELECT * FROM weixin_company.apply  WHERE 1  AND activity_id = 2     
+Mar 25 12:15:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+SELECT * FROM weixin_company.activity  WHERE 1  AND activity_id = 2     
+Mar 25 12:15:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+UPDATE weixin_company.activity SET activity_id='2', activity_name='活动1', activity_begin_time='0', activity_end_time='1395763200', ctime='1395718320', activity_html='<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">时间:&nbsp;3月22日下午14点</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">地点:&nbsp;上海市普陀区万航渡后路65号脊安堂</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">地铁:&nbsp;11号隆德路3号口出站上曹杨路桥下桥左转200米即到，耗时6分钟</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">公交:&nbsp;966终点站对面，941，13，45曹家渡下</span><br />
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">很多人都知道自己颈椎不好，腰椎不好，可是，人体的脊椎是一节一节的，到底是哪一个位置出现了问题呢？</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">现在，跟随脊安堂来学习检测吧！学会了检测，就避免了一些盲目的判断！也就更有针对性的解决！</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">1．80%的慢性病起源于脊柱错位，比如高血压、冠心病、胃病、糖尿病、心脏病等等，可是慢性病你是没有办法在一开始就知道的，等到形成慢性病，甚至不可逆的慢性病，再如何矫正也于事无补，到时只能解决疼痛而不能治本，所谓上医治未病，亚健康就是慢性病的开始；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">2．您学会了，了解了我们的原理（请记住，这是目前最先进的理念，普通按摩没有可比性），才会帮助我们进行宣传和推广，而网络时代，您的帮助对我们来说极其重要；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">3．现代社会的颈椎、胸椎、腰椎、骨盆错位的情况数不胜数，我们只担心大家在错误的理念下，浪费金钱、浪费时间、耽误治疗时机；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">4．非常重要的一点，也是您最关心的一点：我们是有真的效果，而且立竿见影，所以我们希望您看到，成为我们的义务推广员，同时也让您和您的家人、朋友不再陷入误区。</span><br />
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">何谓美式整脊？</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">整脊医学起源于美国，已有百年历史，属脊柱神经医学范畴，亦称美式脊椎矫正术。</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">医疗认可～在美国，有三种具有独立诊断权、行医权的医生，其中一种是脊椎矫正师。美国各大主要医疗保险机构及其保险险种，均认可脊椎矫正治疗。较著名的有：全美老年及无工作能力者保险、医疗补助计划、蓝盾蓝十字等。&nbsp;极为普遍的、所有的车祸医疗保险，均认可脊椎矫正治疗。</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">世卫组织认定～美式整脊疗法是世界卫生组织认定的脊椎病治疗方法，作为西方的一种传统自然绿色疗法，它注重人体的整体研究，注重人体内部各器官及组织的相互关系，寻求一种维护、修复自然生理与物理平衡的方法，主要集中在对脊椎关节矫正和整理上，所以称为美式整脊。</span><br />
+<p>
+	<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">从根本上解决问题～美式整脊术认为脊柱是人体的第二条生命线，在人体内占据着中枢部位，影响着人类的健康。当脊椎压迫了神经之后，大脑的功能就不能有效地行使，会相应的造成功能性紊乱，从而影响了人体的健康。许多疾病直接和间接的与脊神经受到压迫有关。</span> 
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_21489.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_50769.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_46501.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_37593.jpg\" alt=\"\" /> 
+</div>
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\"></span> 
+<p>
+	<br />
+</p>', read_number='7', apply_number='4' WHERE 1  AND activity_id = 2
+Mar 25 12:15:05 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+{"info":{"activity_id":"2","activity_name":"\u6d3b\u52a81","activity_begin_time":"0","activity_end_time":"1395763200","ctime":"1395718320","activity_html":"<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u65f6\u95f4:&nbsp;3\u670822\u65e5\u4e0b\u534814\u70b9<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u5730\u70b9:&nbsp;\u4e0a\u6d77\u5e02\u666e\u9640\u533a\u4e07\u822a\u6e21\u540e\u8def65\u53f7\u810a\u5b89\u5802<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u5730\u94c1:&nbsp;11\u53f7\u9686\u5fb7\u8def3\u53f7\u53e3\u51fa\u7ad9\u4e0a\u66f9\u6768\u8def\u6865\u4e0b\u6865\u5de6\u8f6c200\u7c73\u5373\u5230\uff0c\u8017\u65f66\u5206\u949f<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u516c\u4ea4:&nbsp;966\u7ec8\u70b9\u7ad9\u5bf9\u9762\uff0c941\uff0c13\uff0c45\u66f9\u5bb6\u6e21\u4e0b<\/span><br \/>\r\n<br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u5f88\u591a\u4eba\u90fd\u77e5\u9053\u81ea\u5df1\u9888\u690e\u4e0d\u597d\uff0c\u8170\u690e\u4e0d\u597d\uff0c\u53ef\u662f\uff0c\u4eba\u4f53\u7684\u810a\u690e\u662f\u4e00\u8282\u4e00\u8282\u7684\uff0c\u5230\u5e95\u662f\u54ea\u4e00\u4e2a\u4f4d\u7f6e\u51fa\u73b0\u4e86\u95ee\u9898\u5462\uff1f<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u73b0\u5728\uff0c\u8ddf\u968f\u810a\u5b89\u5802\u6765\u5b66\u4e60\u68c0\u6d4b\u5427\uff01\u5b66\u4f1a\u4e86\u68c0\u6d4b\uff0c\u5c31\u907f\u514d\u4e86\u4e00\u4e9b\u76f2\u76ee\u7684\u5224\u65ad\uff01\u4e5f\u5c31\u66f4\u6709\u9488\u5bf9\u6027\u7684\u89e3\u51b3\uff01<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">1\uff0e80%\u7684\u6162\u6027\u75c5\u8d77\u6e90\u4e8e\u810a\u67f1\u9519\u4f4d\uff0c\u6bd4\u5982\u9ad8\u8840\u538b\u3001\u51a0\u5fc3\u75c5\u3001\u80c3\u75c5\u3001\u7cd6\u5c3f\u75c5\u3001\u5fc3\u810f\u75c5\u7b49\u7b49\uff0c\u53ef\u662f\u6162\u6027\u75c5\u4f60\u662f\u6ca1\u6709\u529e\u6cd5\u5728\u4e00\u5f00\u59cb\u5c31\u77e5\u9053\u7684\uff0c\u7b49\u5230\u5f62\u6210\u6162\u6027\u75c5\uff0c\u751a\u81f3\u4e0d\u53ef\u9006\u7684\u6162\u6027\u75c5\uff0c\u518d\u5982\u4f55\u77eb\u6b63\u4e5f\u4e8e\u4e8b\u65e0\u8865\uff0c\u5230\u65f6\u53ea\u80fd\u89e3\u51b3\u75bc\u75db\u800c\u4e0d\u80fd\u6cbb\u672c\uff0c\u6240\u8c13\u4e0a\u533b\u6cbb\u672a\u75c5\uff0c\u4e9a\u5065\u5eb7\u5c31\u662f\u6162\u6027\u75c5\u7684\u5f00\u59cb\uff1b<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">2\uff0e\u60a8\u5b66\u4f1a\u4e86\uff0c\u4e86\u89e3\u4e86\u6211\u4eec\u7684\u539f\u7406\uff08\u8bf7\u8bb0\u4f4f\uff0c\u8fd9\u662f\u76ee\u524d\u6700\u5148\u8fdb\u7684\u7406\u5ff5\uff0c\u666e\u901a\u6309\u6469\u6ca1\u6709\u53ef\u6bd4\u6027\uff09\uff0c\u624d\u4f1a\u5e2e\u52a9\u6211\u4eec\u8fdb\u884c\u5ba3\u4f20\u548c\u63a8\u5e7f\uff0c\u800c\u7f51\u7edc\u65f6\u4ee3\uff0c\u60a8\u7684\u5e2e\u52a9\u5bf9\u6211\u4eec\u6765\u8bf4\u6781\u5176\u91cd\u8981\uff1b<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">3\uff0e\u73b0\u4ee3\u793e\u4f1a\u7684\u9888\u690e\u3001\u80f8\u690e\u3001\u8170\u690e\u3001\u9aa8\u76c6\u9519\u4f4d\u7684\u60c5\u51b5\u6570\u4e0d\u80dc\u6570\uff0c\u6211\u4eec\u53ea\u62c5\u5fc3\u5927\u5bb6\u5728\u9519\u8bef\u7684\u7406\u5ff5\u4e0b\uff0c\u6d6a\u8d39\u91d1\u94b1\u3001\u6d6a\u8d39\u65f6\u95f4\u3001\u803d\u8bef\u6cbb\u7597\u65f6\u673a\uff1b<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">4\uff0e\u975e\u5e38\u91cd\u8981\u7684\u4e00\u70b9\uff0c\u4e5f\u662f\u60a8\u6700\u5173\u5fc3\u7684\u4e00\u70b9\uff1a\u6211\u4eec\u662f\u6709\u771f\u7684\u6548\u679c\uff0c\u800c\u4e14\u7acb\u7aff\u89c1\u5f71\uff0c\u6240\u4ee5\u6211\u4eec\u5e0c\u671b\u60a8\u770b\u5230\uff0c\u6210\u4e3a\u6211\u4eec\u7684\u4e49\u52a1\u63a8\u5e7f\u5458\uff0c\u540c\u65f6\u4e5f\u8ba9\u60a8\u548c\u60a8\u7684\u5bb6\u4eba\u3001\u670b\u53cb\u4e0d\u518d\u9677\u5165\u8bef\u533a\u3002<\/span><br \/>\r\n<br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u4f55\u8c13\u7f8e\u5f0f\u6574\u810a\uff1f<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u6574\u810a\u533b\u5b66\u8d77\u6e90\u4e8e\u7f8e\u56fd\uff0c\u5df2\u6709\u767e\u5e74\u5386\u53f2\uff0c\u5c5e\u810a\u67f1\u795e\u7ecf\u533b\u5b66\u8303\u7574\uff0c\u4ea6\u79f0\u7f8e\u5f0f\u810a\u690e\u77eb\u6b63\u672f\u3002<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u533b\u7597\u8ba4\u53ef\uff5e\u5728\u7f8e\u56fd\uff0c\u6709\u4e09\u79cd\u5177\u6709\u72ec\u7acb\u8bca\u65ad\u6743\u3001\u884c\u533b\u6743\u7684\u533b\u751f\uff0c\u5176\u4e2d\u4e00\u79cd\u662f\u810a\u690e\u77eb\u6b63\u5e08\u3002\u7f8e\u56fd\u5404\u5927\u4e3b\u8981\u533b\u7597\u4fdd\u9669\u673a\u6784\u53ca\u5176\u4fdd\u9669\u9669\u79cd\uff0c\u5747\u8ba4\u53ef\u810a\u690e\u77eb\u6b63\u6cbb\u7597\u3002\u8f83\u8457\u540d\u7684\u6709\uff1a\u5168\u7f8e\u8001\u5e74\u53ca\u65e0\u5de5\u4f5c\u80fd\u529b\u8005\u4fdd\u9669\u3001\u533b\u7597\u8865\u52a9\u8ba1\u5212\u3001\u84dd\u76fe\u84dd\u5341\u5b57\u7b49\u3002&nbsp;\u6781\u4e3a\u666e\u904d\u7684\u3001\u6240\u6709\u7684\u8f66\u7978\u533b\u7597\u4fdd\u9669\uff0c\u5747\u8ba4\u53ef\u810a\u690e\u77eb\u6b63\u6cbb\u7597\u3002<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u4e16\u536b\u7ec4\u7ec7\u8ba4\u5b9a\uff5e\u7f8e\u5f0f\u6574\u810a\u7597\u6cd5\u662f\u4e16\u754c\u536b\u751f\u7ec4\u7ec7\u8ba4\u5b9a\u7684\u810a\u690e\u75c5\u6cbb\u7597\u65b9\u6cd5\uff0c\u4f5c\u4e3a\u897f\u65b9\u7684\u4e00\u79cd\u4f20\u7edf\u81ea\u7136\u7eff\u8272\u7597\u6cd5\uff0c\u5b83\u6ce8\u91cd\u4eba\u4f53\u7684\u6574\u4f53\u7814\u7a76\uff0c\u6ce8\u91cd\u4eba\u4f53\u5185\u90e8\u5404\u5668\u5b98\u53ca\u7ec4\u7ec7\u7684\u76f8\u4e92\u5173\u7cfb\uff0c\u5bfb\u6c42\u4e00\u79cd\u7ef4\u62a4\u3001\u4fee\u590d\u81ea\u7136\u751f\u7406\u4e0e\u7269\u7406\u5e73\u8861\u7684\u65b9\u6cd5\uff0c\u4e3b\u8981\u96c6\u4e2d\u5728\u5bf9\u810a\u690e\u5173\u8282\u77eb\u6b63\u548c\u6574\u7406\u4e0a\uff0c\u6240\u4ee5\u79f0\u4e3a\u7f8e\u5f0f\u6574\u810a\u3002<\/span><br \/>\r\n<p>\r\n\t<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u4ece\u6839\u672c\u4e0a\u89e3\u51b3\u95ee\u9898\uff5e\u7f8e\u5f0f\u6574\u810a\u672f\u8ba4\u4e3a\u810a\u67f1\u662f\u4eba\u4f53\u7684\u7b2c\u4e8c\u6761\u751f\u547d\u7ebf\uff0c\u5728\u4eba\u4f53\u5185\u5360\u636e\u7740\u4e2d\u67a2\u90e8\u4f4d\uff0c\u5f71\u54cd\u7740\u4eba\u7c7b\u7684\u5065\u5eb7\u3002\u5f53\u810a\u690e\u538b\u8feb\u4e86\u795e\u7ecf\u4e4b\u540e\uff0c\u5927\u8111\u7684\u529f\u80fd\u5c31\u4e0d\u80fd\u6709\u6548\u5730\u884c\u4f7f\uff0c\u4f1a\u76f8\u5e94\u7684\u9020\u6210\u529f\u80fd\u6027\u7d0a\u4e71\uff0c\u4ece\u800c\u5f71\u54cd\u4e86\u4eba\u4f53\u7684\u5065\u5eb7\u3002\u8bb8\u591a\u75be\u75c5\u76f4\u63a5\u548c\u95f4\u63a5\u7684\u4e0e\u810a\u795e\u7ecf\u53d7\u5230\u538b\u8feb\u6709\u5173\u3002<\/span> \r\n<\/p>\r\n<p>\r\n\t<br \/>\r\n<\/p>\r\n<p>\r\n\t<br \/>\r\n<\/p>\r\n<div style=\"text-align:center;\">\r\n\t<img style=\"width:80%;\" src=\"http:\/\/localhost\/yajie_weixin_crm\/weixin_crm\/kindeditor\/attached\/image\/20140324\/20140324162316_21489.jpg\" alt=\"\" \/> \r\n<\/div>\r\n<div style=\"text-align:center;\">\r\n\t<img style=\"width:80%;\" src=\"http:\/\/localhost\/yajie_weixin_crm\/weixin_crm\/kindeditor\/attached\/image\/20140324\/20140324162316_50769.jpg\" alt=\"\" \/> \r\n<\/div>\r\n<div style=\"text-align:center;\">\r\n\t<img style=\"width:80%;\" src=\"http:\/\/localhost\/yajie_weixin_crm\/weixin_crm\/kindeditor\/attached\/image\/20140324\/20140324162316_46501.jpg\" alt=\"\" \/> \r\n<\/div>\r\n<div style=\"text-align:center;\">\r\n\t<img style=\"width:80%;\" src=\"http:\/\/localhost\/yajie_weixin_crm\/weixin_crm\/kindeditor\/attached\/image\/20140324\/20140324162316_37593.jpg\" alt=\"\" \/> \r\n<\/div>\r\n<br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\"><\/span> \r\n<p>\r\n\t<br \/>\r\n<\/p>","read_number":7,"apply_number":"4"},"record":[{"apply_id":"1","activity_id":"2","real_name":"\u7fdf\u6653\u5e73","user_phone":"2147483647","apply_time":"1395720722"},{"apply_id":"2","activity_id":"2","real_name":"\u7fdf\u6653\u5e73","user_phone":"2147483647","apply_time":"1395720751"},{"apply_id":"3","activity_id":"2","real_name":"\u7fdf\u6653\u5e73","user_phone":"2147483647","apply_time":"1395720905"}]}
+Mar 25 12:15:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/apply/addApply
+SELECT * FROM weixin_company.activity  WHERE 1  AND activity_id = 2     
+Mar 25 12:15:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/apply/addApply
+SELECT * FROM weixin_company.activity  WHERE 1  AND activity_id = 2     
+Mar 25 12:15:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/apply/addApply
+UPDATE weixin_company.activity SET activity_id='2', activity_name='活动1', activity_begin_time='0', activity_end_time='1395763200', ctime='1395718320', activity_html='<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">时间:&nbsp;3月22日下午14点</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">地点:&nbsp;上海市普陀区万航渡后路65号脊安堂</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">地铁:&nbsp;11号隆德路3号口出站上曹杨路桥下桥左转200米即到，耗时6分钟</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">公交:&nbsp;966终点站对面，941，13，45曹家渡下</span><br />
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">很多人都知道自己颈椎不好，腰椎不好，可是，人体的脊椎是一节一节的，到底是哪一个位置出现了问题呢？</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">现在，跟随脊安堂来学习检测吧！学会了检测，就避免了一些盲目的判断！也就更有针对性的解决！</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">1．80%的慢性病起源于脊柱错位，比如高血压、冠心病、胃病、糖尿病、心脏病等等，可是慢性病你是没有办法在一开始就知道的，等到形成慢性病，甚至不可逆的慢性病，再如何矫正也于事无补，到时只能解决疼痛而不能治本，所谓上医治未病，亚健康就是慢性病的开始；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">2．您学会了，了解了我们的原理（请记住，这是目前最先进的理念，普通按摩没有可比性），才会帮助我们进行宣传和推广，而网络时代，您的帮助对我们来说极其重要；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">3．现代社会的颈椎、胸椎、腰椎、骨盆错位的情况数不胜数，我们只担心大家在错误的理念下，浪费金钱、浪费时间、耽误治疗时机；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">4．非常重要的一点，也是您最关心的一点：我们是有真的效果，而且立竿见影，所以我们希望您看到，成为我们的义务推广员，同时也让您和您的家人、朋友不再陷入误区。</span><br />
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">何谓美式整脊？</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">整脊医学起源于美国，已有百年历史，属脊柱神经医学范畴，亦称美式脊椎矫正术。</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">医疗认可～在美国，有三种具有独立诊断权、行医权的医生，其中一种是脊椎矫正师。美国各大主要医疗保险机构及其保险险种，均认可脊椎矫正治疗。较著名的有：全美老年及无工作能力者保险、医疗补助计划、蓝盾蓝十字等。&nbsp;极为普遍的、所有的车祸医疗保险，均认可脊椎矫正治疗。</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">世卫组织认定～美式整脊疗法是世界卫生组织认定的脊椎病治疗方法，作为西方的一种传统自然绿色疗法，它注重人体的整体研究，注重人体内部各器官及组织的相互关系，寻求一种维护、修复自然生理与物理平衡的方法，主要集中在对脊椎关节矫正和整理上，所以称为美式整脊。</span><br />
+<p>
+	<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">从根本上解决问题～美式整脊术认为脊柱是人体的第二条生命线，在人体内占据着中枢部位，影响着人类的健康。当脊椎压迫了神经之后，大脑的功能就不能有效地行使，会相应的造成功能性紊乱，从而影响了人体的健康。许多疾病直接和间接的与脊神经受到压迫有关。</span> 
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_21489.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_50769.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_46501.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_37593.jpg\" alt=\"\" /> 
+</div>
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\"></span> 
+<p>
+	<br />
+</p>', read_number='7', apply_number='5' WHERE 1  AND activity_id = 2
+Mar 25 12:15:50 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/apply/addApply
+insert into weixin_company.apply (activity_id,real_name,user_phone,apply_time) values('2','翟晓平','13524446830','1395720950')
+Mar 25 12:15:50 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/apply/addApply
+{"source":"company","user_phone":"13524446830","real_name":"\u7fdf\u6653\u5e73","activity_id":"2"}
+Mar 25 12:15:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+SELECT * FROM weixin_company.activity  WHERE 1     ORDER BY ctime DESC  LIMIT 1 
+Mar 25 12:15:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+SELECT * FROM weixin_company.apply  WHERE 1  AND activity_id = 2     
+Mar 25 12:15:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+SELECT * FROM weixin_company.activity  WHERE 1  AND activity_id = 2     
+Mar 25 12:15:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+UPDATE weixin_company.activity SET activity_id='2', activity_name='活动1', activity_begin_time='0', activity_end_time='1395763200', ctime='1395718320', activity_html='<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">时间:&nbsp;3月22日下午14点</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">地点:&nbsp;上海市普陀区万航渡后路65号脊安堂</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">地铁:&nbsp;11号隆德路3号口出站上曹杨路桥下桥左转200米即到，耗时6分钟</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">公交:&nbsp;966终点站对面，941，13，45曹家渡下</span><br />
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">很多人都知道自己颈椎不好，腰椎不好，可是，人体的脊椎是一节一节的，到底是哪一个位置出现了问题呢？</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">现在，跟随脊安堂来学习检测吧！学会了检测，就避免了一些盲目的判断！也就更有针对性的解决！</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">1．80%的慢性病起源于脊柱错位，比如高血压、冠心病、胃病、糖尿病、心脏病等等，可是慢性病你是没有办法在一开始就知道的，等到形成慢性病，甚至不可逆的慢性病，再如何矫正也于事无补，到时只能解决疼痛而不能治本，所谓上医治未病，亚健康就是慢性病的开始；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">2．您学会了，了解了我们的原理（请记住，这是目前最先进的理念，普通按摩没有可比性），才会帮助我们进行宣传和推广，而网络时代，您的帮助对我们来说极其重要；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">3．现代社会的颈椎、胸椎、腰椎、骨盆错位的情况数不胜数，我们只担心大家在错误的理念下，浪费金钱、浪费时间、耽误治疗时机；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">4．非常重要的一点，也是您最关心的一点：我们是有真的效果，而且立竿见影，所以我们希望您看到，成为我们的义务推广员，同时也让您和您的家人、朋友不再陷入误区。</span><br />
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">何谓美式整脊？</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">整脊医学起源于美国，已有百年历史，属脊柱神经医学范畴，亦称美式脊椎矫正术。</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">医疗认可～在美国，有三种具有独立诊断权、行医权的医生，其中一种是脊椎矫正师。美国各大主要医疗保险机构及其保险险种，均认可脊椎矫正治疗。较著名的有：全美老年及无工作能力者保险、医疗补助计划、蓝盾蓝十字等。&nbsp;极为普遍的、所有的车祸医疗保险，均认可脊椎矫正治疗。</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">世卫组织认定～美式整脊疗法是世界卫生组织认定的脊椎病治疗方法，作为西方的一种传统自然绿色疗法，它注重人体的整体研究，注重人体内部各器官及组织的相互关系，寻求一种维护、修复自然生理与物理平衡的方法，主要集中在对脊椎关节矫正和整理上，所以称为美式整脊。</span><br />
+<p>
+	<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">从根本上解决问题～美式整脊术认为脊柱是人体的第二条生命线，在人体内占据着中枢部位，影响着人类的健康。当脊椎压迫了神经之后，大脑的功能就不能有效地行使，会相应的造成功能性紊乱，从而影响了人体的健康。许多疾病直接和间接的与脊神经受到压迫有关。</span> 
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_21489.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_50769.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_46501.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_37593.jpg\" alt=\"\" /> 
+</div>
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\"></span> 
+<p>
+	<br />
+</p>', read_number='8', apply_number='5' WHERE 1  AND activity_id = 2
+Mar 25 12:15:50 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+{"info":{"activity_id":"2","activity_name":"\u6d3b\u52a81","activity_begin_time":"0","activity_end_time":"1395763200","ctime":"1395718320","activity_html":"<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u65f6\u95f4:&nbsp;3\u670822\u65e5\u4e0b\u534814\u70b9<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u5730\u70b9:&nbsp;\u4e0a\u6d77\u5e02\u666e\u9640\u533a\u4e07\u822a\u6e21\u540e\u8def65\u53f7\u810a\u5b89\u5802<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u5730\u94c1:&nbsp;11\u53f7\u9686\u5fb7\u8def3\u53f7\u53e3\u51fa\u7ad9\u4e0a\u66f9\u6768\u8def\u6865\u4e0b\u6865\u5de6\u8f6c200\u7c73\u5373\u5230\uff0c\u8017\u65f66\u5206\u949f<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u516c\u4ea4:&nbsp;966\u7ec8\u70b9\u7ad9\u5bf9\u9762\uff0c941\uff0c13\uff0c45\u66f9\u5bb6\u6e21\u4e0b<\/span><br \/>\r\n<br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u5f88\u591a\u4eba\u90fd\u77e5\u9053\u81ea\u5df1\u9888\u690e\u4e0d\u597d\uff0c\u8170\u690e\u4e0d\u597d\uff0c\u53ef\u662f\uff0c\u4eba\u4f53\u7684\u810a\u690e\u662f\u4e00\u8282\u4e00\u8282\u7684\uff0c\u5230\u5e95\u662f\u54ea\u4e00\u4e2a\u4f4d\u7f6e\u51fa\u73b0\u4e86\u95ee\u9898\u5462\uff1f<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u73b0\u5728\uff0c\u8ddf\u968f\u810a\u5b89\u5802\u6765\u5b66\u4e60\u68c0\u6d4b\u5427\uff01\u5b66\u4f1a\u4e86\u68c0\u6d4b\uff0c\u5c31\u907f\u514d\u4e86\u4e00\u4e9b\u76f2\u76ee\u7684\u5224\u65ad\uff01\u4e5f\u5c31\u66f4\u6709\u9488\u5bf9\u6027\u7684\u89e3\u51b3\uff01<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">1\uff0e80%\u7684\u6162\u6027\u75c5\u8d77\u6e90\u4e8e\u810a\u67f1\u9519\u4f4d\uff0c\u6bd4\u5982\u9ad8\u8840\u538b\u3001\u51a0\u5fc3\u75c5\u3001\u80c3\u75c5\u3001\u7cd6\u5c3f\u75c5\u3001\u5fc3\u810f\u75c5\u7b49\u7b49\uff0c\u53ef\u662f\u6162\u6027\u75c5\u4f60\u662f\u6ca1\u6709\u529e\u6cd5\u5728\u4e00\u5f00\u59cb\u5c31\u77e5\u9053\u7684\uff0c\u7b49\u5230\u5f62\u6210\u6162\u6027\u75c5\uff0c\u751a\u81f3\u4e0d\u53ef\u9006\u7684\u6162\u6027\u75c5\uff0c\u518d\u5982\u4f55\u77eb\u6b63\u4e5f\u4e8e\u4e8b\u65e0\u8865\uff0c\u5230\u65f6\u53ea\u80fd\u89e3\u51b3\u75bc\u75db\u800c\u4e0d\u80fd\u6cbb\u672c\uff0c\u6240\u8c13\u4e0a\u533b\u6cbb\u672a\u75c5\uff0c\u4e9a\u5065\u5eb7\u5c31\u662f\u6162\u6027\u75c5\u7684\u5f00\u59cb\uff1b<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">2\uff0e\u60a8\u5b66\u4f1a\u4e86\uff0c\u4e86\u89e3\u4e86\u6211\u4eec\u7684\u539f\u7406\uff08\u8bf7\u8bb0\u4f4f\uff0c\u8fd9\u662f\u76ee\u524d\u6700\u5148\u8fdb\u7684\u7406\u5ff5\uff0c\u666e\u901a\u6309\u6469\u6ca1\u6709\u53ef\u6bd4\u6027\uff09\uff0c\u624d\u4f1a\u5e2e\u52a9\u6211\u4eec\u8fdb\u884c\u5ba3\u4f20\u548c\u63a8\u5e7f\uff0c\u800c\u7f51\u7edc\u65f6\u4ee3\uff0c\u60a8\u7684\u5e2e\u52a9\u5bf9\u6211\u4eec\u6765\u8bf4\u6781\u5176\u91cd\u8981\uff1b<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">3\uff0e\u73b0\u4ee3\u793e\u4f1a\u7684\u9888\u690e\u3001\u80f8\u690e\u3001\u8170\u690e\u3001\u9aa8\u76c6\u9519\u4f4d\u7684\u60c5\u51b5\u6570\u4e0d\u80dc\u6570\uff0c\u6211\u4eec\u53ea\u62c5\u5fc3\u5927\u5bb6\u5728\u9519\u8bef\u7684\u7406\u5ff5\u4e0b\uff0c\u6d6a\u8d39\u91d1\u94b1\u3001\u6d6a\u8d39\u65f6\u95f4\u3001\u803d\u8bef\u6cbb\u7597\u65f6\u673a\uff1b<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">4\uff0e\u975e\u5e38\u91cd\u8981\u7684\u4e00\u70b9\uff0c\u4e5f\u662f\u60a8\u6700\u5173\u5fc3\u7684\u4e00\u70b9\uff1a\u6211\u4eec\u662f\u6709\u771f\u7684\u6548\u679c\uff0c\u800c\u4e14\u7acb\u7aff\u89c1\u5f71\uff0c\u6240\u4ee5\u6211\u4eec\u5e0c\u671b\u60a8\u770b\u5230\uff0c\u6210\u4e3a\u6211\u4eec\u7684\u4e49\u52a1\u63a8\u5e7f\u5458\uff0c\u540c\u65f6\u4e5f\u8ba9\u60a8\u548c\u60a8\u7684\u5bb6\u4eba\u3001\u670b\u53cb\u4e0d\u518d\u9677\u5165\u8bef\u533a\u3002<\/span><br \/>\r\n<br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u4f55\u8c13\u7f8e\u5f0f\u6574\u810a\uff1f<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u6574\u810a\u533b\u5b66\u8d77\u6e90\u4e8e\u7f8e\u56fd\uff0c\u5df2\u6709\u767e\u5e74\u5386\u53f2\uff0c\u5c5e\u810a\u67f1\u795e\u7ecf\u533b\u5b66\u8303\u7574\uff0c\u4ea6\u79f0\u7f8e\u5f0f\u810a\u690e\u77eb\u6b63\u672f\u3002<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u533b\u7597\u8ba4\u53ef\uff5e\u5728\u7f8e\u56fd\uff0c\u6709\u4e09\u79cd\u5177\u6709\u72ec\u7acb\u8bca\u65ad\u6743\u3001\u884c\u533b\u6743\u7684\u533b\u751f\uff0c\u5176\u4e2d\u4e00\u79cd\u662f\u810a\u690e\u77eb\u6b63\u5e08\u3002\u7f8e\u56fd\u5404\u5927\u4e3b\u8981\u533b\u7597\u4fdd\u9669\u673a\u6784\u53ca\u5176\u4fdd\u9669\u9669\u79cd\uff0c\u5747\u8ba4\u53ef\u810a\u690e\u77eb\u6b63\u6cbb\u7597\u3002\u8f83\u8457\u540d\u7684\u6709\uff1a\u5168\u7f8e\u8001\u5e74\u53ca\u65e0\u5de5\u4f5c\u80fd\u529b\u8005\u4fdd\u9669\u3001\u533b\u7597\u8865\u52a9\u8ba1\u5212\u3001\u84dd\u76fe\u84dd\u5341\u5b57\u7b49\u3002&nbsp;\u6781\u4e3a\u666e\u904d\u7684\u3001\u6240\u6709\u7684\u8f66\u7978\u533b\u7597\u4fdd\u9669\uff0c\u5747\u8ba4\u53ef\u810a\u690e\u77eb\u6b63\u6cbb\u7597\u3002<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u4e16\u536b\u7ec4\u7ec7\u8ba4\u5b9a\uff5e\u7f8e\u5f0f\u6574\u810a\u7597\u6cd5\u662f\u4e16\u754c\u536b\u751f\u7ec4\u7ec7\u8ba4\u5b9a\u7684\u810a\u690e\u75c5\u6cbb\u7597\u65b9\u6cd5\uff0c\u4f5c\u4e3a\u897f\u65b9\u7684\u4e00\u79cd\u4f20\u7edf\u81ea\u7136\u7eff\u8272\u7597\u6cd5\uff0c\u5b83\u6ce8\u91cd\u4eba\u4f53\u7684\u6574\u4f53\u7814\u7a76\uff0c\u6ce8\u91cd\u4eba\u4f53\u5185\u90e8\u5404\u5668\u5b98\u53ca\u7ec4\u7ec7\u7684\u76f8\u4e92\u5173\u7cfb\uff0c\u5bfb\u6c42\u4e00\u79cd\u7ef4\u62a4\u3001\u4fee\u590d\u81ea\u7136\u751f\u7406\u4e0e\u7269\u7406\u5e73\u8861\u7684\u65b9\u6cd5\uff0c\u4e3b\u8981\u96c6\u4e2d\u5728\u5bf9\u810a\u690e\u5173\u8282\u77eb\u6b63\u548c\u6574\u7406\u4e0a\uff0c\u6240\u4ee5\u79f0\u4e3a\u7f8e\u5f0f\u6574\u810a\u3002<\/span><br \/>\r\n<p>\r\n\t<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u4ece\u6839\u672c\u4e0a\u89e3\u51b3\u95ee\u9898\uff5e\u7f8e\u5f0f\u6574\u810a\u672f\u8ba4\u4e3a\u810a\u67f1\u662f\u4eba\u4f53\u7684\u7b2c\u4e8c\u6761\u751f\u547d\u7ebf\uff0c\u5728\u4eba\u4f53\u5185\u5360\u636e\u7740\u4e2d\u67a2\u90e8\u4f4d\uff0c\u5f71\u54cd\u7740\u4eba\u7c7b\u7684\u5065\u5eb7\u3002\u5f53\u810a\u690e\u538b\u8feb\u4e86\u795e\u7ecf\u4e4b\u540e\uff0c\u5927\u8111\u7684\u529f\u80fd\u5c31\u4e0d\u80fd\u6709\u6548\u5730\u884c\u4f7f\uff0c\u4f1a\u76f8\u5e94\u7684\u9020\u6210\u529f\u80fd\u6027\u7d0a\u4e71\uff0c\u4ece\u800c\u5f71\u54cd\u4e86\u4eba\u4f53\u7684\u5065\u5eb7\u3002\u8bb8\u591a\u75be\u75c5\u76f4\u63a5\u548c\u95f4\u63a5\u7684\u4e0e\u810a\u795e\u7ecf\u53d7\u5230\u538b\u8feb\u6709\u5173\u3002<\/span> \r\n<\/p>\r\n<p>\r\n\t<br \/>\r\n<\/p>\r\n<p>\r\n\t<br \/>\r\n<\/p>\r\n<div style=\"text-align:center;\">\r\n\t<img style=\"width:80%;\" src=\"http:\/\/localhost\/yajie_weixin_crm\/weixin_crm\/kindeditor\/attached\/image\/20140324\/20140324162316_21489.jpg\" alt=\"\" \/> \r\n<\/div>\r\n<div style=\"text-align:center;\">\r\n\t<img style=\"width:80%;\" src=\"http:\/\/localhost\/yajie_weixin_crm\/weixin_crm\/kindeditor\/attached\/image\/20140324\/20140324162316_50769.jpg\" alt=\"\" \/> \r\n<\/div>\r\n<div style=\"text-align:center;\">\r\n\t<img style=\"width:80%;\" src=\"http:\/\/localhost\/yajie_weixin_crm\/weixin_crm\/kindeditor\/attached\/image\/20140324\/20140324162316_46501.jpg\" alt=\"\" \/> \r\n<\/div>\r\n<div style=\"text-align:center;\">\r\n\t<img style=\"width:80%;\" src=\"http:\/\/localhost\/yajie_weixin_crm\/weixin_crm\/kindeditor\/attached\/image\/20140324\/20140324162316_37593.jpg\" alt=\"\" \/> \r\n<\/div>\r\n<br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\"><\/span> \r\n<p>\r\n\t<br \/>\r\n<\/p>","read_number":8,"apply_number":"5"},"record":[{"apply_id":"1","activity_id":"2","real_name":"\u7fdf\u6653\u5e73","user_phone":"2147483647","apply_time":"1395720722"},{"apply_id":"2","activity_id":"2","real_name":"\u7fdf\u6653\u5e73","user_phone":"2147483647","apply_time":"1395720751"},{"apply_id":"3","activity_id":"2","real_name":"\u7fdf\u6653\u5e73","user_phone":"2147483647","apply_time":"1395720905"},{"apply_id":"4","activity_id":"2","real_name":"\u7fdf\u6653\u5e73","user_phone":"2147483647","apply_time":"1395720950"}]}
+Mar 25 12:16:18 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+SELECT * FROM weixin_company.activity  WHERE 1     ORDER BY ctime DESC  LIMIT 1 
+Mar 25 12:16:18 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+SELECT * FROM weixin_company.apply  WHERE 1  AND activity_id = 2     
+Mar 25 12:16:18 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+SELECT * FROM weixin_company.activity  WHERE 1  AND activity_id = 2     
+Mar 25 12:16:18 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+UPDATE weixin_company.activity SET activity_id='2', activity_name='活动1', activity_begin_time='0', activity_end_time='1395763200', ctime='1395718320', activity_html='<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">时间:&nbsp;3月22日下午14点</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">地点:&nbsp;上海市普陀区万航渡后路65号脊安堂</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">地铁:&nbsp;11号隆德路3号口出站上曹杨路桥下桥左转200米即到，耗时6分钟</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">公交:&nbsp;966终点站对面，941，13，45曹家渡下</span><br />
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">很多人都知道自己颈椎不好，腰椎不好，可是，人体的脊椎是一节一节的，到底是哪一个位置出现了问题呢？</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">现在，跟随脊安堂来学习检测吧！学会了检测，就避免了一些盲目的判断！也就更有针对性的解决！</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">1．80%的慢性病起源于脊柱错位，比如高血压、冠心病、胃病、糖尿病、心脏病等等，可是慢性病你是没有办法在一开始就知道的，等到形成慢性病，甚至不可逆的慢性病，再如何矫正也于事无补，到时只能解决疼痛而不能治本，所谓上医治未病，亚健康就是慢性病的开始；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">2．您学会了，了解了我们的原理（请记住，这是目前最先进的理念，普通按摩没有可比性），才会帮助我们进行宣传和推广，而网络时代，您的帮助对我们来说极其重要；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">3．现代社会的颈椎、胸椎、腰椎、骨盆错位的情况数不胜数，我们只担心大家在错误的理念下，浪费金钱、浪费时间、耽误治疗时机；</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">4．非常重要的一点，也是您最关心的一点：我们是有真的效果，而且立竿见影，所以我们希望您看到，成为我们的义务推广员，同时也让您和您的家人、朋友不再陷入误区。</span><br />
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">何谓美式整脊？</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">整脊医学起源于美国，已有百年历史，属脊柱神经医学范畴，亦称美式脊椎矫正术。</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">医疗认可～在美国，有三种具有独立诊断权、行医权的医生，其中一种是脊椎矫正师。美国各大主要医疗保险机构及其保险险种，均认可脊椎矫正治疗。较著名的有：全美老年及无工作能力者保险、医疗补助计划、蓝盾蓝十字等。&nbsp;极为普遍的、所有的车祸医疗保险，均认可脊椎矫正治疗。</span><br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">世卫组织认定～美式整脊疗法是世界卫生组织认定的脊椎病治疗方法，作为西方的一种传统自然绿色疗法，它注重人体的整体研究，注重人体内部各器官及组织的相互关系，寻求一种维护、修复自然生理与物理平衡的方法，主要集中在对脊椎关节矫正和整理上，所以称为美式整脊。</span><br />
+<p>
+	<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">从根本上解决问题～美式整脊术认为脊柱是人体的第二条生命线，在人体内占据着中枢部位，影响着人类的健康。当脊椎压迫了神经之后，大脑的功能就不能有效地行使，会相应的造成功能性紊乱，从而影响了人体的健康。许多疾病直接和间接的与脊神经受到压迫有关。</span> 
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_21489.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_50769.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_46501.jpg\" alt=\"\" /> 
+</div>
+<div style=\"text-align:center;\">
+	<img style=\"width:80%;\" src=\"http://localhost/yajie_weixin_crm/weixin_crm/kindeditor/attached/image/20140324/20140324162316_37593.jpg\" alt=\"\" /> 
+</div>
+<br />
+<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\"></span> 
+<p>
+	<br />
+</p>', read_number='9', apply_number='5' WHERE 1  AND activity_id = 2
+Mar 25 12:16:18 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/activity/get_activity?source=company
+{"info":{"activity_id":"2","activity_name":"\u6d3b\u52a81","activity_begin_time":"0","activity_end_time":"1395763200","ctime":"1395718320","activity_html":"<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u65f6\u95f4:&nbsp;3\u670822\u65e5\u4e0b\u534814\u70b9<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u5730\u70b9:&nbsp;\u4e0a\u6d77\u5e02\u666e\u9640\u533a\u4e07\u822a\u6e21\u540e\u8def65\u53f7\u810a\u5b89\u5802<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u5730\u94c1:&nbsp;11\u53f7\u9686\u5fb7\u8def3\u53f7\u53e3\u51fa\u7ad9\u4e0a\u66f9\u6768\u8def\u6865\u4e0b\u6865\u5de6\u8f6c200\u7c73\u5373\u5230\uff0c\u8017\u65f66\u5206\u949f<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u516c\u4ea4:&nbsp;966\u7ec8\u70b9\u7ad9\u5bf9\u9762\uff0c941\uff0c13\uff0c45\u66f9\u5bb6\u6e21\u4e0b<\/span><br \/>\r\n<br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u5f88\u591a\u4eba\u90fd\u77e5\u9053\u81ea\u5df1\u9888\u690e\u4e0d\u597d\uff0c\u8170\u690e\u4e0d\u597d\uff0c\u53ef\u662f\uff0c\u4eba\u4f53\u7684\u810a\u690e\u662f\u4e00\u8282\u4e00\u8282\u7684\uff0c\u5230\u5e95\u662f\u54ea\u4e00\u4e2a\u4f4d\u7f6e\u51fa\u73b0\u4e86\u95ee\u9898\u5462\uff1f<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u73b0\u5728\uff0c\u8ddf\u968f\u810a\u5b89\u5802\u6765\u5b66\u4e60\u68c0\u6d4b\u5427\uff01\u5b66\u4f1a\u4e86\u68c0\u6d4b\uff0c\u5c31\u907f\u514d\u4e86\u4e00\u4e9b\u76f2\u76ee\u7684\u5224\u65ad\uff01\u4e5f\u5c31\u66f4\u6709\u9488\u5bf9\u6027\u7684\u89e3\u51b3\uff01<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">1\uff0e80%\u7684\u6162\u6027\u75c5\u8d77\u6e90\u4e8e\u810a\u67f1\u9519\u4f4d\uff0c\u6bd4\u5982\u9ad8\u8840\u538b\u3001\u51a0\u5fc3\u75c5\u3001\u80c3\u75c5\u3001\u7cd6\u5c3f\u75c5\u3001\u5fc3\u810f\u75c5\u7b49\u7b49\uff0c\u53ef\u662f\u6162\u6027\u75c5\u4f60\u662f\u6ca1\u6709\u529e\u6cd5\u5728\u4e00\u5f00\u59cb\u5c31\u77e5\u9053\u7684\uff0c\u7b49\u5230\u5f62\u6210\u6162\u6027\u75c5\uff0c\u751a\u81f3\u4e0d\u53ef\u9006\u7684\u6162\u6027\u75c5\uff0c\u518d\u5982\u4f55\u77eb\u6b63\u4e5f\u4e8e\u4e8b\u65e0\u8865\uff0c\u5230\u65f6\u53ea\u80fd\u89e3\u51b3\u75bc\u75db\u800c\u4e0d\u80fd\u6cbb\u672c\uff0c\u6240\u8c13\u4e0a\u533b\u6cbb\u672a\u75c5\uff0c\u4e9a\u5065\u5eb7\u5c31\u662f\u6162\u6027\u75c5\u7684\u5f00\u59cb\uff1b<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">2\uff0e\u60a8\u5b66\u4f1a\u4e86\uff0c\u4e86\u89e3\u4e86\u6211\u4eec\u7684\u539f\u7406\uff08\u8bf7\u8bb0\u4f4f\uff0c\u8fd9\u662f\u76ee\u524d\u6700\u5148\u8fdb\u7684\u7406\u5ff5\uff0c\u666e\u901a\u6309\u6469\u6ca1\u6709\u53ef\u6bd4\u6027\uff09\uff0c\u624d\u4f1a\u5e2e\u52a9\u6211\u4eec\u8fdb\u884c\u5ba3\u4f20\u548c\u63a8\u5e7f\uff0c\u800c\u7f51\u7edc\u65f6\u4ee3\uff0c\u60a8\u7684\u5e2e\u52a9\u5bf9\u6211\u4eec\u6765\u8bf4\u6781\u5176\u91cd\u8981\uff1b<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">3\uff0e\u73b0\u4ee3\u793e\u4f1a\u7684\u9888\u690e\u3001\u80f8\u690e\u3001\u8170\u690e\u3001\u9aa8\u76c6\u9519\u4f4d\u7684\u60c5\u51b5\u6570\u4e0d\u80dc\u6570\uff0c\u6211\u4eec\u53ea\u62c5\u5fc3\u5927\u5bb6\u5728\u9519\u8bef\u7684\u7406\u5ff5\u4e0b\uff0c\u6d6a\u8d39\u91d1\u94b1\u3001\u6d6a\u8d39\u65f6\u95f4\u3001\u803d\u8bef\u6cbb\u7597\u65f6\u673a\uff1b<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">4\uff0e\u975e\u5e38\u91cd\u8981\u7684\u4e00\u70b9\uff0c\u4e5f\u662f\u60a8\u6700\u5173\u5fc3\u7684\u4e00\u70b9\uff1a\u6211\u4eec\u662f\u6709\u771f\u7684\u6548\u679c\uff0c\u800c\u4e14\u7acb\u7aff\u89c1\u5f71\uff0c\u6240\u4ee5\u6211\u4eec\u5e0c\u671b\u60a8\u770b\u5230\uff0c\u6210\u4e3a\u6211\u4eec\u7684\u4e49\u52a1\u63a8\u5e7f\u5458\uff0c\u540c\u65f6\u4e5f\u8ba9\u60a8\u548c\u60a8\u7684\u5bb6\u4eba\u3001\u670b\u53cb\u4e0d\u518d\u9677\u5165\u8bef\u533a\u3002<\/span><br \/>\r\n<br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u4f55\u8c13\u7f8e\u5f0f\u6574\u810a\uff1f<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u6574\u810a\u533b\u5b66\u8d77\u6e90\u4e8e\u7f8e\u56fd\uff0c\u5df2\u6709\u767e\u5e74\u5386\u53f2\uff0c\u5c5e\u810a\u67f1\u795e\u7ecf\u533b\u5b66\u8303\u7574\uff0c\u4ea6\u79f0\u7f8e\u5f0f\u810a\u690e\u77eb\u6b63\u672f\u3002<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u533b\u7597\u8ba4\u53ef\uff5e\u5728\u7f8e\u56fd\uff0c\u6709\u4e09\u79cd\u5177\u6709\u72ec\u7acb\u8bca\u65ad\u6743\u3001\u884c\u533b\u6743\u7684\u533b\u751f\uff0c\u5176\u4e2d\u4e00\u79cd\u662f\u810a\u690e\u77eb\u6b63\u5e08\u3002\u7f8e\u56fd\u5404\u5927\u4e3b\u8981\u533b\u7597\u4fdd\u9669\u673a\u6784\u53ca\u5176\u4fdd\u9669\u9669\u79cd\uff0c\u5747\u8ba4\u53ef\u810a\u690e\u77eb\u6b63\u6cbb\u7597\u3002\u8f83\u8457\u540d\u7684\u6709\uff1a\u5168\u7f8e\u8001\u5e74\u53ca\u65e0\u5de5\u4f5c\u80fd\u529b\u8005\u4fdd\u9669\u3001\u533b\u7597\u8865\u52a9\u8ba1\u5212\u3001\u84dd\u76fe\u84dd\u5341\u5b57\u7b49\u3002&nbsp;\u6781\u4e3a\u666e\u904d\u7684\u3001\u6240\u6709\u7684\u8f66\u7978\u533b\u7597\u4fdd\u9669\uff0c\u5747\u8ba4\u53ef\u810a\u690e\u77eb\u6b63\u6cbb\u7597\u3002<\/span><br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u4e16\u536b\u7ec4\u7ec7\u8ba4\u5b9a\uff5e\u7f8e\u5f0f\u6574\u810a\u7597\u6cd5\u662f\u4e16\u754c\u536b\u751f\u7ec4\u7ec7\u8ba4\u5b9a\u7684\u810a\u690e\u75c5\u6cbb\u7597\u65b9\u6cd5\uff0c\u4f5c\u4e3a\u897f\u65b9\u7684\u4e00\u79cd\u4f20\u7edf\u81ea\u7136\u7eff\u8272\u7597\u6cd5\uff0c\u5b83\u6ce8\u91cd\u4eba\u4f53\u7684\u6574\u4f53\u7814\u7a76\uff0c\u6ce8\u91cd\u4eba\u4f53\u5185\u90e8\u5404\u5668\u5b98\u53ca\u7ec4\u7ec7\u7684\u76f8\u4e92\u5173\u7cfb\uff0c\u5bfb\u6c42\u4e00\u79cd\u7ef4\u62a4\u3001\u4fee\u590d\u81ea\u7136\u751f\u7406\u4e0e\u7269\u7406\u5e73\u8861\u7684\u65b9\u6cd5\uff0c\u4e3b\u8981\u96c6\u4e2d\u5728\u5bf9\u810a\u690e\u5173\u8282\u77eb\u6b63\u548c\u6574\u7406\u4e0a\uff0c\u6240\u4ee5\u79f0\u4e3a\u7f8e\u5f0f\u6574\u810a\u3002<\/span><br \/>\r\n<p>\r\n\t<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\">\u4ece\u6839\u672c\u4e0a\u89e3\u51b3\u95ee\u9898\uff5e\u7f8e\u5f0f\u6574\u810a\u672f\u8ba4\u4e3a\u810a\u67f1\u662f\u4eba\u4f53\u7684\u7b2c\u4e8c\u6761\u751f\u547d\u7ebf\uff0c\u5728\u4eba\u4f53\u5185\u5360\u636e\u7740\u4e2d\u67a2\u90e8\u4f4d\uff0c\u5f71\u54cd\u7740\u4eba\u7c7b\u7684\u5065\u5eb7\u3002\u5f53\u810a\u690e\u538b\u8feb\u4e86\u795e\u7ecf\u4e4b\u540e\uff0c\u5927\u8111\u7684\u529f\u80fd\u5c31\u4e0d\u80fd\u6709\u6548\u5730\u884c\u4f7f\uff0c\u4f1a\u76f8\u5e94\u7684\u9020\u6210\u529f\u80fd\u6027\u7d0a\u4e71\uff0c\u4ece\u800c\u5f71\u54cd\u4e86\u4eba\u4f53\u7684\u5065\u5eb7\u3002\u8bb8\u591a\u75be\u75c5\u76f4\u63a5\u548c\u95f4\u63a5\u7684\u4e0e\u810a\u795e\u7ecf\u53d7\u5230\u538b\u8feb\u6709\u5173\u3002<\/span> \r\n<\/p>\r\n<p>\r\n\t<br \/>\r\n<\/p>\r\n<p>\r\n\t<br \/>\r\n<\/p>\r\n<div style=\"text-align:center;\">\r\n\t<img style=\"width:80%;\" src=\"http:\/\/localhost\/yajie_weixin_crm\/weixin_crm\/kindeditor\/attached\/image\/20140324\/20140324162316_21489.jpg\" alt=\"\" \/> \r\n<\/div>\r\n<div style=\"text-align:center;\">\r\n\t<img style=\"width:80%;\" src=\"http:\/\/localhost\/yajie_weixin_crm\/weixin_crm\/kindeditor\/attached\/image\/20140324\/20140324162316_50769.jpg\" alt=\"\" \/> \r\n<\/div>\r\n<div style=\"text-align:center;\">\r\n\t<img style=\"width:80%;\" src=\"http:\/\/localhost\/yajie_weixin_crm\/weixin_crm\/kindeditor\/attached\/image\/20140324\/20140324162316_46501.jpg\" alt=\"\" \/> \r\n<\/div>\r\n<div style=\"text-align:center;\">\r\n\t<img style=\"width:80%;\" src=\"http:\/\/localhost\/yajie_weixin_crm\/weixin_crm\/kindeditor\/attached\/image\/20140324\/20140324162316_37593.jpg\" alt=\"\" \/> \r\n<\/div>\r\n<br \/>\r\n<span style=\"color:#000000;font-family:STHeiti;font-size:16px;font-style:normal;font-weight:normal;line-height:28px;background-color:#FFFFFF;\"><\/span> \r\n<p>\r\n\t<br \/>\r\n<\/p>","read_number":9,"apply_number":"5"},"record":[{"apply_id":"1","activity_id":"2","real_name":"\u7fdf\u6653\u5e73","user_phone":"2147483647","apply_time":"1395720722"},{"apply_id":"2","activity_id":"2","real_name":"\u7fdf\u6653\u5e73","user_phone":"2147483647","apply_time":"1395720751"},{"apply_id":"3","activity_id":"2","real_name":"\u7fdf\u6653\u5e73","user_phone":"2147483647","apply_time":"1395720905"},{"apply_id":"4","activity_id":"2","real_name":"\u7fdf\u6653\u5e73","user_phone":"2147483647","apply_time":"1395720950"}]}
+Mar 25 12:16:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:16:45 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:37:34 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:37:34 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:38:39 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:38:39 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:41:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:41:30 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:41:31 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 12:41:31 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','1','1','1395722491')
+Mar 25 12:41:31 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\\u5973\\u535a\\u58eb\\/\\u7a0b\\u5e8f\\u733f\"','2','1','1395722491')
+Mar 25 12:41:31 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','3','1','1395722491')
+Mar 25 12:41:31 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','4','1','1395722491')
+Mar 25 12:41:31 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"\"","question_id":"1","user_id":"1","ctime":1395722491},"2":{"quesion_answer":"\"\\u5973\\u535a\\u58eb\\\/\\u7a0b\\u5e8f\\u733f\"","question_id":"2","user_id":"1","ctime":1395722491},"3":{"quesion_answer":"null","question_id":"3","user_id":"1","ctime":1395722491},"4":{"quesion_answer":"\"\"","question_id":"4","user_id":"1","ctime":1395722491},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 12:41:38 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 12:41:38 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','1','1','1395722498')
+Mar 25 12:41:38 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\\u5973\\u535a\\u58eb\\/\\u7a0b\\u5e8f\\u733f\"','2','1','1395722498')
+Mar 25 12:41:38 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','3','1','1395722498')
+Mar 25 12:41:38 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','4','1','1395722498')
+Mar 25 12:41:38 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"\"","question_id":"1","user_id":"1","ctime":1395722498},"2":{"quesion_answer":"\"\\u5973\\u535a\\u58eb\\\/\\u7a0b\\u5e8f\\u733f\"","question_id":"2","user_id":"1","ctime":1395722498},"3":{"quesion_answer":"null","question_id":"3","user_id":"1","ctime":1395722498},"4":{"quesion_answer":"\"\"","question_id":"4","user_id":"1","ctime":1395722498},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 12:41:39 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:41:39 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:41:40 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:41:40 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:41:41 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 12:41:41 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','1','1','1395722501')
+Mar 25 12:41:41 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\\u5973\\u535a\\u58eb\\/\\u7a0b\\u5e8f\\u733f\"','2','1','1395722501')
+Mar 25 12:41:41 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','3','1','1395722501')
+Mar 25 12:41:41 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','4','1','1395722501')
+Mar 25 12:41:41 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"\"","question_id":"1","user_id":"1","ctime":1395722501},"2":{"quesion_answer":"\"\\u5973\\u535a\\u58eb\\\/\\u7a0b\\u5e8f\\u733f\"","question_id":"2","user_id":"1","ctime":1395722501},"3":{"quesion_answer":"null","question_id":"3","user_id":"1","ctime":1395722501},"4":{"quesion_answer":"\"\"","question_id":"4","user_id":"1","ctime":1395722501},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 12:41:42 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:41:42 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:42:04 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:42:04 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:42:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 12:42:05 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','1','1','1395722525')
+Mar 25 12:42:05 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\\u5973\\u535a\\u58eb\\/\\u7a0b\\u5e8f\\u733f\"','2','1','1395722525')
+Mar 25 12:42:05 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','3','1','1395722525')
+Mar 25 12:42:05 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','4','1','1395722525')
+Mar 25 12:42:05 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"\"","question_id":"1","user_id":"1","ctime":1395722525},"2":{"quesion_answer":"\"\\u5973\\u535a\\u58eb\\\/\\u7a0b\\u5e8f\\u733f\"","question_id":"2","user_id":"1","ctime":1395722525},"3":{"quesion_answer":"null","question_id":"3","user_id":"1","ctime":1395722525},"4":{"quesion_answer":"\"\"","question_id":"4","user_id":"1","ctime":1395722525},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 12:42:07 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:42:07 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:42:17 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:42:17 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:43:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:43:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:46:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:46:50 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:47:07 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:47:07 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:57:20 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:57:20 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:57:36 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:57:36 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:57:38 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 12:57:38 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','1','1','1395723458')
+Mar 25 12:57:38 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\\u5973\\u535a\\u58eb\\/\\u7a0b\\u5e8f\\u733f\"','2','1','1395723458')
+Mar 25 12:57:38 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','3','1','1395723458')
+Mar 25 12:57:38 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','4','1','1395723458')
+Mar 25 12:57:38 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"\"","question_id":"1","user_id":"1","ctime":1395723458},"2":{"quesion_answer":"\"\\u5973\\u535a\\u58eb\\\/\\u7a0b\\u5e8f\\u733f\"","question_id":"2","user_id":"1","ctime":1395723458},"3":{"quesion_answer":"null","question_id":"3","user_id":"1","ctime":1395723458},"4":{"quesion_answer":"\"\"","question_id":"4","user_id":"1","ctime":1395723458},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 12:57:39 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:57:39 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:58:58 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 12:58:58 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 12:59:00 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 12:59:00 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','1','1','1395723540')
+Mar 25 12:59:00 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\\u5973\\u535a\\u58eb\\/\\u7a0b\\u5e8f\\u733f\"','2','1','1395723540')
+Mar 25 12:59:00 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','3','1','1395723540')
+Mar 25 12:59:00 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','4','1','1395723540')
+Mar 25 12:59:00 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"\"","question_id":"1","user_id":"1","ctime":1395723540},"2":{"quesion_answer":"\"\\u5973\\u535a\\u58eb\\\/\\u7a0b\\u5e8f\\u733f\"","question_id":"2","user_id":"1","ctime":1395723540},"3":{"quesion_answer":"null","question_id":"3","user_id":"1","ctime":1395723540},"4":{"quesion_answer":"\"\"","question_id":"4","user_id":"1","ctime":1395723540},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 13:01:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:01:52 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:01:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:01:53 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:02:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:02:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:04:44 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:04:44 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:04:48 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 13:04:48 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"dasdasd\"','1','1','1395723888')
+Mar 25 13:04:48 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\\u5973\\u535a\\u58eb\\/\\u7a0b\\u5e8f\\u733f\"','2','1','1395723888')
+Mar 25 13:04:48 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','3','1','1395723888')
+Mar 25 13:04:48 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"asdasf\"','4','1','1395723888')
+Mar 25 13:04:48 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"dasdasd\"","question_id":"1","user_id":"1","ctime":1395723888},"2":{"quesion_answer":"\"\\u5973\\u535a\\u58eb\\\/\\u7a0b\\u5e8f\\u733f\"","question_id":"2","user_id":"1","ctime":1395723888},"3":{"quesion_answer":"null","question_id":"3","user_id":"1","ctime":1395723888},"4":{"quesion_answer":"\"asdasf\"","question_id":"4","user_id":"1","ctime":1395723888},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 13:05:57 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:05:57 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:05:58 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:05:58 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:06:01 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 13:06:01 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','1','1','1395723961')
+Mar 25 13:06:01 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','2','1','1395723961')
+Mar 25 13:06:01 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','3','1','1395723961')
+Mar 25 13:06:01 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','4','1','1395723961')
+Mar 25 13:06:01 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"\"","question_id":"1","user_id":"1","ctime":1395723961},"2":{"quesion_answer":"null","question_id":"2","user_id":"1","ctime":1395723961},"3":{"quesion_answer":"null","question_id":"3","user_id":"1","ctime":1395723961},"4":{"quesion_answer":"\"\"","question_id":"4","user_id":"1","ctime":1395723961},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 13:06:32 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:06:32 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:06:33 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:06:33 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:06:35 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 13:06:35 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','1','1','1395723995')
+Mar 25 13:06:35 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','2','1','1395723995')
+Mar 25 13:06:35 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','3','1','1395723995')
+Mar 25 13:06:35 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','4','1','1395723995')
+Mar 25 13:06:35 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"\"","question_id":"1","user_id":"1","ctime":1395723995},"2":{"quesion_answer":"null","question_id":"2","user_id":"1","ctime":1395723995},"3":{"quesion_answer":"null","question_id":"3","user_id":"1","ctime":1395723995},"4":{"quesion_answer":"\"\"","question_id":"4","user_id":"1","ctime":1395723995},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 13:06:48 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:06:48 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:06:49 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:06:49 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:08:17 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:08:17 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:10:37 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:10:37 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:10:38 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 13:10:38 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','1','1','1395724238')
+Mar 25 13:10:38 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','2','1','1395724238')
+Mar 25 13:10:38 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','3','1','1395724238')
+Mar 25 13:10:38 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','4','1','1395724238')
+Mar 25 13:10:38 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"\"","question_id":"1","user_id":"1","ctime":1395724238},"2":{"quesion_answer":"null","question_id":"2","user_id":"1","ctime":1395724238},"3":{"quesion_answer":"null","question_id":"3","user_id":"1","ctime":1395724238},"4":{"quesion_answer":"\"\"","question_id":"4","user_id":"1","ctime":1395724238},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 13:10:48 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:10:48 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:10:49 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:10:49 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:10:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 13:10:50 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','1','1','1395724250')
+Mar 25 13:10:50 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','2','1','1395724250')
+Mar 25 13:10:50 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','3','1','1395724250')
+Mar 25 13:10:50 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','4','1','1395724250')
+Mar 25 13:10:50 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"\"","question_id":"1","user_id":"1","ctime":1395724250},"2":{"quesion_answer":"null","question_id":"2","user_id":"1","ctime":1395724250},"3":{"quesion_answer":"null","question_id":"3","user_id":"1","ctime":1395724250},"4":{"quesion_answer":"\"\"","question_id":"4","user_id":"1","ctime":1395724250},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 13:13:15 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:13:15 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:13:15 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:13:15 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:15:19 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:15:19 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:15:19 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:15:19 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:16:46 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:16:46 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:16:48 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 13:16:48 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','1','1','1395724608')
+Mar 25 13:16:48 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','2','1','1395724608')
+Mar 25 13:16:48 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('null','3','1','1395724608')
+Mar 25 13:16:48 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\"','4','1','1395724608')
+Mar 25 13:16:48 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"\"","question_id":"1","user_id":"1","ctime":1395724608},"2":{"quesion_answer":"null","question_id":"2","user_id":"1","ctime":1395724608},"3":{"quesion_answer":"null","question_id":"3","user_id":"1","ctime":1395724608},"4":{"quesion_answer":"\"\"","question_id":"4","user_id":"1","ctime":1395724608},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 13:17:44 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:17:44 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:18:07 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:18:07 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:18:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:18:23 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:18:49 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:18:49 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:19:31 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:19:31 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:20:43 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:20:43 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:21:27 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+SELECT * FROM weixin_company.question  WHERE 1      
+Mar 25 13:21:27 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/get_question
+{"question":[{"question_id":"1","question_type":"0","question_title":"\u4f60\u7684\u59d3\u540d\u662f\u4ec0\u4e48","question_answer_1":"","question_answer_2":[""]},{"question_id":"2","question_type":"1","question_title":"\u4f60\u7684\u6027\u522b\u662f\u4ec0\u4e48","question_answer_1":["\u7537","\u5973","\u5973\u535a\u58eb\/\u7a0b\u5e8f\u733f"],"question_answer_2":""},{"question_id":"3","question_type":"2","question_title":"\u4f60\u7684\u5174\u8da3\u6709","question_answer_1":null,"question_answer_2":["\u8db3\u7403","\u7bee\u7403","\u66f4\u591a"]},{"question_id":"4","question_type":"3","question_title":"\u4f60\u7684\u81ea\u6211\u4ecb\u7ecd","question_answer_1":null,"question_answer_2":[""]}],"title":"1,2,3,4"}
+Mar 25 13:21:33 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 25 13:21:33 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"dasdsadasf\"','1','1','1395724893')
+Mar 25 13:21:33 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\\u7537\"','2','1','1395724893')
+Mar 25 13:21:33 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"\\u8db3\\u7403\"','3','1','1395724893')
+Mar 25 13:21:33 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+insert into weixin_company.quesion_record (quesion_answer,question_id,user_id,ctime) values('\"dasdassdasf\"','4','1','1395724893')
+Mar 25 13:21:33 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/question/add_question
+{"1":{"quesion_answer":"\"dasdsadasf\"","question_id":"1","user_id":"1","ctime":1395724893},"2":{"quesion_answer":"\"\\u7537\"","question_id":"2","user_id":"1","ctime":1395724893},"3":{"quesion_answer":"\"\\u8db3\\u7403\"","question_id":"3","user_id":"1","ctime":1395724893},"4":{"quesion_answer":"\"dasdassdasf\"","question_id":"4","user_id":"1","ctime":1395724893}}
+Mar 25 14:07:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXB24237751X65730M76754Y10884N61','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX628Z37L73Z39B31P65112U56363259','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX884Z46397E44I62P38264H85X38Q62','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXG33L53690575819L20051M63321A36','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXQ24V39Y64K88D69R85154F72G41L17','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXF31T26754E29160H16G58B25G91387','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX678N24V40H68989F50D78G41213889','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXY68H28929232M17588918B61D60S49','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXT68H82165022E11E26Y29K60M42E20','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX647S20835577X79925F28C57S57T31','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX447O26P50T66Z48J57G54E56618M15','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXE96777W87P62I90589679C19349H21','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXO30Y86X32J55V64S11U71G82259A28','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXD14596N44W55W62O83412D17O40521','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXX23X37J88W10089Y79J90H69R88740','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXV81019R27814264481R16736864L65','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX055L69062T90124B24C73627332R14','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX238H45A41N27L46831L96U37B90R85','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXO67W72G94384X76H59V66X82J85D31','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXL48U40190T10W30W15J25694O32I47','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXV99260783S40J78R29E62X75J56E53','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXB61424U25955K99592G15D65N74S91','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX886P22132C77523H53882A38148L14','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXF76K47N65D59Y77E44I79P40Z19436','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX383L70450M99926K49391A32Q15E65','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXF23D92878846869R91I89E52P30M37','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX357696Z74022F56Y52156G35T82C66','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXQ62566Z37I13W65253V53J56G76658','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXD22L90551J90I36220U82I25K63I12','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXO53Z20O99F27933355U70N80B81J53','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX246O43G19H74446V75028X89W32G94','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXH48X44P84089S35020P10918A36O63','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXX20X79K74E20897H97N65967X77L47','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXV21Q24881930K88X27696G17G17228','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX611R56L63Z85Q45G88196B46T96S32','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX799Q17H12K73228E99S71S84W66G49','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX631Y77M64W12B98V53I30795660E38','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX024J61M84F77047729V66N44D66L63','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXF66A65M71269339P89O68C11E73135','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX150T95W13W14998312Q57J28197Z18','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXM56722169F41V89517A61I56T51K27','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX419818J82I80F77622P70345024U44','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXN71D64E39O74B69V37Z77P27L56B74','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX935713K87O95V44V76312395I32M53','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXL22T42962K95O22R39Y18483D75R32','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXZ27L46N87N57H21F57E85C88974R41','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX963J10845550796B79K26R99R75449','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXG52G87G81X15X83394144X91L77E19','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXC23N95356P11P52J67S58T37H55N33','1')
+Mar 25 14:07:53 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXC69618Q33E14F58P30S84E75729359','1')
+Mar 25 14:07:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:08:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXU34E13J19R83V93Q84L77L21O46888','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXY52843I35J23597D96D86099J45O46','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXM44M29O25V71M61099J72P58B36O66','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX522K61T70V31544P63416V22K74Q52','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXF10C27886236D40883C32D27U82867','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXZ64327B87E79089548078761996W15','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXN28K19K67O89E41E11X52B47524Y27','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXU90Z24B45C76B50D76P59S73I93R42','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXS40058659B27P38S49I66W17Z11S62','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXO22030T72R79M19Y14E81H62V51D95','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXR79N42820T25S18O61791668U34G85','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX411E65O44160S83972S10P49M79M11','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXS12U92131F74V72X40X78P53N93L30','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXW49T73X62760D88S71Z21780T39446','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXJ66C40P11B10O91G84K73M91533Q52','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXD92D35244Y24510X16K55P79B60U48','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXD99O10921L62460E10233O72G80F63','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXH18N47K93220B48A85X95421U77E29','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXD63P70255T98X84N55Z15N40D35Q66','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXI78F35366M90B87B27W90B21X89Z71','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX274198519C68Y18X57G53U14Y68U31','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXG33W32091D78Z30076W34O36H16Z59','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX193185C84U60M75771P77K66L82Z67','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXR38H57465B47H25Z74894G69P78863','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXD90O12D85Z82I80216I58E14442K65','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXY63S35350E47L85225X19I63Q81J92','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX030K19449R86L57Z65N61R52F35H40','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXZ15W25742X90Z98P22S96C56M27L39','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXD21M80G65S62Z28351677O38K14N59','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXV30N35W69170U21J26436173968961','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXL13X73B77T45664475P58360F32575','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX989R44455854D96S74D95Q74412410','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX933Q33D35I92O94R47L19A31Y20J77','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXH82724O51L59A59U15035T18N66M58','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXM83T56R92B39S11Z89913197363816','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXC97P87340H33579C35170E88056281','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXY66V39695Q18U88955H24U24I63S80','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXM72Q46D37L65B76B38755580B35618','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXH86U32E95E27556Y75S53U26U64Z99','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXE98831G38J94B39227Q49B54J42G13','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX635M14J50162P70G26X90825T96M26','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXK34G83W49P29S11K95E95U54B21O59','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXG54D20080X83W14920J10V54V64L43','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXY57T89R48I97A51G18K24842H33K21','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXJ58658N95B97A77X96S93W73550U15','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXG32G95C25L13S78O29023H79N74A77','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX122S31167560529O19I69G44P51W92','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXV55910551H50H98B28C47P91I91Y88','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WXW97524E83222827561Q42640W40B16','1')
+Mar 25 14:08:23 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+insert into weixin_company.promo_code (code_name,code_merchandise) values('WX918U53Z38G75913H58Q85372R92F36','1')
+Mar 25 14:08:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:08:59 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:09:15 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:09:16 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code/?source=company
+{"promo_code_id":"42","code_name":"WXK34G83W4","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:47 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:47 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"47","code_name":"WX122S3116","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:49 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:49 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"47","code_name":"WX122S3116","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:50 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"37","code_name":"WXY66V3969","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:51 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"2","code_name":"WXY52843I3","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:51 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:51 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"3","code_name":"WXM44M29O2","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:52 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"20","code_name":"WXI78F3536","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:52 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"35","code_name":"WXM83T56R9","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:52 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"21","code_name":"WX27419851","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:53 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"36","code_name":"WXC97P8734","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:53 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"4","code_name":"WX522K61T7","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:53 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"49","code_name":"WXW97524E8","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:53 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"28","code_name":"WXZ15W2574","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:53 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"1","code_name":"WXU34E13J1","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"41","code_name":"WX635M14J5","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"5","code_name":"WXF10C2788","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"44","code_name":"WXY57T89R4","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"2","code_name":"WXY52843I3","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:55 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:55 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"29","code_name":"WXD21M80G6","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:55 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:55 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"31","code_name":"WXL13X73B7","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:55 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:55 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"48","code_name":"WXV5591055","code_merchandise":"1","code_state":"0"}
+Mar 25 14:10:55 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+SELECT * FROM weixin_company.promo_code  WHERE 1  AND code_merchandise = 1     
+Mar 25 14:10:55 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/code/get_code?source=company
+{"promo_code_id":"40","code_name":"WXE98831G3","code_merchandise":"1","code_state":"0"}
+Mar 25 15:00:01 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Mar 25 15:00:01 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/area/get_area
+{"0":{"area_id":"1","title":"\u5317\u4eac","pid":"0"},"1":{"area_id":"21","title":"\u5929\u6d25","pid":"0"},"2":{"area_id":"41","title":"\u6cb3\u5317","pid":"0"},"3":{"area_id":"225","title":"\u5c71\u897f","pid":"0"},"4":{"area_id":"356","title":"\u5185\u8499\u53e4","pid":"0"},"5":{"area_id":"471","title":"\u8fbd\u5b81","pid":"0"},"6":{"area_id":"586","title":"\u5409\u6797","pid":"0"},"7":{"area_id":"656","title":"\u9ed1\u9f99\u6c5f","pid":"0"},"8":{"area_id":"802","title":"\u4e0a\u6d77","pid":"0"},"9":{"area_id":"823","title":"\u6c5f\u82cf","pid":"0"},"10":{"area_id":"943","title":"\u6d59\u6c5f","pid":"0"},"11":{"area_id":"1045","title":"\u5b89\u5fbd","pid":"0"},"12":{"area_id":"1168","title":"\u798f\u5efa","pid":"0"},"13":{"area_id":"1263","title":"\u6c5f\u897f","pid":"0"},"14":{"area_id":"1374","title":"\u5c71\u4e1c","pid":"0"},"15":{"area_id":"1532","title":"\u6cb3\u5357","pid":"0"},"16":{"area_id":"1709","title":"\u6e56\u5317","pid":"0"},"17":{"area_id":"1826","title":"\u6e56\u5357","pid":"0"},"18":{"area_id":"1963","title":"\u5e7f\u4e1c","pid":"0"},"19":{"area_id":"2106","title":"\u5e7f\u897f","pid":"0"},"20":{"area_id":"2230","title":"\u6d77\u5357","pid":"0"},"21":{"area_id":"2257","title":"\u91cd\u5e86\u5e02","pid":"0"},"22":{"area_id":"2299","title":"\u56db\u5ddd","pid":"0"},"23":{"area_id":"2502","title":"\u8d35\u5dde","pid":"0"},"24":{"area_id":"2600","title":"\u4e91\u5357","pid":"0"},"25":{"area_id":"2746","title":"\u897f\u85cf","pid":"0"},"26":{"area_id":"2827","title":"\u9655\u897f","pid":"0"},"27":{"area_id":"2945","title":"\u7518\u8083","pid":"0"},"28":{"area_id":"3046","title":"\u9752\u6d77","pid":"0"},"29":{"area_id":"3098","title":"\u5b81\u590f","pid":"0"},"30":{"area_id":"3125","title":"\u65b0\u7586","pid":"0"},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 15:00:01 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Mar 25 15:00:01 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/area/get_area
+{"0":{"area_id":"1","title":"\u5317\u4eac","pid":"0"},"1":{"area_id":"21","title":"\u5929\u6d25","pid":"0"},"2":{"area_id":"41","title":"\u6cb3\u5317","pid":"0"},"3":{"area_id":"225","title":"\u5c71\u897f","pid":"0"},"4":{"area_id":"356","title":"\u5185\u8499\u53e4","pid":"0"},"5":{"area_id":"471","title":"\u8fbd\u5b81","pid":"0"},"6":{"area_id":"586","title":"\u5409\u6797","pid":"0"},"7":{"area_id":"656","title":"\u9ed1\u9f99\u6c5f","pid":"0"},"8":{"area_id":"802","title":"\u4e0a\u6d77","pid":"0"},"9":{"area_id":"823","title":"\u6c5f\u82cf","pid":"0"},"10":{"area_id":"943","title":"\u6d59\u6c5f","pid":"0"},"11":{"area_id":"1045","title":"\u5b89\u5fbd","pid":"0"},"12":{"area_id":"1168","title":"\u798f\u5efa","pid":"0"},"13":{"area_id":"1263","title":"\u6c5f\u897f","pid":"0"},"14":{"area_id":"1374","title":"\u5c71\u4e1c","pid":"0"},"15":{"area_id":"1532","title":"\u6cb3\u5357","pid":"0"},"16":{"area_id":"1709","title":"\u6e56\u5317","pid":"0"},"17":{"area_id":"1826","title":"\u6e56\u5357","pid":"0"},"18":{"area_id":"1963","title":"\u5e7f\u4e1c","pid":"0"},"19":{"area_id":"2106","title":"\u5e7f\u897f","pid":"0"},"20":{"area_id":"2230","title":"\u6d77\u5357","pid":"0"},"21":{"area_id":"2257","title":"\u91cd\u5e86\u5e02","pid":"0"},"22":{"area_id":"2299","title":"\u56db\u5ddd","pid":"0"},"23":{"area_id":"2502","title":"\u8d35\u5dde","pid":"0"},"24":{"area_id":"2600","title":"\u4e91\u5357","pid":"0"},"25":{"area_id":"2746","title":"\u897f\u85cf","pid":"0"},"26":{"area_id":"2827","title":"\u9655\u897f","pid":"0"},"27":{"area_id":"2945","title":"\u7518\u8083","pid":"0"},"28":{"area_id":"3046","title":"\u9752\u6d77","pid":"0"},"29":{"area_id":"3098","title":"\u5b81\u590f","pid":"0"},"30":{"area_id":"3125","title":"\u65b0\u7586","pid":"0"},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 15:00:01 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Mar 25 15:00:01 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/area/get_area
+{"0":{"area_id":"1","title":"\u5317\u4eac","pid":"0"},"1":{"area_id":"21","title":"\u5929\u6d25","pid":"0"},"2":{"area_id":"41","title":"\u6cb3\u5317","pid":"0"},"3":{"area_id":"225","title":"\u5c71\u897f","pid":"0"},"4":{"area_id":"356","title":"\u5185\u8499\u53e4","pid":"0"},"5":{"area_id":"471","title":"\u8fbd\u5b81","pid":"0"},"6":{"area_id":"586","title":"\u5409\u6797","pid":"0"},"7":{"area_id":"656","title":"\u9ed1\u9f99\u6c5f","pid":"0"},"8":{"area_id":"802","title":"\u4e0a\u6d77","pid":"0"},"9":{"area_id":"823","title":"\u6c5f\u82cf","pid":"0"},"10":{"area_id":"943","title":"\u6d59\u6c5f","pid":"0"},"11":{"area_id":"1045","title":"\u5b89\u5fbd","pid":"0"},"12":{"area_id":"1168","title":"\u798f\u5efa","pid":"0"},"13":{"area_id":"1263","title":"\u6c5f\u897f","pid":"0"},"14":{"area_id":"1374","title":"\u5c71\u4e1c","pid":"0"},"15":{"area_id":"1532","title":"\u6cb3\u5357","pid":"0"},"16":{"area_id":"1709","title":"\u6e56\u5317","pid":"0"},"17":{"area_id":"1826","title":"\u6e56\u5357","pid":"0"},"18":{"area_id":"1963","title":"\u5e7f\u4e1c","pid":"0"},"19":{"area_id":"2106","title":"\u5e7f\u897f","pid":"0"},"20":{"area_id":"2230","title":"\u6d77\u5357","pid":"0"},"21":{"area_id":"2257","title":"\u91cd\u5e86\u5e02","pid":"0"},"22":{"area_id":"2299","title":"\u56db\u5ddd","pid":"0"},"23":{"area_id":"2502","title":"\u8d35\u5dde","pid":"0"},"24":{"area_id":"2600","title":"\u4e91\u5357","pid":"0"},"25":{"area_id":"2746","title":"\u897f\u85cf","pid":"0"},"26":{"area_id":"2827","title":"\u9655\u897f","pid":"0"},"27":{"area_id":"2945","title":"\u7518\u8083","pid":"0"},"28":{"area_id":"3046","title":"\u9752\u6d77","pid":"0"},"29":{"area_id":"3098","title":"\u5b81\u590f","pid":"0"},"30":{"area_id":"3125","title":"\u65b0\u7586","pid":"0"},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 15:00:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Mar 25 15:00:45 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/area/get_area
+{"0":{"area_id":"1","title":"\u5317\u4eac","pid":"0"},"1":{"area_id":"21","title":"\u5929\u6d25","pid":"0"},"2":{"area_id":"41","title":"\u6cb3\u5317","pid":"0"},"3":{"area_id":"225","title":"\u5c71\u897f","pid":"0"},"4":{"area_id":"356","title":"\u5185\u8499\u53e4","pid":"0"},"5":{"area_id":"471","title":"\u8fbd\u5b81","pid":"0"},"6":{"area_id":"586","title":"\u5409\u6797","pid":"0"},"7":{"area_id":"656","title":"\u9ed1\u9f99\u6c5f","pid":"0"},"8":{"area_id":"802","title":"\u4e0a\u6d77","pid":"0"},"9":{"area_id":"823","title":"\u6c5f\u82cf","pid":"0"},"10":{"area_id":"943","title":"\u6d59\u6c5f","pid":"0"},"11":{"area_id":"1045","title":"\u5b89\u5fbd","pid":"0"},"12":{"area_id":"1168","title":"\u798f\u5efa","pid":"0"},"13":{"area_id":"1263","title":"\u6c5f\u897f","pid":"0"},"14":{"area_id":"1374","title":"\u5c71\u4e1c","pid":"0"},"15":{"area_id":"1532","title":"\u6cb3\u5357","pid":"0"},"16":{"area_id":"1709","title":"\u6e56\u5317","pid":"0"},"17":{"area_id":"1826","title":"\u6e56\u5357","pid":"0"},"18":{"area_id":"1963","title":"\u5e7f\u4e1c","pid":"0"},"19":{"area_id":"2106","title":"\u5e7f\u897f","pid":"0"},"20":{"area_id":"2230","title":"\u6d77\u5357","pid":"0"},"21":{"area_id":"2257","title":"\u91cd\u5e86\u5e02","pid":"0"},"22":{"area_id":"2299","title":"\u56db\u5ddd","pid":"0"},"23":{"area_id":"2502","title":"\u8d35\u5dde","pid":"0"},"24":{"area_id":"2600","title":"\u4e91\u5357","pid":"0"},"25":{"area_id":"2746","title":"\u897f\u85cf","pid":"0"},"26":{"area_id":"2827","title":"\u9655\u897f","pid":"0"},"27":{"area_id":"2945","title":"\u7518\u8083","pid":"0"},"28":{"area_id":"3046","title":"\u9752\u6d77","pid":"0"},"29":{"area_id":"3098","title":"\u5b81\u590f","pid":"0"},"30":{"area_id":"3125","title":"\u65b0\u7586","pid":"0"},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 15:00:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Mar 25 15:00:45 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/area/get_area
+{"0":{"area_id":"1","title":"\u5317\u4eac","pid":"0"},"1":{"area_id":"21","title":"\u5929\u6d25","pid":"0"},"2":{"area_id":"41","title":"\u6cb3\u5317","pid":"0"},"3":{"area_id":"225","title":"\u5c71\u897f","pid":"0"},"4":{"area_id":"356","title":"\u5185\u8499\u53e4","pid":"0"},"5":{"area_id":"471","title":"\u8fbd\u5b81","pid":"0"},"6":{"area_id":"586","title":"\u5409\u6797","pid":"0"},"7":{"area_id":"656","title":"\u9ed1\u9f99\u6c5f","pid":"0"},"8":{"area_id":"802","title":"\u4e0a\u6d77","pid":"0"},"9":{"area_id":"823","title":"\u6c5f\u82cf","pid":"0"},"10":{"area_id":"943","title":"\u6d59\u6c5f","pid":"0"},"11":{"area_id":"1045","title":"\u5b89\u5fbd","pid":"0"},"12":{"area_id":"1168","title":"\u798f\u5efa","pid":"0"},"13":{"area_id":"1263","title":"\u6c5f\u897f","pid":"0"},"14":{"area_id":"1374","title":"\u5c71\u4e1c","pid":"0"},"15":{"area_id":"1532","title":"\u6cb3\u5357","pid":"0"},"16":{"area_id":"1709","title":"\u6e56\u5317","pid":"0"},"17":{"area_id":"1826","title":"\u6e56\u5357","pid":"0"},"18":{"area_id":"1963","title":"\u5e7f\u4e1c","pid":"0"},"19":{"area_id":"2106","title":"\u5e7f\u897f","pid":"0"},"20":{"area_id":"2230","title":"\u6d77\u5357","pid":"0"},"21":{"area_id":"2257","title":"\u91cd\u5e86\u5e02","pid":"0"},"22":{"area_id":"2299","title":"\u56db\u5ddd","pid":"0"},"23":{"area_id":"2502","title":"\u8d35\u5dde","pid":"0"},"24":{"area_id":"2600","title":"\u4e91\u5357","pid":"0"},"25":{"area_id":"2746","title":"\u897f\u85cf","pid":"0"},"26":{"area_id":"2827","title":"\u9655\u897f","pid":"0"},"27":{"area_id":"2945","title":"\u7518\u8083","pid":"0"},"28":{"area_id":"3046","title":"\u9752\u6d77","pid":"0"},"29":{"area_id":"3098","title":"\u5b81\u590f","pid":"0"},"30":{"area_id":"3125","title":"\u65b0\u7586","pid":"0"},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 25 15:00:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Mar 25 15:00:45 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/area/get_area
+{"0":{"area_id":"1","title":"\u5317\u4eac","pid":"0"},"1":{"area_id":"21","title":"\u5929\u6d25","pid":"0"},"2":{"area_id":"41","title":"\u6cb3\u5317","pid":"0"},"3":{"area_id":"225","title":"\u5c71\u897f","pid":"0"},"4":{"area_id":"356","title":"\u5185\u8499\u53e4","pid":"0"},"5":{"area_id":"471","title":"\u8fbd\u5b81","pid":"0"},"6":{"area_id":"586","title":"\u5409\u6797","pid":"0"},"7":{"area_id":"656","title":"\u9ed1\u9f99\u6c5f","pid":"0"},"8":{"area_id":"802","title":"\u4e0a\u6d77","pid":"0"},"9":{"area_id":"823","title":"\u6c5f\u82cf","pid":"0"},"10":{"area_id":"943","title":"\u6d59\u6c5f","pid":"0"},"11":{"area_id":"1045","title":"\u5b89\u5fbd","pid":"0"},"12":{"area_id":"1168","title":"\u798f\u5efa","pid":"0"},"13":{"area_id":"1263","title":"\u6c5f\u897f","pid":"0"},"14":{"area_id":"1374","title":"\u5c71\u4e1c","pid":"0"},"15":{"area_id":"1532","title":"\u6cb3\u5357","pid":"0"},"16":{"area_id":"1709","title":"\u6e56\u5317","pid":"0"},"17":{"area_id":"1826","title":"\u6e56\u5357","pid":"0"},"18":{"area_id":"1963","title":"\u5e7f\u4e1c","pid":"0"},"19":{"area_id":"2106","title":"\u5e7f\u897f","pid":"0"},"20":{"area_id":"2230","title":"\u6d77\u5357","pid":"0"},"21":{"area_id":"2257","title":"\u91cd\u5e86\u5e02","pid":"0"},"22":{"area_id":"2299","title":"\u56db\u5ddd","pid":"0"},"23":{"area_id":"2502","title":"\u8d35\u5dde","pid":"0"},"24":{"area_id":"2600","title":"\u4e91\u5357","pid":"0"},"25":{"area_id":"2746","title":"\u897f\u85cf","pid":"0"},"26":{"area_id":"2827","title":"\u9655\u897f","pid":"0"},"27":{"area_id":"2945","title":"\u7518\u8083","pid":"0"},"28":{"area_id":"3046","title":"\u9752\u6d77","pid":"0"},"29":{"area_id":"3098","title":"\u5b81\u590f","pid":"0"},"30":{"area_id":"3125","title":"\u65b0\u7586","pid":"0"},"error":{"error_status":100,"status_info":"\u6210\u529f"}}

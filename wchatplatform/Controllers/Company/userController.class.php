@@ -13,9 +13,6 @@ class UserController extends BaseController {
         if (!empty($_REQUEST['open_id'])) {
 
             $this->userOpenId = $_REQUEST['open_id'];
-        } else {
-
-            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
         }
 
         $this->assign('open_id', $this->userOpenId);
@@ -41,6 +38,7 @@ class UserController extends BaseController {
             $this->$function();
         }
     }
+
 
     //兑换列表
     public function getExchangeList() {
@@ -368,7 +366,11 @@ class UserController extends BaseController {
         $getProvince = transferData(APIURL . "/area/get_area", "get");
         $getProvince = json_decode($getProvince, true);
         array_pop($getProvince);
+
+       
+
         $getTown = $this->getAreaMessage($getProvince[0]['area_id']);
+
         $getTown = json_decode($getTown, true);
         $getArea = $this->getAreaMessage($getTown[0]['area_id']);
         $getArea = json_decode($getArea, true);
@@ -397,6 +399,87 @@ class UserController extends BaseController {
         }
     }
 
+
+    /**
+     * 签到
+     */
+
+    public function registration(){
+
+        $array = $this->userRegistration();
+
+        $today_time = mktime(0,0,0);
+
+        if(!empty($array['error'])){
+
+            $error_code = $array['error']['error_status'];
+
+            $array['res'] = 0;
+
+            $array['day'] = 0;
+
+        } else{
+
+                 if($today_time == $array['registration_time']){
+
+                $array['res'] = 1;
+
+            } else{
+
+
+                $array['res'] = 0;
+
+            }
+
+        }
+        $this->assign('info',$array);
+
+        $this->display('registration');
+
+    }
+
+
+    /**
+     * 获取用户签到信息 api
+     */
+
+    public function userRegistration(){
+
+
+
+        $postDate["source"] = "company";
+        $postDate['open_id'] = $this->userOpenId;
+
+
+        $userRegistration = transferData(APIURL . "/registration/get_registeration", "post",$postDate);
+
+        $userRegistration_ = json_decode($userRegistration, true);
+
+
+        return $userRegistration_;
+
+    }
+
+    /**
+     * 用户签到接口
+     */
+
+    public function registrationAction(){
+
+        $postDate["source"] = "company";
+
+        $postDate['open_id'] = $this->userOpenId;
+
+
+        $userRegistrationA = transferData(APIURL . "/registration/user_registeration", "post",$postDate);
+
+        $userRegistration_info = json_decode($userRegistrationA, true);
+
+        $this->registration();
+
+       
+    }
+
     public function updateUserLocation() {
         if (isset($_POST["gNumber"])) {
             if (ctype_digit($_POST["gNumber"])) {
@@ -419,6 +502,8 @@ class UserController extends BaseController {
             echo "错误";
         }
     }
+
+
 
     public function changeGoodsResult() {
         if (isset($_GET['goodsId'])) {

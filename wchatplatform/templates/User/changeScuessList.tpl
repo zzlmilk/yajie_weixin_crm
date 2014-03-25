@@ -61,7 +61,7 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10" >
-                    <a href="{$WebSiteUrl}?g=company&a=user&v=getExchangeList"><button id="submitOrder" type="button"  class="btn btn-primary">返&nbsp;&nbsp;&nbsp;回</button></a>
+                    <a href="{$WebSiteUrl}?g=company&a=user&v=getExchangeList&open_id={$open_id}"><button id="submitOrder" type="button"  class="btn btn-primary">返&nbsp;&nbsp;&nbsp;回</button></a>
                 </div>
             </div>
         </div>

@@ -159,8 +159,9 @@ class userController implements User {
                     $userPointerRecord->addOffset(0, $pageSize);
                     $userPointerRecord->initialize();
                     $userPointData = $userPointerRecord->vars_all;
-                    $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userPointPageRequest&userId=" . $userId;
-                    $pagePointer = $_ENV['smarty']->getPages($url, 1, $pointerNumber, $pageSize);
+                    $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userPoniterPage&userId=" . $userId;
+                    $pagePointer = $_ENV['smarty']->getPages($url, 1, $pointerNumber, $pageSize, 1);
+                    $_ENV['smarty']->assign('pagePointer', $pagePointer);
                 } else {
                     $userPointData = 0;
                 }
@@ -173,7 +174,8 @@ class userController implements User {
                     $userMoneyRecord->initialize();
                     $userMoneyData = $userMoneyRecord->vars_all;
                     $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userMoneyPage";
-                    $pageMoney = $_ENV['smarty']->getPages($url, 1, $moneyNumber, $pageSize);
+                    $pageMoney = $_ENV['smarty']->getPages($url, 1, $moneyNumber, $pageSize, 1);
+                    $_ENV['smarty']->assign('pageMoney', $pageMoney);
                 } else {
                     $userMoneyData = 0;
                 }
@@ -190,8 +192,8 @@ class userController implements User {
         }
         $_ENV['smarty']->setDirTemplates('user');
         $returnData = $errorFlag ? $userData : $errorMessage;
-        $_ENV['smarty']->assign('pagePointer', $pagePointer);
-        $_ENV['smarty']->assign('pageMoney', $pageMoney);
+
+
         $_ENV['smarty']->assign('userData', $returnData);
         $_ENV['smarty']->assign('userPointData', $userPointData);
         $_ENV['smarty']->assign('userMoneyData', $userMoneyData);
@@ -478,6 +480,7 @@ class userController implements User {
         }
     }
 
+//餘額ajax
     public function userMoneyPage() {
         if (isset($_REQUEST["userId"]) && isset($_GET["page"])) {
             $pageSize = 3;
@@ -492,131 +495,53 @@ class userController implements User {
                 $userPointerRecord->initialize();
                 $userPointData = $userPointerRecord->vars_all;
                 $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userMoneyPage";
-                $page = $_ENV['smarty']->getPages($url, $pageNumber, $userPointerNumber, $pageSize);
-                $returnVal["pointerData"] = $userPointData;
+                $page = $_ENV['smarty']->getPages($url, $pageNumber, $userPointerNumber, $pageSize, 1);
+                $returnVal["returnData"] = $userPointData;
                 $returnVal["page"] = $page;
-                $returnVal = json_encode($returnVal);
-                header('Content-type: application/json');
-                echo $returnVal;
+                $returnVal["returnCode"] = '0';
             } else {
-                echo 0;
+               $returnVal["returnCode"] = '1';
             }
         } else {
-            echo "1";
+            $returnVal["returnCode"] = '2';
         }
+        $returnVal["pageObject"] = "pageMoney";
+        $returnVal["dataObject"] = "moneyMessage";
+        $returnVal = json_encode($returnVal);
+        header('Content-type: application/json');
+        echo $returnVal;
     }
 
-    public function userPointPageRequest() {
+//积分ajax
+    public function userPoniterPage() {
         if (isset($_REQUEST["userId"]) && isset($_GET["page"])) {
-            $errorFlag = true;
-            $pageSize = $this->pageSize;
+            $pageSize = 3;
             $pageNumber = $_GET["page"];
             $userId = $_REQUEST["userId"];
-            $userModel = new userModel();
-            $userModel->initialize("user_id=$userId");
-            $userCount = $userModel->vars_number;
-            if ($userCount > 0) {
-                $userData = $userModel->vars;
-                $userPointerRecord = new userPointerRecordModel();
-                $userPointerRecord->initialize("user_id='$userId' and record_type=1");
-                $userPointerNumber = $userPointerRecord->vars_number;
-                if ($userPointerNumber > 0) {
-                    $dateCount = $pageSize * ($pageNumber - 1);
-                    $userPointerRecord->addOffset($dateCount, $pageSize);
-                    $userPointerRecord->initialize();
-                    $userPointData = $userPointerRecord->vars_all;
-                    $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userPointPageRequest&userId=" . $userId;
-                    $pagePointer = $_ENV['smarty']->getPages($url, $pageNumber, $userPointerNumber, $pageSize);
-                } else {
-                    $userPointData = 0;
-                }
-                $userMoneyRecord = new userPointerRecordModel();
-                $userMoneyRecord->addCondition("user_id='$userId' and record_type=2", 1);
-                $userMoneyRecord->initialize();
-                $moneyNumber = $userMoneyRecord->vars_number;
-                if ($moneyNumber > 0) {
-                    $userMoneyRecord->addOffset(0, $pageSize);
-                    $userMoneyRecord->initialize();
-                    $userMoneyData = $userMoneyRecord->vars_all;
-                    $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userMoneyPage";
-                    $pageMoney = $_ENV['smarty']->getPages($url, 1, $moneyNumber, $pageSize);
-                } else {
-                    $userMoneyData = 0;
-                }
+            $userPointerRecord = new userPointerRecordModel();
+            $userPointerRecord->initialize("user_id='$userId' and record_type=1");
+            $userPointerNumber = $userPointerRecord->vars_number;
+            if ($userPointerNumber > 0) {
+                $dateCount = $pageSize * ($pageNumber - 1);
+                $userPointerRecord->addOffset($dateCount, $pageSize);
+                $userPointerRecord->initialize();
+                $userPointData = $userPointerRecord->vars_all;
+                $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userPoniterPage";
+                $page = $_ENV['smarty']->getPages($url, $pageNumber, $userPointerNumber, $pageSize, 1);
+                $returnVal["returnData"] = $userPointData;
+                $returnVal["page"] = $page;
+                $returnVal["returnCode"] ="0";
             } else {
-                $errorFlag = FALSE;
-                $errorMessage = "未搜索到该用户请刷新后重试";
+                $returnVal["returnCode"] = "1";
             }
         } else {
-            $errorFlag = FALSE;
-            $errorMessage = "非法的登入请重试";
+            $returnVal["returnCode"] = "2";
         }
-        $_ENV['smarty']->setDirTemplates('user');
-        $returnData = $errorFlag ? $userData : $errorMessage;
-        $_ENV['smarty']->assign('pagePointer', $pagePointer);
-        $_ENV['smarty']->assign('pageMoney', $pageMoney);
-        $_ENV['smarty']->assign('userData', $returnData);
-        $_ENV['smarty']->assign('userPointData', $userPointData);
-        $_ENV['smarty']->assign('userMoneyData', $userMoneyData);
-        $_ENV['smarty']->assign('errorFlag', $errorFlag);
-        $_ENV['smarty']->display('userEdit');
-    }
-
-    public function userMoneytPageRequest() {
-        if (isset($_REQUEST["userId"]) && isset($_GET["page"])) {
-            $errorFlag = true;
-            $pageSize = $this->pageSize;
-            $pageNumber = $_GET["page"];
-            $userId = $_REQUEST["userId"];
-            $userModel = new userModel();
-            $userModel->initialize("user_id=$userId");
-            $userCount = $userModel->vars_number;
-            if ($userCount > 0) {
-                $userData = $userModel->vars;
-                $userPointerRecord = new userPointerRecordModel();
-                $userPointerRecord->initialize("user_id='$userId' and record_type=1");
-                $userPointerNumber = $userPointerRecord->vars_number;
-                if ($userPointerNumber > 0) {
-                    
-                    $userPointerRecord->addOffset(0, $pageSize);
-                    $userPointerRecord->initialize();
-                    $userPointData = $userPointerRecord->vars_all;
-                    $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userPointPageRequest&userId=" . $userId;
-                    $pagePointer = $_ENV['smarty']->getPages($url, 1, $userPointerNumber, $pageSize);
-                } else {
-                    $userPointData = 0;
-                }
-                $userMoneyRecord = new userPointerRecordModel();
-                $userMoneyRecord->addCondition("user_id='$userId' and record_type=2", 1);
-                $userMoneyRecord->initialize();
-                $moneyNumber = $userMoneyRecord->vars_number;
-                if ($moneyNumber > 0) {
-                    $dateCount = $pageSize * ($pageNumber - 1);
-                    $userMoneyRecord->addOffset($dateCount, $pageSize);
-                    $userMoneyRecord->initialize();
-                    $userMoneyData = $userMoneyRecord->vars_all;
-                    $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userMoneytPageRequest";
-                    $pageMoney = $_ENV['smarty']->getPages($url, $pageNumber, $moneyNumber, $pageSize);
-                } else {
-                    $userMoneyData = 0;
-                }
-            } else {
-                $errorFlag = FALSE;
-                $errorMessage = "未搜索到该用户请刷新后重试";
-            }
-        } else {
-            $errorFlag = FALSE;
-            $errorMessage = "非法的登入请重试";
-        }
-        $_ENV['smarty']->setDirTemplates('user');
-        $returnData = $errorFlag ? $userData : $errorMessage;
-        $_ENV['smarty']->assign('pagePointer', $pagePointer);
-        $_ENV['smarty']->assign('pageMoney', $pageMoney);
-        $_ENV['smarty']->assign('userData', $returnData);
-        $_ENV['smarty']->assign('userPointData', $userPointData);
-        $_ENV['smarty']->assign('userMoneyData', $userMoneyData);
-        $_ENV['smarty']->assign('errorFlag', $errorFlag);
-        $_ENV['smarty']->display('userEdit');
+        $returnVal["pageObject"] = "pointerPage";
+        $returnVal["dataObject"] = "pointerMessage";
+        $returnVal = json_encode($returnVal);
+        header('Content-type: application/json');
+        echo $returnVal;
     }
 
 }

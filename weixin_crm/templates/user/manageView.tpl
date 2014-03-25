@@ -120,6 +120,7 @@
 
 <script src="{$WebSiteUrl}/js/jquery-1.9.1.js"></script>
 <script src="{$WebSiteUrl}/js/rexexTest.js"></script>
+<script src="{$WebSiteUrl}/js/timeClass.js"></script>
 <script>
     $("#getUser").click(function(){ 
     $("#errorPrint").html("");
@@ -280,21 +281,5 @@ $("#userPhone").val(cutString);
 }
 });
 
-function timeToString(timeVal,typeNumber){
-timeVal=parseInt(timeVal);
-var dateTimeVal=new Date(timeVal)
-var timeYear=dateTimeVal.getFullYear();
-var timeMonth=dateTimeVal.getMonth();
-var timeDay=dateTimeVal.getDate();
-var timeHour=dateTimeVal.getHours();
-var timeMin=dateTimeVal.getMinutes();
-var returnTimeString='';
-switch(typeNumber){
-case "1":
-case 1:
-returnTimeString=timeYear+"-"+timeMonth+"-"+timeDay+" "+timeHour+":"+timeMin;
-break;
-}
-return returnTimeString;
-}
+
 </script>

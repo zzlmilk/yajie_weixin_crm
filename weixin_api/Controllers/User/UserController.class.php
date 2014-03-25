@@ -61,7 +61,7 @@ class  UserController implements User {
 
 		} else{
 
-			echoErrorCode(10003);
+			echoErrorCode(105);
 
 		}
 
@@ -81,7 +81,7 @@ class  UserController implements User {
 
 		} else{
 
-			echoErrorCode(10004);
+			echoErrorCode(105);
 
 		}
 	}
@@ -101,7 +101,7 @@ class  UserController implements User {
 
 		} else{
 
-			echoErrorCode(10003);
+			echoErrorCode(105);
 
 		}
 
@@ -122,7 +122,7 @@ class  UserController implements User {
 
 		} else{
 
-			echoErrorCode(10004);
+			echoErrorCode(105);
 
 		}
 
@@ -163,7 +163,6 @@ class  UserController implements User {
 
 			$array['res'] = 1;
 
-
 			AssemblyJson($array);
 		}
 
@@ -180,7 +179,7 @@ class  UserController implements User {
 		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])){
 
 
-			if(!empty($_REQUEST['user_phone']) && !empty($_REQUEST['province_id']) && !empty($_REQUEST['city_id']) && !empty($_REQUEST['area_id']) && !empty($_REQUEST['street']) && !empty($_REQUEST['real_name'])){
+			if(!empty($_REQUEST['address_phone']) && !empty($_REQUEST['province_id']) && !empty($_REQUEST['city_id']) && !empty($_REQUEST['area_id']) && !empty($_REQUEST['street']) && !empty($_REQUEST['real_name'])){
 
 				$user = new userModel();
 
@@ -190,7 +189,7 @@ class  UserController implements User {
 
 					$update = array();
 
-					$update_field = array('user_phone','province_id','city_id','area_id','street','real_name');
+					$update_field = array('address_phone','province_id','city_id','area_id','street','real_name');
 
 					foreach($update_field as $v){
 
@@ -200,7 +199,7 @@ class  UserController implements User {
 					
 					if(count($update) > 0 ){
 
-						$this->updateInfo($update);
+						$this->updateInfo($update,$userInfo['user_id']);
 					}
 
 				} else{

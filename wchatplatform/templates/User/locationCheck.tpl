@@ -16,17 +16,15 @@
     </head>
     <body>
         <div class="registerWarp">
-            <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=user&v=updateUserLocation">
+            <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=test&v=updateUserLocation">
+
+                <input type="hidden" name='open_id' id='open_id' value='{$open_id}'>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">省</label>
                     <div class="col-sm-10">
                         <select class="form-control" id="province" name="province_id">
                             {foreach from=$provinceValue item=provinceItem key=key}
-                                {if $provinceItem.area_id eq $userMessage.province_id}
-                                    <option selected value="{$provinceItem.area_id}">{$provinceItem.title}</option>
-                                {else}
-                                    <option value="{$provinceItem.area_id}">{$provinceItem.title}</option>
-                                {/if}
+                                <option value="{$provinceItem.area_id}">{$provinceItem.title}</option>
                             {/foreach}
                         </select>
                     </div>
@@ -36,26 +34,17 @@
                     <div class="col-sm-10">
                         <select class="form-control" id="town" name="city_id">
                             {foreach from=$townValue item=townItem key=key}
-                                {if $townItem.area_id eq $userMessage.city_id}
-                                    <option selected value="{$townItem.area_id}">{$townItem.title}</option>
-                                {else}
-                                    <option  value="{$townItem.area_id}">{$townItem.title}</option>
-                                {/if}
+                                <option value="{$townItem.area_id}">{$townItem.title}</option>
                             {/foreach}
                         </select>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">区</label>
                     <div class="col-sm-10">
                         <select class="form-control" id="area" name="area_id">
                             {foreach from=$areaValue item=areaItem key=key}
-                                {if $areaItem.area_id eq $userMessage.area_id}
-                                    <option selected value="{$areaItem.area_id}">{$areaItem.title}</option>
-                                {else}
-                                    <option value="{$areaItem.area_id}">{$areaItem.title}</option>
-                                {/if}
+                                <option value="{$areaItem.area_id}">{$areaItem.title}</option>
                             {/foreach}
                         </select>
                     </div>
@@ -63,19 +52,19 @@
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">居住地址</label>
                     <div class="col-sm-10">
-                        <input type="text" value="{$userMessage.street}" class="form-control" id="street" name="street">
+                        <input type="text" value="" class="form-control" id="street" name="street">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">真实姓名</label>
                     <div class="col-sm-10">
-                        <input type="text" value="{$userMessage.real_name}" class="form-control" id="real_name" name="real_name">
+                        <input type="text" value="" class="form-control" id="real_name" name="real_name">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">电话号码</label>
                     <div class="col-sm-10">
-                        <input type="text" value="{$userMessage.address_phone}" class="form-control" id="user_phone" name="address_phone">
+                        <input type="text" value="" class="form-control" id="user_phone" name="user_phone">
                     </div>
                 </div>
                 <div class="form-group">

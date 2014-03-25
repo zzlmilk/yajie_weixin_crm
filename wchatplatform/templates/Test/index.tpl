@@ -35,4 +35,9 @@
 
 	<a href='{$websiteUrl}?g=company&a=game&v=activity&open_id={$open_id}'>活动</a>
 
+	<a href='{$websiteUrl}?g=company&a=user&v=registration&open_id={$open_id}'>签到</a>
+
+	<a href='{$websiteUrl}?g=company&a=game&v=code&open_id={$open_id}'>优惠码</a>
+
+
 </div>

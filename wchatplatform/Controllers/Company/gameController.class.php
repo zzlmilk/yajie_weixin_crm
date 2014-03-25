@@ -4,7 +4,7 @@
 class gameController extends BaseController  {
 
 
-    private $open_id;
+    private $userOpenId;
 
 
     public function __construct() {
@@ -15,13 +15,8 @@ class gameController extends BaseController  {
 
             $this->userOpenId = $_REQUEST['open_id'];
 
-        } else{
-
-            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
-
-        }
-
-         $this->assign('open_id',$this->userOpenId);
+        } 
+        $this->assign('open_id',$this->userOpenId);
     }
 
     /**
@@ -84,6 +79,13 @@ class gameController extends BaseController  {
      */
     public function Questionnaire() {
 
+
+        $all = $this->getQuesion();
+
+        $this->assign('info',$all['question']);
+
+        $this->assign('title',$all['title']);
+
         $this->display();
     }
 
@@ -94,9 +96,111 @@ class gameController extends BaseController  {
 
     public function activity(){
 
-        $this->display();
+        $info = $this->getActivity();
+        
+        $this->assign('today_time',mktime(0,0,0));
+        $this->assign('info',$info['info']);
+        $this->assign('record',$info['record']);
+        $this->display('activity');
 
     }
+
+
+    public function getQuesion(){
+
+        $quesionAll = transferData(APIURL . "/question/get_question", "get");
+
+        $quesionResult = json_decode($quesionAll, true);
+
+        return $quesionResult;
+    }
+
+
+    public function getActivity(){
+
+        $ActivityJson = transferData(APIURL . "/activity/get_activity?source=company", "get");
+
+        $ActivityArray = json_decode($ActivityJson, true);
+
+        return $ActivityArray;
+    }
+
+
+    public function uploadQuestion(){
+
+        $postDate["source"] = "company";
+
+        $postDate['open_id'] = $this->userOpenId;
+
+        $postDate['field'] = $_REQUEST['title'];
+
+        $array =  explode(',', $_REQUEST['title']);
+
+        foreach ($array as $key => $value) {
+                
+            if(empty($_REQUEST[$value])){
+
+                echo '第'.$value.'题必须填写';
+
+                die;
+            }
+
+            $postDate['quesion_'.$value] = $_REQUEST[$value];
+        }
+
+        $quesionResultJson = transferData(APIURL . "/question/add_question", "post",$postDate);
+
+        $quesionResultArray = json_decode($quesionResultJson, true);
+
+        echo 'success';
+
+    }
+
+
+    public function applyAction(){
+
+        $phone = $_REQUEST['user_phone'];
+
+        if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $phone)) {
+
+            $postDate["source"] = "company";
+
+            $postDate['user_phone'] = $phone;
+
+            $postDate['real_name'] = $_REQUEST['real_name'];
+
+            $postDate['activity_id'] = $_REQUEST['id'];
+
+            $applyResultJson = transferData(APIURL . "/apply/addApply", "post",$postDate);
+
+            $applyResultArray = json_decode($applyResultJson, true);
+
+            $this->activity();
+
+        }  else{
+
+            echo '手机号码错误';
+        }
+
+    }
+
+    public function code(){
+
+       $code =  $this->getRandCode();
+       
+       echo $code['code_name'];
+
+    }
+
+      public function getRandCode(){
+
+        $codeJson = transferData(APIURL . "/code/get_code?source=company", "get");
+
+        $codeArray = json_decode($codeJson, true);
+
+        return $codeArray;
+    }
+
 
     
 }

@@ -1,0 +1,12 @@
+<?php
+
+
+interface Code{
+
+
+
+}
+
+
+
+?>
