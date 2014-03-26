@@ -44,7 +44,6 @@ class UserController extends BaseController {
         }
     }
 
-
     //兑换列表
     public function getExchangeList() {
 
@@ -61,8 +60,8 @@ class UserController extends BaseController {
         // $this->userOpenId = $_REQUEST['open_id'];
         $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
         $exchangeItem = json_decode($exchangeItem, true);
-        
-    
+
+
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
         $this->display("exchangeGoods");
     }
@@ -336,9 +335,10 @@ class UserController extends BaseController {
                 $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
                 $userInfo = json_decode($userInfo, TRUE);
                 if ($userInfo['user']['province_id'] == "0") {
+                    $this->assign("userMessage", $userInfo['user']);
                     $this->locationCheck(); //填写信息              
                 } else {
-                   // var_dump($userInfo); //显示地址页面     
+                    // var_dump($userInfo); //显示地址页面     
                     $userData['street'] = $userInfo['user']['street'];
                     $userData['address_phone'] = $userInfo['user']['address_phone'];
                     $userData['real_name'] = $userInfo['user']['real_name'];
@@ -352,7 +352,7 @@ class UserController extends BaseController {
                     $getTown = json_decode($getTown, true);
                     $getArea = $this->getAreaMessage($userData['city_id']);
                     $getArea = json_decode($getArea, true);
-                    
+
                     $this->assign("provinceValue", $getProvince);
                     $this->assign("townValue", $getTown);
                     $this->assign("areaValue", $getArea);
@@ -372,7 +372,7 @@ class UserController extends BaseController {
         $getProvince = json_decode($getProvince, true);
         array_pop($getProvince);
 
-       
+
 
         $getTown = $this->getAreaMessage($getProvince[0]['area_id']);
 
@@ -404,51 +404,42 @@ class UserController extends BaseController {
         }
     }
 
-
     /**
      * 签到
      */
-
-    public function registration(){
+    public function registration() {
 
         $array = $this->userRegistration();
 
-        $today_time = mktime(0,0,0);
+        $today_time = mktime(0, 0, 0);
 
-        if(!empty($array['error'])){
+        if (!empty($array['error'])) {
 
             $error_code = $array['error']['error_status'];
 
             $array['res'] = 0;
 
             $array['day'] = 0;
+        } else {
 
-        } else{
-
-                 if($today_time == $array['registration_time']){
+            if ($today_time == $array['registration_time']) {
 
                 $array['res'] = 1;
-
-            } else{
+            } else {
 
 
                 $array['res'] = 0;
-
             }
-
         }
-        $this->assign('info',$array);
+        $this->assign('info', $array);
 
         $this->display('registration');
-
     }
-
 
     /**
      * 获取用户签到信息 api
      */
-
-    public function userRegistration(){
+    public function userRegistration() {
 
 
 
@@ -456,33 +447,29 @@ class UserController extends BaseController {
         $postDate['open_id'] = $this->userOpenId;
 
 
-        $userRegistration = transferData(APIURL . "/registration/get_registeration", "post",$postDate);
+        $userRegistration = transferData(APIURL . "/registration/get_registeration", "post", $postDate);
 
         $userRegistration_ = json_decode($userRegistration, true);
 
 
         return $userRegistration_;
-
     }
 
     /**
      * 用户签到接口
      */
-
-    public function registrationAction(){
+    public function registrationAction() {
 
         $postDate["source"] = "company";
 
         $postDate['open_id'] = $this->userOpenId;
 
 
-        $userRegistrationA = transferData(APIURL . "/registration/user_registeration", "post",$postDate);
+        $userRegistrationA = transferData(APIURL . "/registration/user_registeration", "post", $postDate);
 
         $userRegistration_info = json_decode($userRegistrationA, true);
 
         $this->registration();
-
-       
     }
 
     public function updateUserLocation() {
@@ -497,7 +484,7 @@ class UserController extends BaseController {
                 $postData['open_id'] = $this->userOpenId;
                 $postData['source'] = "company";
                 $updateUserLocation = transferData(APIURL . "/user/update_user_address", "post", $postData);
-                $updateUserLocation=  json_decode($updateUserLocation,TRUE);
+                $updateUserLocation = json_decode($updateUserLocation, TRUE);
                 $_GET['goodsId'] = $_POST["gNumber"];
                 $this->changeGoodsResult();
             } else {
@@ -508,20 +495,18 @@ class UserController extends BaseController {
         }
     }
 
-
-
     public function changeGoodsResult() {
         if (isset($_GET['goodsId'])) {
             $postDate["source"] = "company";
             $postDate['open_id'] = $this->userOpenId;
             $postDate['id'] = $_GET['goodsId'];
             $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
-           $exchangeList=  json_decode($exchangeList,TRUE);
-           $userIntegration=$exchangeList['user_integration']['user_integration'];
-           $userChangeInfo=$exchangeList['exchange_info'];
-           $this->assign("integration",$userIntegration);
-           $this->assign("changeInfo",$userChangeInfo);
-           $this->display("changeScuessList");
+            $exchangeList = json_decode($exchangeList, TRUE);
+            $userIntegration = $exchangeList['user_integration']['user_integration'];
+            $userChangeInfo = $exchangeList['exchange_info'];
+            $this->assign("integration", $userIntegration);
+            $this->assign("changeInfo", $userChangeInfo);
+            $this->display("changeScuessList");
         } else {
             echo '错误的进入方式';
         }

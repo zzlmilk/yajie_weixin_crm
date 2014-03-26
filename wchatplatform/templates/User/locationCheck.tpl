@@ -91,8 +91,9 @@
         </div>
     </body>
     <script src="{$WebSiteUrlPublic}/company/script/defined.js"></script>
+    <script src="{$WebSiteUrlPublic}/company/script/rexexTest.js"></script>
     <script>
-        
+        //省市切换
         $("#province").change(function(){
         $.post(locationURL,
         {
@@ -125,6 +126,7 @@ $("#area").html(townHTMLString);
 });
 });
 });
+//区切换
 $("#town").change(function(){
 $.post(locationURL,
         {
@@ -141,6 +143,21 @@ townHTMLString+="</option>";
 }
 $("#area").html(townHTMLString);
 });
+})
+$("#submitOrder").click(function(){
+var errorMessage="";
+var alertFlag=false;
+if($("#user_phone").val()==""){
+errorMessage+="手机号码不能为空 <br>";
+alertFlag=true;
+}
+else if(!getMobilPhoneRegex($("#user_phone").val())){
+errorMessage+="手机号码错误 <br>";
+alertFlag=true;
+}
+if(alertFlag){
+alert(errorMessage);
+return false;}
 })
     </script>
 </html>
