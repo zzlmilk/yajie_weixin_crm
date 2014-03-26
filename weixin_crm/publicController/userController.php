@@ -209,7 +209,7 @@ class userController implements User {
                 $userId = $_POST['user_id'];
                 $upDatas['user_name'] = $_POST['user_name'];
                 $upDatas['user_phone'] = $_POST['user_phone'];
-                $upDatas['birthday'] = $_POST['birthday'];
+                $upDatas['birthday'] =  strtotime($_POST['birthday']) ;
                 $upDatas['sex'] = $_POST['sex'];
                 $this->updateUser($upDatas, $userId);
                 $this->userList();
@@ -238,7 +238,7 @@ class userController implements User {
             } else {
                 $insertUserData['user_name'] = $_POST['user_name'];
                 $insertUserData['user_phone'] = $_POST['user_phone'];
-                $insertUserData['birthday'] = $_POST['birthday'];
+                $insertUserData['birthday'] =  strtotime($_POST['birthday']) ;
                 $insertUserData['user_money'] = $_POST['user_money'];
                 $insertUserData['user_integration'] = $_POST['user_integration'];
                 $insertUserData['sex'] = $_POST['sex'];
