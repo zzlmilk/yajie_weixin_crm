@@ -13,8 +13,7 @@ class UserController extends BaseController {
         if (!empty($_REQUEST['open_id'])) {
 
             $this->userOpenId = $_REQUEST['open_id'];
-        }
-        else{
+        } else {
             $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
         }
 
@@ -141,7 +140,7 @@ class UserController extends BaseController {
             $userOrder["open_id"] = $this->userOpenId;
             $userJsonData = transferData(APIURL . "/order/get_order", "post", $userOrder);
             $orderItem = json_decode($userJsonData, true);
-            if(empty($orderItem['order'])){
+            if (empty($orderItem['order'])) {
                 echo "暂无订单";
                 die;
             }
@@ -506,11 +505,15 @@ class UserController extends BaseController {
             $postDate['id'] = $_GET['goodsId'];
             $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
             $exchangeList = json_decode($exchangeList, TRUE);
-            $userIntegration = $exchangeList['user_integration']['user_integration'];
-            $userChangeInfo = $exchangeList['exchange_info'];
-            $this->assign("integration", $userIntegration);
-            $this->assign("changeInfo", $userChangeInfo);
-            $this->display("changeScuessList");
+            if ($exchangeList["error"]['error_status'] == 40001) {
+                echo "兑换失败：" . $exchangeList["error"]['status_info'];
+            } else {
+                $userIntegration = $exchangeList['user_integration']['user_integration'];
+                $userChangeInfo = $exchangeList['exchange_info'];
+                $this->assign("integration", $userIntegration);
+                $this->assign("changeInfo", $userChangeInfo);
+                $this->display("changeScuessList");
+            }
         } else {
             echo '错误的进入方式';
         }
