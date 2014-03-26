@@ -245,8 +245,14 @@ class UserModel  extends Basic {
 
 		$this->initialize();
 
-		return $this->vars;
+		if($this->vars_number > 0){
 
+			return $this->vars;
+
+		} else{
+
+			echoErrorCode(20004);
+		}
 	}
 
 	public function updateInfo($data,$user_id){

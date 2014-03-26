@@ -38,8 +38,10 @@ ini_set("display_errors", 1);
 //defined('APIURL')or define('APIURL','http://112.124.25.155/weixin_api');
 //defined('APIURL')or define('APIURL','http://'.$_SERVER['HTTP_HOST'].'/yajie_weixin_crm/weixin_api');
 //defined('APIURL')or define('APIURL','http://localhost/yajie_weixin_crm/weixin_api');
+
 //defined('APIURL')or define('APIURL','http://localhost/yajie_weixin_crm/weixin_api');
 defined('APIURL') or define('APIURL', 'http://192.168.0.111/yajie_weixin_crm/weixin_api');
+
 defined('VAR_MODULE') or define('VAR_MODULE', 'a');
 
 defined('VAR_ACTION') or define('VAR_ACTION', 'v');

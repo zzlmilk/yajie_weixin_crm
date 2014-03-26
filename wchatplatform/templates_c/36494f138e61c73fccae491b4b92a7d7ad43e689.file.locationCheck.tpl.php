@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-25 15:00:01
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-26 11:20:30
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/User/locationCheck.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:129772942053312971c8ed03-68828782%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:8956918475332477e7c66f9-89489168%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '36494f138e61c73fccae491b4b92a7d7ad43e689' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/User/locationCheck.tpl',
-      1 => 1395730516,
+      1 => 1395804015,
     ),
   ),
-  'nocache_hash' => '129772942053312971c8ed03-68828782',
+  'nocache_hash' => '8956918475332477e7c66f9-89489168',
   'function' => 
   array (
   ),
@@ -163,6 +163,8 @@ $.post(locationURL,
 areaId:$(this).val()
 },
 function(rData){
+
+    alert(rData);
 var rDataLength=rData.length;
 $("#area").html("");
 var townHTMLString="";

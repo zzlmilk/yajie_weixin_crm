@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-25 14:10:45
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-26 11:16:13
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Test/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:21262430653311de5688763-17403853%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:4658954685332467d224ae3-75218736%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bfa0b7dd63912b577d87c19067542fa542f2fc8b' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Test/index.tpl',
-      1 => 1395727760,
+      1 => 1395798391,
     ),
   ),
-  'nocache_hash' => '21262430653311de5688763-17403853',
+  'nocache_hash' => '4658954685332467d224ae3-75218736',
   'function' => 
   array (
   ),

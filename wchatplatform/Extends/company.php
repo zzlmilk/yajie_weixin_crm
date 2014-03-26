@@ -94,6 +94,135 @@ class weixinEvent {
 
 	}
 
+    function register(){
+
+
+        $wechat = new Wechat();
+
+        $type = $wechat->getRev()->getRevType();
+
+        $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
+         $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3Dregister&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+
+         $wechat->text($text)->reply();        
+    }
+
+    function order(){
+
+        $wechat = new Wechat();
+
+        $type = $wechat->getRev()->getRevType();
+
+        $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
+
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3Dorder&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $wechat->text($text)->reply();   
+    }
+
+    function getExchangeList(){
+
+
+         $wechat = new Wechat();
+
+        $type = $wechat->getRev()->getRevType();
+
+        $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
+
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3DgetExchangeList&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $wechat->text($text)->reply();   
+
+
+    }
+
+    function qiandao(){
+
+
+        $wechat = new Wechat();
+
+        $type = $wechat->getRev()->getRevType();
+
+        $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
+
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3Duserlogin&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $wechat->text($text)->reply(); 
+        
+    }
+
+    function wodezhongxin(){
+
+
+        $wechat = new Wechat();
+
+        $type = $wechat->getRev()->getRevType();
+
+        $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
+
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3DuserCenter&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $wechat->text($text)->reply();  
+    }
+    function jinqihuodong(){
+
+
+        $wechat = new Wechat();
+
+        $type = $wechat->getRev()->getRevType();
+
+        $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
+
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3Dactivity&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $wechat->text($text)->reply();  
+    }
+
+    function dazhuanpan(){
+        $wechat = new Wechat();
+
+        $type = $wechat->getRev()->getRevType();
+
+        $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
+
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3DbigWheelPage&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $wechat->text($text)->reply();  
+    }
+
+     function guaguaka(){
+        $wechat = new Wechat();
+
+        $type = $wechat->getRev()->getRevType();
+
+        $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
+
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3Dguaguaka&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $wechat->text($text)->reply();  
+    }
+
+
+     function wenjuan(){
+        $wechat = new Wechat();
+
+        $type = $wechat->getRev()->getRevType();
+
+        $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
+
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3DQuestionnaire&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $wechat->text($text)->reply();  
+    }
+
+    function lianxifangshi(){
+
+
+         $wechat = new Wechat();
+
+        $type = $wechat->getRev()->getRevType();
+
+        $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
+
+        $text = '电话:0112312351625367';
+        $wechat->text($text)->reply();  
+
+    }
+
+     
+
 }
 
 ?>

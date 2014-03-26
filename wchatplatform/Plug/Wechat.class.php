@@ -485,6 +485,10 @@ class Wechat {
 
                             $eventsKey = $event['key'];
 
+                            $this->text($eventsKey)->reply();
+
+                            die;
+
                             $weixinEvent->$eventsKey($info,$array);
 
                         break;

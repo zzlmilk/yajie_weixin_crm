@@ -14,9 +14,6 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         }
-//        else{
-//            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
-//        }
 
         $this->assign('open_id', $this->userOpenId);
     }
@@ -47,12 +44,11 @@ class UserController extends BaseController {
 
     //兑换列表
     public function getExchangeList() {
-
-
         //$this->userOpenId = $_REQUEST['open_id'];
-        $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=company&open_id=" . $this->userOpenId, "get");
+        $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=company1&open_id=" . $this->userOpenId, "get");
         $exchangeList = json_decode($exchangeList, true);
         $this->assign("exchangeList", $exchangeList);
+
         $this->display("getExchangeList");
     }
 
@@ -61,8 +57,7 @@ class UserController extends BaseController {
         // $this->userOpenId = $_REQUEST['open_id'];
         $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
         $exchangeItem = json_decode($exchangeItem, true);
-        
-    
+     
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
         $this->display("exchangeGoods");
     }
@@ -100,7 +95,7 @@ class UserController extends BaseController {
                 $returnVal["$key"] = $val;
             }
             //查询预约项目所需金额
-            $merchandiseDate['source'] = 'company';
+            $merchandiseDate['source'] = 'company1';
             $merchandiseDate['merchandise_id'] = $returnVal['orderMerchandise'];
             $merchandise = transferData(APIURL . "/order/get_merchandise_info", "post", $merchandiseDate);
             $merchandise = json_decode($merchandise, TRUE);
@@ -108,14 +103,14 @@ class UserController extends BaseController {
             $returnVal['needMoney'] = $merchandise['merchandise']['merchandise_money'];
             //
             $postTime = strtotime($returnVal["orderDateInput"] . " " . $returnVal["orderTimeInput"]);
-            $postDate["source"] = "company";
+            $postDate["source"] = "company1";
             $postDate["open_id"] = $this->userOpenId;
             $postDate["merchandise_id"] = $returnVal['orderMerchandise'];
             $postDate['order_number'] = $returnVal["porpleCountSubmit"];
             $postDate["appointment_time"] = $postTime;
             $postDate["appointment_object"] = $returnVal['orderObject'];
             if (isset($_GET['checkReturn'])) {//修改订单
-                $userOrder["source"] = "company";
+                $userOrder["source"] = "company1";
                 $userOrder["open_id"] = $this->userOpenId;
                 $userJsonData = transferData(APIURL . "/order/get_order", "post", $userOrder);
                 $orderItem = json_decode($userJsonData, true);
@@ -138,7 +133,7 @@ class UserController extends BaseController {
                 }
             }
         } else {
-            $userOrder["source"] = "company";
+            $userOrder["source"] = "company1";
             $userOrder["open_id"] = $this->userOpenId;
             $userJsonData = transferData(APIURL . "/order/get_order", "post", $userOrder);
             $orderItem = json_decode($userJsonData, true);
@@ -153,7 +148,7 @@ class UserController extends BaseController {
             $returnVal["orderDateInput"] = $orderDate;
             $returnVal["orderTimeInput"] = $orderTime;
 
-            $postUserDate['source'] = "company";
+            $postUserDate['source'] = "company1";
             $postUserDate['merchandise_id'] = $orderString['merchandise_id'];
             $MerchandiseValue = transferData(APIURL . "/order/get_merchandise_info", "post", $postUserDate);
             $MerchandiseValue = json_decode($MerchandiseValue, true);
@@ -175,7 +170,7 @@ class UserController extends BaseController {
             $this->assign("errorMessage", "您已经有激活的订单，请修改或者取消后再进行预约");
             $this->errorMessage = "";
         }
-        $userGetOrder["source"] = "company";
+        $userGetOrder["source"] = "company1";
         $userGetOrder["open_id"] = $_REQUEST['open_id'];
         $userOrderJsonData = transferData(APIURL . "/order/get_order", "post", $userGetOrder);
         $userOrderData = json_decode($userOrderJsonData, TRUE);
@@ -226,7 +221,7 @@ class UserController extends BaseController {
 
     public function getAllOrder() {
         // $this->userOpenId = $_REQUEST['open_id'];
-        $postUserDate['source'] = "company";
+        $postUserDate['source'] = "company1";
         $postUserDate['open_id'] = $this->userOpenId;
         $DateValue = transferData(APIURL . "/order/get_order_all", "post", $postUserDate);
         $DateValue = json_decode($DateValue, TRUE);
@@ -252,7 +247,7 @@ class UserController extends BaseController {
                 $data = array();
                 //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
                 $data['open_id'] = $_POST['open_id'];
-                $data['source'] = 'company';
+                $data['source'] = 'company1';
                 $data['user_name'] = $_POST['userName'];
                 $data['sex'] = $_POST['gender'];
                 $data['user_phone'] = $_POST['phoneNumber'];
@@ -263,6 +258,7 @@ class UserController extends BaseController {
 
 
                 if ($res['success'] == 1) {
+
                     $resultRegister = transferData(APIURL . '/user/add', 'post', $data);
                     $resultRegister = json_decode($resultRegister, true);
 
@@ -327,7 +323,7 @@ class UserController extends BaseController {
 
 //$this->userOpenId = $_REQUEST['open_id'];
         if (isset($_GET['goodsId'])) {
-            $postDate["source"] = "company";
+            $postDate["source"] = "company1";
             $postDate['open_id'] = $this->userOpenId;
             $goodsId = $_GET['goodsId'];
             $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $goodsId, "get");
@@ -352,7 +348,6 @@ class UserController extends BaseController {
                     $getTown = json_decode($getTown, true);
                     $getArea = $this->getAreaMessage($userData['city_id']);
                     $getArea = json_decode($getArea, true);
-                    
                     $this->assign("provinceValue", $getProvince);
                     $this->assign("townValue", $getTown);
                     $this->assign("areaValue", $getArea);
@@ -452,7 +447,7 @@ class UserController extends BaseController {
 
 
 
-        $postDate["source"] = "company";
+        $postDate["source"] = "company1";
         $postDate['open_id'] = $this->userOpenId;
 
 
@@ -471,7 +466,7 @@ class UserController extends BaseController {
 
     public function registrationAction(){
 
-        $postDate["source"] = "company";
+        $postDate["source"] = "company1";
 
         $postDate['open_id'] = $this->userOpenId;
 
@@ -495,7 +490,7 @@ class UserController extends BaseController {
                 $postData['street'] = $_POST["street"];
                 $postData['real_name'] = $_POST["real_name"];
                 $postData['open_id'] = $this->userOpenId;
-                $postData['source'] = "company";
+                $postData['source'] = "company1";
                 $updateUserLocation = transferData(APIURL . "/user/update_user_address", "post", $postData);
                 $updateUserLocation=  json_decode($updateUserLocation,TRUE);
                 $_GET['goodsId'] = $_POST["gNumber"];
@@ -512,7 +507,7 @@ class UserController extends BaseController {
 
     public function changeGoodsResult() {
         if (isset($_GET['goodsId'])) {
-            $postDate["source"] = "company";
+            $postDate["source"] = "company1";
             $postDate['open_id'] = $this->userOpenId;
             $postDate['id'] = $_GET['goodsId'];
             $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
