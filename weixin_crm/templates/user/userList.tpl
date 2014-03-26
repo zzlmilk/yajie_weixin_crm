@@ -68,7 +68,7 @@
             <tr>
                 <td>{$userInfo1.user_name}</td>
                 <td>{$userInfo1.user_phone}</td>
-                <td>{$userInfo1.birthday}</td>
+                <td>{$userInfo1.birthday|date_format:"%Y-%m-%d"}</td>
                 <td>{$userInfo1.user_money}</td>
                 <td>{$userInfo1.user_integration}</td>
                 <td><a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userEdit&userId={$userInfo1.user_id}"><button class="btn btn-warning">编辑</button></a></td>

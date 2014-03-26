@@ -59,7 +59,7 @@
                 <div class="form-group"> 
                     <label for="inputEmail3" class="col-sm-2 control-label labelWidth">客户生日：</label>
                     <div class="col-sm-2">
-                        <input type="text" class="form-control inputWidth" value="{$userData.birthday}" name="birthday" id="userBirthday"></div>
+                        <input type="text" class="form-control inputWidth" value="{$userData.birthday|date_format:"%Y-%m-%d"}" name="birthday" id="userBirthday"></div>
                 </div>
                 <div class="form-group"> 
                     <label for="inputEmail3" class="col-sm-2 control-label labelWidth">客户性别：</label>
