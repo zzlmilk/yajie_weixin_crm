@@ -14,9 +14,9 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         }
-//        else{
-//            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
-//        }
+        else{
+            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+        }
 
         $this->assign('open_id', $this->userOpenId);
     }
@@ -141,6 +141,10 @@ class UserController extends BaseController {
             $userOrder["open_id"] = $this->userOpenId;
             $userJsonData = transferData(APIURL . "/order/get_order", "post", $userOrder);
             $orderItem = json_decode($userJsonData, true);
+            if(empty($orderItem['order'])){
+                echo "暂无订单";
+                die;
+            }
             $orderString = $orderItem["order"];
             $returnVal["porpleCountSubmit"] = $orderString['order_number'];
             $orderDate = date("Y-m-d ", $orderString['appointment_time']);
@@ -175,7 +179,7 @@ class UserController extends BaseController {
             $this->errorMessage = "";
         }
         $userGetOrder["source"] = "company";
-        $userGetOrder["open_id"] = $_REQUEST['open_id'];
+        $userGetOrder["open_id"] = $this->userOpenId;
         $userOrderJsonData = transferData(APIURL . "/order/get_order", "post", $userGetOrder);
         $userOrderData = json_decode($userOrderJsonData, TRUE);
         if (isset($_GET["toCancel"])) {
@@ -217,7 +221,7 @@ class UserController extends BaseController {
                 $activateOrderValue["order"]['needMoney'] = $MerchandiseValue['merchandise']['merchandise_money'];
 
                 $this->assign("returnVal", $activateOrderValue["order"]);
-                $this->assign('open_id', $_REQUEST['open_id']);
+                $this->assign('open_id', $this->userOpenId);
                 $this->display("cancelOrder");
             }
         }
