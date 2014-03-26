@@ -60,7 +60,6 @@ class UserController extends BaseController {
         $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
         $exchangeItem = json_decode($exchangeItem, true);
 
-
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
         $this->display("exchangeGoods");
     }
@@ -337,6 +336,7 @@ class UserController extends BaseController {
             if ($exchangeItem['exchange_info']["exchange_type"] == "1") {
                 $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
                 $userInfo = json_decode($userInfo, TRUE);
+
                 if ($userInfo['user']['province_id'] == "0") {
                     $this->assign("userMessage", $userInfo['user']);
                     $this->locationCheck(); //填写信息              
@@ -505,6 +505,10 @@ class UserController extends BaseController {
             $postDate['id'] = $_GET['goodsId'];
             $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
             $exchangeList = json_decode($exchangeList, TRUE);
+
+            print_r($exchangeList);
+
+
             if ($exchangeList["error"]['error_status'] == 40001) {
                 echo "兑换失败：" . $exchangeList["error"]['status_info'];
             } else {

@@ -102,7 +102,7 @@ class weixinEvent {
         $type = $wechat->getRev()->getRevType();
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
-         $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3Dregister&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+         $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3Dregister&response_type=code&scope=snsapi_base&state=123#wechat_redirect">成为会员</a>';
 
          $wechat->text($text)->reply();        
     }
@@ -115,7 +115,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3Dorder&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3Dorder&response_type=code&scope=snsapi_base&state=123#wechat_redirect">我要预约</a>';
         $wechat->text($text)->reply();   
     }
 
@@ -128,7 +128,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3DgetExchangeList&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3DgetExchangeList&response_type=code&scope=snsapi_base&state=123#wechat_redirect">我要兑换</a>';
         $wechat->text($text)->reply();   
 
 
@@ -143,7 +143,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3Duserlogin&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3Duserlogin&response_type=code&scope=snsapi_base&state=123#wechat_redirect">我要签到</a>';
         $wechat->text($text)->reply(); 
         
     }
@@ -157,7 +157,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3DuserCenter&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3DuserCenter&response_type=code&scope=snsapi_base&state=123#wechat_redirect">我的中心</a>';
         $wechat->text($text)->reply();  
     }
     function jinqihuodong(){
@@ -169,7 +169,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3Dactivity&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3Dactivity&response_type=code&scope=snsapi_base&state=123#wechat_redirect">近期活动</a>';
         $wechat->text($text)->reply();  
     }
 
@@ -180,7 +180,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3DbigWheelPage&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3DbigWheelPage&response_type=code&scope=snsapi_base&state=123#wechat_redirect">大转盘</a>';
         $wechat->text($text)->reply();  
     }
 
@@ -191,7 +191,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3Dguaguaka&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3Dguaguaka&response_type=code&scope=snsapi_base&state=123#wechat_redirect">刮刮卡</a>';
         $wechat->text($text)->reply();  
     }
 
@@ -203,7 +203,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3DQuestionnaire&response_type=code&scope=snsapi_base&state=123#wechat_redirect">请点击这里</a>';
+        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3DQuestionnaire&response_type=code&scope=snsapi_base&state=123#wechat_redirect">问卷</a>';
         $wechat->text($text)->reply();  
     }
 

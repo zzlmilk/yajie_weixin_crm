@@ -148,6 +148,9 @@ class  UserController implements User {
 
 			}
 
+		} else{
+
+			echoErrorCode(105);
 		}
 
 	}

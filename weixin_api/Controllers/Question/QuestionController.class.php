@@ -58,10 +58,6 @@ class QuestionController  implements question{
 
 			$userInfo = $user->getUserInfo($_REQUEST['open_id']);
 
-			
-
-			
-
 
 			if(count($userInfo) > 0){
 

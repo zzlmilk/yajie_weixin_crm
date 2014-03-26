@@ -177,7 +177,7 @@ $(function() {
 		}
 
 		$.ajax({
-			url: webUrl+"?g=company&a=test&v=getBigWheel",
+			url: webUrl+"?g=company&a=user&v=getBigWheel",
 			dataType: "json",
 			data: {
 				token: "o7MB9ji5fQRsE0ZoVAMU7SlnRyMI",
@@ -194,7 +194,7 @@ $(function() {
 				}, 1)
 			},
 			success: function(data) {
-				 // alert(data.gift_id);
+				 alert(data);
 				 gift_id = data.gift_id;
 
 				 var temp = (parseInt(gift_id) - 1) *30 +6;

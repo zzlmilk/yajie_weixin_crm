@@ -53,6 +53,9 @@ class ExchangeController implements exchange {
 
 			}
 
+		} else{
+
+			echoErrorCode(105);
 		}
 
 		
@@ -79,6 +82,9 @@ class ExchangeController implements exchange {
 				}
 
 			}
+		} else{
+
+			echoErrorCode(105);
 		}
 
 	}
@@ -127,6 +133,9 @@ class ExchangeController implements exchange {
 
 			}
 
+		} else{
+
+			echoErrorCode(105);
 		}
 
 

@@ -69,8 +69,8 @@ class gameController extends BaseController  {
         $t = $_REQUEST['t'];
 
         $resultPro = transferData(APIURL . '/gift/get_probability_wheel/?source=1234', 'get');
-// $res = json_decode($resultPro,true);
-        print_r($resultPro);
+        $res = json_decode($resultPro,true);
+        echo $res;
 // echo "123";
     }
 
