@@ -14,6 +14,9 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         }
+//        else{
+//            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+//        }
 
         $this->assign('open_id', $this->userOpenId);
     }
@@ -50,7 +53,6 @@ class UserController extends BaseController {
         $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=company&open_id=" . $this->userOpenId, "get");
         $exchangeList = json_decode($exchangeList, true);
         $this->assign("exchangeList", $exchangeList);
-
         $this->display("getExchangeList");
     }
 
@@ -350,6 +352,7 @@ class UserController extends BaseController {
                     $getTown = json_decode($getTown, true);
                     $getArea = $this->getAreaMessage($userData['city_id']);
                     $getArea = json_decode($getArea, true);
+                    
                     $this->assign("provinceValue", $getProvince);
                     $this->assign("townValue", $getTown);
                     $this->assign("areaValue", $getArea);

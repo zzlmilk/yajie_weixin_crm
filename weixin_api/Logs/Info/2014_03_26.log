@@ -1500,3 +1500,313 @@ Mar 26 11:23:07 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redee
 insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-20','exchange','2','1395804187')
 Mar 26 11:23:07 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
 {"exchange_record":{"exchange_id":"2","user_id":"1","exchange_time":1395804187},"user_integration":{"user_integration":2660},"user_record":{"user_id":"1","record_type":1,"fraction":"-20","source":"exchange","exchange_id":"2","create_time":1395804187},"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:50:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:50:24 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+{"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:50:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:50:24 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"\u90a3\u7238\u7238","user_phone":"","sex":"2","birthday":"1993-05-07","user_money":"605","user_integration":"2660","user_state":"1","province_id":"41","city_id":"42","area_id":"43","street":"88wad","real_name":"ly","address_phone":"1395555555"}}
+Mar 26 11:50:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Mar 26 11:50:24 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+{"0":{"area_id":"1","title":"\u5317\u4eac","pid":"0"},"1":{"area_id":"21","title":"\u5929\u6d25","pid":"0"},"2":{"area_id":"41","title":"\u6cb3\u5317","pid":"0"},"3":{"area_id":"225","title":"\u5c71\u897f","pid":"0"},"4":{"area_id":"356","title":"\u5185\u8499\u53e4","pid":"0"},"5":{"area_id":"471","title":"\u8fbd\u5b81","pid":"0"},"6":{"area_id":"586","title":"\u5409\u6797","pid":"0"},"7":{"area_id":"656","title":"\u9ed1\u9f99\u6c5f","pid":"0"},"8":{"area_id":"802","title":"\u4e0a\u6d77","pid":"0"},"9":{"area_id":"823","title":"\u6c5f\u82cf","pid":"0"},"10":{"area_id":"943","title":"\u6d59\u6c5f","pid":"0"},"11":{"area_id":"1045","title":"\u5b89\u5fbd","pid":"0"},"12":{"area_id":"1168","title":"\u798f\u5efa","pid":"0"},"13":{"area_id":"1263","title":"\u6c5f\u897f","pid":"0"},"14":{"area_id":"1374","title":"\u5c71\u4e1c","pid":"0"},"15":{"area_id":"1532","title":"\u6cb3\u5357","pid":"0"},"16":{"area_id":"1709","title":"\u6e56\u5317","pid":"0"},"17":{"area_id":"1826","title":"\u6e56\u5357","pid":"0"},"18":{"area_id":"1963","title":"\u5e7f\u4e1c","pid":"0"},"19":{"area_id":"2106","title":"\u5e7f\u897f","pid":"0"},"20":{"area_id":"2230","title":"\u6d77\u5357","pid":"0"},"21":{"area_id":"2257","title":"\u91cd\u5e86\u5e02","pid":"0"},"22":{"area_id":"2299","title":"\u56db\u5ddd","pid":"0"},"23":{"area_id":"2502","title":"\u8d35\u5dde","pid":"0"},"24":{"area_id":"2600","title":"\u4e91\u5357","pid":"0"},"25":{"area_id":"2746","title":"\u897f\u85cf","pid":"0"},"26":{"area_id":"2827","title":"\u9655\u897f","pid":"0"},"27":{"area_id":"2945","title":"\u7518\u8083","pid":"0"},"28":{"area_id":"3046","title":"\u9752\u6d77","pid":"0"},"29":{"area_id":"3098","title":"\u5b81\u590f","pid":"0"},"30":{"area_id":"3125","title":"\u65b0\u7586","pid":"0"},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 26 11:50:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 41     
+Mar 26 11:50:24 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+[{"area_id":"42","title":"\u77f3\u5bb6\u5e84\u5e02","pid":"41"},{"area_id":"66","title":"\u5510\u5c71\u5e02","pid":"41"},{"area_id":"81","title":"\u79e6\u7687\u5c9b\u5e02","pid":"41"},{"area_id":"89","title":"\u90af\u90f8\u5e02","pid":"41"},{"area_id":"109","title":"\u90a2\u53f0\u5e02","pid":"41"},{"area_id":"129","title":"\u4fdd\u5b9a\u5e02","pid":"41"},{"area_id":"155","title":"\u5f20\u5bb6\u53e3\u5e02","pid":"41"},{"area_id":"173","title":"\u627f\u5fb7\u5e02","pid":"41"},{"area_id":"185","title":"\u6ca7\u5dde\u5e02","pid":"41"},{"area_id":"202","title":"\u5eca\u574a\u5e02","pid":"41"},{"area_id":"213","title":"\u8861\u6c34\u5e02","pid":"41"}]
+Mar 26 11:50:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 42     
+Mar 26 11:50:24 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+[{"area_id":"43","title":"\u957f\u5b89\u533a","pid":"42"},{"area_id":"44","title":"\u6865\u4e1c\u533a","pid":"42"},{"area_id":"45","title":"\u6865\u897f\u533a","pid":"42"},{"area_id":"46","title":"\u65b0\u534e\u533a","pid":"42"},{"area_id":"47","title":"\u4e95\u9649\u77ff\u533a","pid":"42"},{"area_id":"48","title":"\u88d5\u534e\u533a","pid":"42"},{"area_id":"49","title":"\u4e95\u9649\u53bf","pid":"42"},{"area_id":"50","title":"\u6b63\u5b9a\u53bf","pid":"42"},{"area_id":"51","title":"\u683e\u57ce\u53bf","pid":"42"},{"area_id":"52","title":"\u884c\u5510\u53bf","pid":"42"},{"area_id":"53","title":"\u7075\u5bff\u53bf","pid":"42"},{"area_id":"54","title":"\u9ad8\u9091\u53bf","pid":"42"},{"area_id":"55","title":"\u6df1\u6cfd\u53bf","pid":"42"},{"area_id":"56","title":"\u8d5e\u7687\u53bf","pid":"42"},{"area_id":"57","title":"\u65e0\u6781\u53bf","pid":"42"},{"area_id":"58","title":"\u5e73\u5c71\u53bf","pid":"42"},{"area_id":"59","title":"\u5143\u6c0f\u53bf","pid":"42"},{"area_id":"60","title":"\u8d75\u53bf","pid":"42"},{"area_id":"61","title":"\u8f9b\u96c6\u5e02","pid":"42"},{"area_id":"62","title":"\u85c1\u57ce\u5e02","pid":"42"},{"area_id":"63","title":"\u664b\u5dde\u5e02","pid":"42"},{"area_id":"64","title":"\u65b0\u4e50\u5e02","pid":"42"},{"area_id":"65","title":"\u9e7f\u6cc9\u5e02","pid":"42"}]
+Mar 26 11:50:27 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 943     
+Mar 26 11:50:27 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+[{"area_id":"944","title":"\u676d\u5dde\u5e02","pid":"943"},{"area_id":"958","title":"\u5b81\u6ce2\u5e02","pid":"943"},{"area_id":"970","title":"\u6e29\u5dde\u5e02","pid":"943"},{"area_id":"982","title":"\u5609\u5174\u5e02","pid":"943"},{"area_id":"990","title":"\u6e56\u5dde\u5e02","pid":"943"},{"area_id":"996","title":"\u7ecd\u5174\u5e02","pid":"943"},{"area_id":"1003","title":"\u91d1\u534e\u5e02","pid":"943"},{"area_id":"1013","title":"\u8862\u5dde\u5e02","pid":"943"},{"area_id":"1020","title":"\u821f\u5c71\u5e02","pid":"943"},{"area_id":"1025","title":"\u53f0\u5dde\u5e02","pid":"943"},{"area_id":"1035","title":"\u4e3d\u6c34\u5e02","pid":"943"}]
+Mar 26 11:50:27 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 944     
+Mar 26 11:50:27 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+[{"area_id":"945","title":"\u4e0a\u57ce\u533a","pid":"944"},{"area_id":"946","title":"\u4e0b\u57ce\u533a","pid":"944"},{"area_id":"947","title":"\u6c5f\u5e72\u533a","pid":"944"},{"area_id":"948","title":"\u62f1\u5885\u533a","pid":"944"},{"area_id":"949","title":"\u897f\u6e56\u533a","pid":"944"},{"area_id":"950","title":"\u6ee8\u6c5f\u533a","pid":"944"},{"area_id":"951","title":"\u8427\u5c71\u533a","pid":"944"},{"area_id":"952","title":"\u4f59\u676d\u533a","pid":"944"},{"area_id":"953","title":"\u6850\u5e90\u53bf","pid":"944"},{"area_id":"954","title":"\u6df3\u5b89\u53bf","pid":"944"},{"area_id":"955","title":"\u5efa\u5fb7\u5e02","pid":"944"},{"area_id":"956","title":"\u5bcc\u9633\u5e02","pid":"944"},{"area_id":"957","title":"\u4e34\u5b89\u5e02","pid":"944"}]
+Mar 26 11:50:30 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:50:30 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+{"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:50:30 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:50:30 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"\u90a3\u7238\u7238","user_phone":"","sex":"2","birthday":"1993-05-07","user_money":"605","user_integration":"2660","user_state":"1","province_id":"41","city_id":"42","area_id":"43","street":"88wad","real_name":"ly","address_phone":"1395555555"}}
+Mar 26 11:50:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Mar 26 11:50:31 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+{"0":{"area_id":"1","title":"\u5317\u4eac","pid":"0"},"1":{"area_id":"21","title":"\u5929\u6d25","pid":"0"},"2":{"area_id":"41","title":"\u6cb3\u5317","pid":"0"},"3":{"area_id":"225","title":"\u5c71\u897f","pid":"0"},"4":{"area_id":"356","title":"\u5185\u8499\u53e4","pid":"0"},"5":{"area_id":"471","title":"\u8fbd\u5b81","pid":"0"},"6":{"area_id":"586","title":"\u5409\u6797","pid":"0"},"7":{"area_id":"656","title":"\u9ed1\u9f99\u6c5f","pid":"0"},"8":{"area_id":"802","title":"\u4e0a\u6d77","pid":"0"},"9":{"area_id":"823","title":"\u6c5f\u82cf","pid":"0"},"10":{"area_id":"943","title":"\u6d59\u6c5f","pid":"0"},"11":{"area_id":"1045","title":"\u5b89\u5fbd","pid":"0"},"12":{"area_id":"1168","title":"\u798f\u5efa","pid":"0"},"13":{"area_id":"1263","title":"\u6c5f\u897f","pid":"0"},"14":{"area_id":"1374","title":"\u5c71\u4e1c","pid":"0"},"15":{"area_id":"1532","title":"\u6cb3\u5357","pid":"0"},"16":{"area_id":"1709","title":"\u6e56\u5317","pid":"0"},"17":{"area_id":"1826","title":"\u6e56\u5357","pid":"0"},"18":{"area_id":"1963","title":"\u5e7f\u4e1c","pid":"0"},"19":{"area_id":"2106","title":"\u5e7f\u897f","pid":"0"},"20":{"area_id":"2230","title":"\u6d77\u5357","pid":"0"},"21":{"area_id":"2257","title":"\u91cd\u5e86\u5e02","pid":"0"},"22":{"area_id":"2299","title":"\u56db\u5ddd","pid":"0"},"23":{"area_id":"2502","title":"\u8d35\u5dde","pid":"0"},"24":{"area_id":"2600","title":"\u4e91\u5357","pid":"0"},"25":{"area_id":"2746","title":"\u897f\u85cf","pid":"0"},"26":{"area_id":"2827","title":"\u9655\u897f","pid":"0"},"27":{"area_id":"2945","title":"\u7518\u8083","pid":"0"},"28":{"area_id":"3046","title":"\u9752\u6d77","pid":"0"},"29":{"area_id":"3098","title":"\u5b81\u590f","pid":"0"},"30":{"area_id":"3125","title":"\u65b0\u7586","pid":"0"},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 26 11:50:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 41     
+Mar 26 11:50:31 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+[{"area_id":"42","title":"\u77f3\u5bb6\u5e84\u5e02","pid":"41"},{"area_id":"66","title":"\u5510\u5c71\u5e02","pid":"41"},{"area_id":"81","title":"\u79e6\u7687\u5c9b\u5e02","pid":"41"},{"area_id":"89","title":"\u90af\u90f8\u5e02","pid":"41"},{"area_id":"109","title":"\u90a2\u53f0\u5e02","pid":"41"},{"area_id":"129","title":"\u4fdd\u5b9a\u5e02","pid":"41"},{"area_id":"155","title":"\u5f20\u5bb6\u53e3\u5e02","pid":"41"},{"area_id":"173","title":"\u627f\u5fb7\u5e02","pid":"41"},{"area_id":"185","title":"\u6ca7\u5dde\u5e02","pid":"41"},{"area_id":"202","title":"\u5eca\u574a\u5e02","pid":"41"},{"area_id":"213","title":"\u8861\u6c34\u5e02","pid":"41"}]
+Mar 26 11:50:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 42     
+Mar 26 11:50:31 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+[{"area_id":"43","title":"\u957f\u5b89\u533a","pid":"42"},{"area_id":"44","title":"\u6865\u4e1c\u533a","pid":"42"},{"area_id":"45","title":"\u6865\u897f\u533a","pid":"42"},{"area_id":"46","title":"\u65b0\u534e\u533a","pid":"42"},{"area_id":"47","title":"\u4e95\u9649\u77ff\u533a","pid":"42"},{"area_id":"48","title":"\u88d5\u534e\u533a","pid":"42"},{"area_id":"49","title":"\u4e95\u9649\u53bf","pid":"42"},{"area_id":"50","title":"\u6b63\u5b9a\u53bf","pid":"42"},{"area_id":"51","title":"\u683e\u57ce\u53bf","pid":"42"},{"area_id":"52","title":"\u884c\u5510\u53bf","pid":"42"},{"area_id":"53","title":"\u7075\u5bff\u53bf","pid":"42"},{"area_id":"54","title":"\u9ad8\u9091\u53bf","pid":"42"},{"area_id":"55","title":"\u6df1\u6cfd\u53bf","pid":"42"},{"area_id":"56","title":"\u8d5e\u7687\u53bf","pid":"42"},{"area_id":"57","title":"\u65e0\u6781\u53bf","pid":"42"},{"area_id":"58","title":"\u5e73\u5c71\u53bf","pid":"42"},{"area_id":"59","title":"\u5143\u6c0f\u53bf","pid":"42"},{"area_id":"60","title":"\u8d75\u53bf","pid":"42"},{"area_id":"61","title":"\u8f9b\u96c6\u5e02","pid":"42"},{"area_id":"62","title":"\u85c1\u57ce\u5e02","pid":"42"},{"area_id":"63","title":"\u664b\u5dde\u5e02","pid":"42"},{"area_id":"64","title":"\u65b0\u4e50\u5e02","pid":"42"},{"area_id":"65","title":"\u9e7f\u6cc9\u5e02","pid":"42"}]
+Mar 26 11:50:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:50:48 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+{"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:50:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:50:48 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"\u90a3\u7238\u7238","user_phone":"","sex":"2","birthday":"1993-05-07","user_money":"605","user_integration":"2660","user_state":"1","province_id":"41","city_id":"42","area_id":"43","street":"88wad","real_name":"ly","address_phone":"1395555555"}}
+Mar 26 11:50:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Mar 26 11:50:48 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+{"0":{"area_id":"1","title":"\u5317\u4eac","pid":"0"},"1":{"area_id":"21","title":"\u5929\u6d25","pid":"0"},"2":{"area_id":"41","title":"\u6cb3\u5317","pid":"0"},"3":{"area_id":"225","title":"\u5c71\u897f","pid":"0"},"4":{"area_id":"356","title":"\u5185\u8499\u53e4","pid":"0"},"5":{"area_id":"471","title":"\u8fbd\u5b81","pid":"0"},"6":{"area_id":"586","title":"\u5409\u6797","pid":"0"},"7":{"area_id":"656","title":"\u9ed1\u9f99\u6c5f","pid":"0"},"8":{"area_id":"802","title":"\u4e0a\u6d77","pid":"0"},"9":{"area_id":"823","title":"\u6c5f\u82cf","pid":"0"},"10":{"area_id":"943","title":"\u6d59\u6c5f","pid":"0"},"11":{"area_id":"1045","title":"\u5b89\u5fbd","pid":"0"},"12":{"area_id":"1168","title":"\u798f\u5efa","pid":"0"},"13":{"area_id":"1263","title":"\u6c5f\u897f","pid":"0"},"14":{"area_id":"1374","title":"\u5c71\u4e1c","pid":"0"},"15":{"area_id":"1532","title":"\u6cb3\u5357","pid":"0"},"16":{"area_id":"1709","title":"\u6e56\u5317","pid":"0"},"17":{"area_id":"1826","title":"\u6e56\u5357","pid":"0"},"18":{"area_id":"1963","title":"\u5e7f\u4e1c","pid":"0"},"19":{"area_id":"2106","title":"\u5e7f\u897f","pid":"0"},"20":{"area_id":"2230","title":"\u6d77\u5357","pid":"0"},"21":{"area_id":"2257","title":"\u91cd\u5e86\u5e02","pid":"0"},"22":{"area_id":"2299","title":"\u56db\u5ddd","pid":"0"},"23":{"area_id":"2502","title":"\u8d35\u5dde","pid":"0"},"24":{"area_id":"2600","title":"\u4e91\u5357","pid":"0"},"25":{"area_id":"2746","title":"\u897f\u85cf","pid":"0"},"26":{"area_id":"2827","title":"\u9655\u897f","pid":"0"},"27":{"area_id":"2945","title":"\u7518\u8083","pid":"0"},"28":{"area_id":"3046","title":"\u9752\u6d77","pid":"0"},"29":{"area_id":"3098","title":"\u5b81\u590f","pid":"0"},"30":{"area_id":"3125","title":"\u65b0\u7586","pid":"0"},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 26 11:50:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 41     
+Mar 26 11:50:48 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+[{"area_id":"42","title":"\u77f3\u5bb6\u5e84\u5e02","pid":"41"},{"area_id":"66","title":"\u5510\u5c71\u5e02","pid":"41"},{"area_id":"81","title":"\u79e6\u7687\u5c9b\u5e02","pid":"41"},{"area_id":"89","title":"\u90af\u90f8\u5e02","pid":"41"},{"area_id":"109","title":"\u90a2\u53f0\u5e02","pid":"41"},{"area_id":"129","title":"\u4fdd\u5b9a\u5e02","pid":"41"},{"area_id":"155","title":"\u5f20\u5bb6\u53e3\u5e02","pid":"41"},{"area_id":"173","title":"\u627f\u5fb7\u5e02","pid":"41"},{"area_id":"185","title":"\u6ca7\u5dde\u5e02","pid":"41"},{"area_id":"202","title":"\u5eca\u574a\u5e02","pid":"41"},{"area_id":"213","title":"\u8861\u6c34\u5e02","pid":"41"}]
+Mar 26 11:50:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 42     
+Mar 26 11:50:48 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+[{"area_id":"43","title":"\u957f\u5b89\u533a","pid":"42"},{"area_id":"44","title":"\u6865\u4e1c\u533a","pid":"42"},{"area_id":"45","title":"\u6865\u897f\u533a","pid":"42"},{"area_id":"46","title":"\u65b0\u534e\u533a","pid":"42"},{"area_id":"47","title":"\u4e95\u9649\u77ff\u533a","pid":"42"},{"area_id":"48","title":"\u88d5\u534e\u533a","pid":"42"},{"area_id":"49","title":"\u4e95\u9649\u53bf","pid":"42"},{"area_id":"50","title":"\u6b63\u5b9a\u53bf","pid":"42"},{"area_id":"51","title":"\u683e\u57ce\u53bf","pid":"42"},{"area_id":"52","title":"\u884c\u5510\u53bf","pid":"42"},{"area_id":"53","title":"\u7075\u5bff\u53bf","pid":"42"},{"area_id":"54","title":"\u9ad8\u9091\u53bf","pid":"42"},{"area_id":"55","title":"\u6df1\u6cfd\u53bf","pid":"42"},{"area_id":"56","title":"\u8d5e\u7687\u53bf","pid":"42"},{"area_id":"57","title":"\u65e0\u6781\u53bf","pid":"42"},{"area_id":"58","title":"\u5e73\u5c71\u53bf","pid":"42"},{"area_id":"59","title":"\u5143\u6c0f\u53bf","pid":"42"},{"area_id":"60","title":"\u8d75\u53bf","pid":"42"},{"area_id":"61","title":"\u8f9b\u96c6\u5e02","pid":"42"},{"area_id":"62","title":"\u85c1\u57ce\u5e02","pid":"42"},{"area_id":"63","title":"\u664b\u5dde\u5e02","pid":"42"},{"area_id":"64","title":"\u65b0\u4e50\u5e02","pid":"42"},{"area_id":"65","title":"\u9e7f\u6cc9\u5e02","pid":"42"}]
+Mar 26 11:52:51 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:52:51 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+{"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:52:51 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:52:51 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"\u90a3\u7238\u7238","user_phone":"","sex":"2","birthday":"1993-05-07","user_money":"605","user_integration":"2660","user_state":"1","province_id":"41","city_id":"42","area_id":"43","street":"88wad","real_name":"ly","address_phone":"1395555555"}}
+Mar 26 11:52:51 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Mar 26 11:52:51 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+{"0":{"area_id":"1","title":"\u5317\u4eac","pid":"0"},"1":{"area_id":"21","title":"\u5929\u6d25","pid":"0"},"2":{"area_id":"41","title":"\u6cb3\u5317","pid":"0"},"3":{"area_id":"225","title":"\u5c71\u897f","pid":"0"},"4":{"area_id":"356","title":"\u5185\u8499\u53e4","pid":"0"},"5":{"area_id":"471","title":"\u8fbd\u5b81","pid":"0"},"6":{"area_id":"586","title":"\u5409\u6797","pid":"0"},"7":{"area_id":"656","title":"\u9ed1\u9f99\u6c5f","pid":"0"},"8":{"area_id":"802","title":"\u4e0a\u6d77","pid":"0"},"9":{"area_id":"823","title":"\u6c5f\u82cf","pid":"0"},"10":{"area_id":"943","title":"\u6d59\u6c5f","pid":"0"},"11":{"area_id":"1045","title":"\u5b89\u5fbd","pid":"0"},"12":{"area_id":"1168","title":"\u798f\u5efa","pid":"0"},"13":{"area_id":"1263","title":"\u6c5f\u897f","pid":"0"},"14":{"area_id":"1374","title":"\u5c71\u4e1c","pid":"0"},"15":{"area_id":"1532","title":"\u6cb3\u5357","pid":"0"},"16":{"area_id":"1709","title":"\u6e56\u5317","pid":"0"},"17":{"area_id":"1826","title":"\u6e56\u5357","pid":"0"},"18":{"area_id":"1963","title":"\u5e7f\u4e1c","pid":"0"},"19":{"area_id":"2106","title":"\u5e7f\u897f","pid":"0"},"20":{"area_id":"2230","title":"\u6d77\u5357","pid":"0"},"21":{"area_id":"2257","title":"\u91cd\u5e86\u5e02","pid":"0"},"22":{"area_id":"2299","title":"\u56db\u5ddd","pid":"0"},"23":{"area_id":"2502","title":"\u8d35\u5dde","pid":"0"},"24":{"area_id":"2600","title":"\u4e91\u5357","pid":"0"},"25":{"area_id":"2746","title":"\u897f\u85cf","pid":"0"},"26":{"area_id":"2827","title":"\u9655\u897f","pid":"0"},"27":{"area_id":"2945","title":"\u7518\u8083","pid":"0"},"28":{"area_id":"3046","title":"\u9752\u6d77","pid":"0"},"29":{"area_id":"3098","title":"\u5b81\u590f","pid":"0"},"30":{"area_id":"3125","title":"\u65b0\u7586","pid":"0"},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 26 11:52:51 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 41     
+Mar 26 11:52:51 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+[{"area_id":"42","title":"\u77f3\u5bb6\u5e84\u5e02","pid":"41"},{"area_id":"66","title":"\u5510\u5c71\u5e02","pid":"41"},{"area_id":"81","title":"\u79e6\u7687\u5c9b\u5e02","pid":"41"},{"area_id":"89","title":"\u90af\u90f8\u5e02","pid":"41"},{"area_id":"109","title":"\u90a2\u53f0\u5e02","pid":"41"},{"area_id":"129","title":"\u4fdd\u5b9a\u5e02","pid":"41"},{"area_id":"155","title":"\u5f20\u5bb6\u53e3\u5e02","pid":"41"},{"area_id":"173","title":"\u627f\u5fb7\u5e02","pid":"41"},{"area_id":"185","title":"\u6ca7\u5dde\u5e02","pid":"41"},{"area_id":"202","title":"\u5eca\u574a\u5e02","pid":"41"},{"area_id":"213","title":"\u8861\u6c34\u5e02","pid":"41"}]
+Mar 26 11:52:51 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 42     
+Mar 26 11:52:51 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+[{"area_id":"43","title":"\u957f\u5b89\u533a","pid":"42"},{"area_id":"44","title":"\u6865\u4e1c\u533a","pid":"42"},{"area_id":"45","title":"\u6865\u897f\u533a","pid":"42"},{"area_id":"46","title":"\u65b0\u534e\u533a","pid":"42"},{"area_id":"47","title":"\u4e95\u9649\u77ff\u533a","pid":"42"},{"area_id":"48","title":"\u88d5\u534e\u533a","pid":"42"},{"area_id":"49","title":"\u4e95\u9649\u53bf","pid":"42"},{"area_id":"50","title":"\u6b63\u5b9a\u53bf","pid":"42"},{"area_id":"51","title":"\u683e\u57ce\u53bf","pid":"42"},{"area_id":"52","title":"\u884c\u5510\u53bf","pid":"42"},{"area_id":"53","title":"\u7075\u5bff\u53bf","pid":"42"},{"area_id":"54","title":"\u9ad8\u9091\u53bf","pid":"42"},{"area_id":"55","title":"\u6df1\u6cfd\u53bf","pid":"42"},{"area_id":"56","title":"\u8d5e\u7687\u53bf","pid":"42"},{"area_id":"57","title":"\u65e0\u6781\u53bf","pid":"42"},{"area_id":"58","title":"\u5e73\u5c71\u53bf","pid":"42"},{"area_id":"59","title":"\u5143\u6c0f\u53bf","pid":"42"},{"area_id":"60","title":"\u8d75\u53bf","pid":"42"},{"area_id":"61","title":"\u8f9b\u96c6\u5e02","pid":"42"},{"area_id":"62","title":"\u85c1\u57ce\u5e02","pid":"42"},{"area_id":"63","title":"\u664b\u5dde\u5e02","pid":"42"},{"area_id":"64","title":"\u65b0\u4e50\u5e02","pid":"42"},{"area_id":"65","title":"\u9e7f\u6cc9\u5e02","pid":"42"}]
+Mar 26 11:53:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:53:31 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+{"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:53:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:53:31 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"\u90a3\u7238\u7238","user_phone":"","sex":"2","birthday":"1993-05-07","user_money":"605","user_integration":"2660","user_state":"1","province_id":"41","city_id":"42","area_id":"43","street":"88wad","real_name":"ly","address_phone":"1395555555"}}
+Mar 26 11:53:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Mar 26 11:53:31 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+{"0":{"area_id":"1","title":"\u5317\u4eac","pid":"0"},"1":{"area_id":"21","title":"\u5929\u6d25","pid":"0"},"2":{"area_id":"41","title":"\u6cb3\u5317","pid":"0"},"3":{"area_id":"225","title":"\u5c71\u897f","pid":"0"},"4":{"area_id":"356","title":"\u5185\u8499\u53e4","pid":"0"},"5":{"area_id":"471","title":"\u8fbd\u5b81","pid":"0"},"6":{"area_id":"586","title":"\u5409\u6797","pid":"0"},"7":{"area_id":"656","title":"\u9ed1\u9f99\u6c5f","pid":"0"},"8":{"area_id":"802","title":"\u4e0a\u6d77","pid":"0"},"9":{"area_id":"823","title":"\u6c5f\u82cf","pid":"0"},"10":{"area_id":"943","title":"\u6d59\u6c5f","pid":"0"},"11":{"area_id":"1045","title":"\u5b89\u5fbd","pid":"0"},"12":{"area_id":"1168","title":"\u798f\u5efa","pid":"0"},"13":{"area_id":"1263","title":"\u6c5f\u897f","pid":"0"},"14":{"area_id":"1374","title":"\u5c71\u4e1c","pid":"0"},"15":{"area_id":"1532","title":"\u6cb3\u5357","pid":"0"},"16":{"area_id":"1709","title":"\u6e56\u5317","pid":"0"},"17":{"area_id":"1826","title":"\u6e56\u5357","pid":"0"},"18":{"area_id":"1963","title":"\u5e7f\u4e1c","pid":"0"},"19":{"area_id":"2106","title":"\u5e7f\u897f","pid":"0"},"20":{"area_id":"2230","title":"\u6d77\u5357","pid":"0"},"21":{"area_id":"2257","title":"\u91cd\u5e86\u5e02","pid":"0"},"22":{"area_id":"2299","title":"\u56db\u5ddd","pid":"0"},"23":{"area_id":"2502","title":"\u8d35\u5dde","pid":"0"},"24":{"area_id":"2600","title":"\u4e91\u5357","pid":"0"},"25":{"area_id":"2746","title":"\u897f\u85cf","pid":"0"},"26":{"area_id":"2827","title":"\u9655\u897f","pid":"0"},"27":{"area_id":"2945","title":"\u7518\u8083","pid":"0"},"28":{"area_id":"3046","title":"\u9752\u6d77","pid":"0"},"29":{"area_id":"3098","title":"\u5b81\u590f","pid":"0"},"30":{"area_id":"3125","title":"\u65b0\u7586","pid":"0"},"error":{"error_status":100,"status_info":"\u6210\u529f"}}
+Mar 26 11:53:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 41     
+Mar 26 11:53:31 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+[{"area_id":"42","title":"\u77f3\u5bb6\u5e84\u5e02","pid":"41"},{"area_id":"66","title":"\u5510\u5c71\u5e02","pid":"41"},{"area_id":"81","title":"\u79e6\u7687\u5c9b\u5e02","pid":"41"},{"area_id":"89","title":"\u90af\u90f8\u5e02","pid":"41"},{"area_id":"109","title":"\u90a2\u53f0\u5e02","pid":"41"},{"area_id":"129","title":"\u4fdd\u5b9a\u5e02","pid":"41"},{"area_id":"155","title":"\u5f20\u5bb6\u53e3\u5e02","pid":"41"},{"area_id":"173","title":"\u627f\u5fb7\u5e02","pid":"41"},{"area_id":"185","title":"\u6ca7\u5dde\u5e02","pid":"41"},{"area_id":"202","title":"\u5eca\u574a\u5e02","pid":"41"},{"area_id":"213","title":"\u8861\u6c34\u5e02","pid":"41"}]
+Mar 26 11:53:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 42     
+Mar 26 11:53:31 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+[{"area_id":"43","title":"\u957f\u5b89\u533a","pid":"42"},{"area_id":"44","title":"\u6865\u4e1c\u533a","pid":"42"},{"area_id":"45","title":"\u6865\u897f\u533a","pid":"42"},{"area_id":"46","title":"\u65b0\u534e\u533a","pid":"42"},{"area_id":"47","title":"\u4e95\u9649\u77ff\u533a","pid":"42"},{"area_id":"48","title":"\u88d5\u534e\u533a","pid":"42"},{"area_id":"49","title":"\u4e95\u9649\u53bf","pid":"42"},{"area_id":"50","title":"\u6b63\u5b9a\u53bf","pid":"42"},{"area_id":"51","title":"\u683e\u57ce\u53bf","pid":"42"},{"area_id":"52","title":"\u884c\u5510\u53bf","pid":"42"},{"area_id":"53","title":"\u7075\u5bff\u53bf","pid":"42"},{"area_id":"54","title":"\u9ad8\u9091\u53bf","pid":"42"},{"area_id":"55","title":"\u6df1\u6cfd\u53bf","pid":"42"},{"area_id":"56","title":"\u8d5e\u7687\u53bf","pid":"42"},{"area_id":"57","title":"\u65e0\u6781\u53bf","pid":"42"},{"area_id":"58","title":"\u5e73\u5c71\u53bf","pid":"42"},{"area_id":"59","title":"\u5143\u6c0f\u53bf","pid":"42"},{"area_id":"60","title":"\u8d75\u53bf","pid":"42"},{"area_id":"61","title":"\u8f9b\u96c6\u5e02","pid":"42"},{"area_id":"62","title":"\u85c1\u57ce\u5e02","pid":"42"},{"area_id":"63","title":"\u664b\u5dde\u5e02","pid":"42"},{"area_id":"64","title":"\u65b0\u4e50\u5e02","pid":"42"},{"area_id":"65","title":"\u9e7f\u6cc9\u5e02","pid":"42"}]
+Mar 26 11:53:52 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:53:52 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_id = 1     
+Mar 26 11:53:52 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+UPDATE weixin_company.user SET address_phone='13955555555', province_id='41', city_id='42', area_id='43', street='88wad', real_name='ly' WHERE 1  AND user_id = 1
+Mar 26 11:53:52 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+{"res":1}
+Mar 26 11:53:52 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:53:52 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:53:52 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('2','1','1395806032')
+Mar 26 11:53:52 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:53:52 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='2640' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Mar 26 11:53:52 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-20','exchange','2','1395806032')
+Mar 26 11:53:52 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+{"exchange_record":{"exchange_id":"2","user_id":"1","exchange_time":1395806032},"user_integration":{"user_integration":2640},"user_record":{"user_id":"1","record_type":1,"fraction":"-20","source":"exchange","exchange_id":"2","create_time":1395806032},"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:54:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:54:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_id = 1     
+Mar 26 11:54:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+UPDATE weixin_company.user SET address_phone='13955555555', province_id='41', city_id='42', area_id='43', street='88wad', real_name='ly' WHERE 1  AND user_id = 1
+Mar 26 11:54:29 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+{"res":1}
+Mar 26 11:54:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:54:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:54:29 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('2','1','1395806069')
+Mar 26 11:54:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:54:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='2620' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Mar 26 11:54:29 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-20','exchange','2','1395806069')
+Mar 26 11:54:29 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+{"exchange_record":{"exchange_id":"2","user_id":"1","exchange_time":1395806069},"user_integration":{"user_integration":2620},"user_record":{"user_id":"1","record_type":1,"fraction":"-20","source":"exchange","exchange_id":"2","create_time":1395806069},"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:54:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:54:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_id = 1     
+Mar 26 11:54:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+UPDATE weixin_company.user SET address_phone='13955555555', province_id='41', city_id='42', area_id='43', street='88wad', real_name='ly' WHERE 1  AND user_id = 1
+Mar 26 11:54:40 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+{"res":1}
+Mar 26 11:54:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:54:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:54:40 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('2','1','1395806080')
+Mar 26 11:54:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:54:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='2600' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Mar 26 11:54:40 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-20','exchange','2','1395806080')
+Mar 26 11:54:40 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+{"exchange_record":{"exchange_id":"2","user_id":"1","exchange_time":1395806080},"user_integration":{"user_integration":2600},"user_record":{"user_id":"1","record_type":1,"fraction":"-20","source":"exchange","exchange_id":"2","create_time":1395806080},"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:54:55 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:54:55 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_id = 1     
+Mar 26 11:54:55 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+UPDATE weixin_company.user SET address_phone='13955555555', province_id='41', city_id='42', area_id='43', street='88wad', real_name='ly' WHERE 1  AND user_id = 1
+Mar 26 11:54:55 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+{"res":1}
+Mar 26 11:54:56 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:54:56 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:54:56 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('2','1','1395806096')
+Mar 26 11:54:56 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:54:56 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='2580' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Mar 26 11:54:56 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-20','exchange','2','1395806096')
+Mar 26 11:54:56 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+{"exchange_record":{"exchange_id":"2","user_id":"1","exchange_time":1395806096},"user_integration":{"user_integration":2580},"user_record":{"user_id":"1","record_type":1,"fraction":"-20","source":"exchange","exchange_id":"2","create_time":1395806096},"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:55:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:55:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_id = 1     
+Mar 26 11:55:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+UPDATE weixin_company.user SET address_phone='13955555555', province_id='41', city_id='42', area_id='43', street='88wad', real_name='ly' WHERE 1  AND user_id = 1
+Mar 26 11:55:29 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+{"res":1}
+Mar 26 11:55:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:55:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:55:29 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('2','1','1395806129')
+Mar 26 11:55:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:55:29 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='2560' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Mar 26 11:55:29 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-20','exchange','2','1395806129')
+Mar 26 11:55:29 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+{"exchange_record":{"exchange_id":"2","user_id":"1","exchange_time":1395806129},"user_integration":{"user_integration":2560},"user_record":{"user_id":"1","record_type":1,"fraction":"-20","source":"exchange","exchange_id":"2","create_time":1395806129},"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:56:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:56:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_id = 1     
+Mar 26 11:56:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+UPDATE weixin_company.user SET address_phone='13955555555', province_id='41', city_id='42', area_id='43', street='88wad', real_name='ly' WHERE 1  AND user_id = 1
+Mar 26 11:56:33 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+{"res":1}
+Mar 26 11:56:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:56:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:56:33 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('2','1','1395806193')
+Mar 26 11:56:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:56:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='2540' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Mar 26 11:56:33 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-20','exchange','2','1395806193')
+Mar 26 11:56:33 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+{"exchange_record":{"exchange_id":"2","user_id":"1","exchange_time":1395806193},"user_integration":{"user_integration":2540},"user_record":{"user_id":"1","record_type":1,"fraction":"-20","source":"exchange","exchange_id":"2","create_time":1395806193},"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:56:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:56:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_id = 1     
+Mar 26 11:56:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+UPDATE weixin_company.user SET address_phone='13955555555', province_id='41', city_id='42', area_id='43', street='88wad', real_name='ly' WHERE 1  AND user_id = 1
+Mar 26 11:56:41 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+{"res":1}
+Mar 26 11:56:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:56:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:56:41 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('2','1','1395806201')
+Mar 26 11:56:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:56:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='2520' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Mar 26 11:56:41 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-20','exchange','2','1395806201')
+Mar 26 11:56:41 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+{"exchange_record":{"exchange_id":"2","user_id":"1","exchange_time":1395806201},"user_integration":{"user_integration":2520},"user_record":{"user_id":"1","record_type":1,"fraction":"-20","source":"exchange","exchange_id":"2","create_time":1395806201},"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:58:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:58:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_id = 1     
+Mar 26 11:58:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+UPDATE weixin_company.user SET address_phone='13955555555', province_id='41', city_id='42', area_id='43', street='88wad', real_name='ly' WHERE 1  AND user_id = 1
+Mar 26 11:58:33 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+{"res":1}
+Mar 26 11:58:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:58:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:58:33 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('2','1','1395806313')
+Mar 26 11:58:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:58:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='2500' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Mar 26 11:58:33 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-20','exchange','2','1395806313')
+Mar 26 11:58:33 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+{"exchange_record":{"exchange_id":"2","user_id":"1","exchange_time":1395806313},"user_integration":{"user_integration":2500},"user_record":{"user_id":"1","record_type":1,"fraction":"-20","source":"exchange","exchange_id":"2","create_time":1395806313},"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:58:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:58:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+SELECT * FROM weixin_company.user  WHERE 1  AND user_id = 1     
+Mar 26 11:58:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+UPDATE weixin_company.user SET address_phone='13955555555', province_id='41', city_id='42', area_id='43', street='88wad', real_name='ly' WHERE 1  AND user_id = 1
+Mar 26 11:58:48 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/update_user_address
+{"res":1}
+Mar 26 11:58:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Mar 26 11:58:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:58:48 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('2','1','1395806328')
+Mar 26 11:58:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 26 11:58:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='2480' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Mar 26 11:58:48 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-20','exchange','2','1395806328')
+Mar 26 11:58:48 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+{"exchange_record":{"exchange_id":"2","user_id":"1","exchange_time":1395806328},"user_integration":{"user_integration":2480},"user_record":{"user_id":"1","record_type":1,"fraction":"-20","source":"exchange","exchange_id":"2","create_time":1395806328},"exchange_info":{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"}}
+Mar 26 11:59:05 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Mar 26 11:59:05 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+[{"exchange_id":"1","exchange_name":"\u5151\u63621","exchange_type":"0","exchange_integration":"10","exchange_image":"174Small.jpg","exchange_summary":"asdasjbdjasbf","exchangez_details":"dasdasf"},{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"},{"exchange_id":"4","exchange_name":"\u5151\u63623","exchange_type":"0","exchange_integration":"213","exchange_image":"140320121044144.jpg","exchange_summary":"31232","exchangez_details":"13124"}]

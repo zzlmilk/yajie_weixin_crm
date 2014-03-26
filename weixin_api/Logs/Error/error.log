@@ -71,3 +71,8 @@
 [26-Mar-2014 11:20:30 Asia/Shanghai] PHP Notice:  Undefined index: area_id in /web/www/yajie_weixin_crm/weixin_api/Controllers/Area/AreaController.class.php on line 12
 [26-Mar-2014 11:21:30 Asia/Shanghai] PHP Notice:  Undefined index: area_id in /web/www/yajie_weixin_crm/weixin_api/Controllers/Area/AreaController.class.php on line 12
 [26-Mar-2014 11:22:12 Asia/Shanghai] PHP Notice:  Undefined index: area_id in /web/www/yajie_weixin_crm/weixin_api/Controllers/Area/AreaController.class.php on line 12
+[26-Mar-2014 11:50:24 Asia/Shanghai] PHP Notice:  Undefined index: area_id in /web/www/yajie_weixin_crm/weixin_api/Controllers/Area/AreaController.class.php on line 12
+[26-Mar-2014 11:50:31 Asia/Shanghai] PHP Notice:  Undefined index: area_id in /web/www/yajie_weixin_crm/weixin_api/Controllers/Area/AreaController.class.php on line 12
+[26-Mar-2014 11:50:48 Asia/Shanghai] PHP Notice:  Undefined index: area_id in /web/www/yajie_weixin_crm/weixin_api/Controllers/Area/AreaController.class.php on line 12
+[26-Mar-2014 11:52:51 Asia/Shanghai] PHP Notice:  Undefined index: area_id in /web/www/yajie_weixin_crm/weixin_api/Controllers/Area/AreaController.class.php on line 12
+[26-Mar-2014 11:53:31 Asia/Shanghai] PHP Notice:  Undefined index: area_id in /web/www/yajie_weixin_crm/weixin_api/Controllers/Area/AreaController.class.php on line 12

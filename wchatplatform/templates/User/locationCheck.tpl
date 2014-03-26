@@ -11,7 +11,9 @@
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css"> 
         <style>
-
+            .form-group{
+                margin-top: 15px;
+            }
         </style>
     </head>
     <body>
@@ -24,7 +26,11 @@
                     <div class="col-sm-10">
                         <select class="form-control" id="province" name="province_id">
                             {foreach from=$provinceValue item=provinceItem key=key}
-                                <option value="{$provinceItem.area_id}">{$provinceItem.title}</option>
+                                {if $provinceItem.area_id eq $userMessage.province_id}
+                                    <option selected value="{$provinceItem.area_id}">{$provinceItem.title}</option>
+                                {else}
+                                    <option value="{$provinceItem.area_id}">{$provinceItem.title}</option>
+                                {/if}
                             {/foreach}
                         </select>
                     </div>
@@ -34,17 +40,26 @@
                     <div class="col-sm-10">
                         <select class="form-control" id="town" name="city_id">
                             {foreach from=$townValue item=townItem key=key}
-                                <option value="{$townItem.area_id}">{$townItem.title}</option>
+                                {if $townItem.area_id eq $userMessage.city_id}
+                                    <option selected value="{$townItem.area_id}">{$townItem.title}</option>
+                                {else}
+                                    <option  value="{$townItem.area_id}">{$townItem.title}</option>
+                                {/if}
                             {/foreach}
                         </select>
                     </div>
                 </div>
+
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">区</label>
                     <div class="col-sm-10">
                         <select class="form-control" id="area" name="area_id">
                             {foreach from=$areaValue item=areaItem key=key}
-                                <option value="{$areaItem.area_id}">{$areaItem.title}</option>
+                                {if $areaItem.area_id eq $userMessage.area_id}
+                                    <option selected value="{$areaItem.area_id}">{$areaItem.title}</option>
+                                {else}
+                                    <option value="{$areaItem.area_id}">{$areaItem.title}</option>
+                                {/if}
                             {/foreach}
                         </select>
                     </div>
@@ -52,19 +67,19 @@
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">居住地址</label>
                     <div class="col-sm-10">
-                        <input type="text" value="" class="form-control" id="street" name="street">
+                        <input type="text" value="{$userMessage.street}" class="form-control" id="street" name="street">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">真实姓名</label>
                     <div class="col-sm-10">
-                        <input type="text" value="" class="form-control" id="real_name" name="real_name">
+                        <input type="text" value="{$userMessage.real_name}" class="form-control" id="real_name" name="real_name">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">电话号码</label>
                     <div class="col-sm-10">
-                        <input type="text" value="" class="form-control" id="user_phone" name="user_phone">
+                        <input type="text" value="{$userMessage.address_phone}" class="form-control" id="user_phone" name="address_phone">
                     </div>
                 </div>
                 <div class="form-group">
@@ -117,8 +132,6 @@ $.post(locationURL,
 areaId:$(this).val()
 },
 function(rData){
-
-    alert(rData);
 var rDataLength=rData.length;
 $("#area").html("");
 var townHTMLString="";
