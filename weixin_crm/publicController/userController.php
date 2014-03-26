@@ -220,7 +220,7 @@ class userController implements User {
             
         }
     }
-
+//添加用户界面
     public function userManage() {
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -244,7 +244,7 @@ class userController implements User {
                 $insertUserData['sex'] = $_POST['sex'];
                 $returnVal = $this->addUser($insertUserData);
                 if ($returnVal > 0) {
-                    echo" chenggong";
+                    $this->userList();
                 } else {
                     echo 'failed';
                 }

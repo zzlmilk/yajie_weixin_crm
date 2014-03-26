@@ -20,7 +20,7 @@ class promoCodeController implements promoCode {
                         $responseMessage = "已验证或者过期的验证码！";
                     } else {
                         $responseMessage = "验证成功！";
-                        $postData["code_state"] = 1;
+                        $postData["code_state"] = 2;
                         $this->promoCodeUpdate($postData, $promoCodeValue["promo_code_id"]);
                     }
                 } else {
