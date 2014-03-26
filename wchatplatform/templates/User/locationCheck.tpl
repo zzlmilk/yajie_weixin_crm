@@ -16,7 +16,7 @@
     </head>
     <body>
         <div class="registerWarp">
-            <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=test&v=updateUserLocation">
+            <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=user&v=updateUserLocation">
 
                 <input type="hidden" name='open_id' id='open_id' value='{$open_id}'>
                 <div class="form-group">
