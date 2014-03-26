@@ -17,7 +17,7 @@
             .registerWarp{
                 margin: 0 auto;
                 margin-top: 2em;
-                width: 50%;
+                width: 70%;
             }
             .tableSize{
                 width: 100%;
@@ -29,11 +29,14 @@
             td{
                 width: 50%;
             }
+            .messageStyle{
+                word-break:break-all 
+            }
         </style>
     </head>
     <body>
         <div class="registerWarp">
-            <h1>恭喜你兑换成功</h1>
+            <h3>恭喜你兑换成功</h3>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">消费积分</label>
                 <label for="inputEmail3" class="col-sm-2 control-label">{$changeInfo.exchange_integration}p</label>
@@ -48,7 +51,7 @@
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">物品简介</label>
-                <label for="inputEmail3" class="col-sm-2 control-label" style="width: 50%;">{$changeInfo.exchange_summary}</label>
+                <label for="inputEmail3" class="col-sm-2 control-label messageStyle" >{$changeInfo.exchange_summary}</label>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">物品类型</label>
