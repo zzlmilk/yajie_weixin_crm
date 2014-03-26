@@ -3185,12 +3185,12 @@ _extend(KCmd, {
 		title = _undef(title, '');
 		border = _undef(border, 0);
 		var html = '<div style="text-align:center;"><img style="width:80%" src="' + _escape(url) + '" data-ke-src="' + _escape(url) + '" ';
-		if (width) {
-			html += 'width="' + _escape(width) + '" ';
-		}
-		if (height) {
-			html += 'height="' + _escape(height) + '" ';
-		}
+		// if (width) {
+		// 	html += 'width="' + _escape(width) + '" ';
+		// }
+		// if (height) {
+		// 	html += 'height="' + _escape(height) + '" ';
+		// }
 		if (title) {
 			html += 'title="' + _escape(title) + '" ';
 		}

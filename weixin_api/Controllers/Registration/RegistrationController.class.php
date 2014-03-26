@@ -42,7 +42,6 @@ class RegistrationController  implements registration{
 
 			$userInfo = $user->getUserInfo($_REQUEST['open_id']);
 
-			
 			if(count($userInfo) > 0){
 
 				$user_registeration = new UserRegistrationModel();

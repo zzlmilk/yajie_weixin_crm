@@ -68,7 +68,7 @@ class gameController extends BaseController  {
         $tid = $_REQUEST['tid'];
         $t = $_REQUEST['t'];
 
-        $resultPro = transferData(APIURL . '/gift/get_probability_wheel/?source=1234', 'get');
+        $resultPro = transferData(APIURL . '/gift/get_probability_wheel/?source=company1', 'get');
 // $res = json_decode($resultPro,true);
         print_r($resultPro);
 // echo "123";
@@ -119,7 +119,7 @@ class gameController extends BaseController  {
 
     public function getActivity(){
 
-        $ActivityJson = transferData(APIURL . "/activity/get_activity?source=company", "get");
+        $ActivityJson = transferData(APIURL . "/activity/get_activity?source=company1", "get");
 
         $ActivityArray = json_decode($ActivityJson, true);
 
@@ -129,7 +129,7 @@ class gameController extends BaseController  {
 
     public function uploadQuestion(){
 
-        $postDate["source"] = "company";
+        $postDate["source"] = "company1";
 
         $postDate['open_id'] = $this->userOpenId;
 
@@ -164,7 +164,7 @@ class gameController extends BaseController  {
 
         if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $phone)) {
 
-            $postDate["source"] = "company";
+            $postDate["source"] = "company1";
 
             $postDate['user_phone'] = $phone;
 
@@ -195,7 +195,7 @@ class gameController extends BaseController  {
 
       public function getRandCode(){
 
-        $codeJson = transferData(APIURL . "/code/get_code?source=company", "get");
+        $codeJson = transferData(APIURL . "/code/get_code?source=company1", "get");
 
         $codeArray = json_decode($codeJson, true);
 

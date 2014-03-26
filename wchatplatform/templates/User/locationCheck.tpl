@@ -117,6 +117,8 @@ $.post(locationURL,
 areaId:$(this).val()
 },
 function(rData){
+
+    alert(rData);
 var rDataLength=rData.length;
 $("#area").html("");
 var townHTMLString="";

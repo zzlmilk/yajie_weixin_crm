@@ -20,7 +20,14 @@ class WeiXinUserModel extends Basic {
 
 			$weixinApi = new weixinApi();
 
-			$token_json = $weixinApi->getToken('wxe7878882ea37482b','afc26fbaff69f7ce8c3c2a1cabdf0047');
+			if($_REQUEST['source'] =='company'){
+				
+				$token_json = $weixinApi->getToken('wxe7878882ea37482b','afc26fbaff69f7ce8c3c2a1cabdf0047');
+
+			} else{
+
+				$token_json = $weixinApi->getToken('wx1273344d7b97cd07','65f0ce66ed3b65ef8aebd7ae3ea92e5c');
+			}
 
 			$token_array = json_decode($token_json,true);
 

@@ -4,7 +4,7 @@ class BaseController {
 
     private $smarty;
     
-    private $display_page;
+    public $display_page;
 
     private $smarty_dir;
 
@@ -20,7 +20,14 @@ class BaseController {
 
             $this->smarty = $smarty;    
 
-            $this->display_page = ACTION_NAME;
+            if(!empty($this->display_page)){
+
+            } else{
+
+                $this->display_page = ACTION_NAME;
+
+            }
+            
 
             $this->smarty_dir = MODULE_DIR;
 
@@ -66,6 +73,8 @@ class BaseController {
         }
 
         $this->smarty->assign('websiteUrl',WebSiteUrl);
+
+        $this->smarty->assign('DIR', strtolower(MODULE_DIR_NAME));
 
         $this->smarty->assign('WebSiteUrlPublic',WebSiteUrlPublic);
         $this->smarty->display($displayPage. '.tpl');
