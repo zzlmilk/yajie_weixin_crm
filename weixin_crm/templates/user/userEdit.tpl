@@ -30,6 +30,12 @@
     .inputWidth{
         width: 150px;
     }
+    .tableHeigth{
+        height: 180px;
+    }
+    .pageStyle{
+        text-align: center;
+    }
 </style>
 <body>
     <div class="userMangerTitle">修改与查看用户信息</div>
@@ -109,43 +115,72 @@
     {$userData} <!-- 此处返回错误信息-->
 {/if}
 {if $userMoneyData eq 0}
-    暂无消费数据
+    <h3> 暂无消费数据</h3>
 {else}
     <h1>消费详情</h1>
-    <table class="table table-striped">
-        <tr><th>序号</th><th>数量</th><th>来源</th><th>日期</th></tr>
-        {foreach from=$userMoneyData item=MoneyData key=key}
-            <tr>
-                <td>{$key+1}</td>
-                <td>{$MoneyData.fraction}</td>
-                <td>{$MoneyData.source}</td>
-                <td>{$MoneyData.create_time|date_format:"%Y-%m-%d %H:%M"}</td>
-            </tr>
-        {/foreach}
-    </table>
-    <div id="pageMoney">{$pageMoney}</div>
+    <div class="tableHeigth">
+        <table id="moneyMessage" class="table table-striped">
+            <thead>
+                <tr><th>序号</th><th>数量</th><th>来源</th><th>日期</th></tr>
+            </thead>
+            <tbody>
+                {foreach from=$userMoneyData item=MoneyData key=key}
+                    <tr>
+                        <td>{$key+1}</td>
+                        <td>{$MoneyData.fraction}</td>
+                        <td>{$MoneyData.source}</td>
+                        <td>{$MoneyData.create_time|date_format:"%Y-%m-%d %H:%M"}</td>
+                    </tr>
+                {/foreach}
+            </tbody>
+        </table>
+    </div>
+    <div id="pageMoney" class="pageStyle">{$pageMoney}</div>
 
 {/if}
 <br>
 {if $userPointData eq 0}
-    暂无积分数据
+    <h3> 暂无积分数据</h3>
 {else}
     <h1>积分详情</h1>
-    <table class="table table-striped">
-        <tr><th>序号</th><th>数量</th><th>来源</th><th>日期</th></tr>
-        {foreach from=$userPointData item=PointData key=key}
-            <tr>
-                <td>{$key+1}</td>
-                <td>{$PointData.fraction}</td>
-                <td>{$PointData.source}</td>
-                <td>{$PointData.create_time|date_format:"%Y-%m-%d %H:%M"}</td>
-            </tr>
-        {/foreach}
-    </table>
-    <div id="pointerPage">{$pagePointer}</div>
+    <div class="tableHeigth">
+        <table id="pointerMessage" class="table table-striped">
+            <thead>
+                <tr><th>序号</th><th>数量</th><th>来源</th><th>日期</th></tr>
+            </thead>
+            <tbody>
+                {foreach from=$userPointData item=PointData key=key}
+                    <tr>
+                        <td>{$key+1}</td>
+                        <td>{$PointData.fraction}</td>
+                        <td>{$PointData.source}</td>
+                        <td>{$PointData.create_time|date_format:"%Y-%m-%d %H:%M"}</td>
+                    </tr>
+                {/foreach}
+            </tbody>
+        </table>
+    </div>
+    <div id="pointerPage" class="pageStyle">{$pagePointer}</div>
+{/if}
+{if $userRegistrationValue eq 0}
+    <!--    暂无积分数据-->
+{else}
+    <!--    <h1>用户行为记录</h1>
+        <table class="table table-striped">
+            <tr><th>序号</th><th>日期</th><th>行为</th></tr>
+    {foreach from=$userRegistrationValue item=userRegistration key=key}
+        <tr>
+            <td>{$key+1}</td>
+            <td>{$userRegistration.record_time|date_format:"%Y-%m-%d %H:%M"}</td>
+            <td>签到</td>
+        </tr>
+    {/foreach}
+</table>-->
+<!--    <div id="pointerPage">{$pagePointer}</div>-->
 {/if}
 <script src="{$WebSiteUrl}/js/rexexTest.js"></script>
 <script src="{$WebSiteUrl}/js/buttonDisable.js"></script>
+<script src="{$WebSiteUrl}/js/timeClass.js"></script>
 <script>
     $("#userPhone").on("input",function(){
     if(!getIntRegex($(this).val())){
@@ -220,27 +255,46 @@ $(".modal-body").html(WarringStr);
 buttonDisable($("#saveChangeButton"));
 //禁用按钮结束
 //积分分页
-$("#pageMoney .usablePage").click(function(){
-
-return false;
-});
  
 
- function pageFunction(obj){
+function pageFunction(obj){
 
-    var requestUrl=$(obj).attr("pageLink");
+var requestUrl=$(obj).attr("pageLink");
+
 $.post(
 requestUrl,
 {
-    userId:$("#user_id").val()
+userId:$("#user_id").val()
 },
 function(rData){
+if(rData['returnCode']==1){
+alert("服务器连接错误");
+}else if(rData['returnCode']==2){
+alert("服务器未获取或者获取到错误的用户参数");
+}else{
+var pageObject=rData["pageObject"];
+var dataObjcet=rData["dataObject"];
+var tbodyString=""
+var Pointerdata=rData["returnData"];
+var dataLength=rData["returnData"].length;
+for(var i=0;i<dataLength;i++){
+tbodyString+="<tr>";
+tbodyString+="<td>"+(i+1)+"</td>";
+tbodyString+="<td>"+Pointerdata[i]["fraction"]+"</td>";
+tbodyString+="<td>"+Pointerdata[i]["source"]+"</td>";
+var createTime=Pointerdata[i]["create_time"]
+var formatTime=timeToString(createTime*1000,1);
+tbodyString+="<td>"+formatTime+"</td>";
+tbodyString+="</tr>";
+}
+$("#"+dataObjcet+" tbody").html("");
+$("#"+dataObjcet+" tbody").html(tbodyString);
+$("#"+pageObject).html(rData["page"]);}
+});
+}
 
-$("#pageMoney").html(rData["page"]);
+ 
 
-})
-
- }
 </script>
 
 
