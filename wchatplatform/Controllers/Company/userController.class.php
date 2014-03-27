@@ -50,6 +50,7 @@ class UserController extends BaseController {
         //$this->userOpenId = $_REQUEST['open_id'];
         $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=company&open_id=" . $this->userOpenId, "get");
         $exchangeList = json_decode($exchangeList, true);
+        $this->assign("WebImageUrl", WebImageUrl . "small/");
         $this->assign("exchangeList", $exchangeList);
         $this->display("getExchangeList");
     }
@@ -60,7 +61,7 @@ class UserController extends BaseController {
         $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
         $exchangeItem = json_decode($exchangeItem, true);
 
-
+        $this->assign("WebImageUrl", WebImageUrl . "small/");
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
         $this->display("exchangeGoods");
     }

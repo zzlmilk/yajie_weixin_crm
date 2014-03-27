@@ -23,8 +23,9 @@ defined('URL_PATHINFO_DEPR') or define('URL_PATHINFO_DEPR', '/');
 defined('URL_MODEL') or define('URL_MODEL', '0'); //url模式 0为默认模式  1 为 pathinfo模式
 
 defined('WebSiteUrl') or define('WebSiteUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/yajie_weixin_crm/' . WebSiteName);
+defined("imageSrc")or define("imageSrc", "weixin_crm/giftImages/");
 
-
+defined('WebImageUrl') or define('WebImageUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/yajie_weixin_crm/'.imageSrc);
 defined('WebSiteUrlPublic') or define('WebSiteUrlPublic', 'http://' . $_SERVER['HTTP_HOST'] . '/yajie_weixin_crm/' . WebSiteName . '/public');
 
 

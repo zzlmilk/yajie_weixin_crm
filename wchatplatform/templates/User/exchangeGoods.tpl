@@ -25,7 +25,7 @@
     </head>
     <body>
         <div class="registerWarp">
-            <div ><img src="{$WebSiteUrlPublic}/company/exchangeImage/174Small.jpg"></div>
+            <div ><img width="88" height="88" src="{$WebImageUrl}{$exchangeInfo.exchange_image}"></div>
             <div>
                 <p>{$exchangeInfo.exchange_summary}</p>
                 <p>{$exchangeInfo.exchange_name} {$exchangeInfo.exchange_integration}p</p>
