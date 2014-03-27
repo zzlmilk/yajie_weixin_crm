@@ -14,7 +14,7 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
         }
 
         $this->assign('open_id', $this->userOpenId);
@@ -138,6 +138,9 @@ class UserController extends BaseController {
                 if ($thisUserData["error"]["error_status"] == "30005") {
                     $this->errorMessage = 1;
                     return $this->cancelOrder();
+                } else if ($thisUserData["error"]["error_status"] == "30006") {
+                    echo $thisUserData["error"]["status_info"];
+                    return;
                 }
             }
         } else {
@@ -149,7 +152,11 @@ class UserController extends BaseController {
                 echo "暂无订单";
                 die;
             }
+
             $orderString = $orderItem["order"];
+            if (time() >= $orderString['appointment_time']) {
+                $returnVal['orderState']="1";
+            }
             $returnVal["porpleCountSubmit"] = $orderString['order_number'];
             $orderDate = date("Y-m-d ", $orderString['appointment_time']);
             $orderTime = date("H:i", $orderString['appointment_time']);
@@ -540,6 +547,9 @@ class UserController extends BaseController {
 
     public function changeScuessList() {
         $this->display("changeScuessList");
+    }
+    public function promoMessage(){
+        $this->display("promoMessage");
     }
 
 }
