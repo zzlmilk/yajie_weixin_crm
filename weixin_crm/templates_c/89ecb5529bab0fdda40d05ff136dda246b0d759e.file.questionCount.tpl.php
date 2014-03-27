@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-26 18:49:44
+         compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/question/questionCount.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:13137851125332b0c80b53e9-25454218%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '89ecb5529bab0fdda40d05ff136dda246b0d759e' => 
+    array (
+      0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/question/questionCount.tpl',
+      1 => 1395828502,
+    ),
+  ),
+  'nocache_hash' => '13137851125332b0c80b53e9-25454218',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <!DOCTYPE html>
 <html> 
     <head>

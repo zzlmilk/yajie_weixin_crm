@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 12:09:38
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-26 19:00:04
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/exchange/addExchangeItem.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:980244591532a6a029019c2-60451130%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5876850825332b334b81605-49520904%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd5f7108b4ab3829db0ee8a18e9163eb1ce0fea60' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/exchange/addExchangeItem.tpl',
-      1 => 1395286473,
+      1 => 1395634259,
     ),
   ),
-  'nocache_hash' => '980244591532a6a029019c2-60451130',
+  'nocache_hash' => '5876850825332b334b81605-49520904',
   'function' => 
   array (
   ),
@@ -74,17 +74,20 @@ $_smarty_tpl->decodeProperties(array (
             </div>
 
             <div class="form-group"> 
-                <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品简介：</label>
+                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品简介：</label>
                 <div class="col-sm-2">
                     <input type="text" class="form-control inputWidth" value="" name="exchange_summary" id="exchangeSummary">
                 </div>
             </div>
             <div class="form-group">
-                <label for="exampleInputFile" class="col-sm-2 control-label labelWidth">礼品图片</label>
-                <input class=" inputWidth" style="padding-left: 25px;" name="exampleInputFile"  type="file" id="exampleInputFile">
+                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品图片</label>
+                <div class="col-sm-2">
+                    <input class="" style=" margin-left: 15px;width: 72px;" name="exampleInputFile"  type="file" id="exampleInputFile">
+                </div>
             </div>
             <div class="form-group"> 
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品详情：</label>
+
                 <div class="col-sm-2">
                     <textarea  class="form-control inputWidth" rows="3"name="exchangez_details" id="exchangezDetails"></textarea>
                 </div>

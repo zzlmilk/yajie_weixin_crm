@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-26 18:00:22
+         compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/SMS/SMS.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:11933994665332a5361f7781-16216685%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '0525a939cea7d95502f8eb7022e6cdc3f416e497' => 
+    array (
+      0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/SMS/SMS.tpl',
+      1 => 1395804723,
+    ),
+  ),
+  'nocache_hash' => '11933994665332a5361f7781-16216685',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <!DOCTYPE html>
 <html> 
     <head>
@@ -20,7 +38,7 @@
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
 
-        <title>问卷调差统计</title>
+        <title>短信模块</title>
         <style>
             body{
                 Font-size=62.5%;
@@ -37,39 +55,29 @@
             }
             .textStyle{
                 text-align: center;
-                margin-top: 2em;
-            }
-            .textWidth{
-                width:50%;
-                margin: 0 auto;
+                margin-top: 8em;
             }
         </style>
     </head>
     <body>
 
         <div class="bigWheelWarp">
-            <div class="titleStyle">问卷调查统计</div>
+            <div class="titleStyle">客服短信</div>
 
             <ul class="nav nav-tabs" id="myTab">
-                <li class="active"><a href="#probability" data-toggle="tab">问卷调查1</a></li>
+                <li class="active"><a href="#probability" data-toggle="tab">短信配置</a></li>
 
             </ul>
 
             <div class="tab-content">
                 <!-- 概率配置模块 -->
-                <div class="tab-pane active textWidth" id="probability" >
-                    <div class='textStyle form-group'><label  class=' control-label labelWidth' style='text-align: left;'>你的姓名是什么:</label>
-                        <label  class='control-label labelWidth'>A：5人&nbsp;&nbsp;B:15人&nbsp;&nbsp;C:8人&nbsp;&nbsp;D:6人</label>
+                <div class="tab-pane active" id="probability" >
+<!--                    <div class='textStyle form-group'><label  class=' control-label labelWidth'>今日签到的总人数为：</label>
+                        <label  class='control-label labelWidth'><?php echo $_smarty_tpl->getVariable('registrationNumber')->value;?>
+人</label>
                     </div>
-                    <div class='textStyle form-group'><label  class=' control-label labelWidth'  style='text-align: left;'>你的性别是什么:</label>
-                        <label  class='control-label labelWidth'>A：10人&nbsp;&nbsp;B:10人&nbsp;&nbsp;C:7人&nbsp;&nbsp;D:6人</label>
-                    </div>
-                    <div class='textStyle form-group'><label  class=' control-label labelWidth'  style='text-align: left;'>你的兴趣有:</label>
-                        <label  class='control-label labelWidth'>A：9人&nbsp;&nbsp;B:14人&nbsp;&nbsp;C:7人&nbsp;&nbsp;D:4人</label>
-                    </div>
-                    <div class='textStyle form-group'><label  class=' control-label labelWidth'  style='text-align: left;'>你的自我介绍:</label>
-                        <label  class='control-label labelWidth'>A：15人&nbsp;&nbsp;B:5人&nbsp;&nbsp;C:8人&nbsp;&nbsp;D:6人</label>
-                    </div>
+                     -->
+
                 </div>
             </div>
 

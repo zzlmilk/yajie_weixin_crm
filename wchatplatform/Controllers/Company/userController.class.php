@@ -14,7 +14,7 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
         }
 
         $this->assign('open_id', $this->userOpenId);
@@ -116,10 +116,14 @@ class UserController extends BaseController {
                 $userOrder["open_id"] = $this->userOpenId;
                 $userJsonData = transferData(APIURL . "/order/get_order", "post", $userOrder);
                 $orderItem = json_decode($userJsonData, true);
-                $orderCode = $orderItem["order"]['order_code'];
-                $postDate["order_code"] = $orderCode;
-                $reviseOrder = transferData(APIURL . "/order/revise_order", "post", $postDate);
-                $orderChangeIsScuess = json_decode($reviseOrder, TRUE);
+                if ($orderItem["error"]['error_status'] == 105) {
+                    echo "操作失败，失败代码" . $userInfo["error"]['error_status'] . "，失败信息：" . $userInfo["error"]['status_info'];
+                } else {
+                    $orderCode = $orderItem["order"]['order_code'];
+                    $postDate["order_code"] = $orderCode;
+                    $reviseOrder = transferData(APIURL . "/order/revise_order", "post", $postDate);
+                    $orderChangeIsScuess = json_decode($reviseOrder, TRUE);
+                }
                 if ($orderChangeIsScuess["res"] == "1") {
                     
                 } else {
@@ -333,36 +337,49 @@ class UserController extends BaseController {
             $goodsId = $_GET['goodsId'];
             $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $goodsId, "get");
             $exchangeItem = json_decode($exchangeItem, true);
+
             if ($exchangeItem['exchange_info']["exchange_type"] == "1") {
                 $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
                 $userInfo = json_decode($userInfo, TRUE);
+<<<<<<< HEAD
 
                 if ($userInfo['user']['province_id'] == "0") {
                     $this->assign("userMessage", $userInfo['user']);
                     $this->locationCheck(); //填写信息              
+=======
+                if ($userInfo["error"]['error_status'] == 105) {
+                    echo "操作失败，失败代码" . $userInfo["error"]['error_status'] . "，失败信息：" . $userInfo["error"]['status_info'];
+                } else if ($userInfo["error"]['error_status'] == 20004) {
+                    echo "操作失败：" . $userInfo["error"]['status_info'];
+>>>>>>> bf89e06c8f92cf801f59a081dbe5892c0581d561
                 } else {
-                    // var_dump($userInfo); //显示地址页面     
-                    $userData['street'] = $userInfo['user']['street'];
-                    $userData['address_phone'] = $userInfo['user']['address_phone'];
-                    $userData['real_name'] = $userInfo['user']['real_name'];
-                    $userData['area_id'] = $userInfo['user']['area_id'];
-                    $userData['city_id'] = $userInfo['user']['city_id'];
-                    $userData['province_id'] = $userInfo['user']['province_id'];
-                    $getProvince = transferData(APIURL . "/area/get_area", "get");
-                    $getProvince = json_decode($getProvince, true);
-                    array_pop($getProvince);
-                    $getTown = $this->getAreaMessage($userData['province_id']);
-                    $getTown = json_decode($getTown, true);
-                    $getArea = $this->getAreaMessage($userData['city_id']);
-                    $getArea = json_decode($getArea, true);
+                    if ($userInfo['user']['province_id'] == "0") {
+                        $this->assign("userMessage", $userInfo['user']);
+                        $this->locationCheck(); //填写信息              
+                    } else {
+                        // var_dump($userInfo); //显示地址页面     
+                        $userData['street'] = $userInfo['user']['street'];
+                        $userData['address_phone'] = $userInfo['user']['address_phone'];
+                        $userData['real_name'] = $userInfo['user']['real_name'];
+                        $userData['area_id'] = $userInfo['user']['area_id'];
+                        $userData['city_id'] = $userInfo['user']['city_id'];
+                        $userData['province_id'] = $userInfo['user']['province_id'];
+                        $getProvince = transferData(APIURL . "/area/get_area", "get");
+                        $getProvince = json_decode($getProvince, true);
+                        array_pop($getProvince);
+                        $getTown = $this->getAreaMessage($userData['province_id']);
+                        $getTown = json_decode($getTown, true);
+                        $getArea = $this->getAreaMessage($userData['city_id']);
+                        $getArea = json_decode($getArea, true);
 
-                    $this->assign("provinceValue", $getProvince);
-                    $this->assign("townValue", $getTown);
-                    $this->assign("areaValue", $getArea);
-                    $goodsId = $_GET['goodsId'];
-                    $this->assign("userMessage", $userData);
-                    $this->assign("goodsId", $goodsId);
-                    $this->display("locationCheck");
+                        $this->assign("provinceValue", $getProvince);
+                        $this->assign("townValue", $getTown);
+                        $this->assign("areaValue", $getArea);
+                        $goodsId = $_GET['goodsId'];
+                        $this->assign("userMessage", $userData);
+                        $this->assign("goodsId", $goodsId);
+                        $this->display("locationCheck");
+                    }
                 }
             } else {
                 $this->changeGoodsResult();
@@ -488,8 +505,12 @@ class UserController extends BaseController {
                 $postData['source'] = "company";
                 $updateUserLocation = transferData(APIURL . "/user/update_user_address", "post", $postData);
                 $updateUserLocation = json_decode($updateUserLocation, TRUE);
-                $_GET['goodsId'] = $_POST["gNumber"];
-                $this->changeGoodsResult();
+                if ($updateUserLocation["res"] == 1) {
+                    $_GET['goodsId'] = $_POST["gNumber"];
+                    $this->changeGoodsResult();
+                } else {
+                    echo "提交用户信息出错";
+                }
             } else {
                 echo"参数错误";
             }
@@ -498,6 +519,7 @@ class UserController extends BaseController {
         }
     }
 
+//处理兑换结果
     public function changeGoodsResult() {
         if (isset($_GET['goodsId'])) {
             $postDate["source"] = "company";
@@ -510,6 +532,8 @@ class UserController extends BaseController {
 
 
             if ($exchangeList["error"]['error_status'] == 40001) {
+                echo "兑换失败：" . $exchangeList["error"]['status_info'];
+            } else if ($exchangeList["error"]['error_status'] == 20004) {
                 echo "兑换失败：" . $exchangeList["error"]['status_info'];
             } else {
                 $userIntegration = $exchangeList['user_integration']['user_integration'];
