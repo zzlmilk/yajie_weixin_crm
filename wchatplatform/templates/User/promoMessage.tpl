@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
 
         <title>优惠码信息</title>
+
         <style>
             body{
                 min-width: 320px;
