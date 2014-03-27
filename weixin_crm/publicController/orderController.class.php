@@ -9,6 +9,7 @@ class orderController {
         $orderModel = new orderModel();
         $joinString = ' LEFT JOIN merchandise ON merchandise.merchandise_id = order.merchandise_id ';
         $orderModel->addJoin($joinString);
+        $orderModel->addOrderBy("order_id desc");
         $orderModel->initialize("order_state <= 1");
         $orderNumber = $orderModel->vars_number;
         $orderModel->addOffset(0, $pageSize);
@@ -31,6 +32,7 @@ class orderController {
             $orderModel->initialize("order_state <= 1");
             $joinString = ' LEFT JOIN merchandise ON merchandise.merchandise_id = order.merchandise_id ';
             $orderModel->addJoin($joinString);
+            $orderModel->addOrderBy("order_id desc");
             $orderNumber = $orderModel->vars_number;
             $dateCount = $pageSize * ($pageNumber - 1);
             $orderModel->addOffset($dateCount, $pageSize);

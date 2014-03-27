@@ -6,6 +6,7 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+<link href="{$WebSiteUrl}/css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
 <style>
     .userMangerTitle{
         color: rgb(91,91,91);
@@ -26,6 +27,7 @@
     }
 </style>
 <body>
+    <div style="position: relative;left: 10px; top: 10px;"><a href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist"><button class="btn btn-primary">返回</button></a></div>
     <div class="userMangerTitle">修改与查看订单信息</div>
     <div id="errorMessage" class="alert alert-danger errorMessage"></div>
     {if $errorFlag eq 1}
@@ -35,7 +37,7 @@
                 <div class="form-group"> 
                     <label for="inputEmail3" class="col-sm-2 control-label labelWidth">预约日期：</label>
                     <div class="col-sm-2">
-                        <input type="text" class="form-control inputWidth" value="{$orderData.appointment_time|date_format:"%Y-%m-%d %H:%M"}" name="orderTime" id="orderTime">
+                        <input type="text" class="form-control inputWidth" readonly="" value="{$orderData.appointment_time|date_format:"%Y-%m-%d %H:%M"}" name="orderTime" id="orderTime">
                     </div>
                 </div>
                 <div class="form-group"> 
@@ -43,11 +45,6 @@
                     <div class="col-sm-2">
                         <input type="text" class="form-control inputWidth" value="{$orderData.appointment_object}" name="appointment_object" id="appointment_object">
                     </div>
-                </div>
-                <div class="form-group"> 
-                    <label for="inputEmail3" class="col-sm-2 control-label labelWidth">预约备注：</label>
-                    <div class="col-sm-2">
-                        <input type="text" class="form-control inputWidth" value="{$orderData.orders_remarks}" name="orders_remarks" id="orders_remarks"></div>
                 </div>
                 <div class="form-group"> 
                     <label for="inputEmail3" class="col-sm-2 control-label labelWidth">预约项目：</label>
@@ -92,6 +89,12 @@
                         </select>
                     </div>
                 </div>
+                <div class="form-group"> 
+                    <label for="inputEmail3" class="col-sm-2 control-label labelWidth">预约备注：</label>
+                    <div class="col-sm-2">
+                        <textarea  class="form-control inputWidth" rows="3"name="orders_remarks" id="orders_remarks">{$orderData.orders_remarks}</textarea>
+                    </div>
+                </div>
                 <input type="hidden" value="{$orderData.order_code}" name="order_code" id="user_id">
                 <p style="text-align: center;"> <button data-toggle="modal" data-target="#myModal" type="button" id="saveChangeButton" class="btn btn-info">保存修改</button></p>
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -119,6 +122,9 @@
 </body>
 <script src="{$WebSiteUrl}/js/rexexTest.js"></script>
 <script src="{$WebSiteUrl}/js/buttonDisable.js"></script>
+<script src="{$WebSiteUrl}/js/bootstrap-datetimepicker.js"></script>
+<script src="{$WebSiteUrl}/js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="{$WebSiteUrl}/js/timeClass.js"></script>
 <script>
     $("#saveChangeButton").click(function(){
     $("#errorMessage").hide();
@@ -185,6 +191,32 @@ $(".modal-body").html(WarringStr);
 })
 //禁用按钮  
 buttonDisable($("#saveChangeButton"));
-
 //修改按钮结束
+//数字验证
+$("#userPhone").on("input",function(){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+
+$("#userPhone").val(cutString);
+}
+});
+$("#order_number").on("input",function(){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+
+$("#order_number").val(cutString);
+}
+});
+//日期选择
+var endDate= getDateTimeMessage(new Date(),2);
+$("#orderTime").datetimepicker({
+format: "yyyy-mm-dd hh:ii",
+startDate:new Date(),
+endDate:endDate,
+autoclose:true,
+minView:0,
+minuteStep:15,
+forceParse:false,
+language:"zh-CN"
+});
 </script>
