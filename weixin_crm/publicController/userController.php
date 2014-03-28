@@ -212,7 +212,8 @@ class userController implements User {
                 $upDatas['birthday'] =  strtotime($_POST['birthday']) ;
                 $upDatas['sex'] = $_POST['sex'];
                 $this->updateUser($upDatas, $userId);
-                $this->userList();
+                $_GET["userId"]=$_POST['user_id'];
+                $this->userEdit();
             } else {
                 
             }
@@ -388,7 +389,7 @@ class userController implements User {
 
                 $user_pointer_record = new userPointerRecordModel();
 
-                $user_pointer_record->addRecord($user_id, 1, (int) $integration, 'crm');
+                $user_pointer_record->addRecord($user_id, 1, (int) $integration, '系统');
             }
         }
     }
@@ -414,7 +415,7 @@ class userController implements User {
 
                 $user_pointer_record = new userPointerRecordModel();
 
-                $user_pointer_record->addRecord($user_id, 2, (int) $money, 'crm');
+                $user_pointer_record->addRecord($user_id, 2, (int) $money, '系统');
             }
         }
     }
@@ -444,7 +445,7 @@ class userController implements User {
                 $user->updateVars();
                 $user_pointer_record = new userPointerRecordModel();
                 $misIntegration = -1 * $integration;
-                $user_pointer_record->addRecord($user_id, 1, $misIntegration, 'crm');
+                $user_pointer_record->addRecord($user_id, 1, $misIntegration, '系统');
             }
         }
     }
@@ -475,7 +476,7 @@ class userController implements User {
                 $user->updateVars();
                 $user_pointer_record = new userPointerRecordModel();
                 $misMoney = $money * -1;
-                $user_pointer_record->addRecord($user_id, 2, $misMoney, 'crm');
+                $user_pointer_record->addRecord($user_id, 2, $misMoney, '系统');
             }
         }
     }

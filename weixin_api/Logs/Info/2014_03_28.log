@@ -1,0 +1,128 @@
+Mar 28 09:53:45 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+Mar 28 09:53:45 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+Mar 28 09:56:19 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+Mar 28 09:56:19 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+Mar 28 09:56:38 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+Mar 28 09:56:38 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+Mar 28 09:56:53 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+Mar 28 09:56:53 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+Mar 28 09:57:15 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+SELECT * FROM weixin_company.merchandise  WHERE 1  AND merchandise_id = 4     
+Mar 28 09:57:15 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+{"merchandise":{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}}
+Mar 28 09:57:15 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/add
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 28 09:57:15 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/add
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0     
+Mar 28 09:57:15 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/add
+{"error":{"error_status":30005,"status_info":"\u4e0d\u80fd\u9884\u7ea6,\u5df2\u6709\u6b63\u5728\u8fdb\u884c\u7684\u8ba2\u5355"}}
+Mar 28 09:57:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 28 09:57:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0     
+Mar 28 09:57:16 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{"order_id":"5","order_code":"2014032702562217","appointment_time":"1395992700","order_money":"0","orders_remarks":null,"appointment_object":"5555","merchandise_id":"1","order_number":"1","user_id":"1","user_phone":"","order_type":"1","order_pay_state":"0","order_state":"0","order_time":"1395903382"},"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"\u90a3\u7238\u7238","user_phone":"","sex":"2","birthday":"1993-05-07","user_money":"605","user_integration":"0","user_state":"1","province_id":"41","city_id":"42","area_id":"43","street":"88wad","real_name":"ly","address_phone":"2147483647"}}
+Mar 28 09:57:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 28 09:57:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0     
+Mar 28 09:57:16 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{"order_id":"5","order_code":"2014032702562217","appointment_time":"1395992700","order_money":"0","orders_remarks":null,"appointment_object":"5555","merchandise_id":"1","order_number":"1","user_id":"1","user_phone":"","order_type":"1","order_pay_state":"0","order_state":"0","order_time":"1395903382"},"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"\u90a3\u7238\u7238","user_phone":"","sex":"2","birthday":"1993-05-07","user_money":"605","user_integration":"0","user_state":"1","province_id":"41","city_id":"42","area_id":"43","street":"88wad","real_name":"ly","address_phone":"2147483647"}}
+Mar 28 09:57:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+SELECT * FROM weixin_company.merchandise  WHERE 1  AND merchandise_id = 1     
+Mar 28 09:57:16 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+{"merchandise":{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"}}
+Mar 28 09:57:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 28 09:57:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0     
+Mar 28 09:57:18 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{"order_id":"5","order_code":"2014032702562217","appointment_time":"1395992700","order_money":"0","orders_remarks":null,"appointment_object":"5555","merchandise_id":"1","order_number":"1","user_id":"1","user_phone":"","order_type":"1","order_pay_state":"0","order_state":"0","order_time":"1395903382"},"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"\u90a3\u7238\u7238","user_phone":"","sex":"2","birthday":"1993-05-07","user_money":"605","user_integration":"0","user_state":"1","province_id":"41","city_id":"42","area_id":"43","street":"88wad","real_name":"ly","address_phone":"2147483647"}}
+Mar 28 09:57:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order_state
+SELECT * FROM weixin_company.order  WHERE 1  AND order_code like "2014032702562217"     
+Mar 28 09:57:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order_state
+UPDATE weixin_company.order SET order_state='2' WHERE 1  AND order_code like "2014032702562217"
+Mar 28 09:57:18 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order_state
+{"res":1}
+Mar 28 09:57:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+Mar 28 09:57:24 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+Mar 28 09:57:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+SELECT * FROM weixin_company.merchandise  WHERE 1  AND merchandise_id = 1     
+Mar 28 09:57:33 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+{"merchandise":{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"}}
+Mar 28 09:57:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/add
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 28 09:57:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/add
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0     
+Mar 28 09:57:33 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/order/add
+insert into weixin_company.order (user_id,user_phone,merchandise_id,appointment_time,appointment_object,order_type,order_state,order_time,order_number,order_code) values('1','','1','1395974700','','1','0','1395971853','1','2014032809573396')
+Mar 28 09:57:33 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/add
+{"order":{"user_id":"1","user_phone":"","merchandise_id":"1","appointment_time":"1395974700","appointment_object":"","order_type":1,"order_state":0,"order_time":1395971853,"order_number":"1","order_code":"2014032809573396"},"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"\u90a3\u7238\u7238","user_phone":"","sex":"2","birthday":"1993-05-07","user_money":"605","user_integration":"0","user_state":"1","province_id":"41","city_id":"42","area_id":"43","street":"88wad","real_name":"ly","address_phone":"2147483647"}}
+Mar 28 09:57:36 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+Mar 28 09:57:36 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+Mar 28 09:57:38 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+SELECT * FROM weixin_company.merchandise  WHERE 1  AND merchandise_id = 1     
+Mar 28 09:57:38 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+{"merchandise":{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"}}
+Mar 28 09:57:38 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 28 09:57:38 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0     
+Mar 28 09:57:38 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{"order_id":"6","order_code":"2014032809573396","appointment_time":"1395974700","order_money":"0","orders_remarks":null,"appointment_object":"","merchandise_id":"1","order_number":"1","user_id":"1","user_phone":"","order_type":"1","order_pay_state":"0","order_state":"0","order_time":"1395971853"},"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"\u90a3\u7238\u7238","user_phone":"","sex":"2","birthday":"1993-05-07","user_money":"605","user_integration":"0","user_state":"1","province_id":"41","city_id":"42","area_id":"43","street":"88wad","real_name":"ly","address_phone":"2147483647"}}
+Mar 28 09:57:38 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 28 09:57:38 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0     
+Mar 28 09:57:38 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order
+SELECT * FROM weixin_company.order  WHERE 1  AND order_code like "2014032809573396"     
+Mar 28 09:57:38 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order
+UPDATE weixin_company.order SET merchandise_id='1', appointment_time='1395974700', appointment_object='', order_number='1', order_state='0' WHERE 1  AND order_code like "2014032809573396"
+Mar 28 09:57:38 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order
+{"res":1}
+Mar 28 09:57:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+Mar 28 09:57:41 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+Mar 28 09:57:45 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+SELECT * FROM weixin_company.merchandise  WHERE 1  AND merchandise_id = 1     
+Mar 28 09:57:45 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+{"merchandise":{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"}}
+Mar 28 09:57:45 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 28 09:57:45 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0     
+Mar 28 09:57:46 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{"order_id":"6","order_code":"2014032809573396","appointment_time":"1395974700","order_money":"0","orders_remarks":null,"appointment_object":"","merchandise_id":"1","order_number":"1","user_id":"1","user_phone":"","order_type":"1","order_pay_state":"0","order_state":"0","order_time":"1395971853"},"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"\u90a3\u7238\u7238","user_phone":"","sex":"2","birthday":"1993-05-07","user_money":"605","user_integration":"0","user_state":"1","province_id":"41","city_id":"42","area_id":"43","street":"88wad","real_name":"ly","address_phone":"2147483647"}}
+Mar 28 09:57:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 28 09:57:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0     
+Mar 28 09:57:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order
+SELECT * FROM weixin_company.order  WHERE 1  AND order_code like "2014032809573396"     
+Mar 28 09:57:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order
+UPDATE weixin_company.order SET merchandise_id='1', appointment_time='1395938700', appointment_object='', order_number='1', order_state='0' WHERE 1  AND order_code like "2014032809573396"
+Mar 28 09:57:46 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/revise_order
+{"res":1}
+Mar 28 09:58:05 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Mar 28 09:58:05 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0     
+Mar 28 09:58:05 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{"order_id":"6","order_code":"2014032809573396","appointment_time":"1395938700","order_money":"0","orders_remarks":null,"appointment_object":"","merchandise_id":"1","order_number":"1","user_id":"1","user_phone":"","order_type":"1","order_pay_state":"0","order_state":"0","order_time":"1395971853"},"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"\u90a3\u7238\u7238","user_phone":"","sex":"2","birthday":"1993-05-07","user_money":"605","user_integration":"0","user_state":"1","province_id":"41","city_id":"42","area_id":"43","street":"88wad","real_name":"ly","address_phone":"2147483647"}}
+Mar 28 09:58:05 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+SELECT * FROM weixin_company.merchandise  WHERE 1  AND merchandise_id = 1     
+Mar 28 09:58:05 [RETURN]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+{"merchandise":{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"}}

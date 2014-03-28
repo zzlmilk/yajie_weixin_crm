@@ -21,7 +21,6 @@ class CompanyController extends BaseController {
 
     public function index() {
 
-
         $weChat = new Wechat();
 
         $weChat->sendmessage($this->bigArray,$this->companyInfo);

@@ -49,7 +49,7 @@ class website {
 
     private function initializationTest(){
 
-         /**
+        /**
          * 路由处理
          */
         $url = new Dispatcher();
@@ -61,16 +61,12 @@ class website {
          */
         if (class_exists(MODULE_NAME_CONTROLLER)) {
 
-
             /**
              * 实例化类
              */
             $className = MODULE_NAME_CONTROLLER;
             $module = new $className();
-
             if ($module) {
-
-
                 /**
                  * 执行方法
                  */

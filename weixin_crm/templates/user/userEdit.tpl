@@ -38,11 +38,12 @@
     }
 </style>
 <body>
+    <div style="position: relative;left: 10px; top: 10px;"><a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userList"><button class="btn btn-primary">返回</button></a></div>
     <div class="userMangerTitle">修改与查看用户信息</div>
     <div id="errorMessage" class="alert alert-danger errorMessage"></div>
     {if $errorFlag eq 1}
         <div style="height: 20px;"></div>
-        <div style="width: 300px; margin: 0 auto;">
+        <div style="width: 370px; margin: 0 auto;">
             <form class="form-horizontal" action="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userUpdata" method="post">
                 <div class="form-group"> 
                     <label for="inputEmail3" class="col-sm-2 control-label labelWidth">客户姓名：</label>
@@ -58,8 +59,12 @@
                 </div>
                 <div class="form-group"> 
                     <label for="inputEmail3" class="col-sm-2 control-label labelWidth">客户生日：</label>
-                    <div class="col-sm-2">
-                        <input type="text" class="form-control inputWidth" value="{$userData.birthday|date_format:"%Y-%m-%d"}" name="birthday" id="userBirthday"></div>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control " style="width: 30%; display: inline-block" value="{$userData.birthday|date_format:"%Y"}"  id="birthdayFullYear">-
+                        <input type="text" class="form-control " style="width: 23%;display: inline-block" value="{$userData.birthday|date_format:"%m"}"  id="birthdayMonth">-
+                        <input type="text" class="form-control " style="width: 23%;display: inline-block" value="{$userData.birthday|date_format:"%d"}"  id="birthdayDay">
+                        <input type="hidden" class="inputWidth" id="userBirthday" name="birthday" value="">
+                    </div>
                 </div>
                 <div class="form-group"> 
                     <label for="inputEmail3" class="col-sm-2 control-label labelWidth">客户性别：</label>
@@ -89,6 +94,7 @@
                         <input type="text" class="form-control inputWidth" value="{$userData.user_integration}" name="user_integration" readonly="readonly"  id="userIntegration">
                     </div>
                 </div>
+
                 <input type="hidden" value="{$userData.user_id}" name="user_id" id="user_id">
                 <p style="text-align: center;"> <button data-toggle="modal" data-target="#myModal" type="button" id="saveChangeButton" disabled="true"  class="btn btn-info">保存修改</button></p>
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -190,6 +196,8 @@
 }
 });
 $("#saveChangeButton").click(function(){
+var birthdayDate=$("#birthdayFullYear").val()+"-"+$("#birthdayMonth").val()+"-"+$("#birthdayDay").val()
+$("#userBirthday").val(birthdayDate);
 $("#errorMessage").hide();
 $("#errorMessage").html();
 var errorMessage="";

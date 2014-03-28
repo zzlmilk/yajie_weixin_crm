@@ -341,17 +341,15 @@ class UserController extends BaseController {
             if ($exchangeItem['exchange_info']["exchange_type"] == "1") {
                 $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
                 $userInfo = json_decode($userInfo, TRUE);
-<<<<<<< HEAD
 
                 if ($userInfo['user']['province_id'] == "0") {
                     $this->assign("userMessage", $userInfo['user']);
-                    $this->locationCheck(); //填写信息              
-=======
+                    $this->locationCheck(); //填写信息 
+                    }            
                 if ($userInfo["error"]['error_status'] == 105) {
                     echo "操作失败，失败代码" . $userInfo["error"]['error_status'] . "，失败信息：" . $userInfo["error"]['status_info'];
                 } else if ($userInfo["error"]['error_status'] == 20004) {
                     echo "操作失败：" . $userInfo["error"]['status_info'];
->>>>>>> bf89e06c8f92cf801f59a081dbe5892c0581d561
                 } else {
                     if ($userInfo['user']['province_id'] == "0") {
                         $this->assign("userMessage", $userInfo['user']);

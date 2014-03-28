@@ -25,10 +25,13 @@
         display: none;
     }
 </style>
+<div style="position: relative;left: 10px; top: 10px;"><a href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=ExchangeList"><button class="btn btn-primary">返回</button></a></div>
 <div class="userMangerTitle">编辑礼品</div>
 <div id="errorMessage" class="alert alert-danger errorMessage"></div>
 <div style="margin-left:15px;margin-top:15px;">
     <div style="width: 300px; margin: 0 auto;">
+        <div style="text-align: center"><b style=" color: rgb(240,173,78)">注:图片须为88*88至176*176正方形图片</b></div>
+        <div style="height: 35px;"></div>
         <form class="form-horizontal" action="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=exchangeUpdate&ItemId={$exchageValue.exchange_id}" enctype="multipart/form-data" method="Post">
             <div class="form-group"> 
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品名称：</label>
@@ -66,7 +69,7 @@
 
             </div>
 
-            <label for="exampleInputFile"style="padding-left: 0px;" class="col-sm-2 control-label labelWidth">礼品图片:</label>
+            <label for="exampleInputFile"style="padding-left: 0px;" class="col-sm-2 control-label labelWidth">礼品图片：</label>
             <br>
             <input class=" inputWidth" style="margin-left: 35%" style="margin-top:  15px;width: 72px;" name="exampleInputFile"  type="file" id="exampleInputFile">
             <div style="height: 15px"></div>

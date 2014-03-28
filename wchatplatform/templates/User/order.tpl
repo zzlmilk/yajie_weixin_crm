@@ -20,7 +20,7 @@
         <style>
             body{
                 Font-size=62.5%;
-                 background-color: rgb(243,237,227);
+                background-color: rgb(243,237,227);
             }
             .registerWarp{
                 margin: 0 auto;
@@ -108,7 +108,7 @@
                                         <input type=hidden value="1" id="porpleCountSubmit" name="porpleCountSubmit"/>
                                     {/if}
                                     <div>
-                                    <span class="glyphicon glyphicon-chevron-down floatIconTextDown"></span>
+                                        <span class="glyphicon glyphicon-chevron-down floatIconTextDown"></span>
                                     </div>
                                 </td>
                                 <td>              
@@ -145,38 +145,38 @@
                     </div>
 
                     <div style="height: 7em;"></div>
-            <div style=" width: 100%; background-color: #fff;height: 14em;">
-                    <div class="form-group" style=" margin-right: 3em; margin-top: 2em; background-color: #fff">
-                        <label for="orderMerchandise" class="col-sm-3 control-label">项目</label>
-                        <div class="col-sm-10">
-                            <select  class="form-control" id="orderMerchandise" name="orderMerchandise" >
+                    <div style=" width: 100%; background-color: #fff;height: 14em;">
+                        <div class="form-group" style=" margin-right: 3em; margin-top: 2em; background-color: #fff">
+                            <label for="orderMerchandise" class="col-sm-3 control-label">项目</label>
+                            <div class="col-sm-10">
+                                <select  class="form-control" id="orderMerchandise" name="orderMerchandise" >
 
-                                {foreach from=$selectVal item=selectItem key=key}
-                                    <option value="{$selectItem.merchandise_id}">{$selectItem.merchandise_name} {$selectItem.merchandise_money}元</option>
+                                    {foreach from=$selectVal item=selectItem key=key}
+                                        <option value="{$selectItem.merchandise_id}">{$selectItem.merchandise_name} {$selectItem.merchandise_money}元</option>
 
-                                {/foreach}
+                                    {/foreach}
 
-                            </select>
+                                </select>
+                            </div>
+                            <input type="hidden" value="" name="orderMerchandiseHtml" id="orderMerchandiseHtml">
                         </div>
-                        <input type="hidden" value="" name="orderMerchandiseHtml" id="orderMerchandiseHtml">
-                    </div>
-                    <div class="form-group" style=" margin-right: 3em;background-color: #fff">
-                        <label for="orderObject" class="col-sm-2 control-label">指定</label>
-                        <div class="col-sm-10">
-                            {if $checkReturn eq 1}
-                                <input type="name" class="form-control" id="orderObject" value="{$returnVal.orderObject}" name="orderObject" placeholder="请输入预约指定">
-                            {else}
-                                <input type="name" class="form-control" id="orderObject" value="" name="orderObject" placeholder="请输入预约指定">
-                            {/if}
+                        <div class="form-group" style=" margin-right: 3em;background-color: #fff">
+                            <label for="orderObject" class="col-sm-2 control-label">指定</label>
+                            <div class="col-sm-10">
+                                {if $checkReturn eq 1}
+                                    <input type="name" class="form-control" id="orderObject" value="{$returnVal.orderObject}" name="orderObject" placeholder="请输入预约指定">
+                                {else}
+                                    <input type="name" class="form-control" id="orderObject" value="" name="orderObject" placeholder="请输入预约指定">
+                                {/if}
+                            </div>
                         </div>
-                    </div>
                         <div class="form-group" style=" margin-right: 3em;">
                             <div class="col-sm-offset-2 col-sm-10" style="margin-left: 4em;">
                                 <button id="submitOrder"  class="btn btn-primary">预&nbsp;&nbsp;&nbsp;约</button>
                             </div>
                         </div>
 
-            </div>
+                    </div>
                 </form>
 
         </div>
@@ -220,15 +220,6 @@ $("#orderMerchandiseHtml").val($("#orderMerchandise").find("option:first").html(
 $("#orderMerchandise").change(function(){
 $("#orderMerchandiseHtml").val($(this).find("option:selected").html());
 });
-$("#orderTime").datetimepicker({
-format: "hh:ii",
-minuteStep:15,
-autoclose:true,
-startView:1,
-maxView:1,
-minView:0,
-language:"zh-CN"
-});
 $("#orderDate").datetimepicker({
 format: "yyyy-mm-dd ",
 startDate:new Date(),
@@ -238,6 +229,16 @@ minView:2,
 forceParse:false,
 language:"zh-CN"
 });
+$("#orderTime").datetimepicker({
+format: "hh:ii",
+minuteStep:15,
+autoclose:true,
+startView:1,
+maxView:1,
+minView:0,
+language:"zh-CN"
+});
+
 $("#orderDate").datetimepicker().on('changeDate',function(ev){
 var changeTime=(ev.date.valueOf());
 var changeDateTime=new Date(changeTime);

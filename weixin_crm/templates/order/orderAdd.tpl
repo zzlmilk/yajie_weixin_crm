@@ -6,10 +6,11 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+<link href="{$WebSiteUrl}/css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
 <style>
     .userMangerTitle{
         color: rgb(91,91,91);
-         font-size: 2.5em;
+        font-size: 2.5em;
         margin-top: 15px;
         text-align: center;
     }
@@ -35,7 +36,7 @@
             <div class="form-group"> 
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">预约日期：</label>
                 <div class="col-sm-2">
-                    <input type="text" class="form-control inputWidth" value="" name="orderTime" id="orderTime">
+                    <input type="text" class="form-control inputWidth" readonly="" value="" name="orderTime" id="orderTime">
                 </div>
             </div>
             <div class="form-group"> 
@@ -44,12 +45,7 @@
                     <input type="text" class="form-control inputWidth" value="" name="appointment_object"  id="appointment_object">
                 </div>
             </div>
-            <div class="form-group"> 
-                <label for="inputEmail3" class="col-sm-2 control-label labelWidth">预约备注：</label>
-                <div class="col-sm-2">
-                    <input type="text" value="" class="form-control inputWidth" name="orders_remarks" id="orders_remarks">
-                </div>
-            </div>
+
             <div class="form-group"> 
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth"> 预约项目：</label>
                 <div class="col-sm-2">
@@ -69,7 +65,7 @@
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">预约人数：</label>
                 <div class="col-sm-2">
-                    <input type="text" value="" class="form-control inputWidth" name="order_number"  id="order_number">
+                    <input type="text" value="1" class="form-control inputWidth" name="order_number"  id="order_number">
                 </div>
             </div>
             <div class="form-group">
@@ -81,11 +77,37 @@
                     </select>
                 </div>
             </div>
-            <p style="text-align: center;"><button id="addButton" class="btn btn-info">确认添加</button></p>
+            <div class="form-group"> 
+                <label for="inputEmail3" class="col-sm-2 control-label labelWidth">预约备注：</label>
+                <div class="col-sm-2">
+                    <textarea  class="form-control inputWidth" rows="3"name="orders_remarks" id="orders_remarks"></textarea>
+                </div>
+            </div>
+                    <p style="text-align: center;"><button id="addButton" data-toggle="modal" data-target="#myModal" type="button" class="btn btn-info">确认添加</button></p>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" >
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">你确认修改这条信息么？</h4>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <a id="checkButton" href=""><button type="submit" class="btn btn-primary">确认</button></a>
+                            <input type="hidden" id="deleteUrl" value="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=exchangeItemDelete&ItemId="  />
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
         </form>
     </div>
 </div>
 <script src="{$WebSiteUrl}/js/rexexTest.js"></script>
+<script src="{$WebSiteUrl}/js/bootstrap-datetimepicker.js"></script>
+<script src="{$WebSiteUrl}/js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="{$WebSiteUrl}/js/timeClass.js"></script>
 <script>
     $("#addButton").click(function(){
     $("#errorMessage").hide();
@@ -120,7 +142,65 @@ if(alertFlag){
 $("#errorMessage").show();
 $("#errorMessage").html(errorMessage);
 return false;
+}else{
+$(".modal-body").html("");
+var alertTitle=new Array();
+var alertText=new Array();
+var WarringStr ="";
+//var textObject=$(this).parent().parent().find("td");
+$(".labelWidth").each(function(index){
+alertTitle[index]=$(this).html();
+})
+$(".inputWidth").each(function(index){
+if(this.tagName=="SELECT"){
+alertText[index]=$(this).find("option:selected").html();
+}
+else{
+if($(this).val()==""){
+alertText[index]="未填写";
+}
+else{
+alertText[index]=$(this).val();
+}
+}
+});
+
+for (var i=0 ;i<alertTitle.length;i++){
+WarringStr+="<div class='form-group'><label  class=' control-label labelWidth'>"+alertTitle[i]+"</label>"
++"<label  class='control-label labelWidth'>"+alertText[i]+"</label>"
++"</div>";
+}
+var deleteUrl=$("#deleteUrl").val();
+$("#checkButton").attr("href", deleteUrl+alertText[6]);                
+$(".modal-body").html(WarringStr);
+
 }
 })
-     
+//数字限制
+$("#userPhone").on("input",function(){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+
+$("#userPhone").val(cutString);
+}
+});
+$("#order_number").on("input",function(){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+
+$("#order_number").val(cutString);
+}
+});
+//日期弹出框
+var endDate= getDateTimeMessage(new Date(),2);
+$("#orderTime").datetimepicker({
+format: "yyyy-mm-dd hh:ii",
+startDate:new Date(),
+endDate:endDate,
+autoclose:true,
+minView:0,
+minuteStep:15,
+forceParse:false,
+language:"zh-CN"
+});
 </script>
