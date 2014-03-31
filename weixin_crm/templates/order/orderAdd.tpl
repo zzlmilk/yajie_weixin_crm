@@ -83,7 +83,7 @@
                     <textarea  class="form-control inputWidth" rows="3"name="orders_remarks" id="orders_remarks"></textarea>
                 </div>
             </div>
-                    <p style="text-align: center;"><button id="addButton" data-toggle="modal" data-target="#myModal" type="button" class="btn btn-info">确认添加</button></p>
+            <p style="text-align: center;"><button id="addButton" data-toggle="modal" data-target="#myModal" type="button" class="btn btn-info">确认添加</button></p>
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content" >
@@ -192,7 +192,11 @@ $("#order_number").val(cutString);
 }
 });
 //日期弹出框
-var endDate= getDateTimeMessage(new Date(),2);
+var nowDayTime=new Date();
+nowDayTime.setHours(0);
+nowDayTime.setMinutes(0);
+nowDayTime.setSeconds(0);
+var endDate= getDateTimeMessage(nowDayTime,2);
 $("#orderTime").datetimepicker({
 format: "yyyy-mm-dd hh:ii",
 startDate:new Date(),

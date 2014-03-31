@@ -135,7 +135,7 @@
                                         {else}
                                             <input id="orderTimeInput" name="orderTimeInput"  class="form-control lineDis" style=" margin-top: -3.2em;"  type="text" value="" readonly>
                                         {/if}
-
+                                        <input type="hidden" id="nowCheckTimes" value=""/>
                                         <span class="add-on"><i class="icon-th"></i></span>
                                         <span class="glyphicon glyphicon-chevron-right floatIconText"></span>
                                     </div>
@@ -200,9 +200,13 @@
     <script type="text/javascript">
         var svc=$("#selectValueCache").val();
         $("#orderMerchandise").val(svc);
-        var endDate= getDateTimeMessage(new Date(),2);
+        var nowDayTime=new Date();
+        nowDayTime.setHours(0);
+        nowDayTime.setMinutes(0);
+        nowDayTime.setSeconds(0);
+        var endDate= getDateTimeMessage(nowDayTime,2);
         $("#timesAlert").click(function(){
-        $("#orderTime").datetimepicker('show');
+        $("#orderDate").datetimepicker('show');
         return false;
     });
     $("#submitOrder").click(function(){
@@ -223,25 +227,41 @@ $("#orderMerchandiseHtml").val($(this).find("option:selected").html());
 $("#orderDate").datetimepicker({
 format: "yyyy-mm-dd ",
 startDate:new Date(),
+minuteStep:15,
 endDate:endDate,
 autoclose:true,
-minView:2,
+minView:0,
 forceParse:false,
 language:"zh-CN"
 });
-$("#orderTime").datetimepicker({
-format: "hh:ii",
-minuteStep:15,
-autoclose:true,
-startView:1,
-maxView:1,
-minView:0,
-language:"zh-CN"
-});
+//$("#orderTime").datetimepicker({
+//format: "hh:ii",
+//minuteStep:15,
+//startDate:new Date(),
+//autoclose:true,
+//startView:1,
+//maxView:1,
+//minView:0,
+//language:"zh-CN"
+//});
 
 $("#orderDate").datetimepicker().on('changeDate',function(ev){
 var changeTime=(ev.date.valueOf());
+
+changeTime=changeTime-(28800*1000);
+
 var changeDateTime=new Date(changeTime);
+var endHours=changeDateTime.getHours();
+var endMin=changeDateTime.getMinutes();
+if(endHours<=9){
+endHours="0"+endHours;
+}
+if(endMin<=9){
+endMin="0"+endMin;
+}
+var nowTime=endHours+":"+endMin;
+$("#orderTimeInput").val(nowTime);
+
 var weekNumber=changeDateTime.getDay();
 var weekDays=["周日","周一","周二","周三","周四","周五","周六"];
 var dayData=$("#orderDateInput").val();
