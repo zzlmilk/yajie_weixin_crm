@@ -9,6 +9,32 @@
     <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/dist/ratchet-theme-ios.css">
     <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/css/app.css">
     <script src="{$WebSiteUrlPublic}/company/dist/ratchet.js"></script>
+    <style>
+        body{
+            Font-size=62.5%;
+        }
+            .round_photo{
+    width:100%;
+   height: auto;
+    border:1px solid #ddddde;
+    -moz-border-radius: 59px;
+    -webkit-border-radius: 59px;
+    border-radius:59px;
+    
+}
+.siteClass{
+
+    color: rgb(128,128,128);
+} 
+     .graph{  
+           
+                width: 0;     height: 0;     border-bottom: 38px solid rgb(70,140,200);  
+                
+                border-left: 41px solid transparent;
+
+        }  
+
+    </style>
   </head>
   <body>
  <!--    <header class="bar bar-nav">
@@ -20,11 +46,72 @@
       <a class="icon icon-compose pull-right" href="#composeModal"></a>
       <small class="updated-text">Updated just now</small>
     </div> -->
+   
+
 
 
     <div class="content"  style='background-color: rgb(243,237,227);'>
      
-      <ul class="table-view">
+        
+       <div style=' width: 100%; height: 15%;clear:both;background-color: rgb(255,255,247);'>
+           
+           <div style='height: 0.2em;width: 100%;'>&nbsp;</div>
+           <div style=' float: left; width: 3%;'>&nbsp;</div>
+           
+           <div style=' float: left; width: 18%;'>
+                <img src='{$userinfo.weixin_user.headimgurl}' class='round_photo'>
+           </div>
+           
+           <div style='width:1%; float: left;'>&nbsp;</div>
+           
+           <div style='height:96%; float: left; width: 65%; overflow: hidden;'>
+               
+               <div style=' height: 50%; '>
+                   <span style='font-size:15px; display: inline-block; width: 22%; '>{$userinfo.weixin_user.nickname}</span>
+                   
+                    <span>
+                        {if $userinfo.weixin_user.sex == 1}
+                            
+                            <img src='{$WebSiteUrlPublic}/company/image/nan.png'  style='width: 10%; height: auto; position: relative; top: 4px;'>
+                            <span class='siteClass' style='font-size:12px;'>男</span>
+                            {elseif $userinfo.weixin_user.sex == 2}
+                                <img src='{$WebSiteUrlPublic}/company/image/nv.png'  style='width: 10%; height: auto; position: relative; top: 4px;'>
+                            <span class='siteClass' style='font-size:12px;'>女</span>
+                                
+                                
+                                
+    
+                          {/if}
+                     </span>  
+                     
+                     <span  class='siteClass' style='font-size:12px;'>
+                         
+                         {$userinfo.user.birthday|date_format:"%Y年%m月%d日"}
+                         
+                     </span>
+
+                   
+               </div>
+               <div class='siteClass' style='font-size:12px;'>Tel:{$userinfo.user.user_phone}</div>
+               
+           </div>
+               
+            <div style='float: left;' >
+                
+                <div style=" height: 28px;">&nbsp;</div>
+                
+                <div class='graph'>
+                    
+                    <img src="{$WebSiteUrlPublic}/company/image/edit.png" style='width: 10px;'>
+                    
+                </div>
+            </div>
+           
+           
+      
+       
+        </div>
+      <ul class="table-view" style='clear:both;'>
         <li class="table-view-cell media">
           <a class="push-right"   data-transition="slide-in">
             <!-- <span class="media-object icon icon-person pull-left"></span> -->

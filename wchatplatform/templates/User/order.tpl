@@ -117,7 +117,7 @@
                                         {if $checkReturn eq 1}
                                             <input id="orderDateInput" name="orderDateInput"  class="form-control lineDis"  style=" margin-top: -3.2em;" type="text" value="{$returnVal.orderDateInput}" readonly>
                                         {else}
-                                            <input id="orderDateInput" name="orderDateInput"  class="form-control lineDis"  type="text" value="" readonly>
+                                            <input id="orderDateInput" name="orderDateInput"  class="form-control lineDis" style=" margin-top: -3.2em;"  type="text" value="" readonly>
                                         {/if}
                                         <span class="add-on"><i class="icon-th"></i></span>
                                         <input type="hidden" value="2014-01-01" id="orderDateWithNoWeek">
@@ -133,7 +133,7 @@
                                         {if $checkReturn eq 1}
                                             <input id="orderTimeInput" name="orderTimeInput"  class="form-control lineDis" style=" margin-top: -3.2em;"  type="text" value="{$returnVal.orderTimeInput}" readonly>
                                         {else}
-                                            <input id="orderTimeInput" name="orderTimeInput"  class="form-control lineDis"  type="text" value="" readonly>
+                                            <input id="orderTimeInput" name="orderTimeInput"  class="form-control lineDis" style=" margin-top: -3.2em;"  type="text" value="" readonly>
                                         {/if}
 
                                         <span class="add-on"><i class="icon-th"></i></span>

@@ -310,8 +310,23 @@ class UserController extends BaseController {
      * 用户积分
      */
     public function userCenter() {
-
-
+        $userApi = new userApi();
+        $userInfo = $userApi->getUserInfo($this->userOpenId);
+        
+      
+        if(!empty($userInfo)){
+            
+            if($userInfo['error']['error_status'] > 0){
+                
+                echo $userInfo['error']['status_info'];
+                
+                die;
+            } 
+            
+            
+            $this->assign('userinfo',$userInfo);
+            
+        }
         $this->display();
     }
 

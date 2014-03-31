@@ -32,6 +32,7 @@
         </style>
     </head>
     <body>
+        
         <div class="registerWarp">
             <table class="tableSize table table-condensed table-bordered">
                 {foreach from=$exchangeList item=exchangeItem key=key}
@@ -43,7 +44,8 @@
 
 
                         <td style="">
-                            <div > <a href="{$WebSiteUrl}?g=company&a=user&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img width="80" height="80" src="{$WebSiteUrlPublic}/company/exchangeImage/174Small.jpg"></a></div>
+                            
+                            <div > <a href="{$WebSiteUrl}?g=company&a=user&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img width="80" height="80" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
                             <div style="width: 100px;word-wrap: break-word; word-break: normal; margin: 0 auto;">
                                 <p class="summary"> {$exchangeItem.exchange_summary}</p>
                                 <p>{$exchangeItem.exchange_name} {$exchangeItem.exchange_integration}p</p>
