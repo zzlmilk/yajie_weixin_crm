@@ -25,7 +25,7 @@ defined('URL_MODEL') or define('URL_MODEL', '0'); //url模式 0为默认模式  
 defined('WebSiteUrl') or define('WebSiteUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/yajie_weixin_crm/' . WebSiteName);
 defined("imageSrc")or define("imageSrc", "weixin_crm/giftImages/");
 
-defined('WebImageUrl') or define('WebImageUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/yajie_weixin_crm/'.imageSrc);
+defined('WebImageUrl') or define('WebImageUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/'.imageSrc);
 defined('WebSiteUrlPublic') or define('WebSiteUrlPublic', 'http://' . $_SERVER['HTTP_HOST'] . '/yajie_weixin_crm/' . WebSiteName . '/public');
 
 
@@ -33,15 +33,15 @@ defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH', 'ORIG_PATH_INFO,RE
 /**
  * 关闭报错信息 把报错信息存储到错误文件中
  */
-ini_set("display_errors", 1);
+//ini_set("display_errors", 1);
 // ini_set("log_errors", "On");
 // ini_set("error_log", ROOT_DIR . Logs . '/Error/error.log');
 //defined('APIURL')or define('APIURL','http://112.124.25.155/weixin_api');
-//defined('APIURL')or define('APIURL','http://'.$_SERVER['HTTP_HOST'].'/yajie_weixin_crm/weixin_api');
+defined('APIURL')or define('APIURL','http://'.$_SERVER['HTTP_HOST'].'/yajie_weixin_crm/weixin_api');
 //defined('APIURL')or define('APIURL','http://localhost/yajie_weixin_crm/weixin_api');
 
 //defined('APIURL')or define('APIURL','http://localhost/yajie_weixin_crm/weixin_api');
-defined('APIURL') or define('APIURL', 'http://192.168.0.111/yajie_weixin_crm/weixin_api');
+//defined('APIURL') or define('APIURL', 'http://192.168.0.111/yajie_weixin_crm/weixin_api');
 
 defined('VAR_MODULE') or define('VAR_MODULE', 'a');
 
