@@ -14,7 +14,7 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
         }
 
         $this->assign('open_id', $this->userOpenId);
@@ -50,6 +50,7 @@ class UserController extends BaseController {
         //$this->userOpenId = $_REQUEST['open_id'];
         $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=company&open_id=" . $this->userOpenId, "get");
         $exchangeList = json_decode($exchangeList, true);
+        $this->assign("WebImageUrl", WebImageUrl . "small/");
         $this->assign("exchangeList", $exchangeList);
         $this->display("getExchangeList");
     }
@@ -59,6 +60,8 @@ class UserController extends BaseController {
         // $this->userOpenId = $_REQUEST['open_id'];
         $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'], "get");
         $exchangeItem = json_decode($exchangeItem, true);
+
+        $this->assign("WebImageUrl", WebImageUrl . "small/");
 
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
         $this->display("exchangeGoods");
@@ -136,6 +139,9 @@ class UserController extends BaseController {
                 if ($thisUserData["error"]["error_status"] == "30005") {
                     $this->errorMessage = 1;
                     return $this->cancelOrder();
+                } else if ($thisUserData["error"]["error_status"] == "30006") {
+                    echo $thisUserData["error"]["status_info"];
+                    return;
                 }
             }
         } else {
@@ -147,7 +153,11 @@ class UserController extends BaseController {
                 echo "暂无订单";
                 die;
             }
+
             $orderString = $orderItem["order"];
+            if (time() >= $orderString['appointment_time']) {
+                $returnVal['orderState']="1";
+            }
             $returnVal["porpleCountSubmit"] = $orderString['order_number'];
             $orderDate = date("Y-m-d ", $orderString['appointment_time']);
             $orderTime = date("H:i", $orderString['appointment_time']);
@@ -248,45 +258,52 @@ class UserController extends BaseController {
      * 提交注册
      */
     public function submitRegister() {
-
-        $mobilephone = $_POST['phoneNumber'];
-
-        $userName = $_POST['userName'];
-        if (!empty($userName)) {
-            if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $mobilephone)) {
-                $data = array();
-                //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
-                $data['open_id'] = $_POST['open_id'];
-                $data['source'] = 'company';
-                $data['user_name'] = $_POST['userName'];
-                $data['sex'] = $_POST['gender'];
-                $data['user_phone'] = $_POST['phoneNumber'];
-                $data['birthday'] = strtotime($_POST['year'] . $_POST['month'] . $_POST['date']);
-
-                $resultRename = transferData(APIURL . '/user/able_user/', 'post', $data);
-                $res = json_decode($resultRename, true);
-
-
-                if ($res['success'] == 1) {
-                    $resultRegister = transferData(APIURL . '/user/add', 'post', $data);
-                    $resultRegister = json_decode($resultRegister, true);
-
-                    if ($resultRegister['user']['user_id'] > 0) {
-                        echo "注册成功";
-                        // 注册成功后跳转会员中心
+        if(!empty($_REQUEST['open_id'])){
+            if(!empty($_REQUEST['phoneNumber'])){
+                if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $_REQUEST['phoneNumber'])) {
+                    if(!empty($_REQUEST['userName'])){
+                      $data = array();
+                      $data['open_id'] = $_REQUEST['open_id'];
+                      $data['source'] = 'company';
+                      $data['user_name'] = $_REQUEST['userName'];
+                      $data['sex'] = $_REQUEST['gender'];
+                      $data['user_phone'] = $_REQUEST['phoneNumber'];
+                      $data['birthday'] =  strtotime($_POST['year'] . $_POST['month'] . $_POST['date']);
+                      $resultRenameJson = transferData(APIURL . '/user/able_user/', 'post', $data);
+                      $resultRenameArray = json_decode($resultRenameJson,true);
+                      if($resultRenameArray['success'] == 1){
+                         $resultRegisterJson = transferData(APIURL . '/user/add', 'post', $data);
+                         $resultRegisterArray = json_decode($resultRegisterJson, true);
+                         if($resultRegisterArray['user']['user_id'] > 0){
+                             echo '用户注册成功！';
+                             die;
+                         }
+                      } else{
+                          echo '用户已经注册!';
+                          die;
+                      }
+                    } else{ 
+                      echo '用户名不能为空';  
+                      die;
                     }
-                } else {
-
-                    echo "已被注册过";
-                }
-            } else {
-
-                echo "格式不正确";
+                } else{   
+                    echo '手机格式不正确!';
+                    die;
+                }  
+            } else{
+                
+                echo '手机号码必须存在';
+               
+                die;
             }
-        } else {
-
-            echo "用户名不能为空";
+            
+        } else{
+            
+            echo 'open_id 不存在  请重新从微信公众平台中进入';
+            
+            die;
         }
+       
     }
 
     /**
@@ -526,7 +543,7 @@ class UserController extends BaseController {
             $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
             $exchangeList = json_decode($exchangeList, TRUE);
 
-            print_r($exchangeList);
+           
 
 
             if ($exchangeList["error"]['error_status'] == 40001) {
@@ -547,6 +564,9 @@ class UserController extends BaseController {
 
     public function changeScuessList() {
         $this->display("changeScuessList");
+    }
+    public function promoMessage(){
+        $this->display("promoMessage");
     }
 
 }
