@@ -1,44 +1,58 @@
 <?php
 
+class CodeController implements Code {
 
-class CodeController implements Code{
+    /**
+     * 优惠码绑定
+     */
+    public function addCode() {
 
+        if (!empty($_REQUEST['source']) && !empty($_REQUEST['code_id']) && !empty($_REQUEST['open_id'])) {
 
+            $code = new PromoCodeRecordModel();
 
-	/**
-	 * 优惠码绑定
-	 */
-	public function addCode(){
+            $info = $code->addCode($_REQUEST);
 
-		if(!empty($_REQUEST['source']) &&!empty($_REQUEST['code_id'])&&!empty($_REQUEST['open_id'])){
+            AssemblyJson($info);
+        }
+    }
 
-			$code = new  PromoCodeRecordModel();
+    /**
+     * 获取优惠吗
+     */
+    public function get_code() {
 
-			$info = $code->addCode($_REQUEST);
+        if (!empty($_REQUEST['source'])) {
 
-			AssemblyJson($info);
-		}
+            $code = new PromoCodeModel();
 
-	}
+            $code = $code->getCode();
 
-	/**
-	 * 获取优惠吗
-	 */
-	public function get_code(){
+            AssemblyJson($code);
+        }
+    }
+    
+    
+    public function get_user_code(){
+        
+        if(!empty($_REQUEST['source']) && !empty($_REQUEST['open_id'])){
+            
+             $user = new userModel();
 
-		if(!empty($_REQUEST['source'])){
-
-			$code = new  PromoCodeModel();
-
-			$code = $code->getCode();
-
-			AssemblyJson($code);
-
-		}
-
-	}
+             $userInfo = $user->getUserInfo($_REQUEST['open_id']);
+             
+             $code = new PromoCodeRecordModel();
+             
+             $record = $code->getCodeUserInfo($userInfo);
+             
+             AssemblyJson($record);
+            
+        } else{
+            
+            echoErrorCode(105);
+        }
+    }
 
 }
-
 
 ?>

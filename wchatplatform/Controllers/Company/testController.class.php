@@ -24,6 +24,11 @@ class TestController extends BaseController {
 
         $this->display();
     }
+    
+    public function test(){
+        
+        R('User/order/getAllOrder',array('company','ocpOot-COx7UruiqEfag_Lny7dlc'));
+    }
 
 
 }

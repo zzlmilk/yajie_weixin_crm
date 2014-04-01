@@ -1,272 +1,239 @@
 <?php
 
+class UserModel extends Basic {
 
-class UserModel  extends Basic {
+    public function __construct() {
 
+        $this->child_name = 'user';
 
-	public function __construct() {
-
-		$this->child_name = 'user';
-
-		parent::__construct();
-
+        parent::__construct();
     }
 
-	/**
-	 * 判断用户是否已经注册
-	 */
-	public function ableUserRegister($open_id){
+    /**
+     * 判断用户是否已经注册
+     */
+    public function ableUserRegister($open_id) {
 
-		if(!empty($open_id)){
+        if (!empty($open_id)) {
 
-			$UserModel = new UserModel();
+            $UserModel = new UserModel();
 
-			$UserModel->initialize('user_open_id like "'.$open_id.'"');
+            $UserModel->initialize('user_open_id like "' . $open_id . '"');
 
-			if($UserModel->vars_number > 0 ){
+            if ($UserModel->vars_number > 0) {
 
-				echoErrorCode(20002);
+                echoErrorCode(20002);
+            } else {
 
-			} else{
+                $data['success'] = '1';
 
-				$data['success'] = '1';
+                AssemblyJson($data);
+            }
+        }
+    }
 
-				AssemblyJson($data);
-			}
+    /**
+     * 判断手机是否已经注册
+     */
+    public function ableUserPhone($phone) {
 
-		}
+        $this->clearUp();
 
-	}
+        $this->initialize('user_phone = ' . $phone);
 
-	/**
-	 * 判断手机是否已经注册
-	 */
+        if ($this->vars_number > 0) {
 
-	public function ableUserPhone($phone){
+            return 1;
+        } else {
 
-		$this->clearUp();
+            return 0;
+        }
+    }
 
-		$this->initialize('user_phone = '.$phone);
+    /**
+     * 注册用户  并调用获取微信用户信息接口
+     */
+    public function insertUser($val) {
 
-		if($this->vars_number > 0){
+        $result = $this->ableUserPhone($val['user_phone']);
 
-			return 1;
+        if ($result == 0) {
 
-		} else{
+            $data['user_name'] = $val['user_name'];
 
-			return 0;
-		}
+            $data['user_phone'] = $val['user_phone'];
 
-	}
+            $data['sex'] = $val['sex'];
 
-	/**
-	 * 注册用户  并调用获取微信用户信息接口
-	 */
+            $data['birthday'] = $val['birthday'];
 
-	public function insertUser($val){
+            $data['user_open_id'] = $val['open_id'];
 
-	   $result = $this->ableUserPhone($val['user_phone']);
+            $data['address_phone'] = $val['user_phone'];
 
-	   if($result == 0){
+            $user = new UserModel();
 
-	   		$data['user_name'] = $val['user_name'];
+            $user_id = $user->insert($data);
 
-			$data['user_phone'] = $val['user_phone'];
+            if ($user_id > 0) {
 
-			$data['sex'] = $val['sex'];
+                $data['user_id'] = $user_id;
+            }
 
-			$data['birthday'] = $val['birthday'];
+            $userInfo['user'] = arrayToObject($data, 0);
+            /**
+             *  获取微信用户
+             */
+            $weixinUser = new WeiXinUserModel();
 
-			$data['user_open_id'] = $val['open_id'];
+            $weixinArray = $weixinUser->getWeixinUserInfo($val['open_id'], $user_id);
 
-			$data['address_phone'] = $val['user_phone'];
+            $userInfo['weixin_user'] = arrayToObject($weixinArray, 0);
 
-			$user = new UserModel();
+            AssemblyJson($userInfo);
+        } else {
 
-			$user_id = $user->insert($data);
+            echoErrorCode(20003);
+        }
+    }
 
-			if($user_id > 0){
+    /**
+     * 增加用户积分
+     */
+    public function addUserIntegration($open_id, $integration) {
 
-				$data['user_id'] = $user_id;
+        if (!empty($open_id) && !empty($integration) && $integration > 0) {
 
-			}
+            $UserModel = new UserModel();
 
-			$userInfo['user'] = arrayToObject($data,0);
-			/**
-			 *  获取微信用户
-			 */
+            $UserModel->initialize('user_open_id like "' . $open_id . '"');
 
-			$weixinUser = new WeiXinUserModel();
+            if ($UserModel->vars_number > 0) {
 
-			$weixinArray = $weixinUser->getWeixinUserInfo($val['open_id'],$user_id);
+                $data['user_integration'] = $integration + $UserModel->vars['user_integration'];
 
-			$userInfo['weixin_user'] = arrayToObject($weixinArray,0);
+                $UserModel->update($data);
 
-			AssemblyJson($userInfo);
+                return $data;
+            }
+        }
+    }
 
-	   } else{
+    /**
+     * 增加用户金额
+     */
+    public function addUserMoney($open_id, $money) {
 
-	   		echoErrorCode(20003);
 
-	   }
+        if (!empty($open_id) && !empty($money) && $money > 0) {
 
-		
 
-	}
+            $UserModel = new UserModel();
 
-	/**
-	 * 增加用户积分
-	 */
+            $UserModel->initialize('user_open_id like "' . $open_id . '"');
 
-	public function addUserIntegration($open_id,$integration){
+            if ($UserModel->vars_number > 0) {
 
-		if(!empty($open_id) && !empty($integration) && $integration > 0){
+                $data['user_money'] = $money + $UserModel->vars['user_money'];
 
-			$UserModel = new UserModel();
+                $UserModel->update($data);
 
-			$UserModel->initialize('user_open_id like "'.$open_id.'"');
+                return $data;
+            }
+        }
+    }
 
-			if($UserModel->vars_number > 0){
+    /**
+     * 减少用户积分
+     */
+    public function reductionUserIntegration($open_id, $integration) {
 
-				$data['user_integration']= $integration + $UserModel->vars['user_integration'];
 
-				$UserModel->update($data);
+        if (!empty($open_id) && !empty($integration) && $integration > 0) {
 
-				return $data;
 
-			}
-		}
+            $UserModel = new UserModel();
 
-	}
-	/**
-	 * 增加用户金额
-	 */
+            $UserModel->initialize('user_open_id like "' . $open_id . '"');
 
-	public function addUserMoney($open_id,$money){
+            if ($UserModel->vars_number > 0) {
 
+                $integration_ = $UserModel->vars['user_integration'] - $integration;
 
-		if(!empty($open_id) && !empty($money) && $money > 0){
+                if ($integration_ < 0) {
 
+                    $integration_ = 0;
+                }
 
-			$UserModel = new UserModel();
+                $data['user_integration'] = $integration_;
 
-			$UserModel->initialize('user_open_id like "'.$open_id.'"');
+                $UserModel->update($data);
 
-			if($UserModel->vars_number > 0){
+                return $data;
+            }
+        }
+    }
 
-				$data['user_money']= $money + $UserModel->vars['user_money'];
+    /**
+     * 减少用户金额
+     */
+    public function reductionUserMoney($open_id, $money) {
 
-				$UserModel->update($data);
-				
-				return $data;
 
-			}
-		}
+        if (!empty($open_id) && !empty($money) && $money > 0) {
 
-	}
 
+            $UserModel = new UserModel();
 
-	/**
-	 * 减少用户积分
-	 */
+            $UserModel->initialize('user_open_id like "' . $open_id . '"');
 
-	public function reductionUserIntegration($open_id,$integration){
+            if ($UserModel->vars_number > 0) {
 
+                $money_ = $UserModel->vars['user_money'] - $money;
 
-		if(!empty($open_id) && !empty($integration) && $integration > 0){
+                if ($money_ < 0) {
 
+                    $money_ = 0;
+                }
 
-			$UserModel = new UserModel();
+                $data['user_money'] = $money_;
 
-			$UserModel->initialize('user_open_id like "'.$open_id.'"');
+                $UserModel->update($data);
 
-			if($UserModel->vars_number > 0){
+                return $data;
+            }
+        }
+    }
 
-				$integration_ = $UserModel->vars['user_integration'] - $integration;
+    /**
+     * 获取用户资料
+     */
+    public function getUserInfo($open_id) {
 
-				if($integration_ < 0 ){
+        $this->addCondition('user_open_id like "' . $open_id . '"', 1);
 
-					$integration_ = 0;
+        $this->initialize();
 
-				}
+        if ($this->vars_number > 0) {
 
-				$data['user_integration'] = $integration_;
+            return $this->vars;
+        } else {
 
-				$UserModel->update($data);
+            echoErrorCode(20004);
+        }
+    }
 
-				return $data;
+    public function updateInfo($data, $user_id) {
 
-			}
-		}
+        $user = new userModel();
 
-	}
-	/**
-	 * 减少用户金额
-	 */
+        $user->initialize('user_id = ' . $user_id);
 
-	public function reductionUserMoney($open_id,$money){
+        if ($user->vars_number > 0) {
 
-
-		if(!empty($open_id) && !empty($money) && $money > 0){
-
-
-			$UserModel = new UserModel();
-
-			$UserModel->initialize('user_open_id like "'.$open_id.'"');
-
-			if($UserModel->vars_number > 0){
-
-				$money_ = $UserModel->vars['user_money'] - $money;
-
-				if($money_ < 0 ){
-
-					$money_ = 0;
-
-				}
-
-				$data['user_money'] = $money_;
-
-				$UserModel->update($data);
-				
-				return $data;
-
-			}
-		}
-
-	}
-
-	/**
-	 * 获取用户资料
-	 */
-
-	public function getUserInfo($open_id){
-
-		$this->addCondition('user_open_id like "'.$open_id.'"',1);
-
-		$this->initialize();
-
-		if($this->vars_number > 0){
-
-			return $this->vars;
-
-		} else{
-
-			echoErrorCode(20004);
-		}
-	}
-
-	public function updateInfo($data,$user_id){
-
-		$user = new userModel();
-
-		$user->initialize('user_id = '.$user_id);
-
-		if($user->vars_number >0){
-
-			$user->update($data);
-
-		}
-	}
+            $user->update($data);
+        }
+    }
 
 }
 
