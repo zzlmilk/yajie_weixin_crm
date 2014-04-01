@@ -26,7 +26,7 @@ class website {
         /**
          * 加载Model以及DB层
          */
-        $file_path = array('Plug');
+        $file_path = array('Plug','Api');
         foreach ($file_path as $fileKey => $fileValue) {
             include_path_file($fileValue, $fileKey);
         }

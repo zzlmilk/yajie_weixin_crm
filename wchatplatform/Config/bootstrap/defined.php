@@ -25,7 +25,11 @@ defined('URL_MODEL') or define('URL_MODEL', '0'); //url模式 0为默认模式  
 defined('WebSiteUrl') or define('WebSiteUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/yajie_weixin_crm/' . WebSiteName);
 defined("imageSrc")or define("imageSrc", "weixin_crm/giftImages/");
 
+<<<<<<< HEAD
 defined('WebImageUrl') or define('WebImageUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/'.imageSrc);
+=======
+defined('WebImageUrl') or define('WebImageUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/yajie_weixin_crm/'.imageSrc);
+>>>>>>> 81eeb6b63c997fedaacd75f5f5e5c38e4f8cdd66
 defined('WebSiteUrlPublic') or define('WebSiteUrlPublic', 'http://' . $_SERVER['HTTP_HOST'] . '/yajie_weixin_crm/' . WebSiteName . '/public');
 
 

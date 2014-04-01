@@ -62,7 +62,10 @@ class UserController extends BaseController {
         $exchangeItem = json_decode($exchangeItem, true);
 
         $this->assign("WebImageUrl", WebImageUrl . "small/");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 81eeb6b63c997fedaacd75f5f5e5c38e4f8cdd66
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
         $this->display("exchangeGoods");
     }

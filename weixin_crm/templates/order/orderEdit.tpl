@@ -208,7 +208,11 @@ $("#order_number").val(cutString);
 }
 });
 //日期选择
-var endDate= getDateTimeMessage(new Date(),2);
+var nowDayTime=new Date();
+nowDayTime.setHours(0);
+nowDayTime.setMinutes(0);
+nowDayTime.setSeconds(0);
+var endDate= getDateTimeMessage(nowDayTime,2);
 $("#orderTime").datetimepicker({
 format: "yyyy-mm-dd hh:ii",
 startDate:new Date(),
