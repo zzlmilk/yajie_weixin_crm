@@ -14,7 +14,7 @@ function buttonDisable(buttonObject){
         nowData[inputEachNum]=$(this).val();
         inputEachNum++;
     })
-    $(":text").on("input",function(){
+    $(":text").on("change",function(){
         var checkEachNum=0;
         var checkInputChange=false;
         $(":text").each(function(){

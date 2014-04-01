@@ -53,65 +53,73 @@
     </head>
     <body style='background-color: rgb(243,237,227);'>
         <!--有效-->
-        <div class="cardBackground cardBackgroundColorEffective"  style='position: relative;'>
-            <div class="promoTitle">优惠券</div>
-            <div style="text-align: center;">
-                <div class="serviceNumStyle" style="display: inline-block">7</div><div style="display: inline-block;font-size: 20px;">折</div>
-            </div>
-            <div class="whereFrom">
-                来自：刮刮卡
-            </div>
-            <div style="height:  10px;"></div>
-            <div style="border-bottom: 1px dashed #bbb;height: 1px; "></div>
-            <div style="height:  10px;"></div>
-            <div class="form-group" style="">
-                <label class="col-sm-2 control-label messageTitle" style="float: left; ">有效期：</label>
-                <div class="col-sm-10" style="text-align: left; ">
-                    <p class="form-control-static">2014-03-29 至 2015-03-29</p>
+        {foreach from=$codeInfo item=codeInfoItem key=key}
+            {if $codeInfoItem.code_end_time lt $nowTime}
+                <!--失效界面-->
+                <div class="cardBackground cardBackgroundColorOverdue"  style='position: relative;'>
+                    <div style="position: absolute; right: 15px; top:0;">
+                        <p type="button" disabled="" style="opacity: 1;"><h3>过&nbsp;&nbsp;&nbsp;期</h3></p>
+                    </div>
+                    <div class="promoTitle">{$codeInfoItem.code_name}</div>
+                    <div style="text-align: center;">
+                        <div class="serviceNumStyle" style="display: inline-block">9</div><div style="display: inline-block;font-size: 20px;">折</div>
+                    </div>
+                    <div class="whereFrom">
+                        来自：刮刮卡
+                    </div>
+                    <div style="height:  10px;"></div>
+                    <div style="border-bottom: 1px dashed #bbb;height: 1px; "></div>
+                    <div style="height:  10px;"></div>
+                    <div class="form-group" style="">
+                        <label class="col-sm-2 control-label messageTitle" style="float: left; ">有效期：</label>
+                        <div class="col-sm-10" style="text-align: left; ">
+                            <p class="form-control-static">{$codeInfoItem.code_begin_time|date_format:"%Y-%m-%d"} 至 {$codeInfoItem.code_end_time|date_format:"%Y-%m-%d"}</p>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div class="form-group" style=" ">
+                        <label class="col-sm-2 control-label messageTitle"style="float: left;">领取日：</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">{$codeInfoItem.createTime|date_format:"%Y-%m-%d"}</p>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div style="height:  5px;"></div>
                 </div>
-                <div style="clear: both;"></div>
-            </div>
-            <div class="form-group" style=" ">
-                <label class="col-sm-2 control-label messageTitle"style="float: left;">领取日：</label>
-                <div class="col-sm-10">
-                    <p class="form-control-static">2014-03-28</p>
+            {else}
+
+                <div class="cardBackground cardBackgroundColorEffective"  style='position: relative;'>
+                    <div class="promoTitle">{$codeInfoItem.code_name}</div>
+                    <div style="text-align: center;">
+                        <div class="serviceNumStyle" style="display: inline-block">7</div><div style="display: inline-block;font-size: 20px;">折</div>
+                    </div>
+                    <div class="whereFrom">
+                        来自：刮刮卡
+                    </div>
+                    <div style="height:  10px;"></div>
+                    <div style="border-bottom: 1px dashed #bbb;height: 1px; "></div>
+                    <div style="height:  10px;"></div>
+                    <div class="form-group" style="">
+                        <label class="col-sm-2 control-label messageTitle" style="float: left; ">有效期：</label>
+                        <div class="col-sm-10" style="text-align: left; ">
+                            <p class="form-control-static">{$codeInfoItem.code_begin_time|date_format:"%Y-%m-%d"} 至 {$codeInfoItem.code_end_time|date_format:"%Y-%m-%d"}</p>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div class="form-group" style=" ">
+                        <label class="col-sm-2 control-label messageTitle"style="float: left;">领取日：</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">{$codeInfoItem.createTime|date_format:"%Y-%m-%d"}</p>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div style="height:  5px;"></div>
                 </div>
-                <div style="clear: both;"></div>
-            </div>
-            <div style="height:  5px;"></div>
-        </div>
+            {/if}
+        {/foreach}
+
         <!--有效页面结束-->
-        <!--失效界面-->
-        <div class="cardBackground cardBackgroundColorOverdue"  style='position: relative;'>
-            <div style="position: absolute; right: 15px; top:0;">
-                <p type="button" disabled="" style="opacity: 1;"><h3>过&nbsp;&nbsp;&nbsp;期</h3></p>
-            </div>
-            <div class="promoTitle">优惠券</div>
-            <div style="text-align: center;">
-                <div class="serviceNumStyle" style="display: inline-block">9</div><div style="display: inline-block;font-size: 20px;">折</div>
-            </div>
-            <div class="whereFrom">
-                来自：刮刮卡
-            </div>
-            <div style="height:  10px;"></div>
-            <div style="border-bottom: 1px dashed #bbb;height: 1px; "></div>
-            <div style="height:  10px;"></div>
-            <div class="form-group" style="">
-                <label class="col-sm-2 control-label messageTitle" style="float: left; ">有效期：</label>
-                <div class="col-sm-10" style="text-align: left; ">
-                    <p class="form-control-static">2014-03-25 至 2014-03-26</p>
-                </div>
-                <div style="clear: both;"></div>
-            </div>
-            <div class="form-group" style=" ">
-                <label class="col-sm-2 control-label messageTitle"style="float: left;">领取日：</label>
-                <div class="col-sm-10">
-                    <p class="form-control-static">2014-03-25</p>
-                </div>
-                <div style="clear: both;"></div>
-            </div>
-            <div style="height:  5px;"></div>
-        </div>
+
         <!--失效界面结束-->
         <div style="height: 15px;"></div>
     </body>

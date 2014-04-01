@@ -308,7 +308,9 @@ class UserController extends BaseController {
      */
     public function userCenter() {
         $userApi = new userApi();
+
         $userInfo = $userApi->getUserInfo($this->userOpenId,'company');
+
         if (!empty($userInfo)) {
 
             if ($userInfo['error']['error_status'] > 0) {
@@ -317,6 +319,7 @@ class UserController extends BaseController {
 
                 die;
             }
+
             $this->assign('userinfo', $userInfo);
         }
         $this->display();
@@ -571,6 +574,20 @@ class UserController extends BaseController {
     }
 
     public function promoMessage() {
+
+        $postDate["source"] = "company";
+        $postDate['open_id'] = $this->userOpenId;
+        $userCode = transferData(APIURL . "/code/get_user_code", "post", $postDate);
+        $userCode = json_decode($userCode, true);
+        $codeInfo = array();
+        foreach ($userCode as $key => $value) {
+            $codeCreateTime=$value["code_record"]['ctime'];
+            $value['code_info']["createTime"]=$codeCreateTime;
+            array_push($codeInfo, $value['code_info']);
+        }
+        $nowTime = time();
+        $this->assign("codeInfo", $codeInfo);
+        $this->assign("nowTime", $nowTime);
         $this->display("promoMessage");
     }
 

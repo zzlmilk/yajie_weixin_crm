@@ -11,7 +11,7 @@
         width: auto !important;
     }
     .inputWidth{
-        width: 150px;
+        width: 170px;
     }
     .userMangerTitle{
         color: rgb(91,91,91);
