@@ -21,6 +21,9 @@ class GiftController  implements gift{
 
 			AssemblyJson($array);
 
+		} else{
+
+			echoErrorCode(105);
 		}
 		
 		
@@ -43,6 +46,9 @@ class GiftController  implements gift{
 
 			}
 
+		} else{
+
+			echoErrorCode(105);
 		}
 
 	}

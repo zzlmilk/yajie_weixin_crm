@@ -62,6 +62,10 @@ class UserController extends BaseController {
         $exchangeItem = json_decode($exchangeItem, true);
 
         $this->assign("WebImageUrl", WebImageUrl . "small/");
+<<<<<<< HEAD
+
+=======
+>>>>>>> 81eeb6b63c997fedaacd75f5f5e5c38e4f8cdd66
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
         $this->display("exchangeGoods");
     }
@@ -257,53 +261,75 @@ class UserController extends BaseController {
      * 提交注册
      */
     public function submitRegister() {
-
-        $mobilephone = $_POST['phoneNumber'];
-
-        $userName = $_POST['userName'];
-        if (!empty($userName)) {
-            if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $mobilephone)) {
-                $data = array();
-                //$data['open_id'] = 'ocpOotwOr44N8_zpyG7LttDgZscw';
-                $data['open_id'] = $_POST['open_id'];
-                $data['source'] = 'company';
-                $data['user_name'] = $_POST['userName'];
-                $data['sex'] = $_POST['gender'];
-                $data['user_phone'] = $_POST['phoneNumber'];
-                $data['birthday'] = strtotime($_POST['year'] . $_POST['month'] . $_POST['date']);
-
-                $resultRename = transferData(APIURL . '/user/able_user/', 'post', $data);
-                $res = json_decode($resultRename, true);
-
-
-                if ($res['success'] == 1) {
-                    $resultRegister = transferData(APIURL . '/user/add', 'post', $data);
-                    $resultRegister = json_decode($resultRegister, true);
-
-                    if ($resultRegister['user']['user_id'] > 0) {
-                        echo "注册成功";
-                        // 注册成功后跳转会员中心
+        if(!empty($_REQUEST['open_id'])){
+            if(!empty($_REQUEST['phoneNumber'])){
+                if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $_REQUEST['phoneNumber'])) {
+                    if(!empty($_REQUEST['userName'])){
+                      $data = array();
+                      $data['open_id'] = $_REQUEST['open_id'];
+                      $data['source'] = 'company';
+                      $data['user_name'] = $_REQUEST['userName'];
+                      $data['sex'] = $_REQUEST['gender'];
+                      $data['user_phone'] = $_REQUEST['phoneNumber'];
+                      $data['birthday'] =  strtotime($_POST['year'] . $_POST['month'] . $_POST['date']);
+                      $resultRenameJson = transferData(APIURL . '/user/able_user/', 'post', $data);
+                      $resultRenameArray = json_decode($resultRenameJson,true);
+                      if($resultRenameArray['success'] == 1){
+                         $resultRegisterJson = transferData(APIURL . '/user/add', 'post', $data);
+                         $resultRegisterArray = json_decode($resultRegisterJson, true);
+                         if($resultRegisterArray['user']['user_id'] > 0){
+                             echo '用户注册成功！';
+                             die;
+                         }
+                      } else{
+                          echo '用户已经注册!';
+                          die;
+                      }
+                    } else{ 
+                      echo '用户名不能为空';  
+                      die;
                     }
-                } else {
-
-                    echo "已被注册过";
-                }
-            } else {
-
-                echo "格式不正确";
+                } else{   
+                    echo '手机格式不正确!';
+                    die;
+                }  
+            } else{
+                
+                echo '手机号码必须存在';
+               
+                die;
             }
-        } else {
-
-            echo "用户名不能为空";
+            
+        } else{
+            
+            echo 'open_id 不存在  请重新从微信公众平台中进入';
+            
+            die;
         }
+       
     }
 
     /**
      * 用户积分
      */
     public function userCenter() {
-
-
+        $userApi = new userApi();
+        $userInfo = $userApi->getUserInfo($this->userOpenId);
+        
+      
+        if(!empty($userInfo)){
+            
+            if($userInfo['error']['error_status'] > 0){
+                
+                echo $userInfo['error']['status_info'];
+                
+                die;
+            } 
+            
+            
+            $this->assign('userinfo',$userInfo);
+            
+        }
         $this->display();
     }
 
@@ -350,6 +376,11 @@ class UserController extends BaseController {
             if ($exchangeItem['exchange_info']["exchange_type"] == "1") {
                 $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
                 $userInfo = json_decode($userInfo, TRUE);
+
+                if ($userInfo['user']['province_id'] == "0") {
+                    $this->assign("userMessage", $userInfo['user']);
+                    $this->locationCheck(); //填写信息 
+                    }            
                 if ($userInfo["error"]['error_status'] == 105) {
                     echo "操作失败，失败代码" . $userInfo["error"]['error_status'] . "，失败信息：" . $userInfo["error"]['status_info'];
                 } else if ($userInfo["error"]['error_status'] == 20004) {
@@ -529,6 +560,10 @@ class UserController extends BaseController {
             $postDate['id'] = $_GET['goodsId'];
             $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
             $exchangeList = json_decode($exchangeList, TRUE);
+
+           
+
+
             if ($exchangeList["error"]['error_status'] == 40001) {
                 echo "兑换失败：" . $exchangeList["error"]['status_info'];
             } else if ($exchangeList["error"]['error_status'] == 20004) {

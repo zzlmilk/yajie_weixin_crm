@@ -74,6 +74,25 @@ class WeiXinUserModel extends Basic {
 		}
 	}
 
+
+	public function getWeiXinInfo($open_id){
+
+
+		$weixinModel = new WeiXinUserModel();
+
+		$weixinModel->initialize('openid like "'.$open_id.'"');
+
+		if($weixinModel->vars_number > 0){
+
+			return $weixinModel->vars;
+
+		} else{
+
+			echoErrorCode('20005');
+		}
+
+	}
+
 }
 
 ?>

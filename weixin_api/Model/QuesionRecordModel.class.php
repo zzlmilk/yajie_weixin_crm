@@ -18,11 +18,15 @@ class QuesionRecordModel extends basic{
 
         $k = 0;
 
-
-        
         foreach ($field_array as $key => $value) {
-            
-            $insertData['quesion_answer'] = json_encode($data['quesion_'.$value]);
+
+            $this->addCondition('user_id = '.$user['user_id'].' and question_id = '.$value);
+
+            $this->initialize();
+
+            if($this->vars_number <= 0){
+
+                 $insertData['quesion_answer'] = json_encode($data['quesion_'.$value]);
 
             $insertData['question_id'] = $value;
 
@@ -39,6 +43,8 @@ class QuesionRecordModel extends basic{
                 $k++;
 
             }
+            }
+            
         }
 
         return $array;

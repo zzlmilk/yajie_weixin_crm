@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-24 12:26:27
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-27 09:36:09
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/manageView.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2032957147532fb3f3c0eab2-86509418%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:207169979353338089a69ba6-04615671%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0c10b76d6ea35b97d169e39191bd023b52995d3f' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/manageView.tpl',
-      1 => 1395634259,
+      1 => 1395804723,
     ),
   ),
-  'nocache_hash' => '2032957147532fb3f3c0eab2-86509418',
+  'nocache_hash' => '207169979353338089a69ba6-04615671',
   'function' => 
   array (
   ),
@@ -152,6 +152,8 @@ if (count($_from) > 0){
 /js/jquery-1.9.1.js"></script>
 <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /js/rexexTest.js"></script>
+<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/js/timeClass.js"></script>
 <script>
     $("#getUser").click(function(){ 
     $("#errorPrint").html("");
@@ -314,21 +316,5 @@ $("#userPhone").val(cutString);
 }
 });
 
-function timeToString(timeVal,typeNumber){
-timeVal=parseInt(timeVal);
-var dateTimeVal=new Date(timeVal)
-var timeYear=dateTimeVal.getFullYear();
-var timeMonth=dateTimeVal.getMonth();
-var timeDay=dateTimeVal.getDate();
-var timeHour=dateTimeVal.getHours();
-var timeMin=dateTimeVal.getMinutes();
-var returnTimeString='';
-switch(typeNumber){
-case "1":
-case 1:
-returnTimeString=timeYear+"-"+timeMonth+"-"+timeDay+" "+timeHour+":"+timeMin;
-break;
-}
-return returnTimeString;
-}
+
 </script>

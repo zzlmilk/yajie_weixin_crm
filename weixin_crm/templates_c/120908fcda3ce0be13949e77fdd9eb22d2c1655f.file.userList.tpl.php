@@ -1,22 +1,23 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-24 12:26:30
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-26 18:25:11
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:744768707532a69fbb3d071-55080090%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16681593575332ab07e0c5b2-29850234%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '120908fcda3ce0be13949e77fdd9eb22d2c1655f' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl',
-      1 => 1395634259,
+      1 => 1395815929,
     ),
   ),
-  'nocache_hash' => '744768707532a69fbb3d071-55080090',
+  'nocache_hash' => '16681593575332ab07e0c5b2-29850234',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+<?php if (!is_callable('smarty_modifier_date_format')) include '/web/www/yajie_weixin_crm/weixin_crm/Smarty/libs/plugins/modifier.date_format.php';
+?><link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
 <link href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /css/minimal/blue.css" rel="stylesheet">
 
@@ -97,7 +98,7 @@ if (count($_from) > 0){
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_phone'];?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['birthday'];?>
+                <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['userInfo1']->value['birthday'],"%Y-%m-%d");?>
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_money'];?>
 </td>

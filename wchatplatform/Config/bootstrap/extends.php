@@ -341,4 +341,11 @@ function curlGet($url){
     return $result; 
 
 }
+
+//加载模块
+function M(){
+    
+    
+}
+
 ?>

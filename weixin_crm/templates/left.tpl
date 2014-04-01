@@ -377,7 +377,7 @@
                                         <img id="xiaotu11" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('11')">微信数据</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=weixinuser&functionname=weixinuser" target="mainFrame" class="left-fontSmall" onclick="tupian('11')">微信数据</a>
                                     </td>
 
                                 </tr>
@@ -387,7 +387,7 @@
                                         <img id="xiaotu12" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('12')">管理员账号</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=admin&functionname=admin" target="mainFrame" class="left-fontSmall" onclick="tupian('12')">管理员账号</a>
                                     </td>
 
                                 </tr>
@@ -397,7 +397,7 @@
                                         <img id="xiaotu13" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall" onclick="tupian('13')">重置账户密码</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=admin&functionname=setAccount" target="mainFrame" class="left-fontSmall" onclick="tupian('13')">重置账户密码</a>
                                     </td>
 
                                 </tr>
@@ -455,28 +455,28 @@
                             <table id="subtree8" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
                                 <tr>
                                     <td width="15%" height="20">
-                                        <img id="xiaotu15" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                        <img id="xiaotu90" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=promoCodeCheck" target="mainFrame" class="left-fontSmall" onclick="tupian('15')">验证优惠码</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=promoCodeCheck" target="mainFrame" class="left-fontSmall" onclick="tupian('90')">验证优惠码</a>
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td width="15%" height="20">
-                                        <img id="xiaotu16" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                        <img id="xiaotu91" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=SMS&functionname=SMSindex" target="mainFrame" class="left-fontSmall" onclick="tupian('16')">生成优惠码</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=addCode" target="mainFrame" class="left-fontSmall" onclick="tupian('91')">生成优惠码</a>
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td width="15%" height="20">
-                                        <img id="xiaotu17" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                        <img id="xiaotu92" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
                                     </td>
                                     <td width="85%">
-                                        <a href="{$WebSiteUrl}/pageredirst.php?action=SMS&functionname=SMSindex" target="mainFrame" class="left-fontSmall" onclick="tupian('17')">优惠码列表</a>
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=codeList" target="mainFrame" class="left-fontSmall" onclick="tupian('92')">优惠码列表</a>
                                     </td>
 
                                 </tr>

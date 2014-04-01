@@ -142,15 +142,28 @@ class  UserController implements User {
 
 			if(count($userInfo) > 0){
 
+				$weixinUser = new WeiXinUserModel();
+
+				$weixinUserInfo = $weixinUser->getWeiXinInfo($userInfo['user_open_id']);
+
 				$array['user'] = arrayToObject($userInfo,0);
+
+				$array['weixin_user'] = arrayToObject($weixinUserInfo,0);
 
 				AssemblyJson($array);
 
 			}
 
+		} else{
+
+			echoErrorCode(105);
 		}
 
 	}
+
+	/**
+	 * 修改用户信息
+	 */
 
 
 	public function updateInfo($data,$user_id){
@@ -170,11 +183,10 @@ class  UserController implements User {
 
 
 	/**
-	 * 
+	 * 修改用户 收货地址
 	 */
 
 	public function update_user_address(){
-
 
 		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])){
 

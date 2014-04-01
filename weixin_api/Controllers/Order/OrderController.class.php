@@ -194,6 +194,9 @@ class OrderController  implements Order{
 				echoErrorCode(30007);
 			}
 
+		} else{
+
+			echoErrorCode(105);
 		}
 
 
@@ -241,6 +244,9 @@ class OrderController  implements Order{
 				echoErrorCode(30007);
 			}
 			
+		} else{
+
+			echoErrorCode(105);
 		}
 
 
@@ -275,6 +281,9 @@ class OrderController  implements Order{
 
 			}
 
+		} else{
+
+			echoErrorCode(105);
 		}
 
 	}
@@ -318,9 +327,14 @@ class OrderController  implements Order{
 
 			$array['merchandise'] = arrayToObject($merchandieseInfo,0);
 
+			AssemblyJson($array);
+
+		} else{
+
+			echoErrorCode(105);
 		}
 
-		AssemblyJson($array);
+		
 
 	}
 

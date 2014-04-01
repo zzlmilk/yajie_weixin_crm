@@ -43,7 +43,14 @@ class activtyController implements activty {
 				if($activty->vars_number > 0){
 
 					$activty->update($data);
-					echo '修改成功';
+					
+					$_ENV['smarty']->setDirTemplates('');
+
+					$_ENV['smarty']->assign('link',WebSiteUrl.'/pageredirst.php?action=activty&functionname=activty');
+
+					$_ENV['smarty']->assign('message','修改成功');
+
+					$_ENV['smarty']->display('message');
 
 				}
 		   }
@@ -103,7 +110,13 @@ class activtyController implements activty {
 
 			if($id > 0){
 
-				echo '插入成功';
+				$_ENV['smarty']->setDirTemplates('');
+
+				$_ENV['smarty']->assign('link',WebSiteUrl.'/pageredirst.php?action=activty&functionname=addactivty');
+
+				$_ENV['smarty']->assign('message','插入成功');
+
+				$_ENV['smarty']->display('message');
 
 			}
 		}
