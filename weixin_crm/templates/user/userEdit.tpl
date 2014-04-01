@@ -28,7 +28,7 @@
         width: auto !important;
     }
     .inputWidth{
-        width: 150px;
+        width: 170px;
     }
     .tableHeigth{
         height: 180px;
