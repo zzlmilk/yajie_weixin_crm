@@ -27,6 +27,7 @@
                 overflow: hidden;
 
             }
+            
 
         </style>
         <input type="hidden" value="{$websiteurl}" id="apiRoute" >
@@ -70,6 +71,8 @@
             
             //初始化获奖
             var picTitle="xx.jpg";
+            var win=$(window).width();
+            win=win*0.9;
             var lotteryRank="";
             var alertFlag=true;
             var giftId={$ScratchCardResults.gift_id};
@@ -118,16 +121,21 @@
 );
 });
 //刮刮卡
+
 var WebSiteUrlPublic = '{$WebSiteUrlPublic}';
 $(function(){
 $("#wScratchPad3").wScratchPad({
+width:786,
 cursor:'',
 image:WebSiteUrlPublic+'/company/ggk/'+picTitle,			
 scratchUp: function(e, percent){
             
 console.log(percent);
 if(alertFlag){
-if(percent > 20){
+var cent=786;
+var changeSize=win/cent;
+var changeSize=(changeSize/0.4)*10;
+if(percent >changeSize){
 if(lotteryRank>0){
 var message=""
 switch(lotteryRank){

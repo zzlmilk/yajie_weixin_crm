@@ -238,6 +238,10 @@
 			if(this.settings.image)
 			{
 				this.sp.css({backgroundImage: 'url('+this.settings.image+')'});
+                                this.sp.css({backgroundRepeat: 'no-repeat'});
+                                this.sp.css({backgroundSize: '80%'});
+                                this.sp.css({width: '100%'});
+                                this.sp.attr("id", "picChange");
 			}
 		},
 
