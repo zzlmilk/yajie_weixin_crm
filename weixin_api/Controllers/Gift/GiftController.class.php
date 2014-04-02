@@ -1,58 +1,97 @@
 <?php
 
+class GiftController implements gift {
 
-class GiftController  implements gift{
-
-
-	/**
-	 * 大转盘 中奖返回
-	 */
-
-	public function get_probability_wheel(){
+    /**
+     * 大转盘 中奖返回
+     */
+    public function get_probability_wheel() {
 
 
-		if(!empty($_REQUEST['source'])){
+        if (!empty($_REQUEST['source'])) {
 
-			$gift_setting = new GiftSettingModel();
+            $gift_setting = new GiftSettingModel();
 
-			$gift_id = $gift_setting->cipher_probability();
+            $gift_id = $gift_setting->cipher_probability(1);
 
-			$array['gift_id'] = $gift_id;
+            $array['gift_id'] = $gift_id;
 
-			AssemblyJson($array);
+            AssemblyJson($array);
+        } else {
 
-		} else{
+            echoErrorCode(105);
+        }
+    }
 
-			echoErrorCode(105);
-		}
-		
-		
-	}
+    public function recevice_award() {
+
+        if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])) {
+
+            if (!empty($_REQUEST['gift_id']) && $_REQUEST['gift_id'] > 0) {
+
+                $gift = new giftModel();
+
+                if (!empty($_REQUEST['gift_type'])) {
+
+                    $gift_info = $gift->getGiftInfo($_REQUEST['gift_id'], $_REQUEST['gift_type']);
+
+                    $gift->getAwardByGift($gift_info, $_REQUEST['open_id']);
+                } else {
+
+                    echoErrorCode(105);
+                }
+            }
+        } else {
+
+            echoErrorCode(105);
+        }
+    }
+
+    /**
+     * 刮刮卡 刮奖返回
+     */
+    public function get_probability_card() {
+
+        if (!empty($_REQUEST['source'])) {
+
+            $gift_setting = new GiftSettingModel();
+
+            $gift_id = $gift_setting->cipher_probability(2);
+
+            $array['gift_id'] = $gift_id;
+
+            AssemblyJson($array);
+        } else {
+
+            echoErrorCode(105);
+        }
+    }
+
+    /**
+     * 获取礼品信息
+     */
+    public function get_gift_info() {
 
 
-	public function recevice_award(){
+        if (!empty($_REQUEST['source']) && !empty($_REQUEST['gift_id']) && !empty($_REQUEST['gift_type'])) {
 
+            $gift = new GiftModel();
 
-		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])){
+            $giftInfo = $gift->getGiftInfo($_REQUEST['gift_id'], $_REQUEST['gift_type']);
 
+            if (count($giftInfo) > 0) {
 
-			if(!empty($_REQUEST['gift_id']) && $_REQUEST['gift_id'] >0){
+                $giftInfoObject = arrayToObject($giftInfo, 0);
 
-				$gift = new giftModel();
+                AssemblyJson($giftInfoObject);
+            } else {
+                echoErrorCode(70001);
+            }
+        } else {
 
-				$gift_info = $gift->getGiftInfo($_REQUEST['gift_id'],1);
-
-				$gift->getAwardByGift($gift_info,$_REQUEST['open_id']);
-
-			}
-
-		} else{
-
-			echoErrorCode(105);
-		}
-
-	}
-
+            echoErrorCode(105);
+        }
+    }
 
 }
 

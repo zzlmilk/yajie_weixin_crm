@@ -355,14 +355,23 @@ function AssemblyJson($jsonArray = null, $type = 'json') {
  * 设定错误代码
  */
 function setErrorCode($errorCode) {
+    
+    $logs = apiLog . date("Y_m_d") . '.log';
+    
     /**
      * 判断是否有PHP错误
      */
 
     if (count(error_get_last()) > 0) {
 
+        
+     
         $error_array = error_get_last();
-
+        
+        $error_json = json_encode($error_array);
+        
+        log_write($error_json, $logs, 'ERROR');
+        
         if ($error_array['type'] != 8192) {
 
             $_ENV['error_code'] = 100;

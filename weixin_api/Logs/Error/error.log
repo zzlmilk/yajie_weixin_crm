@@ -1,0 +1,385 @@
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP Warning:  Missing argument 1 for GiftSettingModel::cipher_probability(), called in /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php on line 15 and defined in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 30
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP Notice:  Undefined variable: type in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 35
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:12:42 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(18): Basic->initialize('gift_type = ')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(35): GiftSettingModel->get_probability(NULL)
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(15): GiftSettingModel->cipher_probability()
+#6 [internal function]: GiftController->get_probability_wheel()
+#7 /web/www/yajie_weixin_crm/weixin_api/Config/ in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP Warning:  Missing argument 1 for GiftSettingModel::cipher_probability(), called in /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php on line 15 and defined in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 30
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP Notice:  Undefined variable: type in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 35
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:12:44 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(18): Basic->initialize('gift_type = ')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(35): GiftSettingModel->get_probability(NULL)
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(15): GiftSettingModel->cipher_probability()
+#6 [internal function]: GiftController->get_probability_wheel()
+#7 /web/www/yajie_weixin_crm/weixin_api/Config/ in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP Warning:  Missing argument 1 for GiftSettingModel::cipher_probability(), called in /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php on line 15 and defined in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 30
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP Notice:  Undefined variable: type in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 35
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:12:46 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(18): Basic->initialize('gift_type = ')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(35): GiftSettingModel->get_probability(NULL)
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(15): GiftSettingModel->cipher_probability()
+#6 [internal function]: GiftController->get_probability_wheel()
+#7 /web/www/yajie_weixin_crm/weixin_api/Config/ in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP Warning:  Missing argument 1 for GiftSettingModel::cipher_probability(), called in /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php on line 15 and defined in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 30
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP Notice:  Undefined variable: type in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 35
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:12:47 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(18): Basic->initialize('gift_type = ')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(35): GiftSettingModel->get_probability(NULL)
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(15): GiftSettingModel->cipher_probability()
+#6 [internal function]: GiftController->get_probability_wheel()
+#7 /web/www/yajie_weixin_crm/weixin_api/Config/ in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP Warning:  Missing argument 1 for GiftSettingModel::cipher_probability(), called in /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php on line 15 and defined in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 30
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP Notice:  Undefined variable: type in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 35
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:12:50 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(18): Basic->initialize('gift_type = ')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(35): GiftSettingModel->get_probability(NULL)
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(15): GiftSettingModel->cipher_probability()
+#6 [internal function]: GiftController->get_probability_wheel()
+#7 /web/www/yajie_weixin_crm/weixin_api/Config/ in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP Warning:  Missing argument 1 for GiftSettingModel::cipher_probability(), called in /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php on line 15 and defined in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 30
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP Notice:  Undefined variable: type in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 35
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:13:36 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(18): Basic->initialize('gift_type = ')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(35): GiftSettingModel->get_probability(NULL)
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(15): GiftSettingModel->cipher_probability()
+#6 [internal function]: GiftController->get_probability_wheel()
+#7 /web/www/yajie_weixin_crm/weixin_api/Config/ in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP Warning:  Missing argument 1 for GiftSettingModel::cipher_probability(), called in /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php on line 15 and defined in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 30
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP Notice:  Undefined variable: type in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 35
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:13:38 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(18): Basic->initialize('gift_type = ')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(35): GiftSettingModel->get_probability(NULL)
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(15): GiftSettingModel->cipher_probability()
+#6 [internal function]: GiftController->get_probability_wheel()
+#7 /web/www/yajie_weixin_crm/weixin_api/Config/ in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP Warning:  Missing argument 1 for GiftSettingModel::cipher_probability(), called in /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php on line 15 and defined in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 30
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP Notice:  Undefined variable: type in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 35
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:13:41 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(18): Basic->initialize('gift_type = ')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(35): GiftSettingModel->get_probability(NULL)
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(15): GiftSettingModel->cipher_probability()
+#6 [internal function]: GiftController->get_probability_wheel()
+#7 /web/www/yajie_weixin_crm/weixin_api/Config/ in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP Warning:  Missing argument 1 for GiftSettingModel::cipher_probability(), called in /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php on line 15 and defined in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 30
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP Notice:  Undefined variable: type in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 35
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'get_probability_wheel')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP   5. GiftController->get_probability_wheel() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP   6. GiftSettingModel->cipher_probability($type = *uninitialized*) /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:15
+[02-Apr-2014 12:14:09 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(18): Basic->initialize('gift_type = ')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php(35): GiftSettingModel->get_probability(NULL)
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(15): GiftSettingModel->cipher_probability()
+#6 [internal function]: GiftController->get_probability_wheel()
+#7 /web/www/yajie_weixin_crm/weixin_api/Config/ in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 15:36:01 Asia/Shanghai] PHP Parse error:  parse error in /web/www/yajie_weixin_crm/weixin_api/Model/PromoCodeRecordModel.class.php on line 21
+[02-Apr-2014 15:36:01 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 15:36:01 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 15:36:01 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 15:36:01 Asia/Shanghai] PHP   3. include_path_file($dirName = 'Model', $fileKey = 0) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:30
+[02-Apr-2014 15:36:01 Asia/Shanghai] PHP   4. fileRead($filePath = '/web/www/yajie_weixin_crm/weixin_api/Model/') /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php:276
+[02-Apr-2014 15:36:06 Asia/Shanghai] PHP Parse error:  parse error in /web/www/yajie_weixin_crm/weixin_api/Model/PromoCodeRecordModel.class.php on line 21
+[02-Apr-2014 15:36:06 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 15:36:06 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 15:36:06 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 15:36:06 Asia/Shanghai] PHP   3. include_path_file($dirName = 'Model', $fileKey = 0) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:30
+[02-Apr-2014 15:36:06 Asia/Shanghai] PHP   4. fileRead($filePath = '/web/www/yajie_weixin_crm/weixin_api/Model/') /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php:276
+[02-Apr-2014 15:36:14 Asia/Shanghai] PHP Parse error:  parse error in /web/www/yajie_weixin_crm/weixin_api/Model/PromoCodeRecordModel.class.php on line 23
+[02-Apr-2014 15:36:14 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 15:36:14 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 15:36:14 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 15:36:14 Asia/Shanghai] PHP   3. include_path_file($dirName = 'Model', $fileKey = 0) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:30
+[02-Apr-2014 15:36:14 Asia/Shanghai] PHP   4. fileRead($filePath = '/web/www/yajie_weixin_crm/weixin_api/Model/') /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/extends.php:276
+[02-Apr-2014 15:40:06 Asia/Shanghai] PHP Notice:  Undefined index: code in /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php on line 132
+[02-Apr-2014 15:40:06 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 15:40:06 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 15:40:06 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 15:40:06 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 15:40:06 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'recevice_award')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:40:06 Asia/Shanghai] PHP   5. GiftController->recevice_award() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:40:06 Asia/Shanghai] PHP   6. GiftModel->getAwardByGift($info = array ('gift_id' => '1', 'gift_type' => '1', 'gift_award_type' => '2', 'gift_integration' => '100000', 'gift_exchange_id' => '0'), $open_id = 'ocpOot-COx7UruiqEfag_Lny7dlc') /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:38
+[02-Apr-2014 15:40:06 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/PromoCodeRecordModel.class.php(18): Basic->initialize('code_id = ')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php(132): PromoCodeRecordModel->addCode(NULL, 'ocpOot-COx7Urui...')
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(38): GiftModel->getAwardByGift(Array, 'ocpOot-COx7Urui...')
+#6 [internal function]: GiftController->recevice_award()
+#7 /web/www/yajie_weixin in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 15:40:53 Asia/Shanghai] PHP Notice:  Undefined index: code in /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php on line 132
+[02-Apr-2014 15:40:53 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 15:40:53 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 15:40:53 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 15:40:53 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 15:40:53 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'recevice_award')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:40:53 Asia/Shanghai] PHP   5. GiftController->recevice_award() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:40:53 Asia/Shanghai] PHP   6. GiftModel->getAwardByGift($info = array ('gift_id' => '1', 'gift_type' => '1', 'gift_award_type' => '2', 'gift_integration' => '100000', 'gift_exchange_id' => '0'), $open_id = 'ocpOot-COx7UruiqEfag_Lny7dlc') /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:38
+[02-Apr-2014 15:40:53 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/PromoCodeRecordModel.class.php(20): Basic->initialize('code_id = ')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php(132): PromoCodeRecordModel->addCode(NULL, 'ocpOot-COx7Urui...')
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(38): GiftModel->getAwardByGift(Array, 'ocpOot-COx7Urui...')
+#6 [internal function]: GiftController->recevice_award()
+#7 /web/www/yajie_weixin in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 15:42:37 Asia/Shanghai] PHP Notice:  Undefined index: code in /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php on line 132
+[02-Apr-2014 15:42:37 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 15:42:37 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 15:42:37 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 15:42:37 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 15:42:37 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'recevice_award')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:42:37 Asia/Shanghai] PHP   5. GiftController->recevice_award() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:42:37 Asia/Shanghai] PHP   6. GiftModel->getAwardByGift($info = array ('gift_id' => '1', 'gift_type' => '1', 'gift_award_type' => '2', 'gift_integration' => '100000', 'gift_exchange_id' => '0'), $open_id = 'ocpOot-COx7UruiqEfag_Lny7dlc') /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:38
+[02-Apr-2014 15:42:37 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/PromoCodeRecordModel.class.php(20): Basic->initialize('code_id = ')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php(132): PromoCodeRecordModel->addCode(NULL, 'ocpOot-COx7Urui...')
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(38): GiftModel->getAwardByGift(Array, 'ocpOot-COx7Urui...')
+#6 [internal function]: GiftController->recevice_award()
+#7 /web/www/yajie_weixin in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 15:43:43 Asia/Shanghai] PHP Notice:  Undefined index: code in /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php on line 132
+[02-Apr-2014 15:43:43 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 15:43:43 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 15:43:43 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 15:43:43 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 15:43:43 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'recevice_award')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:43:43 Asia/Shanghai] PHP   5. GiftController->recevice_award() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:43:43 Asia/Shanghai] PHP   6. GiftModel->getAwardByGift($info = array ('gift_id' => '1', 'gift_type' => '1', 'gift_award_type' => '2', 'gift_integration' => '100000', 'gift_exchange_id' => '0'), $open_id = 'ocpOot-COx7UruiqEfag_Lny7dlc') /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:38
+[02-Apr-2014 15:43:43 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php:134
+Stack trace:
+#0 /web/www/yajie_weixin_crm/weixin_api/Config/DB/2DB_con.php(213): DB_MysqlStatement->execute()
+#1 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(41): Query->selectQuery()
+#2 /web/www/yajie_weixin_crm/weixin_api/Config/DB/4Basic.super.php(55): Basic->getVar()
+#3 /web/www/yajie_weixin_crm/weixin_api/Model/PromoCodeRecordModel.class.php(20): Basic->initialize('promo_code_id =...')
+#4 /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php(132): PromoCodeRecordModel->addCode(NULL, 'ocpOot-COx7Urui...')
+#5 /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php(38): GiftModel->getAwardByGift(Array, 'ocpOot-COx7Urui...')
+#6 [internal function]: GiftController->recevice_award()
+#7 /web/www/yaji in /web/www/yajie_weixin_crm/weixin_api/Config/DB/1DB.class.php on line 134
+[02-Apr-2014 15:47:48 Asia/Shanghai] PHP Notice:  Undefined index: code in /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php on line 132
+[02-Apr-2014 15:47:48 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 15:47:48 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 15:47:48 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 15:47:48 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 15:47:48 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'recevice_award')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:47:48 Asia/Shanghai] PHP   5. GiftController->recevice_award() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:47:48 Asia/Shanghai] PHP   6. GiftModel->getAwardByGift($info = array ('gift_id' => '1', 'gift_type' => '1', 'gift_award_type' => '2', 'gift_integration' => '100000', 'gift_exchange_id' => '0'), $open_id = 'ocpOot-COx7UruiqEfag_Lny7dlc') /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:38
+[02-Apr-2014 15:48:25 Asia/Shanghai] PHP Notice:  Undefined index: code in /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php on line 132
+[02-Apr-2014 15:48:25 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 15:48:25 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 15:48:25 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 15:48:25 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 15:48:25 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'recevice_award')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:48:25 Asia/Shanghai] PHP   5. GiftController->recevice_award() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:48:25 Asia/Shanghai] PHP   6. GiftModel->getAwardByGift($info = array ('gift_id' => '1', 'gift_type' => '1', 'gift_award_type' => '2', 'gift_integration' => '100000', 'gift_exchange_id' => '0'), $open_id = 'ocpOot-COx7UruiqEfag_Lny7dlc') /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:38
+[02-Apr-2014 15:49:01 Asia/Shanghai] PHP Notice:  Undefined index: code in /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php on line 132
+[02-Apr-2014 15:49:01 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 15:49:01 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 15:49:01 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 15:49:01 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 15:49:01 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'recevice_award')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:49:01 Asia/Shanghai] PHP   5. GiftController->recevice_award() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:49:01 Asia/Shanghai] PHP   6. GiftModel->getAwardByGift($info = array ('gift_id' => '1', 'gift_type' => '1', 'gift_award_type' => '2', 'gift_integration' => '100000', 'gift_exchange_id' => '0'), $open_id = 'ocpOot-COx7UruiqEfag_Lny7dlc') /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:38
+[02-Apr-2014 15:49:02 Asia/Shanghai] PHP Notice:  Undefined index: code in /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php on line 132
+[02-Apr-2014 15:49:02 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 15:49:02 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 15:49:02 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 15:49:02 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 15:49:02 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'recevice_award')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:49:02 Asia/Shanghai] PHP   5. GiftController->recevice_award() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:49:02 Asia/Shanghai] PHP   6. GiftModel->getAwardByGift($info = array ('gift_id' => '1', 'gift_type' => '1', 'gift_award_type' => '2', 'gift_integration' => '100000', 'gift_exchange_id' => '0'), $open_id = 'ocpOot-COx7UruiqEfag_Lny7dlc') /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:38
+[02-Apr-2014 15:50:10 Asia/Shanghai] PHP Notice:  Undefined index: code in /web/www/yajie_weixin_crm/weixin_api/Model/GiftModel.class.php on line 132
+[02-Apr-2014 15:50:10 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 15:50:10 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 15:50:10 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 15:50:10 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 15:50:10 Asia/Shanghai] PHP   4. call_user_func(array (0 => class GiftController {  }, 1 => 'recevice_award')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:50:10 Asia/Shanghai] PHP   5. GiftController->recevice_award() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 15:50:10 Asia/Shanghai] PHP   6. GiftModel->getAwardByGift($info = array ('gift_id' => '1', 'gift_type' => '1', 'gift_award_type' => '2', 'gift_integration' => '100000', 'gift_exchange_id' => '0'), $open_id = 'ocpOot-COx7UruiqEfag_Lny7dlc') /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php:38
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP Notice:  Undefined index: area_id in /web/www/yajie_weixin_crm/weixin_api/Controllers/Area/AreaController.class.php on line 10
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   4. call_user_func(array (0 => class AreaController {  }, 1 => 'get_area')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   5. AreaController->get_area() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP Notice:  Undefined index: area_id in /web/www/yajie_weixin_crm/weixin_api/Controllers/Area/AreaController.class.php on line 10
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   4. call_user_func(array (0 => class AreaController {  }, 1 => 'get_area')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   5. AreaController->get_area() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP Notice:  Undefined index: area_id in /web/www/yajie_weixin_crm/weixin_api/Controllers/Area/AreaController.class.php on line 10
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP Stack trace:
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   2. website->run() /web/www/yajie_weixin_crm/weixin_api/index.php:9
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   4. call_user_func(array (0 => class AreaController {  }, 1 => 'get_area')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+[02-Apr-2014 16:24:53 Asia/Shanghai] PHP   5. AreaController->get_area() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73

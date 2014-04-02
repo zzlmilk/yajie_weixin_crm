@@ -14,7 +14,7 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
         }
 
         $this->assign('open_id', $this->userOpenId);
@@ -308,8 +308,9 @@ class UserController extends BaseController {
      */
     public function userCenter() {
         $userApi = new userApi();
+        
 
-        $userInfo = $userApi->getUserInfo($this->userOpenId,'company');
+        $userInfo = $userApi->getUserInfo($this->userOpenId, 'company');
 
         if (!empty($userInfo)) {
 
@@ -549,10 +550,6 @@ class UserController extends BaseController {
             $postDate['id'] = $_GET['goodsId'];
             $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
             $exchangeList = json_decode($exchangeList, TRUE);
-
-
-
-
             if ($exchangeList["error"]['error_status'] == 40001) {
                 echo "兑换失败：" . $exchangeList["error"]['status_info'];
             } else if ($exchangeList["error"]['error_status'] == 20004) {
@@ -581,8 +578,8 @@ class UserController extends BaseController {
         $userCode = json_decode($userCode, true);
         $codeInfo = array();
         foreach ($userCode as $key => $value) {
-            $codeCreateTime=$value["code_record"]['ctime'];
-            $value['code_info']["createTime"]=$codeCreateTime;
+            $codeCreateTime = $value["code_record"]['ctime'];
+            $value['code_info']["createTime"] = $codeCreateTime;
             array_push($codeInfo, $value['code_info']);
         }
         $nowTime = time();

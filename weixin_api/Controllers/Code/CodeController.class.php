@@ -11,7 +11,7 @@ class CodeController implements Code {
 
             $code = new PromoCodeRecordModel();
 
-            $info = $code->addCode($_REQUEST);
+            $info = $code->addCode($_REQUEST['code_id'],$_REQUEST['open_id']);
 
             AssemblyJson($info);
         }

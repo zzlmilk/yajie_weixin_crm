@@ -2,144 +2,124 @@
 
 class ExchangeController implements exchange {
 
-
-	/**
-	 * 获取兑换物品列表
-	 */
-
-	public function get_exchange_list(){
+    /**
+     * 获取兑换物品列表
+     */
+    public function get_exchange_list() {
 
 
-		$exchangeModel = new ExchangeModel();
+        $exchangeModel = new ExchangeModel();
 
-		$exchangeListArray = $exchangeModel->getExchangeList();
+        $exchangeListArray = $exchangeModel->getExchangeList();
 
-		if(count($exchangeListArray) > 0 ){
+        if (count($exchangeListArray) > 0) {
 
-			$exchangeArray = array();
+            $exchangeArray = array();
 
-			foreach($exchangeListArray as $k=>$v){
+            foreach ($exchangeListArray as $k => $v) {
 
-				$exchangeArray[$k] = arrayToObject($v,0);
+                $exchangeArray[$k] = arrayToObject($v, 0);
+            }
 
-			}
+            AssemblyJson($exchangeArray);
+        }
+    }
 
-			AssemblyJson($exchangeArray);
+    /**
+     * 获取兑换物品信息
+     */
+    public function get_exchange_info() {
 
-		}
-	}
+        if ($_REQUEST['exchange_id'] > 0) {
 
+            $exchangeModel = new ExchangeModel();
 
+            $exchangeInfoArray = $exchangeModel->getExchangeInfo($_REQUEST['exchange_id']);
 
-	/**
-	 * 获取兑换物品信息
-	 */
+            if (count($exchangeInfoArray) > 0) {
 
-	public function get_exchange_info(){
+                $exchangeArray = array();
 
-		if($_REQUEST['exchange_id'] > 0){
+                $array['exchange_info'] = arrayToObject($exchangeInfoArray, 0);
 
-			$exchangeModel = new ExchangeModel();
+                AssemblyJson($array);
+            }
+        } else {
 
-			$exchangeInfoArray = $exchangeModel->getExchangeInfo($_REQUEST['exchange_id']);
+            echoErrorCode(105);
+        }
+    }
 
-			if(count($exchangeInfoArray) > 0 ){
+    /**
+     * 积分兑换
+     */
+    public function redeem() {
 
-				$exchangeArray = array();
+        if (!empty($_REQUEST['source'])) {
 
-				$array['exchange_info'] = arrayToObject($exchangeInfoArray,0);
-				
-				AssemblyJson($array);
+            if (!empty($_REQUEST['id']) && $_REQUEST['id'] > 0) {
 
-			}
+                if (!empty($_REQUEST['open_id'])) {
 
-		} else{
+                    $exchange = new ExchangeModel();
 
-			echoErrorCode(105);
-		}
+                    $array = $exchange->redeem($_REQUEST);
 
-		
-	}
+                    AssemblyJson($array);
+                }
+            }
+        } else {
 
+            echoErrorCode(105);
+        }
+    }
 
-	/**
-	 * 积分兑换
-	 */
-	public function redeem(){
-
-		if(!empty($_REQUEST['source'])){
-
-			if(!empty($_REQUEST['id']) && $_REQUEST['id'] > 0){
-
-				if(!empty($_REQUEST['open_id'])){
-
-					$exchange = new ExchangeModel();
-
-					$array = $exchange->redeem($_REQUEST);
-
-					AssemblyJson($array);
-
-				}
-
-			}
-		} else{
-
-			echoErrorCode(105);
-		}
-
-	}
-
-	/**
-	 * 用户兑换记录
-	 */
-
-	public function user_exchange_record(){
+    /**
+     * 用户兑换记录
+     */
+    public function user_exchange_record() {
 
 
-		if(!empty($_REQUEST['source'])){
+        if (!empty($_REQUEST['source'])) {
 
 
-			if(!empty($_REQUEST['open_id'])){
+            if (!empty($_REQUEST['open_id'])) {
 
-				$user = new userModel();
+                $user = new userModel();
 
-				$userInfo = $user->getUserInfo($_REQUEST['open_id']);
+                $userInfo = $user->getUserInfo($_REQUEST['open_id']);
 
-				$exchangeRecord = new ExchangeRecordModel();
+                $exchangeRecord = new ExchangeRecordModel();
 
-				$exchangeUserRecord = $exchangeRecord->getUserRecord($userInfo['user_id']);
+                $exchangeUserRecord = $exchangeRecord->getUserRecord($userInfo['user_id']);
 
-				$exchangeArray = array();
+                $exchangeArray = array();
 
-				if(count($exchangeUserRecord) > 0 ){
+                if (count($exchangeUserRecord) > 0) {
 
-					foreach($exchangeUserRecord as $k=>$v){
+                    foreach ($exchangeUserRecord as $k => $v) {
 
-						$exchangeModel = new ExchangeModel();
+                        $exchangeModel = new ExchangeModel();
 
-						$exchangeInfoArray = $exchangeModel->getExchangeInfo($v['exchange_id']);
+                        $exchangeInfoArray = $exchangeModel->getExchangeInfo($v['exchange_id']);
 
-						$exchangeArray[$k]['exchange_record'] = arrayToObject($v,0);
+                        $exchangeArray[$k]['exchange_record'] = arrayToObject($v, 0);
 
-						$exchangeArray[$k]['exchange_info'] = arrayToObject($exchangeInfoArray,0);
-					}
+                        $exchangeArray[$k]['exchange_info'] = arrayToObject($exchangeInfoArray, 0);
+                    }
 
-					AssemblyJson($exchangeArray);
+                    AssemblyJson($exchangeArray);
+                } else {
 
-				} else{
+                    echoErrorCode(104);
+                }
+            }
+        } else {
 
-					echoErrorCode(104);
-				}
-
-			}
-
-		} else{
-
-			echoErrorCode(105);
-		}
-
-
-	}
+            echoErrorCode(105);
+        }
+    }
 
 }
+
 ?>

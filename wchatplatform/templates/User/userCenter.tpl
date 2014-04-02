@@ -110,15 +110,15 @@
         <li class="table-view-cell media">
           <a class="push-right"   data-transition="slide-in">
             <!-- <span class="media-object icon icon-person pull-left"></span> -->
-            <div class="media-body" onclick='window.location.href="{$websiteUrl}?g=company&a=user&v=userInfo"'>
+            <div class="media-body" onclick='window.location.href="{$websiteUrl}?g=company&a=user&v=userInfo&open_id={$open_id}"'>
               我的资料
             </div>
           </a>
         </li>
         <li class="table-view-cell media">
-          <a class="push-right" href="inbox.html" data-transition="slide-in">
+          <a class="push-right" data-transition="slide-in">
           <!--   <span class="media-object icon icon-star-filled pull-left"></span> -->
-            <div class="media-body">
+            <div class="media-body"  onclick='window.location.href="{$websiteUrl}?g=company&a=user&v=promoMessage&open_id={$open_id}"'>
                  优惠信息
             </div>
           </a>
@@ -144,7 +144,7 @@
         <li class="table-view-cell media">
           <a class="push-right"  data-transition="slide-in">
            <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-            <div class="media-body" style=' cursor: pointer; ' onclick='window.location.href="{$websiteUrl}?g=company&a=user&v=orderCheck"'>
+            <div class="media-body" style=' cursor: pointer; ' onclick='window.location.href="{$websiteUrl}?g=company&a=user&v=orderCheck&open_id={$open_id}"'>
               订单信息
             </div>
           </a>
