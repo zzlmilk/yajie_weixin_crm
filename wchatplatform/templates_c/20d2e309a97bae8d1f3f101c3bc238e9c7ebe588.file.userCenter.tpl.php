@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-31 18:44:52
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-01 16:40:52
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/User/userCenter.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:719155113533947244947d1-44110748%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1486057055533a7b94441b78-80210327%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '20d2e309a97bae8d1f3f101c3bc238e9c7ebe588' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/User/userCenter.tpl',
-      1 => 1396262691,
+      1 => 1396341647,
     ),
   ),
-  'nocache_hash' => '719155113533947244947d1-44110748',
+  'nocache_hash' => '1486057055533a7b94441b78-80210327',
   'function' => 
   array (
   ),
@@ -76,70 +76,65 @@ $_smarty_tpl->decodeProperties(array (
     <div class="content"  style='background-color: rgb(243,237,227);'>
      
         
-       <div style=' width: 100%; height: 15%;clear:both;background-color: rgb(255,255,247);'>
+       <div style='  width: 100%; background-color: rgb(255,255,247);position: relative;'>
            
            <div style='height: 0.2em;width: 100%;'>&nbsp;</div>
-           <div style=' float: left; width: 3%;'>&nbsp;</div>
+          
            
-           <div style=' float: left; width: 18%;'>
+           <div style=' width: 18%;'>
                 <img src='<?php echo $_smarty_tpl->getVariable('userinfo')->value['weixin_user']['headimgurl'];?>
 ' class='round_photo'>
            </div>
            
-           <div style='width:1%; float: left;'>&nbsp;</div>
+          
            
-           <div style='height:96%; float: left; width: 65%; overflow: hidden;'>
+           <div style=' width: 66%; overflow: hidden; position: absolute; left: 20%; top: 5%;'>
                
-               <div style=' height: 50%; '>
-                   <span style='font-size:15px; display: inline-block; width: 22%; '><?php echo $_smarty_tpl->getVariable('userinfo')->value['weixin_user']['nickname'];?>
+               <div style='margin-top: 4%;  '>
+                   <span style='font-size:15px; display: inline-block; width: 23%; height: 4%;  '><?php echo $_smarty_tpl->getVariable('userinfo')->value['weixin_user']['nickname'];?>
 </span>
                    
-                    <span>
+                    <span style='display:inline-block; position: relative; width: 25%'>
                         <?php if ($_smarty_tpl->getVariable('userinfo')->value['weixin_user']['sex']==1){?>
                             
                             <img src='<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
-/company/image/nan.png'  style='width: 10%; height: auto; position: relative; top: 4px;'>
-                            <span class='siteClass' style='font-size:12px;'>男</span>
+/company/image/nan.png'  style='width: 21px; height: auto; position: absolute; top: 2%;'>
+                            <span class='siteClass' style='font-size:12px;position:relative; left: 37% '>男</span>
                             <?php }elseif($_smarty_tpl->getVariable('userinfo')->value['weixin_user']['sex']==2){?>
                                 <img src='<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
-/company/image/nv.png'  style='width: 10%; height: auto; position: relative; top: 4px;'>
-                            <span class='siteClass' style='font-size:12px;'>女</span>
+/company/image/nv.png'  style='width: 21px; height: auto; position: absolute; top: 2%;'>
+                            <span class='siteClass' style='font-size:12px;position:relative; left: 37%'>女</span>
                                 
-                                
-                                
-    
                           <?php }?>
                      </span>  
                      
-                     <span  class='siteClass' style='font-size:12px;'>
+                     <span  class='siteClass' style='font-size:12px;height: 4%;margin-top: 4% '>
                          
                          <?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('userinfo')->value['user']['birthday'],"%Y年%m月%d日");?>
 
                          
                      </span>
-
-                   
+                         
+                     
                </div>
                <div class='siteClass' style='font-size:12px;'>Tel:<?php echo $_smarty_tpl->getVariable('userinfo')->value['user']['user_phone'];?>
 </div>
                
+              
+               
            </div>
                
-            <div style='float: left;' >
+            <div style='position: absolute; top: 48%; left: 90%; width: 10%;' >
                 
-                <div style=" height: 28px;">&nbsp;</div>
-                
-                <div class='graph'>
-                    
-                    <img src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
-/company/image/edit.png" style='width: 10px;'>
-                    
-                </div>
+                <img src='<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/company/image/edit.png' style=" width: 100%">
             </div>
-           
-           
-      
-       
+            
+            <div onclick='alert(1234)' style=' cursor: pointer; position: absolute;  width: 4%; left: 95%; top: 74%; height: 20%;'>
+                
+                &nbsp;
+            </div>
+
         </div>
       <ul class="table-view" style='clear:both;'>
         <li class="table-view-cell media">
@@ -178,9 +173,10 @@ $_smarty_tpl->decodeProperties(array (
         </li>
 
         <li class="table-view-cell media">
-          <a class="push-right" href="inbox.html" data-transition="slide-in">
+          <a class="push-right"  data-transition="slide-in">
            <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-            <div class="media-body">
+            <div class="media-body" style=' cursor: pointer; ' onclick='window.location.href="<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
+?g=company&a=user&v=orderCheck"'>
               订单信息
             </div>
           </a>

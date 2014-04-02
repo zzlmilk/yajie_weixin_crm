@@ -308,8 +308,8 @@ class UserController extends BaseController {
      */
     public function userCenter() {
         $userApi = new userApi();
-        $userInfo = $userApi->getUserInfo($this->userOpenId);
 
+        $userInfo = $userApi->getUserInfo($this->userOpenId,'company');
 
         if (!empty($userInfo)) {
 
@@ -319,7 +319,6 @@ class UserController extends BaseController {
 
                 die;
             }
-
 
             $this->assign('userinfo', $userInfo);
         }
@@ -486,9 +485,6 @@ class UserController extends BaseController {
      * 获取用户签到信息 api
      */
     public function userRegistration() {
-
-
-
         $postDate["source"] = "company";
         $postDate['open_id'] = $this->userOpenId;
 
@@ -578,6 +574,7 @@ class UserController extends BaseController {
     }
 
     public function promoMessage() {
+
         $postDate["source"] = "company";
         $postDate['open_id'] = $this->userOpenId;
         $userCode = transferData(APIURL . "/code/get_user_code", "post", $postDate);

@@ -142,9 +142,9 @@
         </li>
 
         <li class="table-view-cell media">
-          <a class="push-right"  data-transition="slide-in">
+          <a class="push-right" href="inbox.html" data-transition="slide-in">
            <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-            <div class="media-body" style=' cursor: pointer; ' onclick='window.location.href="{$websiteUrl}?g=company&a=user&v=orderCheck"'>
+            <div class="media-body">
               订单信息
             </div>
           </a>

@@ -1,39 +1,36 @@
 <?php
 
-
-class gameController extends BaseController  {
-
+class gameController extends BaseController {
 
     private $userOpenId;
-
 
     public function __construct() {
 
         header("Content-type:text/html;charset=utf-8");
 
-         if(!empty($_REQUEST['open_id'])){
+        if (!empty($_REQUEST['open_id'])) {
 
             $this->userOpenId = $_REQUEST['open_id'];
-
-        } 
-        $this->assign('open_id',$this->userOpenId);
+        } else {
+            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+        }
+        $this->assign('open_id', $this->userOpenId);
     }
 
     /**
      * 通过授权来获取到open_id 并  将open_id 输出到页面众
      */
+    public function index() {
 
-    public function index(){
+        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx1273344d7b97cd07&secret=65f0ce66ed3b65ef8aebd7ae3ea92e5c&code=' . $_REQUEST['code'] . '&grant_type=authorization_code';
 
-        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx1273344d7b97cd07&secret=65f0ce66ed3b65ef8aebd7ae3ea92e5c&code='.$_REQUEST['code'].'&grant_type=authorization_code';
-        
         $result = transferData($url, "get");
-       
-        $array = json_decode($result,true);
-       
-        $this->assign('open_id',$array['openid']);
 
-        if(!empty($_REQUEST['action'])){
+        $array = json_decode($result, true);
+
+        $this->assign('open_id', $array['openid']);
+
+        if (!empty($_REQUEST['action'])) {
 
             $function = $_REQUEST['action'];
 
@@ -41,24 +38,37 @@ class gameController extends BaseController  {
 
             $this->$function();
         }
-
     }
-    
-	public function bigWheelPage(){
 
+    public function bigWheelPage() {
 
-		$this->display();
-
-	}
-
-
-
-    public function guaguaka() {
 
         $this->display();
     }
 
-       /**
+    public function guaguaka() {
+        $scratchCard = new scratchCard();
+        $ScratchCardResults = $scratchCard->getScratchCardResults("company");
+        $this->assign("websiteurl", WebSiteUrl);
+        $this->assign("ScratchCardResults", $ScratchCardResults);
+        $this->display();
+    }
+
+    public function guaguakaGetLottery() {
+        if (isset($_REQUEST['gift_id'])) {
+            $scratchCard = new scratchCard();
+            $Results = $scratchCard->getScratchCardReceviceAward("company", $this->userOpenId, $_REQUEST['gift_id']);
+            if (!empty($Results)) {
+                $giftInfo = $scratchCard->getScratchCardInfo("company", $_REQUEST['gift_id']);
+                header('Content-type: application/json');
+                echo $giftInfo;
+            }else{
+                echo "1";
+            }
+        }
+    }
+
+    /**
      * 大转盘 ajax 方法
      */
     public function getBigWheel() {
@@ -69,12 +79,10 @@ class gameController extends BaseController  {
         $t = $_REQUEST['t'];
 
         $resultPro = transferData(APIURL . '/gift/get_probability_wheel/?source=1234', 'get');
-        $res = json_decode($resultPro,true);
+        $res = json_decode($resultPro, true);
         echo $resultPro;
 // echo "123";
     }
-
-   
 
     /**
      * 问卷 页面显示
@@ -83,31 +91,27 @@ class gameController extends BaseController  {
 
         $all = $this->getQuesion();
 
-        $this->assign('info',$all['question']);
+        $this->assign('info', $all['question']);
 
-        $this->assign('title',$all['title']);
+        $this->assign('title', $all['title']);
 
         $this->display();
     }
 
-
     /**
      * 活动页面
      */
-
-    public function activity(){
+    public function activity() {
 
         $info = $this->getActivity();
-        
-        $this->assign('today_time',mktime(0,0,0));
-        $this->assign('info',$info['info']);
-        $this->assign('record',$info['record']);
-        $this->display('activity');
 
+        $this->assign('today_time', mktime(0, 0, 0));
+        $this->assign('info', $info['info']);
+        $this->assign('record', $info['record']);
+        $this->display('activity');
     }
 
-
-    public function getQuesion(){
+    public function getQuesion() {
 
         $quesionAll = transferData(APIURL . "/question/get_question", "get");
 
@@ -116,8 +120,7 @@ class gameController extends BaseController  {
         return $quesionResult;
     }
 
-
-    public function getActivity(){
+    public function getActivity() {
 
         $ActivityJson = transferData(APIURL . "/activity/get_activity?source=company", "get");
 
@@ -126,8 +129,7 @@ class gameController extends BaseController  {
         return $ActivityArray;
     }
 
-
-    public function uploadQuestion(){
+    public function uploadQuestion() {
 
         $postDate["source"] = "company";
 
@@ -135,30 +137,28 @@ class gameController extends BaseController  {
 
         $postDate['field'] = $_REQUEST['title'];
 
-        $array =  explode(',', $_REQUEST['title']);
+        $array = explode(',', $_REQUEST['title']);
 
         foreach ($array as $key => $value) {
-                
-            if(empty($_REQUEST[$value])){
 
-                echo '第'.$value.'题必须填写';
+            if (empty($_REQUEST[$value])) {
+
+                echo '第' . $value . '题必须填写';
 
                 die;
             }
 
-            $postDate['quesion_'.$value] = $_REQUEST[$value];
+            $postDate['quesion_' . $value] = $_REQUEST[$value];
         }
 
-        $quesionResultJson = transferData(APIURL . "/question/add_question", "post",$postDate);
+        $quesionResultJson = transferData(APIURL . "/question/add_question", "post", $postDate);
 
         $quesionResultArray = json_decode($quesionResultJson, true);
 
         echo 'success';
-
     }
 
-
-    public function applyAction(){
+    public function applyAction() {
 
         $phone = $_REQUEST['user_phone'];
 
@@ -172,28 +172,25 @@ class gameController extends BaseController  {
 
             $postDate['activity_id'] = $_REQUEST['id'];
 
-            $applyResultJson = transferData(APIURL . "/apply/addApply", "post",$postDate);
+            $applyResultJson = transferData(APIURL . "/apply/addApply", "post", $postDate);
 
             $applyResultArray = json_decode($applyResultJson, true);
 
             $this->activity();
-
-        }  else{
+        } else {
 
             echo '手机号码错误';
         }
-
     }
 
-    public function code(){
+    public function code() {
 
-       $code =  $this->getRandCode();
-       
-       echo $code['code_name'];
+        $code = $this->getRandCode();
 
+        echo $code['code_name'];
     }
 
-      public function getRandCode(){
+    public function getRandCode() {
 
         $codeJson = transferData(APIURL . "/code/get_code?source=company", "get");
 
@@ -202,12 +199,6 @@ class gameController extends BaseController  {
         return $codeArray;
     }
 
-
-    
 }
-
-
-
-
 
 ?>

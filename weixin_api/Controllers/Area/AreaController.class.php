@@ -2,38 +2,33 @@
 
 class AreaController implements area {
 
+    /**
+     * 获取兑换物品列表
+     */
+    public function get_area() {
 
-	/**
-	 * 获取兑换物品列表
-	 */
+        $area_id = $_REQUEST['area_id'];
 
-	public function get_area(){
+        if (empty($area_id)) {
 
-		$area_id =  $_REQUEST['area_id'];
+            $area_id = 0;
+        }
+        $area = new AreaModel();
 
-		if(empty($area_id)){
+        $areaArray = $area->getAreaByPid($area_id);
 
-			$area_id = 0;
-		} 
-		$area = new AreaModel();
+        $areaJsonArray = array();
 
-		$areaArray = $area->getAreaByPid($area_id);
+        if (count($areaArray) > 0) {
 
-		$areaJsonArray = array();
+            foreach ($areaArray as $k => $v) {
 
-		if(count($areaArray) > 0){
-
-			foreach($areaArray as $k =>$v){
-
-				$areaJsonArray[$k] = arrayToObject($v,0);
-
-			}
-			AssemblyJson($areaJsonArray);
-
-		}
-		
-	}
-
+                $areaJsonArray[$k] = arrayToObject($v, 0);
+            }
+            AssemblyJson($areaJsonArray);
+        }
+    }
 
 }
+
 ?>

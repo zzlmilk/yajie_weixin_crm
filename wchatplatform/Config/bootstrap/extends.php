@@ -4,7 +4,6 @@ ob_start();
 
 date_default_timezone_set('PRC');
 
-
 /**
  *  自动加载 配置文件
  * @param type $filePath  路径地址
@@ -216,7 +215,6 @@ function get_client_ip($type = 0) {
     return $ip[$type];
 }
 
-
 function getApiArray($name) {
     $api = include_once 'Api.php';
     if (!empty($api[$name])) {
@@ -247,105 +245,129 @@ function include_path_file($dirName, $fileKey) {
     }
 }
 
-
-
 /**
  * 传递数据 
  *  $url  为接口调用的url 地址  
  *  $method  为传递的方式  POST  GER
  *  $data   当method 为post时  传值为array
  */
+function transferData($url, $method, $data = '') {
 
-function  transferData($url,$method,$data =''){
-
-    switch($method){
+    switch ($method) {
 
         case 'post':
 
-            $output = curlPost($url,$data);
+            $output = curlPost($url, $data);
 
-        break;
+            break;
 
         case 'get':
 
-           $output = curlGet($url);
+            $output = curlGet($url);
 
-        break;
-
+            break;
     }
 
     return $output;
-    
 }
 
+function curlPost($url, $post = null, $options = array()) {
 
-function curlPost($url,$post = null,$options = array()){
 
-
-    $defaults = array( 
-
-        CURLOPT_POST => 1, 
-        CURLOPT_HEADER => 0, 
-        CURLOPT_URL => $url, 
-        CURLOPT_FRESH_CONNECT => 1, 
-        CURLOPT_RETURNTRANSFER => 1, 
-        CURLOPT_FORBID_REUSE => 1, 
-        CURLOPT_TIMEOUT => 4, 
+    $defaults = array(
+        CURLOPT_POST => 1,
+        CURLOPT_HEADER => 0,
+        CURLOPT_URL => $url,
+        CURLOPT_FRESH_CONNECT => 1,
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_FORBID_REUSE => 1,
+        CURLOPT_TIMEOUT => 4,
         CURLOPT_POSTFIELDS => http_build_query($post),
-        CURLOPT_FOLLOWLOCATION=> 1
-    ); 
+        CURLOPT_FOLLOWLOCATION => 1
+    );
 
-    $ch = curl_init(); 
+    $ch = curl_init();
 
     $result = '';
 
-    curl_setopt_array($ch, ($options + $defaults)); 
+    curl_setopt_array($ch, ($options + $defaults));
 
-    if( ! $result = curl_exec($ch)) 
-    { 
+    if (!$result = curl_exec($ch)) {
 
-      
-        trigger_error(curl_error($ch)); 
-    } 
-    curl_close($ch); 
-    return $result; 
 
+        trigger_error(curl_error($ch));
+    }
+    curl_close($ch);
+    return $result;
 }
 
-function curlGet($url){
+function curlGet($url) {
 
-     $defaults = array( 
-
-        CURLOPT_URL => $url, 
-
-        CURLOPT_HEADER => 0, 
-
-        CURLOPT_RETURNTRANSFER => TRUE, 
-
+    $defaults = array(
+        CURLOPT_URL => $url,
+        CURLOPT_HEADER => 0,
+        CURLOPT_RETURNTRANSFER => TRUE,
         CURLOPT_TIMEOUT => 14,
-        
-        CURLOPT_FOLLOWLOCATION=> 1
-    ); 
-    
-    $ch = curl_init(); 
+        CURLOPT_FOLLOWLOCATION => 1
+    );
 
-    curl_setopt_array($ch, $defaults); 
+    $ch = curl_init();
 
-    if( ! $result = curl_exec($ch)) 
-    { 
-        trigger_error(curl_error($ch)); 
-    } 
+    curl_setopt_array($ch, $defaults);
 
-    curl_close($ch); 
+    if (!$result = curl_exec($ch)) {
+        trigger_error(curl_error($ch));
+    }
 
-    return $result; 
+    curl_close($ch);
 
+    return $result;
 }
 
 //加载模块
-function M(){
+function M() {
     
-    
+}
+
+/**
+ * 远程调用模块的操作方法 URL 参数格式[分组/]模块/操作
+ * @param string $url 调用地址
+ * @param array $vars 调用参数 数组 
+ * @return mixed
+ */
+function R($url, $vars = array()) {
+    $info = pathinfo($url);
+    $action = $info['basename'];
+    $module = $info['dirname'];
+    $class = A($module);
+    if ($class) {
+        return call_user_func_array(array(&$class, $action), $vars);
+    } else {
+        return false;
+    }
+}
+
+/**
+ * 初始化类名
+ * @param type $module
+ * @param type $ext
+ * @param type $file
+ * @return class
+ */
+function A($module, $ext = '.class.php', $file = 'Controllers') {
+    $class_strut = explode('/', $module);
+    $class = str_replace(array('.', '#'), array('/', '.'), $module);
+    $class = substr_replace($class, '', 0, strlen($class_strut[0]) + 1);
+    $baseUrl = ROOT_DIR . '/module/' . $class_strut[0] . '/controllers/';
+    $classfile = $baseUrl . $class . $file . $ext;
+   
+    if (file_exists($classfile)) {
+       
+        require_once $classfile;
+        $class = basename($module . $file);
+        $class = new $class();
+        return $class;
+    }
 }
 
 ?>
