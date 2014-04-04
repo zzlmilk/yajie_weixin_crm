@@ -27,7 +27,7 @@
                 overflow: hidden;
 
             }
-            
+
 
         </style>
         <input type="hidden" value="{$websiteurl}" id="apiRoute" >
@@ -112,10 +112,15 @@
         open_id:$("#open_id").val()
     },
     function(rData){
-    var message="恭喜你获得"+rData['gift_integration']+"积分";
+    if(rData=="1"){
     $("#getLottery").hide();
     $(".modal-body").html();
-    $(".modal-body").html(message);
+    $(".modal-body").html("发生错误");
+}else{
+var message="恭喜你获得"+rData['gift_integration']+"积分";
+$("#getLottery").hide();
+$(".modal-body").html();
+$(".modal-body").html(message);}
     
 }
 );
