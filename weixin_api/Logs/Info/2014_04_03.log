@@ -1,0 +1,48 @@
+Apr 03 10:16:57 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 03 10:16:57 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 03 10:16:57 [RETURN]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":1}
+Apr 03 10:17:01 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_id = 1 and gift_type = 1     
+Apr 03 10:17:01 [RETURN]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+{"gift_id":"1","gift_type":"1","gift_award_type":"0","gift_integration":"100000","gift_exchange_id":"2"}
+Apr 03 10:17:12 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/recevice_award
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_id = 1 and gift_type = 1     
+Apr 03 10:17:12 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/recevice_award
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 03 10:17:12 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/recevice_award
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 03 10:17:12 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/recevice_award
+UPDATE weixin_company.user SET user_integration='701700' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Apr 03 10:17:12 [SQL]__192.168.0.111_/yajie_weixin_crm/weixin_api/gift/recevice_award
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','100000','gift','','1396491432')
+Apr 03 10:17:12 [RETURN]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/recevice_award
+{"user":{"user_integration":701700},"record":{"user_id":"1","record_type":1,"fraction":"100000","source":"gift","exchange_id":"","create_time":1396491432}}
+Apr 03 10:18:21 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 03 10:18:21 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 03 10:18:21 [RETURN]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":11}
+Apr 03 10:18:26 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_id = 11 and gift_type = 1     
+Apr 03 10:18:26 [RETURN]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+{"error":{"error_status":70001,"status_info":"\u65e0\u793c\u54c1\u4fe1\u606f"}}
+Apr 03 10:18:33 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 2     
+Apr 03 10:18:33 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 2     
+Apr 03 10:18:33 [RETURN]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+{"gift_id":10}
+Apr 03 10:19:04 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_id = 10 and gift_type = 1     
+Apr 03 10:19:04 [RETURN]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+{"error":{"error_status":70001,"status_info":"\u65e0\u793c\u54c1\u4fe1\u606f"}}
+Apr 03 10:19:06 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 2     
+Apr 03 10:19:06 [SQL]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 2     
+Apr 03 10:19:06 [RETURN]_null_192.168.0.111_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+{"gift_id":5}

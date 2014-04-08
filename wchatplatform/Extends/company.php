@@ -92,21 +92,19 @@ class weixinEvent {
         $type = $wechat->getRev()->getRevType();
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3Dregister&response_type=code&scope=snsapi_base&state=123#wechat_redirect">成为会员</a>';
-
-        $wechat->text($text)->reply();
+        
+        $array[0] = array('Title' => '成为会员', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=user&v=register&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $wechat->news($array)->reply();
     }
 
     function order() {
-
         $wechat = new Wechat();
 
         $type = $wechat->getRev()->getRevType();
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
-
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3Dorder&response_type=code&scope=snsapi_base&state=123#wechat_redirect">我要预约</a>';
-        $wechat->text($text)->reply();
+        $array[0] = array('Title' => '我要预约', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=user&v=order&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $wechat->news($array)->reply();
     }
 
     function getExchangeList() {
@@ -116,8 +114,8 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3DgetExchangeList&response_type=code&scope=snsapi_base&state=123#wechat_redirect">我要兑换</a>';
-        $wechat->text($text)->reply();
+        $array[0] = array('Title' => '我要兑换', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=user&v=getExchangeList&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $wechat->news($array)->reply();
     }
 
     function qiandao() {
@@ -127,8 +125,8 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3Duserlogin&response_type=code&scope=snsapi_base&state=123#wechat_redirect">我要签到</a>';
-        $wechat->text($text)->reply();
+        $array[0] = array('Title' => '我要签到', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=user&v=registration&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $wechat->news($array)->reply();
     }
 
     function wodezhongxin() {
@@ -140,8 +138,8 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Duser%26v%3Dindex%26action%3DuserCenter&response_type=code&scope=snsapi_base&state=123#wechat_redirect">我的中心</a>';
-        $wechat->text($text)->reply();
+        $array[0] = array('Title' => '我的中心', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=user&v=userCenter&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $wechat->news($array)->reply();
     }
 
     function jinqihuodong() {
@@ -152,9 +150,8 @@ class weixinEvent {
         $type = $wechat->getRev()->getRevType();
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
-
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3Dactivity&response_type=code&scope=snsapi_base&state=123#wechat_redirect">近期活动</a>';
-        $wechat->text($text)->reply();
+        $array[0] = array('Title' => '近期活动', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=game&v=activity&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $wechat->news($array)->reply();
     }
 
     function dazhuanpan() {
@@ -164,8 +161,8 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3DbigWheelPage&response_type=code&scope=snsapi_base&state=123#wechat_redirect">大转盘</a>';
-        $wechat->text($text)->reply();
+        $array[0] = array('Title' => '大转盘', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=game&v=bigWheelPage&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $wechat->news($array)->reply();
     }
 
     function guaguaka() {
@@ -174,9 +171,10 @@ class weixinEvent {
         $type = $wechat->getRev()->getRevType();
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
+        
+        $array[0] = array('Title' => '刮刮卡', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=game&v=guaguaka&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3Dguaguaka&response_type=code&scope=snsapi_base&state=123#wechat_redirect">刮刮卡</a>';
-        $wechat->text($text)->reply();
+        $wechat->news($array)->reply();
     }
 
     function wenjuan() {
@@ -186,8 +184,9 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=http%3A%2F%2F112.124.25.155%2Fwchatplatform%3Fg%3Dtest%26a%3Dgame%26v%3Dindex%26action%3DQuestionnaire&response_type=code&scope=snsapi_base&state=123#wechat_redirect">问卷</a>';
-        $wechat->text($text)->reply();
+        $array[0] = array('Title' => '问卷', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=game&v=Questionnaire&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+
+        $wechat->news($array)->reply();
     }
 
     function lianxifangshi() {

@@ -49,6 +49,9 @@ class gameController extends BaseController {
     public function guaguaka() {
         $scratchCard = new scratchCard();
         $ScratchCardResults = $scratchCard->getScratchCardResults("company");
+
+      
+        
         $this->assign("websiteurl", WebSiteUrl);
         $this->assign("ScratchCardResults", $ScratchCardResults);
         $this->display();
@@ -62,7 +65,7 @@ class gameController extends BaseController {
                 $giftInfo = $scratchCard->getScratchCardInfo("company", $_REQUEST['gift_id']);
                 header('Content-type: application/json');
                 echo $giftInfo;
-            }else{
+            } else {
                 echo "1";
             }
         }
@@ -73,15 +76,13 @@ class gameController extends BaseController {
      */
     public function getBigWheel() {
 
-        $token = $_REQUEST['token'];
-        $ac = $_REQUEST['ac'];
-        $tid = $_REQUEST['tid'];
-        $t = $_REQUEST['t'];
+        $resultProJson = transferData(APIURL . '/gift/get_probability_wheel/?source=1234', 'get');
 
-        $resultPro = transferData(APIURL . '/gift/get_probability_wheel/?source=1234', 'get');
-        $res = json_decode($resultPro, true);
-        echo $resultPro;
-// echo "123";
+        $resultproArray = json_decode($resultProJson, true);
+
+
+
+        echo $resultProJson;
     }
 
     /**
@@ -197,6 +198,156 @@ class gameController extends BaseController {
         $codeArray = json_decode($codeJson, true);
 
         return $codeArray;
+    }
+
+    public function getGameAward() {
+
+        if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['gift_id'])) {
+
+            $gift = new giftApi();
+
+            $giftArray = $gift->getGiftInfo($_REQUEST['gift_id'], 1);
+
+            $this->setDir('Public');
+
+
+            $this->assign('type', $_REQUEST['gift_type']);
+
+            if ($_REQUEST['gift_type'] == 1) {
+
+                switch ($_REQUEST['gift_id']) {
+
+                    case '1':
+                        $name = '恭喜你,你获得了1等奖';
+                        break;
+                    case '5':
+                        $name = '恭喜你,你获得了2等奖';
+                        break;
+                    case '9':
+                        $name = '恭喜你,你获得了3等奖';
+                        break;
+
+
+                    default :
+
+                        $this->getBigWheelText();
+
+                        die;
+
+                        break;
+                }
+            } else {
+
+                switch ($_REQUEST['gift_id']) {
+
+
+                    case '11':
+                        $name = '恭喜你,你获得了1等奖';
+                        break;
+                    case '12':
+                        $name = '恭喜你,你获得了2等奖';
+                        break;
+                    case '13':
+                        $name = '恭喜你,你获得了3等奖';
+                        break;
+
+                    default :
+
+                        $this->getBigWheelText();
+
+                        die;
+
+                        break;
+                }
+            }
+
+
+
+            $this->assign('title', '领奖页面');
+
+            $this->assign('name', $name);
+
+
+
+            $this->assign('gift_id', $_REQUEST['gift_id']);
+
+            $this->assign('open_id', $_REQUEST['open_id']);
+
+            $this->display('success');
+        }
+    }
+
+    public function getBigWheelText() {
+
+        $this->setDir('Public');
+
+        $this->assign('title', '提示');
+
+        $this->assign('name', '谢谢您的参与，下次再接再厉');
+
+        $this->display('result');
+    }
+
+    public function getBigWheeSendAward() {
+
+
+        $this->setDir('Public');
+        if (!empty($_REQUEST['gift_id']) && !empty($_REQUEST['open_id'])) {
+            $gift = new giftApi();
+            $awardResult = $gift->sendUserGift($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['type']);
+
+
+            /**
+             * 如存在 则 兑换的内容为虚拟的内容
+             */
+            if (!empty($awardResult['exchange_record'])) {
+
+                $this->assign('title', '领取结果');
+
+                $this->assign('name', '恭喜你 你兑换了一个虚拟的物品');
+
+                $this->display('result');
+
+                die;
+            }
+
+            if (!empty($awardResult['jump'])) {
+
+
+                $url = WebSiteUrl . '?g=company&a=user&v=changeGoods&goodsId=' . $awardResult['info']['exchange_id'] . '&open_id=' . $_REQUEST['open_id'];
+
+                echo '<script>window.location.href="' . $url . '"</script>';
+
+                die;
+            }
+
+            /**
+             * 如存在 则标示 用户领取的 为积分
+             */
+            if (!empty($awardResult['user']['user_integration'])) {
+
+                $this->assign('title', '领取结果');
+                $this->assign('name', '恭喜你 你获得了' . $awardResult['record']['fraction'] . '积分');
+
+                $this->display('result');
+
+                die;
+            }
+
+
+            /**
+             * 优惠券
+             */
+            if (!empty($awardResult['code']['promo_code_id'])) {
+
+                $this->assign('title', '领取结果');
+                $this->assign('name', '恭喜你 你获得了优惠券 优惠码为' . $awardResult['code']['code_name']);
+
+                $this->display('result');
+
+                die;
+            }
+        }
     }
 
 }

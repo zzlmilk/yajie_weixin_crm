@@ -61,7 +61,7 @@ class PromoCodeModel extends basic {
 
         $this->clearUp();
 
-        $this->initialize('code_merchandise = 1');
+        $this->initialize('code_merchandise = 1 and code_state = 0');
 
 
         if ($this->vars_number > 0) {
@@ -73,7 +73,7 @@ class PromoCodeModel extends basic {
             return $array[$randNumber];
         } else {
 
-            $this->generateCode(50, 10);
+            $this->generateCode(50, 4);
 
             $this->getCode();
         }

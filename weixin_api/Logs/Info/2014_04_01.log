@@ -1196,3 +1196,25 @@ Apr 01 16:40:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
 SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
 Apr 01 16:40:52 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
 {"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"jinglingchang","user_phone":"13524446830","sex":"2","birthday":"627321600","user_money":"0","user_integration":"0","user_state":"0","province_id":null,"city_id":null,"area_id":null,"street":null,"real_name":null,"address_phone":"2147483647"},"weixin_user":{"subscribe":"1","openid":"ocpOot-COx7UruiqEfag_Lny7dlc","nickname":"\u7fdf\u6653\u5e73","sex":"1","language":"zh_CN","city":"Zhabei","province":"Shanghai","country":"China","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/XO8x9Zlj37jegeeurt8SKHnauY0SiaDkhr32sILKRpXjYujIrTzX2ecfP6BvKmFURPzH5034VvA3OmaO2Fw4oCuY5KX2CiaLfH\/0","subscribe_time":"1395451236","weixin_user_id":"1"}}
+Apr 01 17:20:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 01 17:20:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 01 17:20:52 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"jinglingchang","user_phone":"13524446830","sex":"2","birthday":"627321600","user_money":"0","user_integration":"0","user_state":"0","province_id":null,"city_id":null,"area_id":null,"street":null,"real_name":null,"address_phone":"2147483647"},"weixin_user":{"subscribe":"1","openid":"ocpOot-COx7UruiqEfag_Lny7dlc","nickname":"\u7fdf\u6653\u5e73","sex":"1","language":"zh_CN","city":"Zhabei","province":"Shanghai","country":"China","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/XO8x9Zlj37jegeeurt8SKHnauY0SiaDkhr32sILKRpXjYujIrTzX2ecfP6BvKmFURPzH5034VvA3OmaO2Fw4oCuY5KX2CiaLfH\/0","subscribe_time":"1395451236","weixin_user_id":"1"}}
+Apr 01 17:23:22 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 01 17:23:22 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0     
+Apr 01 17:23:22 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{"order_id":"7","order_code":"2014033103035444","appointment_time":"1396336500","order_money":"0","orders_remarks":null,"appointment_object":"5555","merchandise_id":"1","order_number":"1","user_id":"1","user_phone":"","order_type":"1","order_pay_state":"0","order_state":"0","order_time":"1396249434"},"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"jinglingchang","user_phone":"13524446830","sex":"2","birthday":"627321600","user_money":"0","user_integration":"0","user_state":"0","province_id":null,"city_id":null,"area_id":null,"street":null,"real_name":null,"address_phone":"2147483647"}}
+Apr 01 17:23:22 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+SELECT * FROM weixin_company.merchandise  WHERE 1  AND merchandise_id = 1     
+Apr 01 17:23:22 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+{"merchandise":{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"}}
+Apr 01 17:23:29 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 01 17:23:29 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 01 17:23:29 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"jinglingchang","user_phone":"13524446830","sex":"2","birthday":"627321600","user_money":"0","user_integration":"0","user_state":"0","province_id":null,"city_id":null,"area_id":null,"street":null,"real_name":null,"address_phone":"2147483647"},"weixin_user":{"subscribe":"1","openid":"ocpOot-COx7UruiqEfag_Lny7dlc","nickname":"\u7fdf\u6653\u5e73","sex":"1","language":"zh_CN","city":"Zhabei","province":"Shanghai","country":"China","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/XO8x9Zlj37jegeeurt8SKHnauY0SiaDkhr32sILKRpXjYujIrTzX2ecfP6BvKmFURPzH5034VvA3OmaO2Fw4oCuY5KX2CiaLfH\/0","subscribe_time":"1395451236","weixin_user_id":"1"}}

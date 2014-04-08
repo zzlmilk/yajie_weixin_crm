@@ -14,7 +14,7 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
         }
 
         $this->assign('open_id', $this->userOpenId);
@@ -312,7 +312,6 @@ class UserController extends BaseController {
      */
     public function userCenter() {
         $userApi = new userApi();
-
         $userInfo = $userApi->getUserInfo($this->userOpenId, 'company');
 
         if (!empty($userInfo)) {
@@ -360,6 +359,7 @@ class UserController extends BaseController {
 
     //兑换物品
     public function changeGoods() {
+
 
 //$this->userOpenId = $_REQUEST['open_id'];
         if (isset($_GET['goodsId'])) {
@@ -515,6 +515,13 @@ class UserController extends BaseController {
 
         $userRegistration_info = json_decode($userRegistrationA, true);
 
+        if(!empty($userRegistration_info['error'])){
+
+            echo $userRegistration_info['error']['status_info'];
+
+            die;
+        }
+
         $this->registration();
     }
 
@@ -553,10 +560,6 @@ class UserController extends BaseController {
             $postDate['id'] = $_GET['goodsId'];
             $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
             $exchangeList = json_decode($exchangeList, TRUE);
-
-
-
-
             if ($exchangeList["error"]['error_status'] == 40001) {
                 echo "兑换失败：" . $exchangeList["error"]['status_info'];
             } else if ($exchangeList["error"]['error_status'] == 20004) {
