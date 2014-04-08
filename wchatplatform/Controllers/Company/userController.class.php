@@ -119,7 +119,7 @@ class UserController extends BaseController {
                 $userJsonData = transferData(APIURL . "/order/get_order", "post", $userOrder);
                 $orderItem = json_decode($userJsonData, true);
                 if ($orderItem["error"]['error_status'] == 105) {
-                    echo "操作失败，失败代码" . $userInfo["error"]['error_status'] . "，失败信息：" . $userInfo["error"]['status_info'];
+                    echo "操作失败，失败代码" . $orderItem["error"]['error_status'] . "，失败信息：" . $orderItem["error"]['status_info'];
                 } else {
                     $orderCode = $orderItem["order"]['order_code'];
                     $postDate["order_code"] = $orderCode;
@@ -135,7 +135,11 @@ class UserController extends BaseController {
             } else {//插入订单
                 $userJsonData = transferData(APIURL . "/order/add", "post", $postDate);
                 $thisUserData = $this->userData = json_decode($userJsonData, TRUE);
-                if ($thisUserData["error"]["error_status"] == "30005") {
+                if ($thisUserData["error"]["error_status"] == "30004") {
+                    echo $thisUserData["error"]["status_info"];
+                    return;
+                }
+               else if ($thisUserData["error"]["error_status"] == "30005") {
                     $this->errorMessage = 1;
                     return $this->cancelOrder();
                 } else if ($thisUserData["error"]["error_status"] == "30006") {
@@ -309,7 +313,7 @@ class UserController extends BaseController {
     public function userCenter() {
         $userApi = new userApi();
 
-        $userInfo = $userApi->getUserInfo($this->userOpenId,'company');
+        $userInfo = $userApi->getUserInfo($this->userOpenId, 'company');
 
         if (!empty($userInfo)) {
 
@@ -581,8 +585,8 @@ class UserController extends BaseController {
         $userCode = json_decode($userCode, true);
         $codeInfo = array();
         foreach ($userCode as $key => $value) {
-            $codeCreateTime=$value["code_record"]['ctime'];
-            $value['code_info']["createTime"]=$codeCreateTime;
+            $codeCreateTime = $value["code_record"]['ctime'];
+            $value['code_info']["createTime"] = $codeCreateTime;
             array_push($codeInfo, $value['code_info']);
         }
         $nowTime = time();
