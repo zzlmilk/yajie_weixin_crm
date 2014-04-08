@@ -21,7 +21,7 @@
             body{
                 Font-size=62.5%;
                 background-color: rgb(243,237,227);
-                padding:0 15px;
+                padding:0 10px;
             }
             .registerWarp{
                 margin: 0 auto;
