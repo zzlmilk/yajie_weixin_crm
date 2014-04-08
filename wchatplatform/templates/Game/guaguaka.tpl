@@ -76,7 +76,27 @@
             });
           
 
-          
+        $("#getLottery").click(function(){
+        $.post(
+        requestUrl,
+        {
+        gift_id:giftId,
+        open_id:$("#open_id").val()
+    },
+    function(rData){
+    if(rData=="1"){
+    $("#getLottery").hide();
+    $(".modal-body").html();
+    $(".modal-body").html("发生错误");
+}else{
+var message="恭喜你获得"+rData['gift_integration']+"积分";
+$("#getLottery").hide();
+$(".modal-body").html();
+$(".modal-body").html(message);}
+    
+}
+);
+});
 //刮刮卡
 
             var WebSiteUrlPublic = '{$WebSiteUrlPublic}';
@@ -93,7 +113,9 @@
                             var changeSize = win / cent;
                             var changeSize = (changeSize / 0.4) * 10;
                             if (percent > changeSize) {
-                                
+                                    
+                                 alertFlag = false;
+                                 
                                  $.ajax({
                                     url: webUrl + "?g=company&a=game&v=getGameAward",
                                     type: "get",
@@ -108,6 +130,7 @@
 
                                         $('#bobyGame').append(res);
                                         $('#myModal').modal();
+
 
                                     },
                                 })

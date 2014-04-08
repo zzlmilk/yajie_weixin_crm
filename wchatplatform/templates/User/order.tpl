@@ -21,6 +21,7 @@
             body{
                 Font-size=62.5%;
                 background-color: rgb(243,237,227);
+                padding:0 15px;
             }
             .registerWarp{
                 margin: 0 auto;
@@ -95,23 +96,20 @@
                     <div class="form-group" style="width: 100%;">
                         <table class='table-bordered col-sm-10' style="width:100%;">
                             <tr style="background-color: #fff;height: 4em;">
-                                <td id="porpleNum" rowspan="2" style="text-align: center" width="30%">
-                                    <label for="" class="">人数</label>
-                                    {if $checkReturn eq 1}
-                                        <span id="porpleCount">{$returnVal.porpleCountSubmit}</span>
-                                        <input type=hidden value="{$returnVal.porpleCountSubmit}" id="porpleCountSubmit" name="porpleCountSubmit"/>
-                                    {else if $returnVal.porpleCountSubmit eq  ''}
-                                        <span id="porpleCount">1</span>
-                                        <input type=hidden value="1" id="porpleCountSubmit" name="porpleCountSubmit"/>
-                                    {else}
-                                        <span id="porpleCount">1</span>
-                                        <input type=hidden value="1" id="porpleCountSubmit" name="porpleCountSubmit"/>
-                                    {/if}
-                                    <div>
-                                        <span class="glyphicon glyphicon-chevron-down floatIconTextDown"></span>
-                                    </div>
+                                <td id="porpleNum" rowspan="2" style="" width="30%">
+                                    <label for="" style="padding-left: 10px;" class="col-sm-3 control-label">人数</label>
+                                    <select   style="width: 50%;margin-left: 3.2em;padding-left: 5px;text-align: center;margin-top: -2.2em;"  class="form-control" id="porpleCountSubmit" name="porpleCountSubmit" >
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                    </select>
                                 </td>
-                                <td>              
+                                <td class="timesAlert">              
                                     <div id="orderDate" class=" date form_datetime ">
                                         <label for="inputPassword" style=" height: 3em; line-height: 3em;"  class="col-sm-2 control-label">日期</label>
                                         {if $checkReturn eq 1}
@@ -125,7 +123,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr id="timesAlert" style=" background-color: #fff;height: 4em;">
+                            <tr class="timesAlert" style=" background-color: #fff;height: 4em;">
 
                                 <td >                        
                                     <div id="orderTime" class="date form_datetime ">
@@ -146,7 +144,7 @@
 
                     <div style="height: 7em;"></div>
                     <div style=" width: 100%; background-color: #fff;height: 14em;">
-                        <div class="form-group" style=" margin-right: 3em; margin-top: 2em; background-color: #fff">
+                        <div class="form-group" style=" margin-right: 3em; margin-top: 2em; ">
                             <label for="orderMerchandise" class="col-sm-3 control-label">项目</label>
                             <div class="col-sm-10">
                                 <select  class="form-control" id="orderMerchandise" name="orderMerchandise" >
@@ -160,7 +158,7 @@
                             </div>
                             <input type="hidden" value="" name="orderMerchandiseHtml" id="orderMerchandiseHtml">
                         </div>
-                        <div class="form-group" style=" margin-right: 3em;background-color: #fff">
+                        <div class="form-group" style=" margin-right: 3em;">
                             <label for="orderObject" class="col-sm-2 control-label">指定</label>
                             <div class="col-sm-10">
                                 {if $checkReturn eq 1}
@@ -194,26 +192,44 @@
         {else}
             <input id="selectValueCache" value="1" type="hidden" > 
         {/if}
+
+        {if $checkReturn eq 1}
+            <input id="porpleCount" value="{$returnVal.porpleCountSubmit}" type="hidden" >
+        {else if $returnVal.porpleCountSubmit eq  ''}
+            <input id="porpleCount" value="1" type="hidden" >
+        {else}
+            <input id="porpleCount" value="1" type="hidden" >
+        {/if}
     </body> 
 
     <script src="{$WebSiteUrlPublic}/company/script/ctrlSelect.js"></script>
     <script type="text/javascript">
-        var svc=$("#selectValueCache").val();
-        $("#orderMerchandise").val(svc);
-        var nowDayTime=new Date();
-        nowDayTime.setHours(0);
-        nowDayTime.setMinutes(0);
-        nowDayTime.setSeconds(0);
-        var endDate= getDateTimeMessage(nowDayTime,2);
-        $("#timesAlert").click(function(){
-        $("#orderDate").datetimepicker('show');
-        return false;
+        $("html").click(function(){
+        $("#orderDate").datetimepicker('hide');
+
     });
-    $("#submitOrder").click(function(){
+    $("body").click(function(){
+    $("#orderDate").datetimepicker('hide');
+
+});
+var pc=$("#porpleCount").val();
+var svc=$("#selectValueCache").val();
+$("#orderMerchandise").val(svc);
+$("#porpleCountSubmit").val(pc);
+var nowDayTime=new Date();
+nowDayTime.setHours(0);
+nowDayTime.setMinutes(0);
+nowDayTime.setSeconds(0);
+var endDate= getDateTimeMessage(nowDayTime,2);
+$(".timesAlert").click(function(){
+$("#orderDate").datetimepicker('show');
+return false;
+});
+$("#submitOrder").click(function(){
     
-    if($("#orderDateInput").val()==""||$("#orderTimeInput").val()==""){
-    alert("请填写完整的预约时间（可能时间或日期未填写）");
-    return false;
+if($("#orderDateInput").val()==""||$("#orderTimeInput").val()==""){
+alert("请填写完整的预约时间（可能时间或日期未填写）");
+return false;
 }else{
 $(this).submit();
 }   
@@ -266,7 +282,6 @@ var weekNumber=changeDateTime.getDay();
 var weekDays=["周日","周一","周二","周三","周四","周五","周六"];
 var dayData=$("#orderDateInput").val();
 $("#orderDateWithNoWeek").val(dayData);
-$("#orderTime").datetimepicker('setStartDate',$("#orderDateWithNoWeek").val());
 $("#orderDateInput").val(dayData+""+weekDays[weekNumber]);
 });
 
