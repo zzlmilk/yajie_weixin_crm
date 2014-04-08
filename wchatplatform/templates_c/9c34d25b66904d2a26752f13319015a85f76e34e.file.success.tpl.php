@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-02 14:46:49
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-02 18:19:01
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Public/success.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1088525113533bb259927275-46918186%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1895081870533be4159c7dd2-58530967%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9c34d25b66904d2a26752f13319015a85f76e34e' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Public/success.tpl',
-      1 => 1396421202,
+      1 => 1396433930,
     ),
   ),
-  'nocache_hash' => '1088525113533bb259927275-46918186',
+  'nocache_hash' => '1895081870533be4159c7dd2-58530967',
   'function' => 
   array (
   ),
@@ -35,8 +35,9 @@ $_smarty_tpl->decodeProperties(array (
                 
                 <button type="button" class="btn btn-primary" onclick='sendGiftAward("<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
 ","<?php echo $_smarty_tpl->getVariable('gift_id')->value;?>
+","<?php echo $_smarty_tpl->getVariable('type')->value;?>
 ")'>领取</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" onclick='location.reload();'  class="btn btn-default" data-dismiss="modal" >关闭</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

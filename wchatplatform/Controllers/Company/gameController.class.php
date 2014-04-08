@@ -47,8 +47,28 @@ class gameController extends BaseController {
     }
 
     public function guaguaka() {
+        $scratchCard = new scratchCard();
+        $ScratchCardResults = $scratchCard->getScratchCardResults("company");
 
+      
+        
+        $this->assign("websiteurl", WebSiteUrl);
+        $this->assign("ScratchCardResults", $ScratchCardResults);
         $this->display();
+    }
+
+    public function guaguakaGetLottery() {
+        if (isset($_REQUEST['gift_id'])) {
+            $scratchCard = new scratchCard();
+            $Results = $scratchCard->getScratchCardReceviceAward("company", $this->userOpenId, $_REQUEST['gift_id']);
+            if (!empty($Results)) {
+                $giftInfo = $scratchCard->getScratchCardInfo("company", $_REQUEST['gift_id']);
+                header('Content-type: application/json');
+                echo $giftInfo;
+            } else {
+                echo "1";
+            }
+        }
     }
 
     /**
@@ -59,6 +79,7 @@ class gameController extends BaseController {
         $resultProJson = transferData(APIURL . '/gift/get_probability_wheel/?source=1234', 'get');
 
         $resultproArray = json_decode($resultProJson, true);
+
 
 
         echo $resultProJson;
@@ -179,7 +200,7 @@ class gameController extends BaseController {
         return $codeArray;
     }
 
-    public function getBigWheelAward() {
+    public function getGameAward() {
 
         if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['gift_id'])) {
 
@@ -189,22 +210,64 @@ class gameController extends BaseController {
 
             $this->setDir('Public');
 
-            switch ($_REQUEST['gift_id']) {
 
-                case '1':
-                    $name = '恭喜你,你获得了1等奖';
-                    break;
-                case '5':
-                    $name = '恭喜你,你获得了2等奖';
-                    break;
-                case '9':
-                    $name = '恭喜你,你获得了3等奖';
-                    break;
+            $this->assign('type', $_REQUEST['gift_type']);
+
+            if ($_REQUEST['gift_type'] == 1) {
+
+                switch ($_REQUEST['gift_id']) {
+
+                    case '1':
+                        $name = '恭喜你,你获得了1等奖';
+                        break;
+                    case '5':
+                        $name = '恭喜你,你获得了2等奖';
+                        break;
+                    case '9':
+                        $name = '恭喜你,你获得了3等奖';
+                        break;
+
+
+                    default :
+
+                        $this->getBigWheelText();
+
+                        die;
+
+                        break;
+                }
+            } else {
+
+                switch ($_REQUEST['gift_id']) {
+
+
+                    case '11':
+                        $name = '恭喜你,你获得了1等奖';
+                        break;
+                    case '12':
+                        $name = '恭喜你,你获得了2等奖';
+                        break;
+                    case '13':
+                        $name = '恭喜你,你获得了3等奖';
+                        break;
+
+                    default :
+
+                        $this->getBigWheelText();
+
+                        die;
+
+                        break;
+                }
             }
+
+
 
             $this->assign('title', '领奖页面');
 
             $this->assign('name', $name);
+
+
 
             $this->assign('gift_id', $_REQUEST['gift_id']);
 
@@ -222,7 +285,7 @@ class gameController extends BaseController {
 
         $this->assign('name', '谢谢您的参与，下次再接再厉');
 
-        $this->display('success');
+        $this->display('result');
     }
 
     public function getBigWheeSendAward() {
@@ -231,8 +294,7 @@ class gameController extends BaseController {
         $this->setDir('Public');
         if (!empty($_REQUEST['gift_id']) && !empty($_REQUEST['open_id'])) {
             $gift = new giftApi();
-
-            $awardResult = $gift->sendUserGift($_REQUEST['gift_id'], $_REQUEST['open_id'], 1);
+            $awardResult = $gift->sendUserGift($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['type']);
 
 
             /**

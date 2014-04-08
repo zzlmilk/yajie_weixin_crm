@@ -6,7 +6,7 @@
 
 var webUrl = '{$websiteUrl}'
 
-function sendGiftAward(open_id, id) {
+function sendGiftAward(open_id, id,type) {
 
     $.ajax({
         url: webUrl + "?g=company&a=game&v=getBigWheeSendAward",
@@ -14,6 +14,7 @@ function sendGiftAward(open_id, id) {
         data: {
             open_id: open_id,
             gift_id: id,
+            type:type,
         },
         success: function(res) {
 

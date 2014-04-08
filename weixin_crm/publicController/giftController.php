@@ -1,103 +1,102 @@
 <?php
 
-
 class giftController implements gift {
 
+    public function getGiftList($type) {
+        
+    }
+
+    public function updateGift($data) {
+        
+    }
+
+    /*
+     * 修改大转盘游戏 一二三等奖的概率配置
+     * */
+
+    public function updateGiftRate() {
+
+        if (!empty($_REQUEST['gift_type']) && $_REQUEST['gift_type'] > 0) {
+
+            $giftSettingModel = new giftSettingModel();
+
+            $giftSettingModel->initialize('gift_type = ' . $_REQUEST['gift_type']);
+
+            if ($giftSettingModel->vars_number > 0) {
 
 
-	public function  getGiftList($type){
+                $data = array();
 
-	}
-
-	public function  updateGift($data){
-
-	}
+                if ($_REQUEST['gift_one_probability'] != null && $_REQUEST['gift_two_probability'] != null && $_REQUEST['gift_three_probability'] != null) {
 
 
-	/*
-	*修改大转盘游戏 一二三等奖的概率配置
-	**/
-	public function updateGiftRate(){
+                    $data['gift_one_probability'] = $_POST['gift_one_probability'];
+                    $data['gift_two_probability'] = $_POST['gift_two_probability'];
+                    $data['gift_three_probability'] = $_POST['gift_three_probability'];
 
-		if(!empty($_REQUEST['gift_type']) && $_REQUEST['gift_type'] > 0 ){
+                    $giftSettingModel->update($data);
+                    $_ENV['smarty']->assign('requestVal', "1");
+                    if ($_REQUEST['gift_type'] == "1") {
+                        $this->getBigWheelList();
+                    } else if ($_REQUEST['gift_type'] == "2") {
+                        $this->getCardList();
+                    }
+                }
+            }
+        }
+    }
 
-			$giftSettingModel = new giftSettingModel();
+    /**
+     *  获取刮刮卡礼品列表
+     */
+    public function getCardList() {
+        $giftSetting = new giftSettingModel(1);
 
-	  		$giftSettingModel->initialize('gift_type = '.$_REQUEST['gift_type']);
-
-	  		if($giftSettingModel->vars_number > 0){
-
-
-	  				$data = array();
-
-	  				if($_REQUEST['gift_one_probability'] != null && $_REQUEST['gift_two_probability']!= null && $_REQUEST['gift_three_probability']!= null){
-
-
-	  					$data['gift_one_probability'] = $_POST['gift_one_probability'];
-						$data['gift_two_probability'] = $_POST['gift_two_probability'];
-						$data['gift_three_probability'] = $_POST['gift_three_probability'];
-
-						$giftSettingModel->update($data);
-
-						echo "<script>alert('修改成功');</script>";
-
-	  				}
-
-	  		}
-
-		}
-	}
-
-	/**
-	 *  获取刮刮卡礼品列表
-	 */
-	public function  getCardList(){
-
-		$_ENV['smarty']->setDirTemplates('gift');
-
-		$_ENV['smarty']->assign('name',111);
-
-		$_ENV['smarty']->display('getCardList');
-
-	}
-	/**
-	 *  获取大转盘礼品列表
-	 */
-	public function  getBigWheelList(){
+        $giftSetting->initialize('gift_type = 2');
 
 
-		$giftSetting = new giftSettingModel(1);
+        $_ENV['smarty']->assign('giftSetting', $giftSetting->vars);
 
-		 $giftSetting->initialize('gift_type = 1');
+        $_ENV['smarty']->setDirTemplates('gift');
+
+        $_ENV['smarty']->assign('name', 111);
+
+        $_ENV['smarty']->display('getCardList');
+    }
+
+    /**
+     *  获取大转盘礼品列表
+     */
+    public function getBigWheelList() {
 
 
-		 $_ENV['smarty']->assign('giftSetting',$giftSetting->vars);
+        $giftSetting = new giftSettingModel(1);
+
+        $giftSetting->initialize('gift_type = 1');
 
 
-		$_ENV['smarty']->setDirTemplates('gift');
+        $_ENV['smarty']->assign('giftSetting', $giftSetting->vars);
 
-		$_ENV['smarty']->assign('name',1234);
 
-		$_ENV['smarty']->display('getBigWheelList');
+        $_ENV['smarty']->setDirTemplates('gift');
 
-	}
+        $_ENV['smarty']->assign('name', 1234);
 
-	/**
-	 *获取一二三等奖的概率
-	*/
+        $_ENV['smarty']->display('getBigWheelList');
+    }
 
-	public function  getProbabilityInfo(){
+    /**
+     * 获取一二三等奖的概率
+     */
+    public function getProbabilityInfo() {
 
-		$_ENV['smarty']->setDirTemplates('gift');
+        $_ENV['smarty']->setDirTemplates('gift');
 
-		$_ENV['smarty']->assign('name',1234);
+        $_ENV['smarty']->assign('name', 1234);
 
-		$_ENV['smarty']->display('getBigWheelList');
-
-	}
-	
+        $_ENV['smarty']->display('getBigWheelList');
+    }
 
 }
-
 
 ?>

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-02 15:57:41
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-03 10:17:12
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Public/result.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1497640824533bc2f54519b6-17596877%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1640609337533cc4a893b190-33364376%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '952915606f56d4dbc023104d50c4942d574269ab' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Public/result.tpl',
-      1 => 1396423539,
+      1 => 1396433975,
     ),
   ),
-  'nocache_hash' => '1497640824533bc2f54519b6-17596877',
+  'nocache_hash' => '1640609337533cc4a893b190-33364376',
   'function' => 
   array (
   ),
@@ -32,9 +32,16 @@ $_smarty_tpl->decodeProperties(array (
 
             </div>
             <div class="modal-footer">
+
+                <?php if ($_smarty_tpl->getVariable('type')->value==2){?>
+
+                    <button type="button" id="reloadPage"  onclick='location.reload();' class="btn btn-default" data-dismiss="modal">关闭</button>
+                <?php }else{ ?>
+                    
+                    <button type="button" onclick='location.reload();' class="btn btn-default" data-dismiss="modal">关闭</button>
+
+                <?php }?>
                 
-                
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-04 17:06:18
+         compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Game/guaguaka.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:40503500533e760acddc61-84811843%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'b90488ff0e6caccff2154783e0a12473122c4f12' => 
+    array (
+      0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Game/guaguaka.tpl',
+      1 => 1396602253,
+    ),
+  ),
+  'nocache_hash' => '40503500533e760acddc61-84811843',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,8 +28,10 @@
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css"> 
-         <script src="{$WebSiteUrlPublic}/company/script/giftAward.js"></script>
-        <script type="text/javascript" src="{$WebSiteUrlPublic}/company/ggk/wScratchPad.js"></script>  
+         <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/company/script/giftAward.js"></script>
+        <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/company/ggk/wScratchPad.js"></script>  
     </head>
     <body id='bobyGame'>
 
@@ -31,13 +51,16 @@
 
 
         </style>
-        <input type="hidden" value="{$websiteurl}" id="apiRoute" >
-        <input type="hidden" value="{$open_id}" id="open_id" >
+        <input type="hidden" value="<?php echo $_smarty_tpl->getVariable('websiteurl')->value;?>
+" id="apiRoute" >
+        <input type="hidden" value="<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+" id="open_id" >
         <div id="wScratchPad3" class="wScratchPad3"></div>
         
         <script type="text/javascript">
             
-             var webUrl = '{$websiteUrl}';
+             var webUrl = '<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
+';
              
              
             
@@ -47,7 +70,8 @@
             win = win * 0.9;
             var lotteryRank = "";
             var alertFlag = true;
-            var giftId ={$ScratchCardResults.gift_id};
+            var giftId =<?php echo $_smarty_tpl->getVariable('ScratchCardResults')->value['gift_id'];?>
+;
             var requestUrl = $("#apiRoute").val() + "/?g=company&a=game&v=guaguakaGetLottery";
             switch (giftId) {
                 case "11":
@@ -79,7 +103,8 @@
           
 //刮刮卡
 
-            var WebSiteUrlPublic = '{$WebSiteUrlPublic}';
+            var WebSiteUrlPublic = '<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+';
             $(function() {
                 $("#wScratchPad3").wScratchPad({
                     width: 786,

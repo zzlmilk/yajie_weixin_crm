@@ -23,7 +23,7 @@
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
         <title>幸运大转盘抽奖</title>
-         <script src="{$WebSiteUrlPublic}/company/script/giftAward.js"></script>
+        <script src="{$WebSiteUrlPublic}/company/script/giftAward.js"></script>
         <link href="{$WebSiteUrlPublic}/company/bigWheelFiles/activity-style.css" rel="stylesheet" type="text/css">
 
         <script type="text/javascript">
@@ -98,11 +98,12 @@
                         setTimeout(function() {
                             if (prize != null) {
                                 $.ajax({
-                                    url: webUrl + "?g=company&a=game&v=getBigWheelAward",
+                                    url: webUrl + "?g=company&a=game&v=getGameAward",
                                     type: "get",
                                     data: {
                                         gift_id: prize,
                                         open_id: $('#open_id').val(),
+                                        gift_type:1,
                                     },
                                     success: function(res) {
 
@@ -113,21 +114,7 @@
                                     },
                                 })
 
-                            } else {
- 
-                                $.ajax({
-                                    url: webUrl + "?g=company&a=game&v=getBigWheelText",
-                                    type: "get",
-                                    data: {
-                                       
-                                    },
-                                    success: function(res) {
-                                        $('#bobyGame').append(res);
-                                        $('#myModal').modal('show');
-
-                                    },
-                                })
-                            }
+                            } 
                         }, 200)
                     }
                 }

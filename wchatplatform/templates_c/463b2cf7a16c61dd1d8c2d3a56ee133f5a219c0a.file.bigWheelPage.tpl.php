@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-02 15:57:33
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-02 18:11:10
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Game/bigWheelPage.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:540447814533bc2ed6ed218-70595281%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:394115202533be23ef3fc35-59437135%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '463b2cf7a16c61dd1d8c2d3a56ee133f5a219c0a' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Game/bigWheelPage.tpl',
-      1 => 1396425447,
+      1 => 1396433177,
     ),
   ),
-  'nocache_hash' => '540447814533bc2ed6ed218-70595281',
+  'nocache_hash' => '394115202533be23ef3fc35-59437135',
   'function' => 
   array (
   ),
@@ -41,7 +41,7 @@ $_smarty_tpl->decodeProperties(array (
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
         <title>幸运大转盘抽奖</title>
-         <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+        <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
 /company/script/giftAward.js"></script>
         <link href="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
 /company/bigWheelFiles/activity-style.css" rel="stylesheet" type="text/css">
@@ -122,11 +122,12 @@ $_smarty_tpl->decodeProperties(array (
                         setTimeout(function() {
                             if (prize != null) {
                                 $.ajax({
-                                    url: webUrl + "?g=company&a=game&v=getBigWheelAward",
+                                    url: webUrl + "?g=company&a=game&v=getGameAward",
                                     type: "get",
                                     data: {
                                         gift_id: prize,
                                         open_id: $('#open_id').val(),
+                                        gift_type:1,
                                     },
                                     success: function(res) {
 
@@ -137,21 +138,7 @@ $_smarty_tpl->decodeProperties(array (
                                     },
                                 })
 
-                            } else {
- 
-                                $.ajax({
-                                    url: webUrl + "?g=company&a=game&v=getBigWheelText",
-                                    type: "get",
-                                    data: {
-                                       
-                                    },
-                                    success: function(res) {
-                                        $('#bobyGame').append(res);
-                                        $('#myModal').modal('show');
-
-                                    },
-                                })
-                            }
+                            } 
                         }, 200)
                     }
                 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [02-Apr-2014 12:12:42 Asia/Shanghai] PHP Warning:  Missing argument 1 for GiftSettingModel::cipher_probability(), called in /web/www/yajie_weixin_crm/weixin_api/Controllers/Gift/GiftController.class.php on line 15 and defined in /web/www/yajie_weixin_crm/weixin_api/Model/GiftSettingModel.class.php on line 30
 [02-Apr-2014 12:12:42 Asia/Shanghai] PHP Stack trace:
 [02-Apr-2014 12:12:42 Asia/Shanghai] PHP   1. {main}() /web/www/yajie_weixin_crm/weixin_api/index.php:0
@@ -383,3 +384,33 @@ Stack trace:
 [02-Apr-2014 16:24:53 Asia/Shanghai] PHP   3. website->initializationTest() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:40
 [02-Apr-2014 16:24:53 Asia/Shanghai] PHP   4. call_user_func(array (0 => class AreaController {  }, 1 => 'get_area')) /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
 [02-Apr-2014 16:24:53 Asia/Shanghai] PHP   5. AreaController->get_area() /web/www/yajie_weixin_crm/weixin_api/Config/bootstrap/bootstrap.php:73
+=======
+[01-Apr-2014 01:56:32 UTC] PHP Fatal error:  Uncaught exception 'MysqlException' with message 'Access denied for user ''@'localhost' (using password: NO)' in C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\DB\1DB.class.php:64
+Stack trace:
+#0 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\DB\1DB.class.php(89): DB_Mysql->connect()
+#1 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\DB\2DB_con.php(213): DB_Mysql->prepare('SELECT * FROM w...')
+#2 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\DB\4Basic.super.php(41): Query->selectQuery()
+#3 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\DB\4Basic.super.php(55): Basic->getVar()
+#4 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Model\MerchandiseModel.class.php(19): Basic->initialize()
+#5 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Controllers\Order\OrderController.class.php(299): MerchandiseModel->getMerchandise()
+#6 [internal function]: OrderController->get_merchandise()
+#7 C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\bootstrap\bootstrap.php(73): call_user_func(Arr in C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\DB\1DB.class.php on line 64
+[01-Apr-2014 02:14:44 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, class 'CodeController' does not have a method 'get_user_code' in C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\bootstrap\bootstrap.php on line 73
+[01-Apr-2014 02:14:44 UTC] PHP Stack trace:
+[01-Apr-2014 02:14:44 UTC] PHP   1. {main}() C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\index.php:0
+[01-Apr-2014 02:14:44 UTC] PHP   2. website->run() C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\index.php:9
+[01-Apr-2014 02:14:44 UTC] PHP   3. website->initializationTest() C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\bootstrap\bootstrap.php:40
+[01-Apr-2014 02:14:44 UTC] PHP   4. call_user_func() C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\bootstrap\bootstrap.php:73
+[01-Apr-2014 02:16:14 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, class 'CodeController' does not have a method 'get_user_code' in C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\bootstrap\bootstrap.php on line 73
+[01-Apr-2014 02:16:14 UTC] PHP Stack trace:
+[01-Apr-2014 02:16:14 UTC] PHP   1. {main}() C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\index.php:0
+[01-Apr-2014 02:16:14 UTC] PHP   2. website->run() C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\index.php:9
+[01-Apr-2014 02:16:14 UTC] PHP   3. website->initializationTest() C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\bootstrap\bootstrap.php:40
+[01-Apr-2014 02:16:14 UTC] PHP   4. call_user_func() C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\bootstrap\bootstrap.php:73
+[02-Apr-2014 03:45:32 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, class 'GiftController' does not have a method 'get_probability_card' in C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\bootstrap\bootstrap.php on line 73
+[02-Apr-2014 03:45:32 UTC] PHP Stack trace:
+[02-Apr-2014 03:45:32 UTC] PHP   1. {main}() C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\index.php:0
+[02-Apr-2014 03:45:32 UTC] PHP   2. website->run() C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\index.php:9
+[02-Apr-2014 03:45:32 UTC] PHP   3. website->initializationTest() C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\bootstrap\bootstrap.php:40
+[02-Apr-2014 03:45:32 UTC] PHP   4. call_user_func() C:\Apache24\htdocs\yajie_weixin_crm\weixin_api\Config\bootstrap\bootstrap.php:73
+>>>>>>> 57e5a6eda3f5b6764218f35a05c41d7426c47113

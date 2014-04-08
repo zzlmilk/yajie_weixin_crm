@@ -344,6 +344,9 @@ class UserController extends BaseController {
      * 用户签到
      */
     public function userlogin() {
+
+
+        $this->display();
         
     }
 

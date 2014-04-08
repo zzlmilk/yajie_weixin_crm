@@ -13,8 +13,8 @@
             </div>
             <div class="modal-footer">
                 
-                <button type="button" class="btn btn-primary" onclick='sendGiftAward("{$open_id}","{$gift_id}")'>领取</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" onclick='sendGiftAward("{$open_id}","{$gift_id}","{$type}")'>领取</button>
+                <button type="button" onclick='location.reload();'  class="btn btn-default" data-dismiss="modal" >关闭</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

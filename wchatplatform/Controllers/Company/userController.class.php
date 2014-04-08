@@ -308,7 +308,7 @@ class UserController extends BaseController {
      */
     public function userCenter() {
         $userApi = new userApi();
-        
+
 
         $userInfo = $userApi->getUserInfo($this->userOpenId, 'company');
 
@@ -357,6 +357,7 @@ class UserController extends BaseController {
 
     //兑换物品
     public function changeGoods() {
+
 
 //$this->userOpenId = $_REQUEST['open_id'];
         if (isset($_GET['goodsId'])) {
@@ -511,6 +512,13 @@ class UserController extends BaseController {
         $userRegistrationA = transferData(APIURL . "/registration/user_registeration", "post", $postDate);
 
         $userRegistration_info = json_decode($userRegistrationA, true);
+
+        if(!empty($userRegistration_info['error'])){
+
+            echo $userRegistration_info['error']['status_info'];
+
+            die;
+        }
 
         $this->registration();
     }
