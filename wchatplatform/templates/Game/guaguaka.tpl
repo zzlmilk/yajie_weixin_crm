@@ -122,7 +122,7 @@ $(".modal-body").html(message);}
                                     data: {
                                         gift_id: giftId,
                                         open_id: $('#open_id').val(),
-                                        gift_type:2,
+                                        gift_type:2
                                        
                                     },
                                     success: function(res) {
@@ -132,7 +132,7 @@ $(".modal-body").html(message);}
                                         $('#myModal').modal();
 
 
-                                    },
+                                    }
                                 })
                                 this.clear();
                             }
