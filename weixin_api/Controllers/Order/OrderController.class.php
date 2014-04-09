@@ -82,9 +82,9 @@ class OrderController implements Order {
 
                                 $orderInfo['order'] = $orderModel->updateOrder($_REQUEST, $userInfo);
 
-                                $array['res'] = 1;
+                                $orderInfo['res'] = 1;
 
-                                AssemblyJson($array);
+                                AssemblyJson($orderInfo);
                             } else {
 
                                 echoErrorCode(30005);

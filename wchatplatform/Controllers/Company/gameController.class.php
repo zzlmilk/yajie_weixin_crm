@@ -347,6 +347,14 @@ class gameController extends BaseController {
 
                 die;
             }
+        }  else{
+                $this->assign('title', '提示');
+                $this->assign('name', '用户未注册 或  礼品不存在');
+
+                $this->display('result');
+
+                die;
+
         }
     }
 

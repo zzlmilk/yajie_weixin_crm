@@ -14,7 +14,7 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';         
         }
 
         $this->assign('open_id', $this->userOpenId);
