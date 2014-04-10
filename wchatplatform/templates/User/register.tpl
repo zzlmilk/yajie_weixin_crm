@@ -99,7 +99,7 @@ document.write("</select> 日 ")
                     </div>
                 </div>
 
-
+                <input type='hidden' name='redirect_url' id='redirect_url' value='{$redirect_url}'>
 
                 <input type="hidden" name="open_id" value="{$open_id}" />
 

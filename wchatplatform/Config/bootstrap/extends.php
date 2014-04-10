@@ -335,11 +335,13 @@ function M() {
  * @param array $vars 调用参数 数组 
  * @return mixed
  */
-function R($url, $vars = array()) {
+function R($url, $sorce,$vars = array()) {
     $info = pathinfo($url);
+    
+   
     $action = $info['basename'];
     $module = $info['dirname'];
-    $class = A($module);
+    $class = A($module,$sorce);
     if ($class) {
         return call_user_func_array(array(&$class, $action), $vars);
     } else {
@@ -354,13 +356,13 @@ function R($url, $vars = array()) {
  * @param type $file
  * @return class
  */
-function A($module, $ext = '.class.php', $file = 'Controllers') {
+function A($module,$sorce, $ext = '.class.php', $file = 'Controller') {
     $class_strut = explode('/', $module);
     $class = str_replace(array('.', '#'), array('/', '.'), $module);
     $class = substr_replace($class, '', 0, strlen($class_strut[0]) + 1);
-    $baseUrl = ROOT_DIR . '/module/' . $class_strut[0] . '/controllers/';
+    $baseUrl = ROOT_DIR .  'Controllers/'.ucfirst($sorce).'/';
     $classfile = $baseUrl . $class . $file . $ext;
-   
+
     if (file_exists($classfile)) {
        
         require_once $classfile;

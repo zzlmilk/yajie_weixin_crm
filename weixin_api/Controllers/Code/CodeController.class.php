@@ -53,6 +53,46 @@ class CodeController implements Code {
         }
     }
 
+    public function get_code_info(){
+        
+       if(!empty($_REQUEST['source']) && !empty($_REQUEST['code_id'])){
+            
+        
+             $code = new PromoCodeRecordModel();
+             
+             $record = $code->getCodeInfo($_REQUEST['code_id']);
+             
+             AssemblyJson($record);
+            
+        } else{
+            
+            echoErrorCode(105);
+        }
+    }
+
+
+    public function give_code(){
+
+
+         if(!empty($_REQUEST['source']) && !empty($_REQUEST['code_id']) && !empty($_REQUEST['open_id']) && !empty($_REQUEST['give_open_id'])){
+            
+        
+             $code = new PromoCodeRecordModel();
+             
+             $code->giveCode($_REQUEST['code_id'],$_REQUEST['open_id'],$_REQUEST['give_open_id']);
+
+             $array['res'] = 1;
+             
+             AssemblyJson($array);
+            
+        } else{
+            
+            echoErrorCode(105);
+        }
+
+    }
+
+
 }
 
 ?>

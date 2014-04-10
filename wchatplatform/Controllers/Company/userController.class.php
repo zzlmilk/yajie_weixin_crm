@@ -14,7 +14,7 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            // $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
         }
 
         $this->assign('open_id', $this->userOpenId);
@@ -31,11 +31,23 @@ class UserController extends BaseController {
 
         $array = json_decode($result, true);
 
-        $this->assign('open_id', $array['openid']);
+        if (!empty($array['openid'])) {
+
+            $this->assign('open_id', $array['openid']);
+        }
+
+
 
         if (!empty($_REQUEST['action'])) {
 
             $function = $_REQUEST['action'];
+
+            if (!empty($array['openid'])) {
+
+                $this->userOpenId = $array['openid'];
+            }
+
+
 
             $this->display_page = $function;
 
@@ -251,15 +263,37 @@ class UserController extends BaseController {
         $this->display();
     }
 
-    public function register() {
 
-        $this->display();
+    /**
+     * 当使用R函数的时候  open_id 为 注册时候的 id  url 为返回地址
+     */
+
+    public function register($open_id = '',$url ='') {
+
+        
+
+        if(!empty($open_id) && !empty($url)){
+
+             $this->assign('open_id',$open_id);
+
+            $this->assign('redirect_url',$url);
+
+            $this->setDir('User');
+            
+           
+        }
+
+         $this->display('register');
+       
     }
 
     /**
      * 提交注册
      */
     public function submitRegister() {
+
+
+
         if (!empty($_REQUEST['open_id'])) {
             if (!empty($_REQUEST['phoneNumber'])) {
                 if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $_REQUEST['phoneNumber'])) {
@@ -270,15 +304,34 @@ class UserController extends BaseController {
                         $data['user_name'] = $_REQUEST['userName'];
                         $data['sex'] = $_REQUEST['gender'];
                         $data['user_phone'] = $_REQUEST['phoneNumber'];
-                        $data['birthday'] = strtotime($_POST['year'] . $_POST['month'] . $_POST['date']);
+
+
+                        $data['birthday'] = strtotime($_REQUEST['year'] . '-' . $_REQUEST['month'] . '-' . $_REQUEST['date']);
                         $resultRenameJson = transferData(APIURL . '/user/able_user/', 'post', $data);
                         $resultRenameArray = json_decode($resultRenameJson, true);
+
+
+
+
                         if ($resultRenameArray['success'] == 1) {
+
+
                             $resultRegisterJson = transferData(APIURL . '/user/add', 'post', $data);
                             $resultRegisterArray = json_decode($resultRegisterJson, true);
+
+
                             if ($resultRegisterArray['user']['user_id'] > 0) {
-                                echo '用户注册成功！';
-                                die;
+
+                                if (!empty($_REQUEST['redirect_url'])) {
+
+                                    $redirect_url = urldecode($_REQUEST['redirect_url']);
+
+                                    $this->jsJump($redirect_url);
+                                } else {
+
+                                    echo '用户注册成功！';
+                                    die;
+                                }
                             }
                         } else {
                             echo '用户已经注册!';
@@ -584,7 +637,7 @@ class UserController extends BaseController {
         $postDate["source"] = "company";
         //$postDate['open_id'] = $this->userOpenId;
         $postDate['open_id'] = 'oIUY-t96AyFM-GSrrrtGGb5mtS6o';
-        $groupBy=  isset($_GET["groupBy"])?$_GET["groupBy"]:"";
+        $groupBy = isset($_GET["groupBy"]) ? $_GET["groupBy"] : "";
         $userCode = transferData(APIURL . "/code/get_user_code", "post", $postDate);
         $userCode = json_decode($userCode, true);
         if (isset($userCode["error"])) {
@@ -633,6 +686,8 @@ class UserController extends BaseController {
         $this->assign("groupBy", $groupBy);
         $this->display("promoMessage");
     }
+
+    
 
 }
 

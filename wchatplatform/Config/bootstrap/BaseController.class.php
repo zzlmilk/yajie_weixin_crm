@@ -2,11 +2,11 @@
 
 class BaseController {
 
-    private $smarty;
+    public $smarty;
     public $display_page;
     public $dir_name;
-    private $smarty_dir;
-    protected $tVar;
+    public $smarty_dir;
+    public $tVar;
 
     private function initView() {
 
@@ -82,7 +82,7 @@ class BaseController {
         $this->smarty->display($displayPage . '.tpl');
     }
 
-    protected function assign($name, $value = '') {
+    public function assign($name, $value = '') {
 
         if (is_array($name)) {
 
@@ -98,6 +98,26 @@ class BaseController {
         if (!empty($errorArray['error']) && is_array($errorArray['error'])) {
             
         }
+    }
+
+
+     public function jsJump($url) {
+       
+            exit('<script>window.location.href="' . $url . '";</script>');
+    }
+
+
+    public function displayMessage($msg,$url =''){
+
+        $this->setDir('public');
+
+        $this->assign('url',$url);
+
+        $this->assign('msg',$msg);
+
+        $this->display('message');
+
+        die;
     }
 
 }

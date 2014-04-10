@@ -50,8 +50,8 @@ class gameController extends BaseController {
         $scratchCard = new scratchCard();
         $ScratchCardResults = $scratchCard->getScratchCardResults("company");
 
-      
-        
+
+
         $this->assign("websiteurl", WebSiteUrl);
         $this->assign("ScratchCardResults", $ScratchCardResults);
         $this->display();
@@ -347,14 +347,13 @@ class gameController extends BaseController {
 
                 die;
             }
-        }  else{
-                $this->assign('title', '提示');
-                $this->assign('name', '用户未注册 或  礼品不存在');
+        } else {
+            $this->assign('title', '提示');
+            $this->assign('name', '用户未注册 或  礼品不存在');
 
-                $this->display('result');
+            $this->display('result');
 
-                die;
-
+            die;
         }
     }
 
