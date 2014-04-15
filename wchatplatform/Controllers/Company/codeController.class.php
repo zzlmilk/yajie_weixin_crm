@@ -176,13 +176,11 @@ class codeController extends BaseController {
         }
     }
 
-    ublic
-
-    function promoMessage() {
+    public function promoMessage() {
         $nowTime = time();
         $postDate["source"] = "company";
-        //$postDate['open_id'] = $this->userOpenId;
-        $postDate['open_id'] = 'oIUY-t96AyFM-GSrrrtGGb5mtS6o';
+        $postDate['open_id'] = $this->userOpenId;
+        
         $groupBy = isset($_GET["groupBy"]) ? $_GET["groupBy"] : "";
         $userCode = transferData(APIURL . "/code/get_user_code", "post", $postDate);
         $userCode = json_decode($userCode, true);
