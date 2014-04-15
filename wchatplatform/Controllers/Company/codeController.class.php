@@ -11,11 +11,12 @@ class codeController extends BaseController {
         if (!empty($_REQUEST['open_id'])) {
 
             $this->userOpenId = $_REQUEST['open_id'];
+
+
+            $this->assign('open_id', $this->userOpenId);
         } else {
             //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
         }
-
-        $this->assign('open_id', $this->userOpenId);
     }
 
     /**
@@ -42,6 +43,7 @@ class codeController extends BaseController {
 
             if (!empty($array['openid'])) {
 
+
                 $this->userOpenId = $array['openid'];
             }
 
@@ -53,55 +55,26 @@ class codeController extends BaseController {
         }
     }
 
-    /**
-     *  获取用户 优惠券列表
-     */
-    
-  public function giveCode() {
-
-      if($_REQUEST['action'] == 'detail'){
-
-        $this->giveCodeDetail();
-
-      } else{
-
-         $user = new userApi();
-
-        $codeInfo = $user->getUserCode($this->userOpenId, 'company');
-
-        $this->assign('codeInfo', $codeInfo);
-
-        $this->assign('url', urlencode($url));
-
-        $this->display('user_give_code');
-
-      }
-
-       
-    }
+    public function authUrl($giveUrl) {
 
 
-    public function authUrl($giveUrl){
 
 
-            
-
-            $urlEncodeGiveUrl = urlencode($giveUrl);
+        $urlEncodeGiveUrl = urlencode($giveUrl);
 
 
-           // $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&response_type=code&scope=snsapi_base&state=123#wechat_redirect&redirect_uri=' . $urlEncodeGiveUrl;
+        // $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&response_type=code&scope=snsapi_base&state=123#wechat_redirect&redirect_uri=' . $urlEncodeGiveUrl;
 
 
-            $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri='.$urlEncodeGiveUrl.'&response_type=code&scope=snsapi_base&state=123#wechat_redirect';
+        $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1273344d7b97cd07&redirect_uri=' . $urlEncodeGiveUrl . '&response_type=code&scope=snsapi_base&state=123#wechat_redirect';
 
 
-            return $url;
+        return $url;
     }
 
     /**
      * 生成 用户 授权页面
      */
-
     public function giveCodeAuth() {
 
 
@@ -113,7 +86,6 @@ class codeController extends BaseController {
             $url = $this->authUrl($giveUrl);
 
             $this->jsJump($url);
-
         }
     }
 
@@ -122,21 +94,37 @@ class codeController extends BaseController {
      */
     public function giveCodeDetail() {
 
-        if (!empty($_REQUEST['code_id']) && !empty($_REQUEST['open_id'])) {
+        $user = new userApi();
 
+        $userInfo = $user->getUserInfo($this->userOpenId, 'company');
 
-            $code = new codeApi();
+        $var = 'source=company&action=/code/giveCode&give_open_id=' . $_REQUEST['give_open_id'] . '&open_id=' . $this->userOpenId;
 
-            $codeInfo = $code->getcodeInfo($_REQUEST['code_id'], 'company');
+        $error = new errorApi();
 
-            $this->assign('give_open_id', $_REQUEST['open_id']);
-
-            $this->assign('codeInfo', $codeInfo);
-
-            $this->display('user_code_detail');
-        }
+        $error->JudgeError($userInfo, $var, 'company', $this->userOpenId);
+        
+        $this->getCode($this->userOpenId, $_REQUEST['give_open_id']);
     }
 
+    public function getCode($give_open_id, $open_id) {
+
+        $codeApi = new codeApi();
+
+        $result = $codeApi->getUserReceviceCode('company', 2, $give_open_id);
+
+        $codeInfo = $codeApi->getcodeInfo($result['promo_code_id'], 'company');
+
+        $this->assign('give_open_id', $give_open_id);
+
+        $this->assign('open_id', $open_id);
+
+        $this->assign('codeInfo', $codeInfo);
+        
+        $this->setDir('Code');
+
+        $this->display('user_code_detail');
+    }
 
     /**
      *  赠送  优惠券 后台逻辑
@@ -146,8 +134,10 @@ class codeController extends BaseController {
      *  give_open_id         赠送的open_id
      *  code_id              优惠券id
      */
-
     public function giveResult() {
+
+
+
 
         if ($this->userOpenId == $_REQUEST['give_open_id']) {
 
@@ -160,34 +150,69 @@ class codeController extends BaseController {
 
             $user = new userApi();
 
-            $userInfo = $user->getUserInfo($this->userOpenId, 'company');
-
-            //$url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING'];
-                
-           
-            $giveUrl = WebSiteUrl . '?g=company&a=code&v=index&action=giveResult&give_open_id=' . $_REQUEST['give_open_id'] . '&code_id=' . $_REQUEST['code_id'];
-
-           
-            $url = $this->authUrl($giveUrl);
-            
-            $error = new errorApi();
-
-            $error->JudgeError($userInfo,$url,'company',$this->userOpenId);
-
+            $userInfo = $user->getUserInfo($this->userOpenId, 'company1');
             $code = new codeApi();
-            
-            $codeResult =  $code->giveCode($_REQUEST['code_id'], $this->userOpenId,$_REQUEST['give_open_id'],'company');
+
+            $codeResult = $code->giveCode($_REQUEST['code_id'], $this->userOpenId, $_REQUEST['give_open_id'], 'company');
+
+            $error = new errorApi();
 
             $error->JudgeError($codeResult);
 
-            if(!empty($codeResult) && $codeResult['res'] == 1){
+            if (!empty($codeResult) && $codeResult['res'] == 1) {
 
-                $this->displayMessage('领取成功');
+
+                if ($userInfo['weixin_user']['subscribe'] == 0) {
+
+                    
+                    $msg = '领取成功,请关注脊安堂 服务号 ';
+
+                    $this->displayMessage($msg);
+                } else {
+
+                    U('company/user/userCenter', array('open_id' => $this->userOpenId));
+                }
             }
-
         }
     }
 
+    public function promoMessage() {
+
+        $postDate["source"] = "company";
+        $postDate['open_id'] = $this->userOpenId;
+     
+        $userCode = transferData(APIURL . "/code/get_user_code", "post", $postDate);
+        $userCode = json_decode($userCode, true);
+            
+        $error = new errorApi();
+
+        $error->JudgeError($userCode);
+      
+        $codeInfo = array();
+        foreach ($userCode as $key => $value) {
+            
+            $value['code_info']["createTime"] = $codeCreateTime;
+            array_push($codeInfo, $value['code_info']);
+        }
+        $nowTime = time();
+        $this->assign("codeInfo", $codeInfo);
+        $this->assign("nowTime", $nowTime);
+        $this->display("promoMessage");
+    }
+
+    public function getReceviceCode() {
+
+
+        $giveUrl = WebSiteUrl . '?g=company&a=code&v=index&action=giveCodeDetail&give_open_id=' . $_REQUEST['open_id'];
+
+        $url = $this->authUrl($giveUrl);
+
+        $this->jsJump($url);
+
+
+        //U('company/code/giveCodeDetail',array('code_id'=>$result['promo_code_id'],'open_id'=>$_REQUEST['open_id']));
+        //$url = WebSiteUrl.'?g=company&a=code&v=giveCodeDetail';
+    }
 
 }
 

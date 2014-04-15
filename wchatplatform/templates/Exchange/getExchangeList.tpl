@@ -41,13 +41,13 @@
         <div class="registerWarp">
             {foreach from=$exchangeList item=exchangeItem key=key}
                 <div class="giftListStyle">
-                    <div style="float: left;margin: 10px"> <a href="{$WebSiteUrl}?g=company&a=user&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img width="80" height="80" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
+                    <div style="float: left;margin: 10px"> <a href="{$WebSiteUrl}?g=company&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img width="80" height="80" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
                     <div style="float: left;margin: 10px;width: 58%;">
                         <div style="word-wrap: break-word; word-break: normal;">
                             <p class="summary"> {$exchangeItem.exchange_summary}</p>
                             <p>积分: {$exchangeItem.exchange_integration}p</p>
 
-                            <div style="width: 100%; text-align: right;"><a  href="{$WebSiteUrl}?g=company&a=user&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button type="submit" class="btn btn-primary btn-xs">兑换</button></a></div>
+                            <div style="width: 100%; text-align: right;"><a  href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button type="submit" class="btn btn-primary btn-xs">兑换</button></a></div>
                         </div>
                     </div>
                 </div>

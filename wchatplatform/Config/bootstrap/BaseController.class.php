@@ -120,6 +120,20 @@ class BaseController {
         die;
     }
 
+
+    public function able_register(){
+
+          $url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING'];
+
+              $userApi = new userApi();
+
+                $userInfo = $userApi->getUserInfo($this->userOpenId, 'company');
+
+                $error = new errorApi();
+
+                $error->JudgeError($userInfo,$url,'',$this->userOpenId);
+    }
+
 }
 
 ?>

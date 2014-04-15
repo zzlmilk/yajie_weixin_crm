@@ -10,7 +10,9 @@ class errorApi extends BaseController {
     public function __construct() {
 
         // 载入  错误代码 文件
-        $this->error_list = require_once ROOT_DIR . 'Api/error_list.php';
+        $list = include ROOT_DIR . 'Api/error_list.php';
+
+        $this->error_list = $list;
     }
 
     /**
@@ -18,7 +20,7 @@ class errorApi extends BaseController {
      * @param type $redirect_url  跳转地址 
      * @param type $info    API 调用 返回内容
      */
-    public function JudgeError($info, $redirect_url = '', $source = '',$open_id ='') {
+    public function JudgeError($info, $var = '', $source = '') {
 
         if (!empty($info['error'])) {
 
@@ -29,8 +31,9 @@ class errorApi extends BaseController {
                     /**
                      * 未注册  跳转注册页面
                      */
-                    R('/user/register', $source, array('open_id' => $open_id, 'redirect_url' => urlencode($redirect_url)));
+                    //R('/user/register', $source, array('open_id' => $open_id, 'redirect_url' => urlencode($redirect_url)));
 
+                    U('company/user/register', $var);
                     die;
                     break;
 
@@ -39,6 +42,8 @@ class errorApi extends BaseController {
                     if (!empty($this->error_list[$info['error']['error_status']])) {
 
                         $this->displayMessage($this->error_list[$info['error']['error_status']]);
+
+                        die;
                     }
             }
         }

@@ -1,4 +1,23 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-11 11:47:46
+         compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Code/promoMessage.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:401705298534765e27e1318-01437678%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '385c44921ed2ca740ff2ab8e3cf4b0a2f39b6e24' => 
+    array (
+      0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Code/promoMessage.tpl',
+      1 => 1397112151,
+    ),
+  ),
+  'nocache_hash' => '401705298534765e27e1318-01437678',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
+<?php if (!is_callable('smarty_modifier_date_format')) include '/web/www/yajie_weixin_crm/wchatplatform/Smarty/libs/plugins/modifier.date_format.php';
+?><!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -78,28 +97,35 @@
     <body style='background-color: rgb(243,237,227);'>
         <div class="titleTag">
             <ul >
-                {if $groupBy eq ""}
+                <?php if ($_smarty_tpl->getVariable('groupBy')->value==''){?>
                     <li ><a class="titleTagActive">未使用</a></li>
-                    <li><a href="{$WebSiteUrl}?g=company&a=user&v=promoMessage&groupBy=used">已兑换</a></li>
-                    <li><a href="{$WebSiteUrl}?g=company&a=user&v=promoMessage&groupBy=timeOut">已过期</a></li>
-                {else if $groupBy eq "used"}
-                    <li ><a href="{$WebSiteUrl}?g=company&a=user&v=promoMessage">未使用</a></li>
+                    <li><a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=company&a=code&v=promoMessage&groupBy=used">已兑换</a></li>
+                    <li><a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=company&a=code&v=promoMessage&groupBy=timeOut">已过期</a></li>
+                <?php }elseif($_smarty_tpl->getVariable('groupBy')->value=="used"){?>
+                    <li ><a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=company&a=code&v=promoMessage">未使用</a></li>
                     <li><a class="titleTagActive" >已兑换</a></li>
-                    <li><a href="{$WebSiteUrl}?g=company&a=user&v=promoMessage&groupBy=timeOut">已过期</a></li>
-                {else if $groupBy eq "timeOut"}
-                    <li ><a href="{$WebSiteUrl}?g=company&a=user&v=promoMessage">未使用</a></li>
-                    <li><a href="{$WebSiteUrl}?g=company&a=user&v=promoMessage&groupBy=used">已兑换</a></li>
+                    <li><a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=company&a=code&v=promoMessage&groupBy=timeOut">已过期</a></li>
+                <?php }elseif($_smarty_tpl->getVariable('groupBy')->value=="timeOut"){?>
+                    <li ><a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=company&a=code&v=promoMessage">未使用</a></li>
+                    <li><a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=company&a=code&v=promoMessage&groupBy=used">已兑换</a></li>
                     <li><a class="titleTagActive"  >已过期</a></li>
-                {/if}
+                <?php }?>
             </ul>
         </div>
         <!--有效-->
-        {if  $codeInfo eq ""}
+        <?php if ($_smarty_tpl->getVariable('codeInfo')->value==''){?>
             <div class="cardBackground cardBackgroundColorOverdue"  style='position: relative;'>
                 <div style="position: absolute; right: 15px; top:0;">
 
                 </div>
-                <div class="promoTitle">{$codeInfoItem.code_name}</div>
+                <div class="promoTitle"><?php echo $_smarty_tpl->getVariable('codeInfoItem')->value['code_name'];?>
+</div>
                 <div style="text-align: center;">
                     <div class="serviceNumStyle" style="display: inline-block;font-size: 50px;">暂无</div><div style="display: inline-block;font-size: 20px;"></div>
                 </div>
@@ -121,12 +147,13 @@
                 </div>
                 <div style="height:  5px;"></div>
             </div>
-        {else if $codeInfo eq "error"}
+        <?php }elseif($_smarty_tpl->getVariable('codeInfo')->value=="error"){?>
             <div class="cardBackground cardBackgroundColorOverdue"  style='position: relative;'>
                 <div style="position: absolute; right: 15px; top:0;">
 
                 </div>
-                <div class="promoTitle">{$codeInfoItem.code_name}</div>
+                <div class="promoTitle"><?php echo $_smarty_tpl->getVariable('codeInfoItem')->value['code_name'];?>
+</div>
                 <div style="text-align: center;">
                     <div class="serviceNumStyle" style="display: inline-block;font-size: 50px;">暂无</div><div style="display: inline-block;font-size: 20px;"></div>
                 </div>
@@ -148,15 +175,22 @@
                 </div>
                 <div style="height:  5px;"></div>
             </div>
-        {else}
-            {foreach from=$codeInfo item=codeInfoItem key=key}
-                {if $codeInfoItem.code_end_time lt $nowTime}
+        <?php }else{ ?>
+            <?php  $_smarty_tpl->tpl_vars['codeInfoItem'] = new Smarty_Variable;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('codeInfo')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if (count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['codeInfoItem']->key => $_smarty_tpl->tpl_vars['codeInfoItem']->value){
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['codeInfoItem']->key;
+?>
+                <?php if ($_smarty_tpl->tpl_vars['codeInfoItem']->value['code_end_time']<$_smarty_tpl->getVariable('nowTime')->value){?>
                     <!--失效界面-->
                     <div class="cardBackground cardBackgroundColorOverdue"  style='position: relative;'>
                         <div style="position: absolute; right: 15px; top:0;">
                             <p type="button" disabled="" style="opacity: 1;"><h3>过&nbsp;&nbsp;&nbsp;期</h3></p>
                         </div>
-                        <div class="promoTitle">{$codeInfoItem.code_name}</div>
+                        <div class="promoTitle"><?php echo $_smarty_tpl->tpl_vars['codeInfoItem']->value['code_name'];?>
+</div>
                         <div style="text-align: center;">
                             <div class="serviceNumStyle" style="display: inline-block">9</div><div style="display: inline-block;font-size: 20px;">折</div>
                         </div>
@@ -169,22 +203,26 @@
                         <div class="form-group" style="">
                             <label class="col-sm-2 control-label messageTitle" style="float: left; ">有效期：</label>
                             <div class="col-sm-10" style="text-align: left; ">
-                                <p class="form-control-static">{$codeInfoItem.code_begin_time|date_format:"%Y-%m-%d"} 至 {$codeInfoItem.code_end_time|date_format:"%Y-%m-%d"}</p>
+                                <p class="form-control-static"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['codeInfoItem']->value['code_begin_time'],"%Y-%m-%d");?>
+ 至 <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['codeInfoItem']->value['code_end_time'],"%Y-%m-%d");?>
+</p>
                             </div>
                             <div style="clear: both;"></div>
                         </div>
                         <div class="form-group" style=" ">
                             <label class="col-sm-2 control-label messageTitle"style="float: left;">领取日：</label>
                             <div class="col-sm-10">
-                                <p class="form-control-static">{$codeInfoItem.createTime|date_format:"%Y-%m-%d"}</p>
+                                <p class="form-control-static"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['codeInfoItem']->value['createTime'],"%Y-%m-%d");?>
+</p>
                             </div>
                             <div style="clear: both;"></div>
                         </div>
                         <div style="height:  5px;"></div>
                     </div>
-                {else}
+                <?php }else{ ?>
                     <div class="cardBackground cardBackgroundColorEffective"  style='position: relative;'>
-                        <div class="promoTitle">{$codeInfoItem.code_name}</div>
+                        <div class="promoTitle"><?php echo $_smarty_tpl->tpl_vars['codeInfoItem']->value['code_name'];?>
+</div>
                         <div style="text-align: center;">
                             <div class="serviceNumStyle" style="display: inline-block">7</div><div style="display: inline-block;font-size: 20px;">折</div>
                         </div>
@@ -197,22 +235,25 @@
                         <div class="form-group" style="">
                             <label class="col-sm-2 control-label messageTitle" style="float: left; ">有效期：</label>
                             <div class="col-sm-10" style="text-align: left; ">
-                                <p class="form-control-static">{$codeInfoItem.code_begin_time|date_format:"%Y-%m-%d"} 至 {$codeInfoItem.code_end_time|date_format:"%Y-%m-%d"}</p>
+                                <p class="form-control-static"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['codeInfoItem']->value['code_begin_time'],"%Y-%m-%d");?>
+ 至 <?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['codeInfoItem']->value['code_end_time'],"%Y-%m-%d");?>
+</p>
                             </div>
                             <div style="clear: both;"></div>
                         </div>
                         <div class="form-group" style=" ">
                             <label class="col-sm-2 control-label messageTitle"style="float: left;">领取日：</label>
                             <div class="col-sm-10">
-                                <p class="form-control-static">{$codeInfoItem.createTime|date_format:"%Y-%m-%d"}</p>
+                                <p class="form-control-static"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['codeInfoItem']->value['createTime'],"%Y-%m-%d");?>
+</p>
                             </div>
                             <div style="clear: both;"></div>
                         </div>
                         <div style="height:  5px;"></div>
                     </div>
-                {/if}
-            {/foreach}
-        {/if}
+                <?php }?>
+            <?php }} ?>
+        <?php }?>
         <!--有效页面结束-->
 
         <!--失效界面结束-->

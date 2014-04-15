@@ -67,7 +67,7 @@
                 <div style=' width: 66%; overflow: hidden; position: absolute; left: 20%; top: 5%;'>
 
                     <div style='margin-top: 4%;  '>
-                        <span style='font-size:15px; display: inline-block; width: 23%; height: 4%;  '>{$userinfo.weixin_user.nickname}</span>
+                        <span style='font-size:15px; display: inline-block; width: 98%; height: 4%;  '>{$userinfo.weixin_user.nickname}</span>
                     </div>
                     <div class='siteClass' style='font-size:12px;'>Tel:{$userinfo.user.user_phone}</div>
 
@@ -98,7 +98,7 @@
                 <li class="table-view-cell media">
                     <a class="push-right" data-transition="slide-in">
                         <!--   <span class="media-object icon icon-star-filled pull-left"></span> -->
-                        <div class="media-body"  onclick='window.location.href = "{$websiteUrl}?g=company&a=user&v=promoMessage&open_id={$open_id}"'>
+                        <div class="media-body"  onclick='window.location.href = "{$websiteUrl}?g=company&a=code&v=promoMessage&open_id={$open_id}"'>
                             优惠信息
                         </div>
                     </a>
@@ -144,15 +144,6 @@
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
                         <div class="media-body">
                             我的任务
-                        </div>
-                    </a>
-                </li>
-                
-                 <li class="table-view-cell media">
-                    <a class="push-right" href="inbox.html" data-transition="slide-in">
-                        <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-                        <div class="media-body"  onclick='window.location.href = "{$websiteUrl}?g=company&a=code&v=giveCode&open_id={$open_id}"'>
-                            我要赠送
                         </div>
                     </a>
                 </li>

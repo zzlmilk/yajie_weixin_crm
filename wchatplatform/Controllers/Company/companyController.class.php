@@ -87,6 +87,12 @@ class CompanyController extends BaseController {
                             'name'=>urlencode("问卷"),
                             'type'=>'click',
                             'key'=>'wenjuan'
+                        ),
+                      
+                        array(
+                            'name'=>urlencode("赠送"),
+                            'type'=>'click',
+                            'key'=>'zengsong'
                         )
                     )
                 ),
@@ -110,7 +116,7 @@ class CompanyController extends BaseController {
    
 
 
-    $token = '7_Vrr1sIYpQcH1Mp4aDLy0ICzT2cDeo2TQz4eJa3dKdAkv4TEawT8uXk647vDAfzuDXkRlup_tGtA1alfdTjdq8YmYs0smELbzCZe3tHMH5rloCImTOTmc-e3Io0uSQZBekinHftuMy5sGgiVkpZtQ';
+    $token = 'cf8ZCJLkK6Ylqx0YLq5QJa6jrvY4JUF0jqySABGV5pspwJYZrLmQmetyubKUDUcd8PGMSFe_hfFXnA1Y7c14eXhSFzKBOXMSYcbjDVqkMYLnkir6emRGEXvnzIUW9a7adkO8tw0pH3dukbKEv0TxNQ';
 
 
     $url = 'https://api.weixin.qq.com/cgi-bin/menu/create?access_token='.$token;

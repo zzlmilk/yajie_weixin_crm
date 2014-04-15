@@ -48,6 +48,24 @@ class codeApi {
         }
 
     }
+
+
+    public function getUserReceviceCode($source,$code_type = 1,$open_id){
+
+         if (!empty($source) && !empty($open_id)) {
+
+            $data['code_type'] = $code_type;
+
+            $data['open_id'] = $open_id;
+
+            $data['source'] = $source;          
+
+            $codeJson = transferData(APIURL . "/code/getReceiveCode", "post", $data);
+            $codeArray = json_decode($codeJson, true);
+            return $codeArray;
+        }
+
+    }
     
     
 

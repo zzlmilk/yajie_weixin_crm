@@ -1,18 +1,14 @@
 <?php
 
+class giftSettingModel extends Basic {
 
+    public function __construct() {
 
-class giftSettingModel extends Basic{
+        $this->child_name = 'gift_setting';
 
-
-	public function __construct() {
-
-		$this->child_name = 'gift_setting';
-
-		parent::__construct();
-
+        parent::__construct();
     }
-}
 
+}
 
 ?>

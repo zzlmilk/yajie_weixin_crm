@@ -53,7 +53,7 @@
                 {/if}
 
             </div>
-            <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=user&v=order&checkReturn=1&open_id={$open_id}">
+            <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=order&v=order&checkReturn=1&open_id={$open_id}">
                 <div class="form-group" style=" margin-top: 1.5em; margin-bottom: 0px;">
                     <label class="col-sm-2  topTitleTry"style="">交易项目</label>
                     <div class="col-sm-10">

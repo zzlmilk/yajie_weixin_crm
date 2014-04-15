@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-10 16:03:45
+         compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Exchange/changeScuessList.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:123670455453465061ddd129-17418484%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '8fd36f0e32f2da910b2399982cb41dec4ecb0a39' => 
+    array (
+      0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Exchange/changeScuessList.tpl',
+      1 => 1397111866,
+    ),
+  ),
+  'nocache_hash' => '123670455453465061ddd129-17418484',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -39,32 +57,38 @@
             <h3>恭喜你兑换成功</h3>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">消费积分</label>
-                <label for="inputEmail3" class="col-sm-2 control-label">{$changeInfo.exchange_integration}p</label>
+                <label for="inputEmail3" class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('changeInfo')->value['exchange_integration'];?>
+p</label>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">剩余积分</label>
-                <label for="inputEmail3" class="col-sm-2 control-label">{$integration}p</label>
+                <label for="inputEmail3" class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('integration')->value;?>
+p</label>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">物品名称</label>
-                <label for="inputEmail3" class="col-sm-2 control-label">{$changeInfo.exchange_name}</label>
+                <label for="inputEmail3" class="col-sm-2 control-label"><?php echo $_smarty_tpl->getVariable('changeInfo')->value['exchange_name'];?>
+</label>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">物品简介</label>
-                <label for="inputEmail3" class="col-sm-2 control-label messageStyle" >{$changeInfo.exchange_summary}</label>
+                <label for="inputEmail3" class="col-sm-2 control-label messageStyle" ><?php echo $_smarty_tpl->getVariable('changeInfo')->value['exchange_summary'];?>
+</label>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">物品类型</label>
-                {if $changeInfo.exchange_type eq 0}
+                <?php if ($_smarty_tpl->getVariable('changeInfo')->value['exchange_type']==0){?>
                     <label for="inputEmail3" class="col-sm-2 control-label">虚拟</label>
-                {else}
+                <?php }else{ ?>
                     <label for="inputEmail3" class="col-sm-2 control-label">实物</label>
-                {/if}
+                <?php }?>
 
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10" >
-                    <a href="{$WebSiteUrl}?g=company&a=user&v=getExchangeList&open_id={$open_id}"><button id="submitOrder" type="button"  class="btn btn-primary">返&nbsp;&nbsp;&nbsp;回</button></a>
+                    <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=company&a=exchange&v=getExchangeList&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+"><button id="submitOrder" type="button"  class="btn btn-primary">返&nbsp;&nbsp;&nbsp;回</button></a>
                 </div>
             </div>
         </div>

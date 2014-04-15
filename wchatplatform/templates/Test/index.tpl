@@ -22,14 +22,14 @@
 
 	<a href='{$websiteUrl}?g=company&a=user&v=ativating&open_id={$open_id}'>激活</a>
 
-	<a href='{$websiteUrl}?g=company&a=user&v=order&open_id={$open_id}'>订单以及修改订单</a>
+	<a href='{$websiteUrl}?g=company&a=order&v=order&open_id={$open_id}'>订单以及修改订单</a>
 
 
-	<a href='{$websiteUrl}?g=company&a=user&v=orderCheck&open_id={$open_id}'>查看订单</a>
+	<a href='{$websiteUrl}?g=company&a=order&v=orderCheck&open_id={$open_id}'>查看订单</a>
 
 	<a href='{$websiteUrl}?g=company&a=user&v=userCenter&open_id={$open_id}'>个人用户</a>
 
-	<a href='{$websiteUrl}?g=company&a=user&v=getExchangeList&open_id={$open_id}'>兑换</a>
+	<a href='{$websiteUrl}?g=company&a=exchange&v=getExchangeList&open_id={$open_id}'>兑换</a>
 
 	<a href='{$websiteUrl}?g=company&a=game&v=Questionnaire&open_id={$open_id}'>问卷</a>
 

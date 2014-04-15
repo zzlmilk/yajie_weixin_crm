@@ -12,7 +12,7 @@ class gameController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
         }
         $this->assign('open_id', $this->userOpenId);
     }
@@ -42,11 +42,12 @@ class gameController extends BaseController {
 
     public function bigWheelPage() {
 
-
+          $this->able_register();
         $this->display();
     }
 
     public function guaguaka() {
+          $this->able_register();
         $scratchCard = new scratchCard();
         $ScratchCardResults = $scratchCard->getScratchCardResults("company");
 
@@ -58,6 +59,7 @@ class gameController extends BaseController {
     }
 
     public function guaguakaGetLottery() {
+        
         if (isset($_REQUEST['gift_id'])) {
             $scratchCard = new scratchCard();
             $Results = $scratchCard->getScratchCardReceviceAward("company", $this->userOpenId, $_REQUEST['gift_id']);

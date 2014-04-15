@@ -39,6 +39,10 @@ class PromoCodeRecordModel extends basic {
 
                     $code->updateVars();
                 }
+
+                
+
+
             } else {
                 echoErrorCode(60001);
             }
@@ -54,7 +58,7 @@ class PromoCodeRecordModel extends basic {
 
         $code = new PromoCodeRecordModel();
         $code->addOrderBy('ctime DESC');
-        $code->initialize('user_id = ' . $userInfo['user_id'].' and state = 0');
+        $code->initialize('user_id = ' . $userInfo['user_id']);
         $array = array();
         if ($code->vars_number > 0) {
 

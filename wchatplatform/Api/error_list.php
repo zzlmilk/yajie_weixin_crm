@@ -1,6 +1,6 @@
 <?php
 
-$error_list = array(
+$list = array(
    
     '101' => '方法不存在,请检查版本是否正确',
     '102' => '控制器不存在',
@@ -27,5 +27,5 @@ $error_list = array(
 );
 
 
-return $error_list;
+return $list;
 ?>

@@ -325,7 +325,50 @@ function curlGet($url) {
 }
 
 //加载模块
-function M() {
+function U($pathinfo,$var = '',$model = 0 ) {
+
+   $info = pathinfo($pathinfo);
+
+   $action = $info['basename'];
+   $module = $info['dirname'];
+
+   $class_strut = explode('/', $module);
+
+   $jumpUrl = WebSiteUrl.'?g='.$class_strut[0].'&a='.$class_strut[1].'&v='.$action;
+
+
+   if(count($var) > 0 && is_array($var)){
+
+        $array = array();
+
+        foreach($var as $k=>$v){
+            $array[] = $k . '=' .$v;  
+
+       }
+
+       $fields = implode('&',$array);  
+
+       $string.='&'.$fields;
+
+       $jumpUrl.=$string;
+   }
+   
+
+   if(is_string($var)){
+       
+        $jumpUrl.='&'.$var;
+   }
+   if($model == 0){
+
+        echo '<script>window.location.href="'.$jumpUrl.'"</script>';
+
+        die;
+
+
+   } else{
+
+        return $jumpUrl;
+   }
     
 }
 
@@ -343,6 +386,8 @@ function R($url, $sorce,$vars = array()) {
     $module = $info['dirname'];
     $class = A($module,$sorce);
     if ($class) {
+        
+      
         return call_user_func_array(array(&$class, $action), $vars);
     } else {
         return false;

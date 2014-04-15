@@ -32,7 +32,7 @@ class PromoCodeModel extends basic {
     /**
      * 生成优惠吗
      */
-    public function generateCode($number, $count) {
+    public function generateCode($number, $count,$type) {
 
         $characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -50,6 +50,8 @@ class PromoCodeModel extends basic {
 
             $insert['code_merchandise'] = 1;
 
+            $insert['code_type'] = $type;
+
             $this->insert($insert);
         }
     }
@@ -57,11 +59,11 @@ class PromoCodeModel extends basic {
     /**
      * 
      */
-    public function getCode() {
+    public function getCode($type = 1) {
 
         $this->clearUp();
 
-        $this->initialize('code_merchandise = 1 and code_state = 0');
+        $this->initialize('code_merchandise = 1 and code_state = 0  and code_type = '.$type);
 
 
         if ($this->vars_number > 0) {
@@ -69,13 +71,14 @@ class PromoCodeModel extends basic {
             $array = $this->vars_all;
 
             $randNumber = array_rand($array);
+       
 
             return $array[$randNumber];
         } else {
 
-            $this->generateCode(50, 4);
+            $this->generateCode(50, 4,$type);
 
-            $this->getCode();
+            $this->getCode($type);
         }
     }
 

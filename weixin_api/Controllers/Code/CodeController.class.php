@@ -24,11 +24,21 @@ class CodeController implements Code {
 
         if (!empty($_REQUEST['source'])) {
 
+            if(!empty($_REQUEST['code_type'])){
+
+                $codeType = 2;
+
+            } else{
+
+                $codeType = 1;
+
+            }
+
             $code = new PromoCodeModel();
 
-            $code = $code->getCode();
+            $codeDetail = $code->getCode($codeType);
 
-            AssemblyJson($code);
+            AssemblyJson($codeDetail);
         }
     }
     
@@ -73,7 +83,6 @@ class CodeController implements Code {
 
     public function give_code(){
 
-
          if(!empty($_REQUEST['source']) && !empty($_REQUEST['code_id']) && !empty($_REQUEST['open_id']) && !empty($_REQUEST['give_open_id'])){
             
         
@@ -91,6 +100,43 @@ class CodeController implements Code {
         }
 
     }
+
+
+    public function getReceiveCode(){
+        if (!empty($_REQUEST['source'])) {
+
+            if(!empty($_REQUEST['code_type'])){
+
+                $codeType = 2;
+
+            } else{
+
+                $codeType = 1;
+
+            }
+
+            $code = new PromoCodeModel();
+
+            $codeDetail = $code->getCode($codeType);
+
+
+             
+
+            $code = new PromoCodeRecordModel();
+
+            $info = $code->addCode($codeDetail['promo_code_id'],$_REQUEST['open_id']);
+
+           
+
+            AssemblyJson($codeDetail);
+        } else{
+
+            echoErrorCode(105);
+        }
+
+    }
+
+   
 
 
 }

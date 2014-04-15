@@ -148,3 +148,19 @@ Apr 10 11:20:26 [SQL]_null_192.168.0.110_/yajie_weixin_crm/weixin_api/code/get_u
 SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "oIUY-t96AyFM-GSrrrtGGb5mtS6o"     
 Apr 10 11:20:26 [RETURN]_null_192.168.0.110_/yajie_weixin_crm/weixin_api/code/get_user_code
 {"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+Apr 10 16:03:41 [SQL]_null_192.168.0.110_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 10 16:03:41 [RETURN]_null_192.168.0.110_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=
+[{"exchange_id":"1","exchange_name":"\u5151\u63621","exchange_type":"0","exchange_integration":"10","exchange_image":"174Small.jpg","exchange_summary":"asdasjbdjasbf","exchangez_details":"dasdasf"},{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"},{"exchange_id":"4","exchange_name":"\u5151\u63623","exchange_type":"0","exchange_integration":"213","exchange_image":"140320121044144.jpg","exchange_summary":"31232","exchangez_details":"13124"}]
+Apr 10 16:03:45 [SQL]_null_192.168.0.110_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=1
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 1     
+Apr 10 16:03:45 [RETURN]_null_192.168.0.110_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=1
+{"exchange_info":{"exchange_id":"1","exchange_name":"\u5151\u63621","exchange_type":"0","exchange_integration":"10","exchange_image":"174Small.jpg","exchange_summary":"asdasjbdjasbf","exchangez_details":"dasdasf"}}
+Apr 10 16:03:48 [SQL]_null_192.168.0.110_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 10 16:03:48 [RETURN]_null_192.168.0.110_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=
+[{"exchange_id":"1","exchange_name":"\u5151\u63621","exchange_type":"0","exchange_integration":"10","exchange_image":"174Small.jpg","exchange_summary":"asdasjbdjasbf","exchangez_details":"dasdasf"},{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"},{"exchange_id":"4","exchange_name":"\u5151\u63623","exchange_type":"0","exchange_integration":"213","exchange_image":"140320121044144.jpg","exchange_summary":"31232","exchangez_details":"13124"}]
+Apr 10 16:34:31 [SQL]_null_192.168.0.110_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 10 16:34:31 [RETURN]_null_192.168.0.110_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=
+[{"exchange_id":"1","exchange_name":"\u5151\u63621","exchange_type":"0","exchange_integration":"10","exchange_image":"174Small.jpg","exchange_summary":"asdasjbdjasbf","exchangez_details":"dasdasf"},{"exchange_id":"2","exchange_name":"\u5151\u63622","exchange_type":"1","exchange_integration":"20","exchange_image":"184Small.jpg","exchange_summary":"dasdasddkhjasdhkajshdkjsad","exchangez_details":"dasbjkdhasjkhdkjasf"},{"exchange_id":"4","exchange_name":"\u5151\u63623","exchange_type":"0","exchange_integration":"213","exchange_image":"140320121044144.jpg","exchange_summary":"31232","exchangez_details":"13124"}]

@@ -103,7 +103,7 @@ class weixinEvent {
         $type = $wechat->getRev()->getRevType();
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
-        $array[0] = array('Title' => '我要预约', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=user&v=order&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $array[0] = array('Title' => '我要预约', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=order&v=order&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
         $wechat->news($array)->reply();
     }
 
@@ -114,7 +114,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $array[0] = array('Title' => '我要兑换', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=user&v=getExchangeList&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $array[0] = array('Title' => '我要兑换', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=exchange&v=getExchangeList&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
         $wechat->news($array)->reply();
     }
 
@@ -188,6 +188,21 @@ class weixinEvent {
 
         $wechat->news($array)->reply();
     }
+
+
+
+     function zengsong() {
+        $wechat = new Wechat();
+
+        $type = $wechat->getRev()->getRevType();
+
+        $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
+
+        $array[0] = array('Title' => '赠送', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=code&v=getReceviceCode&open_id='.$userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+
+        $wechat->news($array)->reply();
+    }
+
 
     function lianxifangshi() {
         $wechat = new Wechat();

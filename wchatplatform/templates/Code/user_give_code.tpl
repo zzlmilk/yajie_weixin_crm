@@ -49,20 +49,11 @@
                             
                             <p>优惠码: {$codeInfo[$k]['code_info']['code_name']}</p>
 
-                            <div style="width: 100%; text-align: right;"><a  href="{$websiteUrl}?g=company&a=code&v=giveCode&action=detail&code_id={$codeInfo[$k]['code_record']['promo_code_id']}&open_id={$open_id}"><button type="submit" class="btn btn-primary btn-xs">详情</button></a></div>
+                            <div style="width: 100%; text-align: right;"><a  href="{$websiteUrl}?g=company&a=code&v=giveCodeDetail&code_id={$codeInfo[$k]['code_record']['promo_code_id']}&open_id={$open_id}"><button type="submit" class="btn btn-primary btn-xs">详情</button></a></div>
                         </div>
                     </div>
                 </div>
             {/foreach}
         </div>
     </body>
-    <script>
-        $(".summary").each(function(){
-        var len=$(this).html().length;
-        if(len>=20){
-        var nowString= $(this).html().substr(0, 20)
-        $(this).html(nowString+"...");
-    }
-})
-    </script>
 </html>

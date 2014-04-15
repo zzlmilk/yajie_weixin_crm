@@ -1,238 +1,206 @@
 <?php
 
-class  UserController implements User {
+class UserController implements User {
 
-	/**
-	 * 添加用户
-	 */
-	public function add(){
+    /**
+     * 添加用户
+     */
+    public function add() {
 
-		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])){
+        if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])) {
 
-			if(!empty($_REQUEST['user_name']) && !empty($_REQUEST['user_phone']) && !empty($_REQUEST['sex']) && !empty($_REQUEST['birthday'])){
+            if (!empty($_REQUEST['user_name']) && !empty($_REQUEST['user_phone']) && !empty($_REQUEST['sex']) && !empty($_REQUEST['birthday'])) {
 
-				$user = new UserModel();
+                $user = new UserModel();
 
-				$user->insertUser($_REQUEST);
+                $user->insertUser($_REQUEST);
+            } else {
 
-			} else{
+                echoErrorCode(105);
+            }
+        } else {
 
-				echoErrorCode(105);
-			}
+            echoErrorCode(105);
+        }
+    }
 
-		} else{
+    /**
+     * 判断用户是否已被注册
+     */
+    public function able_user() {
 
-			echoErrorCode(105);
+        if (!empty($_REQUEST['open_id'])) {
 
-		}
+            $user = new UserModel();
 
-	}
-	/**
-	 * 判断用户是否已被注册
-	 */
+            $user->ableUserRegister($_REQUEST['open_id']);
+        } else {
 
-	public function able_user(){
+            echoErrorCode(10002);
+        }
+    }
 
-		if(!empty($_REQUEST['open_id'])){
+    /**
+     * 用户积分 累加  v1
+     */
+    public function add_user_integration() {
 
-			$user = new UserModel();
+        if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['integration']) && !empty($_REQUEST['source'])) {
 
-			$user->ableUserRegister($_REQUEST['open_id']);
+            $user = new UserModel();
 
-		} else{
+            $data = $user->addUserIntegration($_REQUEST['open_id'], $_REQUEST['integration']);
 
-			echoErrorCode(10002);
-		}
+            AssemblyJson($data);
+        } else {
 
-	}
-	/**
-	 * 用户积分 累加  v1
-	 */
+            echoErrorCode(105);
+        }
+    }
 
-	public function add_user_integration(){
+    /**
+     * 用户金额 累加  v1
+     */
+    public function add_user_money() {
 
-		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['integration']) && !empty($_REQUEST['source'])){
+        if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['money']) && !empty($_REQUEST['source'])) {
 
-			$user = new UserModel();
+            $user = new UserModel();
 
-			$data = $user->addUserIntegration($_REQUEST['open_id'],$_REQUEST['integration']);
+            $data = $user->addUserMoney($_REQUEST['open_id'], $_REQUEST['money']);
 
-			AssemblyJson($data);
+            AssemblyJson($data);
+        } else {
 
-		} else{
+            echoErrorCode(105);
+        }
+    }
 
-			echoErrorCode(105);
+    /**
+     * 减少用户积分
+     */
+    public function reduction_user_integration() {
 
-		}
+        if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['integration']) && !empty($_REQUEST['source'])) {
 
-	}
-	/**
-	 * 用户金额 累加  v1
-	 */
-	public function add_user_money(){
+            $user = new UserModel();
 
-		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['money'])  && !empty($_REQUEST['source'])){
+            $data = $user->reductionUserIntegration($_REQUEST['open_id'], $_REQUEST['integration']);
 
-			$user = new UserModel();
+            AssemblyJson($data);
+        } else {
 
-			$data = $user->addUserMoney($_REQUEST['open_id'],$_REQUEST['money']);
+            echoErrorCode(105);
+        }
+    }
 
-			AssemblyJson($data);
+    /**
+     * 减少用户金额
+     */
+    public function reduction_user_money() {
 
-		} else{
+        if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['money']) && !empty($_REQUEST['source'])) {
 
-			echoErrorCode(105);
+            $user = new UserModel();
 
-		}
-	}
+            $data = $user->reductionUserMoney($_REQUEST['open_id'], $_REQUEST['money']);
 
-	/**
-	 * 减少用户积分
-	 */
-	public function reduction_user_integration(){
+            AssemblyJson($data);
+        } else {
 
-		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['integration'])  && !empty($_REQUEST['source'])){
+            echoErrorCode(105);
+        }
+    }
 
-			$user = new UserModel();
+    /**
+     * 获取用户资料
+     */
+    public function get_info() {
 
-			$data = $user->reductionUserIntegration($_REQUEST['open_id'],$_REQUEST['integration']);
+        if (!empty($_REQUEST['source']) && !empty($_REQUEST['open_id'])) {
 
-			AssemblyJson($data);
+            $user = new userModel();
 
-		} else{
+            $userInfo = $user->getUserInfo($_REQUEST['open_id']);
 
-			echoErrorCode(105);
+            if (count($userInfo) > 0) {
 
-		}
+                $weixinUser = new WeiXinUserModel();
 
-	}
-	
-	/**
-	 * 减少用户金额
-	 */
-	public function reduction_user_money(){
+                $weixinUserInfo = $weixinUser->getWeiXinInfo($userInfo['user_open_id'], $userInfo['user_id']);
 
-		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['money'])  && !empty($_REQUEST['source'])){
+                $array['user'] = arrayToObject($userInfo, 0);
 
-			$user = new UserModel();
+                $array['weixin_user'] = arrayToObject($weixinUserInfo, 0);
 
-			$data = $user->reductionUserMoney($_REQUEST['open_id'],$_REQUEST['money']);
+                AssemblyJson($array);
+            }
+        } else {
 
-			AssemblyJson($data);
+            echoErrorCode(105);
+        }
+    }
 
-		} else{
+    /**
+     * 修改用户信息
+     */
+    public function updateInfo($data, $user_id) {
 
-			echoErrorCode(105);
+        if (is_array($data) && count($data) > 0) {
 
-		}
+            $user = new userModel();
 
-	}
+            $user->updateInfo($data, $user_id);
 
-	/**
-	 * 获取用户资料
-	 */
+            $array['res'] = 1;
 
-	public function get_info(){
+            AssemblyJson($array);
+        }
+    }
 
-		if(!empty($_REQUEST['source']) && !empty($_REQUEST['open_id'])){
+    /**
+     * 修改用户 收货地址
+     */
+    public function update_user_address() {
 
-			$user = new userModel();
+        if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])) {
 
-			$userInfo = $user->getUserInfo($_REQUEST['open_id']);
 
-			if(count($userInfo) > 0){
+            if (!empty($_REQUEST['address_phone']) && !empty($_REQUEST['province_id']) && !empty($_REQUEST['city_id']) && !empty($_REQUEST['area_id']) && !empty($_REQUEST['street']) && !empty($_REQUEST['real_name'])) {
 
-				$weixinUser = new WeiXinUserModel();
+                $user = new userModel();
 
-				$weixinUserInfo = $weixinUser->getWeiXinInfo($userInfo['user_open_id']);
+                $userInfo = $user->getUserInfo($_REQUEST['open_id']);
 
-				$array['user'] = arrayToObject($userInfo,0);
+                if (count($userInfo) > 0) {
 
-				$array['weixin_user'] = arrayToObject($weixinUserInfo,0);
+                    $update = array();
 
-				AssemblyJson($array);
+                    $update_field = array('address_phone', 'province_id', 'city_id', 'area_id', 'street', 'real_name');
 
-			}
+                    foreach ($update_field as $v) {
 
-		} else{
+                        $update[$v] = $_REQUEST[$v];
+                    }
 
-			echoErrorCode(105);
-		}
+                    if (count($update) > 0) {
 
-	}
+                        $this->updateInfo($update, $userInfo['user_id']);
+                    }
+                } else {
 
-	/**
-	 * 修改用户信息
-	 */
+                    echoErrorCode(10005);
+                }
+            } else {
 
+                echoErrorCode(105);
+            }
+        } else {
 
-	public function updateInfo($data,$user_id){
-
-		if(is_array($data) && count($data)>0){
-
-			$user = new userModel();
-
-			$user->updateInfo($data,$user_id);
-
-			$array['res'] = 1;
-
-			AssemblyJson($array);
-		}
-
-	}
-
-
-	/**
-	 * 修改用户 收货地址
-	 */
-
-	public function update_user_address(){
-
-		if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])){
-
-
-			if(!empty($_REQUEST['address_phone']) && !empty($_REQUEST['province_id']) && !empty($_REQUEST['city_id']) && !empty($_REQUEST['area_id']) && !empty($_REQUEST['street']) && !empty($_REQUEST['real_name'])){
-
-				$user = new userModel();
-
-				$userInfo = $user->getUserInfo($_REQUEST['open_id']);
-
-				if(count($userInfo) > 0){
-
-					$update = array();
-
-					$update_field = array('address_phone','province_id','city_id','area_id','street','real_name');
-
-					foreach($update_field as $v){
-
-						$update[$v] = $_REQUEST[$v];
-
-					}
-					
-					if(count($update) > 0 ){
-
-						$this->updateInfo($update,$userInfo['user_id']);
-					}
-
-				} else{
-
-					echoErrorCode(10005);
-
-				}
-
-			} else{
-
-				echoErrorCode(105);
-
-			}
-
-		}else{
-
-			echoErrorCode(105);
-
-		}
-
-	}
+            echoErrorCode(105);
+        }
+    }
 
 }
+
 ?>

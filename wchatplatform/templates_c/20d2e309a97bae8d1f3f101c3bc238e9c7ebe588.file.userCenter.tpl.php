@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-09 18:10:45
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-11 11:47:35
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/User/userCenter.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:86798875453451ca5b37c06-55897758%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1193472165534765d7e5f947-28809158%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '20d2e309a97bae8d1f3f101c3bc238e9c7ebe588' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/User/userCenter.tpl',
-      1 => 1397036966,
+      1 => 1397112159,
     ),
   ),
-  'nocache_hash' => '86798875453451ca5b37c06-55897758',
+  'nocache_hash' => '1193472165534765d7e5f947-28809158',
   'function' => 
   array (
   ),
@@ -90,7 +90,7 @@ $_smarty_tpl->decodeProperties(array (
                 <div style=' width: 66%; overflow: hidden; position: absolute; left: 20%; top: 5%;'>
 
                     <div style='margin-top: 4%;  '>
-                        <span style='font-size:15px; display: inline-block; width: 23%; height: 4%;  '><?php echo $_smarty_tpl->getVariable('userinfo')->value['weixin_user']['nickname'];?>
+                        <span style='font-size:15px; display: inline-block; width: 98%; height: 4%;  '><?php echo $_smarty_tpl->getVariable('userinfo')->value['weixin_user']['nickname'];?>
 </span>
                     </div>
                     <div class='siteClass' style='font-size:12px;'>Tel:<?php echo $_smarty_tpl->getVariable('userinfo')->value['user']['user_phone'];?>
@@ -127,7 +127,7 @@ $_smarty_tpl->decodeProperties(array (
                     <a class="push-right" data-transition="slide-in">
                         <!--   <span class="media-object icon icon-star-filled pull-left"></span> -->
                         <div class="media-body"  onclick='window.location.href = "<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
-?g=company&a=user&v=promoMessage&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+?g=company&a=code&v=promoMessage&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
 "'>
                             优惠信息
                         </div>

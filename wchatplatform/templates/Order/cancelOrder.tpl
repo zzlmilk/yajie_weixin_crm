@@ -32,7 +32,7 @@
             <input type="hidden" value="{$WebSiteUrl}" id="webSiteUrl">
             <input type="hidden" value="{$open_id}" id="openId">
             <div style="color:  red;">{$errorMessage}</div>
-            <form id="orderForm" method='post' role="form" action="{$WebSiteUrl}?g=company&a=user&v=cancelOrder&toCancel=1">
+            <form id="orderForm" method='post' role="form" action="{$WebSiteUrl}?g=company&a=order&v=cancelOrder&toCancel=1">
                 <div style="height: 10px;"></div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">人数</label>
@@ -89,11 +89,11 @@
         var webSiteUrl=$("#webSiteUrl").val();
         var openId=$("#openId").val();
         $("#revise").click(function(){
-        $("#orderForm").attr("action", webSiteUrl+"?g=company&a=user&v=order&checkReturn=1&open_id="+openId);
+        $("#orderForm").attr("action", webSiteUrl+"?g=company&a=order&v=order&checkReturn=1&open_id="+openId);
         $("#orderForm").submit();
     });
     $("#cancel").click(function(){
-    $("#orderForm").attr("action", webSiteUrl+"?g=company&a=user&v=cancelOrder&toCancel=1&open_id="+openId);
+    $("#orderForm").attr("action", webSiteUrl+"?g=company&a=order&v=cancelOrder&toCancel=1&open_id="+openId);
     $("#orderForm").submit();
 });
     

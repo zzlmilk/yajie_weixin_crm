@@ -44,7 +44,7 @@ ini_set("display_errors", 0);
 //defined('APIURL')or define('APIURL','http://localhost/yajie_weixin_crm/weixin_api');
 
 //defined('APIURL')or define('APIURL','http://localhost/yajie_weixin_crm/weixin_api');
-defined('APIURL') or define('APIURL', 'http://192.168.0.110/yajie_weixin_crm/weixin_api');
+defined('APIURL') or define('APIURL', 'http://192.168.0.104/yajie_weixin_crm/weixin_api');
 
 defined('VAR_MODULE') or define('VAR_MODULE', 'a');
 
