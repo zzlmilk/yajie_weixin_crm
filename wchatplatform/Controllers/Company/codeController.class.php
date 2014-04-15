@@ -103,7 +103,7 @@ class codeController extends BaseController {
         $error = new errorApi();
 
         $error->JudgeError($userInfo, $var, 'company', $this->userOpenId);
-        
+
         $this->getCode($this->userOpenId, $_REQUEST['give_open_id']);
     }
 
@@ -120,7 +120,7 @@ class codeController extends BaseController {
         $this->assign('open_id', $open_id);
 
         $this->assign('codeInfo', $codeInfo);
-        
+
         $this->setDir('Code');
 
         $this->display('user_code_detail');
@@ -164,7 +164,7 @@ class codeController extends BaseController {
 
                 if ($userInfo['weixin_user']['subscribe'] == 0) {
 
-                    
+
                     $msg = '领取成功,请关注脊安堂 服务号 ';
 
                     $this->displayMessage($msg);
@@ -176,27 +176,60 @@ class codeController extends BaseController {
         }
     }
 
-    public function promoMessage() {
+    ublic
 
+    function promoMessage() {
+        $nowTime = time();
         $postDate["source"] = "company";
-        $postDate['open_id'] = $this->userOpenId;
-     
+        //$postDate['open_id'] = $this->userOpenId;
+        $postDate['open_id'] = 'oIUY-t96AyFM-GSrrrtGGb5mtS6o';
+        $groupBy = isset($_GET["groupBy"]) ? $_GET["groupBy"] : "";
         $userCode = transferData(APIURL . "/code/get_user_code", "post", $postDate);
         $userCode = json_decode($userCode, true);
-            
-        $error = new errorApi();
+        if (isset($userCode["error"])) {
+            $this->assign("codeInfo", "error");
+        } else if ($userCode == "") {
+            $this->assign("codeInfo", "error");
+        } else {
+            $codeInfo = array();
+            if (!isset($groupBy) || $groupBy == "") {
+                foreach ($userCode as $key => $value) {
+                    $codeEndTime = $value["code_record"]['code_end_time'];
+                    if ($value['code_info']["code_state"] == "1" && $codeEndTime > $nowTime) {
+                        $codeCreateTime = $value["code_record"]['ctime'];
+                        $value['code_info']["createTime"] = $codeCreateTime;
+                        array_push($codeInfo, $value['code_info']);
+                    }
+                }
+                $this->assign("groupBy", "");
+            } else if ($groupBy == "used") {
+                foreach ($userCode as $key => $value) {
+                    if ($value['code_info']["code_state"] == "2") {
+                        $codeCreateTime = $value["code_record"]['ctime'];
+                        $value['code_info']["createTime"] = $codeCreateTime;
+                        array_push($codeInfo, $value['code_info']);
+                        $this->assign("groupBy", $_GET["groupBy"]);
+                    }
+                }
+            } else if ($groupBy == "timeOut") {
+                foreach ($userCode as $key => $value) {
+                    $codeEndTime = $value["code_record"]['code_end_time'];
+                    if ($codeEndTime < $nowTime) {
+                        $codeCreateTime = $value["code_record"]['ctime'];
+                        $value['code_info']["createTime"] = $codeCreateTime;
+                        array_push($codeInfo, $value['code_info']);
+                        $this->assign("groupBy", $_GET["groupBy"]);
+                    }
+                }
+            }
 
-        $error->JudgeError($userCode);
-      
-        $codeInfo = array();
-        foreach ($userCode as $key => $value) {
-            
-            $value['code_info']["createTime"] = $codeCreateTime;
-            array_push($codeInfo, $value['code_info']);
+            if (empty($codeInfo)) {
+                $codeInfo = "";
+            }
+            $this->assign("codeInfo", $codeInfo);
+            $this->assign("nowTime", $nowTime);
         }
-        $nowTime = time();
-        $this->assign("codeInfo", $codeInfo);
-        $this->assign("nowTime", $nowTime);
+        $this->assign("groupBy", $groupBy);
         $this->display("promoMessage");
     }
 
