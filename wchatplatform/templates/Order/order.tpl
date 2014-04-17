@@ -4,14 +4,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta content="initial-scale=1.0; maximum-scale=4.0; user-scalable=no;" name="viewport">
         <meta name="viewport" content="width=device-width,user-scalable=yes" />
+        <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/css/bootstrap-datetimepicker.css" media="screen">
         <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
         <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/css/bootstrap-datetimepicker.css">
-        <script src="{$WebSiteUrlPublic}/company/script/bootstrap-datetimepicker.js"></script>
-        <script src="{$WebSiteUrlPublic}/company/script/bootstrap-datetimepicker.zh-CN.js"  charset="UTF-8"></script>
         {if $checkReturn eq 1}
             <title>修改预约</title>
         {else}
@@ -110,12 +108,12 @@
                                     </select>
                                 </td>
                                 <td class="timesAlert">              
-                                    <div id="orderDate" class=" date form_datetime ">
+                                    <div id="" class=" date form_datetime ">
                                         <label for="inputPassword" style=" height: 3em; line-height: 3em;"  class="col-sm-2 control-label">日期</label>
                                         {if $checkReturn eq 1}
-                                            <input id="orderDateInput" name="orderDateInput"  class="form-control lineDis"  style=" margin-top: -3.2em;" type="text" value="{$returnVal.orderDateInput}" readonly>
+                                            <input id="orderDate" name="orderDateInput"  class="form-control lineDis"  style=" margin-top: -3.2em;" type="text" value="{$returnVal.orderDateInput}" readonly>
                                         {else}
-                                            <input id="orderDateInput" name="orderDateInput"  class="form-control lineDis" style=" margin-top: -3.2em;"  type="text" value="" readonly>
+                                            <input id="orderDate" name="orderDateInput"  class="form-control lineDis" style=" margin-top: -3.2em;"  type="text" value="" readonly>
                                         {/if}
                                         <span class="add-on"><i class="icon-th"></i></span>
                                         <input type="hidden" value="2014-01-01" id="orderDateWithNoWeek">
@@ -179,13 +177,13 @@
 
         </div>
 
-      {*  <div id="Bk" style=" display: none;width: 100%;height: 100%;background-color:black;opacity: 0.5; position: absolute; left: 0; top: 0;z-index: 100;"></div>
+        {*  <div id="Bk" style=" display: none;width: 100%;height: 100%;background-color:black;opacity: 0.5; position: absolute; left: 0; top: 0;z-index: 100;"></div>
         <div id="context" style=" overflow:scroll;display: none;width: 70%;margin: 0 auto; background-color: white; position:fixed;height:80%; z-index: 150;top:90%; left: 15%">
-            <div style="background-color: white;width: 100%; text-align: center">
-                <ul class="no-list-type" id="porpleNumList">
+        <div style="background-color: white;width: 100%; text-align: center">
+        <ul class="no-list-type" id="porpleNumList">
 
-                </ul>
-            </div>
+        </ul>
+        </div>
         </div>*}
         {if $checkReturn eq 1}
             <input id="selectValueCache" value="{$returnVal.orderMerchandise}" type="hidden" >
@@ -203,6 +201,8 @@
     </body> 
 
     <script src="{$WebSiteUrlPublic}/company/script/ctrlSelect.js"></script>
+    <script src="{$WebSiteUrlPublic}/company/script/bootstrap-datetimepicker.js"></script>
+    <script src="{$WebSiteUrlPublic}/company/script/bootstrap-datetimepicker.zh-CN.js"  charset="UTF-8"></script>
     <script type="text/javascript">
         $("html").click(function(){
         $("#orderDate").datetimepicker('hide');
@@ -227,7 +227,7 @@ return false;
 });
 $("#submitOrder").click(function(){
     
-if($("#orderDateInput").val()==""||$("#orderTimeInput").val()==""){
+if($("#orderDate").val()==""||$("#orderTimeInput").val()==""){
 alert("请填写完整的预约时间（可能时间或日期未填写）");
 return false;
 }else{
@@ -244,7 +244,6 @@ $("#orderDate").datetimepicker({
 format: "yyyy-mm-dd ",
 startDate:new Date(),
 minuteStep:15,
-endDate:endDate,
 autoclose:true,
 minView:0,
 forceParse:false,
@@ -280,9 +279,10 @@ $("#orderTimeInput").val(nowTime);
 
 var weekNumber=changeDateTime.getDay();
 var weekDays=["周日","周一","周二","周三","周四","周五","周六"];
-var dayData=$("#orderDateInput").val();
+var dayData=$("#orderDate").val();
 $("#orderDateWithNoWeek").val(dayData);
-$("#orderDateInput").val(dayData+""+weekDays[weekNumber]);
+$("#orderDate").val(dayData+""+weekDays[weekNumber]);
+//alert($("#orderDate").val())
 });
 
     </script> 

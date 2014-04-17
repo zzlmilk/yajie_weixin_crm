@@ -41,6 +41,20 @@ class orderController extends BaseController {
             $this->assign("checkReturn", $_GET['checkReturn']);
             $this->assign("returnVal", $_POST);
         }
+        $userOrder["source"] = "company";
+        $userOrder["open_id"] = $this->userOpenId;
+        $userJsonData = transferData(APIURL . "/order/get_order", "post", $userOrder);
+        $orderItem = json_decode($userJsonData, true);
+        $error = new errorApi();
+        $error->JudgeError($orderItem);
+        $nowTime = time();
+        if($_GET["checkReturn"]==1){
+            
+        }
+       else if ($orderItem > $nowTime) {
+            $this->displayMessage("你已经有正在进行的订单，请执行<a href='".WebSiteUrl."?g=company&a=order&v=orderCheck&open_id=".$this->userOpenId."'>编辑</a>操作");
+        }
+
         $selectReturnVal = transferData(APIURL . "/order/get_merchandise", "get");
         $selectVal = json_decode($selectReturnVal, true);
 
@@ -117,15 +131,14 @@ class orderController extends BaseController {
                 $thisUserData = $this->userData = json_decode($userJsonData, TRUE);
 
                 $error = new errorApi();
-
                 $error->JudgeError($thisUserData);
 
                 if ($thisUserData["error"]["error_status"] == "30005") {
                     $this->errorMessage = 1;
                     return $this->cancelOrder();
                 } else if ($thisUserData["error"]["error_status"] == "30006") {
-                  
-                     $this->displayMessage($thisUserData["error"]["status_info"]);
+
+                    $this->displayMessage($thisUserData["error"]["status_info"]);
                     return;
                 }
             }
@@ -249,6 +262,18 @@ class orderController extends BaseController {
         $DateValue = transferData(APIURL . "/order/get_order_all", "post", $postUserDate);
         $DateValue = json_decode($DateValue, TRUE);
         $this->assign("orders", $DateValue['order']);
+        $this->display();
+    }
+
+    //支付
+    public function payment() {
+        $this->able_register();
+        $postDate["source"] = "company";
+        $postDate['open_id'] = $this->userOpenId;
+        $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
+        $userInfo = json_decode($userInfo, TRUE);
+       $userName=$userInfo["weixin_user"]["nickname"];
+        $this->assign("userName", $userName);
         $this->display();
     }
 

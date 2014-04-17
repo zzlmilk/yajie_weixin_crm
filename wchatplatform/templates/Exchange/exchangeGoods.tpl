@@ -28,9 +28,10 @@
             <div ><img width="88" height="88" src="{$WebImageUrl}{$exchangeInfo.exchange_image}"></div>
             <div>
                 <p>{$exchangeInfo.exchange_summary}</p>
-                <p>{$exchangeInfo.exchange_name} {$exchangeInfo.exchange_integration}p</p>
+                <p>{$exchangeInfo.exchange_name}</p>
+                <p>{$exchangeInfo.exchange_integration}分</p>
                 <div style="text-align: left;">
-                    
+
                 </div>
                 <p><a href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeInfo.exchange_id}&open_id={$open_id}"><button type="button" class="btn btn-primary btn-xs">兑换</button></a></p>
             </div>

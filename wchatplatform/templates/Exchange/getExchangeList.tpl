@@ -31,13 +31,52 @@
             }
             .giftListStyle{
                 background-color: #fff;
-                height: 100px;
+                height: 125px;
                 margin-top: 15px;
             }
+            .round_photo{
+                width:100%;
+                height: auto;
+                border:1px solid #ddddde;
+                -moz-border-radius: 59px;
+                -webkit-border-radius: 59px;
+                border-radius:50%;
+
+            }
+            .siteClass{
+
+                color: rgb(128,128,128);
+            } 
+            .graph{  
+
+                width: 0;     height: 0;     border-bottom: 38px solid rgb(70,140,200);  
+
+                border-left: 41px solid transparent;
+
+            }  
         </style>
     </head>
     <body style='background-color: rgb(243,237,227);'>
 
+        <div style='  width: 100%; background-color: rgb(255,255,247);position: relative;'>
+
+            <div style='height: 0.2em;width: 100%;'>&nbsp;</div>
+
+
+            <div style=' width: 18%;'>
+                <img src='{$weixinUserInfo.headimgurl}' class='round_photo'>
+            </div>
+
+
+
+            <div style=' width: 66%; overflow: hidden; position: absolute; left: 20%; top: 5%;'>
+
+                <div style='margin-top:10%;line-height: 15px;'>
+                    <span style='font-size:15px; display: inline-block;  height: 4%;  '>用户昵称：{$weixinUserInfo.nickname}</span>
+                    <span id="userIntegration" style='font-size:15px; display: inline-block;  height: 4%;  '>剩余积分:{$localUserInfo.user_integration}</span>
+                </div>
+            </div>
+        </div>
         <div class="registerWarp">
             {foreach from=$exchangeList item=exchangeItem key=key}
                 <div class="giftListStyle">
@@ -45,9 +84,15 @@
                     <div style="float: left;margin: 10px;width: 58%;">
                         <div style="word-wrap: break-word; word-break: normal;">
                             <p class="summary"> {$exchangeItem.exchange_summary}</p>
-                            <p>积分: {$exchangeItem.exchange_integration}p</p>
-
-                            <div style="width: 100%; text-align: right;"><a  href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button type="submit" class="btn btn-warning btn-xs">兑换</button></a></div>
+                            <p class="integration">积分: {$exchangeItem.exchange_integration}</p>
+                            <p>类型: 
+                                {if $exchangeItem.exchange_type eq 0}
+                                    虚拟
+                                {else}
+                                    实物
+                                {/if}
+                            </p>
+                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button type="button" class="btn btn-warning btn-xs">兑换</button></a></div>
                         </div>
                     </div>
                 </div>
@@ -61,6 +106,16 @@
         var nowString= $(this).html().substr(0, 20)
         $(this).html(nowString+"...");
     }
-})
+});
+$(".submitButton").click(function(){
+    var integrationVals=$(this).parents().parents().find(".integration").html()
+    var integration=integrationVals.split(":")[1];
+    var userIntegration=$("#userIntegration").html();
+    userIntegration=userIntegration.split(":")[1];
+    if(integration>userIntegration){
+    alert("您的积分余额不足");
+    return false;
+    }
+});
     </script>
 </html>

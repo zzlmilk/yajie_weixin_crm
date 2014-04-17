@@ -32,19 +32,25 @@ class exchangeController extends BaseController {
 
     //兑换列表
     public function getExchangeList() {
-        
-        
-        $this->able_register();
 
+
+        $this->able_register();
+        $postDate["source"] = "company";
+        $postDate['open_id'] = $this->userOpenId;
         //$this->userOpenId = $_REQUEST['open_id'];
         $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=company&open_id=" . $this->userOpenId, "get");
         $exchangeList = json_decode($exchangeList, true);
-
+        $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
+        $userInfo = json_decode($userInfo, TRUE);
+        $weixinUserInfo=$userInfo['weixin_user'];
+        $localUserInfo=$userInfo['user'];
         $error = new errorApi();
-
         $error->JudgeError($exchangeList);
+        $error->JudgeError($userInfo);
         $this->assign("WebImageUrl", WebImageUrl . "small/");
         $this->assign("exchangeList", $exchangeList);
+        $this->assign("localUserInfo", $localUserInfo);
+        $this->assign("weixinUserInfo", $weixinUserInfo);
         $this->display("getExchangeList");
     }
 
@@ -247,16 +253,16 @@ class exchangeController extends BaseController {
             $exchangeApi = new exchangeApi();
 
             $exchangeReocrd = $exchangeApi->getUserExchangeInfo($this->userOpenId, 'company');
-            
-        
-          
-            
-            
-            
-             $this->assign("WebImageUrl", WebImageUrl . "small/");
-            
-            $this->assign('exchangeList',$exchangeReocrd);
-            
+
+
+
+
+
+
+            $this->assign("WebImageUrl", WebImageUrl . "small/");
+
+            $this->assign('exchangeList', $exchangeReocrd);
+
             $this->display('userExchangeRecord');
         } else {
 
