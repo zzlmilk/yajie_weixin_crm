@@ -11,27 +11,18 @@
  *
  * @author zhaixiaoping
  */
-class exchangeController  extends BaseController {
+class exchangeController extends BaseController {
+
     //put your code here
 
-  public function __construct() {
-        
+    public function __construct() {
+
 
         header("Content-type:text/html;charset=utf-8");
 
         if (!empty($_REQUEST['open_id'])) {
 
             $this->userOpenId = $_REQUEST['open_id'];
-
-             $url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING'];
-
-            $userApi = new userApi();
-
-            $userInfo = $userApi->getUserInfo($this->userOpenId, 'company');
-
-            $error = new errorApi();
-
-            $error->JudgeError($userInfo,$url,'',$this->userOpenId);
         } else {
             //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';         
         }
@@ -39,16 +30,17 @@ class exchangeController  extends BaseController {
         $this->assign('open_id', $this->userOpenId);
     }
 
-
-     //兑换列表
+    //兑换列表
     public function getExchangeList() {
-
+        
+        
+        $this->able_register();
 
         //$this->userOpenId = $_REQUEST['open_id'];
         $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=company&open_id=" . $this->userOpenId, "get");
         $exchangeList = json_decode($exchangeList, true);
 
-         $error = new errorApi();
+        $error = new errorApi();
 
         $error->JudgeError($exchangeList);
         $this->assign("WebImageUrl", WebImageUrl . "small/");
@@ -71,8 +63,7 @@ class exchangeController  extends BaseController {
         $this->display("exchangeGoods");
     }
 
-
-     //兑换物品
+    //兑换物品
     public function changeGoods() {
 
 //$this->userOpenId = $_REQUEST['open_id'];
@@ -93,7 +84,7 @@ class exchangeController  extends BaseController {
 
                 $error = new errorApi();
 
-                 $error->JudgeError($userInfo);
+                $error->JudgeError($userInfo);
                 if ($userInfo['user']['province_id'] == "0") {
                     $this->assign("userMessage", $userInfo['user']);
                     $this->locationCheck(); //填写信息              
@@ -126,7 +117,6 @@ class exchangeController  extends BaseController {
                     $this->assign("goodsId", $goodsId);
                     $this->display("locationCheck");
                 }
-                
             } else {
                 $this->changeGoodsResult();
             }
@@ -175,8 +165,6 @@ class exchangeController  extends BaseController {
         }
     }
 
-
-    
     public function updateUserLocation() {
         if (isset($_POST["gNumber"])) {
             if (ctype_digit($_POST["gNumber"])) {
@@ -199,19 +187,19 @@ class exchangeController  extends BaseController {
                     $_GET['goodsId'] = $_POST["gNumber"];
                     $this->changeGoodsResult();
                 } else {
-                   
+
                     $this->displayMessage('提交用户信息出错');
 
                     die;
                 }
             } else {
 
-                 $this->displayMessage('参数错误');
+                $this->displayMessage('参数错误');
 
-                 die;
+                die;
             }
         } else {
-          
+
             $this->displayMessage('错误');
 
             die;
@@ -227,19 +215,18 @@ class exchangeController  extends BaseController {
             $exchangeList = transferData(APIURL . "/exchange/redeem", "post", $postDate);
             $exchangeList = json_decode($exchangeList, TRUE);
 
-             $error = new errorApi();
+            $error = new errorApi();
 
             $error->JudgeError($exchangeList);
 
-           
-                $userIntegration = $exchangeList['user_integration']['user_integration'];
-                $userChangeInfo = $exchangeList['exchange_info'];
-                $this->assign("integration", $userIntegration);
-                $this->assign("changeInfo", $userChangeInfo);
-                $this->display("changeScuessList");
-            
+
+            $userIntegration = $exchangeList['user_integration']['user_integration'];
+            $userChangeInfo = $exchangeList['exchange_info'];
+            $this->assign("integration", $userIntegration);
+            $this->assign("changeInfo", $userChangeInfo);
+            $this->display("changeScuessList");
         } else {
-           
+
             $this->displayMessage('错误的进入方式');
         }
     }
@@ -248,6 +235,33 @@ class exchangeController  extends BaseController {
         $this->display("changeScuessList");
     }
 
+    /*
+     * 获取用户兑换记录
+     */
 
+    public function getUserExchangeRecord() {
+
+
+        if (!empty($this->userOpenId)) {
+
+            $exchangeApi = new exchangeApi();
+
+            $exchangeReocrd = $exchangeApi->getUserExchangeInfo($this->userOpenId, 'company');
+            
+        
+          
+            
+            
+            
+             $this->assign("WebImageUrl", WebImageUrl . "small/");
+            
+            $this->assign('exchangeList',$exchangeReocrd);
+            
+            $this->display('userExchangeRecord');
+        } else {
+
+            $this->displayMessage('open_id未获取到 请重新从微信公众平台登录');
+        }
+    }
 
 }

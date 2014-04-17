@@ -96,25 +96,30 @@
                     } else {
                         running = false;
                         setTimeout(function() {
+                            
+                         
                             if (prize != null) {
                                 $.ajax({
                                     url: webUrl + "?g=company&a=game&v=getGameAward",
                                     type: "get",
+                                    
+                                   
                                     data: {
                                         gift_id: prize,
                                         open_id: $('#open_id').val(),
-                                        gift_type:1,
+                                        gift_type: 1,
                                     },
                                     success: function(res) {
 
-
+                                     
                                         $('#bobyGame').append(res);
                                         $('#myModal').modal();
 
                                     },
+                                    timeout: 2000
                                 })
 
-                            } 
+                            }
                         }, 200)
                     }
                 }
@@ -150,6 +155,8 @@
                             }, 1)
                         },
                         success: function(data) {
+                            
+                          
 
                             gift_id = data.gift_id;
 

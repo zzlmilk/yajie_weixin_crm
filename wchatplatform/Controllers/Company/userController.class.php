@@ -2,7 +2,6 @@
 
 class UserController extends BaseController {
 
-    public $userOpenId;
     public $postData;
     public $errorMessage = "";
 
@@ -15,9 +14,14 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';         
-        }
+            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';   
 
+
+            $this->userOpenId = 'dasdasd';
+        }
+        
+        
+       
         $this->assign('open_id', $this->userOpenId);
     }
 
@@ -61,6 +65,7 @@ class UserController extends BaseController {
         $this->assign('open_id', $this->userOpenId);
 
 
+
         $this->assign('vars', json_encode($_REQUEST));
 
         $this->setDir('User');
@@ -74,7 +79,7 @@ class UserController extends BaseController {
     public function submitRegister() {
 
 
-      
+
         if (!empty($_REQUEST['open_id'])) {
             if (!empty($_REQUEST['phoneNumber'])) {
                 if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $_REQUEST['phoneNumber'])) {
@@ -95,12 +100,8 @@ class UserController extends BaseController {
 
                         if ($resultRenameArray['success'] == 1) {
 
-
-
-
-
-
                             $resultRegisterJson = transferData(APIURL . '/user/add', 'post', $data);
+
                             $resultRegisterArray = json_decode($resultRegisterJson, true);
 
                             $error = new errorApi();
@@ -116,12 +117,13 @@ class UserController extends BaseController {
                                     if ($varsArray['action'] == '/code/getCode') {
 
                                         $array = array('give_open_id' => $varsArray['give_open_id'], 'open_id' => $varsArray['open_id']);
+
+                                        R($varsArray['action'], $varsArray['source'], $array);
+                                    } else if ($varsArray['action'] == 'url') {
+
+                                        $this->jsJump($varsArray['url']);
                                     }
 
-                                  
-                                    
-                                    R($varsArray['action'], $varsArray['source'], $array);
-                                    
                                     die;
                                     //U($_REQUEST['path'], $_REQUEST['vars']);
                                 }
@@ -130,29 +132,23 @@ class UserController extends BaseController {
                             }
                         } else {
 
-
                             $this->displayMessage('用户已经注册!');
                         }
                     } else {
-
 
                         $this->displayMessage('用户名不能为空!');
                     }
                 } else {
 
-
                     $this->displayMessage('手机格式不正确!');
                 }
             } else {
-
-
 
                 $this->displayMessage('手机号码必须存在!');
 
                 die;
             }
         } else {
-
 
             $this->displayMessage('open_id 不存在  请重新从微信公众平台中进入!');
 
@@ -216,6 +212,8 @@ class UserController extends BaseController {
      * 签到
      */
     public function registration() {
+
+        $this->able_register();
 
         $array = $this->userRegistration();
 

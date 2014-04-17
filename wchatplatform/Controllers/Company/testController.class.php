@@ -14,22 +14,20 @@ class TestController extends BaseController {
             $this->userOpenId = $_REQUEST['open_id'];
         }
 
-       
+
 
         $this->assign('open_id', $this->userOpenId);
     }
-
 
     public function index() {
 
         $this->display();
     }
-    
-    public function test(){
-        
-        R('User/order/getAllOrder',array('company','ocpOot-COx7UruiqEfag_Lny7dlc'));
-    }
 
+    public function test() {
+
+        R('User/order/getAllOrder', array('company', 'ocpOot-COx7UruiqEfag_Lny7dlc'));
+    }
 
 }
 

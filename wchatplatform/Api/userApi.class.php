@@ -26,7 +26,6 @@ class userApi {
         }
     }
 
-
     /**
      * 用户是否注册
      * @param int $open_id     用户在微信公众平台的唯一标识
@@ -41,15 +40,13 @@ class userApi {
             $userInfoJson = transferData(APIURL . "/user/able_user", "post", $data);
             $userInfoArray = json_decode($userInfoJson, true);
 
-           
 
-            
+
+
             return $userInfoArray;
         }
     }
 
-
-    
     /**
      * 获取用户优惠券
      * @param type $open_id

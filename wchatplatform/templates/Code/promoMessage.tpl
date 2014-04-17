@@ -80,15 +80,15 @@
             <ul >
                 {if $groupBy eq ""}
                     <li ><a class="titleTagActive">未使用</a></li>
-                    <li><a href="{$WebSiteUrl}?g=company&a=code&v=promoMessage&groupBy=used">已兑换</a></li>
-                    <li><a href="{$WebSiteUrl}?g=company&a=code&v=promoMessage&groupBy=timeOut">已过期</a></li>
+                    <li><a href="{$WebSiteUrl}?g=company&a=code&v=promoMessage&groupBy=used&open_id={$open_id}">已兑换</a></li>
+                    <li><a href="{$WebSiteUrl}?g=company&a=code&v=promoMessage&groupBy=timeOut&open_id={$open_id}">已过期</a></li>
                 {else if $groupBy eq "used"}
-                    <li ><a href="{$WebSiteUrl}?g=company&a=code&v=promoMessage">未使用</a></li>
+                    <li ><a href="{$WebSiteUrl}?g=company&a=code&v=promoMessage&open_id={$open_id}">未使用</a></li>
                     <li><a class="titleTagActive" >已兑换</a></li>
-                    <li><a href="{$WebSiteUrl}?g=company&a=code&v=promoMessage&groupBy=timeOut">已过期</a></li>
+                    <li><a href="{$WebSiteUrl}?g=company&a=code&v=promoMessage&groupBy=timeOut&open_id={$open_id}">已过期</a></li>
                 {else if $groupBy eq "timeOut"}
-                    <li ><a href="{$WebSiteUrl}?g=company&a=code&v=promoMessage">未使用</a></li>
-                    <li><a href="{$WebSiteUrl}?g=company&a=code&v=promoMessage&groupBy=used">已兑换</a></li>
+                    <li ><a href="{$WebSiteUrl}?g=company&a=code&v=promoMessage&open_id={$open_id}">未使用</a></li>
+                    <li><a href="{$WebSiteUrl}?g=company&a=code&v=promoMessage&groupBy=used&open_id={$open_id}">已兑换</a></li>
                     <li><a class="titleTagActive"  >已过期</a></li>
                 {/if}
             </ul>
@@ -161,8 +161,21 @@
                             <div class="serviceNumStyle" style="display: inline-block">9</div><div style="display: inline-block;font-size: 20px;">折</div>
                         </div>
                         <div class="whereFrom">
-                            来自：
-                            {}
+                            
+                           
+                             来自：
+                            {if $codeRecord.$key.state == 1}
+                            
+                            赠送
+                            {else if $codeRecord.$key.state == 2}
+                               已赠送
+                               
+                             {else}
+                                 
+                               刮刮卡
+                             {/if}
+                            
+                            
                         </div>
                         <div style="height:  10px;"></div>
                         <div style="border-bottom: 1px dashed #bbb;height: 1px; "></div>
@@ -190,7 +203,17 @@
                             <div class="serviceNumStyle" style="display: inline-block">7</div><div style="display: inline-block;font-size: 20px;">折</div>
                         </div>
                         <div class="whereFrom">
-                            来自：刮刮卡
+                              来自：
+                            {if $codeRecord.$key.state == 1}
+                            
+                            赠送
+                            {else if $codeRecord.$key.state == 2}
+                               已赠送
+                               
+                             {else}
+                                 
+                               刮刮卡
+                             {/if}
                         </div>
                         <div style="height:  10px;"></div>
                         <div style="border-bottom: 1px dashed #bbb;height: 1px; "></div>

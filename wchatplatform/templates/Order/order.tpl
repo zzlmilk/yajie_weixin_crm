@@ -179,14 +179,14 @@
 
         </div>
 
-        <div id="Bk" style=" display: none;width: 100%;height: 100%;background-color:black;opacity: 0.5; position: absolute; left: 0; top: 0;z-index: 100;"></div>
+      {*  <div id="Bk" style=" display: none;width: 100%;height: 100%;background-color:black;opacity: 0.5; position: absolute; left: 0; top: 0;z-index: 100;"></div>
         <div id="context" style=" overflow:scroll;display: none;width: 70%;margin: 0 auto; background-color: white; position:fixed;height:80%; z-index: 150;top:90%; left: 15%">
             <div style="background-color: white;width: 100%; text-align: center">
                 <ul class="no-list-type" id="porpleNumList">
 
                 </ul>
             </div>
-        </div>
+        </div>*}
         {if $checkReturn eq 1}
             <input id="selectValueCache" value="{$returnVal.orderMerchandise}" type="hidden" >
         {else}

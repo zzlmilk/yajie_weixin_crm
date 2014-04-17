@@ -1,18 +1,20 @@
 <?php
 
-class QuesionRecordModel extends basic{
+class QuesionRecordModel extends basic {
 
-		public function __construct() {
+    public function __construct() {
 
-		$this->child_name = 'quesion_record';
+        $this->child_name = 'quesion_record';
 
-		parent::__construct();
-
+        parent::__construct();
     }
 
-    public function addData($field,$data,$user){
+    public function addData($field, $data, $user) {
+        
+        
+        
 
-    	$field_array = explode(',', $field);
+        $field_array = explode(',', $field);
 
         $array = array();
 
@@ -20,37 +22,33 @@ class QuesionRecordModel extends basic{
 
         foreach ($field_array as $key => $value) {
 
-            $this->addCondition('user_id = '.$user['user_id'].' and question_id = '.$value);
+            $this->addCondition('user_id = ' . $user['user_id'] . ' and question_id = ' . $value,1);
 
             $this->initialize();
 
-            if($this->vars_number <= 0){
+            if ($this->vars_number <= 0) {
 
-                 $insertData['quesion_answer'] = json_encode($data['quesion_'.$value]);
+                $insertData['quesion_answer'] = json_encode($data['quesion_' . $value]);
 
-            $insertData['question_id'] = $value;
+                $insertData['question_id'] = $value;
 
-            $insertData['user_id'] = $user['user_id'];
+                $insertData['user_id'] = $user['user_id'];
 
-            $insertData['ctime'] = time();
+                $insertData['ctime'] = time();
 
-            $id = $this->insert($insertData);
+                $id = $this->insert($insertData);
 
-            if($id > 0){
+                if ($id > 0) {
 
-                $array[$value] = arrayToObject($insertData,0);
+                    $array[$value] = arrayToObject($insertData, 0);
 
-                $k++;
-
+                    $k++;
+                }
             }
-            }
-            
         }
 
         return $array;
-
     }
-
 
 }
 

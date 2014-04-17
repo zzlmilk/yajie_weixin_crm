@@ -6,7 +6,7 @@
 
 var webUrl = '{$websiteUrl}'
 
-function sendGiftAward(open_id, id,type) {
+function sendGiftAward(open_id, id, type) {
 
     $.ajax({
         url: webUrl + "?g=company&a=game&v=getBigWheeSendAward",
@@ -14,7 +14,7 @@ function sendGiftAward(open_id, id,type) {
         data: {
             open_id: open_id,
             gift_id: id,
-            type:type,
+            type: type,
         },
         success: function(res) {
 
@@ -28,6 +28,18 @@ function sendGiftAward(open_id, id,type) {
             $('#myModal').modal('show');
 
         },
+        error: function(xhr, textStatus) {
+            if (textStatus == 'timeout') {
+                //处理超时的逻辑
+
+                alert('网络超时');
+
+            }
+            else {
+                //其他错误的逻辑
+            }
+        },
+        timeout: 2000
     })
 
 }

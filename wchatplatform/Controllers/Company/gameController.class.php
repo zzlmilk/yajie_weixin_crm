@@ -2,8 +2,6 @@
 
 class gameController extends BaseController {
 
-    private $userOpenId;
-
     public function __construct() {
 
         header("Content-type:text/html;charset=utf-8");
@@ -42,12 +40,13 @@ class gameController extends BaseController {
 
     public function bigWheelPage() {
 
-          $this->able_register();
+        $this->able_register();
         $this->display();
     }
 
     public function guaguaka() {
-          $this->able_register();
+
+        $this->able_register();
         $scratchCard = new scratchCard();
         $ScratchCardResults = $scratchCard->getScratchCardResults("company");
 
@@ -59,7 +58,7 @@ class gameController extends BaseController {
     }
 
     public function guaguakaGetLottery() {
-        
+
         if (isset($_REQUEST['gift_id'])) {
             $scratchCard = new scratchCard();
             $Results = $scratchCard->getScratchCardReceviceAward("company", $this->userOpenId, $_REQUEST['gift_id']);
@@ -91,6 +90,8 @@ class gameController extends BaseController {
      * 问卷 页面显示
      */
     public function Questionnaire() {
+
+        $this->able_register();
 
         $all = $this->getQuesion();
 
@@ -146,7 +147,9 @@ class gameController extends BaseController {
 
             if (empty($_REQUEST[$value])) {
 
-                echo '第' . $value . '题必须填写';
+                $state = '第' . $value . '题必须填写';
+
+                echo 'alert("' . $state . '");';
 
                 die;
             }
@@ -158,7 +161,10 @@ class gameController extends BaseController {
 
         $quesionResultArray = json_decode($quesionResultJson, true);
 
-        echo 'success';
+        $url = U('company/user/userCenter', array('open_id' => $_REQUEST['open_id']), 1);
+
+
+        echo 'window.location.href="' . $url . '"';
     }
 
     public function applyAction() {
@@ -203,6 +209,9 @@ class gameController extends BaseController {
     }
 
     public function getGameAward() {
+        
+        
+      
 
         if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['gift_id'])) {
 
@@ -295,9 +304,9 @@ class gameController extends BaseController {
 
         $this->setDir('Public');
         if (!empty($_REQUEST['gift_id']) && !empty($_REQUEST['open_id'])) {
+            
             $gift = new giftApi();
             $awardResult = $gift->sendUserGift($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['type']);
-
 
             /**
              * 如存在 则 兑换的内容为虚拟的内容

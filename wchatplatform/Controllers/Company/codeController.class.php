@@ -177,26 +177,40 @@ class codeController extends BaseController {
     }
 
     public function promoMessage() {
-        $nowTime = time();
+        $nowTime = mktime(0,0,0);
         $postDate["source"] = "company";
         $postDate['open_id'] = $this->userOpenId;
-        
+
         $groupBy = isset($_GET["groupBy"]) ? $_GET["groupBy"] : "";
         $userCode = transferData(APIURL . "/code/get_user_code", "post", $postDate);
         $userCode = json_decode($userCode, true);
+        
+        
+       
+        $error = new errorApi();
+
+        $error->JudgeError($userCode);
         if (isset($userCode["error"])) {
             $this->assign("codeInfo", "error");
         } else if ($userCode == "") {
             $this->assign("codeInfo", "error");
         } else {
             $codeInfo = array();
+            
+           
+            $codeRecord = array();
             if (!isset($groupBy) || $groupBy == "") {
                 foreach ($userCode as $key => $value) {
-                    $codeEndTime = $value["code_record"]['code_end_time'];
+                    $codeEndTime = $value["code_info"]['code_end_time'];
+                 
                     if ($value['code_info']["code_state"] == "1" && $codeEndTime > $nowTime) {
                         $codeCreateTime = $value["code_record"]['ctime'];
                         $value['code_info']["createTime"] = $codeCreateTime;
+                        
+                        
+                   
                         array_push($codeInfo, $value['code_info']);
+                        array_push($codeRecord, $value['code_record']);
                     }
                 }
                 $this->assign("groupBy", "");
@@ -206,25 +220,31 @@ class codeController extends BaseController {
                         $codeCreateTime = $value["code_record"]['ctime'];
                         $value['code_info']["createTime"] = $codeCreateTime;
                         array_push($codeInfo, $value['code_info']);
+                        array_push($codeRecord, $value['code_record']);
                         $this->assign("groupBy", $_GET["groupBy"]);
                     }
                 }
             } else if ($groupBy == "timeOut") {
                 foreach ($userCode as $key => $value) {
-                    $codeEndTime = $value["code_record"]['code_end_time'];
+                    $codeEndTime = $value["code_info"]['code_end_time'];
                     if ($codeEndTime < $nowTime) {
                         $codeCreateTime = $value["code_record"]['ctime'];
                         $value['code_info']["createTime"] = $codeCreateTime;
                         array_push($codeInfo, $value['code_info']);
+                        array_push($codeRecord, $value['code_record']);
                         $this->assign("groupBy", $_GET["groupBy"]);
                     }
                 }
             }
-
+            
+          
             if (empty($codeInfo)) {
                 $codeInfo = "";
             }
+            
+           
             $this->assign("codeInfo", $codeInfo);
+            $this->assign("codeRecord", $codeRecord);
             $this->assign("nowTime", $nowTime);
         }
         $this->assign("groupBy", $groupBy);

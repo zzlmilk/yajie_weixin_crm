@@ -95,70 +95,79 @@
     <script src="{$WebSiteUrlPublic}/company/script/rexexTest.js"></script>
     <script>
         //省市切换
-        $("#province").change(function(){
-        $.post(locationURL,
-        {
-            areaId:$(this).val()
-        },
-        function(rData){
-        var rDataLength=rData.length;
-        $("#town").html("");
-        var townHTMLString="";
-        for(var i=0;i<rDataLength;i++){
-        townHTMLString+="<option value='"+rData[i]['area_id']+"'>";
-        townHTMLString+=rData[i]["title"];
-        townHTMLString+="</option>";
-    }
-    $("#town").html(townHTMLString);
-    $.post(locationURL,
-        {
-    areaId:$("#town").val()
-},
-function(rData){
-var rDataLength=rData.length;
-$("#area").html("");
-var townHTMLString="";
-for(var i=0;i<rDataLength;i++){
-townHTMLString+="<option value='"+rData[i]['area_id']+"'>";
-townHTMLString+=rData[i]["title"];
-townHTMLString+="</option>";
-}
-$("#area").html(townHTMLString);
-});
-});
-});
+        $("#province").change(function() {
+            $.post(locationURL,
+                    {
+                        areaId: $(this).val()
+                    },
+            function(rData) {
+                var rDataLength = rData.length;
+                $("#town").html("");
+                var townHTMLString = "";
+                for (var i = 0; i < rDataLength; i++) {
+                    townHTMLString += "<option value='" + rData[i]['area_id'] + "'>";
+                    townHTMLString += rData[i]["title"];
+                    townHTMLString += "</option>";
+                }
+                $("#town").html(townHTMLString);
+                $.post(locationURL,
+                        {
+                            areaId: $("#town").val()
+                        },
+                function(rData) {
+                    var rDataLength = rData.length;
+                    $("#area").html("");
+                    var townHTMLString = "";
+                    for (var i = 0; i < rDataLength; i++) {
+                        townHTMLString += "<option value='" + rData[i]['area_id'] + "'>";
+                        townHTMLString += rData[i]["title"];
+                        townHTMLString += "</option>";
+                    }
+                    $("#area").html(townHTMLString);
+                });
+            });
+        });
 //区切换
-$("#town").change(function(){
-$.post(locationURL,
-        {
-areaId:$(this).val()
-},
-function(rData){
-var rDataLength=rData.length;
-$("#area").html("");
-var townHTMLString="";
-for(var i=0;i<rDataLength;i++){
-townHTMLString+="<option value='"+rData[i]['area_id']+"'>";
-townHTMLString+=rData[i]["title"];
-townHTMLString+="</option>";
-}
-$("#area").html(townHTMLString);
-});
-})
-$("#submitOrder").click(function(){
-var errorMessage="";
-var alertFlag=false;
-if($("#user_phone").val()==""){
-errorMessage+="手机号码不能为空 <br>";
-alertFlag=true;
-}
-else if(!getMobilPhoneRegex($("#user_phone").val())){
-errorMessage+="手机号码错误 <br>";
-alertFlag=true;
-}
-if(alertFlag){
-alert(errorMessage);
-return false;}
-})
+        $("#town").change(function() {
+            $.post(locationURL,
+                    {
+                        areaId: $(this).val()
+                    },
+            function(rData) {
+                var rDataLength = rData.length;
+                $("#area").html("");
+                var townHTMLString = "";
+                for (var i = 0; i < rDataLength; i++) {
+                    townHTMLString += "<option value='" + rData[i]['area_id'] + "'>";
+                    townHTMLString += rData[i]["title"];
+                    townHTMLString += "</option>";
+                }
+                $("#area").html(townHTMLString);
+            });
+        })
+        $("#submitOrder").click(function() {
+            var errorMessage = "";
+            var alertFlag = false;
+            if ($("#user_phone").val() == "") {
+                errorMessage += "手机号码不能为空 \n";
+                alertFlag = true;
+            }
+            if ($("#real_name").val() == "") {
+                errorMessage += "真实姓名不能为空\n";
+                alertFlag = true;
+            }
+             if ($("#street").val() == "") {
+                errorMessage += "居住地址不能为空 \n";
+                alertFlag = true;
+            }
+            else if (!getMobilPhoneRegex($("#user_phone").val())) {
+                errorMessage += "手机号码错误 \n";
+                alertFlag = true;
+            }
+            if (alertFlag) {
+                alert(errorMessage);
+                return false;
+            }
+        })
     </script>
 </html>

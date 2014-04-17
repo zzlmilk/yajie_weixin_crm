@@ -10,7 +10,7 @@
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css"> 
-         <script src="{$WebSiteUrlPublic}/company/script/giftAward.js"></script>
+        <script src="{$WebSiteUrlPublic}/company/script/giftAward.js"></script>
         <script type="text/javascript" src="{$WebSiteUrlPublic}/company/ggk/wScratchPad.js"></script>  
     </head>
     <body id='bobyGame'>
@@ -34,13 +34,13 @@
         <input type="hidden" value="{$websiteurl}" id="apiRoute" >
         <input type="hidden" value="{$open_id}" id="open_id" >
         <div id="wScratchPad3" class="wScratchPad3"></div>
-        
+
         <script type="text/javascript">
-            
-             var webUrl = '{$websiteUrl}';
-             
-             
-            
+
+            var webUrl = '{$websiteUrl}';
+
+
+
             //初始化获奖
             var picTitle = "xx.jpg";
             var win = $(window).width();
@@ -74,29 +74,30 @@
             $("#reloadPage").click(function() {
                 location.reload();
             });
-          
 
-        $("#getLottery").click(function(){
-        $.post(
-        requestUrl,
-        {
-        gift_id:giftId,
-        open_id:$("#open_id").val()
-    },
-    function(rData){
-    if(rData=="1"){
-    $("#getLottery").hide();
-    $(".modal-body").html();
-    $(".modal-body").html("发生错误");
-}else{
-var message="恭喜你获得"+rData['gift_integration']+"积分";
-$("#getLottery").hide();
-$(".modal-body").html();
-$(".modal-body").html(message);}
-    
-}
-);
-});
+
+            $("#getLottery").click(function() {
+                $.post(
+                        requestUrl,
+                        {
+                            gift_id: giftId,
+                            open_id: $("#open_id").val()
+                        },
+                function(rData) {
+                    if (rData == "1") {
+                        $("#getLottery").hide();
+                        $(".modal-body").html();
+                        $(".modal-body").html("发生错误");
+                    } else {
+                        var message = "恭喜你获得" + rData['gift_integration'] + "积分";
+                        $("#getLottery").hide();
+                        $(".modal-body").html();
+                        $(".modal-body").html(message);
+                    }
+
+                }
+                );
+            });
 //刮刮卡
 
             var WebSiteUrlPublic = '{$WebSiteUrlPublic}';
@@ -113,17 +114,17 @@ $(".modal-body").html(message);}
                             var changeSize = win / cent;
                             var changeSize = (changeSize / 0.4) * 10;
                             if (percent > changeSize) {
-                                    
-                                 alertFlag = false;
-                                 
-                                 $.ajax({
+
+                                alertFlag = false;
+
+                                $.ajax({
                                     url: webUrl + "?g=company&a=game&v=getGameAward",
                                     type: "get",
                                     data: {
                                         gift_id: giftId,
                                         open_id: $('#open_id').val(),
-                                        gift_type:2
-                                       
+                                        gift_type: 2
+
                                     },
                                     success: function(res) {
 
@@ -133,6 +134,19 @@ $(".modal-body").html(message);}
 
 
                                     }
+                                    ,
+                                    error: function(xhr, textStatus) {
+                                        if (textStatus == 'timeout') {
+                                            //处理超时的逻辑
+
+                                            alert('网络超时');
+
+                                        }
+                                        else {
+                                            //其他错误的逻辑
+                                        }
+                                    },
+                                    timeout: 2000
                                 })
                                 this.clear();
                             }

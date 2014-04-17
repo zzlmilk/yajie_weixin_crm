@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-11 11:47:35
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-16 15:48:31
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/User/userCenter.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1193472165534765d7e5f947-28809158%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1374933901534e35cf1c7af0-78319012%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '20d2e309a97bae8d1f3f101c3bc238e9c7ebe588' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/User/userCenter.tpl',
-      1 => 1397112159,
+      1 => 1397551373,
     ),
   ),
-  'nocache_hash' => '1193472165534765d7e5f947-28809158',
+  'nocache_hash' => '1374933901534e35cf1c7af0-78319012',
   'function' => 
   array (
   ),
@@ -143,9 +143,11 @@ $_smarty_tpl->decodeProperties(array (
                 </li>
 
                 <li class="table-view-cell media">
-                    <a class="push-right" href="inbox.html" data-transition="slide-in">
+                    <a class="push-right"  data-transition="slide-in">
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-                        <div class="media-body">
+                        <div class="media-body"  onclick='window.location.href = "<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
+?g=company&a=exchange&v=getUserExchangeRecord&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+"'>
                             兑换信息
                         </div>
                     </a>
@@ -155,7 +157,7 @@ $_smarty_tpl->decodeProperties(array (
                     <a class="push-right"  data-transition="slide-in">
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
                         <div class="media-body" style=' cursor: pointer; ' onclick='window.location.href = "<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
-?g=company&a=user&v=orderCheck&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+?g=company&a=order&v=orderCheck&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
 "'>
                             订单信息
                         </div>
@@ -176,17 +178,6 @@ $_smarty_tpl->decodeProperties(array (
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
                         <div class="media-body">
                             我的任务
-                        </div>
-                    </a>
-                </li>
-                
-                 <li class="table-view-cell media">
-                    <a class="push-right" href="inbox.html" data-transition="slide-in">
-                        <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-                        <div class="media-body"  onclick='window.location.href = "<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
-?g=company&a=code&v=giveCode&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
-"'>
-                            我要赠送
                         </div>
                     </a>
                 </li>

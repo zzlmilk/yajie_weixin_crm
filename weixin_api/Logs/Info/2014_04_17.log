@@ -1,0 +1,132 @@
+Apr 17 12:04:18 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 17 12:04:18 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 17 12:04:18 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":11}
+Apr 17 12:04:47 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 17 12:04:47 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 17 12:04:47 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":3}
+Apr 17 12:05:25 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 17 12:05:25 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 17 12:05:25 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":10}
+Apr 17 12:06:05 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 17 12:06:05 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 17 12:06:05 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":12}
+Apr 17 12:06:16 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 17 12:06:16 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 17 12:06:16 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":7}
+Apr 17 12:06:35 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 17 12:06:35 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 17 12:06:35 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":9}
+Apr 17 12:06:58 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 17 12:06:58 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 17 12:06:58 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":8}
+Apr 17 12:07:24 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 17 12:07:24 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 17 12:07:24 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":4}
+Apr 17 12:10:19 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:10:19 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:10:19 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"jinglingchang","user_phone":"13524446830","sex":"2","birthday":"627321600","user_money":"0","user_integration":"701700","user_state":"0","province_id":null,"city_id":null,"area_id":null,"street":null,"real_name":null,"address_phone":"2147483647"},"weixin_user":{"subscribe":"1","openid":"ocpOot-COx7UruiqEfag_Lny7dlc","nickname":"\u7fdf\u6653\u5e73","sex":"1","language":"zh_CN","city":"Zhabei","province":"Shanghai","country":"China","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/XO8x9Zlj37jegeeurt8SKHnauY0SiaDkhr32sILKRpXjYujIrTzX2ecfP6BvKmFURPzH5034VvA3OmaO2Fw4oCuY5KX2CiaLfH\/0","subscribe_time":"1395451236","weixin_user_id":"1"}}
+Apr 17 12:10:20 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 17 12:10:20 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 17 12:10:20 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":11}
+Apr 17 12:10:25 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_id = 11 and gift_type = 1     
+Apr 17 12:10:25 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+{"error":{"error_status":70001,"status_info":"\u65e0\u793c\u54c1\u4fe1\u606f"}}
+Apr 17 12:10:29 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:10:29 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:10:29 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"jinglingchang","user_phone":"13524446830","sex":"2","birthday":"627321600","user_money":"0","user_integration":"701700","user_state":"0","province_id":null,"city_id":null,"area_id":null,"street":null,"real_name":null,"address_phone":"2147483647"},"weixin_user":{"subscribe":"1","openid":"ocpOot-COx7UruiqEfag_Lny7dlc","nickname":"\u7fdf\u6653\u5e73","sex":"1","language":"zh_CN","city":"Zhabei","province":"Shanghai","country":"China","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/XO8x9Zlj37jegeeurt8SKHnauY0SiaDkhr32sILKRpXjYujIrTzX2ecfP6BvKmFURPzH5034VvA3OmaO2Fw4oCuY5KX2CiaLfH\/0","subscribe_time":"1395451236","weixin_user_id":"1"}}
+Apr 17 12:11:19 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:11:19 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:11:19 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"jinglingchang","user_phone":"13524446830","sex":"2","birthday":"627321600","user_money":"0","user_integration":"701700","user_state":"0","province_id":null,"city_id":null,"area_id":null,"street":null,"real_name":null,"address_phone":"2147483647"},"weixin_user":{"subscribe":"1","openid":"ocpOot-COx7UruiqEfag_Lny7dlc","nickname":"\u7fdf\u6653\u5e73","sex":"1","language":"zh_CN","city":"Zhabei","province":"Shanghai","country":"China","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/XO8x9Zlj37jegeeurt8SKHnauY0SiaDkhr32sILKRpXjYujIrTzX2ecfP6BvKmFURPzH5034VvA3OmaO2Fw4oCuY5KX2CiaLfH\/0","subscribe_time":"1395451236","weixin_user_id":"1"}}
+Apr 17 12:11:21 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 17 12:11:21 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 17 12:11:21 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":1}
+Apr 17 12:11:25 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_id = 1 and gift_type = 1     
+Apr 17 12:11:25 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+{"gift_id":"1","gift_type":"1","gift_award_type":"0","gift_integration":"100000","gift_exchange_id":"2"}
+Apr 17 12:11:28 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/recevice_award
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_id = 1 and gift_type = 1     
+Apr 17 12:11:28 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/recevice_award
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:11:28 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/recevice_award
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:11:28 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/recevice_award
+UPDATE weixin_company.user SET user_integration='801700' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Apr 17 12:11:28 [SQL]__192.168.0.102_/yajie_weixin_crm/weixin_api/gift/recevice_award
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','100000','gift','','1397707888')
+Apr 17 12:11:28 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/recevice_award
+{"user":{"user_integration":801700},"record":{"user_id":"1","record_type":1,"fraction":"100000","source":"gift","exchange_id":"","create_time":1397707888}}
+Apr 17 12:11:29 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:11:29 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:11:29 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"jinglingchang","user_phone":"13524446830","sex":"2","birthday":"627321600","user_money":"0","user_integration":"801700","user_state":"0","province_id":null,"city_id":null,"area_id":null,"street":null,"real_name":null,"address_phone":"2147483647"},"weixin_user":{"subscribe":"1","openid":"ocpOot-COx7UruiqEfag_Lny7dlc","nickname":"\u7fdf\u6653\u5e73","sex":"1","language":"zh_CN","city":"Zhabei","province":"Shanghai","country":"China","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/XO8x9Zlj37jegeeurt8SKHnauY0SiaDkhr32sILKRpXjYujIrTzX2ecfP6BvKmFURPzH5034VvA3OmaO2Fw4oCuY5KX2CiaLfH\/0","subscribe_time":"1395451236","weixin_user_id":"1"}}
+Apr 17 12:12:30 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:12:30 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:12:30 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"jinglingchang","user_phone":"13524446830","sex":"2","birthday":"627321600","user_money":"0","user_integration":"801700","user_state":"0","province_id":null,"city_id":null,"area_id":null,"street":null,"real_name":null,"address_phone":"2147483647"},"weixin_user":{"subscribe":"1","openid":"ocpOot-COx7UruiqEfag_Lny7dlc","nickname":"\u7fdf\u6653\u5e73","sex":"1","language":"zh_CN","city":"Zhabei","province":"Shanghai","country":"China","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/XO8x9Zlj37jegeeurt8SKHnauY0SiaDkhr32sILKRpXjYujIrTzX2ecfP6BvKmFURPzH5034VvA3OmaO2Fw4oCuY5KX2CiaLfH\/0","subscribe_time":"1395451236","weixin_user_id":"1"}}
+Apr 17 12:14:18 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:14:18 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:14:18 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"jinglingchang","user_phone":"13524446830","sex":"2","birthday":"627321600","user_money":"0","user_integration":"801700","user_state":"0","province_id":null,"city_id":null,"area_id":null,"street":null,"real_name":null,"address_phone":"2147483647"},"weixin_user":{"subscribe":"1","openid":"ocpOot-COx7UruiqEfag_Lny7dlc","nickname":"\u7fdf\u6653\u5e73","sex":"1","language":"zh_CN","city":"Zhabei","province":"Shanghai","country":"China","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/XO8x9Zlj37jegeeurt8SKHnauY0SiaDkhr32sILKRpXjYujIrTzX2ecfP6BvKmFURPzH5034VvA3OmaO2Fw4oCuY5KX2CiaLfH\/0","subscribe_time":"1395451236","weixin_user_id":"1"}}
+Apr 17 12:14:19 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift_setting  WHERE 1  AND gift_type = 1     
+Apr 17 12:14:19 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_type = 1     
+Apr 17 12:14:19 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=1234
+{"gift_id":1}
+Apr 17 12:14:23 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_company.gift  WHERE 1  AND gift_id = 1 and gift_type = 1     
+Apr 17 12:14:23 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+{"gift_id":"1","gift_type":"1","gift_award_type":"0","gift_integration":"100000","gift_exchange_id":"2"}
+Apr 17 12:15:12 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:15:12 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 17 12:15:12 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"1","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"jinglingchang","user_phone":"13524446830","sex":"2","birthday":"627321600","user_money":"0","user_integration":"801700","user_state":"0","province_id":null,"city_id":null,"area_id":null,"street":null,"real_name":null,"address_phone":"2147483647"},"weixin_user":{"subscribe":"1","openid":"ocpOot-COx7UruiqEfag_Lny7dlc","nickname":"\u7fdf\u6653\u5e73","sex":"1","language":"zh_CN","city":"Zhabei","province":"Shanghai","country":"China","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/XO8x9Zlj37jegeeurt8SKHnauY0SiaDkhr32sILKRpXjYujIrTzX2ecfP6BvKmFURPzH5034VvA3OmaO2Fw4oCuY5KX2CiaLfH\/0","subscribe_time":"1395451236","weixin_user_id":"1"}}

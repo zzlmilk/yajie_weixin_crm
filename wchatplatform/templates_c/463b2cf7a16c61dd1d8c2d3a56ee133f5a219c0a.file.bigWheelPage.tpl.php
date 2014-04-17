@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-02 18:11:10
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-17 12:11:19
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Game/bigWheelPage.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:394115202533be23ef3fc35-59437135%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1148629890534f5467b694c4-54854112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '463b2cf7a16c61dd1d8c2d3a56ee133f5a219c0a' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Game/bigWheelPage.tpl',
-      1 => 1396433177,
+      1 => 1397707838,
     ),
   ),
-  'nocache_hash' => '394115202533be23ef3fc35-59437135',
+  'nocache_hash' => '1148629890534f5467b694c4-54854112',
   'function' => 
   array (
   ),
@@ -120,25 +120,30 @@ $_smarty_tpl->decodeProperties(array (
                     } else {
                         running = false;
                         setTimeout(function() {
+                            
+                         
                             if (prize != null) {
                                 $.ajax({
                                     url: webUrl + "?g=company&a=game&v=getGameAward",
                                     type: "get",
+                                    
+                                   
                                     data: {
                                         gift_id: prize,
                                         open_id: $('#open_id').val(),
-                                        gift_type:1,
+                                        gift_type: 1,
                                     },
                                     success: function(res) {
 
-
+                                     
                                         $('#bobyGame').append(res);
                                         $('#myModal').modal();
 
                                     },
+                                    timeout: 2000
                                 })
 
-                            } 
+                            }
                         }, 200)
                     }
                 }
@@ -174,6 +179,8 @@ $_smarty_tpl->decodeProperties(array (
                             }, 1)
                         },
                         success: function(data) {
+                            
+                          
 
                             gift_id = data.gift_id;
 

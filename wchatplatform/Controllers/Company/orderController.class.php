@@ -12,29 +12,30 @@
  * @author zhaixiaoping
  */
 class orderController extends BaseController {
+
     //put your code here
 
-  public function __construct() {
-        
+    public function __construct() {
+
 
         header("Content-type:text/html;charset=utf-8");
 
         if (!empty($_REQUEST['open_id'])) {
 
             $this->userOpenId = $_REQUEST['open_id'];
-
         } else {
             //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';         
         }
 
         $this->assign('open_id', $this->userOpenId);
     }
-        /**
+
+    /**
      * 下订单 和修改订单
      */
     public function order() {
 
-          $this->able_register();
+        $this->able_register();
         //$this->userOpenId = $_REQUEST['open_id'];
         if (isset($_GET['checkReturn'])) {
             $this->assign("checkReturn", $_GET['checkReturn']);
@@ -43,7 +44,7 @@ class orderController extends BaseController {
         $selectReturnVal = transferData(APIURL . "/order/get_merchandise", "get");
         $selectVal = json_decode($selectReturnVal, true);
 
-         $error = new errorApi();
+        $error = new errorApi();
 
         $error->JudgeError($selectVal);
         //var_dump($selectReturnVal);
@@ -57,7 +58,7 @@ class orderController extends BaseController {
      */
     public function orderCheck() {
 
-          $this->able_register();
+        $this->able_register();
         //$this->userOpenId = $_REQUEST['open_id'];
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //预处理post发送的值
@@ -75,9 +76,9 @@ class orderController extends BaseController {
             $merchandise = transferData(APIURL . "/order/get_merchandise_info", "post", $merchandiseDate);
             $merchandise = json_decode($merchandise, TRUE);
 
-             $error = new errorApi();
+            $error = new errorApi();
 
-        $error->JudgeError($merchandise);
+            $error->JudgeError($merchandise);
 
             $returnVal['merchandiseIteams'] = $merchandise['merchandise']['merchandise_name'];
             $returnVal['needMoney'] = $merchandise['merchandise']['merchandise_money'];
@@ -96,18 +97,19 @@ class orderController extends BaseController {
                 $orderItem = json_decode($userJsonData, true);
                 $error = new errorApi();
 
-                 $error->JudgeError($orderItem);
+                $error->JudgeError($orderItem);
 
-              
-                    $orderCode = $orderItem["order"]['order_code'];
-                    $postDate["order_code"] = $orderCode;
-                    $reviseOrder = transferData(APIURL . "/order/revise_order", "post", $postDate);
-                    $orderChangeIsScuess = json_decode($reviseOrder, TRUE);
-               
+
+                $orderCode = $orderItem["order"]['order_code'];
+                $postDate["order_code"] = $orderCode;
+                $reviseOrder = transferData(APIURL . "/order/revise_order", "post", $postDate);
+                $orderChangeIsScuess = json_decode($reviseOrder, TRUE);
+
                 if ($orderChangeIsScuess["res"] == "1") {
                     
                 } else {
-                    echo "failed";
+
+                    $this->displayMessage('failed');
                     die;
                 }
             } else {//插入订单
@@ -116,13 +118,14 @@ class orderController extends BaseController {
 
                 $error = new errorApi();
 
-                 $error->JudgeError($thisUserData);
+                $error->JudgeError($thisUserData);
 
                 if ($thisUserData["error"]["error_status"] == "30005") {
                     $this->errorMessage = 1;
                     return $this->cancelOrder();
                 } else if ($thisUserData["error"]["error_status"] == "30006") {
-                    echo $thisUserData["error"]["status_info"];
+                  
+                     $this->displayMessage($thisUserData["error"]["status_info"]);
                     return;
                 }
             }
@@ -132,7 +135,9 @@ class orderController extends BaseController {
             $userJsonData = transferData(APIURL . "/order/get_order", "post", $userOrder);
             $orderItem = json_decode($userJsonData, true);
             if (empty($orderItem['order'])) {
-                echo "暂无订单";
+
+                $this->displayMessage('暂无订单');
+
                 die;
             }
 
@@ -168,7 +173,7 @@ class orderController extends BaseController {
     //取消订单
     public function cancelOrder() {
 
-          $this->able_register();
+        $this->able_register();
 
         //$this->userOpenId = $_REQUEST['open_id'];
         if ($this->errorMessage != "") {
@@ -189,16 +194,26 @@ class orderController extends BaseController {
             $reviseOrderStateReturnJsonValue = transferData(APIURL . "/order/revise_order_state", "post", $userOrderChange); //取消订单
 
             $reviseOrderStateReturnValue = json_decode($reviseOrderStateReturnJsonValue, true);
+
+            $error = new errorApi();
+
+            $error->JudgeError($reviseOrderStateReturnValue);
+
             if ($reviseOrderStateReturnValue['res'] == '1') {
-                echo "取消成功<a href='" . WebSiteUrl . "?g=company&a=user&v=order'></a>";
-            } else if ($reviseOrderStateReturnValue['error'] != "") {
-                echo "取消失败，失败代码：" . $reviseOrderStateReturnValue['error']['error_status'] . "<br>失败信息" . $reviseOrderStateReturnValue['error']['status_info'];
+
+                $this->displayMessage("取消成功<a href='" . WebSiteUrl . "?g=company&a=user&v=order'>返回</a>");
             }
         } else {
             $activateOrderJsonValue = transferData(APIURL . "/order/get_order", "post", $userGetOrder);
             $activateOrderValue = json_decode($activateOrderJsonValue, TRUE);
+
+            $error = new errorApi();
+
+            $error->JudgeError($reviseOrderStateReturnValue);
+
             if (empty($activateOrderValue['order'])) {
-                echo '你没有可以取消的订单';
+
+                $this->displayMessage('你没有可以取消的订单');
             } else {
 
                 $orderDate = date("Y-m-d ", $activateOrderValue['order']['appointment_time']);
@@ -226,8 +241,8 @@ class orderController extends BaseController {
 
     public function getAllOrder() {
 
-          $this->able_register();
-          
+        $this->able_register();
+
         // $this->userOpenId = $_REQUEST['open_id'];
         $postUserDate['source'] = "company";
         $postUserDate['open_id'] = $this->userOpenId;

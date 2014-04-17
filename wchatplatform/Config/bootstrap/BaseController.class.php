@@ -7,6 +7,8 @@ class BaseController {
     public $dir_name;
     public $smarty_dir;
     public $tVar;
+    
+    public $userOpenId;
 
     private function initView() {
 
@@ -100,38 +102,44 @@ class BaseController {
         }
     }
 
+    public function jsJump($url) {
 
-     public function jsJump($url) {
-       
-            exit('<script>window.location.href="' . $url . '";</script>');
+        exit('<script>window.location.href="' . $url . '";</script>');
     }
 
+    public function displayMessage($msg, $url = '') {
+        
+        $this->setDir('Public');
 
-    public function displayMessage($msg,$url =''){
+        $this->assign('url', $url);
 
-        $this->setDir('public');
-
-        $this->assign('url',$url);
-
-        $this->assign('msg',$msg);
+        $this->assign('msg', $msg);
 
         $this->display('message');
 
         die;
     }
 
+    public function able_register() {
+        
+        
+        if(empty($this->userOpenId)){
+            
+            $this->displayMessage('open_id 不存在  请重新登录');
+        }
+      
+        $url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING'];
+        
+        $vars = 'action=url&url='.urlencode($url).'&open_id='.$this->userOpenId;
+    
+        $userApi = new userApi();
+        
+        $userInfo = $userApi->getUserInfo($this->userOpenId, 'company');
+        
+      
+        $error = new errorApi();
 
-    public function able_register(){
-
-          $url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING'];
-
-              $userApi = new userApi();
-
-                $userInfo = $userApi->getUserInfo($this->userOpenId, 'company');
-
-                $error = new errorApi();
-
-                $error->JudgeError($userInfo,$url,'',$this->userOpenId);
+        $error->JudgeError($userInfo,$vars, '', $this->userOpenId);
     }
 
 }

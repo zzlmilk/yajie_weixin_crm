@@ -113,9 +113,9 @@
                 </li>
 
                 <li class="table-view-cell media">
-                    <a class="push-right" href="inbox.html" data-transition="slide-in">
+                    <a class="push-right"  data-transition="slide-in">
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-                        <div class="media-body">
+                        <div class="media-body"  onclick='window.location.href = "{$websiteUrl}?g=company&a=exchange&v=getUserExchangeRecord&open_id={$open_id}"'>
                             兑换信息
                         </div>
                     </a>
@@ -124,7 +124,7 @@
                 <li class="table-view-cell media">
                     <a class="push-right"  data-transition="slide-in">
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-                        <div class="media-body" style=' cursor: pointer; ' onclick='window.location.href = "{$websiteUrl}?g=company&a=user&v=orderCheck&open_id={$open_id}"'>
+                        <div class="media-body" style=' cursor: pointer; ' onclick='window.location.href = "{$websiteUrl}?g=company&a=order&v=orderCheck&open_id={$open_id}"'>
                             订单信息
                         </div>
                     </a>
