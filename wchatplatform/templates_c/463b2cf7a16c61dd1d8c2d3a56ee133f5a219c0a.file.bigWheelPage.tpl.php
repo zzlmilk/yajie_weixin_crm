@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-17 17:55:08
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-18 11:59:52
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Game/bigWheelPage.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:158406624534fa4fcaafb28-88549582%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13512272615350a3381003d6-37530418%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '463b2cf7a16c61dd1d8c2d3a56ee133f5a219c0a' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Game/bigWheelPage.tpl',
-      1 => 1397728507,
+      1 => 1397788741,
     ),
   ),
-  'nocache_hash' => '158406624534fa4fcaafb28-88549582',
+  'nocache_hash' => '13512272615350a3381003d6-37530418',
   'function' => 
   array (
   ),
@@ -55,7 +55,7 @@ $_smarty_tpl->decodeProperties(array (
 
     </head>
     <div style='height: 1em;'>&nbsp;</div>
-        <div style=' text-align: center;background-color: white; width: 40%; margin: 0 auto; height: 2em; line-height: 2em;'>脊会员您好，欢迎来天天有奖刮刮乐，您可以获得意想不到的礼品，每天限玩一次</div>
+        <div style=' text-align: center;background-color: white; width: 80%; margin: 0 auto;  line-height: 2em;'>脊会员您好，欢迎来天天有奖，您可以获得意想不到的礼品，每天限玩一次</div>
         
     
     <body class="activity-lottery-winning" id='bobyGame'>

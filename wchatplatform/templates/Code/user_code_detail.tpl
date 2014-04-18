@@ -162,7 +162,7 @@
         <div style="height: 15px;"></div>
 
 
-        <div class='main_mask' style=' display: none;' id='floaftBox'>
+        <div class='main_mask' style=' display: none;background-color: rgb(243,237,227);' id='floaftBox'>
 
             <div class='floatingBox'>
 
