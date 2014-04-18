@@ -39,10 +39,6 @@ class PromoCodeRecordModel extends basic {
 
                     $code->updateVars();
                 }
-
-                
-
-
             } else {
                 echoErrorCode(60001);
             }
@@ -80,8 +76,7 @@ class PromoCodeRecordModel extends basic {
         }
     }
 
-
-     /**
+    /**
      * 获取用户个人优惠信息
      * $userInfo  array  用户个人信息
      * return object
@@ -89,20 +84,20 @@ class PromoCodeRecordModel extends basic {
     public function getCodeInfo($code_id) {
 
         $code = new PromoCodeRecordModel();
-       
-        $code->initialize('promo_code_id = ' . $code_id.' and state = 0');
+
+        $code->initialize('promo_code_id = ' . $code_id . ' and state = 0');
         $array = array();
         if ($code->vars_number > 0) {
 
 
 
-               $codeInfo = new PromoCodeModel();
+            $codeInfo = new PromoCodeModel();
 
-                $code_info = $codeInfo->getCodeInfoById($code->vars['promo_code_id']);
+            $code_info = $codeInfo->getCodeInfoById($code->vars['promo_code_id']);
 
-                $array['code_record'] = arrayToObject($codeInfo->vars, 0);
+            $array['code_record'] = arrayToObject($codeInfo->vars, 0);
 
-                $array['code_info'] = arrayToObject($code_info, 0);
+            $array['code_info'] = arrayToObject($code_info, 0);
 
             return $array;
         } else {
@@ -111,10 +106,9 @@ class PromoCodeRecordModel extends basic {
         }
     }
 
+    public function giveCode($code_id, $open_id, $give_open_id) {
 
-    public function giveCode($code_id,$open_id,$give_open_id){
-
-        if(!empty($code_id) && !empty($open_id) && !empty($give_open_id)){
+        if (!empty($code_id) && !empty($open_id) && !empty($give_open_id)) {
 
             $user = new userModel();
 
@@ -124,27 +118,25 @@ class PromoCodeRecordModel extends basic {
 
             $codeInfo = new PromoCodeModel();
 
-            $codeInfo->initialize('promo_code_id = '.$code_id);
+            $codeInfo->initialize('promo_code_id = ' . $code_id);
 
             $code = new PromoCodeRecordModel();
 
-            $code->addCondition('promo_code_id = ' . $code_id.' and user_id = '.$userInfo['user_id'],1);
-       
+            $code->addCondition('promo_code_id = ' . $code_id . ' and user_id = ' . $userInfo['user_id'], 1);
+
             $code->initialize();
 
             /**
              * 插入 赠送人的 信息  并修改 优惠券 信息  修改为 已领取
              */
-
-            if($code->vars_number > 0){
+            if ($code->vars_number > 0) {
 
                 $code->vars['give_user_id'] = $userInfoGive['user_id'];
 
                 $code->vars['state'] = 1;
 
                 $code->updateVars();
-
-            } else{
+            } else {
 
                 $data['promo_code_id'] = $code_id;
 
@@ -160,33 +152,30 @@ class PromoCodeRecordModel extends basic {
                 $code->insert($data);
             }
 
-             $codeInfo->vars['code_state'] = 1;
+            $codeInfo->vars['code_state'] = 1;
 
-             $codeInfo->updateVars();
-
-
-             /**
-              * 修改  赠送人的信息
-              */
+            $codeInfo->updateVars();
 
 
-             $giveCode = new PromoCodeRecordModel();
+            /**
+             * 修改  赠送人的信息
+             */
+            $giveCode = new PromoCodeRecordModel();
 
-             $giveCode->addCondition('promo_code_id = ' . $code_id.' and user_id = '.$userInfoGive['user_id'],1);
+            $giveCode->addCondition('promo_code_id = ' . $code_id . ' and user_id = ' . $userInfoGive['user_id'], 1);
 
-             $giveCode->initialize();
-
-
-              if($giveCode->vars_number > 0 ){
+            $giveCode->initialize();
 
 
-                  $update['give_user_id'] = $userInfo['user_id'];
+            if ($giveCode->vars_number > 0) {
+
+
+                $update['give_user_id'] = $userInfo['user_id'];
 
                 $update['state'] = 2;
 
                 $giveCode->update($update);
-
-              }else{
+            } else {
 
                 $dataGive['promo_code_id'] = $code_id;
 
@@ -201,14 +190,45 @@ class PromoCodeRecordModel extends basic {
 
                 $giveCode->insert($dataGive);
             }
-
-
-
         }
-
     }
 
+    /**
+     * 获取用户优惠券信息 并获取
+     */
+    public function getUserRecordCode($userinfo) {
 
+
+        $join_str = array(array("promo_code", "promo_code.promo_code_id", "promo_code_record.promo_code_id"));
+
+        $this->addJoin($join_str);
+
+        $where = 'user_id = ' . $userinfo['user_id'] . '   and (state = 1 or state = 0 )';
+        
+        $this->addGroupBy('code_merchandise');
+
+        $this->initialize($where);
+
+        $array = array();
+        if ($this->vars_number > 0) {
+
+            foreach ($this->vars_all as $k => $v) {
+
+                if (!empty($v['code_merchandise'])) {
+
+                    $info = new commodityModel();
+
+                    $result = $info->getCommodityInfo($v['code_merchandise']);
+
+                    if (is_array($result)) {
+                        array_push($array, $result);
+                    }
+                }
+            }
+        }
+
+        return $array;
+    }
 
 }
 

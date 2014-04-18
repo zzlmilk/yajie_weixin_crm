@@ -31,6 +31,10 @@
 
 
         </style>
+         <div style='height: 1em;'>&nbsp;</div>
+        <div style=' text-align: center;background-color: white; width: 40%; margin: 0 auto; height: 2em; line-height: 2em;'>脊会员您好，欢迎来刮刮乐获得意想不到的礼品，每天限玩一次</div>
+        
+        
         <input type="hidden" value="{$websiteurl}" id="apiRoute" >
         <input type="hidden" value="{$open_id}" id="open_id" >
         <div id="wScratchPad3" class="wScratchPad3"></div>

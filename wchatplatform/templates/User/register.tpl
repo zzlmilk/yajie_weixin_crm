@@ -87,11 +87,19 @@ document.write("</select> 日 ")
         <div class="registerWarp">
 
             <form class="form-horizontal"  method='post' role="form" action="{$WebSiteUrl}?g={$DIR}&a=user&v=submitRegister">
-
-
+                
+                {*赠送人时 出现的提示信息*}
+                {if $state == 1}
+                <div  class="form-group" style=" margin-right: 2em; height: 4em;">
+                    {$info.weixin_user.nickname} 赠送优惠券给你,请注册后,进行领取
+                    
+                    
+                </div>
+                
+                {/if}
                 <input type="hidden" name="open_id" value="{$open_id}" />
 
-
+`
                 <div class="form-group" style=" margin-right: 3em;">
                     <label for="inputEmail3" class="col-sm-2 control-label">&nbsp;&nbsp;&nbsp;&nbsp;姓名</label>
                     <div class="col-sm-10">
@@ -128,7 +136,7 @@ document.write("</select> 日 ")
                 <div class="form-group" style=" margin-right: 3em;">
                     <label for="inputPassword3" class="col-sm-2 control-label">手机号&nbsp;&nbsp;</label>
                     <div class="col-sm-10">
-                        <input type="name" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="请输入手机号码">
+                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="请输入手机号码">
                     </div>
                 </div>
 

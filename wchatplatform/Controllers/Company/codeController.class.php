@@ -77,7 +77,6 @@ class codeController extends BaseController {
      */
     public function giveCodeAuth() {
 
-
         if (!empty($_REQUEST['code_id']) && !empty($_REQUEST['open_id'])) {
 
 
@@ -98,7 +97,7 @@ class codeController extends BaseController {
 
         $userInfo = $user->getUserInfo($this->userOpenId, 'company');
 
-        $var = 'source=company&action=/code/giveCode&give_open_id=' . $_REQUEST['give_open_id'] . '&open_id=' . $this->userOpenId;
+        $var = 'source=company&action=/code/getCode&give_open_id=' . $_REQUEST['give_open_id'] . '&open_id=' . $this->userOpenId;
 
         $error = new errorApi();
 
@@ -107,13 +106,22 @@ class codeController extends BaseController {
         $this->getCode($this->userOpenId, $_REQUEST['give_open_id']);
     }
 
-    public function getCode($give_open_id, $open_id) {
+    public function getCode($open_id,$give_open_id) {
 
         $codeApi = new codeApi();
 
         $result = $codeApi->getUserReceviceCode('company', 2, $give_open_id);
 
         $codeInfo = $codeApi->getcodeInfo($result['promo_code_id'], 'company');
+        
+        if($give_open_id == $open_id){
+            
+            $this->assign('state',1);
+            
+        } else{
+            
+            $this->assign('state',0);
+        }
 
         $this->assign('give_open_id', $give_open_id);
 
@@ -136,13 +144,10 @@ class codeController extends BaseController {
      */
     public function giveResult() {
 
-
-
-
         if ($this->userOpenId == $_REQUEST['give_open_id']) {
 
 
-            echo '自己无法领取';
+            $this->displayMessage('紫荆无法领取');
             die;
         }
 
@@ -158,20 +163,28 @@ class codeController extends BaseController {
             $error = new errorApi();
 
             $error->JudgeError($codeResult);
-
+             
+          
             if (!empty($codeResult) && $codeResult['res'] == 1) {
+                
+               
+                
+                 $userGiveInfo = $user->getUserInfo($_REQUEST['give_open_id'], 'company1');
 
-
-                if ($userInfo['weixin_user']['subscribe'] == 0) {
-
-
-                    $msg = '领取成功,请关注脊安堂 服务号 ';
-
-                    $this->displayMessage($msg);
-                } else {
-
-                    U('company/user/userCenter', array('open_id' => $this->userOpenId));
-                }
+//                if ($userInfo['weixin_user']['subscribe'] == 0) {
+//
+//
+//                    $msg = '领取成功,请关注脊安堂 服务号 ';
+//
+//                    $this->displayMessage($msg);
+//                } else {
+//
+//                    U('company/user/userCenter', array('open_id' => $this->userOpenId));
+//                }
+                 
+                 $msg = '恭喜您，已经领取了'.$userGiveInfo['weixin_user']['nickname'].'赠送的好礼，请关注我们平台<a href="javascript:viewProfile();">脊安堂</a>会有惊喜等着你';
+                
+                 $this->displayMessage($msg);
             }
         }
     }

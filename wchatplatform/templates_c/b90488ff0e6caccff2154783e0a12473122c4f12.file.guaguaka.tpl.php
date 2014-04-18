@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-04 17:06:18
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-17 17:57:27
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Game/guaguaka.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:40503500533e760acddc61-84811843%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1868848934534fa587772014-07324619%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b90488ff0e6caccff2154783e0a12473122c4f12' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Game/guaguaka.tpl',
-      1 => 1396602253,
+      1 => 1397728626,
     ),
   ),
-  'nocache_hash' => '40503500533e760acddc61-84811843',
+  'nocache_hash' => '1868848934534fa587772014-07324619',
   'function' => 
   array (
   ),
@@ -28,7 +28,7 @@ $_smarty_tpl->decodeProperties(array (
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css"> 
-         <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+        <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
 /company/script/giftAward.js"></script>
         <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
 /company/ggk/wScratchPad.js"></script>  
@@ -51,19 +51,23 @@ $_smarty_tpl->decodeProperties(array (
 
 
         </style>
+         <div style='height: 1em;'>&nbsp;</div>
+        <div style=' text-align: center;background-color: white; width: 40%; margin: 0 auto; height: 2em; line-height: 2em;'>脊会员您好，欢迎来刮刮乐获得意想不到的礼品，每天限玩一次</div>
+        
+        
         <input type="hidden" value="<?php echo $_smarty_tpl->getVariable('websiteurl')->value;?>
 " id="apiRoute" >
         <input type="hidden" value="<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
 " id="open_id" >
         <div id="wScratchPad3" class="wScratchPad3"></div>
-        
+
         <script type="text/javascript">
-            
-             var webUrl = '<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
+
+            var webUrl = '<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
 ';
-             
-             
-            
+
+
+
             //初始化获奖
             var picTitle = "xx.jpg";
             var win = $(window).width();
@@ -98,9 +102,30 @@ $_smarty_tpl->decodeProperties(array (
             $("#reloadPage").click(function() {
                 location.reload();
             });
-          
 
-          
+
+            $("#getLottery").click(function() {
+                $.post(
+                        requestUrl,
+                        {
+                            gift_id: giftId,
+                            open_id: $("#open_id").val()
+                        },
+                function(rData) {
+                    if (rData == "1") {
+                        $("#getLottery").hide();
+                        $(".modal-body").html();
+                        $(".modal-body").html("发生错误");
+                    } else {
+                        var message = "恭喜你获得" + rData['gift_integration'] + "积分";
+                        $("#getLottery").hide();
+                        $(".modal-body").html();
+                        $(".modal-body").html(message);
+                    }
+
+                }
+                );
+            });
 //刮刮卡
 
             var WebSiteUrlPublic = '<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
@@ -118,15 +143,17 @@ $_smarty_tpl->decodeProperties(array (
                             var changeSize = win / cent;
                             var changeSize = (changeSize / 0.4) * 10;
                             if (percent > changeSize) {
-                                
-                                 $.ajax({
+
+                                alertFlag = false;
+
+                                $.ajax({
                                     url: webUrl + "?g=company&a=game&v=getGameAward",
                                     type: "get",
                                     data: {
                                         gift_id: giftId,
                                         open_id: $('#open_id').val(),
-                                        gift_type:2,
-                                       
+                                        gift_type: 2
+
                                     },
                                     success: function(res) {
 
@@ -134,7 +161,21 @@ $_smarty_tpl->decodeProperties(array (
                                         $('#bobyGame').append(res);
                                         $('#myModal').modal();
 
+
+                                    }
+                                    ,
+                                    error: function(xhr, textStatus) {
+                                        if (textStatus == 'timeout') {
+                                            //处理超时的逻辑
+
+                                            alert('网络超时');
+
+                                        }
+                                        else {
+                                            //其他错误的逻辑
+                                        }
                                     },
+                                    timeout: 2000
                                 })
                                 this.clear();
                             }
