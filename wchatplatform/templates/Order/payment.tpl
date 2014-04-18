@@ -65,7 +65,7 @@
                 <div style="height: 1em;"></div>
                 <div class="col-sm-4">
                     <select id="promoSelect" class="form-control col-sm-4">
-                        <option selected="" value="10">请选择优惠信息</option>
+                        <option selected="" promoCost="10" value="">请选择优惠信息</option>
                         {foreach from=$promoInfo item=promo key=key}
                             <option promoCost="{$promo.commodity_cost}" value="{$promo.commodity_id}">{$promo.commodity_name}优惠</option>
                         {/foreach}
@@ -109,12 +109,22 @@
         var promoMoney=0;
         var promoNum=$("#promoSelect option:selected").attr("promoCost");
         promoMoney=parseFloat(money) *(promoNum*0.1);
-        $("#promoMoney").html(promoMoney);
-        $("#costMoney").val(promoMoney);
-    });
-    $(".sBtn").click(function(){
-    if($("#costMoney").val()<0){
-    alert("物品价格不能低于0");
+        var arrayMoney=  promoMoney.toString().split(".");
+        if(arrayMoney[1]==null){
+        promoMoney=arrayMoney[0]+".00";
+        }else if(arrayMoney[1].length==1){
+        promoMoney=promoMoney+"0";
+        }else if(arrayMoney[1].length>2){
+
+        var cutNum=arrayMoney[1].substr(0, 2).toString();
+        promoMoney=arrayMoney[0].toString()+"."+cutNum;
+        }
+$("#promoMoney").html(promoMoney);
+$("#costMoney").val(promoMoney);
+});
+$(".sBtn").click(function(){
+if($("#costMoney").val()<0){
+alert("物品价格不能低于0");
 }
 })
     </script>
