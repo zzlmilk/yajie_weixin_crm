@@ -290,6 +290,34 @@ class OrderController implements Order {
         }
     }
 
+    /**
+     * 根据优惠信息  修改订单 价格
+     */
+    public function revise_order_pay() {
+
+        if (!empty($_REQUEST['source'])) {
+
+            if (!empty($_REQUEST['order_code'])) {
+
+                $orderModel = new OrderModel();
+
+                if (!empty($_REQUEST['order_price'])) {
+
+                    $orderModel->updateOrderPay($_REQUEST);
+
+                    $array['res'] = 1;
+
+                    AssemblyJson($array);
+                } else {
+                    
+                }
+            } else {
+
+                echoErrorCode(30003);
+            }
+        }
+    }
+
 }
 
 ?>

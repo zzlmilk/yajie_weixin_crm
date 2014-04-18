@@ -46,7 +46,7 @@ class Query extends DB_Mysql_search {
     function __constructor($table) {
         $this->table = $table;
         $this->convertor = new Convertor;
-        $this->log_file = apiLog . date("Y_m_d") . '.log';
+        $this->log_file = SQLLog . date("Y_m_d") . '.log';
     }
 
     public function changeDataTable($table) {

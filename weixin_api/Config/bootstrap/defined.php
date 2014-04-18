@@ -17,6 +17,8 @@ defined('Config') or define('Config', 'Config');
 
 defined('apiLog') or define('apiLog', ROOT_DIR . Logs . '/Info/');
 
+defined('SQLLog') or define('SQLLog', ROOT_DIR . Logs . '/SQL/');
+
 defined('LOG_FILE_SIZE') or define('LOG_FILE_SIZE', 2097152);// 日志文件大小限制
 
 defined('LOG_STATE') or define('LOG_STATE', 0) ;  // 是否开启日志  0为开启 1 为关闭
