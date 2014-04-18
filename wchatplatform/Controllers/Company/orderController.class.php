@@ -41,10 +41,21 @@ class orderController extends BaseController {
             $this->assign("checkReturn", $_GET['checkReturn']);
             $this->assign("returnVal", $_POST);
         }
+        $userOrder["source"] = "company";
+        $userOrder["open_id"] = $this->userOpenId;
+        $userJsonData = transferData(APIURL . "/order/get_order", "post", $userOrder);
+        $orderItem = json_decode($userJsonData, true);
+        $error = new errorApi();
+        $error->JudgeError($orderItem);
+        $nowTime = time();
+        $orderTime = $orderItem["order"]["appointment_time"];
+        if ($_GET["checkReturn"] == 1) {
+            
+        } else if ((int) $orderTime > $nowTime) {
+            $this->displayMessage("你已经有正在进行的订单，请执行<a href='" . WebSiteUrl . "?g=company&a=order&v=orderCheck&open_id=" . $this->userOpenId . "'>编辑</a>操作");
+        }
         $selectReturnVal = transferData(APIURL . "/order/get_merchandise", "get");
         $selectVal = json_decode($selectReturnVal, true);
-
-        $error = new errorApi();
 
         $error->JudgeError($selectVal);
         //var_dump($selectReturnVal);
@@ -117,15 +128,14 @@ class orderController extends BaseController {
                 $thisUserData = $this->userData = json_decode($userJsonData, TRUE);
 
                 $error = new errorApi();
-
                 $error->JudgeError($thisUserData);
 
                 if ($thisUserData["error"]["error_status"] == "30005") {
                     $this->errorMessage = 1;
                     return $this->cancelOrder();
                 } else if ($thisUserData["error"]["error_status"] == "30006") {
-                  
-                     $this->displayMessage($thisUserData["error"]["status_info"]);
+
+                    $this->displayMessage($thisUserData["error"]["status_info"]);
                     return;
                 }
             }
@@ -249,6 +259,43 @@ class orderController extends BaseController {
         $DateValue = transferData(APIURL . "/order/get_order_all", "post", $postUserDate);
         $DateValue = json_decode($DateValue, TRUE);
         $this->assign("orders", $DateValue['order']);
+        $this->display();
+    }
+
+    //支付
+    public function payment() {
+        $this->able_register();
+        $postDate["source"] = "company";
+        $postDate['open_id'] = $this->userOpenId;
+        $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
+        $userInfo = json_decode($userInfo, TRUE);
+        $error = new errorApi();
+        $error->JudgeError($userInfo);
+
+        $promoInfo = transferData(APIURL . "/code/getUserCode", "post", $postDate);
+        $promoInfo = json_decode($promoInfo, true);
+        $error->JudgeError($promoInfo);
+
+        $userJsonData = transferData(APIURL . "/order/get_order", "post", $postDate);
+        $orderItem = json_decode($userJsonData, true);
+        $error->JudgeError($orderItem);
+        $nowTime = time();
+        $userOrder = $orderItem["order"];
+        $merchandiseDate['source'] = 'company';
+        $merchandiseDate['merchandise_id'] = $userOrder['merchandise_id'];
+        $merchandise = transferData(APIURL . "/order/get_merchandise_info", "post", $merchandiseDate);
+        $merchandise = json_decode($merchandise, TRUE);
+        $error->JudgeError($merchandise);
+        $costMoney=$merchandise['merchandise']["merchandise_money"];
+        
+        if ($nowTime > $userOrder["appointment_time"]) {
+
+            $this->displayMessage("您的订单已经过期，请重新<a href='" . WebSiteUrl . "?g=company&a=order&v=order&open_id=" . $this->userOpenId . "'>预约</a>。");
+        }
+        $userName = $userInfo["weixin_user"]["nickname"];
+        $this->assign("promoInfo", $promoInfo["list"]);
+        $this->assign("costMoney", $costMoney);
+        $this->assign("userName", $userName);
         $this->display();
     }
 

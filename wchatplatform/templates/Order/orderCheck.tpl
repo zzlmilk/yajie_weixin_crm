@@ -44,16 +44,17 @@
         </style>
     </head>
     <body style='background-color: rgb(243,237,227);'>
-        <div class="cardBackground"  style='background-color: #fff;position: relative;'>
-            <div style="position: absolute; right: 15px; top:0;">
-                {if $returnVal.orderState=="1"}
-                    <p type="button" disabled="" style="opacity: 1;"><h3>过&nbsp;&nbsp;&nbsp;期</h3></p>
-                {else}
+        <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=order&v=order&checkReturn=1&open_id={$open_id}">
+            <div class="cardBackground"  style='background-color: #fff;position: relative;'>
+                <div style="position: absolute; right: 15px; top:0;z-index: 150;">
+                    {if $returnVal.orderState=="1"}
+                        <p type="button" disabled="" style="opacity: 1;"><h3>过&nbsp;&nbsp;&nbsp;期</h3></p>
+                    {else}
+                        <button type="submit" style="width: 60px;margin-top: 8px; " class="btn btn-primary">编&nbsp;&nbsp;&nbsp;辑</button>
+                    {/if}
 
-                {/if}
+                </div>
 
-            </div>
-            <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=order&v=order&checkReturn=1&open_id={$open_id}">
                 <div class="form-group" style=" margin-top: 1.5em; margin-bottom: 0px;">
                     <label class="col-sm-2  topTitleTry"style="">交易项目</label>
                     <div class="col-sm-10">
@@ -111,18 +112,18 @@
                 <div class="form-group" style="margin-top: 2.5em; text-align: center;">
                     <div class="col-sm-10">
                         {if $returnVal.orderState=="1"}
-                          
+
                         {else}
-                            <button type="submit" style="width: 180px;" class="btn btn-primary">编&nbsp;&nbsp;&nbsp;辑</button>
+                            <a href="{$WebSiteUrl}?g=company&a=order&v=payment&open_id={$open_id}"><button type="button" style="width: 180px;" class="btn btn-primary">确&nbsp;&nbsp;&nbsp;认</button></a>
                         {/if}
 
                     </div>
                     <div style="clear: both;"></div>
                 </div>
                 <div style="height: 1em;"></div>
-            </form>
-        </div>
+        </form>
+    </div>
 
-    </body>
-    <div style="height: 1.5em;"></div>
+</body>
+<div style="height: 1.5em;"></div>
 </html>

@@ -447,7 +447,7 @@
 			}
 			this.picker.css({
 				top:    top,
-				left:   left,
+				left:   left-45,
 				zIndex: zIndex
 			});
 		},

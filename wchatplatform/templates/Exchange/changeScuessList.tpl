@@ -43,7 +43,7 @@
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">剩余积分</label>
-                <label for="inputEmail3" class="col-sm-2 control-label">{$integration}p</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">{$integration}</label>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">物品名称</label>
