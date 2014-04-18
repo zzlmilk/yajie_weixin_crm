@@ -286,8 +286,7 @@ class orderController extends BaseController {
         $merchandise = transferData(APIURL . "/order/get_merchandise_info", "post", $merchandiseDate);
         $merchandise = json_decode($merchandise, TRUE);
         $error->JudgeError($merchandise);
-        $costMoney=$merchandise['merchandise']["merchandise_money"];
-        
+        $costMoney = $merchandise['merchandise']["merchandise_money"];
         if ($nowTime > $userOrder["appointment_time"]) {
 
             $this->displayMessage("您的订单已经过期，请重新<a href='" . WebSiteUrl . "?g=company&a=order&v=order&open_id=" . $this->userOpenId . "'>预约</a>。");
@@ -297,6 +296,35 @@ class orderController extends BaseController {
         $this->assign("costMoney", $costMoney);
         $this->assign("userName", $userName);
         $this->display();
+    }
+
+    public function orderPayPage() {
+        $error = new errorApi();
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $payData["source"] = "company";
+            $payData['open_id'] = $this->userOpenId;
+            $userJsonData = transferData(APIURL . "/order/get_order", "post", $payData);
+            $orderItem = json_decode($userJsonData, true);
+            $error->JudgeError($orderItem);
+            $userOrder = $orderItem["order"];
+            $payData["order_price"] = $_POST["costMoney"];
+            $payData["order_code"] = $userOrder["order_code"];
+            $payData["commodity_id"] = $_POST["promoSelect"];
+            if ($_GET["payType"] == "weixin") {
+                
+            } else if ($_GET["payType"] == "store") {
+                $pay = transferData(APIURL . "/order/revise_order_pay", "post", $payData);
+                $pay = json_decode($pay, TRUE);
+                $error->JudgeError($pay);
+                if ($pay["res"] == 1) {
+                    $this->displayMessage("您已经成功提交订单，请在预约时间内到店消费。<a href='" . WebSiteUrl . "?g=company&a=order&v=orderCheck&open_id=" . $this->userOpenId . "'>查看订单</a>");
+                } else {
+                    $this->displayMessage("预约请求失败请<a href='" . WebSiteUrl . "?g=company&a=order&v=orderCheck&open_id=" . $this->userOpenId . "'>查看订单</a>后重试。");
+                }
+            }
+        } else {
+            $this->displayMessage("url请求出错请<a href='" . WebSiteUrl . "?g=company&a=order&v=orderCheck&open_id=" . $this->userOpenId . "'>返回</a>重试。");
+        }
     }
 
 }

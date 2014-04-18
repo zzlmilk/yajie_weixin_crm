@@ -44,8 +44,7 @@
         </style>
     </head>
     <body style='background-color: rgb(243,237,227);'>
-<!--        <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=order&v=order&checkReturn=1&open_id={$open_id}">-->
-
+        <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=order&v=orderPayPage&payType=store&open_id={$open_id}">
         <div class="cardBackground"  style='background-color: #fff;position: relative;'>
             <div class="form-group" style=" margin-top: 1.5em; margin-bottom: 0px;">
                 <div style="height: 1em;"></div>
@@ -64,7 +63,7 @@
                 <label class="col-sm-2 control-label" style="">选择优惠信息：</label>
                 <div style="height: 1em;"></div>
                 <div class="col-sm-4">
-                    <select id="promoSelect" class="form-control col-sm-4">
+                    <select id="promoSelect" name="promoSelect" class="form-control col-sm-4">
                         <option selected="" promoCost="10" value="">请选择优惠信息</option>
                         {foreach from=$promoInfo item=promo key=key}
                             <option promoCost="{$promo.commodity_cost}" value="{$promo.commodity_id}">{$promo.commodity_name}优惠</option>
@@ -86,7 +85,7 @@
             </div>
             <div class="form-group" style="">
                 <div class="col-sm-10" style="text-align: center;" >
-                    <button type="button" style="width: 50%; text-align: center" class="sBtn btn btn-primary">到店消费</button>
+                    <a href="#"><button type="submit" style="width: 50%; text-align: center" class="sBtn btn btn-primary">到店消费</button></a>
                 </div>
                 <div style="clear: both;"></div>
             </div>
@@ -99,7 +98,7 @@
             <div style="height: 1em;"></div>
             <div style="height: 1em;"></div>
             <div style="height: 1em;"></div>
-            <!--        </form>-->
+        </form>
         </div>
 
     </body>
