@@ -86,7 +86,7 @@
             </div>
             <div class="form-group" style="">
                 <div class="col-sm-10" style="text-align: center;" >
-                    <button type="button" style="width: 50%; text-align: center" class="sBtn btn btn-primary">到店消费</button>
+                    <a href="{$WebSiteUrl}?g=company&a=order&v=orderPayPage&payType=store&open_id={$open_id}"><button type="button" style="width: 50%; text-align: center" class="sBtn btn btn-primary">到店消费</button></a>
                 </div>
                 <div style="clear: both;"></div>
             </div>

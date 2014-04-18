@@ -298,5 +298,12 @@ class orderController extends BaseController {
         $this->assign("userName", $userName);
         $this->display();
     }
+       public function orderPayPage(){
+           if($_GET["payType"]=="weixin"){
+               
+           }  else if($_GET["payType"]=="store"){
+               $this->displayMessage("您已经成功提交订单，请在预约时间内到店消费。<a href='" . WebSiteUrl . "?g=company&a=order&v=orderCheck&open_id=" . $this->userOpenId . "'>查看订单</a>");
+           }
+       }
 
 }
