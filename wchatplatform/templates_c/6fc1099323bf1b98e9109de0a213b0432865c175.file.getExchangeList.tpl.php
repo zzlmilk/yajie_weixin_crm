@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-10 16:34:32
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-18 11:46:29
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Exchange/getExchangeList.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10791233045346579802d1f8-82810121%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11021174725350a0151ffba9-11589294%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6fc1099323bf1b98e9109de0a213b0432865c175' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Exchange/getExchangeList.tpl',
-      1 => 1397117037,
+      1 => 1397792727,
     ),
   ),
-  'nocache_hash' => '10791233045346579802d1f8-82810121',
+  'nocache_hash' => '11021174725350a0151ffba9-11589294',
   'function' => 
   array (
   ),
@@ -49,13 +49,55 @@ $_smarty_tpl->decodeProperties(array (
             }
             .giftListStyle{
                 background-color: #fff;
-                height: 100px;
+                height: 125px;
                 margin-top: 15px;
             }
+            .round_photo{
+                width:100%;
+                height: auto;
+                border:1px solid #ddddde;
+                -moz-border-radius: 59px;
+                -webkit-border-radius: 59px;
+                border-radius:50%;
+
+            }
+            .siteClass{
+
+                color: rgb(128,128,128);
+            } 
+            .graph{  
+
+                width: 0;     height: 0;     border-bottom: 38px solid rgb(70,140,200);  
+
+                border-left: 41px solid transparent;
+
+            }  
         </style>
     </head>
     <body style='background-color: rgb(243,237,227);'>
 
+        <div style='  width: 100%; background-color: rgb(255,255,247);position: relative;'>
+
+            <div style='height: 0.2em;width: 100%;'>&nbsp;</div>
+
+
+            <div style=' width: 18%;'>
+                <img src='<?php echo $_smarty_tpl->getVariable('weixinUserInfo')->value['headimgurl'];?>
+' class='round_photo'>
+            </div>
+
+
+
+            <div style=' width: 66%; overflow: hidden; position: absolute; left: 20%; top: 5%;'>
+
+                <div style='margin-top:10%;line-height: 15px;'>
+                    <span style='font-size:15px; display: inline-block;  height: 4%;  '>用户昵称：<?php echo $_smarty_tpl->getVariable('weixinUserInfo')->value['nickname'];?>
+</span>
+                    <span id="userIntegration" style='font-size:15px; display: inline-block;  height: 4%;  '>剩余积分:<?php echo $_smarty_tpl->getVariable('localUserInfo')->value['user_integration'];?>
+</span>
+                </div>
+            </div>
+        </div>
         <div class="registerWarp">
             <?php  $_smarty_tpl->tpl_vars['exchangeItem'] = new Smarty_Variable;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
@@ -75,13 +117,19 @@ if (count($_from) > 0){
                         <div style="word-wrap: break-word; word-break: normal;">
                             <p class="summary"> <?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_summary'];?>
 </p>
-                            <p>积分: <?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_integration'];?>
-p</p>
-
-                            <div style="width: 100%; text-align: right;"><a  href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                            <p class="integration">积分: <?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_integration'];?>
+</p>
+                            <p>类型: 
+                                <?php if ($_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_type']==0){?>
+                                    虚拟
+                                <?php }else{ ?>
+                                    实物
+                                <?php }?>
+                            </p>
+                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 ?g=company&a=exchange&v=changeGoods&goodsId=<?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_id'];?>
 &open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
-"><button type="submit" class="btn btn-primary btn-xs">兑换</button></a></div>
+"><button type="button" class="btn btn-warning btn-xs">兑换</button></a></div>
                         </div>
                     </div>
                 </div>
@@ -95,6 +143,16 @@ p</p>
         var nowString= $(this).html().substr(0, 20)
         $(this).html(nowString+"...");
     }
-})
+});
+$(".submitButton").click(function(){
+    var integrationVals=$(this).parents().parents().find(".integration").html()
+    var integration=integrationVals.split(":")[1];
+    var userIntegration=$("#userIntegration").html();
+    userIntegration=userIntegration.split(":")[1];
+    if(integration>userIntegration){
+    alert("您的积分余额不足");
+    return false;
+    }
+});
     </script>
 </html>
