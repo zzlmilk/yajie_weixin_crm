@@ -49,7 +49,7 @@
         <div class="cardBackground"  style='background-color: #fff;position: relative;'>
             <div class="form-group" style=" margin-top: 1.5em; margin-bottom: 0px;">
                 <div style="height: 1em;"></div>
-                
+
                 <label class="col-sm-2  topTitleTry"style="margin-right: 0px">{$userName}，</label>
                 <div class="col-sm-10">
                     <p class="form-control-static topNameTry">订单已生效请选择支付方式</p>
@@ -59,31 +59,34 @@
             </div>
             <div style="border-bottom: 1px dotted #bbb;height: 1px; "></div>
             <div style="height:25px;"></div>
-            
+
             <div class="form-group" style="">
                 <label class="col-sm-2 control-label" style="">选择优惠信息：</label>
                 <div style="height: 1em;"></div>
                 <div class="col-sm-4">
-                    <select class="form-control col-sm-4">
-                        <option value="1">八折优惠</option>
-                        <option value="1">七折优惠</option>
+                    <select id="promoSelect" class="form-control col-sm-4">
+                        <option selected="" value="10">请选择优惠信息</option>
+                        {foreach from=$promoInfo item=promo key=key}
+                            <option promoCost="{$promo.commodity_cost}" value="{$promo.commodity_id}">{$promo.commodity_name}优惠</option>
+                        {/foreach}
                     </select>
                 </div>
                 <div style="clear: both;"></div>
             </div>
             <div class="form-group" style="">
-                <div style="text-align: right; color: red" class="col-sm-4">您总共消费：11元，优惠价10元</div>
+                <div style="text-align: right; color: red" class="col-sm-4">您消费：<span id="money">{$costMoney}</span>元，优惠价<span id="promoMoney">{$costMoney}</span>元</div>
+                <input type="hidden" id="costMoney" name="costMoney" value="{$costMoney}">
             </div>
 
             <div style="height: 10px;"></div>
             <div class="form-group" style="">
                 <div class="col-sm-10" style="text-align: center;" >
-                    <button type="button" style="width: 50%; text-align: center" class="btn btn-primary">微信支付</button>
+                    <button type="button" style="width: 50%; text-align: center" class="sBtn btn btn-primary">微信支付</button>
                 </div>
             </div>
             <div class="form-group" style="">
                 <div class="col-sm-10" style="text-align: center;" >
-                    <button type="button" style="width: 50%; text-align: center" class="btn btn-primary">到店消费</button>
+                    <button type="button" style="width: 50%; text-align: center" class="sBtn btn btn-primary">到店消费</button>
                 </div>
                 <div style="clear: both;"></div>
             </div>
@@ -100,5 +103,19 @@
         </div>
 
     </body>
-
+    <script>
+        $("#promoSelect").change(function(){
+        var money=$("#money").html();
+        var promoMoney=0;
+        var promoNum=$("#promoSelect option:selected").attr("promoCost");
+        promoMoney=parseFloat(money) *(promoNum*0.1);
+        $("#promoMoney").html(promoMoney);
+        $("#costMoney").val(promoMoney);
+    });
+    $(".sBtn").click(function(){
+    if($("#costMoney").val()<0){
+    alert("物品价格不能低于0");
+}
+})
+    </script>
 </html>
