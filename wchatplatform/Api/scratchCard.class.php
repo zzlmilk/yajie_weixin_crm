@@ -18,6 +18,7 @@ class scratchCard {
 
     public function getScratchCardResults($source) {
         $data['source'] = $source;
+        
         $userInfoJson = transferData(APIURL . "/gift/get_probability_card", "post", $data);
         $userInfoArray = json_decode($userInfoJson, true);
         return $userInfoArray;

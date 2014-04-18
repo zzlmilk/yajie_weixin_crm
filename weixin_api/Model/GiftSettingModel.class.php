@@ -27,7 +27,7 @@ class GiftSettingModel extends Basic {
      * 计算概率
      * $type int  游戏类型
      */
-    public function cipher_probability($type) {
+    public function cipher_probability($type, $userInfo) {
 
         /**
          * 获取大转盘的概率
@@ -123,6 +123,14 @@ class GiftSettingModel extends Basic {
          * 生成 end  计算概率begin
          */
         $rid = $gift->get_rand($arr);
+
+        if ($type == 1) {
+
+            $record = new giftRecordModel();
+
+            $record->addRecord($rid, $type, $userInfo['user_id']);
+        }
+
 
         return $rid;
     }

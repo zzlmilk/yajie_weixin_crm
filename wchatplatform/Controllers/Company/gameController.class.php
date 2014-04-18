@@ -41,12 +41,28 @@ class gameController extends BaseController {
     public function bigWheelPage() {
 
         $this->able_register();
+
+        $giftApi = new giftApi();
+        $info = $giftApi->getUserGameRecord($this->userOpenId, 1);
+
+        $error = new errorApi();
+
+        $error->JudgeError($info);
         $this->display();
     }
 
     public function guaguaka() {
 
         $this->able_register();
+
+        $giftApi = new giftApi();
+        $info = $giftApi->getUserGameRecord($this->userOpenId, 2);
+        
+        
+        
+        $error = new errorApi();
+
+        $error->JudgeError($info);
         $scratchCard = new scratchCard();
         $ScratchCardResults = $scratchCard->getScratchCardResults("company");
 
@@ -77,7 +93,7 @@ class gameController extends BaseController {
      */
     public function getBigWheel() {
 
-        $resultProJson = transferData(APIURL . '/gift/get_probability_wheel/?source=1234', 'get');
+        $resultProJson = transferData(APIURL . '/gift/get_probability_wheel/?source=1234&open_id=' . $_REQUEST['open_id'], 'get');
 
         $resultproArray = json_decode($resultProJson, true);
 
@@ -209,15 +225,20 @@ class gameController extends BaseController {
     }
 
     public function getGameAward() {
-        
-        
-      
+
+
+
 
         if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['gift_id'])) {
 
             $gift = new giftApi();
 
             $giftArray = $gift->getGiftInfo($_REQUEST['gift_id'], 1);
+            
+            if($_REQUEST['gift_type'] == 2){
+                
+                $gift->addCardRecord($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['gift_type']);
+            }
 
             $this->setDir('Public');
 
@@ -304,7 +325,7 @@ class gameController extends BaseController {
 
         $this->setDir('Public');
         if (!empty($_REQUEST['gift_id']) && !empty($_REQUEST['open_id'])) {
-            
+
             $gift = new giftApi();
             $awardResult = $gift->sendUserGift($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['type']);
 

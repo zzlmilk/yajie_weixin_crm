@@ -7,7 +7,6 @@ class BaseController {
     public $dir_name;
     public $smarty_dir;
     public $tVar;
-    
     public $userOpenId;
 
     private function initView() {
@@ -108,7 +107,7 @@ class BaseController {
     }
 
     public function displayMessage($msg, $url = '') {
-        
+
         $this->setDir('Public');
 
         $this->assign('url', $url);
@@ -121,25 +120,53 @@ class BaseController {
     }
 
     public function able_register() {
-        
-        
-        if(empty($this->userOpenId)){
-            
+
+
+        if (empty($this->userOpenId)) {
+
             $this->displayMessage('open_id 不存在  请重新登录');
         }
-      
+
         $url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING'];
-        
-        $vars = 'action=url&url='.urlencode($url).'&open_id='.$this->userOpenId;
-    
+
+        $vars = 'action=url&url=' . urlencode($url) . '&open_id=' . $this->userOpenId;
+
         $userApi = new userApi();
-        
+
         $userInfo = $userApi->getUserInfo($this->userOpenId, 'company');
-        
-      
+
+
         $error = new errorApi();
 
-        $error->JudgeError($userInfo,$vars, '', $this->userOpenId);
+        $error->JudgeError($userInfo, $vars, '', $this->userOpenId);
+    }
+
+    /**
+     * 判断来源  如来源为赠送优惠券  则将获取赠送的人的信息
+     */
+    public function ableSource($result) {
+
+        if (!empty($result)) {
+
+
+            switch ($result['action']) {
+
+                case '/code/getCode':
+
+                    /**
+                     * 来自赠送  获取赠送人的用户资料
+                     */
+                    $userApi = new userApi();
+
+                    $info = $userApi->getUserInfo($result['give_open_id'], 'company');
+
+                    $this->assign('give_info', $info);
+
+                    $this->assign('state', 1);
+
+                    break;
+            }
+        }
     }
 
 }

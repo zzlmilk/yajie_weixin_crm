@@ -58,6 +58,15 @@ class GiftModel extends Basic {
 
 
         if (is_array($info) && !empty($open_id)) {
+            
+            $userModel = new userModel();
+
+            $userinfo = $userModel->getUserInfo($open_id);
+                    
+                    
+             $gift = new giftRecordModel();
+
+             $giftRes = $gift->getGiftInfoById($userinfo, $info['gift_type']);
 
 
             /**
@@ -96,9 +105,9 @@ class GiftModel extends Basic {
                 case '0':
 
 
-                    $userModel = new userModel();
-
-                    $userinfo = $userModel->getUserInfo($open_id);
+//                    $userModel = new userModel();
+//
+//                    $userinfo = $userModel->getUserInfo($open_id);
 
                     $userObject = $userModel->addUserIntegration($open_id, $info['gift_integration']);
 

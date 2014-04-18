@@ -39,9 +39,13 @@ class Basic extends Query {
 
     function getVar() {
         $records = $this->selectQuery();
+        
+       
         if ($records) {
             $this->vars = $records[0];
             $this->vars_all = $records[1];
+            
+           
             $this->vars_number = count($this->vars_all);
         } else {
             $this->vars_number = 0;

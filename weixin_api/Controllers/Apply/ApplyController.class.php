@@ -1,57 +1,49 @@
 <?php
 
+class ApplyController implements Apply {
 
-class ApplyController implements Apply{
+    /**
+     * 添加活动申请
+     */
+    public function addApply() {
 
+        if (!empty($_REQUEST['source']) && !empty($_REQUEST['real_name']) && !empty($_REQUEST['user_phone']) && !empty($_REQUEST['activity_id'])) {
 
+            $apply = new ApplyModel();
 
-	/**
-	 * 添加活动申请
-	 */
-	public function addApply(){
+            $info = $apply->addApply($_REQUEST);
 
-		if(!empty($_REQUEST['source']) &&!empty($_REQUEST['real_name']) && !empty($_REQUEST['user_phone']) && !empty($_REQUEST['activity_id'])){
+            AssemblyJson($info);
+        } else {
 
-			$apply = new  ApplyModel();
+            echoErrorCode(105);
+        }
+    }
 
-			$info = $apply->addApply($_REQUEST);
+    /**
+     * 获取用户活动申请记录
+     */
+    public function get_apply_number() {
 
-			AssemblyJson($info);
-		} else{
+        if (!empty($_REQUEST['source'])) {
 
-			echoErrorCode(105);
-		}
+            $apply = new ApplyModel();
 
-	}
+            $apply_all = $apply->getInfoAll();
 
-	/**
-	 * 获取用户活动申请记录
-	 */
-	public function get_apply_number(){
+            $apply_array = array();
 
-		if(!empty($_REQUEST['source'])){
+            foreach ($apply_all as $k => $v) {
 
-			$apply = new ApplyModel();
+                $apply_array[$k] = arrayToObject($v, 0);
+            }
 
-			$apply_all = $apply->getInfoAll();
+            $array['apply_record'] = $apply_array;
 
-			$apply_array = array();
-
-			foreach($apply_all as $k=>$v){
-
-				$apply_array[$k] = arrayToObject($v,0);
-
-			}
-
-			$array['apply_record'] = $apply_array;
-
-			AssemblyJson($array);
-
-		}
-
-	}
+            AssemblyJson($array);
+        }
+    }
 
 }
-
 
 ?>

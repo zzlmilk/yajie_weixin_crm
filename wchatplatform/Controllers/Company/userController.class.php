@@ -14,14 +14,14 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';   
+            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';   
 
 
-            $this->userOpenId = 'dasdasd';
+            //$this->userOpenId = 'dasdasd';
         }
-        
-        
-       
+
+
+
         $this->assign('open_id', $this->userOpenId);
     }
 
@@ -63,8 +63,8 @@ class UserController extends BaseController {
 
 
         $this->assign('open_id', $this->userOpenId);
-
-
+        
+        $this->ableSource($_REQUEST);
 
         $this->assign('vars', json_encode($_REQUEST));
 
@@ -100,6 +100,7 @@ class UserController extends BaseController {
 
                         if ($resultRenameArray['success'] == 1) {
 
+
                             $resultRegisterJson = transferData(APIURL . '/user/add', 'post', $data);
 
                             $resultRegisterArray = json_decode($resultRegisterJson, true);
@@ -108,25 +109,32 @@ class UserController extends BaseController {
 
                             $error->JudgeError($resultRegisterArray);
 
+
+
                             if ($resultRegisterArray['user']['user_id'] > 0) {
 
-                                $varsArray = json_decode(stripcslashes($_REQUEST['vars']), true);
+                                if (!empty($_REQUEST['vars'])) {
 
-                                if (!empty($varsArray['action'])) {
 
-                                    if ($varsArray['action'] == '/code/getCode') {
+                                    $varsArray = json_decode(stripcslashes($_REQUEST['vars']), true);
 
-                                        $array = array('give_open_id' => $varsArray['give_open_id'], 'open_id' => $varsArray['open_id']);
+                                    if (!empty($varsArray['action'])) {
+                                        if ($varsArray['action'] == '/code/getCode') {
 
-                                        R($varsArray['action'], $varsArray['source'], $array);
-                                    } else if ($varsArray['action'] == 'url') {
+                                            $array = array('give_open_id' => $varsArray['give_open_id'], 'open_id' => $varsArray['open_id']);
 
-                                        $this->jsJump($varsArray['url']);
+                                            R($varsArray['action'], $varsArray['source'], $array);
+                                        } else if ($varsArray['action'] == 'url') {
+
+                                            $this->jsJump($varsArray['url']);
+                                        }
+
+                                        die;
+                                        //U($_REQUEST['path'], $_REQUEST['vars']);
                                     }
-
-                                    die;
-                                    //U($_REQUEST['path'], $_REQUEST['vars']);
                                 }
+
+
 
                                 U('company/user/userCenter', array('open_id' => $_REQUEST['open_id']));
                             }

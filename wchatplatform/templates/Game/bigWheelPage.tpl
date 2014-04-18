@@ -34,10 +34,14 @@
 
 
     </head>
-
+    <div style='height: 1em;'>&nbsp;</div>
+        <div style=' text-align: center;background-color: white; width: 80%; margin: 0 auto;  line-height: 2em;'>脊会员您好，欢迎来天天有奖，您可以获得意想不到的礼品，每天限玩一次</div>
+        
+    
     <body class="activity-lottery-winning" id='bobyGame'>
 
         <input type='hidden' name='open_id' id='open_id' value='{$open_id}'>
+        
         <div class="main">
             <div id="outercont">
                 <div id="outer-cont">
@@ -145,6 +149,8 @@
                         url: webUrl + "?g=company&a=game&v=getBigWheel",
                         dataType: "json",
                         data: {
+                            
+                            open_id: $('#open_id').val(),
                         },
                         beforeSend: function() {
                             running = true;

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-09 16:25:24
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-17 14:55:57
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/User/register.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:426660049534503f4e66b08-95995127%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:805357686534f7afd01aa58-81357077%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4a5ee43d603a037d5cf7cb4befffe1c52dcd861c' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/User/register.tpl',
-      1 => 1397030633,
+      1 => 1397717581,
     ),
   ),
-  'nocache_hash' => '426660049534503f4e66b08-95995127',
+  'nocache_hash' => '805357686534f7afd01aa58-81357077',
   'function' => 
   array (
   ),
@@ -107,12 +107,21 @@ document.write("</select> 日 ")
             <form class="form-horizontal"  method='post' role="form" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 ?g=<?php echo $_smarty_tpl->getVariable('DIR')->value;?>
 &a=user&v=submitRegister">
-
-
+                
+                
+                <?php if ($_smarty_tpl->getVariable('state')->value==1){?>
+                <div  class="form-group" style=" margin-right: 2em;">
+                    <?php echo $_smarty_tpl->getVariable('info')->value['weixin_user']['nickname'];?>
+ 赠送优惠券给你。请注册后 进行领取
+                    
+                    
+                </div>
+                
+                <?php }?>
                 <input type="hidden" name="open_id" value="<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
 " />
 
-
+`
                 <div class="form-group" style=" margin-right: 3em;">
                     <label for="inputEmail3" class="col-sm-2 control-label">&nbsp;&nbsp;&nbsp;&nbsp;姓名</label>
                     <div class="col-sm-10">
@@ -120,7 +129,9 @@ document.write("</select> 日 ")
                     </div>
                 </div>
 
-                <input type='hidden' name='redirect_url' id='redirect_url' value='<?php echo $_smarty_tpl->getVariable('redirect_url')->value;?>
+                
+                
+                <input type='hidden' name='vars' id='vars' value='<?php echo $_smarty_tpl->getVariable('vars')->value;?>
 '>
 
                 <input type="hidden" name="open_id" value="<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
@@ -149,7 +160,7 @@ document.write("</select> 日 ")
                 <div class="form-group" style=" margin-right: 3em;">
                     <label for="inputPassword3" class="col-sm-2 control-label">手机号&nbsp;&nbsp;</label>
                     <div class="col-sm-10">
-                        <input type="name" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="请输入手机号码">
+                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="请输入手机号码">
                     </div>
                 </div>
 
