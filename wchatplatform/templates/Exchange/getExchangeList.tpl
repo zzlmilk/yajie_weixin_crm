@@ -92,7 +92,7 @@
                                     实物
                                 {/if}
                             </p>
-                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button type="button" class="btn btn-warning btn-xs">兑换</button></a></div>
+                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>
                         </div>
                     </div>
                 </div>
@@ -108,14 +108,17 @@
     }
 });
 $(".submitButton").click(function(){
-    var integrationVals=$(this).parents().parents().find(".integration").html()
-    var integration=integrationVals.split(":")[1];
-    var userIntegration=$("#userIntegration").html();
-    userIntegration=userIntegration.split(":")[1];
-    if(integration>userIntegration){
-    alert("您的积分余额不足");
-    return false;
-    }
+var integrationVals=$(this).parent().parent();
+integrationVals=integrationVals.find(".integration").html();
+
+var integration=integrationVals.split(":")[1];
+
+var userIntegration=$("#userIntegration").html();
+var userIntegration=userIntegration.split(":")[1];
+if(parseInt(integration)>parseInt(userIntegration)){
+alert("您的积分余额不足");
+return false;
+}
 });
     </script>
 </html>
