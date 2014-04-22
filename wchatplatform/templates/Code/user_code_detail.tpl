@@ -80,15 +80,17 @@
                 bottom: 0;
                 left: 0;
                 position: fixed;
-                z-index: 999999;
-                background: url({$WebSiteUrlPublic}/company/image/black_background.png);
+                z-index: 1000;
+
+                filter:alpha(Opacity=10);-moz-opacity:0.5;opacity: 0.5; background-color:black;
+
             }
 
             .floatingBox{
                 top: 20%;
 
 
-                
+
                 left:14%;
 
 
@@ -102,11 +104,16 @@
 
                 margin: 0 auto;
 
+                border: 1px solid red;
 
 
-                position: absolute;
 
+                position: fixed;
+
+                z-index: 1001;
                 background-color: white;
+
+                
             }
         </style>
     </head>
@@ -126,7 +133,7 @@
         <div class="cardBackground cardBackgroundColorEffective"  style='position: relative;'>
             <div class="promoTitle">{$codeInfo.code_info.code_name}</div>
             <div style="text-align: center;">
-                <div class="serviceNumStyle" style="display: inline-block">7</div><div style="display: inline-block;font-size: 20px;">折</div>
+                <div class="serviceNumStyle" style="display: inline-block">{$codeInfo.code_info.commodity_cost}</div><div style="display: inline-block;font-size: 20px;">折</div>
             </div>
             <div class="whereFrom">
                 来自：刮刮卡
@@ -160,16 +167,22 @@
 
         <!--失效界面结束-->
         <div style="height: 15px;"></div>
+        
+        
+        <div id='floaftDiv' style='display:none;'>
+
+        <div class='main_mask' style='' id='floaftBox'>
 
 
-        <div class='main_mask' style=' display: none;background-color: rgb(243,237,227);' id='floaftBox'>
-
-            <div class='floatingBox'>
-
-                <div style='  font-size: 14px; text-align: center; margin-top: 1em;'>请点击右上角 将赠送地址发送朋友</div>
-            </div>
 
         </div>
+
+        <div class='floatingBox' style='background-color: white;'>
+
+            <div style='  font-size: 14px; text-align: center; margin-top: 1em;'>请点击右上角 将赠送地址发送朋友</div>
+        </div>
+            
+            </div>
     </body>
 </html>
 
@@ -180,7 +193,7 @@
 
 
     if (state == 1) {
-        $('#floaftBox').css('display', 'block');
+        $('#floaftDiv').css('display', 'block');
     }
 
 

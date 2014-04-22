@@ -19,25 +19,25 @@ defined('apiLog') or define('apiLog', ROOT_DIR . Logs . '/Info/');
 
 defined('SQLLog') or define('SQLLog', ROOT_DIR . Logs . '/SQL/');
 
-defined('LOG_FILE_SIZE') or define('LOG_FILE_SIZE', 2097152);// 日志文件大小限制
+defined('LOG_FILE_SIZE') or define('LOG_FILE_SIZE', 2097152); // 日志文件大小限制
 
-defined('LOG_STATE') or define('LOG_STATE', 0) ;  // 是否开启日志  0为开启 1 为关闭
+defined('LOG_STATE') or define('LOG_STATE', 0);  // 是否开启日志  0为开启 1 为关闭
 
 defined('URL_PATHINFO_DEPR') or define('URL_PATHINFO_DEPR', '/');
 
 defined('URL_MODEL') or define('URL_MODEL', '1'); //url模式 0为默认模式  1 为 pathinfo模式
 
-defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH','ORIG_PATH_INFO,REDIRECT_PATH_INFO,REDIRECT_URL');
+defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH', 'ORIG_PATH_INFO,REDIRECT_PATH_INFO,REDIRECT_URL');
 /**
  * 关闭报错信息 把报错信息存储到错误文件中
  */
-ini_set("display_errors", 0);
+ini_set("display_errors", 1);
 
 ini_set("log_errors", "On");
 
 ini_set("error_log", ROOT_DIR . Logs . '/Error/error.log');
 
-defined('DBNAME') or define('DBNAME','weixin_company');
+defined('DBNAME') or define('DBNAME', 'weixin_company');
 
 defined('USER') or define('USER', 'root');
 

@@ -10,9 +10,9 @@ class QuesionRecordModel extends basic {
     }
 
     public function addData($field, $data, $user) {
-        
-        
-        
+
+
+
 
         $field_array = explode(',', $field);
 
@@ -22,7 +22,7 @@ class QuesionRecordModel extends basic {
 
         foreach ($field_array as $key => $value) {
 
-            $this->addCondition('user_id = ' . $user['user_id'] . ' and question_id = ' . $value,1);
+            $this->addCondition('user_id = ' . $user['user_id'] . ' and question_id = ' . $value, 1);
 
             $this->initialize();
 

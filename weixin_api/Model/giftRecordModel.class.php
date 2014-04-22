@@ -9,7 +9,7 @@ class giftRecordModel extends basic {
         parent::__construct();
     }
 
-    public function getGiftInfoById($userInfo,$type) {
+    public function getGiftInfoById($userInfo, $type) {
 
 
         $endTime = mktime(0, 0, 0) + 86400;
@@ -18,7 +18,7 @@ class giftRecordModel extends basic {
 
         if (!empty($type) && !empty($userInfo)) {
 
-            $this->addCondition('gift_type = '.$type.' and user_id = ' . $userInfo['user_id'] . '  and play_time >=' . $beginTime . ' and play_time <' . $endTime, 1);
+            $this->addCondition('gift_type = ' . $type . ' and user_id = ' . $userInfo['user_id'] . '  and play_time >=' . $beginTime . ' and play_time <' . $endTime, 1);
 
             $this->initialize();
 
@@ -31,19 +31,18 @@ class giftRecordModel extends basic {
             }
         }
     }
-    
-    
-    public function addRecord($gift_id,$gift_type,$userInfo){
-        
-        
+
+    public function addRecord($gift_id, $gift_type, $userInfo) {
+
+
         $insert['gift_id'] = $gift_id;
-        
+
         $insert['gift_type'] = $gift_type;
-        
+
         $insert['user_id'] = $userInfo['user_id'];
-        
+
         $insert['play_time'] = time();
-        
+
         $this->insert($insert);
     }
 

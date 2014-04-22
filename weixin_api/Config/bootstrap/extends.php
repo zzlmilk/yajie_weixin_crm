@@ -218,7 +218,7 @@ function get_client_ip($type = 0) {
 /**
  *  使用CURL 函数 获取远程地址的数据
  */
-function transmissionData($url, $jsonData,$method) {
+function transmissionData($url, $jsonData, $method) {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" . $access_token);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
@@ -261,24 +261,20 @@ function include_path_file($dirName, $fileKey) {
                 $filePath = ROOT_DIR . $fileKey . '/' . $dirValue . '/';
                 //echo $filePath.'<br />';
 
-                if(file_exists($filePath)){
+                if (file_exists($filePath)) {
 
                     fileRead($filePath);
-
                 }
-                
             }
         }
     } else {
         $filePath = ROOT_DIR . $dirName . '/';
-         if(file_exists($filePath)){
+        if (file_exists($filePath)) {
 
             fileRead($filePath);
-                    
-         }
+        }
     }
 }
-
 
 /**
  * 将数组中的键值 转换为 对象
@@ -288,36 +284,29 @@ function include_path_file($dirName, $fileKey) {
  * $output  int   默认为1   1为输出json数据 0为返回已经生成好的对象
  *
  */
+function arrayToObject($array, $output = 1) {
 
-function arrayToObject($array,$output = 1){
+    $object = new stdClass();
 
-    $object =  new stdClass();
+    if (is_array($array) && count($array) > 0) {
 
-    if(is_array($array) && count($array) > 0 ){
-
-        foreach($array as $key=>$value){
+        foreach ($array as $key => $value) {
 
             $object->$key = $value;
-
-         }
-
+        }
     }
 
-    if($output == 1){
+    if ($output == 1) {
 
-           
+
         echo json_encode($object);
 
         die;
-
-    } else{
+    } else {
 
         return $object;
-
     }
-
 }
-
 
 /**
  * 组装成json  如错误代码 则直接返回错误代码的json
@@ -355,23 +344,22 @@ function AssemblyJson($jsonArray = null, $type = 'json') {
  * 设定错误代码
  */
 function setErrorCode($errorCode) {
-    
+
     $logs = apiLog . date("Y_m_d") . '.log';
-    
+
     /**
      * 判断是否有PHP错误
      */
-
     if (count(error_get_last()) > 0) {
 
-        
-     
+
+
         $error_array = error_get_last();
-        
+
         $error_json = json_encode($error_array);
-        
+
         log_write($error_json, $logs, 'ERROR');
-        
+
         if ($error_array['type'] != 8192) {
 
             $_ENV['error_code'] = 100;
@@ -410,88 +398,131 @@ function getErrorInfo() {
  *  $method  为传递的方式  POST  GER
  *  $data   当method 为post时  传值为array
  */
+function transferData($url, $method, $data = '') {
 
-function  transferData($url,$method,$data =''){
-
-    switch($method){
+    switch ($method) {
 
         case 'post':
 
-            $output = curlPost($url,$data);
+            $output = curlPost($url, $data);
 
-        break;
+            break;
 
         case 'get':
 
-           $output = curlGet($url);
+            $output = curlGet($url);
 
-        break;
-
+            break;
     }
 
     return $output;
-    
 }
 
+function curlPost($url, $post = null, $options = array()) {
 
-function curlPost($url,$post = null,$options = array()){
-
-    $defaults = array( 
-
-        CURLOPT_POST => 1, 
-        CURLOPT_HEADER => 0, 
-        CURLOPT_URL => $url, 
-        CURLOPT_FRESH_CONNECT => 1, 
-        CURLOPT_RETURNTRANSFER => 1, 
-        CURLOPT_FORBID_REUSE => 1, 
-        CURLOPT_TIMEOUT => 4, 
-        CURLOPT_POSTFIELDS => http_build_query($post),
-        CURLOPT_FOLLOWLOCATION=> 1
-    ); 
-
-    $ch = curl_init(); 
-
-    curl_setopt_array($ch, ($options + $defaults)); 
-
-    if( ! $result = curl_exec($ch)) 
-    { 
-        trigger_error(curl_error($ch)); 
-    } 
-    curl_close($ch); 
-    return $result; 
-
-}
-
-
-function curlGet($url){
-
-
-     $defaults = array( 
-
-        CURLOPT_URL => $url, 
-
-        CURLOPT_HEADER => 0, 
-
-        CURLOPT_RETURNTRANSFER => TRUE, 
-
+    $defaults = array(
+        CURLOPT_POST => 1,
+        CURLOPT_HEADER => 0,
+        CURLOPT_URL => $url,
+        CURLOPT_FRESH_CONNECT => 1,
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_FORBID_REUSE => 1,
         CURLOPT_TIMEOUT => 4,
-        
-        CURLOPT_FOLLOWLOCATION=> 1
-    ); 
+        CURLOPT_POSTFIELDS => http_build_query($post),
+        CURLOPT_FOLLOWLOCATION => 1
+    );
+
+    $ch = curl_init();
+
+    curl_setopt_array($ch, ($options + $defaults));
+
+    if (!$result = curl_exec($ch)) {
+        trigger_error(curl_error($ch));
+    }
+    curl_close($ch);
+    return $result;
+}
+
+function curlGet($url) {
+
+
+    $defaults = array(
+        CURLOPT_URL => $url,
+        CURLOPT_HEADER => 0,
+        CURLOPT_RETURNTRANSFER => TRUE,
+        CURLOPT_TIMEOUT => 4,
+        CURLOPT_FOLLOWLOCATION => 1
+    );
+
+    $ch = curl_init();
+
+    curl_setopt_array($ch, $defaults);
+
+    if (!$result = curl_exec($ch)) {
+        trigger_error(curl_error($ch));
+    }
+
+    curl_close($ch);
+
+    return $result;
+}
+
+/**
+ * 调用模块的操作方法 /user/get_info    模块 + 方法名
+ * @param string $url 调用地址
+ *               $dir 目录文件夹
+ * @param array $vars 调用参数 数组 
+ * @return mixed
+ */
+function R($url, $dir, $vars = array()) {
+    $info = pathinfo($url);
+
+    $action = $info['basename'];
+    $module = $info['dirname'];
+    $class = A($module, $dir);
+
+
+    if ($class) {
+
+
+        return call_user_func_array(array(&$class, $action), $vars);
+    } else {
+        return false;
+    }
+}
+
+/**
+ * 初始化类名
+ * @param type $module
+ * @param type $ext
+ * @param type $file
+ * @return class
+ */
+function A($module, $dir, $ext = '.class.php', $file = 'Controller') {
+
+    static $_action = array();
+
+    $class_strut = explode('/', $module);
+
+    $class = str_replace(array('.', '#'), array('/', '.'), $module);
+
+    $class = substr_replace($class, '', 0, strlen($class_strut[0]) + 1);
+
+    $baseUrl = ROOT_DIR . 'Controllers/' . $dir . '/';
     
-    $ch = curl_init(); 
+    $classfile = $baseUrl . $class . $file . $ext;
+   
+    if (isset($_action[$module]))
+        return $_action[$module];
+    if (file_exists($classfile)) {
 
-    curl_setopt_array($ch, $defaults); 
+        require_once $classfile;
+        $model = basename($module . $file);
 
-    if( ! $result = curl_exec($ch)) 
-    { 
-        trigger_error(curl_error($ch)); 
-    } 
-
-    curl_close($ch); 
-
-    return $result; 
-
+        $class = new $model();
+        $_action[$module] = $class;
+        return $class;
+    }
 }
 
 ?>

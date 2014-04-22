@@ -38,7 +38,7 @@ class gameController extends BaseController {
         }
     }
 
-    public function bigWheelPage() {
+    public function gameDa() {
 
         $this->able_register();
 
@@ -48,7 +48,7 @@ class gameController extends BaseController {
         $error = new errorApi();
 
         $error->JudgeError($info);
-        $this->display();
+        $this->display('bigWheelPage');
     }
 
     public function guaguaka() {
@@ -57,9 +57,11 @@ class gameController extends BaseController {
 
         $giftApi = new giftApi();
         $info = $giftApi->getUserGameRecord($this->userOpenId, 2);
-        
-        
-        
+
+
+
+
+
         $error = new errorApi();
 
         $error->JudgeError($info);
@@ -233,12 +235,11 @@ class gameController extends BaseController {
 
             $gift = new giftApi();
 
-            $giftArray = $gift->getGiftInfo($_REQUEST['gift_id'], 1);
-            
-            if($_REQUEST['gift_type'] == 2){
-                
-                $gift->addCardRecord($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['gift_type']);
-            }
+            $giftArray = $gift->getGiftInfo($_REQUEST['gift_id'], $_REQUEST['gift_type']);
+
+
+
+     
 
             $this->setDir('Public');
 
@@ -284,7 +285,11 @@ class gameController extends BaseController {
                         break;
 
                     default :
+                        
+                        
+                        $gift->addCardRecord($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['gift_type']);
 
+                        
                         $this->getBigWheelText();
 
                         die;
@@ -310,6 +315,7 @@ class gameController extends BaseController {
     }
 
     public function getBigWheelText() {
+        
 
         $this->setDir('Public');
 
@@ -328,7 +334,12 @@ class gameController extends BaseController {
 
             $gift = new giftApi();
             $awardResult = $gift->sendUserGift($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['type']);
+            
+            
+             $gift->addCardRecord($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['type']);
 
+            
+          
             /**
              * 如存在 则 兑换的内容为虚拟的内容
              */

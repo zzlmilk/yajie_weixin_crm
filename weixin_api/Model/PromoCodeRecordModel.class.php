@@ -119,6 +119,7 @@ class PromoCodeRecordModel extends basic {
             $codeInfo = new PromoCodeModel();
 
             $codeInfo->initialize('promo_code_id = ' . $code_id);
+            
 
             $code = new PromoCodeRecordModel();
 

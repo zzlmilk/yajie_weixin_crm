@@ -111,9 +111,9 @@ class CodeController implements Code {
 
 
 
-            $code = new PromoCodeRecordModel();
-
-            $info = $code->addCode($codeDetail['promo_code_id'], $_REQUEST['open_id']);
+//            $codeR = new PromoCodeRecordModel();
+//
+//            $info = $codeR->addCode($codeDetail['promo_code_id'], $_REQUEST['open_id']);
 
 
 

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-18 09:51:22
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-18 12:13:31
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Order/orderCheck.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11800036635350851a973796-32312658%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7813931805350a66b44c112-81252537%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '72c54a70e341edfaefe409e2e23653314ee5eb73' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Order/orderCheck.tpl',
-      1 => 1397112585,
+      1 => 1397792727,
     ),
   ),
-  'nocache_hash' => '11800036635350851a973796-32312658',
+  'nocache_hash' => '7813931805350a66b44c112-81252537',
   'function' => 
   array (
   ),
@@ -62,18 +62,19 @@ $_smarty_tpl->decodeProperties(array (
         </style>
     </head>
     <body style='background-color: rgb(243,237,227);'>
-        <div class="cardBackground"  style='background-color: #fff;position: relative;'>
-            <div style="position: absolute; right: 15px; top:0;">
-                <?php if ($_smarty_tpl->getVariable('returnVal')->value['orderState']=="1"){?>
-                    <p type="button" disabled="" style="opacity: 1;"><h3>过&nbsp;&nbsp;&nbsp;期</h3></p>
-                <?php }else{ ?>
-
-                <?php }?>
-
-            </div>
-            <form method='post' role="form" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+        <form method='post' role="form" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 ?g=company&a=order&v=order&checkReturn=1&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
 ">
+            <div class="cardBackground"  style='background-color: #fff;position: relative;'>
+                <div style="position: absolute; right: 15px; top:0;z-index: 150;">
+                    <?php if ($_smarty_tpl->getVariable('returnVal')->value['orderState']=="1"){?>
+                        <p type="button" disabled="" style="opacity: 1;"><h3>过&nbsp;&nbsp;&nbsp;期</h3></p>
+                    <?php }else{ ?>
+                        <button type="submit" style="width: 60px;margin-top: 8px; " class="btn btn-primary">编&nbsp;&nbsp;&nbsp;辑</button>
+                    <?php }?>
+
+                </div>
+
                 <div class="form-group" style=" margin-top: 1.5em; margin-bottom: 0px;">
                     <label class="col-sm-2  topTitleTry"style="">交易项目</label>
                     <div class="col-sm-10">
@@ -144,18 +145,20 @@ $_smarty_tpl->decodeProperties(array (
                 <div class="form-group" style="margin-top: 2.5em; text-align: center;">
                     <div class="col-sm-10">
                         <?php if ($_smarty_tpl->getVariable('returnVal')->value['orderState']=="1"){?>
-                          
+
                         <?php }else{ ?>
-                            <button type="submit" style="width: 180px;" class="btn btn-primary">编&nbsp;&nbsp;&nbsp;辑</button>
+                            <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=company&a=order&v=payment&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+"><button type="button" style="width: 180px;" class="btn btn-primary">确&nbsp;&nbsp;&nbsp;认</button></a>
                         <?php }?>
 
                     </div>
                     <div style="clear: both;"></div>
                 </div>
                 <div style="height: 1em;"></div>
-            </form>
-        </div>
+        </form>
+    </div>
 
-    </body>
-    <div style="height: 1.5em;"></div>
+</body>
+<div style="height: 1.5em;"></div>
 </html>

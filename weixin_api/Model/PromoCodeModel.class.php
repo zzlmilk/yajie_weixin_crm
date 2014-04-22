@@ -13,26 +13,28 @@ class PromoCodeModel extends basic {
      * 获取优惠吗 信息
      */
     public function getCodeInfoById($code_id) {
-        
+
+        $join_str = array(array("commodity", "commodity.commodity_id", "promo_code.code_merchandise"));
         $this->clearUp();
 
-        $this->initialize('promo_code_id = '.$code_id);
-        
-        if($this->vars_number >  0){
-                
+        $this->addJoin($join_str);
+
+        $this->initialize('promo_code_id = ' . $code_id);
+
+
+        if ($this->vars_number > 0) {
+
             return $this->vars;
-            
-        } else{
-            
+        } else {
+
             echoErrorCode(60001);
         }
-        
     }
 
     /**
      * 生成优惠吗
      */
-    public function generateCode($number, $count,$type) {
+    public function generateCode($number, $count, $type) {
 
         $characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -48,9 +50,13 @@ class PromoCodeModel extends basic {
 
             $insert['code_name'] = $code;
 
-            $insert['code_merchandise'] = 1;
+            $insert['code_merchandise'] = rand(1, 2);
 
             $insert['code_type'] = $type;
+
+            $insert['code_begin_time'] = mktime(0, 0, 0);
+
+            $insert['code_end_time'] = mktime(23, 59, 59) + (rand(1, 3) * 86400);
 
             $this->insert($insert);
         }
@@ -63,7 +69,11 @@ class PromoCodeModel extends basic {
 
         $this->clearUp();
 
-        $this->initialize('code_merchandise = 1 and code_state = 0  and code_type = '.$type);
+        $join_str = array(array("commodity", "commodity.commodity_id", "promo_code.code_merchandise"));
+
+        $this->addJoin($join_str);
+
+        $this->initialize('code_state = 0  and code_type = ' . $type);
 
 
         if ($this->vars_number > 0) {
@@ -71,12 +81,12 @@ class PromoCodeModel extends basic {
             $array = $this->vars_all;
 
             $randNumber = array_rand($array);
-       
+
 
             return $array[$randNumber];
         } else {
 
-            $this->generateCode(50, 4,$type);
+            $this->generateCode(50, 4, $type);
 
             $this->getCode($type);
         }

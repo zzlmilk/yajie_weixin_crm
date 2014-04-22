@@ -1,33 +1,26 @@
 <?php
 
+class RegistrationDayModel extends Basic {
 
-class RegistrationDayModel  extends Basic {
+    public function __construct() {
 
+        $this->child_name = 'registration_day';
 
-	public function __construct() {
-
-		$this->child_name = 'registration_day';
-
-		parent::__construct();
-
+        parent::__construct();
     }
 
-    public function getAward($day){
+    public function getAward($day) {
 
-    	$awardDay = new RegistrationDayModel();
+        $awardDay = new RegistrationDayModel();
 
-    	$awardDay->initialize('day = '.$day);
+        $awardDay->initialize('day = ' . $day);
 
-    	if($awardDay->vars_number > 0){
+        if ($awardDay->vars_number > 0) {
 
-    		return $awardDay->vars;
-
-    	} 
-
+            return $awardDay->vars;
+        }
     }
 
 }
-
-
 
 ?>

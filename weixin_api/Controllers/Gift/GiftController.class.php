@@ -143,7 +143,7 @@ class GiftController implements gift {
 
                $record = new giftRecordModel();
 
-               $record->addRecord($_REQUEST['gift_id'], $_REQUEST['gift_type'], $userInfo['user_id']);
+               $record->addRecord($_REQUEST['gift_id'], $_REQUEST['gift_type'], $userInfo);
             } else {
                 echoErrorCode(70001);
             }

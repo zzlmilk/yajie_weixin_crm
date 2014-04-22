@@ -1,68 +1,59 @@
 <?php
 
-class ApplyModel extends basic{
+class ApplyModel extends basic {
 
-		public function __construct() {
+    public function __construct() {
 
-		$this->child_name = 'apply';
+        $this->child_name = 'apply';
 
-		parent::__construct();
-
+        parent::__construct();
     }
 
     /**
      * 获取用户申请信息
      */
+    public function getInfoAll($id) {
 
-    public function getInfoAll($id){
-
-        if(!empty($id)){
+        if (!empty($id)) {
 
             $this->clearUp();
 
-             $this->initialize('activity_id = '.$id);
+            $this->initialize('activity_id = ' . $id);
 
-             return $this->vars_all;
-
+            return $this->vars_all;
         }
-
     }
 
-    public function addApply($data){
+    public function addApply($data) {
 
-    	$activity = new ActivityModel();
+        $activity = new ActivityModel();
 
-    	$activity_info = $activity->getInfoActivity($data['activity_id']);
+        $activity_info = $activity->getInfoActivity($data['activity_id']);
 
-    	if(count($activity_info) > 0){
+        if (count($activity_info) > 0) {
 
-        $activity->setIncApplyNumber($data['activity_id']);
+            $activity->setIncApplyNumber($data['activity_id']);
 
-    		$insert['activity_id'] = $activity_info['activity_id'];
+            $insert['activity_id'] = $activity_info['activity_id'];
 
-    		$insert['real_name'] = $data['real_name'];
+            $insert['real_name'] = $data['real_name'];
 
-    		$insert['user_phone'] = $data['user_phone'];
+            $insert['user_phone'] = $data['user_phone'];
 
-        $insert['apply_time'] = time();
-
-
-  			$this->insert($insert);
+            $insert['apply_time'] = time();
 
 
-  			return $data;
+            $this->insert($insert);
 
 
-    	} else{
+            return $data;
+        } else {
 
-        echo '此活动不存在';
+            echo '此活动不存在';
 
-        die;
-
-    	}
-
+            die;
+        }
     }
-
 
 }
 
