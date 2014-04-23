@@ -116,8 +116,16 @@ class GiftModel extends Basic {
                      * 
                      */
                     $userRecord = new userPointerRecordModel();
+                    
+                    if($info['gift_type'] == '1'){
+                        
+                        $type = 'bigwheel';
+                    } else{
+                        
+                        $type = 'guaguaka';
+                    }
 
-                    $recordArray = $userRecord->addRecord($userinfo['user_id'], 1, $info['gift_integration'], 'gift');
+                    $recordArray = $userRecord->addRecord($userinfo['user_id'], 1, $info['gift_integration'], $type);
 
                     $array['user'] = arrayToObject($userObject, 0);
 

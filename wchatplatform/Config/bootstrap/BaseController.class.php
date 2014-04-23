@@ -8,6 +8,7 @@ class BaseController {
     public $smarty_dir;
     public $tVar;
     public $userOpenId;
+    public $requset;
 
     private function initView() {
 

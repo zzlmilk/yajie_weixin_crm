@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-16 15:48:31
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-23 12:08:38
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/User/userCenter.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1374933901534e35cf1c7af0-78319012%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:132614234853573cc666f6d5-92490385%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '20d2e309a97bae8d1f3f101c3bc238e9c7ebe588' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/User/userCenter.tpl',
-      1 => 1397551373,
+      1 => 1398221712,
     ),
   ),
-  'nocache_hash' => '1374933901534e35cf1c7af0-78319012',
+  'nocache_hash' => '132614234853573cc666f6d5-92490385',
   'function' => 
   array (
   ),
@@ -134,7 +134,9 @@ $_smarty_tpl->decodeProperties(array (
                     </a>
                 </li>
                 <li class="table-view-cell media">
-                    <a class="push-right" href="inbox.html" data-transition="slide-in">
+                    <a class="push-right" href="javascript:void(0)" data-transition="slide-in"  onclick='window.location.href = "<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
+?g=company&a=user&v=userJF&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+"'>
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
                         <div class="media-body">
                             积分和消费

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-17 17:57:27
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-23 10:20:12
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Game/guaguaka.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1868848934534fa587772014-07324619%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:18069616935357235c426313-40270123%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b90488ff0e6caccff2154783e0a12473122c4f12' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Game/guaguaka.tpl',
-      1 => 1397728626,
+      1 => 1397804467,
     ),
   ),
-  'nocache_hash' => '1868848934534fa587772014-07324619',
+  'nocache_hash' => '18069616935357235c426313-40270123',
   'function' => 
   array (
   ),
@@ -52,9 +52,9 @@ $_smarty_tpl->decodeProperties(array (
 
         </style>
          <div style='height: 1em;'>&nbsp;</div>
-        <div style=' text-align: center;background-color: white; width: 40%; margin: 0 auto; height: 2em; line-height: 2em;'>脊会员您好，欢迎来刮刮乐获得意想不到的礼品，每天限玩一次</div>
+        <div style=' text-align: center;background-color: rgb(243,237,227); width: 80%; margin: 0 auto; line-height: 2em;'>脊会员您好，欢迎来刮刮乐获得意想不到的礼品，每天限玩一次</div>
         
-        
+        <div style=' height: 1em;'>&nbsp;</div>
         <input type="hidden" value="<?php echo $_smarty_tpl->getVariable('websiteurl')->value;?>
 " id="apiRoute" >
         <input type="hidden" value="<?php echo $_smarty_tpl->getVariable('open_id')->value;?>

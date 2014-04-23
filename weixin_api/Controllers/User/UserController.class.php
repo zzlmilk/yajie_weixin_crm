@@ -116,8 +116,8 @@ class UserController implements User {
      * 获取用户资料
      */
     public function get_info() {
-        
-      
+
+
 
         if (!empty($_REQUEST['source']) && !empty($_REQUEST['open_id'])) {
 
@@ -141,12 +141,7 @@ class UserController implements User {
 
             echoErrorCode(105);
         }
-        
-        
-     
     }
-    
-  
 
     /**
      * 修改用户信息
@@ -202,6 +197,23 @@ class UserController implements User {
 
                 echoErrorCode(105);
             }
+        } else {
+
+            echoErrorCode(105);
+        }
+    }
+
+    public function getUserRecord() {
+
+        if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['source']) && !empty($_REQUEST['type'])) {
+
+            $userModel = new userModel();
+
+            $userinfo = $userModel->getUserInfo($_REQUEST['open_id']);
+
+            $userRecord = new userPointerRecordModel();
+
+            $userRecord->getUserRecord($userinfo, $_REQUEST['type']);
         } else {
 
             echoErrorCode(105);

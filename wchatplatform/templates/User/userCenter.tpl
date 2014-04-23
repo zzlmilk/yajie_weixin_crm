@@ -104,7 +104,7 @@
                     </a>
                 </li>
                 <li class="table-view-cell media">
-                    <a class="push-right" href="inbox.html" data-transition="slide-in">
+                    <a class="push-right" href="javascript:void(0)" data-transition="slide-in"  onclick='window.location.href = "{$websiteUrl}?g=company&a=user&v=userJF&open_id={$open_id}"'>
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
                         <div class="media-body">
                             积分和消费

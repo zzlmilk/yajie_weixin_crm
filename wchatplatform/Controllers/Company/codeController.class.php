@@ -105,8 +105,12 @@ class codeController extends BaseController {
         $codeApi = new codeApi();
 
         $result = $codeApi->getUserReceviceCode('company', 2, $give_open_id);
+        
+       
 
-        $codeInfo = $codeApi->getcodeInfo($result['promo_code_id'], 'company');
+        //$codeInfo = $codeApi->getcodeInfo($result['promo_code_id'], 'company');
+        
+      
 
         if ($give_open_id == $open_id) {
 
@@ -120,7 +124,7 @@ class codeController extends BaseController {
 
         $this->assign('open_id', $open_id);
 
-        $this->assign('codeInfo', $codeInfo);
+        $this->assign('codeInfo', $result);
 
         $this->setDir('Code');
 
@@ -140,7 +144,7 @@ class codeController extends BaseController {
         if ($this->userOpenId == $_REQUEST['give_open_id']) {
 
 
-            $this->displayMessage('紫荆无法领取');
+            $this->displayMessage('自己无法领取');
             die;
         }
 
