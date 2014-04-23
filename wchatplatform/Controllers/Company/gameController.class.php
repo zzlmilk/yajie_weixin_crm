@@ -58,7 +58,7 @@ class gameController extends BaseController {
         $giftApi = new giftApi();
         $info = $giftApi->getUserGameRecord($this->userOpenId, 2);
 
-
+       
 
 
 
@@ -68,8 +68,8 @@ class gameController extends BaseController {
         $scratchCard = new scratchCard();
         $ScratchCardResults = $scratchCard->getScratchCardResults("company");
 
-
-
+        
+  
         $this->assign("websiteurl", WebSiteUrl);
         $this->assign("ScratchCardResults", $ScratchCardResults);
         $this->display();

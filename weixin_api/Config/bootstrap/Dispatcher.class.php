@@ -5,7 +5,7 @@ class Dispatcher {
     public function dispatcher() {
 
 
-        
+
 
         if (URL_MODEL == 0) {
 
@@ -77,10 +77,9 @@ class Dispatcher {
 
 
         array_shift($pathArray);
+        defined('ACTION_NAME') or define('ACTION_NAME', $pathArray[0]);
 
         defined('MODULE_URL') or define('MODULE_URL', '/' . MODULE . '/' . ACTION_NAME);
-
-        defined('ACTION_NAME') or define('ACTION_NAME', $pathArray[0]);
     }
 
 }

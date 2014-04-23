@@ -64,9 +64,9 @@ class CodeController implements Code {
         if (!empty($_REQUEST['source']) && !empty($_REQUEST['code_id'])) {
 
 
-            $code = new PromoCodeRecordModel();
+            $code = new PromoCodeModel();
 
-            $record = $code->getCodeInfo($_REQUEST['code_id']);
+            $record = $code->getCodeInfoById($_REQUEST['code_id']);
 
             AssemblyJson($record);
         } else {

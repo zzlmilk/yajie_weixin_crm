@@ -27,7 +27,7 @@ class GiftSettingModel extends Basic {
      * 计算概率
      * $type int  游戏类型
      */
-    public function cipher_probability($type, $userInfo) {
+    public function cipher_probability($type) {
 
         /**
          * 获取大转盘的概率

@@ -64,6 +64,24 @@ class userApi {
         }
     }
 
+    public function getUserRecord($open_id, $source, $type) {
+        if (!empty($open_id)) {
+            $data['open_id'] = $open_id;
+            $data['source'] = $source;
+
+            $data['type'] = $type;
+            $userInfoJson = transferData(APIURL . "/user/getUserRecord", "post", $data);
+            $userInfoArray = json_decode($userInfoJson, true);
+
+            $error = new errorApi();
+
+            $error->JudgeError($userInfoArray);
+
+
+            return $userInfoArray;
+        }
+    }
+
 }
 ?>
 

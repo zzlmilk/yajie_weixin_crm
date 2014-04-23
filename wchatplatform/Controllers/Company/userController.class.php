@@ -6,8 +6,7 @@ class UserController extends BaseController {
     public $errorMessage = "";
 
     public function __construct() {
-
-
+  
         header("Content-type:text/html;charset=utf-8");
 
         if (!empty($_REQUEST['open_id'])) {
@@ -184,6 +183,9 @@ class UserController extends BaseController {
 
     public function userInfo() {
 
+
+
+
         $this->display();
     }
 
@@ -191,6 +193,30 @@ class UserController extends BaseController {
      * 用户积分
      */
     public function userJf() {
+
+
+        print_r($this->requset);
+
+        die;
+
+        if (!empty($_REQUEST['type'])) {
+
+
+            $type = $_REQUEST['type'];
+        } else {
+
+            $type = 1;
+        }
+
+        $userApi = new userApi();
+
+        $result = $userApi->getUserRecord($this->userOpenId, 'company', $type);
+
+
+        $this->assign('type', $type);
+        $this->assign('data', $result);
+
+        $this->assign('number', count($result));
 
         $this->display();
     }

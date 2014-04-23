@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-18 11:59:52
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-23 10:19:19
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Game/bigWheelPage.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13512272615350a3381003d6-37530418%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1921604762535723278550d9-35846346%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '463b2cf7a16c61dd1d8c2d3a56ee133f5a219c0a' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Game/bigWheelPage.tpl',
-      1 => 1397788741,
+      1 => 1398043962,
     ),
   ),
-  'nocache_hash' => '13512272615350a3381003d6-37530418',
+  'nocache_hash' => '1921604762535723278550d9-35846346',
   'function' => 
   array (
   ),
@@ -40,7 +40,7 @@ $_smarty_tpl->decodeProperties(array (
 
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-        <title>幸运大转盘抽奖</title>
+      
         <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
 /company/script/giftAward.js"></script>
         <link href="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>

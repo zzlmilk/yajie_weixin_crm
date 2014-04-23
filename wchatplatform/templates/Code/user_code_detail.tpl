@@ -131,12 +131,12 @@
 
 
         <div class="cardBackground cardBackgroundColorEffective"  style='position: relative;'>
-            <div class="promoTitle">{$codeInfo.code_info.code_name}</div>
+            <div class="promoTitle">{$codeInfo.code_name}</div>
             <div style="text-align: center;">
-                <div class="serviceNumStyle" style="display: inline-block">{$codeInfo.code_info.commodity_cost}</div><div style="display: inline-block;font-size: 20px;">折</div>
+                <div class="serviceNumStyle" style="display: inline-block">{$codeInfo.commodity_cost}</div><div style="display: inline-block;font-size: 20px;">折</div>
             </div>
             <div class="whereFrom">
-                来自：刮刮卡
+                来自：赠送
             </div>
             <div style="height:  10px;"></div>
             <div style="border-bottom: 1px dashed #bbb;height: 1px; "></div>
@@ -144,7 +144,7 @@
             <div class="form-group" style="">
                 <label class="col-sm-2 control-label messageTitle" style="float: left; ">有效期：</label>
                 <div class="col-sm-10" style="text-align: left; ">
-                    <p class="form-control-static">{$codeInfo.code_info.code_begin_time|date_format:"%Y-%m-%d"} 至 {$codeInfo.code_info.code_end_time|date_format:"%Y-%m-%d"}</p>
+                    <p class="form-control-static">{$codeInfo.code_begin_time|date_format:"%Y-%m-%d"} 至 {$codeInfo.code_end_time|date_format:"%Y-%m-%d"}</p>
                 </div>
                 <div style="clear: both;"></div>
             </div>
@@ -158,7 +158,7 @@
 
         <div style=' width: 60%; margin: 0 auto;'>
 
-            <p><a href="{$WebSiteUrl}?g=company&a=code&v=giveResult&code_id={$codeInfo.code_info.promo_code_id}&open_id={$open_id}&give_open_id={$give_open_id}"><button type="button" class="btn btn-primary btn-xs" style=' width: 100%; height: 3em;'>领取</button></a></p>
+            <p><a href="{$WebSiteUrl}?g=company&a=code&v=giveResult&code_id={$codeInfo.promo_code_id}&open_id={$open_id}&give_open_id={$give_open_id}"><button type="button" class="btn btn-primary btn-xs" style=' width: 100%; height: 3em;'>领取</button></a></p>
 
         </div>
 
