@@ -192,15 +192,10 @@ $("#order_number").val(cutString);
 }
 });
 //日期弹出框
-var nowDayTime=new Date();
-nowDayTime.setHours(0);
-nowDayTime.setMinutes(0);
-nowDayTime.setSeconds(0);
-var endDate= getDateTimeMessage(nowDayTime,2);
+
 $("#orderTime").datetimepicker({
 format: "yyyy-mm-dd hh:ii",
 startDate:new Date(),
-endDate:endDate,
 autoclose:true,
 minView:0,
 minuteStep:15,
