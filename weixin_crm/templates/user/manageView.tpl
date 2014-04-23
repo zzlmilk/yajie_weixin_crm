@@ -92,7 +92,13 @@
                                 余额
                             {/if}
                         </td>
-                        <td>{$RecordData.source}</td>
+                        <td>
+                            {if $RecordData.source eq "crm"}
+                                系统
+                            {else}
+                                {$RecordData.source}  
+                            {/if}
+                        </td>
                         <td>{$RecordData.create_time|date_format:"%Y-%m-%d %H:%M"}</td>
                     </tr>
                 {/foreach}
@@ -218,6 +224,7 @@ return false;
 
 var recoredLength=rData['recordList'].length;
 var recoredValue=rData['recordList'];
+var sourceType="";
 $('.dataRecoredValue').html("");
 for(var i=0;i<recoredLength;i++){
 var addString="<tr>";
@@ -230,7 +237,13 @@ addString+="<td>积分</td>";
 else{
 addString+="<td>余额</td>";
 }
-addString+="<td>"+recoredValue[i]["source"]+"</td>";
+if(recoredValue[i]["source"]=="crm"){
+sourceType="系统";
+}
+else{
+sourceType=recoredValue[i]["source"];
+}
+addString+="<td>"+sourceType+"</td>";
 var createTime=recoredValue[i]["create_time"]
 var formatTime=timeToString(createTime*1000,1);
 addString+="<td>"+formatTime+"</td>";

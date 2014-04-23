@@ -216,7 +216,6 @@ var endDate= getDateTimeMessage(nowDayTime,2);
 $("#orderTime").datetimepicker({
 format: "yyyy-mm-dd hh:ii",
 startDate:new Date(),
-endDate:endDate,
 autoclose:true,
 minView:0,
 minuteStep:15,

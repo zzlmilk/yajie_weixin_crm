@@ -389,7 +389,7 @@ class userController implements User {
 
                 $user_pointer_record = new userPointerRecordModel();
 
-                $user_pointer_record->addRecord($user_id, 1, (int) $integration, '系统');
+                $user_pointer_record->addRecord($user_id, 1, (int) $integration, 'crm');
             }
         }
     }
@@ -415,7 +415,7 @@ class userController implements User {
 
                 $user_pointer_record = new userPointerRecordModel();
 
-                $user_pointer_record->addRecord($user_id, 2, (int) $money, '系统');
+                $user_pointer_record->addRecord($user_id, 2, (int) $money, 'crm');
             }
         }
     }
@@ -445,7 +445,7 @@ class userController implements User {
                 $user->updateVars();
                 $user_pointer_record = new userPointerRecordModel();
                 $misIntegration = -1 * $integration;
-                $user_pointer_record->addRecord($user_id, 1, $misIntegration, '系统');
+                $user_pointer_record->addRecord($user_id, 1, $misIntegration, 'crm');
             }
         }
     }
@@ -476,7 +476,7 @@ class userController implements User {
                 $user->updateVars();
                 $user_pointer_record = new userPointerRecordModel();
                 $misMoney = $money * -1;
-                $user_pointer_record->addRecord($user_id, 2, $misMoney, '系统');
+                $user_pointer_record->addRecord($user_id, 2, $misMoney, 'crm');
             }
         }
     }
