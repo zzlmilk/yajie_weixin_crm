@@ -1,12 +1,10 @@
 <?php
 
+interface ApplyInterface {
 
-interface Activity{
+    public function addApply();
 
-
-
+    public function get_apply_number();
 }
-
-
 
 ?>

@@ -1,29 +1,26 @@
 <?php
 
-class UserRegistrationRecordModel  extends Basic {
+class UserRegistrationRecordModel extends Basic {
 
+    public function __construct() {
 
-	public function __construct() {
+        $this->child_name = 'user_registration_record';
 
-		$this->child_name = 'user_registration_record';
-
-		parent::__construct();
-
+        parent::__construct();
     }
 
-    public function addRecord($user_id){
+    public function addRecord($user_id) {
 
-    	if(!empty($user_id) && $user_id > 0){
+        if (!empty($user_id) && $user_id > 0) {
 
-    		$data['user_id'] = $user_id;
+            $data['user_id'] = $user_id;
 
-    		$data['record_time'] = time();
+            $data['record_time'] = time();
 
             $this->insert($data);
 
             return $data;
-    	}
-
+        }
     }
 
 }

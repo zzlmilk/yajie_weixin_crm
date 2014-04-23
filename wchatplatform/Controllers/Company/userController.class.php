@@ -14,7 +14,7 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';   
+            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
 
 
             //$this->userOpenId = 'dasdasd';
@@ -63,7 +63,7 @@ class UserController extends BaseController {
 
 
         $this->assign('open_id', $this->userOpenId);
-        
+
         $this->ableSource($_REQUEST);
 
         $this->assign('vars', json_encode($_REQUEST));
@@ -121,7 +121,7 @@ class UserController extends BaseController {
                                     if (!empty($varsArray['action'])) {
                                         if ($varsArray['action'] == '/code/getCode') {
 
-                                            $array = array('give_open_id' => $varsArray['give_open_id'], 'open_id' => $varsArray['open_id']);
+                                            $array = array('open_id' => $varsArray['open_id'], 'give_open_id' => $varsArray['give_open_id']);
 
                                             R($varsArray['action'], $varsArray['source'], $array);
                                         } else if ($varsArray['action'] == 'url') {

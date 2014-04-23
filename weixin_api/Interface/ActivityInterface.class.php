@@ -1,12 +1,11 @@
 <?php
 
+interface Apply {
+    /*
+     * 获取最新的活动内容
+     */
 
-interface Apply{
-
-
-
+    public function get_activity();
 }
-
-
 
 ?>

@@ -1,51 +1,41 @@
 <?php
 
+class ExchangeRecordModel extends Basic {
+
+    public function __construct() {
+
+        $this->child_name = 'exchange_record';
+
+        parent::__construct();
+    }
+
+    public function addRecord($result, $userinfo) {
 
 
-class ExchangeRecordModel extends Basic{
+        $data['exchange_id'] = $result['id'];
+
+        $data['user_id'] = $userinfo['user_id'];
+
+        $data['exchange_time'] = time();
 
 
-	public function __construct() {
-
-		$this->child_name = 'exchange_record';
-
-		parent::__construct();
-
-	}
+        $this->insert($data);
 
 
-	public function addRecord($result,$userinfo){
+        return $data;
+    }
 
+    public function getUserRecord($user_id) {
 
-		$data['exchange_id'] = $result['id'];
+        $this->clearUp();
 
-		$data['user_id'] = $userinfo['user_id'];
+        $this->initialize('user_id = ' . $user_id);
 
-		$data['exchange_time'] = time();
+        if ($this->vars_number > 0) {
 
-
-		$this->insert($data);
-
-
-		return $data;
-
-	}
-
-	public function getUserRecord($user_id){
-
-		$this->clearUp();
-
-		$this->initialize('user_id = '.$user_id);
-
-		if($this->vars_number > 0){
-
-			return  $this->vars_all;
-
-		}
-
-	}
-
-
+            return $this->vars_all;
+        }
+    }
 
 }
 

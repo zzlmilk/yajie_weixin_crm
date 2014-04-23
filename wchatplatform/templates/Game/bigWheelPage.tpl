@@ -22,7 +22,7 @@
 
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-        <title>幸运大转盘抽奖</title>
+      {*  <title>幸运大转盘抽奖</title>*}
         <script src="{$WebSiteUrlPublic}/company/script/giftAward.js"></script>
         <link href="{$WebSiteUrlPublic}/company/bigWheelFiles/activity-style.css" rel="stylesheet" type="text/css">
 

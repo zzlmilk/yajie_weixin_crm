@@ -158,7 +158,7 @@
                         </div>
                         <div class="promoTitle">{$codeInfoItem.code_name}</div>
                         <div style="text-align: center;">
-                            <div class="serviceNumStyle" style="display: inline-block">9</div><div style="display: inline-block;font-size: 20px;">折</div>
+                            <div class="serviceNumStyle" style="display: inline-block">{$codeInfoItem.commodity_cost}</div><div style="display: inline-block;font-size: 20px;">折</div>
                         </div>
                         <div class="whereFrom">
                             
@@ -200,7 +200,7 @@
                     <div class="cardBackground cardBackgroundColorEffective"  style='position: relative;'>
                         <div class="promoTitle">{$codeInfoItem.code_name}</div>
                         <div style="text-align: center;">
-                            <div class="serviceNumStyle" style="display: inline-block">7</div><div style="display: inline-block;font-size: 20px;">折</div>
+                            <div class="serviceNumStyle" style="display: inline-block">{$codeInfoItem.commodity_cost}</div><div style="display: inline-block;font-size: 20px;">折</div>
                         </div>
                         <div class="whereFrom">
                               来自：

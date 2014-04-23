@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-18 11:46:29
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-18 12:12:51
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/templates/Exchange/getExchangeList.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11021174725350a0151ffba9-11589294%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1126961565350a64393d434-60169981%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6fc1099323bf1b98e9109de0a213b0432865c175' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/templates/Exchange/getExchangeList.tpl',
-      1 => 1397792727,
+      1 => 1397794276,
     ),
   ),
-  'nocache_hash' => '11021174725350a0151ffba9-11589294',
+  'nocache_hash' => '1126961565350a64393d434-60169981',
   'function' => 
   array (
   ),
@@ -129,7 +129,7 @@ if (count($_from) > 0){
                             <div style="width: 100%; text-align: right;"><a class="submitButton"  href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 ?g=company&a=exchange&v=changeGoods&goodsId=<?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_id'];?>
 &open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
-"><button type="button" class="btn btn-warning btn-xs">兑换</button></a></div>
+"><button type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>
                         </div>
                     </div>
                 </div>
@@ -145,14 +145,17 @@ if (count($_from) > 0){
     }
 });
 $(".submitButton").click(function(){
-    var integrationVals=$(this).parents().parents().find(".integration").html()
-    var integration=integrationVals.split(":")[1];
-    var userIntegration=$("#userIntegration").html();
-    userIntegration=userIntegration.split(":")[1];
-    if(integration>userIntegration){
-    alert("您的积分余额不足");
-    return false;
-    }
+var integrationVals=$(this).parent().parent();
+integrationVals=integrationVals.find(".integration").html();
+
+var integration=integrationVals.split(":")[1];
+
+var userIntegration=$("#userIntegration").html();
+var userIntegration=userIntegration.split(":")[1];
+if(parseInt(integration)>parseInt(userIntegration)){
+alert("您的积分余额不足");
+return false;
+}
 });
     </script>
 </html>

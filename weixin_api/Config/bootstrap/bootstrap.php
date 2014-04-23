@@ -23,57 +23,34 @@ class website {
         /**
          * 加载Model以及DB层
          */
-        $file_path = array('Config' => array('DB'), 'Model','Plug','Interface');
+        $file_path = array('Config' => array('DB'), 'Model', 'Plug', 'Interface');
 
         foreach ($file_path as $fileKey => $fileValue) {
 
             include_path_file($fileValue, $fileKey);
-
         }
         /**
          * 处理URL 以及 执行Action
          */
-
-
-        if(Develop == 1){
+        if (Develop == 1) {
 
             $this->initializationTest();
-
-        } else{
+        } else {
 
             $this->initialization();
-
         }
-        
     }
 
-    private function initializationTest(){
+    private function initializationTest() {
 
         /**
          * 路由处理
          */
         $url = new Dispatcher();
-        
+
         $url->dispatcher();
-        
-        /**
-         * 判断模块是否存在
-         */
-        if (class_exists(MODULE_NAME_CONTROLLER)) {
 
-            /**
-             * 实例化类
-             */
-            $className = MODULE_NAME_CONTROLLER;
-            $module = new $className();
-            if ($module) {
-                /**
-                 * 执行方法
-                 */
-                call_user_func(array(&$module, ACTION_NAME));
-            }
-        }
-
+        R(MODULE_URL, MODULE_DIR_NAME);
     }
 
     private function initialization() {
@@ -83,8 +60,8 @@ class website {
         $url = new Dispatcher();
 
         $url->dispatcher();
-        
-        if(!empty($_REQUEST['version'])){
+
+        if (!empty($_REQUEST['version'])) {
 
             $version = $_REQUEST['version'];
 
@@ -94,16 +71,16 @@ class website {
             $api = $versionApi[$version];
 
 
-          
 
-            if(!empty($api[MODULE]) && is_array($api[MODULE])){
+
+            if (!empty($api[MODULE]) && is_array($api[MODULE])) {
 
                 if (class_exists(MODULE_NAME_CONTROLLER)) {
                     /**
                      * 实例化类
                      */
                     $className = MODULE_NAME_CONTROLLER;
-                    
+
                     $module = new $className();
 
                     if ($module) {
@@ -111,29 +88,29 @@ class website {
                         /**
                          *  判断方法是否存在 如存在 执行方法
                          */
-
-                        if(in_array(ACTION_NAME, $api[MODULE])){
+                        if (in_array(ACTION_NAME, $api[MODULE])) {
 
                             call_user_func(array(&$module, ACTION_NAME));
+                        } else {
 
-                        } else{
-
-                           echoErrorCode(101);
+                            echoErrorCode(101);
                         }
-                    } else{
+                    } else {
 
                         echoErrorCode(102);
                     }
                 }
-
-            } else{
+            } else {
 
                 echoErrorCode(103);
             }
+        }
+    }
+
+    public function request() {
+        if (count($_REQUEST)) {
             
         }
-
-        
     }
 
 }

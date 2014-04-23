@@ -124,12 +124,12 @@ class GiftSettingModel extends Basic {
          */
         $rid = $gift->get_rand($arr);
 
-        if ($type == 1) {
-
-            $record = new giftRecordModel();
-
-            $record->addRecord($rid, $type, $userInfo['user_id']);
-        }
+//        if ($type == 1) {
+//
+//            $record = new giftRecordModel();
+//
+//            $record->addRecord($rid, $type, $userInfo);
+//        }
 
 
         return $rid;

@@ -62,6 +62,14 @@ class OrderModel extends Basic {
 
         $data['order_code'] = date('Ymdhis') . rand(10, 99);
 
+        $merchandise = new MerchandiseModel();
+
+        $info = $merchandise->getMerchandiseInfo($result['merchandise_id']);
+
+
+        $data['order_money'] = $info['order_money'];
+
+
         $this->insert($data);
 
         return $data;
@@ -183,6 +191,57 @@ class OrderModel extends Basic {
 
 
             $order->updateVars();
+        }
+    }
+
+    /**
+     * 修改订单价钱  如有使用到优惠券 则 获取优惠券 并 随机将1条 变成已使用的状态
+     * @param type $data
+     */
+    public function updateOrderPay($data) {
+
+        if (is_array($data)) {
+
+            $order = new OrderModel();
+
+            $order->initialize('order_code like "' . $data['order_code'] . '"');
+
+            if ($order->vars_number > 0) {
+
+                $order->vars['order_money'] = $data['order_price'];
+
+                if (!empty($data['commodity_id'])) {
+
+                    $join_str = array(array("promo_code", "promo_code.promo_code_id", "promo_code_record.promo_code_id"));
+
+
+                    $order->vars['commodity_id'] = $data['commodity_id'];
+
+                    $codeRecord = new PromoCodeRecordModel();
+
+                    $codeRecord->addJoin($join_str);
+
+                    $codeRecord->initialize('user_id = ' . $order->vars['user_id'] . ' and code_merchandise = ' . $data['commodity_id'] . ' and code_state = 1 and code_end_time > ' . mktime(0, 0, 0));
+
+                    if ($codeRecord->vars_number > 0) {
+
+                        $id = $codeRecord->vars['promo_code_id'];
+
+                        $code = new PromoCodeModel();
+
+                        $code->initialize('promo_code_id = ' . $id);
+
+                        if ($code->vars_number > 0) {
+
+                            $code->vars['code_state'] = 2;
+
+                            $code->updateVars();
+                        }
+                    }
+                }
+
+                $order->updateVars();
+            }
         }
     }
 

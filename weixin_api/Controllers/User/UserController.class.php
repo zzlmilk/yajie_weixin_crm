@@ -116,6 +116,8 @@ class UserController implements User {
      * 获取用户资料
      */
     public function get_info() {
+        
+      
 
         if (!empty($_REQUEST['source']) && !empty($_REQUEST['open_id'])) {
 
@@ -139,7 +141,12 @@ class UserController implements User {
 
             echoErrorCode(105);
         }
+        
+        
+     
     }
+    
+  
 
     /**
      * 修改用户信息

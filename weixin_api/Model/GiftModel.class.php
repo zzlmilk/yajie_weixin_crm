@@ -58,15 +58,15 @@ class GiftModel extends Basic {
 
 
         if (is_array($info) && !empty($open_id)) {
-            
+
             $userModel = new userModel();
 
             $userinfo = $userModel->getUserInfo($open_id);
-                    
-                    
-             $gift = new giftRecordModel();
 
-             $giftRes = $gift->getGiftInfoById($userinfo, $info['gift_type']);
+
+            $gift = new giftRecordModel();
+
+            $giftRes = $gift->getGiftInfoById($userinfo, $info['gift_type']);
 
 
             /**
@@ -93,7 +93,7 @@ class GiftModel extends Basic {
                     } else {
 
                         $array['jump'] = 'exchange';
-                        
+
                         $array['info'] = $exchange_info;
 
                         AssemblyJson($array);
@@ -137,11 +137,11 @@ class GiftModel extends Basic {
                     $code = new PromoCodeModel();
 
                     $codeInfo = $code->getCode();
-                    
+
 
                     $codeRecord = new PromoCodeRecordModel();
 
-                    $record = $codeRecord->addCode($codeInfo['promo_code_id'],$open_id);
+                    $record = $codeRecord->addCode($codeInfo['promo_code_id'], $open_id);
 
                     $array['code'] = $codeInfo;
 

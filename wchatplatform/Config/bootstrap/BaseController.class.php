@@ -156,14 +156,16 @@ class BaseController {
                     /**
                      * 来自赠送  获取赠送人的用户资料
                      */
-                    $userApi = new userApi();
+                    if (!empty($_REQUEST['give_open_id']) && !empty($_REQUEST['open_id'])) {
 
-                    $info = $userApi->getUserInfo($result['give_open_id'], 'company');
+                        $userApi = new userApi();
 
-                    $this->assign('give_info', $info);
+                        $info = $userApi->getUserInfo($result['give_open_id'], 'company');
 
-                    $this->assign('state', 1);
+                        $this->assign('give_info', $info);
 
+                        $this->assign('state', 1);
+                    }
                     break;
             }
         }

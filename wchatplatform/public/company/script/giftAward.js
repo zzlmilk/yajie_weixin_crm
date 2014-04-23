@@ -39,7 +39,7 @@ function sendGiftAward(open_id, id, type) {
                 //其他错误的逻辑
             }
         },
-        timeout: 2000
+        timeout: 8000
     })
 
 }

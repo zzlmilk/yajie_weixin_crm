@@ -2,19 +2,17 @@
 
 require_once '1DB.class.php';
 
-
 class DB_Mysql_search extends DB_Mysql {
 
     protected $user = USER;
     protected $pass = PASSWORD;
     protected $dbhost = DBHOST;
-    protected $dbname =  DBNAME;
+    protected $dbname = DBNAME;
 
     public function __construct($DB = NULL) {
         
     }
 
-    
 }
 
 class Query extends DB_Mysql_search {
@@ -46,7 +44,7 @@ class Query extends DB_Mysql_search {
     function __constructor($table) {
         $this->table = $table;
         $this->convertor = new Convertor;
-        $this->log_file = apiLog . date("Y_m_d") . '.log';
+        $this->log_file = SQLLog . date("Y_m_d") . '.log';
     }
 
     public function changeDataTable($table) {
@@ -79,9 +77,9 @@ class Query extends DB_Mysql_search {
         $this->having_string = '';
         $this->join_string = '';
         $this->limit_string = '';
-        $this->vars_all='';
-        $this->vars='';
-        $this->vars_number='';    
+        $this->vars_all = '';
+        $this->vars = '';
+        $this->vars_number = '';
     }
 
     /* ------------------------------------------------------------------------------------
@@ -209,10 +207,10 @@ class Query extends DB_Mysql_search {
         if ($this->table) {
 
             $select = 'SELECT ' . $this->select_string . ' FROM ' . $this->dbname . '.' . $this->table . ' ' . $this->join_string . ' WHERE 1 ' . $this->condition_string . ' ' . $this->groupby_string . ' ' . $this->having_string . ' ' . $this->orderby_string . ' ' . $this->limit_string . ' ' . $this->like_string;
-           //echo '<br>'.$select.'<br>';
+            //echo '<br>'.$select.'<br>';
             $db = $this->prepare($select)->execute();
             $records = $db->fetchall_assoc();
-            log_write($select, $this->log_file,'SQL');
+            log_write($select, $this->log_file, 'SQL');
             if (!empty($records)) {
                 if ($mode == 1) {
                     $result = $records[0];
@@ -256,11 +254,11 @@ class Query extends DB_Mysql_search {
     protected function updateQuery() {
 
         $partialString = '';
-        if (!empty($this->table) and !empty($this->update_string)) {
+        if (!empty($this->table) and ! empty($this->update_string)) {
             $update = 'UPDATE ' . $this->dbname . '.' . $this->table . ' SET ' . $this->update_string . ' WHERE 1 ' . $this->condition_string;
             //echo '<br>'.$update.'<br>';
             $this->prepare($update)->execute();
-            log_write($update, $this->log_file,'SQL');
+            log_write($update, $this->log_file, 'SQL');
         }
     }
 
@@ -272,14 +270,14 @@ class Query extends DB_Mysql_search {
             if ($this->mode == 1) {
                 $this->clearUp();
             }
-           log_write($sql, $this->log_file,'SQL');
+            log_write($sql, $this->log_file, 'SQL');
         }
-   }
+    }
 
     public function Trancate() {
         $sql = ' TRUNCATE TABLE ' . $this->table . '  ';
         $this->prepare($sql)->execute();
-        log_write($sql, $this->log_file,'SQL');         
+        log_write($sql, $this->log_file, 'SQL');
     }
 
     /* ------------------------------------------------------------------------------------
@@ -296,14 +294,13 @@ class Query extends DB_Mysql_search {
             if ($this->mode == 1) {
                 $this->clearUp();
             }
-            log_write($insert, $this->log_file,'SQL','');   
+            log_write($insert, $this->log_file, 'SQL', '');
             return $this->prepare($insert)->executeInsert();
         } else if (is_string($array)) {
             //echo $array.'<br />';
-            log_write($insert, $this->log_file,'SQL','');   
+            log_write($insert, $this->log_file, 'SQL', '');
             return $this->prepare($array)->executeInsert();
         }
-            
     }
 
     public function makeStringDBSafe($value) {
@@ -338,6 +335,8 @@ class Query extends DB_Mysql_search {
         $records = $db->fetchall_assoc();
         return $records;
     }
+
+    
 
 }
 

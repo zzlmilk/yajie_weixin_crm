@@ -93,7 +93,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $array[0] = array('Title' => '成为会员', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=user&v=register&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $array[0] = array('Title' => '成为会员', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=company&a=user&v=register&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
         $wechat->news($array)->reply();
     }
 
@@ -103,7 +103,7 @@ class weixinEvent {
         $type = $wechat->getRev()->getRevType();
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
-        $array[0] = array('Title' => '我要预约', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=order&v=order&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $array[0] = array('Title' => '我要预约', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=company&a=order&v=order&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
         $wechat->news($array)->reply();
     }
 
@@ -114,7 +114,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $array[0] = array('Title' => '我要兑换', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=exchange&v=getExchangeList&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $array[0] = array('Title' => '我要兑换', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=company&a=exchange&v=getExchangeList&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
         $wechat->news($array)->reply();
     }
 
@@ -125,7 +125,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $array[0] = array('Title' => '我要签到', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=user&v=registration&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $array[0] = array('Title' => '我要签到', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=company&a=user&v=registration&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
         $wechat->news($array)->reply();
     }
 
@@ -138,7 +138,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $array[0] = array('Title' => '我的中心', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=user&v=userCenter&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $array[0] = array('Title' => '我的中心', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=company&a=user&v=userCenter&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
         $wechat->news($array)->reply();
     }
 
@@ -150,7 +150,7 @@ class weixinEvent {
         $type = $wechat->getRev()->getRevType();
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
-        $array[0] = array('Title' => '近期活动', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=game&v=activity&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $array[0] = array('Title' => '近期活动', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=company&a=game&v=activity&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
         $wechat->news($array)->reply();
     }
 
@@ -161,7 +161,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $array[0] = array('Title' => '大转盘', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=game&v=bigWheelPage&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $array[0] = array('Title' => '大转盘', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=company&a=game&v=gameDa&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
         $wechat->news($array)->reply();
     }
 
@@ -172,7 +172,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $array[0] = array('Title' => '刮刮卡', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=game&v=guaguaka&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $array[0] = array('Title' => '刮刮卡', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=company&a=game&v=guaguaka&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
 
         $wechat->news($array)->reply();
     }
@@ -184,7 +184,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $array[0] = array('Title' => '问卷', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=game&v=Questionnaire&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $array[0] = array('Title' => '问卷', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=company&a=game&v=Questionnaire&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
 
         $wechat->news($array)->reply();
     }
@@ -196,7 +196,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $array[0] = array('Title' => '赠送', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=test&a=code&v=getReceviceCode&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
+        $array[0] = array('Title' => '赠送', 'Description' => '', 'Url' => 'http://112.124.25.155/wchatplatform/?g=company&a=code&v=getReceviceCode&open_id=' . $userCode, 'PicUrl' => "http://112.124.25.155/wchatplatform/public/company/image/2011071223051083.jpg");
 
         $wechat->news($array)->reply();
     }
