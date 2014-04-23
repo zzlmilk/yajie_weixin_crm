@@ -209,10 +209,10 @@ class userController implements User {
                 $userId = $_POST['user_id'];
                 $upDatas['user_name'] = $_POST['user_name'];
                 $upDatas['user_phone'] = $_POST['user_phone'];
-                $upDatas['birthday'] =  strtotime($_POST['birthday']) ;
+                $upDatas['birthday'] = strtotime($_POST['birthday']);
                 $upDatas['sex'] = $_POST['sex'];
                 $this->updateUser($upDatas, $userId);
-                $_GET["userId"]=$_POST['user_id'];
+                $_GET["userId"] = $_POST['user_id'];
                 $this->userEdit();
             } else {
                 
@@ -221,6 +221,7 @@ class userController implements User {
             
         }
     }
+
 //添加用户界面
     public function userManage() {
 
@@ -239,7 +240,7 @@ class userController implements User {
             } else {
                 $insertUserData['user_name'] = $_POST['user_name'];
                 $insertUserData['user_phone'] = $_POST['user_phone'];
-                $insertUserData['birthday'] =  strtotime($_POST['birthday']) ;
+                $insertUserData['birthday'] = strtotime($_POST['birthday']);
                 $insertUserData['user_money'] = $_POST['user_money'];
                 $insertUserData['user_integration'] = $_POST['user_integration'];
                 $insertUserData['sex'] = $_POST['sex'];
@@ -497,11 +498,27 @@ class userController implements User {
                 $userPointData = $userPointerRecord->vars_all;
                 $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userMoneyPage";
                 $page = $_ENV['smarty']->getPages($url, $pageNumber, $userPointerNumber, $pageSize, 1);
+                foreach ($userPointData as $k => $v) {
+                    switch ($v["source"]) {
+                        case "crm":
+                            $userPointData[$k]["source"] = "系统";
+                            break;
+                        case "guaguaka":
+                            $userPointData[$k]["source"] = "刮刮卡";
+                            break;
+                        case "exchange":
+                            $userPointData[$k]["source"] = "兑换";
+                            break;
+                        default :
+                            $userPointData[$k]["source"] = $v["source"];
+                            break;
+                    }
+                }
                 $returnVal["returnData"] = $userPointData;
                 $returnVal["page"] = $page;
                 $returnVal["returnCode"] = '0';
             } else {
-               $returnVal["returnCode"] = '1';
+                $returnVal["returnCode"] = '1';
             }
         } else {
             $returnVal["returnCode"] = '2';
@@ -529,9 +546,25 @@ class userController implements User {
                 $userPointData = $userPointerRecord->vars_all;
                 $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userPoniterPage";
                 $page = $_ENV['smarty']->getPages($url, $pageNumber, $userPointerNumber, $pageSize, 1);
+                foreach ($userPointData as $k => $v) {
+                    switch ($v["source"]) {
+                        case "crm":
+                            $userPointData[$k]["source"] = "系统";
+                            break;
+                        case "guaguaka":
+                            $userPointData[$k]["source"] = "刮刮卡";
+                            break;
+                        case "exchange":
+                            $userPointData[$k]["source"] = "兑换";
+                            break;
+                        default :
+                            $userPointData[$k]["source"] = $v["source"];
+                            break;
+                    }
+                }
                 $returnVal["returnData"] = $userPointData;
                 $returnVal["page"] = $page;
-                $returnVal["returnCode"] ="0";
+                $returnVal["returnCode"] = "0";
             } else {
                 $returnVal["returnCode"] = "1";
             }

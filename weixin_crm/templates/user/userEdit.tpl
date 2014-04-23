@@ -134,7 +134,17 @@
                     <tr>
                         <td>{$key+1}</td>
                         <td>{$MoneyData.fraction}</td>
-                        <td>{$MoneyData.source}</td>
+                        <td>
+                            {if $MoneyData.source eq "crm"}
+                                系统
+                            {else if $MoneyData.source eq "guaguaka"}
+                                刮刮卡
+                            {else if $MoneyData.source eq "exchange"}
+                                兑换
+                            {else}
+                                {$MoneyData.source}
+                            {/if}
+                        </td>
                         <td>{$MoneyData.create_time|date_format:"%Y-%m-%d %H:%M"}</td>
                     </tr>
                 {/foreach}
@@ -159,7 +169,17 @@
                     <tr>
                         <td>{$key+1}</td>
                         <td>{$PointData.fraction}</td>
-                        <td>{$PointData.source}</td>
+                        <td>
+                            {if $PointData.source eq "crm"}
+                                系统
+                            {else if $PointData.source eq "guaguaka"}
+                                刮刮卡
+                            {else if $PointData.source eq "exchange"}
+                                兑换
+                            {else}
+                                {$PointData.source}
+                            {/if}
+                        </td>
                         <td>{$PointData.create_time|date_format:"%Y-%m-%d %H:%M"}</td>
                     </tr>
                 {/foreach}
