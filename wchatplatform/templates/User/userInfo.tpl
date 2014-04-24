@@ -21,7 +21,7 @@
         <script src="{$WebSiteUrlPublic}/company/dist/ratchet.js" type="text/javascript">
         </script>
         <title>
-            我的信息
+            个人信息
         </title>
         <script type="text/javascript">
         </script>
