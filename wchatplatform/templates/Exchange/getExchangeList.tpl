@@ -92,12 +92,31 @@
                                     实物
                                 {/if}
                             </p>
-                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>
+                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button  type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>
+<!--                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>-->
                         </div>
                     </div>
                 </div>
             {/foreach}
         </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" >
+                    <div class="modal-header" style="border: none;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="modal-title" id="myModalLabel">你确认兑换这个物品么？</h4>
+                    </div>
+                    <div class="modal-footer" style="border: none;">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <a id="checkButton" href=""><button type="button" class="btn btn-primary">确认</button></a>
+                        <input type="hidden" id="gotoUrl" value="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=exchangeItemDelete&ItemId="  />
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </body>
     <script>
         $(".summary").each(function(){
@@ -109,6 +128,8 @@
 });
 $(".submitButton").click(function(){
 var integrationVals=$(this).parent().parent();
+var thisUrl=$(this).attr("href");
+$("#checkButton").attr("href",thisUrl);
 integrationVals=integrationVals.find(".integration").html();
 
 var integration=integrationVals.split(":")[1];
