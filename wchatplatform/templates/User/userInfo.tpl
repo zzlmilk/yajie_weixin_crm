@@ -9,167 +9,121 @@
         <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 
         <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js" type="text/javascript">
-</script><!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        </script><!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript">
-</script>
+        </script>
         <script type="text/javascript" src="{$WebSiteUrlPublic}/company/ggk/jQuery.js">
-</script>
+        </script>
         <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/dist/ratchet.css" type="text/css">
         <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/dist/ratchet-theme-ios.css" type="text/css">
         <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/css/app.css" type="text/css">
         <script src="{$WebSiteUrlPublic}/company/dist/ratchet.js" type="text/javascript">
-</script>
+        </script>
         <title>
             我的信息
         </title>
         <script type="text/javascript">
-</script>
-        <style type="text/css">
-body{
-            Font-size=62.5%;
-        }
-        .myInfoWarp{
-            /*border: solid 1px red;*/
+        </script>
+        <style>
+            body{
+                Font-size=62.5%;
+                overflow: auto !important;
+            }
+            .registerWarp{
+                margin: 0 auto;
+                width: 95%;
+            }
+            .tableSize{
+                width: 100%;
+                text-align: center;
+            }
+            .inlinDisplay{
+                display: inline-block;
+            }
+            td{
+                width: 50%;
+            }
+            .giftListStyle{
+                background-color: #fff;
+                margin-top: 15px;
+            }
+            .round_photo{
+                width:100%;
+                height: auto;
+                border:1px solid #ddddde;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border-radius:50%;
 
-        }
-        .myInfoStyle{
-        /*  border: solid 1px red;*/
-            height: 1.5em;
-            text-align: center;
-            line-height: 1.5em;
-            font-size: 2em;
-            background-color: rgb(104,175,59);
-            text-shadow: 0em 0.1em 0.1em #000;
-            color: #fff;
-            
-        }
-        .myNamePhoto{
-            /*border: solid 1px red;*/
-            /*height: 10em;*/
-            background-color: rgb(183,200,47);
-            height: 10em;
-        }
-        .otherInfo{
-            border: solid 1px #000;
-            border-top: none;
-            /*height: 5em;*/
-        }
-        .photo{
-            width: 5em; 
-            height: 5em; 
-            background: rgb(200,137,37); 
-            -moz-border-radius: 5em; 
-            -webkit-border-radius: 5em; 
-            border-radius: 5em; 
-            margin-left: 1.5em;
-            
-            padding-top: 3em;
-        }
-        .textInfo{
-            /*border: solid 1px red;*/
-            width: 66%;
-            float: right;
-            /*height: 10em;*/
-            margin-top: -5em;
-        }
+            }
+            .siteClass{
 
-        tr{
-            border: solid 0.1em #000;
-        }
-        .tdTitle{
-            width: 50%;
-            font-size: 1.5em;
-            text-shadow: 0em 0.1em 0.1em #000;
-        }
-        .tdContent{
-            width: 50%;
-            text-align: right;
-            font-size: 1.5em;
-            text-shadow: 0em 0.1em 0.1em #000;
-        }
-        #userName{
-            width: 80%;
-            font-weight: bolder;
-            border: none;
-            background-color: rgb(183,200,47);
-            font-size: 1.2em;
-            height: 1.8em;
-        }
-        #userPhone{
-            margin-top: 0.3em;
-            width: 80%;
-            font-weight: bolder;
-            border: none;
-            background-color: rgb(183,200,47);
-            font-size: 1.2em;
-            height: 1.8em;
+                color: rgb(128,128,128);
+            } 
+            .graph{  
 
-        }
-        .slash{
-            width: 3em;
-            height: 1em;
-            float: right;
-            border-top: 0.2em solid rgb(80,121,45);
-            -webkit-transform: rotate(135deg);
-            filter: progid:DXImageTransform.Microsoft.BasicImage(Rotation=0.45);
-            margin-right: 2em;
-            margin-top: 1em;
-        }
+                width: 0;     height: 0;     border-bottom: 38px solid rgb(70,140,200);  
 
+                border-left: 41px solid transparent;
+
+            }  
+            .integration{
+                border-bottom: 1px solid #efefef;
+                width: 100%;
+                color: #bbb;
+                padding: 0.8em;
+            }
+            .inline{
+                display: inline-block
+            }
+            .userTitleStyle{
+                width: 23%;
+            }
+            .userMessage{
+                color: black;
+            }
         </style>
     </head>
-    <body>
-        <div class="content">
+    <body style='background-color: rgb(243,237,227);'>
+        <div class="registerWarp">
+            <div style='  width: 100%; background-color: rgb(255,255,247);position: relative;'>
 
-            <div class="myInfoWarp">
-
-                <div class="myInfoStyle">我的信息</div>
-                <div class="myNamePhoto">
-                    <div style="height: 1em;"></div>
-                    <div class="photo"></div>
-
-                    <div class="textInfo">
-                        <div>
-                            <input type="text" id="userName" readonly="true" name="userName" value="rex"/>
-                        </div>
-                        <div>
-
-                            <input type="text" id="userPhone"  readonly="true"name="userPhone" value="15901794453"/>
-                        </div>
-
-                    </div>
-
-                    <div class="slash"></div>
+                <div style='height: 0.2em;width: 100%;'>&nbsp;</div>
 
 
+                <div style=' width: 18%; margin-left: 5px;'>
+                    <img src='{$userinfo.headimgurl}' class='round_photo'>
                 </div>
 
-                <div class="otherInfo">
-                    <table style=" width: 100%;">
-                        <tr>
-                            <td class="tdTitle">余额</td>
-                            <td class="tdContent">239</td>
-                        </tr>
-                        <tr>
-                            <td class="tdTitle">积分</td>
-                            <td class="tdContent">90</td>
-                        </tr>
-                    </table>
 
+
+                <div style=' width: 75%; overflow: hidden; position: absolute; left: 20%; top: 5%;'>
+
+                    <div style='margin-top:10%;line-height: 15px;padding-left: 15px;'>
+                        <div style='font-size:15px; display: inline-block;  height: 4%;  '>修改头像</div>
+                        <div style="float: right;color: #777;" class="">＞</div>
+
+                    </div>
                    
                 </div>
+                <div style="height: 5px;"></div>
             </div>
-
-
-            <ul class="table-view">
-                <li class="table-view-cell media">
-                    <a class="push-right" data-transition="slide-in"><!-- <span class="media-object icon icon-person pull-left"></span> --></a>
-                    <div class="media-body" onclick='window.location.href="{$websiteUrl}?g=company&a=user&v=userJf"'>
-                        积分明细
+            <div class="giftListStyle" style="width: 100%;">
+                <div style="word-wrap: break-word; word-break: normal;">
+                    <div class="integration"><div class=" inline userTitleStyle" >昵称</div><div class="inline userMessage" >{$userinfo.nickname}</div></div>
+                    <div class="integration"><div class=" inline userTitleStyle" >性别</div><div class="inline userMessage">
+                            {if $userinfo.sex eq "1"}
+                                男
+                            {else}
+                                女
+                            {/if}
+                        </div>
                     </div>
-                </li>
-            </ul>
+                    <div class="integration"><div class=" inline userTitleStyle" >出生地</div><div class="inline userMessage">{$userinfo.province}</div></div>
+                    <div class="integration"><div class=" inline userTitleStyle" >生日</div><div class="inline userMessage">{$userBirthday}</div></div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

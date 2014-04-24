@@ -6,7 +6,7 @@ class UserController extends BaseController {
     public $errorMessage = "";
 
     public function __construct() {
-  
+
         header("Content-type:text/html;charset=utf-8");
 
         if (!empty($_REQUEST['open_id'])) {
@@ -183,9 +183,16 @@ class UserController extends BaseController {
 
     public function userInfo() {
 
-
-
-
+        $postDate["source"] = "company";
+        $postDate['open_id'] = $this->userOpenId;
+        $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
+        $userInfo = json_decode($userInfo, TRUE);
+        $error = new errorApi();
+        $error->JudgeError($userInfo);
+        $this->assign('userinfo', $userInfo["weixin_user"]);
+        $birthdayToDate=$userInfo["user"]["birthday"];
+        $birthdayToDate=  date("Y-m-d",$birthdayToDate);
+        $this->assign("userBirthday",$birthdayToDate);
         $this->display();
     }
 
