@@ -173,7 +173,6 @@ class UserController extends BaseController {
         $userApi = new userApi();
 
         $userInfo = $userApi->getUserInfo($this->userOpenId);
-
         if (!empty($userInfo)) {
 
             $this->assign('userinfo', $userInfo);
