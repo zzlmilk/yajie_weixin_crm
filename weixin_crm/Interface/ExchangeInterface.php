@@ -1,15 +1,12 @@
 <?php
 
-interface exchange{
+interface exchange {
 
-	public function addExchange($data);
+    public function addExchange($data);
 
+    public function updateExchange($data, $id);
 
-	public function updateExchange($data,$id);
-
-
-	public function searchExchange();
-
+    public function searchExchange();
 }
 
 ?>

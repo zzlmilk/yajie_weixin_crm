@@ -30,7 +30,7 @@ class exchangeApi {
 
         if (!empty($open_id)) {
             $data['open_id'] = $open_id;
-            $data['source'] = $source;
+            $data['source'] = SOURCE;
             $userInfoJson = transferData(APIURL . "/exchange/user_exchange_record", "post", $data);
             $userInfoArray = json_decode($userInfoJson, true);
 

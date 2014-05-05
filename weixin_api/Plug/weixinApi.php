@@ -29,7 +29,7 @@ class weixinApi {
 	public function getUserInfo($open_id,$token){
 
 
-		$url = $this->publicUrl.'user/info?access_token='.$token.'&openid='.$open_id.'&lang=zg_CN';
+		$url = $this->publicUrl.'user/info?access_token='.$token.'&openid='.$open_id.'&lang=zh_CN';
 
 		$user_info = transferData($url,'get');
 

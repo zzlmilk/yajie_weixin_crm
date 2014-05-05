@@ -1,33 +1,53 @@
 <?php
 
+class adminModel extends Basic {
 
-class adminModel extends Basic{
+    public function __construct($id = null) {
 
-	public function __construct() {
+        $this->child_name = 'admin';
+        
+        $this->dbname = 'weixin';
+        
+        parent::__construct();
+        
+        if ($id) {
+            $obj[$this->child_name . '_id'] = $id;
+            $this->initialize($obj);
+        }
 
-		$this->child_name = 'admin';
-
-		parent::__construct();
-
+        
     }
 
+    public function getAdminInfo($username, $password) {
 
-    public function  getAdminInfo($username,$password){
+        $admin = new adminModel();
 
-    	$admin = new adminModel();
-
-    	$admin->initialize('account like "'.$username.'" and account_password like "'.$password.'"');
+        $admin->initialize('account like "' . $username . '" and account_password like "' . $password . '"');
 
 
-    	if($admin->vars_number > 0 ){
+        if ($admin->vars_number > 0) {
 
-    		return 1;
+            return 1;
+        } else {
 
-    	} else{
+            return 0;
+        }
+    }
 
-    		return 0;
-    	}
+    function admin_path($path) {
+        $path_1 = json_decode($path);
+        foreach ((array) $path_1 as $kk => $vv) {
+            $maincontnet['auth_show'][$vv] = '<font class="green">&radic;</font>';
+        }
+        return $maincontnet;
+    }
 
+    function admin_auth($path) {
+        $path_1 = explode(',',$path);
+        foreach ((array) $path_1 as $kk => $vv) {
+            $maincontnet[$vv] = 1;
+        }
+        return $maincontnet;
     }
 
 }

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-27 09:36:14
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-05 13:18:43
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/addUser.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3090089205333808e2f1da7-48816340%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:202143477253671f337c7e38-67771571%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c48c6ec5da0c8efc88e51a75905e3474ef4d151e' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/addUser.tpl',
-      1 => 1395883827,
+      1 => 1396342134,
     ),
   ),
-  'nocache_hash' => '3090089205333808e2f1da7-48816340',
+  'nocache_hash' => '202143477253671f337c7e38-67771571',
   'function' => 
   array (
   ),
@@ -30,7 +30,7 @@ $_smarty_tpl->decodeProperties(array (
         width: auto !important;
     }
     .inputWidth{
-        width: 150px;
+        width: 170px;
     }
     .userMangerTitle{
         color: rgb(91,91,91);

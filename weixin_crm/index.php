@@ -1,22 +1,17 @@
 <?php
 
-
-
 include_once 'include.php';
 
 
-if(!empty($_SESSION['weixin_crm_user_id']) && $_SESSION['weixin_crm_user_id'] >0 ){
+if (!empty($_SESSION['weixin_crm_user_id']) && $_SESSION['weixin_crm_user_id'] > 0) {
 
-	 $pageController = new homePageController();
+    $pageController = new homePageController();
 
-	 $pageController->homepage();
+    $pageController->homepage();
+} else {
 
-} else{
+    $pageController = new loginController();
 
-	 $pageController = new loginController();
-
-   	 $pageController->login();
+    $pageController->login();
 }
-
-
 ?>

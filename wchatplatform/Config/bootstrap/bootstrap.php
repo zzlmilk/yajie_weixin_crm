@@ -18,6 +18,7 @@ class website {
          */
         include_once 'extends.php';
 
+
         include_once 'BaseController.class.php';
 
 
@@ -52,21 +53,21 @@ class website {
          * 路由处理
          */
         $url = new Dispatcher();
+        
         $url->dispatcher();
-
-
-
         /**
          * 判断模块是否存在
          */
+        
+        
         if (class_exists(MODULE_NAME_CONTROLLER)) {
             /**
              * 实例化类
              */
             $className = MODULE_NAME_CONTROLLER;
+            
+           
             $module = new $className();
-            
-            
 
             if ($module) {
                 /**

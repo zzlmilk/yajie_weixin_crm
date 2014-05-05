@@ -1,8 +1,7 @@
 <?php
 
-interface activty{
-
-	
+interface activty {
+    
 }
 
 ?>

@@ -10,7 +10,7 @@ class errorApi extends BaseController {
     public function __construct() {
 
         // 载入  错误代码 文件
-        $list = include ROOT_DIR . 'Api/error_list.php';
+        $list = include ROOT_DIR . '/Api/error_list.php';
 
         $this->error_list = $list;
     }
@@ -20,8 +20,8 @@ class errorApi extends BaseController {
      * @param type $redirect_url  跳转地址 
      * @param type $info    API 调用 返回内容
      */
-    public function JudgeError($info,$var = '', $source = '') {
-        
+    public function JudgeError($info, $var = '', $source = '') {
+
         if (!empty($info['error'])) {
 
             switch ($info['error']['error_status']) {
@@ -33,7 +33,7 @@ class errorApi extends BaseController {
                      */
                     //R('/user/register','company',$var);
 
-                    U('company/user/register', $var);
+                    U(SOURCE.'/user/register', $var);
                     die;
                     break;
 

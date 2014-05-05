@@ -7,6 +7,7 @@
  * Window - Preferences - PHPeclipse - PHP - Code Templates
  */
 ini_set('date.timezone', 'Asia/Shanghai');
+
 //include '2DB_con.php';
 class Basic extends Query {
 
@@ -16,7 +17,7 @@ class Basic extends Query {
     public $col_name;
     protected $error;
     public $mem;
-    protected $child_name;
+    public $child_name;
 
     function __construct() {
         try {
@@ -25,7 +26,20 @@ class Basic extends Query {
             }
 //            $this->mem =  new Memcache;
 //            $this->mem->connect('127.0.0.1', 11211) or die ("Could not connect");
-           $this->table = $this->child_name;
+            $this->table = $this->child_name;
+
+            $this->dbhost = $_ENV['DBHOST'];
+
+            $this->user = $_ENV['USER'];
+
+            $this->pass = $_ENV['PASSWORD'];
+            
+            if($this->dbname == ''){
+                
+                
+               $this->dbname = $_ENV['DBNAME'];
+            }
+            
             parent::__construct();
         } catch (Exception $e) {
             echo $e;
@@ -43,7 +57,7 @@ class Basic extends Query {
         }
     }
 
-    function initialize($condition=null) {
+    function initialize($condition = null) {
         if ($condition != null) {
             $this->addCondition($condition);
         }
@@ -55,21 +69,22 @@ class Basic extends Query {
             $this->addCondition($condition, 1);
         }
     }
-  function operatorsAction($channel,$adminid,$action,$uid){  //操作记录
-      $admin_auth = new auth_detail();
-      $admin_auth->addCondition('news_type like "'.$channel.'" and action_name like "'.$action.'"', 1);
-      $admin_auth->initialize();
-      if($admin_auth->vars_number>0){
-          $admin_action = new admin_action();
-          $insert['admin_id'] = $adminid;
-          $insert['action'] = $admin_auth->vars['id'];
-          $insert['channel'] = $channel;
-          $insert['associate_id'] = $uid;
-          $insert['insert_time'] = time();
-          $admin_action->insert($insert);
-      }
-      
-  }
+
+    function operatorsAction($channel, $adminid, $action, $uid) {  //操作记录
+        $admin_auth = new auth_detail();
+        $admin_auth->addCondition('news_type like "' . $channel . '" and action_name like "' . $action . '"', 1);
+        $admin_auth->initialize();
+        if ($admin_auth->vars_number > 0) {
+            $admin_action = new admin_action();
+            $insert['admin_id'] = $adminid;
+            $insert['action'] = $admin_auth->vars['id'];
+            $insert['channel'] = $channel;
+            $insert['associate_id'] = $uid;
+            $insert['insert_time'] = time();
+            $admin_action->insert($insert);
+        }
+    }
+
     function loadAll() {
         $orderBy[] = array($this->table . '_id' => 'ASC');
         $this->addOrderBy($orderBy);
@@ -117,11 +132,12 @@ class Basic extends Query {
         return $text;
     }
 
-    function updateVars($update=null) {
+    function updateVars($update = null) {
         $this->addUpdate($this->vars);
         $this->updateQuery();
     }
-            function page5($php, $page, $data, $news_id) {
+
+    function page5($php, $page, $data, $news_id) {
         $Page_size = 4;
         $init = 1;
         $page_len = 6;
@@ -133,7 +149,7 @@ class Basic extends Query {
         if (empty($page) || $page < 0) {  //判断传送的页码
             $page = 1;
         } else {
-
+            
         }
         $min = ($Page_size * $page) - $Page_size;
         $max = ($Page_size * $page) - 1;
@@ -188,6 +204,7 @@ class Basic extends Query {
         $array['key'] = $key1;
         return $array;
     }
+
 //    字符截取
     function cut_str($string, $sublen, $start = 0, $code = 'UTF-8') {
         if ($code == 'UTF-8') {
@@ -233,7 +250,7 @@ class Basic extends Query {
         if (empty($page) || $page < 0) {  //判断传送的页码
             $page = 1;
         } else {
-
+            
         }
         $min = ($Page_size * $page) - $Page_size;
         $max = ($Page_size * $page) - 1;
@@ -301,7 +318,7 @@ class Basic extends Query {
         if (empty($page) || $page < 0) {  //判断传送的页码
             $page = 1;
         } else {
-
+            
         }
         $min = ($Page_size * $page) - $Page_size;
         $max = ($Page_size * $page) - 1;
@@ -357,7 +374,7 @@ class Basic extends Query {
         return $array;
     }
 
-    function path($table, $field, $where=1) {
+    function path($table, $field, $where = 1) {
         $$table = new $table;
         $$table->addselect($field);
         $$table->addCondition($where, 1);
@@ -387,7 +404,8 @@ class Basic extends Query {
             return $array;
         }
     }
-    function page_2($table, $php, $page, $where=1, $orderby=1, $where_array='') {
+
+    function page_2($table, $php, $page, $where = 1, $orderby = 1, $where_array = '') {
         if (is_array($where_array)) {
             $str = '';
             foreach ($where_array as $k_a => $item) {
@@ -414,7 +432,7 @@ class Basic extends Query {
         if (empty($page) || $page < 0) {  //判断传送的页码
             $page = 1;
         } else {
-
+            
         }
         $offset = $Page_size * ($page - 1);
         $$table->addCondition($where, 1);
@@ -464,6 +482,7 @@ class Basic extends Query {
         $array['key'] = $key1;
         return $array;
     }
+
     /**
      * 用于更新已经定义了的类属性自动过滤不属于类的数组内element
      * @param <type> $array
@@ -477,7 +496,7 @@ class Basic extends Query {
         $this->updateVars();
     }
 
-    public function update($update=null, $mode=0) {
+    public function update($update = null, $mode = 0) {
         parent::addUpdate($update, $mode);
         parent::updateQuery();
     }
@@ -488,12 +507,12 @@ class Basic extends Query {
 
     function insert($insert) {
 
-        
+
         $id = $this->insertQuery($insert);
         return $id;
     }
 
-    function getTotalRecord($condition=null) {
+    function getTotalRecord($condition = null) {
         if ($condition != null) {
             $this->selectObject($condition);
         }
@@ -536,7 +555,7 @@ class Basic extends Query {
      * @param <type> $restrict
      * @return <type> array
      */
-    public function varsToArray($needle, $restrict=NULL) {
+    public function varsToArray($needle, $restrict = NULL) {
         $array = array();
         if ($this->vars_all) {
             foreach ($this->vars_all as $purchase) {

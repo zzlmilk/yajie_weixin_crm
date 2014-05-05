@@ -1,0 +1,682 @@
+Apr 24 10:11:11 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:11:11 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:11:11 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:11:11 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:11:11 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:11:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:11:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:11:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:11:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:11:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:12:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:12:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:12:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:12:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:12:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:12:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:12:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:12:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:12:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:12:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:13:30 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:13:30 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:13:30 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:13:30 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:13:30 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:14:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:14:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:14:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:14:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:14:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:15:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:15:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:16 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:17 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:15:17 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:17 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:19 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:19 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:19 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:15:19 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:19 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:21 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:21 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:21 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:15:21 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:21 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:15:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:15:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:15:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:17:55 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:17:55 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:17:55 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:17:55 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:17:55 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:18:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:18:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:18:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:18:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:18:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:19:12 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:19:12 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:19:12 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:19:12 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:19:12 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:19:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:19:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:19:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:19:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:19:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:20:26 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:20:26 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:20:27 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:20:27 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:20:27 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:21:01 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:21:01 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:21:01 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:21:01 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:21:01 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:21:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:21:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:21:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:21:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:21:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:21:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:21:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:21:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:21:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:21:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:22:13 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:22:13 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:22:13 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:22:13 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:22:13 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:22:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:22:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:22:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:22:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:22:31 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:24:02 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:24:02 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:24:02 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:24:02 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:24:02 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:24:37 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:24:37 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:24:37 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:24:37 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:24:37 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:24:51 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:24:51 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:24:51 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:24:51 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:24:51 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:26:34 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:26:34 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:26:34 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:26:35 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:26:35 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:27:25 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:27:25 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:27:25 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:27:25 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:27:25 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:29:49 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:29:49 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:29:49 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:29:49 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:29:49 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:29:56 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=1
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 1     
+Apr 24 10:29:56 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 1     
+Apr 24 10:29:56 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:29:56 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('1','1','1398306596')
+Apr 24 10:29:56 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:29:56 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='99991' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Apr 24 10:29:56 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-10','exchange','1','1398306596')
+Apr 24 10:29:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:29:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:29:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:29:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:29:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:00 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=2
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 2     
+Apr 24 10:30:00 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:00 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:00 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Apr 24 10:30:00 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Apr 24 10:30:00 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/area/get_area
+SELECT * FROM weixin_company.area  WHERE 1  AND pid = 0     
+Apr 24 10:30:10 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:10 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:10 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:30:10 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:10 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=4
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 4     
+Apr 24 10:30:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 4     
+Apr 24 10:30:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:14 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('4','1','1398306614')
+Apr 24 10:30:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:14 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='99778' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Apr 24 10:30:14 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-213','exchange','4','1398306614')
+Apr 24 10:30:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=4
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 4     
+Apr 24 10:30:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 4     
+Apr 24 10:30:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:40 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('4','1','1398306640')
+Apr 24 10:30:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='99565' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Apr 24 10:30:40 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-213','exchange','4','1398306640')
+Apr 24 10:30:42 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:42 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:42 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:30:42 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:30:42 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:33:03 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:33:03 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:33:03 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:33:03 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:33:03 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:33:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:33:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:33:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:33:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:33:33 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:34:01 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:34:01 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:34:01 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:34:01 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:34:01 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:35:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:43 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=1
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 1     
+Apr 24 10:35:43 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 1     
+Apr 24 10:35:43 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:43 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('1','1','1398306943')
+Apr 24 10:35:43 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:43 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='99555' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Apr 24 10:35:43 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-10','exchange','1','1398306943')
+Apr 24 10:35:44 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:44 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:44 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:35:44 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:44 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=4
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 4     
+Apr 24 10:35:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.exchange  WHERE 1  AND exchange_id = 4     
+Apr 24 10:35:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:46 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.exchange_record (exchange_id,user_id,exchange_time) values('4','1','1398306946')
+Apr 24 10:35:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:46 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+UPDATE weixin_company.user SET user_integration='99342' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+Apr 24 10:35:46 [SQL]__192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/redeem
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','-213','exchange','4','1398306946')
+Apr 24 10:35:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=company&open_id=ocpOot-COx7UruiqEfag_Lny7dlc
+SELECT * FROM weixin_company.exchange  WHERE 1      
+Apr 24 10:35:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 10:35:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:51:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:51:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:51:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:51:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:20 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:20 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:20 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:20 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:25 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:25 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:25 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:25 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:52:58 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:22 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:22 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:22 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:22 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND appointment_time < 1398326002 and user_id = 1 and order_state !=2     
+Apr 24 15:53:22 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0 and appointment_time >= 1398268800     
+Apr 24 15:53:22 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+SELECT * FROM weixin_company.merchandise  WHERE 1  AND merchandise_id = 4     
+Apr 24 15:53:22 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:22 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:22 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:22 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND appointment_time < 1398326002 and user_id = 1 and order_state !=2     
+Apr 24 15:53:22 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND user_id = 1 and order_state = 0 and appointment_time >= 1398268800     
+Apr 24 15:53:22 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/order/get_merchandise_info
+SELECT * FROM weixin_company.merchandise  WHERE 1  AND merchandise_id = 4     
+Apr 24 15:53:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:26 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:26 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:26 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:26 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:27 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:27 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:27 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:53:27 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:54:28 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:54:28 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:54:28 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 15:54:28 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:35:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:35:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:36:23 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:36:23 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:37:01 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:37:01 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:37:07 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:37:08 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:37:26 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:37:26 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:46:34 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:46:34 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:47:10 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:47:10 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:47:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:47:18 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:47:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:47:41 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:48:09 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:48:09 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:49:38 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:49:38 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:50:05 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:50:05 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:50:15 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:50:15 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:50:45 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:50:45 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:53:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:53:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:54:30 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:54:30 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:55:03 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:55:03 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:55:04 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:55:04 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:55:12 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:55:12 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:55:21 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:55:21 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:55:21 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:55:21 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:55:26 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:55:26 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:56:09 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:56:09 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:56:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:56:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:56:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:56:40 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:56:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:56:48 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:57:39 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:57:39 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:57:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:57:47 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:58:09 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:58:09 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:58:23 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:58:23 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:58:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+Apr 24 16:58:24 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     

@@ -15,7 +15,7 @@ class BaseController {
         if (!$this->smarty) {
 
             // 载入  smarty 文件
-            require_once ROOT_DIR . 'Config/bootstrap/smarty.php';
+            require_once ROOT_DIR . '/Config/bootstrap/smarty.php';
 
             $this->smarty = $smarty;
 
@@ -34,7 +34,7 @@ class BaseController {
                 $this->smarty_dir = MODULE_DIR;
             }
 
-            $this->smarty->template_dir = ROOT_DIR . 'templates/' . $this->smarty_dir . '/';
+            $this->smarty->template_dir = ROOT_DIR . '/Tpl/' .MODULE_DIR_NAME.'/'. $this->smarty_dir . '/';
         }
 
         if ($this->tVar) {
@@ -78,9 +78,13 @@ class BaseController {
 
         $this->smarty->assign('websiteUrl', WebSiteUrl);
 
-        $this->smarty->assign('DIR', strtolower(MODULE_DIR_NAME));
+        $this->smarty->assign('model', MODULE_DIR_NAME);
+        
+        
 
         $this->smarty->assign('WebSiteUrlPublic', WebSiteUrlPublic);
+        
+
         $this->smarty->display($displayPage . '.tpl');
     }
 

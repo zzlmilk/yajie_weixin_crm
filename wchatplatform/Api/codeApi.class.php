@@ -15,11 +15,11 @@ class codeApi {
      * @param varchar $source  微信公众平台来源
      * @return array   返回为已经解析完成的数组
      */
-    public function getcodeInfo($code_id, $source) {
+    public function getcodeInfo($code_id) {
 
         if (!empty($code_id)) {
             $data['code_id'] = $code_id;
-            $data['source'] = $source;          
+            $data['source'] = SOURCE;          
             $userInfoJson = transferData(APIURL . "/code/get_code_info", "post", $data);
             $userInfoArray = json_decode($userInfoJson, true);
             return $userInfoArray;
@@ -32,7 +32,7 @@ class codeApi {
      */
 
 
-    public function giveCode($code_id,$open_id,$give_open_id,$source){
+    public function giveCode($code_id,$open_id,$give_open_id){
 
         if (!empty($code_id) && !empty($open_id) && !empty($give_open_id) && !empty($source)) {
             $data['code_id'] = $code_id;
@@ -40,7 +40,7 @@ class codeApi {
             $data['open_id'] = $open_id;
 
             $data['give_open_id'] = $give_open_id;
-            $data['source'] = $source;          
+            $data['source'] = SOURCE;          
 
             $userInfoJson = transferData(APIURL . "/code/give_code", "post", $data);
             $userInfoArray = json_decode($userInfoJson, true);
@@ -50,7 +50,7 @@ class codeApi {
     }
 
 
-    public function getUserReceviceCode($source,$code_type = 1,$open_id){
+    public function getUserReceviceCode($code_type = 1,$open_id){
 
          if (!empty($source) && !empty($open_id)) {
 
@@ -58,7 +58,7 @@ class codeApi {
 
             $data['open_id'] = $open_id;
 
-            $data['source'] = $source;          
+            $data['source'] = SOURCE;          
 
             $codeJson = transferData(APIURL . "/code/getReceiveCode", "post", $data);
             $codeArray = json_decode($codeJson, true);

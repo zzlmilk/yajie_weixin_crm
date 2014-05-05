@@ -51,13 +51,7 @@ class Query extends DB_Mysql_search {
 
         $this->convertor = new Convertor;
 
-         $this->dbhost = $_ENV['DBHOST'];
-
-        $this->user = $_ENV['USER'];
-
-        $this->pass = $_ENV['PASSWORD'];
-
-        $this->dbname = $_ENV['DBNAME'];
+       
 
     }
 

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-26 19:30:54
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-05 13:25:23
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10214734565332ba6e3b5f35-86638864%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2119114890536720c3837986-17338137%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd1e649af577e59cd29ff10cadc43d8d707466adc' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1395833423,
+      1 => 1399267132,
     ),
   ),
-  'nocache_hash' => '10214734565332ba6e3b5f35-86638864',
+  'nocache_hash' => '2119114890536720c3837986-17338137',
   'function' => 
   array (
   ),
@@ -140,7 +140,7 @@ $_smarty_tpl->decodeProperties(array (
                                 </tr>
                             </table>
 
-
+<?php if ($_smarty_tpl->getVariable('auth_result')->value[2]==1){?>
                             <!--                    用户开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table1">
                                 <tr>
@@ -160,6 +160,7 @@ $_smarty_tpl->decodeProperties(array (
                                 </tr>
                             </table>
                             <table id="subtree1" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[3]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu1" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -170,6 +171,10 @@ $_smarty_tpl->decodeProperties(array (
 /pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" onclick="tupian('1')">客户信息</a>
                                     </td>
                                 </tr>
+
+                                <?php }?>
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[4]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu2" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -180,6 +185,9 @@ $_smarty_tpl->decodeProperties(array (
 /pageredirst.php?action=user&functionname=pointAndMoneyManage" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">积分消费管理</a>
                                     </td>
                                 </tr>
+                                <?php }?>
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[5]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu3" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -190,8 +198,11 @@ $_smarty_tpl->decodeProperties(array (
 /pageredirst.php?action=user&functionname=userManage" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">添加用户</a>
                                     </td>
                                 </tr>
+                                <?php }?>
                             </table>
+<?php }?>
 
+<?php if ($_smarty_tpl->getVariable('auth_result')->value[6]==1){?>
 
                             <!--                    积分开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table2">
@@ -212,6 +223,8 @@ $_smarty_tpl->decodeProperties(array (
                                 </tr>
                             </table>
                             <table id="subtree2" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[7]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu4" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -223,6 +236,10 @@ $_smarty_tpl->decodeProperties(array (
                                     </td>
 
                                 </tr>
+
+                                <?php }?>
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[8]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu5" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -236,7 +253,13 @@ $_smarty_tpl->decodeProperties(array (
                                     </td>
 
                                 </tr>
+                                <?php }?>
                             </table>
+
+
+                            <?php }?>
+
+                            <?php if ($_smarty_tpl->getVariable('auth_result')->value[9]==1){?>
 
                             <!--                    微游戏开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table3">
@@ -257,6 +280,8 @@ $_smarty_tpl->decodeProperties(array (
                                 </tr>
                             </table>
                             <table id="subtree3" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[10]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu6" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -269,6 +294,10 @@ $_smarty_tpl->decodeProperties(array (
 
                                 </tr>
 
+                                <?php }?>
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[11]==1){?>
+
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu7" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -280,8 +309,14 @@ $_smarty_tpl->decodeProperties(array (
                                     </td>
                                 </tr>
 
+                                <?php }?>
+
                             </table>
 
+
+                            <?php }?>
+
+                            <?php if ($_smarty_tpl->getVariable('auth_result')->value[12]==1){?>
 
 
 
@@ -305,6 +340,8 @@ $_smarty_tpl->decodeProperties(array (
                                 </tr>
                             </table>
                             <table id="subtree4" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[13]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu8" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -317,6 +354,9 @@ $_smarty_tpl->decodeProperties(array (
 
                                 </tr>
 
+                                <?php }?>
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[14]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu9" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -328,7 +368,14 @@ $_smarty_tpl->decodeProperties(array (
                                     </td>
                                 </tr>
 
+                                <?php }?>
+
                             </table>
+
+
+                            <?php }?>
+
+                            <?php if ($_smarty_tpl->getVariable('auth_result')->value[15]==1){?>
 
 
 
@@ -352,6 +399,8 @@ $_smarty_tpl->decodeProperties(array (
                                 </tr>
                             </table>
                             <table id="subtree5" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[16]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu15" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -363,6 +412,10 @@ $_smarty_tpl->decodeProperties(array (
                                     </td>
 
                                 </tr>
+
+                                <?php }?>
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[17]==1){?>
 
                                 <tr>
                                     <td width="15%" height="20">
@@ -378,6 +431,9 @@ $_smarty_tpl->decodeProperties(array (
 
                                 </tr>
 
+                                <?php }?>
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[18]==1){?>
+
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu20" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -392,6 +448,9 @@ $_smarty_tpl->decodeProperties(array (
 
                                 </tr>
 
+                                <?php }?>
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[19]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu17" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -405,9 +464,14 @@ $_smarty_tpl->decodeProperties(array (
 
                                 </tr>
 
+                                <?php }?>
+
                             </table>
 
 
+                            <?php }?>
+
+                            <?php if ($_smarty_tpl->getVariable('auth_result')->value[20]==1){?>
 
                             <!--                   兑换开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table6">
@@ -428,6 +492,8 @@ $_smarty_tpl->decodeProperties(array (
                                 </tr>
                             </table>
                             <table id="subtree6" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[21]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu11" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -439,6 +505,10 @@ $_smarty_tpl->decodeProperties(array (
                                     </td>
 
                                 </tr>
+
+                                <?php }?>
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[22]==1){?>
 
                                 <tr>
                                     <td width="15%" height="20">
@@ -452,6 +522,10 @@ $_smarty_tpl->decodeProperties(array (
 
                                 </tr>
 
+                                <?php }?>
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[23]==1){?>
+
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu13" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -464,9 +538,13 @@ $_smarty_tpl->decodeProperties(array (
 
                                 </tr>
 
+                                <?php }?>
+
                             </table>
 
+                            <?php }?>
 
+                            <?php if ($_smarty_tpl->getVariable('auth_result')->value[24]==1){?>
 
                             <!--                   兑换开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table7">
@@ -487,6 +565,8 @@ $_smarty_tpl->decodeProperties(array (
                                 </tr>
                             </table>
                             <table id="subtree7" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[25]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu14" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -499,7 +579,14 @@ $_smarty_tpl->decodeProperties(array (
 
                                 </tr>
 
+                                <?php }?>
+
                             </table>
+
+
+                            <?php }?>
+
+                            <?php if ($_smarty_tpl->getVariable('auth_result')->value[26]==1){?>
                             <!--                   兑换开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table8">
                                 <tr>
@@ -519,6 +606,8 @@ $_smarty_tpl->decodeProperties(array (
                                 </tr>
                             </table>
                             <table id="subtree8" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[27]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu90" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -530,6 +619,11 @@ $_smarty_tpl->decodeProperties(array (
                                     </td>
 
                                 </tr>
+
+                                <?php }?>
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[28]==1){?>
+
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu91" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -541,6 +635,10 @@ $_smarty_tpl->decodeProperties(array (
                                     </td>
 
                                 </tr>
+
+                                <?php }?>
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[29]==1){?>
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu92" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
@@ -553,7 +651,11 @@ $_smarty_tpl->decodeProperties(array (
 
                                 </tr>
 
+                                <?php }?>
+
                             </table>
+
+                            <?php }?>
 
                         </td>
                     </tr>

@@ -116,7 +116,7 @@
                                 </tr>
                             </table>
 
-
+{if $auth_result[2]==1}
                             <!--                    用户开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table1">
                                 <tr>
@@ -135,6 +135,7 @@
                                 </tr>
                             </table>
                             <table id="subtree1" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                {if $auth_result[3]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu1" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -143,6 +144,10 @@
                                         <a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" onclick="tupian('1')">客户信息</a>
                                     </td>
                                 </tr>
+
+                                {/if}
+
+                                {if $auth_result[4]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu2" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -151,6 +156,9 @@
                                         <a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=pointAndMoneyManage" target="mainFrame" class="left-fontSmall" onclick="tupian('2')">积分消费管理</a>
                                     </td>
                                 </tr>
+                                {/if}
+
+                                {if $auth_result[5]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu3" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -159,8 +167,11 @@
                                         <a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userManage" target="mainFrame" class="left-fontSmall" onclick="tupian('3')">添加用户</a>
                                     </td>
                                 </tr>
+                                {/if}
                             </table>
+{/if}
 
+{if $auth_result[6]==1}
 
                             <!--                    积分开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table2">
@@ -180,6 +191,8 @@
                                 </tr>
                             </table>
                             <table id="subtree2" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                {if $auth_result[7]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu4" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -189,6 +202,10 @@
                                     </td>
 
                                 </tr>
+
+                                {/if}
+
+                                {if $auth_result[8]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu5" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -200,7 +217,13 @@
                                     </td>
 
                                 </tr>
+                                {/if}
                             </table>
+
+
+                            {/if}
+
+                            {if $auth_result[9]==1}
 
                             <!--                    微游戏开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table3">
@@ -220,6 +243,8 @@
                                 </tr>
                             </table>
                             <table id="subtree3" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                {if $auth_result[10]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu6" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -230,6 +255,10 @@
 
                                 </tr>
 
+                                {/if}
+
+                                {if $auth_result[11]==1}
+
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu7" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -239,8 +268,14 @@
                                     </td>
                                 </tr>
 
+                                {/if}
+
                             </table>
 
+
+                            {/if}
+
+                            {if $auth_result[12]==1}
 
 
 
@@ -263,6 +298,8 @@
                                 </tr>
                             </table>
                             <table id="subtree4" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                {if $auth_result[13]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu8" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -273,6 +310,9 @@
 
                                 </tr>
 
+                                {/if}
+
+                                {if $auth_result[14]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu9" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -282,7 +322,14 @@
                                     </td>
                                 </tr>
 
+                                {/if}
+
                             </table>
+
+
+                            {/if}
+
+                            {if $auth_result[15]==1}
 
 
 
@@ -305,6 +352,8 @@
                                 </tr>
                             </table>
                             <table id="subtree5" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                {if $auth_result[16]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu15" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -314,6 +363,10 @@
                                     </td>
 
                                 </tr>
+
+                                {/if}
+
+                                {if $auth_result[17]==1}
 
                                 <tr>
                                     <td width="15%" height="20">
@@ -327,6 +380,9 @@
 
                                 </tr>
 
+                                {/if}
+                                {if $auth_result[18]==1}
+
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu20" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -339,6 +395,9 @@
 
                                 </tr>
 
+                                {/if}
+
+                                {if $auth_result[19]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu17" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -350,9 +409,14 @@
 
                                 </tr>
 
+                                {/if}
+
                             </table>
 
 
+                            {/if}
+
+                            {if $auth_result[20]==1}
 
                             <!--                   兑换开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table6">
@@ -372,6 +436,8 @@
                                 </tr>
                             </table>
                             <table id="subtree6" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                {if $auth_result[21]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu11" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -381,6 +447,10 @@
                                     </td>
 
                                 </tr>
+
+                                {/if}
+
+                                {if $auth_result[22]==1}
 
                                 <tr>
                                     <td width="15%" height="20">
@@ -392,6 +462,10 @@
 
                                 </tr>
 
+                                {/if}
+
+                                {if $auth_result[23]==1}
+
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu13" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -402,9 +476,13 @@
 
                                 </tr>
 
+                                {/if}
+
                             </table>
 
+                            {/if}
 
+                            {if $auth_result[24]==1}
 
                             <!--                   兑换开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table7">
@@ -424,6 +502,8 @@
                                 </tr>
                             </table>
                             <table id="subtree7" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                {if $auth_result[25]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu14" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -434,7 +514,14 @@
 
                                 </tr>
 
+                                {/if}
+
                             </table>
+
+
+                            {/if}
+
+                            {if $auth_result[26]==1}
                             <!--                   兑换开始-->
                             <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table8">
                                 <tr>
@@ -453,6 +540,8 @@
                                 </tr>
                             </table>
                             <table id="subtree8" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                {if $auth_result[27]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu90" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -462,6 +551,11 @@
                                     </td>
 
                                 </tr>
+
+                                {/if}
+
+                                {if $auth_result[28]==1}
+
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu91" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -471,6 +565,10 @@
                                     </td>
 
                                 </tr>
+
+                                {/if}
+
+                                {if $auth_result[29]==1}
                                 <tr>
                                     <td width="15%" height="20">
                                         <img id="xiaotu92" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
@@ -481,7 +579,11 @@
 
                                 </tr>
 
+                                {/if}
+
                             </table>
+
+                            {/if}
 
                         </td>
                     </tr>

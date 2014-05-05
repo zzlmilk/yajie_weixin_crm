@@ -5,6 +5,10 @@ class AreaModel extends Basic {
     public function __construct() {
 
         $this->child_name = 'area';
+        
+        
+        $this->dbname = 'weixin';
+        
 
         parent::__construct();
     }
