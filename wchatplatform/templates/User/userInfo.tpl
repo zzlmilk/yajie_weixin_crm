@@ -13,13 +13,9 @@
 
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript">
         </script>
-        <script type="text/javascript" src="{$WebSiteUrlPublic}/company/ggk/jQuery.js">
-        </script>
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/dist/ratchet.css" type="text/css">
         <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/dist/ratchet-theme-ios.css" type="text/css">
         <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/css/app.css" type="text/css">
-        <script src="{$WebSiteUrlPublic}/company/dist/ratchet.js" type="text/javascript">
-        </script>
+
         <title>
             个人信息
         </title>
@@ -28,7 +24,6 @@
         <style>
             body{
                 Font-size=62.5%;
-                overflow: auto !important;
             }
             .registerWarp{
                 margin: 0 auto;
