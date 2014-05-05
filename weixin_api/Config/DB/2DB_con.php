@@ -52,6 +52,7 @@ class Query extends DB_Mysql_search {
     }
 
     function changeDB($DB) {
+     
         $this->dbname = $DB;
     }
 

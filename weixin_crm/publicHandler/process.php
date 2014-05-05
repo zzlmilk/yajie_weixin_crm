@@ -9,7 +9,7 @@ if (isset($_GET['login'])) {
 
     session_unset();
 
-   echo '<script type="text/javascript">window.location="'.WebSiteUrl.'";</script>';
+    echo '<script type="text/javascript">window.location="' . WebSiteUrl . '";</script>';
 }
 
 if (isset($_POST['user'])) {
@@ -31,7 +31,7 @@ if (isset($_POST['user'])) {
 
         $company = new companyModel();
 
-        $company->initialize('company_id = '.$souce);
+        $company->initialize('company_id = ' . $souce);
 
         $token = $company->vars['company_token'];
 
@@ -48,14 +48,12 @@ if (isset($_POST['user'])) {
 
 
 
-      
 
-      
-        echo '<script type="text/javascript">window.location="'.WebSiteUrl.'";</script>';
+
+
+        echo '<script type="text/javascript">window.location="' . WebSiteUrl . '";</script>';
     } else {
-        echo '<script type="text/javascript">alert("用户名或密码错误！");window.location="'.WebSiteUrl.'";</script>';
+        echo '<script type="text/javascript">alert("用户名或密码错误！");window.location="' . WebSiteUrl . '";</script>';
     }
 }
-
-
 ?>

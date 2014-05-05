@@ -1,18 +1,17 @@
 <?php
 
-class loginController  {
+class loginController {
 
-	// 用户列表 界面
+    // 用户列表 界面
 
-	public function login(){
+    public function login() {
 
 
 
-		$_ENV['smarty']->setDirTemplates('');
+        $_ENV['smarty']->setDirTemplates('');
 
-		$_ENV['smarty']->display('login');
-
-	}
+        $_ENV['smarty']->display('login');
+    }
 
 }
 

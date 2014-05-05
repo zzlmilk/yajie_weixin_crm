@@ -46,5 +46,6 @@ defined('PASSWORD') or define('PASSWORD', '');
 defined('DBHOST') or define('DBHOST', '127.0.0.1');
 
 
-defined('Develop') or define('Develop', 1)
+defined('Develop') or define('Develop', 1);
+
 ?>

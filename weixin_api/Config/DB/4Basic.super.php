@@ -29,7 +29,23 @@ class Basic extends Query {
 
     public function __construct() {
         try {
-
+            
+             if(!empty($_REQUEST['source'])){
+               
+                $name = $_REQUEST['source'];
+               
+                $array  = array('company'=>'weixin_company');
+                
+                if(!empty($array[$name])){
+                        
+                     $this->changeDB($array[$name]);
+                } else{
+                    
+                    echoErrorCode(106); 
+                }
+                
+           }
+           
             parent::__constructor($this->child_name);
 
         } catch (Exception $e) {

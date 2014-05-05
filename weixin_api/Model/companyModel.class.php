@@ -40,6 +40,23 @@ class companyModel extends Basic {
     public function create_company() {
         
     }
+    
+    
+    public function get_info($token){
+        
+        $this->addCondition('company_token like "'.$token.'"', 1);
+        
+        $this->initialize();
+        
+        if($this->vars_number > 0){
+            
+            return $this->vars;
+        } else{
+            
+            echoErrorCode(107);
+        }
+        
+    }
 
 }
 

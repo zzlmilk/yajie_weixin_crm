@@ -16,16 +16,16 @@ class scratchCard {
         
     }
 
-    public function getScratchCardResults($source) {
-        $data['source'] = $source;
+    public function getScratchCardResults() {
+        $data['source'] = SOURCE;
         
         $userInfoJson = transferData(APIURL . "/gift/get_probability_card", "post", $data);
         $userInfoArray = json_decode($userInfoJson, true);
         return $userInfoArray;
     }
 
-    public function getScratchCardReceviceAward($source, $openId, $giftId) {
-        $data['source'] = $source;
+    public function getScratchCardReceviceAward($openId, $giftId) {
+        $data['source'] = SOURCE;
         $data['open_id'] = $openId;
         $data['gift_type'] = 2;
         $data['gift_id'] = $giftId;
@@ -34,8 +34,8 @@ class scratchCard {
         return $userInfoJson;
     }
 
-    public function getScratchCardInfo($source, $giftId) {
-        $data['source'] = $source;
+    public function getScratchCardInfo($giftId) {
+        $data['source'] = SOURCE;
         $data['gift_type'] = 2;
         $data['gift_id'] = $giftId;
         $userInfoJson = transferData(APIURL . "/gift/get_gift_info", "post", $data);

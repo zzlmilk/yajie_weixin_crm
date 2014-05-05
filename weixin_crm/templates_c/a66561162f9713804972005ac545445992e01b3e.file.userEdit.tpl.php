@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-25 15:50:15
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-23 11:28:09
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/userEdit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19224126215331353783c271-18112449%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:53475015953573349081826-07914190%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a66561162f9713804972005ac545445992e01b3e' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/userEdit.tpl',
-      1 => 1395733768,
+      1 => 1396342134,
     ),
   ),
-  'nocache_hash' => '19224126215331353783c271-18112449',
+  'nocache_hash' => '53475015953573349081826-07914190',
   'function' => 
   array (
   ),
@@ -47,15 +47,23 @@ $_smarty_tpl->decodeProperties(array (
         width: auto !important;
     }
     .inputWidth{
-        width: 150px;
+        width: 170px;
+    }
+    .tableHeigth{
+        height: 180px;
+    }
+    .pageStyle{
+        text-align: center;
     }
 </style>
 <body>
+    <div style="position: relative;left: 10px; top: 10px;"><a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=user&functionname=userList"><button class="btn btn-primary">返回</button></a></div>
     <div class="userMangerTitle">修改与查看用户信息</div>
     <div id="errorMessage" class="alert alert-danger errorMessage"></div>
     <?php if ($_smarty_tpl->getVariable('errorFlag')->value==1){?>
         <div style="height: 20px;"></div>
-        <div style="width: 300px; margin: 0 auto;">
+        <div style="width: 370px; margin: 0 auto;">
             <form class="form-horizontal" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=user&functionname=userUpdata" method="post">
                 <div class="form-group"> 
@@ -74,9 +82,15 @@ $_smarty_tpl->decodeProperties(array (
                 </div>
                 <div class="form-group"> 
                     <label for="inputEmail3" class="col-sm-2 control-label labelWidth">客户生日：</label>
-                    <div class="col-sm-2">
-                        <input type="text" class="form-control inputWidth" value="<?php echo $_smarty_tpl->getVariable('userData')->value['birthday'];?>
-" name="birthday" id="userBirthday"></div>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control " style="width: 30%; display: inline-block" value="<?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('userData')->value['birthday'],"%Y");?>
+"  id="birthdayFullYear">-
+                        <input type="text" class="form-control " style="width: 23%;display: inline-block" value="<?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('userData')->value['birthday'],"%m");?>
+"  id="birthdayMonth">-
+                        <input type="text" class="form-control " style="width: 23%;display: inline-block" value="<?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('userData')->value['birthday'],"%d");?>
+"  id="birthdayDay">
+                        <input type="hidden" class="inputWidth" id="userBirthday" name="birthday" value="">
+                    </div>
                 </div>
                 <div class="form-group"> 
                     <label for="inputEmail3" class="col-sm-2 control-label labelWidth">客户性别：</label>
@@ -108,6 +122,7 @@ $_smarty_tpl->decodeProperties(array (
 " name="user_integration" readonly="readonly"  id="userIntegration">
                     </div>
                 </div>
+
                 <input type="hidden" value="<?php echo $_smarty_tpl->getVariable('userData')->value['user_id'];?>
 " name="user_id" id="user_id">
                 <p style="text-align: center;"> <button data-toggle="modal" data-target="#myModal" type="button" id="saveChangeButton" disabled="true"  class="btn btn-info">保存修改</button></p>
@@ -137,67 +152,106 @@ $_smarty_tpl->decodeProperties(array (
  <!-- 此处返回错误信息-->
 <?php }?>
 <?php if ($_smarty_tpl->getVariable('userMoneyData')->value==0){?>
-    暂无消费数据
+    <h3> 暂无消费数据</h3>
 <?php }else{ ?>
     <h1>消费详情</h1>
-    <table class="table table-striped">
-        <tr><th>序号</th><th>数量</th><th>来源</th><th>日期</th></tr>
-        <?php  $_smarty_tpl->tpl_vars['MoneyData'] = new Smarty_Variable;
+    <div class="tableHeigth">
+        <table id="moneyMessage" class="table table-striped">
+            <thead>
+                <tr><th>序号</th><th>数量</th><th>来源</th><th>日期</th></tr>
+            </thead>
+            <tbody>
+                <?php  $_smarty_tpl->tpl_vars['MoneyData'] = new Smarty_Variable;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('userMoneyData')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if (count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['MoneyData']->key => $_smarty_tpl->tpl_vars['MoneyData']->value){
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['MoneyData']->key;
 ?>
-            <tr>
-                <td><?php echo $_smarty_tpl->tpl_vars['key']->value+1;?>
+                    <tr>
+                        <td><?php echo $_smarty_tpl->tpl_vars['key']->value+1;?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['MoneyData']->value['fraction'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['MoneyData']->value['fraction'];?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['MoneyData']->value['source'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['MoneyData']->value['source'];?>
 </td>
-                <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['MoneyData']->value['create_time'],"%Y-%m-%d %H:%M");?>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['MoneyData']->value['create_time'],"%Y-%m-%d %H:%M");?>
 </td>
-            </tr>
-        <?php }} ?>
-    </table>
-    <div id="pageMoney"><?php echo $_smarty_tpl->getVariable('pageMoney')->value;?>
+                    </tr>
+                <?php }} ?>
+            </tbody>
+        </table>
+    </div>
+    <div id="pageMoney" class="pageStyle"><?php echo $_smarty_tpl->getVariable('pageMoney')->value;?>
 </div>
 
 <?php }?>
 <br>
 <?php if ($_smarty_tpl->getVariable('userPointData')->value==0){?>
-    暂无积分数据
+    <h3> 暂无积分数据</h3>
 <?php }else{ ?>
     <h1>积分详情</h1>
-    <table class="table table-striped">
-        <tr><th>序号</th><th>数量</th><th>来源</th><th>日期</th></tr>
-        <?php  $_smarty_tpl->tpl_vars['PointData'] = new Smarty_Variable;
+    <div class="tableHeigth">
+        <table id="pointerMessage" class="table table-striped">
+            <thead>
+                <tr><th>序号</th><th>数量</th><th>来源</th><th>日期</th></tr>
+            </thead>
+            <tbody>
+                <?php  $_smarty_tpl->tpl_vars['PointData'] = new Smarty_Variable;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('userPointData')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if (count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['PointData']->key => $_smarty_tpl->tpl_vars['PointData']->value){
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['PointData']->key;
 ?>
-            <tr>
-                <td><?php echo $_smarty_tpl->tpl_vars['key']->value+1;?>
+                    <tr>
+                        <td><?php echo $_smarty_tpl->tpl_vars['key']->value+1;?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['PointData']->value['fraction'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['PointData']->value['fraction'];?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['PointData']->value['source'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['PointData']->value['source'];?>
 </td>
-                <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['PointData']->value['create_time'],"%Y-%m-%d %H:%M");?>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['PointData']->value['create_time'],"%Y-%m-%d %H:%M");?>
 </td>
-            </tr>
-        <?php }} ?>
-    </table>
-    <div id="pointerPage"><?php echo $_smarty_tpl->getVariable('pagePointer')->value;?>
+                    </tr>
+                <?php }} ?>
+            </tbody>
+        </table>
+    </div>
+    <div id="pointerPage" class="pageStyle"><?php echo $_smarty_tpl->getVariable('pagePointer')->value;?>
 </div>
+<?php }?>
+<?php if ($_smarty_tpl->getVariable('userRegistrationValue')->value==0){?>
+    <!--    暂无积分数据-->
+<?php }else{ ?>
+    <!--    <h1>用户行为记录</h1>
+        <table class="table table-striped">
+            <tr><th>序号</th><th>日期</th><th>行为</th></tr>
+    <?php  $_smarty_tpl->tpl_vars['userRegistration'] = new Smarty_Variable;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('userRegistrationValue')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if (count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['userRegistration']->key => $_smarty_tpl->tpl_vars['userRegistration']->value){
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['userRegistration']->key;
+?>
+        <tr>
+            <td><?php echo $_smarty_tpl->tpl_vars['key']->value+1;?>
+</td>
+            <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['userRegistration']->value['record_time'],"%Y-%m-%d %H:%M");?>
+</td>
+            <td>签到</td>
+        </tr>
+    <?php }} ?>
+</table>-->
+<!--    <div id="pointerPage"><?php echo $_smarty_tpl->getVariable('pagePointer')->value;?>
+</div>-->
 <?php }?>
 <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /js/rexexTest.js"></script>
 <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /js/buttonDisable.js"></script>
+<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/js/timeClass.js"></script>
 <script>
     $("#userPhone").on("input",function(){
     if(!getIntRegex($(this).val())){
@@ -207,6 +261,8 @@ if (count($_from) > 0){
 }
 });
 $("#saveChangeButton").click(function(){
+var birthdayDate=$("#birthdayFullYear").val()+"-"+$("#birthdayMonth").val()+"-"+$("#birthdayDay").val()
+$("#userBirthday").val(birthdayDate);
 $("#errorMessage").hide();
 $("#errorMessage").html();
 var errorMessage="";
@@ -272,27 +328,46 @@ $(".modal-body").html(WarringStr);
 buttonDisable($("#saveChangeButton"));
 //禁用按钮结束
 //积分分页
-$("#pageMoney .usablePage").click(function(){
-
-return false;
-});
  
 
- function pageFunction(obj){
+function pageFunction(obj){
 
-    var requestUrl=$(obj).attr("pageLink");
+var requestUrl=$(obj).attr("pageLink");
+
 $.post(
 requestUrl,
 {
-    userId:$("#user_id").val()
+userId:$("#user_id").val()
 },
 function(rData){
+if(rData['returnCode']==1){
+alert("服务器连接错误");
+}else if(rData['returnCode']==2){
+alert("服务器未获取或者获取到错误的用户参数");
+}else{
+var pageObject=rData["pageObject"];
+var dataObjcet=rData["dataObject"];
+var tbodyString=""
+var Pointerdata=rData["returnData"];
+var dataLength=rData["returnData"].length;
+for(var i=0;i<dataLength;i++){
+tbodyString+="<tr>";
+tbodyString+="<td>"+(i+1)+"</td>";
+tbodyString+="<td>"+Pointerdata[i]["fraction"]+"</td>";
+tbodyString+="<td>"+Pointerdata[i]["source"]+"</td>";
+var createTime=Pointerdata[i]["create_time"]
+var formatTime=timeToString(createTime*1000,1);
+tbodyString+="<td>"+formatTime+"</td>";
+tbodyString+="</tr>";
+}
+$("#"+dataObjcet+" tbody").html("");
+$("#"+dataObjcet+" tbody").html(tbodyString);
+$("#"+pageObject).html(rData["page"]);}
+});
+}
 
-$("#pageMoney").html(rData["page"]);
+ 
 
-})
-
- }
 </script>
 
 

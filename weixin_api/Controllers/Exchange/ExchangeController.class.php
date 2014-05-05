@@ -8,20 +8,27 @@ class ExchangeController implements exchange {
     public function get_exchange_list() {
 
 
-        $exchangeModel = new ExchangeModel();
+        if (!empty($_REQUEST['source'])) {
 
-        $exchangeListArray = $exchangeModel->getExchangeList();
 
-        if (count($exchangeListArray) > 0) {
+            $exchangeModel = new ExchangeModel();
 
-            $exchangeArray = array();
+            $exchangeListArray = $exchangeModel->getExchangeList();
 
-            foreach ($exchangeListArray as $k => $v) {
+            if (count($exchangeListArray) > 0) {
 
-                $exchangeArray[$k] = arrayToObject($v, 0);
+                $exchangeArray = array();
+
+                foreach ($exchangeListArray as $k => $v) {
+
+                    $exchangeArray[$k] = arrayToObject($v, 0);
+                }
+
+                AssemblyJson($exchangeArray);
             }
+        } else {
 
-            AssemblyJson($exchangeArray);
+            echoErrorCode(105);
         }
     }
 
@@ -30,7 +37,7 @@ class ExchangeController implements exchange {
      */
     public function get_exchange_info() {
 
-        if ($_REQUEST['exchange_id'] > 0) {
+        if ($_REQUEST['exchange_id'] > 0 && !empty($_REQUEST['source'])) {
 
             $exchangeModel = new ExchangeModel();
 

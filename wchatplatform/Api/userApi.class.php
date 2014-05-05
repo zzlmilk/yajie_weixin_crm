@@ -15,11 +15,11 @@ class userApi {
      * @param varchar $source  微信公众平台来源
      * @return array   返回为已经解析完成的数组
      */
-    public function getUserInfo($open_id, $source) {
+    public function getUserInfo($open_id) {
 
         if (!empty($open_id)) {
             $data['open_id'] = $open_id;
-            $data['source'] = $source;
+            $data['source'] = SOURCE;
             $userInfoJson = transferData(APIURL . "/user/get_info", "post", $data);
             $userInfoArray = json_decode($userInfoJson, true);
             return $userInfoArray;
@@ -32,11 +32,11 @@ class userApi {
      * @param varchar $source  微信公众平台来源
      * @return array   返回为已经解析完成的数组
      */
-    public function ableUser($open_id, $source) {
+    public function ableUser($open_id) {
 
         if (!empty($open_id)) {
             $data['open_id'] = $open_id;
-            $data['source'] = $source;
+            $data['source'] = SOURCE;
             $userInfoJson = transferData(APIURL . "/user/able_user", "post", $data);
             $userInfoArray = json_decode($userInfoJson, true);
 
@@ -53,21 +53,21 @@ class userApi {
      * @param type $source
      * @return type
      */
-    public function getUserCode($open_id, $source) {
+    public function getUserCode($open_id) {
 
         if (!empty($open_id)) {
             $data['open_id'] = $open_id;
-            $data['source'] = $source;
+            $data['source'] = SOURCE;
             $userInfoJson = transferData(APIURL . "/code/get_user_code", "post", $data);
             $userInfoArray = json_decode($userInfoJson, true);
             return $userInfoArray;
         }
     }
 
-    public function getUserRecord($open_id, $source, $type) {
+    public function getUserRecord($open_id, $type) {
         if (!empty($open_id)) {
             $data['open_id'] = $open_id;
-            $data['source'] = $source;
+            $data['source'] = SOURCE;
 
             $data['type'] = $type;
             $userInfoJson = transferData(APIURL . "/user/getUserRecord", "post", $data);

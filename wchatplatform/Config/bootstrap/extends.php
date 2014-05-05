@@ -10,6 +10,7 @@ date_default_timezone_set('PRC');
  * 2013-8-6 by zxp
  */
 function fileRead($filePath) {
+
     if ($handle = opendir($filePath)) {
         /* to include all files that in the class folder what a way to include classes!!! */
         while (false !== ($file = readdir($handle))) {
@@ -75,14 +76,6 @@ function ArraySort(array $List, $by, $order = '', $type = '') {
         }
     }
     return $List;
-}
-
-/**
- * 处理 URL
- */
-function urlAction($url, $count) {
-    $urlCount = (count($url) - $count < 0 ) ? 0 : count($url) - $count;
-    return $urlCount;
 }
 
 /**
@@ -234,13 +227,17 @@ function include_path_file($dirName, $fileKey) {
     if (is_array($dirName)) {
         foreach ($dirName as $dirValue) {
             if (!empty($dirValue) && $dirValue != '') {
-                $filePath = ROOT_DIR . $fileKey . '/' . $dirValue . '/';
+                $filePath = ROOT_DIR . '/' . $fileKey . '/' . $dirValue . '/';
                 //echo $filePath.'<br />';
                 fileRead($filePath);
             }
         }
     } else {
-        $filePath = ROOT_DIR . $dirName . '/';
+        $filePath = ROOT_DIR . '/' . $dirName . '/';
+        
+       // echo $filePath;
+        
+        
         fileRead($filePath);
     }
 }
@@ -325,51 +322,47 @@ function curlGet($url) {
 }
 
 //加载模块
-function U($pathinfo,$var = '',$model = 0 ) {
+function U($pathinfo, $var = '', $model = 0) {
 
-   $info = pathinfo($pathinfo);
+    $info = pathinfo($pathinfo);
 
-   $action = $info['basename'];
-   $module = $info['dirname'];
+    $action = $info['basename'];
+    $module = $info['dirname'];
 
-   $class_strut = explode('/', $module);
+    $class_strut = explode('/', $module);
 
-   $jumpUrl = WebSiteUrl.'?g='.$class_strut[0].'&a='.$class_strut[1].'&v='.$action;
+    $jumpUrl = WebSiteUrl . '?g=' . $class_strut[0] . '&a=' . $class_strut[1] . '&v=' . $action;
 
 
-   if(count($var) > 0 && is_array($var)){
+    if (count($var) > 0 && is_array($var)) {
 
         $array = array();
 
-        foreach($var as $k=>$v){
-            $array[] = $k . '=' .$v;  
+        foreach ($var as $k => $v) {
+            $array[] = $k . '=' . $v;
+        }
 
-       }
+        $fields = implode('&', $array);
 
-       $fields = implode('&',$array);  
+        $string.='&' . $fields;
 
-       $string.='&'.$fields;
+        $jumpUrl.=$string;
+    }
 
-       $jumpUrl.=$string;
-   }
-   
 
-   if(is_string($var)){
-       
-        $jumpUrl.='&'.$var;
-   }
-   if($model == 0){
+    if (is_string($var)) {
 
-        echo '<script>window.location.href="'.$jumpUrl.'"</script>';
+        $jumpUrl.='&' . $var;
+    }
+    if ($model == 0) {
+
+        echo '<script>window.location.href="' . $jumpUrl . '"</script>';
 
         die;
-
-
-   } else{
+    } else {
 
         return $jumpUrl;
-   }
-    
+    }
 }
 
 /**
@@ -378,16 +371,14 @@ function U($pathinfo,$var = '',$model = 0 ) {
  * @param array $vars 调用参数 数组 
  * @return mixed
  */
-function R($url, $sorce,$vars = array()) {
+function R($url, $sorce, $vars = array()) {
     $info = pathinfo($url);
-    
-   
+
+
     $action = $info['basename'];
     $module = $info['dirname'];
-    $class = A($module,$sorce);
+    $class = A($module, $sorce);
     if ($class) {
-        
-      
         return call_user_func_array(array(&$class, $action), $vars);
     } else {
         return false;
@@ -401,19 +392,30 @@ function R($url, $sorce,$vars = array()) {
  * @param type $file
  * @return class
  */
-function A($module,$sorce, $ext = '.class.php', $file = 'Controller') {
+function A($module, $sorce, $ext = '.class.php', $file = 'Controller') {
     $class_strut = explode('/', $module);
     $class = str_replace(array('.', '#'), array('/', '.'), $module);
     $class = substr_replace($class, '', 0, strlen($class_strut[0]) + 1);
-    $baseUrl = ROOT_DIR .  'Controllers/'.ucfirst($sorce).'/';
+    $baseUrl = ROOT_DIR . 'Controllers/' . ucfirst($sorce) . '/';
     $classfile = $baseUrl . $class . $file . $ext;
 
     if (file_exists($classfile)) {
-       
+
         require_once $classfile;
         $class = basename($module . $file);
         $class = new $class();
         return $class;
+    }
+}
+
+function checkMobile($phone) {
+
+    if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $phone)) {
+
+        return true;
+    } else {
+
+        return false;
     }
 }
 

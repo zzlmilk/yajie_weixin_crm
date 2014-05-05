@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-27 09:36:09
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-05 13:18:45
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/manageView.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:207169979353338089a69ba6-04615671%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:26361272753671f3541c353-48262709%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0c10b76d6ea35b97d169e39191bd023b52995d3f' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/manageView.tpl',
-      1 => 1395804723,
+      1 => 1398228674,
     ),
   ),
-  'nocache_hash' => '207169979353338089a69ba6-04615671',
+  'nocache_hash' => '26361272753671f3541c353-48262709',
   'function' => 
   array (
   ),
@@ -120,8 +120,14 @@ if (count($_from) > 0){
                                 余额
                             <?php }?>
                         </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['RecordData']->value['source'];?>
-</td>
+                        <td>
+                            <?php if ($_smarty_tpl->tpl_vars['RecordData']->value['source']=="crm"){?>
+                                系统
+                            <?php }else{ ?>
+                                <?php echo $_smarty_tpl->tpl_vars['RecordData']->value['source'];?>
+  
+                            <?php }?>
+                        </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['RecordData']->value['create_time'],"%Y-%m-%d %H:%M");?>
 </td>
                     </tr>
@@ -253,6 +259,7 @@ return false;
 
 var recoredLength=rData['recordList'].length;
 var recoredValue=rData['recordList'];
+var sourceType="";
 $('.dataRecoredValue').html("");
 for(var i=0;i<recoredLength;i++){
 var addString="<tr>";
@@ -265,7 +272,13 @@ addString+="<td>积分</td>";
 else{
 addString+="<td>余额</td>";
 }
-addString+="<td>"+recoredValue[i]["source"]+"</td>";
+if(recoredValue[i]["source"]=="crm"){
+sourceType="系统";
+}
+else{
+sourceType=recoredValue[i]["source"];
+}
+addString+="<td>"+sourceType+"</td>";
 var createTime=recoredValue[i]["create_time"]
 var formatTime=timeToString(createTime*1000,1);
 addString+="<td>"+formatTime+"</td>";
