@@ -135,7 +135,7 @@ class UserController extends BaseController {
 
 
 
-                                U(SOURCE . '/user/userCenter', array('open_id' => $_REQUEST['open_id']));
+                                U(MODULE_DIR_NAME . '/user/userCenter', array('open_id' => $_REQUEST['open_id']));
                             }
                         } else {
 
