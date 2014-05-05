@@ -95,14 +95,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="table-view-cell media">
-                    <a class="push-right" data-transition="slide-in">
-                        <!--   <span class="media-object icon icon-star-filled pull-left"></span> -->
-                        <div class="media-body"  onclick='window.location.href = "{$websiteUrl}?g=company&a=code&v=promoMessage&open_id={$open_id}"'>
-                            优惠信息
-                        </div>
-                    </a>
-                </li>
+              
                 <li class="table-view-cell media">
                     <a class="push-right" href="javascript:void(0)" data-transition="slide-in"  onclick='window.location.href = "{$websiteUrl}?g=company&a=user&v=userJF&open_id={$open_id}"'>
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
@@ -121,31 +114,8 @@
                     </a>
                 </li>
 
-                <li class="table-view-cell media">
-                    <a class="push-right"  data-transition="slide-in">
-                        <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-                        <div class="media-body" style=' cursor: pointer; ' onclick='window.location.href = "{$websiteUrl}?g=company&a=order&v=orderCheck&open_id={$open_id}"'>
-                            订单信息
-                        </div>
-                    </a>
-                </li>
+             
 
-                <li class="table-view-cell media">
-                    <a class="push-right" href="inbox.html" data-transition="slide-in">
-                        <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-                        <div class="media-body">
-                            会员健康信息
-                        </div>
-                    </a>
-                </li>
-
-                <li class="table-view-cell media">
-                    <a class="push-right" href="inbox.html" data-transition="slide-in">
-                        <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-                        <div class="media-body">
-                            我的任务
-                        </div>
-                    </a>
-                </li>
+             
             </ul>
         </div>

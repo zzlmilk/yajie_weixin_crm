@@ -1,5 +1,7 @@
 <?php
 
+
+include_once '1DB.class.php';
 class DB_Mysql_search  extends DB_Mysql {
    
 
