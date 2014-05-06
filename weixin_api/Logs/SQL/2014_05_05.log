@@ -404,3 +404,283 @@ May 05 17:44:49 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/code/get_u
 SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 2     
 May 05 17:44:49 [SQL]_null_192.168.0.155_/yajie_weixin_crm/weixin_api/code/get_user_code
 SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 1     
+May 05 17:50:15 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 17:50:15 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user_points_record  WHERE 1  AND user_id = 1    ORDER BY create_time DESC  
+May 05 17:50:17 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 17:50:17 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user_points_record  WHERE 1  AND user_id = 1    ORDER BY create_time DESC  
+May 05 17:50:18 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 17:50:18 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user_points_record  WHERE 1  AND user_id = 1    ORDER BY create_time DESC  
+May 05 17:50:19 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 17:50:19 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user_points_record  WHERE 1  AND user_id = 1    ORDER BY create_time DESC  
+May 05 17:50:20 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 17:50:20 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user_points_record  WHERE 1  AND user_id = 1    ORDER BY create_time DESC  
+May 05 17:50:20 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 17:50:20 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user_points_record  WHERE 1  AND user_id = 1    ORDER BY create_time DESC  
+May 05 17:50:22 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 17:50:22 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user_points_record  WHERE 1  AND user_id = 1    ORDER BY create_time DESC  
+May 05 17:50:24 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 17:50:24 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user_points_record  WHERE 1  AND user_id = 1    ORDER BY create_time DESC  
+May 05 18:01:04 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/able_user
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:01:38 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/able_user
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:02:35 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/able_user
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:03:44 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/able_user
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc1234"     
+May 05 18:06:53 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:06:53 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:06:53 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:06:53 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:07:38 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:07:38 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:07:38 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:07:38 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:07 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:07 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:07 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:07 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:16 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:16 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code_record  WHERE 1  AND user_id = 1    ORDER BY ctime DESC  
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 82     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 88     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 74     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 81     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 71     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 106     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 78     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 96     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 77     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 116     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 72     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 69     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 114     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 85     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 101     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 97     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 117     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 84     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 109     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 90     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 94     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 70     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 79     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 105     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 102     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 112     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 113     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 99     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 100     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 73     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 86     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 89     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 80     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 7     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 14     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 15     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 8     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 16     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 10     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 12     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 13     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 9     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 6     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 17     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 4     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 3     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 2     
+May 05 18:09:27 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/code/get_user_code
+SELECT * FROM weixin_company.promo_code  LEFT JOIN weixin_company.commodity ON commodity.commodity_id = promo_code.code_merchandise  WHERE 1  AND promo_code_id = 1     
+May 05 18:09:33 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:33 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:33 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:33 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:35 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:35 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user_points_record  WHERE 1  AND user_id = 1    ORDER BY create_time DESC  
+May 05 18:09:38 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:38 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user_points_record  WHERE 1  AND user_id = 1    ORDER BY create_time DESC  
+May 05 18:09:59 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:09:59 [SQL]_null_192.168.0.104_/yajie_weixin_crm/weixin_api/user/getUserRecord
+SELECT * FROM weixin_company.user_points_record  WHERE 1  AND user_id = 1    ORDER BY create_time DESC  
+May 05 18:11:06 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/able_user
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:11:20 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:11:20 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:11:20 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/get_registeration
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:11:20 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/get_registeration
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/user_registeration
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/user_registeration
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/user_registeration
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/user_registeration
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1 and registration_time = 1399219200     
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/user_registeration
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/user_registeration
+UPDATE weixin_company.user_registration SET day='2', today_able='1', registration_time='1399219200' WHERE 1  AND user_id = 1
+May 05 18:11:25 [SQL]__192.168.0.107_/yajie_weixin_crm/weixin_api/registration/user_registeration
+insert into weixin_company.user_registration_record (user_id,record_time) values('1','1399284685')
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/user_registeration
+SELECT * FROM weixin_company.registration_day  WHERE 1  AND day = 2     
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/user_registeration
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/user_registeration
+UPDATE weixin_company.user SET user_integration='99362' WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"
+May 05 18:11:25 [SQL]__192.168.0.107_/yajie_weixin_crm/weixin_api/registration/user_registeration
+insert into weixin_company.user_points_record (user_id,record_type,fraction,source,exchange_id,create_time) values('1','1','20','gift','','1399284685')
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/get_registeration
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:11:25 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/registration/get_registeration
+SELECT * FROM weixin_company.user_registration  WHERE 1  AND user_id = 1     
+May 05 18:12:22 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:12:22 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:16:33 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:16:33 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:16:33 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:16:33 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND appointment_time < 1399284993 and user_id = 1 and order_state !=2     
+May 05 18:16:33 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 05 18:23:54 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:23:54 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:23:54 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:23:54 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND appointment_time < 1399285434 and user_id = 1 and order_state !=2     
+May 05 18:23:54 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 05 18:24:19 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:24:19 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:24:19 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:24:19 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND appointment_time < 1399285459 and user_id = 1 and order_state !=2     
+May 05 18:24:19 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 05 18:24:39 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:24:39 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:24:40 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 05 18:24:40 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND appointment_time < 1399285480 and user_id = 1 and order_state !=2     
+May 05 18:24:40 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      

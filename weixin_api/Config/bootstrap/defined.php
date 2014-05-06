@@ -1,5 +1,6 @@
 <?php
 
+date_default_timezone_set('PRC');
 /**
  * 路径定义
  */
@@ -19,6 +20,8 @@ defined('apiLog') or define('apiLog', ROOT_DIR . Logs . '/Info/');
 
 defined('SQLLog') or define('SQLLog', ROOT_DIR . Logs . '/SQL/');
 
+defined('PLUGDIR') or define('PLUGDIR', ROOT_DIR .'Plug/');
+
 defined('LOG_FILE_SIZE') or define('LOG_FILE_SIZE', 2097152); // 日志文件大小限制
 
 defined('LOG_STATE') or define('LOG_STATE', 0);  // 是否开启日志  0为开启 1 为关闭
@@ -31,6 +34,9 @@ defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH', 'ORIG_PATH_INFO,RE
 /**
  * 关闭报错信息 把报错信息存储到错误文件中
  */
+
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
 ini_set("display_errors", 1);
 
 ini_set("log_errors", "On");

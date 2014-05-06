@@ -15,8 +15,6 @@
 
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript">
         </script>
-       
-      
         <title>
             个人信息
         </title>
@@ -25,7 +23,6 @@
         <style>
             body{
                 Font-size=62.5%;
-                overflow: auto !important;
             }
             .registerWarp{
                 margin: 0 auto;
