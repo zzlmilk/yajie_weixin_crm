@@ -58,6 +58,7 @@ class website {
         /**
          * 判断模块是否存在
          */
+
         
         
         if (class_exists(MODULE_NAME_CONTROLLER)) {
@@ -65,8 +66,8 @@ class website {
              * 实例化类
              */
             $className = MODULE_NAME_CONTROLLER;
-            
-           
+
+
             $module = new $className();
 
             if ($module) {

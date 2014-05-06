@@ -23,8 +23,8 @@
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
       {*  <title>幸运大转盘抽奖</title>*}
-        <script src="{$WebSiteUrlPublic}/company/script/giftAward.js"></script>
-        <link href="{$WebSiteUrlPublic}/company/bigWheelFiles/activity-style.css" rel="stylesheet" type="text/css">
+        <script src="{$WebSiteUrlPublic}/javascript/giftAward.js"></script>
+        <link href="{$WebSiteUrlPublic}/bigWheelFiles/activity-style.css" rel="stylesheet" type="text/css">
 
         <script type="text/javascript">
 
@@ -46,11 +46,11 @@
             <div id="outercont">
                 <div id="outer-cont">
                     <div id="outer">
-                        <img src="{$WebSiteUrlPublic}/company/bigWheelFiles/activity-lottery-1.png" width="225px"></div>
+                        <img src="{$WebSiteUrlPublic}/bigWheelFiles/activity-lottery-1.png" width="225px"></div>
                 </div>
                 <div id="inner-cont">
                     <div id="inner">
-                        <img src="{$WebSiteUrlPublic}/company/bigWheelFiles/activity-lottery-2.png"></div>
+                        <img src="{$WebSiteUrlPublic}/bigWheelFiles/activity-lottery-2.png"></div>
                 </div>
             </div>
             <div class="content">

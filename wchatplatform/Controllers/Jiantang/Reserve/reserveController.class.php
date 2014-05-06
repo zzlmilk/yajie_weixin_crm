@@ -7,11 +7,11 @@
  */
 
 /**
- * Description of orderController
+ * Description of reserveController
  *
  * @author zhaixiaoping
  */
-class orderController extends BaseController {
+class reserveController extends BaseController {
 
     //put your code here
 
@@ -24,7 +24,7 @@ class orderController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';         
+            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';         
         }
 
         $this->assign('open_id', $this->userOpenId);
@@ -35,6 +35,7 @@ class orderController extends BaseController {
      */
     public function order() {
 
+
         $this->able_register();
         //$this->userOpenId = $_REQUEST['open_id'];
         if (isset($_GET['checkReturn'])) {
@@ -43,6 +44,7 @@ class orderController extends BaseController {
         }
         $userOrder["source"] = SOURCE;
         $userOrder["open_id"] = $this->userOpenId;
+
         $userJsonData = transferData(APIURL . "/order/get_order", "post", $userOrder);
         $orderItem = json_decode($userJsonData, true);
         $error = new errorApi();
@@ -55,11 +57,14 @@ class orderController extends BaseController {
             $this->displayMessage("你已经有正在进行的订单，请执行<a href='" . WebSiteUrl . "?g=".SOURCE."&a=order&v=orderCheck&open_id=" . $this->userOpenId . "'>编辑</a>操作");
         }
         $selectReturnVal = transferData(APIURL . "/order/get_merchandise", "get");
+        
+       
         $selectVal = json_decode($selectReturnVal, true);
 
         $error->JudgeError($selectVal);
         //var_dump($selectReturnVal);
         $this->assign("selectVal", $selectVal);
+
         // $this->assign('open_id', $_REQUEST['open_id']);
         $this->display();
     }

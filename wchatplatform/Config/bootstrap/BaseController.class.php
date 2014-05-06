@@ -80,9 +80,9 @@ class BaseController {
 
         $this->smarty->assign('model', MODULE_DIR_NAME);
         
-        
+       
 
-        $this->smarty->assign('WebSiteUrlPublic', WebSiteUrlPublic);
+        $this->smarty->assign('WebSiteUrlPublic', WebSiteUrlPublic.'/'.SOURCE);
         
 
         $this->smarty->display($displayPage . '.tpl');
