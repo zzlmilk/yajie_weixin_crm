@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-05 11:41:58
-         compiled from "/web/www/xiangmu/Tpl/Inhouse/User/register.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:60312403536708866a53d0-70184209%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-05 18:03:44
+         compiled from "/Users/Lev/Sites/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/User/register.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1070110273536762005a4117-47935394%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '6e144d21e4d90fd9ca94dbff55e8d8a868b68643' => 
+    '22529f1440b4c09acb4429c878ed89cc4aeac316' => 
     array (
-      0 => '/web/www/xiangmu/Tpl/Inhouse/User/register.tpl',
-      1 => 1399259923,
+      0 => '/Users/Lev/Sites/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/User/register.tpl',
+      1 => 1399284028,
     ),
   ),
-  'nocache_hash' => '60312403536708866a53d0-70184209',
+  'nocache_hash' => '1070110273536762005a4117-47935394',
   'function' => 
   array (
   ),
@@ -105,7 +105,7 @@ document.write("</select> 日 ")
         <div class="registerWarp">
 
             <form class="form-horizontal"  method='post' role="form" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-?g=<?php echo $_smarty_tpl->getVariable('DIR')->value;?>
+?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
 &a=user&v=submitRegister">
                 
                 
@@ -182,7 +182,7 @@ document.write("</select> 日 ")
     </boby>
 
     <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
-/company/script/rexexTest.js"></script>
+/javascript/rexexTest.js"></script>
     <script>
     $("#registerButton").click(function(){
         var phoneNum=$("#phoneNumber").val();
