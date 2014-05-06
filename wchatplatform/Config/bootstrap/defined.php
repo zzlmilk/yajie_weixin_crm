@@ -36,9 +36,9 @@ defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH', 'ORIG_PATH_INFO,RE
 /**
  * 关闭报错信息 把报错信息存储到错误文件中
  */
-ini_set("display_errors", 0);
+ini_set("display_errors", 1);
 
-defined('APIURL') or define('APIURL', 'http://localhostin_crm/weixin_api');
+defined('APIURL') or define('APIURL', 'http://192.168.0.104/yajie_weixin_crm/weixin_api');
 
 defined('VAR_MODULE') or define('VAR_MODULE', 'a');
 

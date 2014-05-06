@@ -19,7 +19,7 @@
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
-        <script src="{$WebSiteUrlPublic}/company/script/jquery.form.js"></script>
+        <script src="{$WebSiteUrlPublic}/javascript/jquery.form.js"></script>
 
         <title>问卷调查</title>
     </head>

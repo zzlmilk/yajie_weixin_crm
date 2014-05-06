@@ -4,8 +4,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta content="initial-scale=1.0; maximum-scale=4.0; user-scalable=no;" name="viewport">
         <meta name="viewport" content="width=device-width,user-scalable=yes" />
-        <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/css/bootstrap-datetimepicker.css" media="screen">
+<!--         <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/css/bootstrap-datetimepicker.css" media="screen"> -->
         <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
         <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
@@ -85,6 +85,8 @@
         </script>                   
     </head>
     <body>     
+
+        
         <div class="registerWarp">
             {if $checkReturn eq 1}
                 <form class=""  method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=order&v=orderCheck&checkReturn=1&open_id={$open_id}">
@@ -200,9 +202,9 @@
         {/if}
     </body> 
 
-    <script src="{$WebSiteUrlPublic}/company/script/ctrlSelect.js"></script>
-    <script src="{$WebSiteUrlPublic}/company/script/bootstrap-datetimepicker.js"></script>
-    <script src="{$WebSiteUrlPublic}/company/script/bootstrap-datetimepicker.zh-CN.js"  charset="UTF-8"></script>
+    <script src="{$WebSiteUrlPublic}/javascript/ctrlSelect.js"></script>
+    <script src="{$WebSiteUrlPublic}/javascript/bootstrap-datetimepicker.js"></script>
+    <script src="{$WebSiteUrlPublic}/javascript/bootstrap-datetimepicker.zh-CN.js"  charset="UTF-8"></script>
     <script type="text/javascript">
         $("html").click(function(){
         $("#orderDate").datetimepicker('hide');

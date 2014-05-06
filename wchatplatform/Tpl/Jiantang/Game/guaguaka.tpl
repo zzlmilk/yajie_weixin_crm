@@ -10,7 +10,7 @@
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css"> 
-        <script src="{$WebSiteUrlPublic}/company/script/giftAward.js"></script>
+        <script src="{$WebSiteUrlPublic}/javascript/giftAward.js"></script>
         <script type="text/javascript" src="{$WebSiteUrlPublic}/company/ggk/wScratchPad.js"></script>  
     </head>
     <body id='bobyGame'>

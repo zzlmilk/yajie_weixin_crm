@@ -157,7 +157,7 @@ document.write("</select> 日 ")
 
     </boby>
 
-    <script src="{$WebSiteUrlPublic}/{$model}/javascript/rexexTest.js"></script>
+    <script src="{$WebSiteUrlPublic}/javascript/rexexTest.js"></script>
     <script>
     $("#registerButton").click(function(){
         var phoneNum=$("#phoneNumber").val();
