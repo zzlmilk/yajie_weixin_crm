@@ -34,7 +34,7 @@ class Basic extends Query {
                
                 $name = $_REQUEST['source'];
                
-                $array  = array('company'=>'weixin_company');
+                $array  = array('company'=>'weixin_company','Inhouse'=>'weixin_inhouse');
                 
                 if(!empty($array[$name])){
                         

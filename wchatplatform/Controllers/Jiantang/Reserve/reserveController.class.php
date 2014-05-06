@@ -216,7 +216,7 @@ class reserveController extends BaseController {
 
             if ($reviseOrderStateReturnValue['res'] == '1') {
 
-                $this->displayMessage("取消成功<a href='" . WebSiteUrl . "?g=company&a=user&v=order'>返回</a>");
+                $this->displayMessage("取消成功<a href='" . WebSiteUrl . "?g="+MODULE_DIR_NAME+"&a=user&v=order'>返回</a>");
             }
         } else {
             $activateOrderJsonValue = transferData(APIURL . "/order/get_order", "post", $userGetOrder);
