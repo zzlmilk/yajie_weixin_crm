@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-05 13:18:45
-         compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/manageView.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:26361272753671f3541c353-48262709%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 15:09:32
+         compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/user/manageView.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:100187310653688aacf0b6d0-96179822%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '0c10b76d6ea35b97d169e39191bd023b52995d3f' => 
+    'e7a6d2d2f513f5ae31733debdd2b4ae61043bf3c' => 
     array (
-      0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/manageView.tpl',
-      1 => 1398228674,
+      0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/user/manageView.tpl',
+      1 => 1399281834,
     ),
   ),
-  'nocache_hash' => '26361272753671f3541c353-48262709',
+  'nocache_hash' => '100187310653688aacf0b6d0-96179822',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<?php if (!is_callable('smarty_modifier_date_format')) include '/web/www/yajie_weixin_crm/weixin_crm/Smarty/libs/plugins/modifier.date_format.php';
+<?php if (!is_callable('smarty_modifier_date_format')) include '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/Smarty/libs/plugins/modifier.date_format.php';
 ?><link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
 <style>
     .seachInput{

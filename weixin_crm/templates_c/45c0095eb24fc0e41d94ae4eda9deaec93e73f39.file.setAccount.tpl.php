@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-26 19:30:59
-         compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/weixinuser/weixinuser.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17699561095332ba73439711-94435144%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 15:08:57
+         compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/admin/setAccount.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:178321132953688a898b4382-97372614%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '274775e19e7868a9c2fd10273045731d7ca43b2a' => 
+    '45c0095eb24fc0e41d94ae4eda9deaec93e73f39' => 
     array (
-      0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/weixinuser/weixinuser.tpl',
-      1 => 1395833452,
+      0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/admin/setAccount.tpl',
+      1 => 1399281834,
     ),
   ),
-  'nocache_hash' => '17699561095332ba73439711-94435144',
+  'nocache_hash' => '178321132953688a898b4382-97372614',
   'function' => 
   array (
   ),
@@ -62,9 +62,9 @@ $_smarty_tpl->decodeProperties(array (
     <body>
 
         <div class="bigWheelWarp">
-            <div class="titleStyle">微信数据</div>
+            <div class="titleStyle">重置账户密码</div>
 
-    
+            </div>
 
         </div>
     </body>

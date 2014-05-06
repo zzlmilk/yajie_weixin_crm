@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-26 19:30:59
-         compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/weixinuser/weixinuser.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17699561095332ba73439711-94435144%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 15:08:55
+         compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/weixinuser/weixinuser.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:128642807653688a87859c47-99832705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '274775e19e7868a9c2fd10273045731d7ca43b2a' => 
+    'f07b72c3153e0630e1a4ece81423ea4c1327afeb' => 
     array (
-      0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/weixinuser/weixinuser.tpl',
-      1 => 1395833452,
+      0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/weixinuser/weixinuser.tpl',
+      1 => 1399281834,
     ),
   ),
-  'nocache_hash' => '17699561095332ba73439711-94435144',
+  'nocache_hash' => '128642807653688a87859c47-99832705',
   'function' => 
   array (
   ),
