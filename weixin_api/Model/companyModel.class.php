@@ -6,6 +6,8 @@ class companyModel extends Basic {
 
         $this->child_name = 'company';
 
+        $this->dbname = 'weixin';
+
         parent::__construct();
     }
 

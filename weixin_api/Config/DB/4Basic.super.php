@@ -45,6 +45,11 @@ class Basic extends Query {
                 }
                 
            }
+
+           if($this->newDB !=''){
+
+              $this->changeDB($this->newDB);
+           }
            
             parent::__constructor($this->child_name);
 

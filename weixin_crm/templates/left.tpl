@@ -585,6 +585,45 @@
 
                             {/if}
 
+                            <!-- 提示模块开始 -->
+                            {if $auth_result[30] == 1}
+
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table12">
+                                <tr>
+                                    <td height="29" onclick="list('12')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img12" id="img12" src="{$WebSiteUrl}/images/ico04.gif" width="8" height="11">
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >提示模块</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree12" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                {if $auth_result[31]==1}
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu100" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=remind&functionname=remind" target="mainFrame" class="left-fontSmall" onclick="tupian('100')">提示模块</a>
+                                    </td>
+
+                                </tr>
+
+                                {/if}
+
+                                
+
+                            </table>
+                            {/if}
+
                         </td>
                     </tr>
                 </table>

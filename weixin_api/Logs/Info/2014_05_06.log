@@ -1,0 +1,10 @@
+May 06 09:45:00 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user/?open_id=13124&source=inhouse
+{"type":8,"message":"Undefined index: phone","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Plug\/cardApi.php","line":10}
+May 06 09:45:00 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user/?open_id=13124&source=inhouse
+{"type":8,"message":"Undefined index: phone","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Plug\/cardApi.php","line":10}
+May 06 09:45:00 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user/?open_id=13124&source=inhouse
+{"error":{"error_status":100,"status_info":null}}
+May 06 09:46:12 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user/?open_id=13124&source=inhouse
+{"error":{"error_status":106,"status_info":"\u6570\u636e\u5e93\u4e0d\u5b58\u5728"}}
+May 06 09:56:23 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user/?open_id=13124&source=inhouse
+{"error":{"error_status":106,"status_info":"\u6570\u636e\u5e93\u4e0d\u5b58\u5728"}}

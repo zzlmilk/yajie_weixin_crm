@@ -1,0 +1,40 @@
+May 06 09:19:37 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 06 09:19:37 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 06 09:19:37 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 06 09:19:37 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND appointment_time < 1399339177 and user_id = 1 and order_state !=2     
+May 06 09:19:37 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 06 09:20:39 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 06 09:20:39 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 06 09:20:39 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 06 09:20:39 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND appointment_time < 1399339239 and user_id = 1 and order_state !=2     
+May 06 09:20:39 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 06 09:21:26 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 06 09:21:26 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 06 09:21:26 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 06 09:21:26 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND appointment_time < 1399339286 and user_id = 1 and order_state !=2     
+May 06 09:21:26 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 06 09:22:55 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 06 09:22:55 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_company.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 06 09:22:55 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 06 09:22:55 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_company.order  WHERE 1  AND appointment_time < 1399339375 and user_id = 1 and order_state !=2     
+May 06 09:22:55 [SQL]_null_192.168.0.107_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
