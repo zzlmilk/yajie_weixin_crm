@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 14:37:01
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 14:50:00
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/remind/remind.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15778599785368830d0b0d89-74274276%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:98641090253688618bf9724-18911761%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '65c3c41f40b43c46313bab89cd78ce91ca43bb61' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/remind/remind.tpl',
-      1 => 1399358218,
+      1 => 1399358998,
     ),
   ),
-  'nocache_hash' => '15778599785368830d0b0d89-74274276',
+  'nocache_hash' => '98641090253688618bf9724-18911761',
   'function' => 
   array (
   ),
@@ -57,7 +57,7 @@ $_smarty_tpl->decodeProperties(array (
         <div style="margin-left:15px;margin-top:15px;">
             <div style="width: 370px; margin: 0 auto;">
                 <form class="form-horizontal" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=user&amp;functionname=userManage" method="post">
+/pageredirst.php?action=remind&functionname=sendRemind" method="post">
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label labelWidth">手机号码</label>
                         <div class="col-sm-2">
@@ -83,11 +83,11 @@ $_smarty_tpl->decodeProperties(array (
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                     <h4 class="modal-title" id="myModalLabel">
-                                        你确认修改这条信息么？
+                                        你确认发送么？
                                     </h4>
                                 </div>
                                 <div class="modal-body"></div>
-                                <div class="modal-footer">
+                                <div class="modal-footer" style='color: white;'>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button> <a id="checkButton" href=""><button type="submit" class="btn btn-primary"><a id="checkButton2" href="">确认</a> <input type="hidden" id="deleteUrl" value="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=exchange&amp;functionname=exchangeItemDelete&amp;ItemId="></button></a>
                                 </div>

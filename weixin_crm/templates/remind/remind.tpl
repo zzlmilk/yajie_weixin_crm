@@ -38,7 +38,7 @@
         <div id="errorMessage" class="alert alert-danger errorMessage"></div>
         <div style="margin-left:15px;margin-top:15px;">
             <div style="width: 370px; margin: 0 auto;">
-                <form class="form-horizontal" action="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userManage" method="post">
+                <form class="form-horizontal" action="{$WebSiteUrl}/pageredirst.php?action=remind&functionname=sendRemind" method="post">
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label labelWidth">手机号码</label>
                         <div class="col-sm-2">
@@ -58,21 +58,7 @@
                     <p style="text-align: center;">
                         <button id="addButton" type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info">确认发送</button>
                     </p>
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h4 class="modal-title" id="myModalLabel">
-                                        你确认修改这条信息么？
-                                    </h4>
-                                </div>
-                                <div class="modal-body"></div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button> <a id="checkButton" href=""><button type="submit" class="btn btn-primary"><a id="checkButton2" href="">确认</a> <input type="hidden" id="deleteUrl" value="{$WebSiteUrl}/pageredirst.php?action=exchange&amp;functionname=exchangeItemDelete&amp;ItemId="></button></a>
-                                </div>
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
+                   
                     </div><!-- /.modal -->
                 </form>
             </div>

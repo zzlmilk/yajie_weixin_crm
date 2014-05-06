@@ -5,10 +5,10 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/dist/ratchet.css">
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/dist/ratchet-theme-ios.css">
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/css/app.css">
-        <script src="{$WebSiteUrlPublic}/company/dist/ratchet.js"></script>
+        <link rel="stylesheet" href="{$WebSiteUrlPublic}/user/dist/ratchet.css">
+        <link rel="stylesheet" href="{$WebSiteUrlPublic}/user/dist/ratchet-theme-ios.css">
+        <link rel="stylesheet" href="{$WebSiteUrlPublic}/user/css/app.css">
+        <script src="{$WebSiteUrlPublic}/dist/ratchet.js"></script>
         <style>
             body{
                 Font-size=62.5%;
@@ -77,7 +77,7 @@
 
                 <div style='position: absolute; top: 48%; left: 90%; width: 10%;' >
 
-                    <img src='{$WebSiteUrlPublic}/company/image/edit.png' style=" width: 100%">
+                    <img src='{$WebSiteUrlPublic}/image/edit.png' style=" width: 100%">
                 </div>
 
                 <div onclick='alert(1234)' style=' cursor: pointer; position: absolute;  width: 4%; left: 95%; top: 74%; height: 20%;'>

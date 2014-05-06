@@ -14,6 +14,12 @@ class remindController implements SMS {
         $_ENV['smarty']->display('remind');
     }
 
+    public function sendRemind(){
+
+    	print_r($_POST);
+
+    }
+
 }
 
 ?>
