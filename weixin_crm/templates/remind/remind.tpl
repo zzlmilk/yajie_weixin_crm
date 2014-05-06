@@ -48,7 +48,7 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label labelWidth">提示语句:</label>
                         <div class="col-sm-2">
-                            <select name="sex" id='sex' class="form-control inputWidth">
+                            <select name="content" id='content' class="form-control inputWidth">
                                 <option value="亲爱的用户,距离你上次剪发已经过了1个月了。" selected="selected">
                                     亲爱的用户,距离你上次剪发已经过了1个月了。
                                 </option>
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <p style="text-align: center;">
-                        <button id="addButton" type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info">确认发送</button>
+                        <button id="addButton" type="submit" >确认发送</button>
                     </p>
                    
                     </div><!-- /.modal -->

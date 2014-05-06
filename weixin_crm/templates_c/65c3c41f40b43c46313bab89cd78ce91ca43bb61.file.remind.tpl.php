@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 14:50:00
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 15:20:08
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/remind/remind.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:98641090253688618bf9724-18911761%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:126345824053688d282d5c69-91692367%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '65c3c41f40b43c46313bab89cd78ce91ca43bb61' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/remind/remind.tpl',
-      1 => 1399358998,
+      1 => 1399360794,
     ),
   ),
-  'nocache_hash' => '98641090253688618bf9724-18911761',
+  'nocache_hash' => '126345824053688d282d5c69-91692367',
   'function' => 
   array (
   ),
@@ -67,7 +67,7 @@ $_smarty_tpl->decodeProperties(array (
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label labelWidth">提示语句:</label>
                         <div class="col-sm-2">
-                            <select name="sex" id='sex' class="form-control inputWidth">
+                            <select name="content" id='content' class="form-control inputWidth">
                                 <option value="亲爱的用户,距离你上次剪发已经过了1个月了。" selected="selected">
                                     亲爱的用户,距离你上次剪发已经过了1个月了。
                                 </option>
@@ -75,24 +75,9 @@ $_smarty_tpl->decodeProperties(array (
                         </div>
                     </div>
                     <p style="text-align: center;">
-                        <button id="addButton" type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info">确认发送</button>
+                        <button id="addButton" type="submit" >确认发送</button>
                     </p>
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h4 class="modal-title" id="myModalLabel">
-                                        你确认发送么？
-                                    </h4>
-                                </div>
-                                <div class="modal-body"></div>
-                                <div class="modal-footer" style='color: white;'>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button> <a id="checkButton" href=""><button type="submit" class="btn btn-primary"><a id="checkButton2" href="">确认</a> <input type="hidden" id="deleteUrl" value="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=exchange&amp;functionname=exchangeItemDelete&amp;ItemId="></button></a>
-                                </div>
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
+                   
                     </div><!-- /.modal -->
                 </form>
             </div>
