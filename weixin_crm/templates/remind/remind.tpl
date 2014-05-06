@@ -38,7 +38,7 @@
         <div id="errorMessage" class="alert alert-danger errorMessage"></div>
         <div style="margin-left:15px;margin-top:15px;">
             <div style="width: 370px; margin: 0 auto;">
-                <form class="form-horizontal" action="{$WebSiteUrl}/pageredirst.php?action=user&amp;functionname=userManage" method="post">
+                <form class="form-horizontal" action="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userManage" method="post">
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label labelWidth">手机号码</label>
                         <div class="col-sm-2">
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <p style="text-align: center;">
-                        <button id="addButton" type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info">确认添加</button>
+                        <button id="addButton" type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info">确认发送</button>
                     </p>
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">

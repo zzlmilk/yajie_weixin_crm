@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 13:32:58
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 14:37:01
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/remind/remind.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16277806455368740a2195d8-00484429%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:15778599785368830d0b0d89-74274276%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '65c3c41f40b43c46313bab89cd78ce91ca43bb61' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/remind/remind.tpl',
-      1 => 1399354376,
+      1 => 1399358218,
     ),
   ),
-  'nocache_hash' => '16277806455368740a2195d8-00484429',
+  'nocache_hash' => '15778599785368830d0b0d89-74274276',
   'function' => 
   array (
   ),
@@ -75,7 +75,7 @@ $_smarty_tpl->decodeProperties(array (
                         </div>
                     </div>
                     <p style="text-align: center;">
-                        <button id="addButton" type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info">确认添加</button>
+                        <button id="addButton" type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info">确认发送</button>
                     </p>
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
