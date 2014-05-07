@@ -1,23 +1,22 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-24 16:35:48
-         compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/activty/activtyEdit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1453563965532fee6411f978-03436288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 15:09:05
+         compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/activty/addactivty.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:98687071853688a91118630-22677093%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '491c18c1d69439a4e3df61d1baabedf120272039' => 
+    '9d37e59454b2aa9ed8a35c044b8f4c2fe13b7838' => 
     array (
-      0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/activty/activtyEdit.tpl',
-      1 => 1395650096,
+      0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/activty/addactivty.tpl',
+      1 => 1399281834,
     ),
   ),
-  'nocache_hash' => '1453563965532fee6411f978-03436288',
+  'nocache_hash' => '98687071853688a91118630-22677093',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<?php if (!is_callable('smarty_modifier_date_format')) include '/web/www/yajie_weixin_crm/weixin_crm/Smarty/libs/plugins/modifier.date_format.php';
-?><html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title></title>
@@ -75,15 +74,11 @@ $_smarty_tpl->decodeProperties(array (
 <div style="margin-left:15px;margin-top:15px;">
     <div style="width: 1000px; margin: 0 auto;">
         <form class="form-horizontal" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=activty&functionname=activtyUpdate" method="post">
-
-            <input type='hidden' name='activity_id' id='activity_id' value='<?php echo $_smarty_tpl->getVariable('info')->value['activity_id'];?>
-'>
+/pageredirst.php?action=activty&functionname=activtyAdd" method="post">
             <div class="form-group"> 
                 <label  class="col-sm-2 control-label labelWidth">活动名称:</label>
                 <div class="col-sm-2">
-                    <input class="form-control inputWidth" type="text" value="<?php echo $_smarty_tpl->getVariable('info')->value['activity_name'];?>
-" name="activity_name" id="activity_name">
+                    <input class="form-control inputWidth" type="text" value="" name="activity_name" id="activity_name">
                 </div>
             </div> 
         <!--     <div class="form-group"> 
@@ -96,8 +91,7 @@ $_smarty_tpl->decodeProperties(array (
                 <label  class="col-sm-2 control-label labelWidth">结束时间:</label>
                 <div class="col-sm-2">
 
-                    <input class="form-control inputWidth " size="16" type="text" value="<?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('info')->value['activity_end_time'],'%Y-%m-%d');?>
-" name='activity_end_time' id='activity_end_time' data-link-format="yyyy-mm-dd"  data-date="" data-date-format="yyyy-mm-dd "  readonly>
+                    <input class="form-control inputWidth " size="16" type="text" value="" name='activity_end_time' id='activity_end_time' data-link-format="yyyy-mm-dd"  data-date="" data-date-format="yyyy-mm-dd "  readonly>
                 
                 </div>
             </div>
@@ -106,8 +100,7 @@ $_smarty_tpl->decodeProperties(array (
                
                 <div class="col-sm-2">
 
-                <textarea  class="form-control" id="activity_html" name="activity_html" style="width:700px;height:300px;"><?php echo $_smarty_tpl->getVariable('info')->value['activity_html'];?>
-</textarea>
+                <textarea  class="form-control" id="activity_html" name="activity_html" style="width:700px;height:300px;"></textarea>
 
                  </div>
                

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 16:45:31
-         compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/admin/admin.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:336433295368a12bcf79d6-82621460%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 15:09:00
+         compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/registration/registrationCount.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:122733754353688a8ca573a1-52293970%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'd0e4d34ac2ef16403800d45c2040c98d7a8ec5c4' => 
+    'd393221ba1180546d4b4bcda0aeabe9986702e19' => 
     array (
-      0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/admin/admin.tpl',
-      1 => 1399365708,
+      0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/registration/registrationCount.tpl',
+      1 => 1399281834,
     ),
   ),
-  'nocache_hash' => '336433295368a12bcf79d6-82621460',
+  'nocache_hash' => '122733754353688a8ca573a1-52293970',
   'function' => 
   array (
   ),
@@ -38,7 +38,7 @@ $_smarty_tpl->decodeProperties(array (
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
 
-        <title>管理员</title>
+        <title>每日签到统计</title>
         <style>
             body{
                 Font-size=62.5%;
@@ -62,7 +62,24 @@ $_smarty_tpl->decodeProperties(array (
     <body>
 
         <div class="bigWheelWarp">
-            <div class="titleStyle">管理员账号</div>
+            <div class="titleStyle">每日签到统计</div>
+
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="active"><a href="#probability" data-toggle="tab">签到统计</a></li>
+
+            </ul>
+
+            <div class="tab-content">
+                <!-- 概率配置模块 -->
+                <div class="tab-pane active" id="probability" >
+                    <div class='textStyle form-group'><label  class=' control-label labelWidth'>今日签到的总人数为：</label>
+                        <label  class='control-label labelWidth'><?php echo $_smarty_tpl->getVariable('registrationNumber')->value;?>
+人</label>
+                    </div>
+                     
+
+                </div>
+            </div>
 
         </div>
     </body>

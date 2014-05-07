@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 18:24:08
+         compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/admin/admin.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:17586053745368b84810f645-08406427%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'ff557d4881c0f41dd095ca36d01172001515cda2' => 
+    array (
+      0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/admin/admin.tpl',
+      1 => 1399371800,
+    ),
+  ),
+  'nocache_hash' => '17586053745368b84810f645-08406427',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <!DOCTYPE html>
 <html> 
     <head>
@@ -71,18 +89,32 @@
                     <span class="glyphicon glyphicon-circle-arrow-right"></span>
                     <br />
                     
-                    <div style="font-size: 12px; margin-top: 5em; color: rgb(60,60,60)">最近登录时间：{$lastTime}</div>
+                    <div style="font-size: 12px; margin-top: 5em; color: rgb(60,60,60)">最近登录时间：<?php echo $_smarty_tpl->getVariable('lastTime')->value;?>
+</div>
 
                     <span style="padding-left: 1.5em; color: rgb(240,173,78); font-size: 14px; ">如需更多权限请和管理员联系。</span>
                 </div>
                 <div class="authListStyle">
                     <table class="table table-bordered">
                                    
-                    {foreach from=$authInfo key=K item=V}
-                    {foreach from=$V key=k item=v}
-                    <tr><td>{$v}</td><td><span style=" color: rgb(91,183,91)" class="glyphicon glyphicon-ok-sign"></span></td></tr>
-                    {/foreach}
-                    {/foreach}
+                    <?php  $_smarty_tpl->tpl_vars['V'] = new Smarty_Variable;
+ $_smarty_tpl->tpl_vars['K'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('authInfo')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if (count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['V']->key => $_smarty_tpl->tpl_vars['V']->value){
+ $_smarty_tpl->tpl_vars['K']->value = $_smarty_tpl->tpl_vars['V']->key;
+?>
+                    <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['V']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if (count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+                    <tr><td><?php echo $_smarty_tpl->tpl_vars['v']->value;?>
+</td><td><span class="glyphicon glyphicon-ok-sign"></span></td></tr>
+                    <?php }} ?>
+                    <?php }} ?>
 
                   </table>
                 </div>
