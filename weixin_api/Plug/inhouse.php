@@ -47,10 +47,25 @@ class InhousePlug {
 
 		    } else{
 
-		    	$array['res'] = 2;
+			    $sql = 'select * from gbm01  where gba01c  like "'.$phone.'" ';
+
+			    $odb_comm=mssql_query($sql);
+
+			    $row=mssql_fetch_array($odb_comm);
+
+			    if(!empty($row)){
+
+
+			    	$array['res'] = 1;
+
+			    	$array['info'] = $row;
+
+		        } else{
+
+		        	$array['res'] = 2;
+
+		       }
 		    }
-
-
 		    return $array;
 		}
 	}

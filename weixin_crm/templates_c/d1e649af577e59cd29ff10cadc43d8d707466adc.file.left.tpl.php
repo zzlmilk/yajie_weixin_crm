@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 13:29:10
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 17:15:42
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:117938400153687326185247-22344196%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9927521515368a83eb6d8a1-00113819%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd1e649af577e59cd29ff10cadc43d8d707466adc' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1399354066,
+      1 => 1399367483,
     ),
   ),
-  'nocache_hash' => '117938400153687326185247-22344196',
+  'nocache_hash' => '9927521515368a83eb6d8a1-00113819',
   'function' => 
   array (
   ),
@@ -63,7 +63,7 @@ $_smarty_tpl->decodeProperties(array (
                 var tp = document.getElementById(nametu);
                 tp.src=root+"/images/ico05.gif";
 
-                for(var i=0;i<200;i++)
+                for(var i=0;i<2000;i++)
                 {
 
                     var nametu2="xiaotu"+i;
@@ -84,7 +84,7 @@ $_smarty_tpl->decodeProperties(array (
                 var tableObj = 'table' + idstr;
 
                 if(objectobj.style.display=="none"){
-                    for(i=1;i<100;i++){
+                    for(i=1;i<2000;i++){
                         var name3="img"+i;
                         var name="subtree"+i;
                         var o=document.all(name);
@@ -699,6 +699,48 @@ $_smarty_tpl->decodeProperties(array (
                             </table>
                             <?php }?>
 
+
+                            <!-- 统计模块  statistics -->
+                            <?php if ($_smarty_tpl->getVariable('auth_result')->value[32]==1){?>
+
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table13">
+                                <tr>
+                                    <td height="29" onclick="list('13')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img13" id="img13" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico04.gif" width="8" height="11">
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >统计模块</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree13" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                <?php if ($_smarty_tpl->getVariable('auth_result')->value[33]==1){?>
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu200" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=statistics&functionname=statistics" target="mainFrame" class="left-fontSmall" onclick="tupian('200')">统计模块</a>
+                                    </td>
+
+                                </tr>
+
+                                <?php }?>
+
+                                
+
+                            </table>
+                            <?php }?>
                         </td>
                     </tr>
                 </table>

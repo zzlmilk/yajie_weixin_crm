@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-26 19:30:57
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 16:45:31
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/admin/admin.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7117086735332ba71dd0f73-70433732%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:336433295368a12bcf79d6-82621460%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd0e4d34ac2ef16403800d45c2040c98d7a8ec5c4' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/admin/admin.tpl',
-      1 => 1395833422,
+      1 => 1399365708,
     ),
   ),
-  'nocache_hash' => '7117086735332ba71dd0f73-70433732',
+  'nocache_hash' => '336433295368a12bcf79d6-82621460',
   'function' => 
   array (
   ),
@@ -63,8 +63,6 @@ $_smarty_tpl->decodeProperties(array (
 
         <div class="bigWheelWarp">
             <div class="titleStyle">管理员账号</div>
-
-    
 
         </div>
     </body>

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-26 19:30:58
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 16:45:33
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/admin/setAccount.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10277871985332ba729295c8-53806137%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7466074535368a12da325c6-95817204%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '691d35c9e76c861809954ee525c4b808d08dcecf' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/admin/setAccount.tpl',
-      1 => 1395833423,
+      1 => 1399365708,
     ),
   ),
-  'nocache_hash' => '10277871985332ba729295c8-53806137',
+  'nocache_hash' => '7466074535368a12da325c6-95817204',
   'function' => 
   array (
   ),
@@ -57,15 +57,100 @@ $_smarty_tpl->decodeProperties(array (
                 text-align: center;
                 margin-top: 8em;
             }
+            .labelWidth{
+                width: 120px;
+            }
+            .inputWidth{
+                width: 170px;
+            }
+            .userMangerTitle{
+                color: rgb(91,91,91);
+                font-size: 2.5em;
+                margin-top: 15px;
+                text-align: center;
+            }
+            .errorMessage{
+                width: 300px;
+                margin: 0 auto;
+                display: none;
+            }
+            .showMessage{
+                width: 300px;
+                margin: 0 auto;
+            }
         </style>
     </head>
     <body>
 
         <div class="bigWheelWarp">
             <div class="titleStyle">重置账户密码</div>
+            <div style="height: 50px;"></div>
+            
+            <?php if ($_smarty_tpl->getVariable('messageString')->value!="1"){?>
+                <div id="errorMessage" class="alert alert-danger showMessage"><?php echo $_smarty_tpl->getVariable('messageString')->value;?>
+</div>
+            <?php }else{ ?>
+                <div id="errorMessage" class="alert alert-danger errorMessage"></div>
+            <?php }?>
 
+            <div style="height: 15px;"></div>
+            <div style="width: 300px; margin: 0 auto;">
+                <form class="form-horizontal" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=admin&functionname=setAccount" method="post">
+                    <div class="form-group"> 
+                        <label for="inputEmail3" class="col-sm-2 control-label labelWidth">旧密码：</label>
+                        <div class="col-sm-2">
+                            <input class="form-control inputWidth" type="password" value="" name="oldPassword" id="oldPassword">
+                        </div>
+                    </div> 
+                    <div class="form-group"> 
+                        <label for="inputEmail3" class="col-sm-2 control-label labelWidth">新密码：</label>
+                        <div class="col-sm-2">
+                            <input class="form-control inputWidth" type="password" value="" name="newPassword" id="newPassword">
+                        </div>
+                    </div> 
+                    <div class="form-group"> 
+                        <label for="inputEmail3" class="col-sm-2 control-label labelWidth">重复密码：</label>
+                        <div class="col-sm-2">
+                            <input class="form-control inputWidth" type="password" value=""  id="newPasswordCheck">
+                        </div>
+                    </div>
+                    <div style="height: 15px;"></div>
+                    <p style="width: 100%; text-align: center;"><button id="addButton" type="submit" class="btn btn-info">确认修改</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="addButton" type="reset" class="btn btn-info">重置</button></p>
+                </form>
             </div>
-
         </div>
-    </body>
+
+    </div>
+</body>
+<script>
+    $("#addButton").click(function(){
+    var old=$("#oldPassword").val();
+    var newPassword=$("#newPassword").val();
+    var newCheck=$("#newPasswordCheck").val();
+    var  errorFlag=false;
+    var errorMessage="";
+    if(old==""||newPassword==""){
+    errorFlag=true;
+    errorMessage="密码不能为空";
+}else if(newPassword.length<=5){
+errorFlag=true;
+errorMessage="新密码长度必须大于等于6";
+}else if(newPassword==old){
+errorFlag=true;
+errorMessage="新密码与旧密码不能相同";
+}
+else if(newPassword!=newCheck){
+errorFlag=true;
+errorMessage="两次密码输入不一致";
+}
+if(errorFlag){
+$("#errorMessage").show();
+$("#errorMessage").html(errorMessage);
+return false;
+}else{
+$(this).submit();
+}
+});
+</script>
 </html>

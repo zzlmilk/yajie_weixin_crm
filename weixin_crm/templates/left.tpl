@@ -42,7 +42,7 @@
                 var tp = document.getElementById(nametu);
                 tp.src=root+"/images/ico05.gif";
 
-                for(var i=0;i<200;i++)
+                for(var i=0;i<2000;i++)
                 {
 
                     var nametu2="xiaotu"+i;
@@ -63,7 +63,7 @@
                 var tableObj = 'table' + idstr;
 
                 if(objectobj.style.display=="none"){
-                    for(i=1;i<100;i++){
+                    for(i=1;i<2000;i++){
                         var name3="img"+i;
                         var name="subtree"+i;
                         var o=document.all(name);
@@ -624,6 +624,45 @@
                             </table>
                             {/if}
 
+
+                            <!-- 统计模块  statistics -->
+                            {if $auth_result[32] == 1}
+
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 " id="table13">
+                                <tr>
+                                    <td height="29" onclick="list('13')">
+                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="15%">
+                                                    <img name="img13" id="img13" src="{$WebSiteUrl}/images/ico04.gif" width="8" height="11">
+                                                </td>
+                                                <td width="85%">
+                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03" >统计模块</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="subtree13" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                {if $auth_result[33]==1}
+                                <tr>
+                                    <td width="15%" height="20">
+                                        <img id="xiaotu200" src="{$WebSiteUrl}/images/ico06.gif" width="8" height="12">
+                                    </td>
+                                    <td width="85%">
+                                        <a href="{$WebSiteUrl}/pageredirst.php?action=statistics&functionname=statistics" target="mainFrame" class="left-fontSmall" onclick="tupian('200')">统计模块</a>
+                                    </td>
+
+                                </tr>
+
+                                {/if}
+
+                                
+
+                            </table>
+                            {/if}
                         </td>
                     </tr>
                 </table>

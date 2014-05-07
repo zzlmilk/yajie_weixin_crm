@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-27 09:36:45
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 17:25:18
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/order/orderAdd.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2033332537533380ad5ba9b3-47410307%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20104149355368aa7eea9a01-01175058%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'cf828b9e23155e41696b4ac0242fb9a5f814379e' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/order/orderAdd.tpl',
-      1 => 1395883827,
+      1 => 1398228674,
     ),
   ),
-  'nocache_hash' => '2033332537533380ad5ba9b3-47410307',
+  'nocache_hash' => '20104149355368aa7eea9a01-01175058',
   'function' => 
   array (
   ),
@@ -112,7 +112,7 @@ if (count($_from) > 0){
                     <textarea  class="form-control inputWidth" rows="3"name="orders_remarks" id="orders_remarks"></textarea>
                 </div>
             </div>
-                    <p style="text-align: center;"><button id="addButton" data-toggle="modal" data-target="#myModal" type="button" class="btn btn-info">确认添加</button></p>
+            <p style="text-align: center;"><button id="addButton" data-toggle="modal" data-target="#myModal" type="button" class="btn btn-info">确认添加</button></p>
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content" >
@@ -226,11 +226,10 @@ $("#order_number").val(cutString);
 }
 });
 //日期弹出框
-var endDate= getDateTimeMessage(new Date(),2);
+
 $("#orderTime").datetimepicker({
 format: "yyyy-mm-dd hh:ii",
 startDate:new Date(),
-endDate:endDate,
 autoclose:true,
 minView:0,
 minuteStep:15,
