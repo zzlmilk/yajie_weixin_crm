@@ -80,7 +80,7 @@
                                    
                     {foreach from=$authInfo key=K item=V}
                     {foreach from=$V key=k item=v}
-                    <tr><td>{$v}</td><td><span class="glyphicon glyphicon-ok-sign"></span></td></tr>
+                    <tr><td>{$v}</td><td><span style=" color: rgb(91,183,91)" class="glyphicon glyphicon-ok-sign"></span></td></tr>
                     {/foreach}
                     {/foreach}
 
