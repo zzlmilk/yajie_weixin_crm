@@ -483,8 +483,7 @@ function R($url, $dir, $vars = array()) {
 
 
     if ($class) {
-
-
+        
         return call_user_func_array(array(&$class, $action), $vars);
     } else {
         return false;

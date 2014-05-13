@@ -9,6 +9,8 @@ class DB_Mysql_search extends DB_Mysql {
     protected $dbhost = DBHOST;
     protected $dbname = DBNAME;
 
+    protected $newDB = '';
+
     public function __construct($DB = NULL) {
         
     }

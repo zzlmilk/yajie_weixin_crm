@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-20 17:47:01
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 15:09:27
          compiled from "/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1792316613532ab91589bab1-98111371%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     '6fa0d02d05ed00ff3bcbf8f7c03cae976c1c2bda' => 
     array (
       0 => '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl',
-      1 => 1395281291,
+      1 => 1399281834,
     ),
   ),
   'nocache_hash' => '1792316613532ab91589bab1-98111371',
@@ -16,14 +16,18 @@ $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+<?php if (!is_callable('smarty_modifier_date_format')) include '/Users/Lev/Sites/yajie_weixin_crm/weixin_crm/Smarty/libs/plugins/modifier.date_format.php';
+?><link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+<link href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/css/minimal/blue.css" rel="stylesheet">
+
 <style>
     body{
         overflow-x: hidden;
     }
     .userMangerTitle{
         color: rgb(91,91,91);
-        font-size: 25px;
+        font-size: 2.5em;
         margin-top: 15px;
         text-align: center;
     }
@@ -71,9 +75,9 @@ $_smarty_tpl->decodeProperties(array (
         </div>
     </div>
     <div style="height:15px;"></div>
-    <div class="sortBar"><label for="inputPassword3" class="control-label">排序：</label><input type="radio" name="sortType" id="point" value="point"><label for="point" class="control-label">积分</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sortType" id="money" value="money"><label for="money" class="control-label">余额</label></div>
-    <?php if ($_smarty_tpl->getVariable('errorMessage')->value!=''){?>
-    <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label"><?php echo $_smarty_tpl->getVariable('errorMessage')->value;?>
+    <div class="sortBar"><label for="inputPassword3" class="control-label">排序：</label><input type="radio" name="sortType" id="point" value="point">&nbsp;<label for="point" class="control-label">积分</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sortType" id="money" value="money">&nbsp;<label for="money" class="control-label">余额</label></div>
+        <?php if ($_smarty_tpl->getVariable('errorMessage')->value!=''){?>
+        <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label"><?php echo $_smarty_tpl->getVariable('errorMessage')->value;?>
 </label></div>
     <?php }?>
     <div style="height: 30px;"></div>
@@ -94,7 +98,7 @@ if (count($_from) > 0){
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_phone'];?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['birthday'];?>
+                <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['userInfo1']->value['birthday'],"%Y-%m-%d");?>
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_money'];?>
 </td>
@@ -110,4 +114,23 @@ if (count($_from) > 0){
 </div>
 <div style="text-align: center"><?php echo $_smarty_tpl->getVariable('pages')->value;?>
 </div> 
+<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/js/jquery-1.9.1.js"></script>
+<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/js/rexexTest.js"></script>
+<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/js/icheck.min.js"></script>
+<script>
+    $('input').iCheck({
+    checkboxClass: 'icheckbox_minimal-blue',
+    radioClass: 'iradio_minimal-blue',
+    increaseArea: '20%' // optional
+}); 
+$("#selectText").on("input",function(){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
 
+$("#selectText").val(cutString);
+}
+});
+</script>

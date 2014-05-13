@@ -313,6 +313,23 @@ class UserController extends BaseController {
         $this->registration();
     }
 
+    /**
+     * 手机绑定
+     */
+
+    public function bind(){
+
+        if(!empty($_REQUEST['phone']) && !empty($this->userOpenId)){
+
+            $userApi = new userApi();
+
+            $array = $userApi->bind($_REQUEST['phone'],$this->userOpenId);
+
+            print_r($array);
+        }
+
+    }
+
 }
 
 ?>

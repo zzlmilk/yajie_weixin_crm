@@ -6,6 +6,8 @@ class WeiXinUserModel extends Basic {
 
         $this->child_name = 'weixin_user';
 
+        $this->newDB = 'weixin';
+
         parent::__construct();
     }
 
@@ -30,14 +32,18 @@ class WeiXinUserModel extends Basic {
 
                 $token = $token_array['access_token'];
 
-                /**
+                if(!empty($token)){
+
+                         /**
                  * 获取用户信息
                  */
                 $user_json = $weixinApi->getUserInfo($open_id, $token);
 
                 $user_array = json_decode($user_json, true);
 
-                if (count($user_array) > 0 && $user_array['subscribe'] == 1) {
+
+
+                if (count($user_array) > 0 && $user_array['subscribe'] == 1 && !empty($user_array['subscribe'])) {
 
 
                     $data['subscribe'] = $user_array['subscribe'];
@@ -63,8 +69,14 @@ class WeiXinUserModel extends Basic {
                     $weixinUser->insert($data);
                 } else {
 
-                    $data['subscribe'] = $user_array['subscribe'];
+                    $data['subscribe'] = 0;
                 }
+                }  else{
+$data['subscribe'] = 0;
+                    
+                }
+
+               
 
                 return $data;
             }
