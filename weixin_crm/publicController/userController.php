@@ -3,7 +3,7 @@
 class userController implements User {
 
     public $errorMessage = "";
-    public $pageSize = 3;
+    public $pageSize = 5;
 
     // 用户列表 界面
     public function userList() {

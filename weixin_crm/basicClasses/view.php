@@ -106,7 +106,7 @@ class view {
         $offset = $pageSize * ($page - 1);
         $page_len = ($page_len % 2) ? $page_len : $page_len + 1; //页码个数
         $pageoffset = ($page_len - 1) / 2; //页码个数左右偏移量
-        $key1 = '<ul class="pagination">';
+        $key1 = '<ul class="pagination pagination-sm">';
 // $key1.="<span>$page/$pages</span>&nbsp;";    //第几页,共几页
         if ($isAjax == 1) {
             if ($page != 1) {
