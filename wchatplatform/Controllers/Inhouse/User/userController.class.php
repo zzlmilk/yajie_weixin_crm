@@ -49,13 +49,14 @@ class UserController extends BaseController {
             $this->$function();
         }
     }
+
     /**
      * 用户积分
      */
     public function userCenter() {
 
 
-       
+
         $this->able_register();
 
         $userApi = new userApi();
@@ -112,6 +113,7 @@ class UserController extends BaseController {
 
         $this->display();
     }
+
     /**
      * 手机绑定
      */
@@ -129,15 +131,25 @@ class UserController extends BaseController {
 
     //用户消费记录
     public function userExpense() {
-       // $this->able_register();
-
+        // $this->able_register();
+        $error = new errorApi();
+        $userMessage["source"] = SOURCE;
+        $userMessage["open_id"] = $this->userOpenId;
+        $userInfo = transferData(APIURL . "/user/get_info", "post", $userMessage);
+        $userInfo = json_decode($userInfo, TRUE);
+        $userMessage["type"] = 1;
+        $userJsonData = transferData(APIURL . "/user/getUserCardInfo/", "post", $userMessage);
+        $expenseItem = json_decode($userJsonData, true);
+        $error->JudgeError($expenseItem);
+        $this->assign("expenseItem", $expenseItem["record"]);
+        $this->assign("userInfo", $userInfo["user"]);
         $this->display();
     }
 
-   public function ativating(){
+    public function ativating() {
 
-    $this->display();
-   }
+        $this->display();
+    }
 
 }
 

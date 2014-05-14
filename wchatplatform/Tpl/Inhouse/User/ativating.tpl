@@ -2,12 +2,12 @@
 <html> 
     <head>
 
-       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-       <meta content="initial-scale=1.0; maximum-scale=4.0; user-scalable=no;" name="viewport">
-       <meta name="viewport" content="width=device-width,user-scalable=yes" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta content="initial-scale=1.0; maximum-scale=4.0; user-scalable=no;" name="viewport">
+        <meta name="viewport" content="width=device-width,user-scalable=yes" />
 
 
-       <!-- 最新 Bootstrap 核心 CSS 文件 -->
+        <!-- 最新 Bootstrap 核心 CSS 文件 -->
         <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
 
         <!-- 可选的Bootstrap主题文件（一般不用引入） -->
@@ -20,36 +20,36 @@
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
 
-       <title>用户激活</title>
+        <title>用户激活</title>
     </head>
     <script>
 
-    $(function(){
+        $(function(){
 
         $("#activatNumber").keyup(function() {
         var value = $("#activatNumber").val();
         var leng = value.length;
-            if(leng > 2){
-                $("#goActivat").removeAttr("disabled");
-            }
-        });
+        if(leng > 2){
+        $("#goActivat").removeAttr("disabled");
+    }
+});
 
 
-        $("#goActivat").click(function() {
-            // 添加正则验证        
+$("#goActivat").click(function() {
+// 添加正则验证        
 
-        });
+});
         
 
-    })
+})
     </script>
 
 
     <style>
         body{
             Font-size=62.5%;
-             /*background-color: rgb(234,234,234);*/
-             background-image: url({$WebSiteUrlPublic}/image/beijing.png);
+            /*background-color: rgb(234,234,234);*/
+            background-image: url({$WebSiteUrlPublic}/image/beijing.png);
         }
         .ativatingWarp{
             /*border: solid 1px green;*/
@@ -90,10 +90,10 @@
             text-indent: -0.5em;
         }
         .logoStyle{
-             /*border: solid 1px red; */
-             text-align: center;
-             height: 11em;
-             line-height: 13em;
+            /*border: solid 1px red; */
+            text-align: center;
+            height: 11em;
+            line-height: 13em;
         }
 
         .logoStyle img{
@@ -113,27 +113,29 @@
     </style>
 
     <body>
-        <div class="ativatingWarp">
+        <form action="{$websiteUrl}?g={$model}&a=user&v=bind">
+            <div class="ativatingWarp">
 
-            <div class="logoStyle">
-                <img src="{$WebSiteUrlPublic}/image/logo.png"/>
-            </div>
+                <div class="logoStyle">
+                    <img src="{$WebSiteUrlPublic}/image/logo.png"/>
+                </div>
 
-            <div class="form-group">
-                <input type="tel"  class="form-control phoneNumberStyle" id="phoneNumber" placeholder="请输入手机号码">
-            </div>
+                <div class="form-group">
+                    <input type="tel"  class="form-control phoneNumberStyle" name="phone" id="phoneNumber" placeholder="请输入手机号码">
+                </div>
 
-            <div style=" margin-top: 3em;text-align: center;">
-                <button type="submit" id="goActivat" class="btn btn-primary btn-sm  btnAtivat"
-                    >GO</button>
-            </div>
+                <div style=" margin-top: 3em;text-align: center;">
+                    <button type="submit" id="goActivat" class="btn btn-primary btn-sm  btnAtivat"
+                            >GO</button>
+                </div>
 
-            <div style=" height: 3em;"></div>
+                <div style=" height: 3em;"></div>
+        </form>
     </div>
-        
 
-    </body>
 
-    
-   
+</body>
+
+
+
 </html>
