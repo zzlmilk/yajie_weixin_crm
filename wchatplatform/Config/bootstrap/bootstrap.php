@@ -53,8 +53,10 @@ class website {
          * 路由处理
          */
         $url = new Dispatcher();
-        
-        $url->dispatcher();
+
+
+       
+     
         /**
          * 判断模块是否存在
          */

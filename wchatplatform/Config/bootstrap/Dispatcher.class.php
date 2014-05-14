@@ -61,42 +61,59 @@ class Dispatcher {
      */
     private function DataProcess($pathArray) {
         
-        
-        
-        
-       
-        /**
-         * shop/shopInfo
-         * shop/user/usershoped
-         * 第一个为文件夹的名称 如 数组只存在2个 那么 第一个 既为文件夹名称 也为controller 名称
-         * 最后一个  为 该模块运行的方法  
-         */
-        defined('MODULE_DIR_NAME') or define('MODULE_DIR_NAME', ucfirst($pathArray[0]));
-        
-        defined('MODULE_DIR_NAME') or define('MODULE_DIR_NAME', ucfirst($pathArray[0]));
-        if (count($pathArray) <= 2) {
+        $array = array('dir','model','action');
 
-            defined('MODULE_DIR') or define('MODULE_DIR', ucfirst($pathArray[0]));
+        foreach ($array as $k => $v) {
+           
+             if(!empty($pathArray[0])){
 
-            defined('MODULE_NAME_CONTROLLER') or define('MODULE_NAME_CONTROLLER', ($pathArray[0]) . 'Controller');
-        } else {
+                 $$v = $pathArray[0];
 
-            array_shift($pathArray);
+                 array_shift($pathArray);
 
-            defined('MODULE_DIR') or define('MODULE_DIR', ucfirst($pathArray[0]));
-
-            defined('MODULE_NAME_CONTROLLER') or define('MODULE_NAME_CONTROLLER', ($pathArray[0]) . 'Controller');
+             }        
         }
 
+        if(empty($action)){
 
+            $action = $model;
+        }
 
-        array_shift($pathArray);
+        if(count($pathArray) > 0){
 
-        defined('ACTION_NAME') or define('ACTION_NAME', $pathArray[0]);
+            for($i = 0 ; $i < count($pathArray); $i = $i+2){
+
+                 $key = $k  + 1;
+
+                 if(!empty($pathArray[$key])){
+
+                     $_ENV['request'][$pathArray[$i]] = $pathArray[$key];
+
+                 } else{
+
+                     $_ENV['request'][$pathArray[$i]] = '';
+                 }
+
+            }
+        }
+
+        if(count($_REQUEST) > 0){
+
+             foreach($_REQUEST as $k=>$v){
+                
+                $_ENV['request'][$k] = $v;
+
+             }
+        }
+
+        defined('MODULE_DIR_NAME') or define('MODULE_DIR_NAME', ucfirst($dir));
+            
+        defined('MODULE_DIR') or define('MODULE_DIR', ucfirst($model));
         
-        
-       
+        defined('MODULE_NAME_CONTROLLER') or define('MODULE_NAME_CONTROLLER', ucfirst($model) . 'Controller');
 
+        defined('ACTION_NAME') or define('ACTION_NAME', $action);
+        
         /**
          * 载入该目录的Controller
          */
