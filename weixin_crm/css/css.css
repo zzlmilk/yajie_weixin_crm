@@ -860,7 +860,7 @@ a.newfont03:hover {
     line-height: 40px;
 }
 
-.left_background{height:100%;background:url(../images/menu-shadow.png) repeat-y right top #eeeeee;border-right:1px solid #dddddd;position:relative; }
+.left_background{height:100%; width: 300px;  border: 1px solid black;}
 .left_act_bg{position:absolute;right:0;top:0;bottom:0;width:6px;background:url(../images/menu-shadow.png);height:500px;}
 
 .left-fontSmall {

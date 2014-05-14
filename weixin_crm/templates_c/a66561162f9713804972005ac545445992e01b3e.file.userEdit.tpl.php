@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-23 11:28:09
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-13 16:28:33
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/userEdit.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:53475015953573349081826-07914190%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     'a66561162f9713804972005ac545445992e01b3e' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/userEdit.tpl',
-      1 => 1396342134,
+      1 => 1398233378,
     ),
   ),
   'nocache_hash' => '53475015953573349081826-07914190',
@@ -173,8 +173,18 @@ if (count($_from) > 0){
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['MoneyData']->value['fraction'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['MoneyData']->value['source'];?>
-</td>
+                        <td>
+                            <?php if ($_smarty_tpl->tpl_vars['MoneyData']->value['source']=="crm"){?>
+                                系统
+                            <?php }elseif($_smarty_tpl->tpl_vars['MoneyData']->value['source']=="guaguaka"){?>
+                                刮刮卡
+                            <?php }elseif($_smarty_tpl->tpl_vars['MoneyData']->value['source']=="exchange"){?>
+                                兑换
+                            <?php }else{ ?>
+                                <?php echo $_smarty_tpl->tpl_vars['MoneyData']->value['source'];?>
+
+                            <?php }?>
+                        </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['MoneyData']->value['create_time'],"%Y-%m-%d %H:%M");?>
 </td>
                     </tr>
@@ -209,8 +219,18 @@ if (count($_from) > 0){
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['PointData']->value['fraction'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['PointData']->value['source'];?>
-</td>
+                        <td>
+                            <?php if ($_smarty_tpl->tpl_vars['PointData']->value['source']=="crm"){?>
+                                系统
+                            <?php }elseif($_smarty_tpl->tpl_vars['PointData']->value['source']=="guaguaka"){?>
+                                刮刮卡
+                            <?php }elseif($_smarty_tpl->tpl_vars['PointData']->value['source']=="exchange"){?>
+                                兑换
+                            <?php }else{ ?>
+                                <?php echo $_smarty_tpl->tpl_vars['PointData']->value['source'];?>
+
+                            <?php }?>
+                        </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['PointData']->value['create_time'],"%Y-%m-%d %H:%M");?>
 </td>
                     </tr>

@@ -2,17 +2,55 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+         <link href="{$WebSiteUrl}/css/{$source}_css.css" rel="stylesheet" type="text/css">
         <title></title>
     </head>
 
-    <frameset rows="30,*" cols="*" frameborder="no" border="0" framespacing="0">
-        <frame src="{$WebSiteUrl}/files/top.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
-        <frameset cols="200,*" frameborder="no" border="0" framespacing="0">
-            <frame src="{$WebSiteUrl}/pageredirst.php?action=left&functionname=left" name="leftFrame"  noresize="noresize" id="leftFrame" title="leftFrame" />
-            <frame src="{$WebSiteUrl}/files/mainfra.html"  name="mainFrame" id="mainFrame" title="mainFrame" />
-        </frameset>
-    </frameset>
-    <noframes>
-        <body>
-        </body>
-    </noframes></html>
+    <body class='boby'>
+
+        <div class='bobyBackGroud' >
+
+  
+
+
+
+
+            <div style='overflow: hidden; height: 90px;'>
+
+                <!--  <iframe src="{$WebSiteUrl}/pageredirst.php?action=top&functionname=top" name="topFrame" scrolling="No"  id="topFrame" title="topFrame"  style='width: 100%; height: 90px;' ></iframe> -->
+
+
+                 {include file='top.tpl'}
+
+            </div>
+
+          
+            <div style='float: left; overflow: hidden; height: 675px; width: 17%;' >
+
+                <iframe frameborder='0' src="{$WebSiteUrl}/pageredirst.php?action=left&functionname=left" name="leftFrame"   id="leftFrame" title="leftFrame"  style=' height: 740px; width: 196px; margin-left: 10px;border-radius: 10px 10px 0 0;' ></iframe>
+
+            </div>
+
+            <div style='float: left; overflow: hidden; height: 675px; width: 83%;'>
+
+
+
+              <iframe src="{$WebSiteUrl}/files/mainfra.html"  name="mainFrame" id="mainFrame" title="mainFrame"  style='height: 675px; width: 100%; border-radius: 10px 10px 0 0;' ></iframe>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+       
+        
+       </body> 
+
+
+</html>

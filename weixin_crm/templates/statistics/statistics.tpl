@@ -12,6 +12,9 @@
 		<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" type="text/css">
 		<script src="{$WebSiteUrl}/js/Chart.js" type="text/javascript">
 </script>
+
+<script src="{$WebSiteUrl}/js/highcharts.js" type="text/javascript">
+</script>
 		<style type="text/css">
 .labelWidth{
 		width: auto !important;
@@ -50,7 +53,7 @@
             </div>
 
             <br />
-		<canvas id="canvas" height="450" width="800"></canvas>
+		<div id="container" style="min-width:800px;height:400px"></div>
 	</body>
 
 	<script>
@@ -65,24 +68,45 @@
 
 	   var YVAL = eval('{$YVAL}');
 
-        var lineChartData = {
-　　　　　　　// x轴的标示
-            labels : XVAL,
-　　　　　　　// 数据，数组中的每一个object代表一条线
-            datasets : [
-                {
-                    fillColor : "rgba(151,187,205,0)",
-                    strokeColor : "rgba(151,187,205,1)",
-                    pointColor : "rgba(151,187,205,1)",
-                    pointStrokeColor : "#fff",
-                    data : YVAL
-                }
-            ]
-            
-        }
-
-    var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
-
+     $(function () {
+    $('#container').highcharts({
+        title: {
+            text: '',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: XVAL
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: ''
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: '金额',
+            data: YVAL
+        }]
+    });
+});
+				
 
     function locationUrl(){
 

@@ -1,7 +1,7 @@
 <?php
 
 
-ini_set('display_errors', '1');
+ini_set('display_errors', '0');
 
 
 session_start();
@@ -11,7 +11,7 @@ define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 
 defined('PROJECT') or define('PROJECT', '/yajie_weixin_crm/weixin_crm/');
 
-//error_reporting(E_ALL ^ E_NOTICE);
+error_reporting(E_ALL ^ E_NOTICE);
 
 defined('ROOTPATH') or define('ROOTPATH',  ROOT . PROJECT);
 

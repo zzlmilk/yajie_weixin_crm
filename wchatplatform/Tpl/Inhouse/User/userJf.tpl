@@ -62,7 +62,7 @@
 
                 {else}
 
-                    <a href="?g=company&a=user&v=userJf&open_id={$open_id}&type=1" >积分</a>
+                    <a href="?g={$model}&a=user&v=userJf&open_id={$open_id}&type=1" >积分</a>
 
                 {/if}
 
@@ -75,7 +75,7 @@
 
                 {else}
 
-                    <a href="{$websiteUrl}?g=company&a=user&v=userJf&open_id={$open_id}&type=2" >消费</a>
+                    <a href="{$websiteUrl}?g={$model}&a=user&v=userJf&open_id={$open_id}&type=2" >消费</a>
 
                 {/if}
             </li>

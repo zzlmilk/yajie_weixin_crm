@@ -58,6 +58,8 @@ class view {
 
         $this->smarty->assign('uname', $_SESSION['user_name']);
 
+        $this->smarty->assign('account',$_SESSION['weixin_user_account']);
+
         $this->smarty->assign('ROOTPATH', ROOTPATH);
 
         $this->smarty->assign('WebSiteUrl', WebSiteUrl);
@@ -65,6 +67,8 @@ class view {
         $this->smarty->assign('URLHANDLER', URLHANDLER);
 
         $this->smarty->assign('URLCONTROLLER', URLCONTROLLER);
+
+        $this->smarty->assign('source',$_SESSION['sorce']);
 
         $this->smarty->display($displayPage . '.tpl');
     }

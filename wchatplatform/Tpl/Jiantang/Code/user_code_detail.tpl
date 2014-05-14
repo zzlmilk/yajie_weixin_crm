@@ -96,6 +96,7 @@
 
 
 
+               filter:alpha(Opacity=10);-moz-opacity:0.5;opacity: 0.5;
 
                 width: 70%;
 
@@ -104,7 +105,7 @@
 
                 margin: 0 auto;
 
-                border: 1px solid red;
+                border: 1px solid black;
 
 
 

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 17:53:09
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-13 14:52:30
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/statistics/statistics.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5911195368b105d3f3b7-83937788%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9057616145371c12e499cf8-32948387%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3fc91b73e7ca114c1362e8f728f6612c84ab783a' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/statistics/statistics.tpl',
-      1 => 1399369979,
+      1 => 1399963948,
     ),
   ),
-  'nocache_hash' => '5911195368b105d3f3b7-83937788',
+  'nocache_hash' => '9057616145371c12e499cf8-32948387',
   'function' => 
   array (
   ),
@@ -30,6 +30,10 @@ $_smarty_tpl->decodeProperties(array (
 		<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" type="text/css">
 		<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /js/Chart.js" type="text/javascript">
+</script>
+
+<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/js/highcharts.js" type="text/javascript">
 </script>
 		<style type="text/css">
 .labelWidth{
@@ -69,7 +73,7 @@ $_smarty_tpl->decodeProperties(array (
             </div>
 
             <br />
-		<canvas id="canvas" height="450" width="800"></canvas>
+		<div id="container" style="min-width:800px;height:400px"></div>
 	</body>
 
 	<script>
@@ -88,24 +92,45 @@ $_smarty_tpl->decodeProperties(array (
 	   var YVAL = eval('<?php echo $_smarty_tpl->getVariable('YVAL')->value;?>
 ');
 
-        var lineChartData = {
-　　　　　　　// x轴的标示
-            labels : XVAL,
-　　　　　　　// 数据，数组中的每一个object代表一条线
-            datasets : [
-                {
-                    fillColor : "rgba(151,187,205,0)",
-                    strokeColor : "rgba(151,187,205,1)",
-                    pointColor : "rgba(151,187,205,1)",
-                    pointStrokeColor : "#fff",
-                    data : YVAL
-                }
-            ]
-            
-        }
-
-    var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
-
+     $(function () {
+    $('#container').highcharts({
+        title: {
+            text: '',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: XVAL
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: ''
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: '金额',
+            data: YVAL
+        }]
+    });
+});
+				
 
     function locationUrl(){
 

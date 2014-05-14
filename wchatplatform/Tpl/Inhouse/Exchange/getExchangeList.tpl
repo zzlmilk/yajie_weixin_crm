@@ -85,14 +85,8 @@
                         <div style="word-wrap: break-word; word-break: normal;">
                             <p class="summary"> {$exchangeItem.exchange_summary}</p>
                             <p class="integration">积分: {$exchangeItem.exchange_integration}</p>
-                            <p>类型: 
-                                {if $exchangeItem.exchange_type eq 0}
-                                    虚拟
-                                {else}
-                                    实物
-                                {/if}
-                            </p>
-                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button  type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>
+                          
+                          
 <!--                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>-->
                         </div>
                     </div>

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-03-24 15:03:57
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 10:36:14
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1184631474532fd8dd8eac88-10115101%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2785423545372d69ee32fa1-48665896%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b71d6ed1832efdf6cd9fbc55bb55ffa0092a6353' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/index.tpl',
-      1 => 1395644630,
+      1 => 1400034949,
     ),
   ),
-  'nocache_hash' => '1184631474532fd8dd8eac88-10115101',
+  'nocache_hash' => '2785423545372d69ee32fa1-48665896',
   'function' => 
   array (
   ),
@@ -20,20 +20,61 @@ $_smarty_tpl->decodeProperties(array (
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+         <link href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/css/<?php echo $_smarty_tpl->getVariable('source')->value;?>
+_css.css" rel="stylesheet" type="text/css">
         <title></title>
     </head>
 
-    <frameset rows="30,*" cols="*" frameborder="no" border="0" framespacing="0">
-        <frame src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/files/top.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
-        <frameset cols="200,*" frameborder="no" border="0" framespacing="0">
-            <frame src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=left&functionname=left" name="leftFrame"  noresize="noresize" id="leftFrame" title="leftFrame" />
-            <frame src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/files/mainfra.html"  name="mainFrame" id="mainFrame" title="mainFrame" />
-        </frameset>
-    </frameset>
-    <noframes>
-        <body>
-        </body>
-    </noframes></html>
+    <body class='boby'>
+
+        <div class='bobyBackGroud' >
+
+  
+
+
+
+
+            <div style='overflow: hidden; height: 90px;'>
+
+                <!--  <iframe src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=top&functionname=top" name="topFrame" scrolling="No"  id="topFrame" title="topFrame"  style='width: 100%; height: 90px;' ></iframe> -->
+
+
+                 <?php $_template = new Smarty_Internal_Template('top.tpl', $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+ echo $_template->getRenderedTemplate();?><?php $_template->updateParentVariables(0);?><?php unset($_template);?>
+
+            </div>
+
+          
+            <div style='float: left; overflow: hidden; height: 675px; width: 17%;' >
+
+                <iframe frameborder='0' src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=left&functionname=left" name="leftFrame"   id="leftFrame" title="leftFrame"  style=' height: 740px; width: 196px; margin-left: 10px;border-radius: 10px 10px 0 0;' ></iframe>
+
+            </div>
+
+            <div style='float: left; overflow: hidden; height: 675px; width: 83%;'>
+
+
+
+              <iframe src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/files/mainfra.html"  name="mainFrame" id="mainFrame" title="mainFrame"  style='height: 675px; width: 100%; border-radius: 10px 10px 0 0;' ></iframe>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+       
+        
+       </body> 
+
+
+</html>

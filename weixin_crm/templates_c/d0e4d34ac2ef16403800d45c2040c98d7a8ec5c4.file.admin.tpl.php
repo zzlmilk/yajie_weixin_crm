@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-06 16:45:31
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-07 09:55:24
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/admin/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:336433295368a12bcf79d6-82621460%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     'd0e4d34ac2ef16403800d45c2040c98d7a8ec5c4' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/admin/admin.tpl',
-      1 => 1399365708,
+      1 => 1399427637,
     ),
   ),
   'nocache_hash' => '336433295368a12bcf79d6-82621460',
@@ -43,8 +43,9 @@ $_smarty_tpl->decodeProperties(array (
             body{
                 Font-size=62.5%;
             }
-            .bigWheelWarp{
+            .Warp{
                 width: 100%;
+               /* border: solid 1px red;*/
             }
             .titleStyle{
                 color: rgb(91,91,91);
@@ -52,18 +53,73 @@ $_smarty_tpl->decodeProperties(array (
                 text-align: center;
                 height: 3em;
                 line-height: 3em;
+                border-bottom: solid 1px #ccc;
             }
-            .textStyle{
-                text-align: center;
-                margin-top: 8em;
+            .matterStyle{
+                width: 100%;
+                min-height: 10em;
+              /*  border: solid 1px red;*/
+            }
+            .authListStyle{
+                width: 70%;
+                text-indent: 1em;
+                float: right;
+                margin-right: 2em;                
+                font-size: 18px;
+                margin-top: -22.3em;
+            }
+            .stateStyle{
+                /*border: solid 1px red;*/
+                width: 25%;
+                height: 20em;
+                text-indent: 1em;
+                font-size: 20px;
+                margin-top: 1em;
+                color: rgb(66,139,202);
             }
         </style>
     </head>
     <body>
 
-        <div class="bigWheelWarp">
+        <div class="Warp">
             <div class="titleStyle">管理员账号</div>
 
+            <div class="matterStyle">
+                <div class="stateStyle">你所拥有的部分权限
+                    <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    <br />
+                    
+                    <div style="font-size: 12px; margin-top: 5em; color: rgb(60,60,60)">最近登录时间：<?php echo $_smarty_tpl->getVariable('lastTime')->value;?>
+</div>
+
+                    <span style="padding-left: 1.5em; color: rgb(240,173,78); font-size: 14px; ">如需更多权限请和管理员联系。</span>
+                </div>
+                <div class="authListStyle">
+                    <table class="table table-bordered">
+                                   
+                    <?php  $_smarty_tpl->tpl_vars['V'] = new Smarty_Variable;
+ $_smarty_tpl->tpl_vars['K'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('authInfo')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if (count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['V']->key => $_smarty_tpl->tpl_vars['V']->value){
+ $_smarty_tpl->tpl_vars['K']->value = $_smarty_tpl->tpl_vars['V']->key;
+?>
+                    <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['V']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if (count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+                    <tr><td><?php echo $_smarty_tpl->tpl_vars['v']->value;?>
+</td><td><span style=" color: rgb(91,183,91)" class="glyphicon glyphicon-ok-sign"></span></td></tr>
+                    <?php }} ?>
+                    <?php }} ?>
+
+                  </table>
+                </div>
+
+            </div>
         </div>
     </body>
 </html>

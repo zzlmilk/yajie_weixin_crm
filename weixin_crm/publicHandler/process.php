@@ -9,7 +9,10 @@ if (isset($_GET['login'])) {
 
     session_unset();
 
-    echo '<script type="text/javascript">window.location="' . WebSiteUrl . '";</script>';
+
+
+
+    echo '<script type="text/javascript">window.location.href="' . WebSiteUrl . '";</script>';
 }
 
 if (isset($_POST['user'])) {
@@ -44,9 +47,12 @@ if (isset($_POST['user'])) {
         $_SESSION['user_name'] = $admin->vars['admin_name'];
 
 
+        $_SESSION['weixin_user_account'] = $admin->vars['account'];
+
+
         $_SESSION['sorce'] = $token;
 
-
+        
 
 
 

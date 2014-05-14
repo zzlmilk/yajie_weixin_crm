@@ -80,7 +80,7 @@
                     <img src='{$WebSiteUrlPublic}/company/image/edit.png' style=" width: 100%">
                 </div>
 
-                <div onclick='alert(1234)' style=' cursor: pointer; position: absolute;  width: 4%; left: 95%; top: 74%; height: 20%;'>
+                <div onclick='alert("暂未开放。。敬请期待")' style=' cursor: pointer; position: absolute;  width: 4%; left: 95%; top: 74%; height: 20%;'>
 
                     &nbsp;
                 </div>
@@ -113,9 +113,5 @@
                         </div>
                     </a>
                 </li>
-
-             
-
-             
             </ul>
         </div>
