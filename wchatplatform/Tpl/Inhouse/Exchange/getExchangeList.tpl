@@ -54,6 +54,9 @@
                 border-left: 41px solid transparent;
 
             }  
+            .giftBox{
+                background-color: white; width: 45%; height:240px; float: left; margin-right:  10px;margin-top: 15px;
+            }
         </style>
     </head>
     <body style='background-color: rgb(243,237,227);'>
@@ -64,7 +67,7 @@
 
 
             <div style=' width: 18%;'>
-                <img src='{$weixinUserInfo.headimgurl}' class='round_photo'>
+                <img src="{$weixinUserInfo.headimgurl}"  class="round_photo">
             </div>
 
 
@@ -79,26 +82,45 @@
         </div>
         <div class="registerWarp">
             {foreach from=$exchangeList item=exchangeItem key=key}
-                <div class="giftListStyle">
-                    <div style="float: left;margin: 10px"> <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img width="80" height="80" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
-                    <div style="float: left;margin: 10px;width: 58%;">
+                <!--                <div class="giftListStyle">
+                                    <div style="float: left;margin: 10px"> <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img width="80" height="80" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
+                                    <div style="float: left;margin: 10px;width: 58%;">
+                                        <div style="word-wrap: break-word; word-break: normal;">
+                                            <p class="summary"> {$exchangeItem.exchange_summary}</p>
+                                            <p class="integration">积分: {$exchangeItem.exchange_integration}</p>
+                                            <p>类型: 
+                {if $exchangeItem.exchange_type eq 0}
+                    虚拟
+                {else}
+                    实物
+                {/if}
+            </p>     
+            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=Inhouse&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>
+        </div>
+    </div>
+</div>-->
+            {/foreach}
+            <p style="text-align: center">亲！看中了哪一款请前往本店前台兑换哦~</p>
+            {foreach from=$exchangeList item=exchangeItem key=key}
+                {if $key % 2 eq 0}
+                    <div class="giftBox" style="float: left;margin-left: 8px;">
+                        <div > <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
                         <div style="word-wrap: break-word; word-break: normal;">
-                            <p class="summary"> {$exchangeItem.exchange_summary}</p>
-                            <p class="integration">积分: {$exchangeItem.exchange_integration}</p>
-                            <p>类型: 
-                                {if $exchangeItem.exchange_type eq 0}
-                                    虚拟
-                                {else}
-                                    实物
-                                {/if}
-                            </p>
-                            
-<!--                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=Inhouse&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>-->
-                          
-                         
+                            <p class="summary" style="height: 50px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
+                            <p class="integration" style="text-align: right; padding-right: 10px;">积分: {$exchangeItem.exchange_integration}</p>   
+
                         </div>
                     </div>
-                </div>
+                {else}
+                    <div class="giftBox" style="float: right ">
+                        <div > <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
+                        <div style="word-wrap: break-word; word-break: normal;">
+                            <p class="summary" style="height: 50px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
+                            <p class="integration" style="text-align: right; padding-right: 10px;">积分: {$exchangeItem.exchange_integration}</p>   
+
+                        </div>
+                    </div>
+                {/if}
             {/foreach}
         </div>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

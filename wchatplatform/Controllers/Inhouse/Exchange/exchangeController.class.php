@@ -34,19 +34,21 @@ class exchangeController extends BaseController {
     public function getExchangeList() {
 
 
-        $this->able_register();
+//        $this->able_register();
         $postDate["source"] = SOURCE;
         $postDate['open_id'] = $this->userOpenId;
         //$this->userOpenId = $_REQUEST['open_id'];
-        $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=".SOURCE."&open_id=" . $this->userOpenId, "get");
+        $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=" . SOURCE . "&open_id=" . $this->userOpenId, "get");
         $exchangeList = json_decode($exchangeList, true);
+
         $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
         $userInfo = json_decode($userInfo, TRUE);
-        $weixinUserInfo=$userInfo['weixin_user'];
-        $localUserInfo=$userInfo['user'];
+        $weixinUserInfo = $userInfo['weixin_user'];
+        $localUserInfo = $userInfo['user'];
         $error = new errorApi();
         $error->JudgeError($exchangeList);
         $error->JudgeError($userInfo);
+
         $this->assign("WebImageUrl", WebImageUrl . "small/");
         $this->assign("exchangeList", $exchangeList);
         $this->assign("localUserInfo", $localUserInfo);
@@ -57,7 +59,7 @@ class exchangeController extends BaseController {
     //兑换物品详情
     public function exchangeGoods() {
         // $this->userOpenId = $_REQUEST['open_id'];
-        $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'].'&source='.SOURCE, "get");
+        $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'] . '&source=' . SOURCE, "get");
         $exchangeItem = json_decode($exchangeItem, true);
 
         $error = new errorApi();

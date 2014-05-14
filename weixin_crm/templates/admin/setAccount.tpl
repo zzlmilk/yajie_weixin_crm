@@ -18,7 +18,7 @@
 
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-
+        <link href="{$WebSiteUrl}/css/crm_table_style.css" rel="stylesheet">
 
         <title>管理员</title>
         <style>
@@ -63,11 +63,11 @@
         </style>
     </head>
     <body>
-
+        <div class="navBarStyle">
+            当前位置：系统管理 > 重置账户密码
+        </div>
+        <div style="height: 50px;"></div>
         <div class="bigWheelWarp">
-            <div class="titleStyle">重置账户密码</div>
-            <div style="height: 50px;"></div>
-            
             {if $messageString neq "1"}
                 <div id="errorMessage" class="alert alert-danger showMessage">{$messageString}</div>
             {else}
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     <div style="height: 15px;"></div>
-                    <p style="width: 100%; text-align: center;"><button id="addButton" type="submit" class="btn btn-info">确认修改</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="addButton" type="reset" class="btn btn-info">重置</button></p>
+                    <p style="width: 97%; text-align: right;"><button id="addButton" type="submit" class="btn btn-info">确认修改</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="addButton" type="reset" class="btn btn-info">重置</button></p>
                 </form>
             </div>
         </div>
