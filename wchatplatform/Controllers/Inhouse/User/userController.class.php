@@ -331,6 +331,27 @@ class UserController extends BaseController {
     }
 
   
+    //用户消费记录
+    public function userExpense() {
+        // $this->able_register();
+        $error = new errorApi();
+        $userMessage["source"] = SOURCE;
+        $userMessage["open_id"] = $this->userOpenId;
+        $userInfo = transferData(APIURL . "/user/get_info", "post", $userMessage);
+        $userInfo = json_decode($userInfo, TRUE);
+        $userMessage["type"] = 1;
+        $userJsonData = transferData(APIURL . "/user/getUserCardInfo/", "post", $userMessage);
+        $expenseItem = json_decode($userJsonData, true);
+        $error->JudgeError($expenseItem);
+        $this->assign("expenseItem", $expenseItem["record"]);
+        $this->assign("userInfo", $userInfo["user"]);
+        $this->display();
+    }
+
+    public function ativating() {
+
+        $this->display();
+    }
 
 }
 
