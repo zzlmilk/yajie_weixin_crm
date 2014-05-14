@@ -48,25 +48,36 @@
     <style>
         body{
             Font-size=62.5%;
-             background-color: rgb(243,237,227);
+             /*background-color: rgb(234,234,234);*/
+             background-image: url({$WebSiteUrlPublic}/image/beijing.png);
         }
         .ativatingWarp{
-            /*border: solid 1px red;*/
+            /*border: solid 1px green;*/
             width: 22em;
-            /*margin: 0 auto;*/
-            height: 10em;
-            left: 50%;
-            top:20%;
-            position: absolute;
-            margin-left: -11em;  
-            margin-top: -5px;
-
-
+            margin: 0 auto;
+            height: 20em;
         }
         .phoneNumberStyle{
-            width: 63%;
-            float: left;
-            margin-left: 0.6em;
+            width: 90%;
+            margin: 0 auto;
+            border: solid 0.1em rgb(106,106,106);
+            border-radius: 0.8em;
+            -moz-border-radius: 0.8em;
+            -webkit-border-radius: 0.8em;
+            height: 3.2em;
+
+        }
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            color:rgb(106,106,106);
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:rgb(106,106,106);
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:rgb(106,106,106);
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color:rgb(106,106,106);
         }
         .getCaptcha{
             margin-left: 1em;
@@ -78,27 +89,50 @@
             width: 5em;
             text-indent: -0.5em;
         }
+        .logoStyle{
+             /*border: solid 1px red; */
+             text-align: center;
+             height: 11em;
+             line-height: 13em;
+        }
+
+        .logoStyle img{
+            max-width:100%;
+            height:auto;   
+            width: 60%;
+        }
+        .btnAtivat{
+            margin: 0 auto;
+            width: 90%;
+            font-size: 1.5em;
+            border-radius: 0.8em;
+            -moz-border-radius: 0.8em;
+            -webkit-border-radius: 0.8em;
+            font-weight: bolder;
+        }
     </style>
 
-    <boby>
+    <body>
         <div class="ativatingWarp">
 
-    <div style=" margin-top: 1.5em;">
+            <div class="logoStyle">
+                <img src="{$WebSiteUrlPublic}/image/logo.png"/>
+            </div>
+
             <div class="form-group">
                 <input type="tel"  class="form-control phoneNumberStyle" id="phoneNumber" placeholder="请输入手机号码">
             </div>
-            <button type="submit" class="btn btn-info getCaptcha">获取激活码</button>
-    </div>
-    <div style=" margin-top: 2em;">
-            <div class="form-group">
-                <input type="tel" class="form-control phoneNumberStyle" value="" id="activatNumber" placeholder="请输入激活码">
+
+            <div style=" margin-top: 3em;text-align: center;">
+                <button type="submit" id="goActivat" class="btn btn-primary btn-sm  btnAtivat"
+                    >GO</button>
             </div>
 
-            <button type="submit" id="goActivat" class="btn btn-primary ativating" disabled="disabled">马上激活</button>
+            <div style=" height: 3em;"></div>
     </div>
-        </div>
+        
 
-    </boby>
+    </body>
 
     
    

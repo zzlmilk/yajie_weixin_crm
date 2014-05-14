@@ -42,6 +42,7 @@
         body{
             Font-size=62.5%;
              background-color: rgb(243,237,227);
+             height:100%;
              /*background-color: rgb(225,225,225);*/
         }
 
@@ -49,7 +50,7 @@
 
         /*  border: solid 1px red;*/
         }
-        .titleText{
+/*        .titleText{
           height: 2em;
           line-height: 2em;
           font-size: 1.8em;
@@ -57,7 +58,7 @@
           text-align: center;
           background-color: rgb(47,176,200);
 
-        }
+        }*/
         .articleTitle{
           /*border: solid 1px red;*/
           font-size: 1.2em;
@@ -92,27 +93,65 @@
           overflow: hidden;
         }
 
-
-
-
         .bgMask{
-          width: 100%;
-          height: 35em;
+          width: 96%;
+          /*height: 40em;*/
+          height: 100%;
+          /*margin-left:0.3em;*/
+          margin: 0 auto;
+          position: relative;
+          margin-top: -26em;
          
           background-color: rgba(0,0,0,0.4);
-          position: absolute;
-          z-index: 10;
-          margin-top: -35em;
+          /*position: absolute;*/
+          z-index: 99999;
+          /*margin-top: -25em;*/
           display: none;
-          
+
         }
+
+        .namePhoneInputStyle{
+            width: 105%;
+            margin: 0 auto;
+            border: solid 0.1em rgb(106,106,106);
+            border-radius: 0.8em;
+            -moz-border-radius: 0.8em;
+            -webkit-border-radius: 0.8em;
+            height: 3em;
+          /*margin-bottom: 0.5em;*/
+
+        }
+        .namePhoneLabelStyle{
+
+         /* border: solid 1px red;*/
+          width: 90%;
+          text-indent: 0em;
+          font-size: 1.2em;
+          height: 2em;
+          line-height: 1em;
+        }
+        .form-group{
+          /*border: solid 1px red;*/
+          margin-left: -1em;
+          width: 100%;
+        }
+       .maskApply{
+          width: 92%; 
+          font-size: 1.8em; 
+          height: 1.8em; 
+          line-height: 0.8em; 
+          margin-left: -0.8em;
+          border-radius: 0.6em;
+          -moz-border-radius: 0.6em;
+          -webkit-border-radius: 0.6em;
+       }
     </style>
 
     <boby>
         
       <div class="regWarp">
 
-          <div class="titleText">活动</div>
+         <!--  <div class="titleText">活动</div> -->
           <div class="articleTitle">{$info.activity_name}</div>
           <div class="timeReadNumber">
             <span>{$info.activity_end_time|date_format:'%m-%d'}</span>
@@ -142,11 +181,11 @@
         <div style=" text-align: center; margin-top: 2em;">
 
           {if $today_time > $info.activity_end_time}
-          <button type="button" class="btn btn-info"  style="height: 2em; font-size: 1.5em; width: 95%;">报名已关闭</button>
+          <button type="button" class="btn btn-info maskApply"  style="height: 2em; font-size: 1.5em; margin: 0 auto;  width: 95%;">报名已关闭</button>
 
           {else}
 
-         <button type="button" class="btn btn-info" id="mySign" style="height: 2em; font-size: 1.5em; width: 95%;">报名</button>
+         <button type="button" class="btn btn-primary maskApply" id="mySign" style="height: 2em; font-size: 1.5em; margin: 0 auto; width: 95%;">报名</button>
      
           {/if}
         </div>
@@ -156,12 +195,13 @@
 
           <div class="bgMask">
 
-            <div style=" width: 98%; margin: 0 auto; height: 25em; margin-top: 2em; background-color: #fff">
+            <div style=" height: 3em;"></div>
+            <div style=" width: 98%; margin: 0 auto; height: 28em; margin-top: 2em; background-color: #fff">
 
-              <div style=" border-bottom: solid 1px #ccc; height: 2.5em; font-size: 1.6em; line-height: 2.5em; text-align: center;">填写报名信息</div>
+              <div style=" height: 2.5em; font-size: 1.8em; line-height: 2.5em; color: #fff; background-color: rgb(31,36,39); text-align: center;">填写报名信息</div>
 
 
-              <div style=" width: 100%; text-align: right; padding-right: 1em; height: 2em; line-height: 2.5em; ">
+              <div style=" width: 10%; margin-left:auto;margin-right:2px; margin-top: -3.5em; text-align: right; padding-right: 1em; height: 2em; line-height: 2.5em; color: rgb(116,116,116); ">
                 <span class="glyphicon glyphicon-remove" id="closeFloatWarp"></span>
               </div>
 
@@ -170,24 +210,29 @@
                   
 
                   <input type="hidden" name='id' id='id' value='{$info.activity_id}'>
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label"style=" font-size: 1.2em; margin-bottom: 0.5em;">真实姓名</label>
+                  <div class="form-group" style=" margin-top: 3em;">
+                    <label for="inputEmail3" class="col-sm-2 control-label namePhoneLabelStyle">真实姓名</label>
                     <div class="col-sm-10">
-                      <input type="text" style=" width: 92%;" class="form-control" id="real_name" placeholder="真实姓名" name='real_name'>
+                      <input type="text"  class="form-control namePhoneInputStyle" id="real_name" placeholder="真实姓名" name='real_name'>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label" style=" font-size: 1.2em; margin-bottom: 0.5em;"> 手机号码</label>
+                    <label for="inputPassword3" class="col-sm-2 control-label namePhoneLabelStyle" > 手机号码</label>
                     <div class="col-sm-10">
-                      <input type="text"style=" width: 92%;" class="form-control" id="user_phone" name='user_phone' placeholder="手机号码">
+                      <input type="text" class="form-control namePhoneInputStyle" id="user_phone" name='user_phone' placeholder="手机号码">
                     </div>
                   </div>
                   <div style=" text-align: center; margin-top: 2.7em;">
-                    <button id="apply_button" type="submit" style=" width: 92%; font-size: 1.6em; height: 1.8em; line-height: 0.8em; margin-left: -0.8em;" class="btn btn-info">报名</button>
+                    <button id="apply_button" type="submit" class="btn btn-primary btn-sm maskApply">报名</button>
                   </div>
+
+
                 </form>
 
             </div>
+
+
+             <div style=" height: 5em;"></div>
           </div>
 
 
