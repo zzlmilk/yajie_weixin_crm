@@ -18,7 +18,7 @@
 
 	<div style='position: absolute; left: 440px; top: 47px;' class='banner'>
 
-		<div style='margin-left: 57px; margin-top: 14px;'>
+		<div style='margin-left: 57px; margin-top: 18px;'>
 
 			<div style='width: 560px; margin: 0 auto;float: left;'>
 
