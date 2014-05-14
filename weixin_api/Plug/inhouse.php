@@ -93,7 +93,13 @@ class InhousePlug {
 
 			$array = $this->cardApi($data);
 
-			/**
+
+
+		
+
+			if($array['res'] == 1){
+
+					/**
 			 * 获取用户积分
 			 */
 
@@ -106,8 +112,7 @@ class InhousePlug {
 			$odb_comm=mssql_query($sql);
 
 			$user=mssql_fetch_array($odb_comm);
-
-			if($array['res'] == 1){
+			
 
 				$result['user_name'] = $array['info']['gba03c'];
 
@@ -136,6 +141,9 @@ class InhousePlug {
                 $user->insertUser($result);
 
                 
+			} else{
+
+				echoErrorCode(20006);
 			}
 
 		} else{

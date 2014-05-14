@@ -198,6 +198,8 @@ class UserController extends BaseController {
 
         }
 
+        $error = new errorApi();
+
         $error->JudgeError($expenseItem);
 
         $this->assign("XVAL", json_encode($xval));
