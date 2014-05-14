@@ -1,11 +1,27 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-28 10:39:03
+         compiled from "C:/Apache24/htdocs/yajie_weixin_crm/wchatplatform/templates/User/userInfo.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:13084535dbf473aa654-56938619%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'bd5b84c93aa6305d57e0c6d4731298df3641d67b' => 
+    array (
+      0 => 'C:/Apache24/htdocs/yajie_weixin_crm/wchatplatform/templates/User/userInfo.tpl',
+      1 => 1398652742,
+    ),
+  ),
+  'nocache_hash' => '13084535dbf473aa654-56938619',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta content="width=device-width,initial-scale=1.0; maximum-scale=4.0; user-scalable=yes;" name="viewport">
-
-         
-       <!-- 最新 Bootstrap 核心 CSS 文件 -->
+        <meta content="initial-scale=1.0; maximum-scale=4.0; user-scalable=no;" name="viewport">
+        <meta name="viewport" content="width=device-width,user-scalable=yes"><!-- 最新 Bootstrap 核心 CSS 文件 -->
         <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"><!-- 可选的Bootstrap主题文件（一般不用引入） -->
         <!-- <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap-theme.min.css"> -->
         <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
@@ -15,6 +31,11 @@
 
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript">
         </script>
+        <link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/company/user/dist/ratchet-theme-ios.css" type="text/css">
+        <link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/company/user/css/app.css" type="text/css">
+
         <title>
             个人信息
         </title>
@@ -87,7 +108,8 @@
 
 
                 <div style=' width: 18%; margin-left: 5px;'>
-                    <img src='{$userinfo.headimgurl}' class='round_photo'>
+                    <img src='<?php echo $_smarty_tpl->getVariable('userinfo')->value['headimgurl'];?>
+' class='round_photo'>
                 </div>
 
 
@@ -105,21 +127,22 @@
             </div>
             <div class="giftListStyle" style="width: 100%;">
                 <div style="word-wrap: break-word; word-break: normal;">
-                    <div class="integration"><div class=" inline userTitleStyle" >昵称</div><div class="inline userMessage" >{$userinfo.nickname}</div></div>
+                    <div class="integration"><div class=" inline userTitleStyle" >昵称</div><div class="inline userMessage" ><?php echo $_smarty_tpl->getVariable('userinfo')->value['nickname'];?>
+</div></div>
                     <div class="integration"><div class=" inline userTitleStyle" >性别</div><div class="inline userMessage">
-                            {if $userinfo.sex eq "1"}
+                            <?php if ($_smarty_tpl->getVariable('userinfo')->value['sex']=="1"){?>
                                 男
-                            {else}
+                            <?php }else{ ?>
                                 女
-                            {/if}
+                            <?php }?>
                         </div>
                     </div>
-                    <div class="integration"><div class=" inline userTitleStyle" >出生地</div><div class="inline userMessage">{$userinfo.province}</div></div>
-                    <div class="integration"><div class=" inline userTitleStyle" >生日</div><div class="inline userMessage">{$userBirthday}</div></div>
+                    <div class="integration"><div class=" inline userTitleStyle" >出生地</div><div class="inline userMessage"><?php echo $_smarty_tpl->getVariable('userinfo')->value['province'];?>
+</div></div>
+                    <div class="integration"><div class=" inline userTitleStyle" >生日</div><div class="inline userMessage"><?php echo $_smarty_tpl->getVariable('userBirthday')->value;?>
+</div></div>
                 </div>
             </div>
-
-
         </div>
     </body>
 </html>

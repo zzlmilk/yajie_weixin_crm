@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 11:34:28
+         compiled from "C:\Apache24\htdocs\yajie_weixin_crm\wchatplatform/Tpl/Inhouse/User/usercenter.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:196815372e4441e62f3-03534763%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'fccd2502bc1fde3f0b61c141bcdfb11475a8e921' => 
+    array (
+      0 => 'C:\\Apache24\\htdocs\\yajie_weixin_crm\\wchatplatform/Tpl/Inhouse/User/usercenter.tpl',
+      1 => 1400037907,
+    ),
+  ),
+  'nocache_hash' => '196815372e4441e62f3-03534763',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <html><head>
         <meta charset="utf-8">
         <title>会员中心</title>
@@ -5,10 +23,14 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/dist/ratchet.css">
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/dist/ratchet-theme-ios.css">
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/user/css/app.css">
-        <script src="{$WebSiteUrlPublic}/company/dist/ratchet.js"></script>
+        <link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/company/user/dist/ratchet.css">
+        <link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/company/user/dist/ratchet-theme-ios.css">
+        <link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/company/user/css/app.css">
+        <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/company/dist/ratchet.js"></script>
         <style>
             body{
                 Font-size=62.5%;
@@ -59,7 +81,8 @@
 
 
                 <div style=' width: 18%;'>
-                    <img src='{$userinfo.weixin_user.headimgurl}' class='round_photo'>
+                    <img src='<?php echo $_smarty_tpl->getVariable('userinfo')->value['weixin_user']['headimgurl'];?>
+' class='round_photo'>
                 </div>
 
 
@@ -67,9 +90,11 @@
                 <div style=' width: 66%; overflow: hidden; position: absolute; left: 20%; top: 5%;'>
 
                     <div style='margin-top: 4%;  '>
-                        <span style='font-size:15px; display: inline-block; width: 98%; height: 4%;  '>{$userinfo.weixin_user.nickname}</span>
+                        <span style='font-size:15px; display: inline-block; width: 98%; height: 4%;  '><?php echo $_smarty_tpl->getVariable('userinfo')->value['weixin_user']['nickname'];?>
+</span>
                     </div>
-                    <div class='siteClass' style='font-size:12px;'>Tel:{$userinfo.user.user_phone}</div>
+                    <div class='siteClass' style='font-size:12px;'>Tel:<?php echo $_smarty_tpl->getVariable('userinfo')->value['user']['user_phone'];?>
+</div>
 
 
 
@@ -77,7 +102,8 @@
 
                 <div style='position: absolute; top: 48%; left: 90%; width: 10%;' >
 
-                    <img src='{$WebSiteUrlPublic}/company/image/edit.png' style=" width: 100%">
+                    <img src='<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/company/image/edit.png' style=" width: 100%">
                 </div>
 
                 <div onclick='alert("暂未开放。。敬请期待")' style=' cursor: pointer; position: absolute;  width: 4%; left: 95%; top: 74%; height: 20%;'>
@@ -90,14 +116,18 @@
                 <li class="table-view-cell media">
                     <a class="push-right"   data-transition="slide-in">
                         <!-- <span class="media-object icon icon-person pull-left"></span> -->
-                        <div class="media-body" onclick='window.location.href = "{$websiteUrl}?g=company&a=user&v=userInfo&open_id={$open_id}"'>
+                        <div class="media-body" onclick='window.location.href = "<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
+?g=company&a=user&v=userInfo&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+"'>
                             我的资料
                         </div>
                     </a>
                 </li>
               
                 <li class="table-view-cell media">
-                    <a class="push-right" href="javascript:void(0)" data-transition="slide-in"  onclick='window.location.href = "{$websiteUrl}?g=company&a=user&v=userJF&open_id={$open_id}"'>
+                    <a class="push-right" href="javascript:void(0)" data-transition="slide-in"  onclick='window.location.href = "<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
+?g=company&a=user&v=userJF&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+"'>
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
                         <div class="media-body">
                             积分和消费
@@ -108,7 +138,9 @@
                 <li class="table-view-cell media">
                     <a class="push-right"  data-transition="slide-in">
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-                        <div class="media-body"  onclick='window.location.href = "{$websiteUrl}?g=company&a=exchange&v=getUserExchangeRecord&open_id={$open_id}"'>
+                        <div class="media-body"  onclick='window.location.href = "<?php echo $_smarty_tpl->getVariable('websiteUrl')->value;?>
+?g=company&a=exchange&v=getUserExchangeRecord&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+"'>
                             兑换信息
                         </div>
                     </a>

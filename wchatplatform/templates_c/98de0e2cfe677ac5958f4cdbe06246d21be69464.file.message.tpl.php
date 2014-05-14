@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-18 12:21:01
+         compiled from "C:/Apache24/htdocs/yajie_weixin_crm/wchatplatform/templates/Public/message.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:257355350a82dc23063-46818213%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '98de0e2cfe677ac5958f4cdbe06246d21be69464' => 
+    array (
+      0 => 'C:/Apache24/htdocs/yajie_weixin_crm/wchatplatform/templates/Public/message.tpl',
+      1 => 1397794200,
+    ),
+  ),
+  'nocache_hash' => '257355350a82dc23063-46818213',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 
 <!DOCTYPE html>
 <html>
@@ -28,7 +46,8 @@
     </head>
     <body>
 
-        <div id="errorMessage" class="alert alert-danger ">{$msg}</div>
+        <div id="errorMessage" class="alert alert-danger "><?php echo $_smarty_tpl->getVariable('msg')->value;?>
+</div>
     </boby>
     
     

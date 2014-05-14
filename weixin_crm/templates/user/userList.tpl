@@ -1,6 +1,7 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
 <link href="{$WebSiteUrl}/css/flat/blue.css" rel="stylesheet">
-
+<link href="{$WebSiteUrl}/css/crm_table_style.css" rel="stylesheet">
 <style>
     body{
         overflow-x: hidden;
@@ -11,13 +12,7 @@
         margin-top: 15px;
         text-align: center;
     }
-    .dataArea{
-        text-align: left;
-        margin-left: 45px;
-        margin-right: 45px;
-        min-width: 500px;
-        height: 190px;
-    }
+
     .sortBar{
         width: 30%;
         margin-left: 45px;
@@ -46,15 +41,6 @@
     }
     .selectBar{
         padding-left: 45px;
-    }
-    .navBarStyle{
-        color:white;
-        line-height: 46px;
-        font-size:16px; 
-        padding-left: 45px;
-        height: 46px;
-        background-image: url('{$WebSiteUrl}/images/navBackground.png');
-        border-radius: 10px 10px 0 0;
     }
 </style>
 <div class="navBarStyle">
@@ -94,7 +80,8 @@
         {/foreach}
     </table>
 </div>
-<div style="text-align: center; position: absolute; bottom: 5px; left: 45%">{$pages}</div> 
+<div class="pageHeight"></div>
+<div class="pageStyle">{$pages}</div> 
 <script src="{$WebSiteUrl}/js/jquery-1.9.1.js"></script>
 <script src="{$WebSiteUrl}/js/rexexTest.js"></script>
 <script src="{$WebSiteUrl}/js/icheck.min.js"></script>
@@ -118,5 +105,5 @@ var changeValue="";
 changeValue=phoneNumber.substr(0,3)+"-"+phoneNumber.substr(4,3)+"-"+phoneNumber.substr(6);
 $(this).html(changeValue);
   
-})
+});
 </script>

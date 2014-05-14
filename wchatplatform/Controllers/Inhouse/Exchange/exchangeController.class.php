@@ -252,7 +252,7 @@ class exchangeController extends BaseController {
 
             $exchangeApi = new exchangeApi();
 
-            $exchangeReocrd = $exchangeApi->getUserExchangeInfo($this->userOpenId, 'company');
+            $exchangeReocrd = $exchangeApi->getUserExchangeInfo($this->userOpenId, 'Inhouse');
 
 
 

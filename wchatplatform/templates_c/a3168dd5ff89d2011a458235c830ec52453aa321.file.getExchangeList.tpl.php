@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-04-24 10:35:44
+         compiled from "C:/Apache24/htdocs/yajie_weixin_crm/wchatplatform/templates/Exchange/getExchangeList.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2893553587880ec6cd9-44233954%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'a3168dd5ff89d2011a458235c830ec52453aa321' => 
+    array (
+      0 => 'C:/Apache24/htdocs/yajie_weixin_crm/wchatplatform/templates/Exchange/getExchangeList.tpl',
+      1 => 1398306941,
+    ),
+  ),
+  'nocache_hash' => '2893553587880ec6cd9-44233954',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -64,7 +82,8 @@
 
 
             <div style=' width: 18%;'>
-                <img src='{$weixinUserInfo.headimgurl}' class='round_photo'>
+                <img src='<?php echo $_smarty_tpl->getVariable('weixinUserInfo')->value['headimgurl'];?>
+' class='round_photo'>
             </div>
 
 
@@ -72,34 +91,53 @@
             <div style=' width: 66%; overflow: hidden; position: absolute; left: 20%; top: 5%;'>
 
                 <div style='margin-top:10%;line-height: 15px;'>
-                    <span style='font-size:15px; display: inline-block;  height: 4%;  '>用户昵称：{$weixinUserInfo.nickname}</span>
-                    <span id="userIntegration" style='font-size:15px; display: inline-block;  height: 4%;  '>剩余积分:{$localUserInfo.user_integration}</span>
+                    <span style='font-size:15px; display: inline-block;  height: 4%;  '>用户昵称：<?php echo $_smarty_tpl->getVariable('weixinUserInfo')->value['nickname'];?>
+</span>
+                    <span id="userIntegration" style='font-size:15px; display: inline-block;  height: 4%;  '>剩余积分:<?php echo $_smarty_tpl->getVariable('localUserInfo')->value['user_integration'];?>
+</span>
                 </div>
             </div>
         </div>
         <div class="registerWarp">
-            {foreach from=$exchangeList item=exchangeItem key=key}
+            <?php  $_smarty_tpl->tpl_vars['exchangeItem'] = new Smarty_Variable;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('exchangeList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if (count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['exchangeItem']->key => $_smarty_tpl->tpl_vars['exchangeItem']->value){
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['exchangeItem']->key;
+?>
                 <div class="giftListStyle">
-                    <div style="float: left;margin: 10px"> <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img width="80" height="80" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
+                    <div style="float: left;margin: 10px"> <a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=company&a=exchange&v=exchangeGoods&goodsId=<?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_id'];?>
+&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+"><img width="80" height="80" src="<?php echo $_smarty_tpl->getVariable('WebImageUrl')->value;?>
+<?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_image'];?>
+"></a></div>
                     <div style="float: left;margin: 10px;width: 58%;">
                         <div style="word-wrap: break-word; word-break: normal;">
-                            <p class="summary"> {$exchangeItem.exchange_summary}</p>
-                            <p class="integration">积分: {$exchangeItem.exchange_integration}</p>
+                            <p class="summary"> <?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_summary'];?>
+</p>
+                            <p class="integration">积分: <?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_integration'];?>
+</p>
                             <p>类型: 
-                                {if $exchangeItem.exchange_type eq 0}
+                                <?php if ($_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_type']==0){?>
                                     虚拟
-                                {else}
+                                <?php }else{ ?>
                                     实物
-                                {/if}
+                                <?php }?>
                             </p>
-                            
-<!--                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=Inhouse&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>-->
-                          
-                         
+                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=company&a=exchange&v=changeGoods&goodsId=<?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_id'];?>
+&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+"><button  type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>
+<!--                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=company&a=exchange&v=changeGoods&goodsId=<?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_id'];?>
+&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>-->
                         </div>
                     </div>
                 </div>
-            {/foreach}
+            <?php }} ?>
         </div>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -114,7 +152,8 @@
                     <div class="modal-footer" style="border: none;">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                         <a id="checkButton" href=""><button type="button" class="btn btn-primary">确认</button></a>
-                        <input type="hidden" id="gotoUrl" value="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=exchangeItemDelete&ItemId="  />
+                        <input type="hidden" id="gotoUrl" value="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=exchange&functionname=exchangeItemDelete&ItemId="  />
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->

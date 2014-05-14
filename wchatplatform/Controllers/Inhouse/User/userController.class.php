@@ -21,6 +21,7 @@ class UserController extends BaseController {
 
 
         $this->assign('open_id', $this->userOpenId);
+        $this->assign('source', SOURCE);
     }
 
     /**
@@ -48,9 +49,6 @@ class UserController extends BaseController {
             $this->$function();
         }
     }
-
-    
-
     /**
      * 用户积分
      */
@@ -117,18 +115,23 @@ class UserController extends BaseController {
     /**
      * 手机绑定
      */
+    public function bind() {
 
-    public function bind(){
-
-        if(!empty($_REQUEST['phone']) && !empty($this->userOpenId)){
+        if (!empty($_REQUEST['phone']) && !empty($this->userOpenId)) {
 
             $userApi = new userApi();
 
-            $array = $userApi->bind($_REQUEST['phone'],$this->userOpenId);
+            $array = $userApi->bind($_REQUEST['phone'], $this->userOpenId);
 
             print_r($array);
         }
+    }
 
+    //用户消费记录
+    public function userExpense() {
+       // $this->able_register();
+
+        $this->display();
     }
 
    public function ativating(){
