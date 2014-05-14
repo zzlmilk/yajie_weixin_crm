@@ -72,6 +72,17 @@ class UserModel extends Basic {
 
             $data['address_phone'] = $val['user_phone'];
 
+
+            if(!empty($val['user_card'])){
+
+                /**
+                 * 博卡 系统 插入 卡号
+                 */
+
+                $data['user_card'] = $val['user_card'];
+
+            }
+
             if(!empty($val['user_integration'])){
 
                 $data['user_integration'] = $val['user_integration'];

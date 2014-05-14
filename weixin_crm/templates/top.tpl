@@ -16,7 +16,7 @@
 	</div>
 
 
-	<div style='position: absolute; left: 440px; top: 47px;' class='banner'>
+	<div style='position: absolute; left: 440px; top: 51px;' class='banner'>
 
 		<div style='margin-left: 57px; margin-top: 18px;'>
 

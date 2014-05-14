@@ -56,6 +56,8 @@ class view {
         }
 
 
+       
+
         $this->smarty->assign('uname', $_SESSION['user_name']);
 
         $this->smarty->assign('account',$_SESSION['weixin_user_account']);

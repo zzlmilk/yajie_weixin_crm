@@ -35,7 +35,7 @@ defined('URL_PATHINFO_FETCH') or define('URL_PATHINFO_FETCH', 'ORIG_PATH_INFO,RE
 /**
  * 关闭报错信息 把报错信息存储到错误文件中
  */
-ini_set("display_errors",0);
+ini_set("display_errors",1);
 
 defined('APIURL') or define('APIURL', 'http://112.124.25.155/weixin_api');
 

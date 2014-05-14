@@ -83,7 +83,7 @@
                
             </div>
           
-            <p style=" margin-left: 85px;"><button id="addButton" class="btn btn-info">确认添加</button></p>
+            <p style=" margin-left: 710px;"><button id="addButton" class="btn btn-info">确认添加</button></p>
         </form>
     </div>
 </div>

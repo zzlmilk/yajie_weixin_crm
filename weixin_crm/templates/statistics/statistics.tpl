@@ -50,6 +50,14 @@
                          <option value="3" {if $type == 3}selected="selected" {/if}>每月项目消费</option>
                     </select>
                 </div>
+
+                 <div class="col-sm-2">
+                    <select name="tongjiType" id='tongjiType' class="form-control inputWidth" onchange='locationUrl()'>
+                        <option value="0" {if $tongjiType == 0}selected="selected" {/if}>折现图</option>
+                        <option value="1" {if $tongjiType == 1}selected="selected" {/if}>圆柱图</option>
+                         <option value="2" {if $tongjiType == 2}selected="selected" {/if}>饼图</option>
+                    </select>
+                </div>
             </div>
 
             <br />
@@ -68,8 +76,33 @@
 
 	   var YVAL = eval('{$YVAL}');
 
+       var tongjiType = '{$tongjiType}';
+
+       var $name;
+
+        if(tongjiType == 1){
+
+             $name = 'column';
+         
+        }
+
+        if(tongjiType == 0){
+
+             $name = 'line';
+
+        }
+
+      
+
      $(function () {
     $('#container').highcharts({
+
+      
+
+         chart: {
+            type: $name
+         },
+       
         title: {
             text: '',
             x: -20 //center
@@ -111,7 +144,7 @@
     function locationUrl(){
 
 
-    	window.location.href= url+'/pageredirst.php?action=statistics&functionname=statistics&type='+$('#type').val();
+    	window.location.href= url+'/pageredirst.php?action=statistics&functionname=statistics&type='+$('#type').val()+'&tongjiType='+$('#tongjiType').val();
 
     }
     

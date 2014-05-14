@@ -113,7 +113,12 @@ $("#goActivat").click(function() {
     </style>
 
     <body>
-        <form action="{$websiteUrl}?g={$model}&a=user&v=bind">
+
+        
+        <div class="ativatingWarp">
+        <form action="?g={$model}&a=user&v=bind" method='post'>
+
+            <input type='hidden' name='open_id' id='open_id' value='{$open_id}'>
             <div class="ativatingWarp">
 
                 <div class="logoStyle">

@@ -6,7 +6,7 @@ class WeiXinUserModel extends Basic {
 
         $this->child_name = 'weixin_user';
 
-        $this->newDB = 'weixin';
+       
 
         parent::__construct();
     }
@@ -19,6 +19,8 @@ class WeiXinUserModel extends Basic {
             $weixinApi = new weixinApi();
             
             $company = new companyModel();
+
+            $this->newDB = 'weixin';
             
             $token = $company->get_info($_REQUEST['source']);
 
@@ -27,6 +29,8 @@ class WeiXinUserModel extends Basic {
             $token_array = json_decode($token_json, true);
 
             $weixinUser = new WeiXinUserModel();
+
+             $this->newDB = '';
 
             if (is_array($token_array)) {
 
