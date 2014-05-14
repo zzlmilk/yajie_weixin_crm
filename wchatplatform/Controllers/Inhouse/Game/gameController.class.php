@@ -20,7 +20,7 @@ class gameController extends BaseController {
      */
     public function index() {
 
-        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.appid.'&secret='.secret.'&code=' . $_REQUEST['code'] . '&grant_type=authorization_code';
+        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=' . appid . '&secret=' . secret . '&code=' . $_REQUEST['code'] . '&grant_type=authorization_code';
 
         $result = transferData($url, "get");
 
@@ -38,8 +38,6 @@ class gameController extends BaseController {
         }
     }
 
-    
-
     /**
      * 活动页面
      */
@@ -53,17 +51,15 @@ class gameController extends BaseController {
         $this->display('activity');
     }
 
-  
     public function getActivity() {
 
-        $ActivityJson = transferData(APIURL . "/activity/get_activity?source=".SOURCE, "get");
+        $ActivityJson = transferData(APIURL . "/activity/get_activity?source=" . SOURCE, "get");
 
         $ActivityArray = json_decode($ActivityJson, true);
 
         return $ActivityArray;
     }
 
-   
     public function applyAction() {
 
         $phone = $_REQUEST['user_phone'];
@@ -81,15 +77,13 @@ class gameController extends BaseController {
             $applyResultJson = transferData(APIURL . "/apply/addApply", "post", $postDate);
 
             $applyResultArray = json_decode($applyResultJson, true);
-
-            $this->activity();
+            $this->displayMessage("恭喜报名成功",1);
+//            $this->activity();
         } else {
 
-            echo '手机号码错误';
+            $this->displayMessage("手机号码错误");
         }
     }
-
-    
 
 }
 

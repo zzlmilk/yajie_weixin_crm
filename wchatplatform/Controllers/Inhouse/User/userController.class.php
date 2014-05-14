@@ -350,9 +350,9 @@ class UserController extends BaseController {
 
             $userApi = new userApi();
 
-            $array = $userApi->bind($_REQUEST['phone'],$this->userOpenId);
+            $userApi->bind($_REQUEST['phone'],$this->userOpenId);
 
-            print_r($array);
+            $this->displayMessage("恭喜绑定成功",1);
         }
 
     }

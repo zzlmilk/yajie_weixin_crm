@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 17:57:22
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 18:07:23
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/Game/activity.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:40569609653733e02a0c337-58842377%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1555855665373405b85dd19-44166797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '74b364e9636188614d792ce1d45420c3fc94ccb3' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/Game/activity.tpl',
-      1 => 1400037397,
+      1 => 1400061692,
     ),
   ),
-  'nocache_hash' => '40569609653733e02a0c337-58842377',
+  'nocache_hash' => '1555855665373405b85dd19-44166797',
   'function' => 
   array (
   ),
