@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,7 +14,7 @@
        
         <style>
             body{
-                Font-size=62.5%;
+                background-image: url('{$WebSiteUrlPublic}/image/beijing.png');
             }
             .registerWarp{
                 margin: 0 auto;
@@ -23,13 +22,33 @@
                 width: 90%;
                 text-align: center;
             }
-
+            .errorMessage{
+                /*border: solid 1px red;*/
+                text-align: center;
+                color: rgb(71,71,71);
+                font-size: 1.2em;
+                height: 3em;
+                line-height: 4em;
+            }
+            .errorImg{
+               /* border: solid 1px red;*/
+                text-align: center;
+            }
+            .errorImg img{
+            max-width:100%;
+            height:auto;   
+            width: 25%;
+            }
         </style>
     </head>
     <body>
-
-        <div id="errorMessage" class="alert alert-danger ">{$msg}</div>
-    </boby>
+        <div style=" height: 5em;"></div>
+        <div class="errorImg">
+            <img src="{$WebSiteUrlPublic}/image/error.png">
+        </div>
+        <div class="errorMessage">{$msg}</div>
+        <div style=" height: 3em;"></div>
+    </body>
     
     
      <script>

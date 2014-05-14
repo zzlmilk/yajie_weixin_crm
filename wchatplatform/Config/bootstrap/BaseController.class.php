@@ -34,7 +34,7 @@ class BaseController {
                 $this->smarty_dir = MODULE_DIR;
             }
 
-            $this->smarty->template_dir = ROOT_DIR . '/Tpl/' .MODULE_DIR_NAME.'/'. $this->smarty_dir . '/';
+            $this->smarty->template_dir = ROOT_DIR . '/Tpl/' . MODULE_DIR_NAME . '/' . $this->smarty_dir . '/';
         }
 
         if ($this->tVar) {
@@ -79,11 +79,11 @@ class BaseController {
         $this->smarty->assign('websiteUrl', WebSiteUrl);
 
         $this->smarty->assign('model', MODULE_DIR_NAME);
-        
-       
 
-        $this->smarty->assign('WebSiteUrlPublic', WebSiteUrlPublic.'/'.SOURCE);
-        
+
+
+        $this->smarty->assign('WebSiteUrlPublic', WebSiteUrlPublic . '/' . SOURCE);
+
 
         $this->smarty->display($displayPage . '.tpl');
     }
@@ -111,15 +111,18 @@ class BaseController {
         exit('<script>window.location.href="' . $url . '";</script>');
     }
 
-    public function displayMessage($msg, $url = '') {
+    public function displayMessage($msg, $scuess = 0, $url = '') {
 
         $this->setDir('Public');
 
         $this->assign('url', $url);
 
         $this->assign('msg', $msg);
-
-        $this->display('message');
+        if ($scuess == 0) {
+            $this->display('message');
+        } else if ($scuess == 1) {
+            $this->display('messageSuccess');
+        }
 
         die;
     }
