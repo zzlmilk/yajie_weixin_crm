@@ -41,6 +41,21 @@ class statisticsController implements SMS {
     		$type = 1;
     	}
 
+        if(!empty($_REQUEST['tongjiType'])){
+
+            $tongjiType = $_REQUEST['tongjiType'];
+
+        } else{
+
+            $tongjiType = 0;
+        }
+
+       
+
+        
+
+
+        $_ENV['smarty']->assign('tongjiType',$tongjiType);
     	$_ENV['smarty']->assign('type',$type);
 
     	$_ENV['smarty']->assign('XVAL',$XVAL);

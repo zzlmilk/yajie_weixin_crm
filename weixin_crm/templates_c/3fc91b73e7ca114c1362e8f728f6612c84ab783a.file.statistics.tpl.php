@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 16:27:23
+         compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/statistics/statistics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:748783267537328ebf401f2-94176842%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '3fc91b73e7ca114c1362e8f728f6612c84ab783a' => 
+    array (
+      0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/statistics/statistics.tpl',
+      1 => 1400056037,
+    ),
+  ),
+  'nocache_hash' => '748783267537328ebf401f2-94176842',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -10,10 +28,12 @@
 		<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript">
 </script>
 		<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" type="text/css">
-		<script src="{$WebSiteUrl}/js/Chart.js" type="text/javascript">
+		<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/js/Chart.js" type="text/javascript">
 </script>
 
-<script src="{$WebSiteUrl}/js/highcharts.js" type="text/javascript">
+<script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/js/highcharts.js" type="text/javascript">
 </script>
 		<style type="text/css">
 .labelWidth{
@@ -45,17 +65,17 @@
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">统计类型</label>
                 <div class="col-sm-2">
                     <select name="type" id='type' class="form-control inputWidth" onchange='locationUrl()'>
-                        <option value="1" {if $type == 1}selected="selected" {/if}>每月用户消费</option>
-                        <option value="2" {if $type == 2}selected="selected" {/if}>1季度消费</option>
-                         <option value="3" {if $type == 3}selected="selected" {/if}>每月项目消费</option>
+                        <option value="1" <?php if ($_smarty_tpl->getVariable('type')->value==1){?>selected="selected" <?php }?>>每月用户消费</option>
+                        <option value="2" <?php if ($_smarty_tpl->getVariable('type')->value==2){?>selected="selected" <?php }?>>1季度消费</option>
+                         <option value="3" <?php if ($_smarty_tpl->getVariable('type')->value==3){?>selected="selected" <?php }?>>每月项目消费</option>
                     </select>
                 </div>
 
                  <div class="col-sm-2">
                     <select name="tongjiType" id='tongjiType' class="form-control inputWidth" onchange='locationUrl()'>
-                        <option value="0" {if $tongjiType == 0}selected="selected" {/if}>折现图</option>
-                        <option value="1" {if $tongjiType == 1}selected="selected" {/if}>圆柱图</option>
-                         <option value="2" {if $tongjiType == 2}selected="selected" {/if}>饼图</option>
+                        <option value="0" <?php if ($_smarty_tpl->getVariable('tongjiType')->value==0){?>selected="selected" <?php }?>>折现图</option>
+                        <option value="1" <?php if ($_smarty_tpl->getVariable('tongjiType')->value==1){?>selected="selected" <?php }?>>圆柱图</option>
+                         <option value="2" <?php if ($_smarty_tpl->getVariable('tongjiType')->value==2){?>selected="selected" <?php }?>>饼图</option>
                     </select>
                 </div>
             </div>
@@ -66,17 +86,22 @@
 
 	<script>
 
-	   var url = '{$WebSiteUrl}';
+	   var url = '<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+';
 
-	   var type = '{$type}';
+	   var type = '<?php echo $_smarty_tpl->getVariable('type')->value;?>
+';
 
-	   var XVAL = eval('{$XVAL}');
+	   var XVAL = eval('<?php echo $_smarty_tpl->getVariable('XVAL')->value;?>
+');
 
 
 
-	   var YVAL = eval('{$YVAL}');
+	   var YVAL = eval('<?php echo $_smarty_tpl->getVariable('YVAL')->value;?>
+');
 
-       var tongjiType = '{$tongjiType}';
+       var tongjiType = '<?php echo $_smarty_tpl->getVariable('tongjiType')->value;?>
+';
 
        var $name;
 

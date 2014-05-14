@@ -166,7 +166,13 @@ class InhousePlug {
 
 				$begin_time =  date("Ymd",$t);
 
-				$info = $userCard->getCardRecord($user_card,$begin_time,$end_time);
+
+				if(!empty($_REQUEST['type']) && $_REQUEST['type'] == 1){
+
+					$type ='record_id desc';
+				} 
+
+				$info = $userCard->getCardRecord($user_card,$begin_time,$end_time,$type);
 
 				$array['record'] = $info;
 

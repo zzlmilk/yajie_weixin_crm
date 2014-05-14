@@ -33,6 +33,9 @@ class errorApi extends BaseController {
                      */
                     //R('/user/register','company',$var);
 
+
+                
+
                     U(SOURCE.'/user/register', $var);
                     die;
                     break;

@@ -10,15 +10,29 @@ class UserCardRecordModel extends Basic {
         
     }
 
-    public function getCardRecord($card,$begin_time,$end_time){
+    public function getCardRecord($card,$begin_time,$end_time,$type =''){
 
     	$where = 'user_card like "'.$card.'"';
 
-    	if(!empty($end_time) && !empty($begin_time)){
+        if(!empty($type)){
 
-    		$where.=' and order_time between "'.$begin_time.'"  and "'.$end_time.'"';
 
-    	}
+            $this->randOffset(5);
+
+            $this->addOrderBy($type);
+            
+        } else{
+
+
+            if(!empty($end_time) && !empty($begin_time)){
+
+                $where.=' and order_time between "'.$begin_time.'"  and "'.$end_time.'"';
+
+            }
+
+        }
+
+
        $this->initialize($where);
 
 
