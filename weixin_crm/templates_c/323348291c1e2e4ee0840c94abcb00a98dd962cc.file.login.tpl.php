@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-12 14:50:32
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 12:04:00
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:196780954053706f38a564c3-21463630%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:681988755372eb30297097-91557664%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '323348291c1e2e4ee0840c94abcb00a98dd962cc' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/login.tpl',
-      1 => 1399447939,
+      1 => 1400040237,
     ),
   ),
-  'nocache_hash' => '196780954053706f38a564c3-21463630',
+  'nocache_hash' => '681988755372eb30297097-91557664',
   'function' => 
   array (
   ),
@@ -40,8 +40,22 @@ $_smarty_tpl->decodeProperties(array (
                 }
             }
         </script>
+
+               <style type="text/css">
+
+        .loginBack{
+        
+       
+       
+        background-image: url('images/inhouse_login.png');
+
+
+       
+       
+        }
+        </style>
     </head>
-    <body>
+    <body class='loginBack'>
         <form action="./publicHandler/process.php" method="post" id="myform">
             <div id="login">
                 <div class="login_name"><span>微信crm网站后台</span>管理中心</div>

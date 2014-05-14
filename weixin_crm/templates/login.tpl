@@ -22,8 +22,22 @@
                 }
             }
         </script>
+
+               <style type="text/css">
+
+        .loginBack{
+        
+       
+       
+        background-image: url('images/inhouse_login.png');
+
+
+       
+       
+        }
+        </style>
     </head>
-    <body>
+    <body class='loginBack'>
         <form action="./publicHandler/process.php" method="post" id="myform">
             <div id="login">
                 <div class="login_name"><span>微信crm网站后台</span>管理中心</div>
