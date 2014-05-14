@@ -5,10 +5,8 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/Inhouse/user/dist/ratchet.css">
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/Inhouse/user/dist/ratchet-theme-ios.css">
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/Inhouse/user/css/app.css">
         <script src="{$WebSiteUrlPublic}/Inhouse/dist/ratchet.js"></script>
         <style>
             body{
@@ -60,7 +58,7 @@
 
 
             <div style=' width: 18%;margin-left: 5px;'>
-                <img src='{$userinfo.weixin_user.headimgurl}' class='round_photo'>
+                <img src='{$userinfo.headimgurl}' class='round_photo'>
             </div>
             <div style='height: 0.8em;width: 100%;'>&nbsp;</div>
 
@@ -68,35 +66,43 @@
             <div style=' width: 66%; overflow: hidden; position: absolute; left: 25%; top: 5px;'>
 
                 <div style='margin-top: 4%;  '>
-                    <div class='siteClass' style='font-size:14px;' >昵称:&nbsp; aaaa{$userinfo.weixin_user.nickname}</div>
+                    <div class='siteClass' style='font-size:14px;' >昵称:&nbsp; {$userInfo.user_name}</div>
                 </div>
-                <div class='siteClass' style='font-size:14px;'>积分:&nbsp; 1800{$userinfo.user.user_phone}</div>
-                <div class='siteClass' style='font-size:14px;'>卡号:&nbsp; 3502-6890-885{$userinfo.user.user_phone}</div>
+                <div class='siteClass' style='font-size:14px;'>积分:&nbsp; {$userInfo.user_integration}</div>
+                <div class='siteClass' style='font-size:14px;'>卡号:&nbsp; {$userInfo.user_card}</div>
 
 
             </div>
 
         </div>
+        {foreach from=$expenseItem item=exchangeList key=key}
+            <div class="expenseBox" style="">
+                <div class="text-padding expenseTitle" >
+                    <span class="dateValue">{$exchangeList.order_time}</span> <span class="timeValue">{$exchangeList.begin_time}</span> <span style="float: right; color: skyblue">总计： {$exchangeList.money}元</span>   
+                </div>
+                <div class="text-padding">
+                    <div class="item-postion"> {$exchangeList.record_commodity}<span style="float: right;">{$exchangeList.money}元</span></div>
+                    <div style="height: 10px;"></div>
+                </div>
+            </div>
+        {/foreach}
 
-        <div class="expenseBox" style="">
-            <div class="text-padding expenseTitle" >
-                2014-05-21 10:28:23 <span style="float: right; color: skyblue">总计： 460元</span>   
-            </div>
-            <div class="text-padding">
-                <div class="item-postion"> 染发<span style="float: right;">280元</span></div>
-                <div class="item-postion"> 洗剪吹（总监）<span style="float: right;">180元</span></div>
-                <div style="height: 10px;"></div>
-            </div>
-        </div>
-
-        <div class="expenseBox" style="">
-            <div class="text-padding expenseTitle" >
-                2014-05-21 10:28:23 <span style="float: right; color: skyblue">总计： 280元</span>   
-            </div>
-            <div class="text-padding">
-                <div class="item-postion"> 染发<span style="float: right;">280元</span></div>
-                <div style="height: 10px;"></div>
-            </div>
-        </div>
     </body>
+    <script>
+        $(".dateValue").each(function(){
+        var thisDate=$(this).html();
+        var years=thisDate.substr(0,4);
+        var month=thisDate.substr(4,2);
+        var date=thisDate.substr(6,2);
+        $(this).html(years+"-"+month+"-"+date);
+    })
+    $(".timeValue").each(function(){
+    var thisDate=$(this).html();
+    var hours=thisDate.substr(0,2);
+    var mintues=thisDate.substr(2,2);
+    var seconed=thisDate.substr(4,2);
+    $(this).html(hours+":"+mintues+":"+seconed);
+})
+
+    </script>
 </html>

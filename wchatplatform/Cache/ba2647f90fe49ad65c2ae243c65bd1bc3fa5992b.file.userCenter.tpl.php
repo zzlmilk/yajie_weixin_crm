@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 16:59:05
+         compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/User/userCenter.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:117707285153733059550da2-45214336%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'ba2647f90fe49ad65c2ae243c65bd1bc3fa5992b' => 
+    array (
+      0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/User/userCenter.tpl',
+      1 => 1400057420,
+    ),
+  ),
+  'nocache_hash' => '117707285153733059550da2-45214336',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,7 +27,8 @@
 
        
 
-        <script src="{$WebSiteUrlPublic}/javascript/hignchats/highcharts.js" type="text/javascript">
+        <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/javascript/hignchats/highcharts.js" type="text/javascript">
 </script>
 
         <style>
@@ -62,7 +81,8 @@
 
 
             <div style=' width: 18%;margin-left: 5px;'>
-                <img src='{$userinfo.headimgurl}' class='round_photo'>
+                <img src='<?php echo $_smarty_tpl->getVariable('userinfo')->value['headimgurl'];?>
+' class='round_photo'>
             </div>
             <div style='height: 0.8em;width: 100%;'>&nbsp;</div>
 
@@ -70,10 +90,13 @@
             <div style=' width: 66%; overflow: hidden; position: absolute; left: 25%; top: 5px;'>
 
                 <div style='margin-top: 4%;  '>
-                    <div class='siteClass' style='font-size:14px;' >昵称:&nbsp; {$userInfo.user_name}</div>
+                    <div class='siteClass' style='font-size:14px;' >昵称:&nbsp; <?php echo $_smarty_tpl->getVariable('userInfo')->value['user_name'];?>
+</div>
                 </div>
-                <div class='siteClass' style='font-size:14px;'>积分:&nbsp; {$userInfo.user_integration}</div>
-                <div class='siteClass' style='font-size:14px;'>卡号:&nbsp; {$userInfo.user_card}</div>
+                <div class='siteClass' style='font-size:14px;'>积分:&nbsp; <?php echo $_smarty_tpl->getVariable('userInfo')->value['user_integration'];?>
+</div>
+                <div class='siteClass' style='font-size:14px;'>卡号:&nbsp; <?php echo $_smarty_tpl->getVariable('userInfo')->value['user_card'];?>
+</div>
 
 
             </div>
@@ -89,11 +112,13 @@
 
 
 
-       var XVAL = eval('{$XVAL}');
+       var XVAL = eval('<?php echo $_smarty_tpl->getVariable('XVAL')->value;?>
+');
 
 
 
-       var YVAL = eval('{$YVAL}');
+       var YVAL = eval('<?php echo $_smarty_tpl->getVariable('YVAL')->value;?>
+');
 
      $(function () {
     $('#container').highcharts({

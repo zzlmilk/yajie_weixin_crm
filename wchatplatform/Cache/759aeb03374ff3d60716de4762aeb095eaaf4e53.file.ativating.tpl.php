@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 17:19:25
+         compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/User/ativating.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:14705735985373351d586191-76770077%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '759aeb03374ff3d60716de4762aeb095eaaf4e53' => 
+    array (
+      0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/User/ativating.tpl',
+      1 => 1400059163,
+    ),
+  ),
+  'nocache_hash' => '14705735985373351d586191-76770077',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <!DOCTYPE html>
 <html> 
     <head>
@@ -49,7 +67,8 @@ $("#goActivat").click(function() {
         body{
             Font-size=62.5%;
             /*background-color: rgb(234,234,234);*/
-            background-image: url({$WebSiteUrlPublic}/image/beijing.png);
+            background-image: url(<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/image/beijing.png);
         }
         .ativatingWarp{
             /*border: solid 1px green;*/
@@ -116,13 +135,16 @@ $("#goActivat").click(function() {
 
         
         <div class="ativatingWarp">
-        <form action="?g={$model}&a=user&v=bind" method='post'>
+        <form action="?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
+&a=user&v=bind" method='post'>
 
-            <input type='hidden' name='open_id' id='open_id' value='{$open_id}'>
+            <input type='hidden' name='open_id' id='open_id' value='<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+'>
             <div class="ativatingWarp">
 
                 <div class="logoStyle">
-                    <img src="{$WebSiteUrlPublic}/image/logo.png"/>
+                    <img src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/image/logo.png"/>
                 </div>
 
                 <div class="form-group">

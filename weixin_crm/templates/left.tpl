@@ -207,7 +207,7 @@
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" onclick="tupian('4')">订单管理</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" >订单管理</a>
 
                                     </div>
                                     </td>
@@ -223,7 +223,7 @@
 
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=orderAdd" target="mainFrame" class="left-fontSmall" onclick="tupian('5')">新增预约</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=orderAdd" target="mainFrame" class="left-fontSmall">新增预约</a>
 
                                     </div>
 
@@ -344,7 +344,7 @@
                                     <td width="85%">
 
                                          <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=addExchangeItem" target="mainFrame" class="left-fontSmall" onclick="tupian('9')">添加礼品</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=addExchangeItem" target="mainFrame" class="left-fontSmall">添加礼品</a>
 
                                     </div>
                                     </td>
@@ -390,7 +390,7 @@
                                     <td width="85%">
 
                                          <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=registration&functionname=registrationCount" target="mainFrame" class="left-fontSmall" onclick="tupian('15')">签到统计</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=registration&functionname=registrationCount" target="mainFrame" class="left-fontSmall" >签到统计</a>
 
                                     </div>
                                     </td>
@@ -406,7 +406,7 @@
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=activty" target="mainFrame" class="left-fontSmall" onclick="tupian('16')">活动</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=activty" target="mainFrame" class="left-fontSmall" >活动</a>
 
                                          </div>
                                     </td>
@@ -423,7 +423,7 @@
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=addactivty" target="mainFrame" class="left-fontSmall" onclick="tupian('20')">添加活动</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=addactivty" target="mainFrame" class="left-fontSmall" >添加活动</a>
 
 
                                     </div>
@@ -441,7 +441,7 @@
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=question&functionname=questionCount" target="mainFrame" class="left-fontSmall" onclick="tupian('17')">问卷统计</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=question&functionname=questionCount" target="mainFrame" class="left-fontSmall">问卷统计</a>
 
                                     </div>
                                     </td>
@@ -484,7 +484,7 @@
                                     <td width="85%">
 
                                          <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=weixinuser&functionname=weixinuser" target="mainFrame" class="left-fontSmall" onclick="tupian('11')">微信数据</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=weixinuser&functionname=weixinuser" target="mainFrame" class="left-fontSmall" >微信数据</a>
 
                                          </div>
                                     </td>
@@ -500,7 +500,7 @@
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=admin&functionname=admin" target="mainFrame" class="left-fontSmall" onclick="tupian('12')">管理员账号</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=admin&functionname=admin" target="mainFrame" class="left-fontSmall">管理员账号</a>
 
                                         </div>
                                     </td>
@@ -516,7 +516,7 @@
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=admin&functionname=setAccount" target="mainFrame" class="left-fontSmall" onclick="tupian('13')">重置账户密码</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=admin&functionname=setAccount" target="mainFrame" class="left-fontSmall" >重置账户密码</a>
 
                                     </div>
                                     </td>
@@ -562,7 +562,7 @@
 
                                         <div class='left-a' >
 
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=SMS&functionname=SMSindex" target="mainFrame" class="left-fontSmall" onclick="tupian('14')">客服短信</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=SMS&functionname=SMSindex" target="mainFrame" class="left-fontSmall" >客服短信</a>
 
                                     </div>
                                     </td>
@@ -603,7 +603,7 @@
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=promoCodeCheck" target="mainFrame" class="left-fontSmall" onclick="tupian('90')">验证优惠码</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=promoCodeCheck" target="mainFrame" class="left-fontSmall" >验证优惠码</a>
 
                                     </div>
                                     </td>
@@ -619,7 +619,7 @@
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=addCode" target="mainFrame" class="left-fontSmall" onclick="tupian('91')">生成优惠码</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=addCode" target="mainFrame" class="left-fontSmall" >生成优惠码</a>
 
                                     </div>
                                     </td>
@@ -634,7 +634,7 @@
                                     <td width="85%">
 
                                          <div class='left-a' >
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=codeList" target="mainFrame" class="left-fontSmall" onclick="tupian('92')">优惠码列表</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=codeList" target="mainFrame" class="left-fontSmall" >优惠码列表</a>
 
                                     </div>
                                     </td>
@@ -722,7 +722,7 @@
 
                                          <div class='left-a' >
 
-                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=statistics&functionname=statistics" target="mainFrame" class="left-fontSmall" onclick="tupian('200')">统计模块</a>
+                                        <a style='color: #79107d' href="{$WebSiteUrl}/pageredirst.php?action=statistics&functionname=statistics" target="mainFrame" class="left-fontSmall" >统计模块</a>
 
                                     </div>
                                     </td>

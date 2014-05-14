@@ -50,7 +50,7 @@ if (isset($_POST['user'])) {
         $_SESSION['weixin_user_account'] = $admin->vars['account'];
 
 
-        $_SESSION['sorce'] = $token;
+        $_SESSION['sorce'] = strtolower($token);
 
         
 

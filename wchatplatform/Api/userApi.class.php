@@ -101,11 +101,6 @@ class userApi {
 
         $arrayJson = transferData(APIURL . "/user/binding", "post", $data);
 
-        
-        print_r($arrayJson);
-
-
-        die;
         $array = json_decode($arrayJson, true);
 
         $error = new errorApi();
