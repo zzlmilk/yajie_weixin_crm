@@ -49,9 +49,9 @@
             <div class="form-group"> 
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品类型：</label>
                 <div class="col-sm-2">
-                    <select name="exchange_type" id='exchangeType' class="form-control inputWidth">
-                        <option value="0" selected="selected">虚拟</option>
-                        <option value="1">实物</option>
+                    <select disabled="0" name="exchange_type" id='exchangeType' class="form-control inputWidth">
+                        <option value="0" >虚拟</option>
+                        <option value="1" selected="selected">实物</option>
                     </select>
                 </div>
             </div> 
