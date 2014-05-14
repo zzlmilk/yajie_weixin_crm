@@ -39,8 +39,18 @@
                 width: 100%;
                 margin-top: 20px; 
                 background-color: rgb(255,255,247);
+                border-radius: 5px; 
             }
-
+            .text-padding{
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .item-postion{
+                margin-top: 10px;
+            }
+            .expenseTitle{
+                border-bottom: 1px solid #e7e7e7;height: 40px; line-height: 40px; 
+            }
         </style>
     </head>
     <body style="background-color: #E7E7E7;">
@@ -69,8 +79,23 @@
         </div>
 
         <div class="expenseBox" style="">
-            <div style="border-bottom: 1px solid #e7e7e7">
-                2014-05-21 10:28:23 <span>总计</span>   
+            <div class="text-padding expenseTitle" >
+                2014-05-21 10:28:23 <span style="float: right; color: skyblue">总计： 460元</span>   
+            </div>
+            <div class="text-padding">
+                <div class="item-postion"> 染发<span style="float: right;">280元</span></div>
+                <div class="item-postion"> 洗剪吹（总监）<span style="float: right;">180元</span></div>
+                <div style="height: 10px;"></div>
+            </div>
+        </div>
+
+        <div class="expenseBox" style="">
+            <div class="text-padding expenseTitle" >
+                2014-05-21 10:28:23 <span style="float: right; color: skyblue">总计： 280元</span>   
+            </div>
+            <div class="text-padding">
+                <div class="item-postion"> 染发<span style="float: right;">280元</span></div>
+                <div style="height: 10px;"></div>
             </div>
         </div>
     </body>
