@@ -18,7 +18,7 @@
     </head>
     <body>
         <div class="registerWarp">
-            <form method='post' role="form" action="{$WebSiteUrl}?g=company&a=exchange&v=updateUserLocation">
+            <form method='post' role="form" action="{$WebSiteUrl}?g=Inhouse&a=exchange&v=updateUserLocation">
 
                 <input type="hidden" name='open_id' id='open_id' value='{$open_id}'>
                 <div class="form-group">
@@ -91,8 +91,8 @@
             </form>
         </div>
     </body>
-    <script src="{$WebSiteUrlPublic}/company/script/defined.js"></script>
-    <script src="{$WebSiteUrlPublic}/company/script/rexexTest.js"></script>
+    <script src="{$WebSiteUrlPublic}/Inhouse/script/defined.js"></script>
+    <script src="{$WebSiteUrlPublic}/Inhouse/script/rexexTest.js"></script>
     <script>
         //省市切换
         $("#province").change(function() {

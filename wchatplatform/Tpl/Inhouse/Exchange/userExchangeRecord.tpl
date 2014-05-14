@@ -47,7 +47,7 @@
                     <div style="float: left;margin: 10px;width: 58%;">
                         <div style="word-wrap: break-word; word-break: normal;">
                             <p class="summary"> {$exchangeItem.exchange_info.exchange_summary}</p>
-                            <p>积分: {$exchangeItem.exchange_info.exchange_integration}p</p>
+                            <p>积分: {$exchangeItem.exchange_info.exchange_integration}</p>
 
                             
                         </div>

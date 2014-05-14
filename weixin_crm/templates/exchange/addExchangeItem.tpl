@@ -82,7 +82,7 @@
                 </div>
             </div>
 
-            <p style="text-align: center;"><button data-toggle="modal" data-target="#myModal" type="button" id="addButton" class="btn btn-info">确认添加</button></p>
+            <p style="text-align: right;margin-right: 35px;"><button data-toggle="modal" data-target="#myModal" type="button" id="addButton" class="btn btn-info">确认添加</button></p>
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
