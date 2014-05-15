@@ -7,6 +7,7 @@
 <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="{$WebSiteUrlPublic}/company/css/bootstrap-datetimepicker.css">
+<link href="{$WebSiteUrl}/css/crm_table_style.css" rel="stylesheet">
 <style>
     .labelWidth{
         width: auto !important;
@@ -26,7 +27,10 @@
         display: none;
     }
 </style>
-<div class="userMangerTitle">添加礼品</div>
+<div class="navBarStyle">
+    当前位置：兑换管理 > 添加礼品
+</div>
+<div style="height: 50px;"></div>
 {if $errorMessage neq ''}
     <div id="errorMessage" style="display: block;" class="alert alert-danger errorMessage">
         {$errorMessage}

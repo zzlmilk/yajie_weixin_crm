@@ -6,6 +6,7 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+<link href="{$WebSiteUrl}/css/crm_table_style.css" rel="stylesheet">
 <style>
     .dataArea{
         text-align: left;
@@ -34,10 +35,12 @@
         text-decoration: none;
     }
 </style>
-<div class="userMangerTitle">礼品列表</div>
+<div class="navBarStyle">
+    当前位置：兑换管理 > 礼品列表
+</div>
 <div style="height: 50px;"></div>
 <div class="dataArea">
-    <table class="table table-striped" >
+    <table class="table table-bordered crmTable" >
         <tr><th>礼品图片</th><th>礼品名称</th><th>礼品类型</th><th style="width: 120px;">兑换积分</th><th>物品简介</th><th>详细介绍</th><th style="display: none">id</th><th>编辑</th><th>删除</th></tr>
         {foreach from=$exchangeList item=exchangeIteam key=key}
             <tr>
