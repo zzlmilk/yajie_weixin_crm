@@ -40,7 +40,7 @@ a:hover { text-decoration:underline;color: red}
 
 	width: 811px;
 
-	height: 40px;
+	height: 35px;
 
 
 	font-size: 13px;
@@ -94,6 +94,8 @@ a:hover { text-decoration:underline;color: red}
 	font-size: 16px;
 
 	color: rgb(38,78,99);
+
+	font-weight: bold;
 }
 
 .left-a{

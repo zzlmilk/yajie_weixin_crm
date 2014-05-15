@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
 <link href="{$WebSiteUrl}/css/minimal/blue.css" rel="stylesheet">
+<link href="{$WebSiteUrl}/css/crm_table_style.css" rel="stylesheet">
 
 <style>
     body{
@@ -43,7 +44,7 @@
 <div style="height: 50px;"></div>
 
 <div class="dataArea">
-    <table class="table table-striped">
+    <table class="table crmTable table-bordered">
         <tr><th>活动名称</th><th>结束时间</th><th>编辑</th></tr>
         {foreach from=$activtyAll item=activtyAlls key=key}
             <tr>

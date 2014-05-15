@@ -34,13 +34,13 @@
             </div>
 
           
-            <div style='float: left; overflow: hidden; height: 675px; width: 16%;' >
+            <div style='float: left; overflow: hidden; height: 675px; width: 16%;font-weight: bold;' >
 
                 <iframe frameborder='0' src="{$WebSiteUrl}/pageredirst.php?action=left&functionname=left" name="leftFrame"   id="leftFrame" title="leftFrame"  style=' height: 740px; width: 196px; margin-left: 5px;border-radius: 10px 10px 0 0;' ></iframe>
 
             </div>
 
-            <div style='float: left; overflow: hidden; height: 675px; width: 83%; margin-left: 5px'>
+            <div style='float: left; overflow: hidden; height: 675px; width: 83%; margin-left: 3px'>
 
 
 
