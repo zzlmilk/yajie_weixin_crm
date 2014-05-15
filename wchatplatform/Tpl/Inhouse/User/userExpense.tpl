@@ -15,6 +15,7 @@
             .round_photo{
                 width:100%;
                 height: auto;
+                min-height: 65px;
                 border:1px solid #ddddde;
                 -moz-border-radius:10%;
                 -webkit-border-radius: 10%;

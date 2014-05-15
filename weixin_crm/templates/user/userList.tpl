@@ -14,7 +14,7 @@
     }
 
     .sortBar{
-        width: 30%;
+        width: auto;
         margin-left: 45px;
         height: 25px;
         line-height: 0px;
@@ -58,20 +58,21 @@
     </div>
     <div class="sortBar"></div>
     {if $errorMessage neq ""}
-        <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label">aaaa{$errorMessage}</label></div>
+        <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label">{$errorMessage}</label></div>
     {/if}
 
 </form>
 
 <div class="dataArea">
     <table class="table table-bordered ">
-        <tr><th></th><th>姓名</th><th>电话</th><th>生日</th><th>余额</th><th>积分</th><th>编辑</th></tr>
+        <tr><th></th><th>姓名</th><th>电话</th><th>年龄</th><th>余额</th><th>积分</th><th>编辑</th></tr>
         {foreach from=$userInfo item=userInfo1 key=key}
             <tr>
                 <td>{$key+1}</td>
                 <td>{$userInfo1.user_name}</td>
                 <td class="userPhone">{$userInfo1.user_phone}</td>
-                <td>{$userInfo1.birthday|date_format:"%Y-%m-%d"}</td>
+<!--                <td>{$userInfo1.birthday|date_format:"%Y-%m-%d"}</td>-->
+                <td>{$userInfo1.birthday}</td>
                 <td>{$userInfo1.user_money}</td>
                 <td>{$userInfo1.user_integration}</td>
                 <td><a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userEdit&userId={$userInfo1.user_id}">编辑</a></td>
@@ -91,18 +92,18 @@
     radioClass: 'iradio_flat-blue',
     increaseArea: '20%' // optional
 }); 
-$("#selectText").on("input",function(){
-if(!getIntRegex($(this).val())){
-var cutString=$(this).val().substr(0, ($(this).val().length)-1);
-
-$("#selectText").val(cutString);
-}
-});
+//$("#selectText").on("input",function(){
+//if(!getIntRegex($(this).val())){
+//var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+//
+//$("#selectText").val(cutString);
+//}
+//});
 
 $(".userPhone").each(function(){
 var phoneNumber= $(this).html();
 var changeValue="";
-changeValue=phoneNumber.substr(0,3)+"-"+phoneNumber.substr(4,3)+"-"+phoneNumber.substr(6);
+changeValue=phoneNumber.substr(0,3)+"-"+phoneNumber.substr(3,3)+"-"+phoneNumber.substr(6);
 $(this).html(changeValue);
   
 });

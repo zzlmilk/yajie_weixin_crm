@@ -14,6 +14,10 @@ class userController implements User {
         $userModel->addOffset(0, $pageSize);
         $userModel->initialize();
         $result = $userModel->vars_all;
+        foreach($result as $k=>$v){
+            $v["birthday"]=date("Y",  time())-date("Y",$v["birthday"]); 
+            $result[$k]["birthday"]=$v["birthday"];
+        }
         $_ENV['smarty']->setDirTemplates('user');
         $_ENV['smarty']->assign('userInfo', $result);
         $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userListPage";
@@ -29,14 +33,25 @@ class userController implements User {
             $errorFlag = true;
             if (!empty($_POST['selectText'])) {
                 $phone = $_POST['selectText'];
-                $userModel = new userModel();
-                $userModel->initialize("user_phone = '" . $phone . "'");
-                if ($userModel->vars_number == 1) {
-                    $reVal = $userModel->vars;
-                    $_GET['userId'] = $reVal["user_id"];
-                    $errorFlag = false;
+                if (!ctype_digit($phone)) {
+                    $phoneCache = explode("-", $phone);
+                    foreach ($phoneCache as $phoneNumber) {
+                        $intPhone.=$phoneNumber;
+                    }
+                    $phone = $intPhone;
+                }
+                if (!ctype_digit($phone)) {
+                    $this->errorMessage = "手机号码格式不正确，请以13955555555或 139-555-55555形式查询";
                 } else {
-                    $this->errorMessage = "未找到对应的手机号码请确认后重新输入";
+                    $userModel = new userModel();
+                    $userModel->initialize("user_phone = '" . $phone . "'");
+                    if ($userModel->vars_number == 1) {
+                        $reVal = $userModel->vars;
+                        $_GET['userId'] = $reVal["user_id"];
+                        $errorFlag = false;
+                    } else {
+                        $this->errorMessage = "未找到对应的手机号码请确认后重新输入";
+                    }
                 }
             } else {
                 $this->errorMessage = "手机号码不能为空，请确认后重新输入";

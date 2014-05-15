@@ -37,6 +37,7 @@
             .round_photo{
                 width:100%;
                 height: auto;
+                min-height: 65px;
                 border:1px solid #ddddde;
                 -moz-border-radius: 59px;
                 -webkit-border-radius: 59px;
@@ -81,25 +82,7 @@
             </div>
         </div>
         <div class="registerWarp">
-            {foreach from=$exchangeList item=exchangeItem key=key}
-                <!--                <div class="giftListStyle">
-                                    <div style="float: left;margin: 10px"> <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img width="80" height="80" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
-                                    <div style="float: left;margin: 10px;width: 58%;">
-                                        <div style="word-wrap: break-word; word-break: normal;">
-                                            <p class="summary"> {$exchangeItem.exchange_summary}</p>
-                                            <p class="integration">积分: {$exchangeItem.exchange_integration}</p>
-                                            <p>类型: 
-                {if $exchangeItem.exchange_type eq 0}
-                    虚拟
-                {else}
-                    实物
-                {/if}
-            </p>     
-            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=Inhouse&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>
-        </div>
-    </div>
-</div>-->
-            {/foreach}
+
             <p style="text-align: center">亲！看中了哪一款请前往本店前台兑换哦~</p>
             {foreach from=$exchangeList item=exchangeItem key=key}
                 {if $key % 2 eq 0}
