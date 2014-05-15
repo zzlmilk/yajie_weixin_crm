@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 12:15:41
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 14:51:18
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/exchange/ExchangeList.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5968231205372edede0cef5-24329888%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1807201224537463e6a0f072-28882990%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b4d1362235c6329613d70a39b8d6d66de57f5da6' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/exchange/ExchangeList.tpl',
-      1 => 1400040542,
+      1 => 1400133911,
     ),
   ),
-  'nocache_hash' => '5968231205372edede0cef5-24329888',
+  'nocache_hash' => '1807201224537463e6a0f072-28882990',
   'function' => 
   array (
   ),
@@ -56,7 +56,7 @@ $_smarty_tpl->decodeProperties(array (
 <div style="height: 50px;"></div>
 <div class="dataArea">
     <table class="table table-striped" >
-        <tr><th>礼品图片</th><th>礼品名称</th><th>礼品类型</th><th>兑换积分</th><th>物品简介</th><th>详细介绍</th><th style="display: none">id</th><th>编辑</th><th>删除</th></tr>
+        <tr><th>礼品图片</th><th>礼品名称</th><th>礼品类型</th><th style="width: 120px;">兑换积分</th><th>物品简介</th><th>详细介绍</th><th style="display: none">id</th><th>编辑</th><th>删除</th></tr>
         <?php  $_smarty_tpl->tpl_vars['exchangeIteam'] = new Smarty_Variable;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('exchangeList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -79,9 +79,9 @@ if (count($_from) > 0){
                 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['exchangeIteam']->value['exchange_integration'];?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['exchangeIteam']->value['exchange_summary'];?>
+                <td style="text-align: left;"><?php echo $_smarty_tpl->tpl_vars['exchangeIteam']->value['exchange_summary'];?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['exchangeIteam']->value['exchangez_details'];?>
+                <td style="text-align: left;"><?php echo $_smarty_tpl->tpl_vars['exchangeIteam']->value['exchangez_details'];?>
 </td>
                 <td  style="display: none"><?php echo $_smarty_tpl->tpl_vars['exchangeIteam']->value['exchange_id'];?>
 </td>

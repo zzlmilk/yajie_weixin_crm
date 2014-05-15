@@ -13,7 +13,7 @@
         </style>
         <link href="{$WebSiteUrl}/css/{$source}_css.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body style='border-radius: 10px 10px 0 0;'>
 
         <script>
 
@@ -97,7 +97,7 @@
 
             }
             </script>{/literal}
-            <div class="left_background">
+            <div class="left_background" style='border-radius: 10px 10px 0 0;'>
                 
                 <table width="150" border="0" cellpadding="0" cellspacing="0" class="left-table01" style=''>
                     <tr>

@@ -1,3 +1,13 @@
+
+body{
+
+
+    font-family:"黑体","宋体",Serif;
+
+
+
+}
+
 .crmTable tr>th{
     text-align: center;
     background-color: #eee;
@@ -43,3 +53,4 @@ body{
     font-family:"黑体","宋体",Serif;
 
 }
+

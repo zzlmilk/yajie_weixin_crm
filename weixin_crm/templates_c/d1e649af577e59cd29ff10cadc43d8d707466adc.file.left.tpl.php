@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 12:09:26
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 14:50:56
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:34150553953743df6265df3-45115189%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1498676634537463d0835d41-04389978%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd1e649af577e59cd29ff10cadc43d8d707466adc' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1400126965,
+      1 => 1400135532,
     ),
   ),
-  'nocache_hash' => '34150553953743df6265df3-45115189',
+  'nocache_hash' => '1498676634537463d0835d41-04389978',
   'function' => 
   array (
   ),
@@ -34,7 +34,7 @@ $_smarty_tpl->decodeProperties(array (
 /css/<?php echo $_smarty_tpl->getVariable('source')->value;?>
 _css.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body style='border-radius: 10px 10px 0 0;'>
 
         <script>
 
@@ -119,7 +119,7 @@ _css.css" rel="stylesheet" type="text/css">
 
             }
             </script>
-            <div class="left_background">
+            <div class="left_background" style='border-radius: 10px 10px 0 0;'>
                 
                 <table width="150" border="0" cellpadding="0" cellspacing="0" class="left-table01" style=''>
                     <tr>

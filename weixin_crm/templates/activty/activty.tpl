@@ -49,7 +49,7 @@
             <tr>
                 <td>{$activtyAlls.activity_name}</td>
                 <td>{$activtyAlls.activity_end_time|date_format:'%Y-%m-%d'}</td>
-                <td><a href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=activtyEdit&id={$activtyAlls.activity_id}"><button class="btn btn-warning">编辑</button></a></td>
+                <td><a href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=activtyEdit&id={$activtyAlls.activity_id}">编辑</a></td>
 
             </tr>
         {/foreach}

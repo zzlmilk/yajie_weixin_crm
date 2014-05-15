@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 12:16:26
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 14:53:20
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/activty/activty.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20804287815372ee1a5087b9-24238410%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:19224474753746460ae4a55-12572960%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '39f8db7741ea4e5f66fefdf1fa0d60325a92de0b' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/activty/activty.tpl',
-      1 => 1395649610,
+      1 => 1400136796,
     ),
   ),
-  'nocache_hash' => '20804287815372ee1a5087b9-24238410',
+  'nocache_hash' => '19224474753746460ae4a55-12572960',
   'function' => 
   array (
   ),
@@ -79,7 +79,7 @@ if (count($_from) > 0){
 </td>
                 <td><a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=activty&functionname=activtyEdit&id=<?php echo $_smarty_tpl->tpl_vars['activtyAlls']->value['activity_id'];?>
-"><button class="btn btn-warning">编辑</button></a></td>
+">编辑</a></td>
 
             </tr>
         <?php }} ?>

@@ -5,6 +5,14 @@
 
          <link href="{$WebSiteUrl}/css/{$source}_css.css" rel="stylesheet" type="text/css">
         <title></title>
+
+        <style>
+
+        *{
+          font-family:"黑体","宋体",Serif;
+        }
+
+        </style>
     </head>
 
     <body class='boby'>
@@ -28,7 +36,7 @@
           
             <div style='float: left; overflow: hidden; height: 675px; width: 16%;' >
 
-                <iframe frameborder='0' src="{$WebSiteUrl}/pageredirst.php?action=left&functionname=left" name="leftFrame"   id="leftFrame" title="leftFrame"  style=' height: 740px; width: 196px; margin-left: 10px;border-radius: 10px 10px 0 0;' ></iframe>
+                <iframe frameborder='0' src="{$WebSiteUrl}/pageredirst.php?action=left&functionname=left" name="leftFrame"   id="leftFrame" title="leftFrame"  style=' height: 740px; width: 196px; margin-left: 5px;border-radius: 10px 10px 0 0;' ></iframe>
 
             </div>
 
