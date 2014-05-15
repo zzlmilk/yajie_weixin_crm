@@ -16,12 +16,14 @@
     font-size:16px; 
     padding-left: 45px;
     height: 40px;
+
     background-image: url('../images/navBackground.png');
     border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #000;
 }
 .dataArea{
     text-align: left;
-    margin-left: 45px;
+    margin-left: 25px;
     margin-right: 45px;
     min-width: 500px;
     height: 190px;

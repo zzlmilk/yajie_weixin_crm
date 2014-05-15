@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 12:15:03
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 12:22:58
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10474859315372edc751a4e1-12892209%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:70685682753744122864600-54892687%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '120908fcda3ce0be13949e77fdd9eb22d2c1655f' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl',
-      1 => 1400040542,
+      1 => 1400127725,
     ),
   ),
-  'nocache_hash' => '10474859315372edc751a4e1-12892209',
+  'nocache_hash' => '70685682753744122864600-54892687',
   'function' => 
   array (
   ),
@@ -35,10 +35,11 @@ $_smarty_tpl->decodeProperties(array (
     }
 
     .sortBar{
-        width: 30%;
-        margin-left: 45px;
+        width: auto;
+        margin-left: 25px;
         height: 25px;
         line-height: 0px;
+        margin-right: 45px;
         /*        margin: 0 auto;*/
     }
     table tr>th{
@@ -59,28 +60,30 @@ $_smarty_tpl->decodeProperties(array (
         border: #c5c5c5 solid 1px;
         box-shadow: 0px 2px 2px #888 inset; 
         padding-left: 10px;
+        width: 224px;
     }
     .selectBar{
-        padding-left: 45px;
+        padding-left: 25px;
     }
 </style>
 <div class="navBarStyle">
     当前位置：用户管理 > 客户信息
 </div>
-<div style="height: 50px;"></div>
+<div style="height: 51px;"></div>
 <form action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=user&functionname=seachUsers" method="post">
 
     <div style="">
 
         <div class="selectBar">
-            <input type="text" class="selectText"  placeholder="请输入手机号查询" id="selectText" name="selectText"><button class="btn" style="background-color: skyblue;color:white;border-radius:0px;height: 32px;margin-top: -3px;" type="submit">查询</button>
-            &nbsp;&nbsp;&nbsp;<label for="inputPassword3" class="">筛选排序：</label><input type="radio" name="sortType" checked id="point" value="point">&nbsp;<label for="point" class="control-label">积分</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sortType" id="money" value="money">&nbsp;<label for="money" class="control-label">余额</label>
+            <input type="text" class="selectText"  placeholder="请输入手机号查询" id="selectText" name="selectText"><button class="btn" style="background:url('<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/bottomBg.png');color:white;border-radius:0px;height: 32px; width: 61px;margin-top: -3px;" type="submit">查询</button>
+           <label for="inputPassword3" style="margin-left: 26px;" class="">筛选排序：</label><input type="radio" name="sortType" checked id="point" value="point">&nbsp;<label for="point" style="margin-right: 17px;"  class="control-label">积分</label><input  type="radio" name="sortType" id="money" value="money">&nbsp;<label for="money" class="control-label">余额</label>
         </div>
     </div>
     <div class="sortBar"></div>
     <?php if ($_smarty_tpl->getVariable('errorMessage')->value!=''){?>
-        <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label">aaaa<?php echo $_smarty_tpl->getVariable('errorMessage')->value;?>
+        <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label"><?php echo $_smarty_tpl->getVariable('errorMessage')->value;?>
 </label></div>
     <?php }?>
 
@@ -88,7 +91,7 @@ $_smarty_tpl->decodeProperties(array (
 
 <div class="dataArea">
     <table class="table table-bordered ">
-        <tr><th></th><th>姓名</th><th>电话</th><th>生日</th><th>余额</th><th>积分</th><th>编辑</th></tr>
+        <tr><th style="width: 51px;"></th><th  style="width: 121px;">姓名</th><th style="width: 185px;">电话</th><th style="width: 150px;">年龄</th><th style="width: 141px;">余额</th><th style="width: 154px;">积分</th><th style="width: 206px;">编辑</th></tr>
         <?php  $_smarty_tpl->tpl_vars['userInfo1'] = new Smarty_Variable;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('userInfo')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -103,7 +106,9 @@ if (count($_from) > 0){
 </td>
                 <td class="userPhone"><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_phone'];?>
 </td>
-                <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['userInfo1']->value['birthday'],"%Y-%m-%d");?>
+<!--                <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['userInfo1']->value['birthday'],"%Y-%m-%d");?>
+</td>-->
+                <td><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['birthday'];?>
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_money'];?>
 </td>
@@ -130,20 +135,20 @@ if (count($_from) > 0){
     $('input').iCheck({
     checkboxClass: 'icheckbox_flat-blue',
     radioClass: 'iradio_flat-blue',
-    increaseArea: '20%' // optional
+    increaseArea: '5%' // optional
 }); 
-$("#selectText").on("input",function(){
-if(!getIntRegex($(this).val())){
-var cutString=$(this).val().substr(0, ($(this).val().length)-1);
-
-$("#selectText").val(cutString);
-}
-});
+//$("#selectText").on("input",function(){
+//if(!getIntRegex($(this).val())){
+//var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+//
+//$("#selectText").val(cutString);
+//}
+//});
 
 $(".userPhone").each(function(){
 var phoneNumber= $(this).html();
 var changeValue="";
-changeValue=phoneNumber.substr(0,3)+"-"+phoneNumber.substr(4,3)+"-"+phoneNumber.substr(6);
+changeValue=phoneNumber.substr(0,3)+"-"+phoneNumber.substr(3,3)+"-"+phoneNumber.substr(6);
 $(this).html(changeValue);
   
 });
