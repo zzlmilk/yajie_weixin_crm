@@ -16,9 +16,9 @@
 	</div>
 
 
-	<div style='position: absolute; margin-left: 430px; margin-top: 46px;' class='banner'>
+	<div style='position: absolute; margin-left: 430px; margin-top: 51px;' class='banner'>
 
-		<div style='margin-left: 62px; margin-top: 18px;'>
+		<div style='margin-left: 62px; margin-top: 13px;'>
 
 			<div style='width: 571px; margin: 0 auto;float: left;'>
 

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 14:53:20
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 15:52:30
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/activty/activty.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19224474753746460ae4a55-12572960%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:14416096825374723ed05ce7-13544407%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '39f8db7741ea4e5f66fefdf1fa0d60325a92de0b' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/activty/activty.tpl',
-      1 => 1400136796,
+      1 => 1400140338,
     ),
   ),
-  'nocache_hash' => '19224474753746460ae4a55-12572960',
+  'nocache_hash' => '14416096825374723ed05ce7-13544407',
   'function' => 
   array (
   ),
@@ -20,6 +20,8 @@ $_smarty_tpl->decodeProperties(array (
 ?><link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
 <link href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /css/minimal/blue.css" rel="stylesheet">
+<link href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/css/crm_table_style.css" rel="stylesheet">
 
 <style>
     body{
@@ -63,7 +65,7 @@ $_smarty_tpl->decodeProperties(array (
 <div style="height: 50px;"></div>
 
 <div class="dataArea">
-    <table class="table table-striped">
+    <table class="table crmTable table-bordered">
         <tr><th>活动名称</th><th>结束时间</th><th>编辑</th></tr>
         <?php  $_smarty_tpl->tpl_vars['activtyAlls'] = new Smarty_Variable;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;

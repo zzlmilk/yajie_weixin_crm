@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 11:41:38
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 15:26:09
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/top.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:176029357653743772656e20-22771760%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:165820159353746c111c09b0-88810990%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b0dbf2c915bba0ea66d1c43f97c323c6564c75ba' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/top.tpl',
-      1 => 1400125290,
+      1 => 1400138697,
     ),
   ),
-  'nocache_hash' => '176029357653743772656e20-22771760',
+  'nocache_hash' => '165820159353746c111c09b0-88810990',
   'function' => 
   array (
   ),
@@ -40,9 +40,9 @@ _css.css" rel="stylesheet" type="text/css">
 	</div>
 
 
-	<div style='position: absolute; margin-left: 430px; margin-top: 46px;' class='banner'>
+	<div style='position: absolute; margin-left: 430px; margin-top: 51px;' class='banner'>
 
-		<div style='margin-left: 62px; margin-top: 18px;'>
+		<div style='margin-left: 62px; margin-top: 13px;'>
 
 			<div style='width: 571px; margin: 0 auto;float: left;'>
 

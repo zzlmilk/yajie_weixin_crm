@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 12:17:41
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 15:15:11
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/admin/admin.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20774649315372ee65cafa30-46535213%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5064875665374697f830075-37848886%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd0e4d34ac2ef16403800d45c2040c98d7a8ec5c4' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/admin/admin.tpl',
-      1 => 1399427637,
+      1 => 1400052107,
     ),
   ),
-  'nocache_hash' => '20774649315372ee65cafa30-46535213',
+  'nocache_hash' => '5064875665374697f830075-37848886',
   'function' => 
   array (
   ),
@@ -38,7 +38,7 @@ $_smarty_tpl->decodeProperties(array (
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
 
-        <title>管理员</title>
+        <title>管理员账号</title>
         <style>
             body{
                 Font-size=62.5%;
@@ -48,12 +48,14 @@ $_smarty_tpl->decodeProperties(array (
                /* border: solid 1px red;*/
             }
             .titleStyle{
-                color: rgb(91,91,91);
-                font-size: 2.5em;
-                text-align: center;
-                height: 3em;
-                line-height: 3em;
-                border-bottom: solid 1px #ccc;
+               height: 47px;
+                line-height: 47px;
+                color: #fff;
+                font-size: 16px;
+                text-indent: 48px;
+               background-image: url('<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/images/navBackground.png');
+
             }
             .matterStyle{
                 width: 100%;
@@ -61,7 +63,7 @@ $_smarty_tpl->decodeProperties(array (
               /*  border: solid 1px red;*/
             }
             .authListStyle{
-                width: 70%;
+                width: 67%;
                 text-indent: 1em;
                 float: right;
                 margin-right: 2em;                
@@ -70,9 +72,9 @@ $_smarty_tpl->decodeProperties(array (
             }
             .stateStyle{
                 /*border: solid 1px red;*/
-                width: 25%;
+                width: 30%;
                 height: 20em;
-                text-indent: 1em;
+                text-indent: 2.4em;
                 font-size: 20px;
                 margin-top: 1em;
                 color: rgb(66,139,202);
@@ -82,17 +84,19 @@ $_smarty_tpl->decodeProperties(array (
     <body>
 
         <div class="Warp">
-            <div class="titleStyle">管理员账号</div>
+            <div class="titleStyle">
+                当前位置：系统管理 > 管理员账号
+            </div>
 
             <div class="matterStyle">
                 <div class="stateStyle">你所拥有的部分权限
-                    <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    <span class="glyphicon glyphicon-circle-arrow-right" style="margin-left: -1em;"></span>
                     <br />
                     
                     <div style="font-size: 12px; margin-top: 5em; color: rgb(60,60,60)">最近登录时间：<?php echo $_smarty_tpl->getVariable('lastTime')->value;?>
 </div>
 
-                    <span style="padding-left: 1.5em; color: rgb(240,173,78); font-size: 14px; ">如需更多权限请和管理员联系。</span>
+                    <span style="padding-left: 3.5em; color: rgb(240,173,78); font-size: 14px;text-indent: 4.1em; ">如需更多权限请和管理员联系。</span>
                 </div>
                 <div class="authListStyle">
                     <table class="table table-bordered">

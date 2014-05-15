@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 14:14:02
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 15:14:41
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:168585295553745b2a577ad2-86386297%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:125308954853746961ab2ee1-09022417%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b71d6ed1832efdf6cd9fbc55bb55ffa0092a6353' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/index.tpl',
-      1 => 1400134425,
+      1 => 1400138073,
     ),
   ),
-  'nocache_hash' => '168585295553745b2a577ad2-86386297',
+  'nocache_hash' => '125308954853746961ab2ee1-09022417',
   'function' => 
   array (
   ),
@@ -25,6 +25,14 @@ $_smarty_tpl->decodeProperties(array (
 /css/<?php echo $_smarty_tpl->getVariable('source')->value;?>
 _css.css" rel="stylesheet" type="text/css">
         <title></title>
+
+        <style>
+
+        *{
+          font-family:"黑体","宋体",Serif;
+        }
+
+        </style>
     </head>
 
     <body class='boby'>
@@ -48,14 +56,14 @@ _css.css" rel="stylesheet" type="text/css">
             </div>
 
           
-            <div style='float: left; overflow: hidden; height: 675px; width: 16%;' >
+            <div style='float: left; overflow: hidden; height: 675px; width: 16%;font-weight: bold;' >
 
                 <iframe frameborder='0' src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=left&functionname=left" name="leftFrame"   id="leftFrame" title="leftFrame"  style=' height: 740px; width: 196px; margin-left: 10px;border-radius: 10px 10px 0 0;' ></iframe>
+/pageredirst.php?action=left&functionname=left" name="leftFrame"   id="leftFrame" title="leftFrame"  style=' height: 740px; width: 196px; margin-left: 5px;border-radius: 10px 10px 0 0;' ></iframe>
 
             </div>
 
-            <div style='float: left; overflow: hidden; height: 675px; width: 83%; margin-left: 5px'>
+            <div style='float: left; overflow: hidden; height: 675px; width: 83%; margin-left: 3px'>
 
 
 

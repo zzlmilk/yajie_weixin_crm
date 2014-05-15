@@ -26,7 +26,7 @@ defined('WebSiteUrl') or define('WebSiteUrl', 'http://' . $_SERVER['HTTP_HOST'] 
 defined("imageSrc")or define("imageSrc", "weixin_crm/giftImages/");
 
 //defined('WebImageUrl') or define('WebImageUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/'.imageSrc);
-defined('WebImageUrl') or define('WebImageUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/yajie_weixin_crm/' . imageSrc);
+defined('WebImageUrl') or define('WebImageUrl', 'http://' . $_SERVER['HTTP_HOST'] . '/' . imageSrc);
 
 defined('WebSiteUrlPublic') or define('WebSiteUrlPublic', 'http://' . $_SERVER['HTTP_HOST'] . '/yajie_weixin_crm/' . WebSiteName . '/public');
 
