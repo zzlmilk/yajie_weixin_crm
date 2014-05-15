@@ -61,7 +61,7 @@
         </style>
     </head>
     <body style='background-color: rgb(243,237,227);'>
-
+<!--
         <div style='  width: 100%; background-color: rgb(255,255,247);position: relative;'>
 
             <div style='height: 0.2em;width: 100%;'>&nbsp;</div>
@@ -80,7 +80,7 @@
                     <span id="userIntegration" style='font-size:15px; display: inline-block;  height: 4%;  '>剩余积分:{$localUserInfo.user_integration}</span>
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="registerWarp">
 
             <p style="text-align: center">亲！看中了哪一款请前往本店前台兑换哦~</p>
@@ -90,7 +90,7 @@
                         <div > <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
                         <div style="word-wrap: break-word; word-break: normal;">
                             <p class="summary" style="height: 50px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
-                            <p class="integration" style="text-align: right; padding-right: 10px;">积分: {$exchangeItem.exchange_integration}</p>   
+                            <p class="integration" style="color: orange; text-align: right; padding-right: 10px;">积分: {$exchangeItem.exchange_integration} 分</p>   
 
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                         <div > <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
                         <div style="word-wrap: break-word; word-break: normal;">
                             <p class="summary" style="height: 50px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
-                            <p class="integration" style="text-align: right; padding-right: 10px;">积分: {$exchangeItem.exchange_integration}</p>   
+                            <p class="integration" style="text-align: right; padding-right: 10px;color: orange;">积分: {$exchangeItem.exchange_integration}分</p>   
 
                         </div>
                     </div>
@@ -128,8 +128,8 @@
     <script>
         $(".summary").each(function(){
         var len=$(this).html().length;
-        if(len>=20){
-        var nowString= $(this).html().substr(0, 20)
+        if(len>=25){
+        var nowString= $(this).html().substr(0, 25)
         $(this).html(nowString+"...");
     }
 });

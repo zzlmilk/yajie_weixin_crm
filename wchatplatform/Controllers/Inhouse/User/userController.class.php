@@ -371,6 +371,7 @@ class UserController extends BaseController {
         $expenseItem = json_decode($userJsonData, true);
         $error->JudgeError($expenseItem);
         $this->assign("expenseItem", $expenseItem["record"]);
+        $this->assign("userInfoWeixin", $userInfo["weixin_user"]);
         $this->assign("userInfo", $userInfo["user"]);
         $this->display();
     }
