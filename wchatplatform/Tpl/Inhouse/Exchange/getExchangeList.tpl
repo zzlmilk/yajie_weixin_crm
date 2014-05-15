@@ -33,7 +33,7 @@
                 background-color: #fff;
                 height: 125px;
                 margin-top: 15px;
-               
+
             }
             .round_photo{
                 width:100%;
@@ -94,13 +94,12 @@
                         </div>
                     </div>
                 </div>-->
-        <div class="registerWarp">
-
+        <div class="registerWarp" style="padding-bottom: 10px;">
             <p style="text-align: center">亲！看中了哪一款请前往本店前台兑换哦~</p>
             {foreach from=$exchangeList item=exchangeItem key=key}
                 {if $key % 2 eq 0}
                     <div class="giftBox" style="float: left;margin-left: 8px;">
-                        <div > <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
+                        <div > <a ><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
                         <div style="word-wrap: break-word; word-break: normal;">
                             <p class="summary" style="height:60px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
                             <p class="integration" style="">积分: {$exchangeItem.exchange_integration} 分</p>   
@@ -109,7 +108,7 @@
                     </div>
                 {else}
                     <div class="giftBox" style="float: right ">
-                        <div > <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
+                        <div > <a ><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
                         <div style="word-wrap: break-word; word-break: normal;">
                             <p class="summary" style="height: 60px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
                             <p class="integration" style="">积分: {$exchangeItem.exchange_integration}分</p>   
@@ -118,7 +117,10 @@
                     </div>
                 {/if}
             {/foreach}
+            <div style="clear: both;"></div>
+            <div style="height: 10px;"></div>
         </div>
+
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content" >

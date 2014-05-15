@@ -30,7 +30,7 @@
                /* border: solid 1px red;*/
             }
             .titleStyle{
-               height: 47px;
+               height: 40px;
                 line-height: 47px;
                 color: #fff;
                 font-size: 16px;
