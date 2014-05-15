@@ -56,13 +56,13 @@
         </style>
     </head>
     <body style="background-color: #E7E7E7;">
-        <div style='  width: 100%; background-color: rgb(255,255,247); position: relative;'>
+       <div style='  width: 100%; background-color: rgb(255,255,247); position: relative;'>
 
             <div style='height: 0.8em;width: 100%;'>&nbsp;</div>
 
 
-            <div style=' width: 18%;margin-left: 5px;'>
-                <img src='{$userinfo.headimgurl}' class='round_photo'>
+            <div style='min-height: 65px; width: 18%;margin-left: 5px;'>
+                <img src='{$weixin.headimgurl}' class='round_photo'>
             </div>
             <div style='height: 0.8em;width: 100%;'>&nbsp;</div>
 
@@ -81,7 +81,7 @@
         </div>
 
 
-        <div id="container" style="min-width:400px;height:400px"></div>
+        <div id="container" style="width:100%;height:400px"></div>
        
 
     </body>

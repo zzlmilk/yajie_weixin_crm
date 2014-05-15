@@ -94,7 +94,7 @@
         }
 
         .bgMask{
-          width: 96%;
+          width: 100%;
           /*height: 40em;*/
           height: 100%;
           /*margin-left:0.3em;*/

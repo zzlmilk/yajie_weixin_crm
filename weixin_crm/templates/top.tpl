@@ -16,19 +16,20 @@
 	</div>
 
 
-	<div style='position: absolute; left: 440px; top: 51px;' class='banner'>
+	<div style='position: absolute; margin-left: 430px; margin-top: 46px;' class='banner'>
 
-		<div style='margin-left: 57px; margin-top: 18px;'>
+		<div style='margin-left: 62px; margin-top: 18px;'>
 
-			<div style='width: 560px; margin: 0 auto;float: left;'>
+			<div style='width: 571px; margin: 0 auto;float: left;'>
 
-			当前用户:&nbsp;&nbsp;{$uname}&nbsp;&nbsp;&nbsp;&nbsp;登录:&nbsp;&nbsp;&nbsp;&nbsp;{$account}&nbsp;&nbsp;&nbsp;&nbsp;角色:&nbsp;&nbsp;&nbsp;&nbsp;系统管理员  
+			    <span style='width: 18px;'>当前用户:</span>
+			【{$uname}】<span style='display: inline-block; width: 15px'>&nbsp;</span><span style='width: 18px;'>登录:</span>【{$account}】<span style='display: inline-block; width: 15px'>&nbsp;</span><span style='width: 18px;'>角色:</span>【系统管理员】 
 		   </div>
 
 
 			<div style='float: left;'>
 
-				{$smarty.now|date_format:'%Y-%m-%d'}  {$week} 
+				{$smarty.now|date_format:'%Y-%m-%d'}<span style='width: 17px; display: inline-block;'>&nbsp;</span>{$week} 
 			</div>
 
 	    </div>

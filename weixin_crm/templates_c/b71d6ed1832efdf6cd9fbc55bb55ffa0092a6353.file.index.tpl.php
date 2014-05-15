@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 12:12:18
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 11:30:04
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6374564425372ed22833996-11800472%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1959905229537434bcd15b66-62966013%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b71d6ed1832efdf6cd9fbc55bb55ffa0092a6353' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/index.tpl',
-      1 => 1400038451,
+      1 => 1400124579,
     ),
   ),
-  'nocache_hash' => '6374564425372ed22833996-11800472',
+  'nocache_hash' => '1959905229537434bcd15b66-62966013',
   'function' => 
   array (
   ),
@@ -36,7 +36,7 @@ _css.css" rel="stylesheet" type="text/css">
 
 
 
-            <div style='overflow: hidden; height: 90px;'>
+            <div style='overflow: hidden; height: 86px;'>
 
                 <!--  <iframe src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=top&functionname=top" name="topFrame" scrolling="No"  id="topFrame" title="topFrame"  style='width: 100%; height: 90px;' ></iframe> -->
@@ -48,18 +48,18 @@ _css.css" rel="stylesheet" type="text/css">
             </div>
 
           
-            <div style='float: left; overflow: hidden; height: 675px; width: 17%;' >
+            <div style='float: left; overflow: hidden; height: 675px; width: 16%;' >
 
                 <iframe frameborder='0' src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=left&functionname=left" name="leftFrame"   id="leftFrame" title="leftFrame"  style=' height: 740px; width: 196px; margin-left: 10px;border-radius: 10px 10px 0 0;' ></iframe>
 
             </div>
 
-            <div style='float: left; overflow: hidden; height: 675px; width: 83%;'>
+            <div style='float: left; overflow: hidden; height: 675px; width: 83%; margin-left: 5px'>
 
 
 
-              <iframe src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+              <iframe frameborder='0' src="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /files/mainfra.html"  name="mainFrame" id="mainFrame" title="mainFrame"  style='height: 675px; width: 100%; border-radius: 10px 10px 0 0;' ></iframe>
 
             </div>
