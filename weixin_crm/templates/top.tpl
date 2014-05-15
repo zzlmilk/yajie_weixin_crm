@@ -10,10 +10,10 @@
 		<a style='color: white;font-size: 14px;display: inline-block' href='{$URLHANDLER}/process.php?login=0' class=''>安全退出</a>
 	</div>
 
-	<div style='position: absolute; top: 28px; left: 1154px; '>
+	<!-- <div style='position: absolute; top: 28px; left: 1154px; '>
 
 		<img src='{$WebSiteUrl}/images/exit.png'>
-	</div>
+	</div> -->
 
 
 	<div style='position: absolute; margin-left: 430px; margin-top: 51px;' class='banner'>

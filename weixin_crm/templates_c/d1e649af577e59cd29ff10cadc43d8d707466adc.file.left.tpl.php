@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 14:50:56
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 16:37:47
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1498676634537463d0835d41-04389978%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:183362439453747cdbc47479-65674275%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd1e649af577e59cd29ff10cadc43d8d707466adc' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1400135532,
+      1 => 1400143058,
     ),
   ),
-  'nocache_hash' => '1498676634537463d0835d41-04389978',
+  'nocache_hash' => '183362439453747cdbc47479-65674275',
   'function' => 
   array (
   ),
@@ -158,7 +158,7 @@ _css.css" rel="stylesheet" type="text/css">
 
                                         <div class='left-a' >
 
-                                            <a  style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                            <a  style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" >客户信息</a>
 
                                         </div>
@@ -177,7 +177,7 @@ _css.css" rel="stylesheet" type="text/css">
 
                                         <div class='left-a' >
 
-                                            <a  style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                            <a  style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=user&functionname=pointAndMoneyManage" target="mainFrame" class="left-fontSmall" >积分消费管理</a>
 
                                         </div>
@@ -195,7 +195,7 @@ _css.css" rel="stylesheet" type="text/css">
 
                                           <div class='left-a' >
 
-                                            <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                            <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=user&functionname=userManage" target="mainFrame" class="left-fontSmall">添加用户</a>
 
                                         </div>
@@ -234,7 +234,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" >订单管理</a>
 
                                     </div>
@@ -251,7 +251,7 @@ _css.css" rel="stylesheet" type="text/css">
 
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=order&functionname=orderAdd" target="mainFrame" class="left-fontSmall">新增预约</a>
 
                                     </div>
@@ -295,7 +295,7 @@ _css.css" rel="stylesheet" type="text/css">
                                    
                                     <td width="85%">
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall">大转盘礼品列表</a>
 
                                     </div>
@@ -312,7 +312,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" >刮刮卡礼品列表</a>
 
                                     </div>
@@ -362,7 +362,7 @@ _css.css" rel="stylesheet" type="text/css">
                                         <div class='left-a' >
 
 
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=exchange&functionname=ExchangeList" target="mainFrame" class="left-fontSmall" >礼品列表</a>
 
                                     </div>
@@ -426,7 +426,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                          <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=registration&functionname=registrationCount" target="mainFrame" class="left-fontSmall" >签到统计</a>
 
                                     </div>
@@ -443,7 +443,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=activty&functionname=activty" target="mainFrame" class="left-fontSmall" >活动</a>
 
                                          </div>
@@ -461,7 +461,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=activty&functionname=addactivty" target="mainFrame" class="left-fontSmall" >添加活动</a>
 
 
@@ -480,7 +480,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=question&functionname=questionCount" target="mainFrame" class="left-fontSmall">问卷统计</a>
 
                                     </div>
@@ -525,7 +525,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                          <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=weixinuser&functionname=weixinuser" target="mainFrame" class="left-fontSmall" >微信数据</a>
 
                                          </div>
@@ -542,7 +542,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=admin&functionname=admin" target="mainFrame" class="left-fontSmall">管理员账号</a>
 
                                         </div>
@@ -559,7 +559,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=admin&functionname=setAccount" target="mainFrame" class="left-fontSmall" >重置账户密码</a>
 
                                     </div>
@@ -607,7 +607,7 @@ _css.css" rel="stylesheet" type="text/css">
 
                                         <div class='left-a' >
 
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=SMS&functionname=SMSindex" target="mainFrame" class="left-fontSmall" >客服短信</a>
 
                                     </div>
@@ -650,7 +650,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=promoCode&functionname=promoCodeCheck" target="mainFrame" class="left-fontSmall" >验证优惠码</a>
 
                                     </div>
@@ -667,7 +667,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=promoCode&functionname=addCode" target="mainFrame" class="left-fontSmall" >生成优惠码</a>
 
                                     </div>
@@ -683,7 +683,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                          <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=promoCode&functionname=codeList" target="mainFrame" class="left-fontSmall" >优惠码列表</a>
 
                                     </div>
@@ -727,7 +727,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                         <div class='left-a' >
-                                        <a  style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a  style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=remind&functionname=remind" target="mainFrame" class="left-fontSmall" >提示模块</a>
 
                                     </div>
@@ -775,7 +775,7 @@ _css.css" rel="stylesheet" type="text/css">
 
                                          <div class='left-a' >
 
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=statistics&functionname=statistics" target="mainFrame" class="left-fontSmall" >统计模块</a>
 
                                     </div>

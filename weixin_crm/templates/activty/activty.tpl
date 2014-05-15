@@ -40,7 +40,12 @@
         margin: 0 auto;
     }
 </style>
-<div class="userMangerTitle">活动列表管理</div>
+
+<div class="navBarStyle">
+    当前位置：任务管理 > 活动列表
+</div>
+
+
 <div style="height: 50px;"></div>
 
 <div class="dataArea">
