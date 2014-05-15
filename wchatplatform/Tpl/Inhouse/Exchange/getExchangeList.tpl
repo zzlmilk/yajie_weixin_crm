@@ -33,6 +33,7 @@
                 background-color: #fff;
                 height: 125px;
                 margin-top: 15px;
+               
             }
             .round_photo{
                 width:100%;
@@ -56,31 +57,43 @@
 
             }  
             .giftBox{
-                background-color: white; width: 45%; height:240px; float: left; margin-right:  10px;margin-top: 15px;
+                background-color: white; 
+                width: 45%;
+                height:240px;
+                float: left;
+                margin-right:  10px;
+                margin-top: 15px;
+                border: 1px solid #8C8C8C;
+            }
+            .integration{
+                color: orange; 
+                text-align: right; 
+                padding-right: 10px;
+                font-weight: bold;
             }
         </style>
     </head>
     <body style='background-color: rgb(243,237,227);'>
-<!--
-        <div style='  width: 100%; background-color: rgb(255,255,247);position: relative;'>
-
-            <div style='height: 0.2em;width: 100%;'>&nbsp;</div>
-
-
-            <div style=' width: 18%;'>
-                <img src="{$weixinUserInfo.headimgurl}"  class="round_photo">
-            </div>
-
-
-
-            <div style=' width: 66%; overflow: hidden; position: absolute; left: 20%; top: 5%;'>
-
-                <div style='margin-top:10%;line-height: 15px;'>
-                    <span style='font-size:15px; display: inline-block;  height: 4%;  '>用户昵称：{$weixinUserInfo.nickname}</span>
-                    <span id="userIntegration" style='font-size:15px; display: inline-block;  height: 4%;  '>剩余积分:{$localUserInfo.user_integration}</span>
-                </div>
-            </div>
-        </div>-->
+        <!--
+                <div style='  width: 100%; background-color: rgb(255,255,247);position: relative;'>
+        
+                    <div style='height: 0.2em;width: 100%;'>&nbsp;</div>
+        
+        
+                    <div style=' width: 18%;'>
+                        <img src="{$weixinUserInfo.headimgurl}"  class="round_photo">
+                    </div>
+        
+        
+        
+                    <div style=' width: 66%; overflow: hidden; position: absolute; left: 20%; top: 5%;'>
+        
+                        <div style='margin-top:10%;line-height: 15px;'>
+                            <span style='font-size:15px; display: inline-block;  height: 4%;  '>用户昵称：{$weixinUserInfo.nickname}</span>
+                            <span id="userIntegration" style='font-size:15px; display: inline-block;  height: 4%;  '>剩余积分:{$localUserInfo.user_integration}</span>
+                        </div>
+                    </div>
+                </div>-->
         <div class="registerWarp">
 
             <p style="text-align: center">亲！看中了哪一款请前往本店前台兑换哦~</p>
@@ -89,8 +102,8 @@
                     <div class="giftBox" style="float: left;margin-left: 8px;">
                         <div > <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
                         <div style="word-wrap: break-word; word-break: normal;">
-                            <p class="summary" style="height: 50px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
-                            <p class="integration" style="color: orange; text-align: right; padding-right: 10px;">积分: {$exchangeItem.exchange_integration} 分</p>   
+                            <p class="summary" style="height:60px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
+                            <p class="integration" style="">积分: {$exchangeItem.exchange_integration} 分</p>   
 
                         </div>
                     </div>
@@ -98,8 +111,8 @@
                     <div class="giftBox" style="float: right ">
                         <div > <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
                         <div style="word-wrap: break-word; word-break: normal;">
-                            <p class="summary" style="height: 50px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
-                            <p class="integration" style="text-align: right; padding-right: 10px;color: orange;">积分: {$exchangeItem.exchange_integration}分</p>   
+                            <p class="summary" style="height: 60px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
+                            <p class="integration" style="">积分: {$exchangeItem.exchange_integration}分</p>   
 
                         </div>
                     </div>

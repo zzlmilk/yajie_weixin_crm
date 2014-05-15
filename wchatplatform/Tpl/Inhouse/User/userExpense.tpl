@@ -15,7 +15,7 @@
             .round_photo{
                 width:100%;
                 height: auto;
-                min-height: 65px;
+                
                 border:1px solid #ddddde;
                 -moz-border-radius:10%;
                 -webkit-border-radius: 10%;
@@ -58,7 +58,7 @@
             <div style='height: 0.8em;width: 100%;'>&nbsp;</div>
 
 
-            <div style=' width: 18%;margin-left: 5px;'>
+            <div style=' width: 18%;margin-left: 5px;min-height: 65px;'>
                 <img src='{$userInfoWeixin.headimgurl}' class='round_photo'>
             </div>
             <div style='height: 0.8em;width: 100%;'>&nbsp;</div>
@@ -79,7 +79,7 @@
         {foreach from=$expenseItem item=exchangeList key=key}
             <div class="expenseBox" style="">
                 <div class="text-padding expenseTitle" >
-                    <span class="dateValue">{$exchangeList.order_time}</span> <span class="timeValue">{$exchangeList.begin_time}</span> <span style="float: right; color: skyblue">总计： {$exchangeList.money}元</span>   
+                    <span class="dateValue">{$exchangeList.order_time}</span> <span class="timeValue">{$exchangeList.begin_time}</span> <span style="float: right; color: #1474b2">总计： {$exchangeList.money}元</span>   
                 </div>
                 <div class="text-padding">
                     <div class="item-postion"> {$exchangeList.record_commodity}<span style="float: right;">{$exchangeList.money}元</span></div>
