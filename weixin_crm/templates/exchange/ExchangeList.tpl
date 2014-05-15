@@ -38,7 +38,7 @@
 <div style="height: 50px;"></div>
 <div class="dataArea">
     <table class="table table-striped" >
-        <tr><th>礼品图片</th><th>礼品名称</th><th>礼品类型</th><th>兑换积分</th><th>物品简介</th><th>详细介绍</th><th style="display: none">id</th><th>编辑</th><th>删除</th></tr>
+        <tr><th>礼品图片</th><th>礼品名称</th><th>礼品类型</th><th style="width: 120px;">兑换积分</th><th>物品简介</th><th>详细介绍</th><th style="display: none">id</th><th>编辑</th><th>删除</th></tr>
         {foreach from=$exchangeList item=exchangeIteam key=key}
             <tr>
                 <td><img src="{$WebSiteUrl}/giftImages/small/{$exchangeIteam.exchange_image}" width="80" height="80"></td>
@@ -51,8 +51,8 @@
                     {/if} 
                 </td>
                 <td>{$exchangeIteam.exchange_integration}</td>
-                <td>{$exchangeIteam.exchange_summary}</td>
-                <td>{$exchangeIteam.exchangez_details}</td>
+                <td style="text-align: left;">{$exchangeIteam.exchange_summary}</td>
+                <td style="text-align: left;">{$exchangeIteam.exchangez_details}</td>
                 <td  style="display: none">{$exchangeIteam.exchange_id}</td>
                 <td><a href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=editExchangeItem&ItemId={$exchangeIteam.exchange_id}">编辑</a></td>
                 <td><a href="#"  data-toggle="modal" data-target="#myModal" class="deleteButton ">删除</a></td>
