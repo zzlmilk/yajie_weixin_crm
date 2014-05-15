@@ -1,25 +1,26 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 18:08:41
-         compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/Public/message.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1672899337537340a94aad56-37871606%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 18:08:50
+         compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/Public/messageSuccess.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:441300064537340b22e05f5-14881303%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'dfa96d176967155928b514a57b8b96c4f8200f8f' => 
+    '30e859d203a90e85c37513cd30842dfcbb38f1c2' => 
     array (
-      0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/Public/message.tpl',
-      1 => 1400062118,
+      0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/Public/messageSuccess.tpl',
+      1 => 1400059453,
     ),
   ),
-  'nocache_hash' => '1672899337537340a94aad56-37871606',
+  'nocache_hash' => '441300064537340b22e05f5-14881303',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>提示</title>
+        <title>成功提示</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta content="initial-scale=1.0; maximum-scale=4.0; user-scalable=no;" name="viewport">
         <meta name="viewport" content="width=device-width,user-scalable=yes" />
@@ -32,8 +33,10 @@ $_smarty_tpl->decodeProperties(array (
        
         <style>
             body{
-                background-image: url('<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
-/image/beijing.png');
+                Font-size=62.5%;
+
+                background-image: url(<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/image/beijing.png);
             }
             .registerWarp{
                 margin: 0 auto;
@@ -64,11 +67,9 @@ $_smarty_tpl->decodeProperties(array (
         <div style=" height: 5em;"></div>
         <div class="errorImg">
             <img src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
-/image/error.png">
+/image/success.png">
         </div>
         <div class="errorMessage"><?php echo $_smarty_tpl->getVariable('msg')->value;?>
 </div>
         <div style=" height: 3em;"></div>
     </body>
-    
-

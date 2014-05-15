@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 12:17:43
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 11:12:15
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/admin/setAccount.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10094410845372ee671950d3-76136698%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16747409885374308f405e84-92637600%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '691d35c9e76c861809954ee525c4b808d08dcecf' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/admin/setAccount.tpl',
-      1 => 1399427637,
+      1 => 1400052107,
     ),
   ),
-  'nocache_hash' => '10094410845372ee671950d3-76136698',
+  'nocache_hash' => '16747409885374308f405e84-92637600',
   'function' => 
   array (
   ),
@@ -36,7 +36,8 @@ $_smarty_tpl->decodeProperties(array (
 
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-
+        <link href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/css/crm_table_style.css" rel="stylesheet">
 
         <title>管理员</title>
         <style>
@@ -81,11 +82,11 @@ $_smarty_tpl->decodeProperties(array (
         </style>
     </head>
     <body>
-
+        <div class="navBarStyle">
+            当前位置：系统管理 > 重置账户密码
+        </div>
+        <div style="height: 50px;"></div>
         <div class="bigWheelWarp">
-            <div class="titleStyle">重置账户密码</div>
-            <div style="height: 50px;"></div>
-            
             <?php if ($_smarty_tpl->getVariable('messageString')->value!="1"){?>
                 <div id="errorMessage" class="alert alert-danger showMessage"><?php echo $_smarty_tpl->getVariable('messageString')->value;?>
 </div>
@@ -116,7 +117,7 @@ $_smarty_tpl->decodeProperties(array (
                         </div>
                     </div>
                     <div style="height: 15px;"></div>
-                    <p style="width: 100%; text-align: center;"><button id="addButton" type="submit" class="btn btn-info">确认修改</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="addButton" type="reset" class="btn btn-info">重置</button></p>
+                    <p style="width: 97%; text-align: right;"><button id="addButton" type="submit" class="btn btn-info">确认修改</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="addButton" type="reset" class="btn btn-info">重置</button></p>
                 </form>
             </div>
         </div>

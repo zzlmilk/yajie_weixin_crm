@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 12:26:24
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 11:41:38
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/top.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18633193375372f07051d645-23704049%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:176029357653743772656e20-22771760%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b0dbf2c915bba0ea66d1c43f97c323c6564c75ba' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/top.tpl',
-      1 => 1400041579,
+      1 => 1400125290,
     ),
   ),
-  'nocache_hash' => '18633193375372f07051d645-23704049',
+  'nocache_hash' => '176029357653743772656e20-22771760',
   'function' => 
   array (
   ),
@@ -40,22 +40,23 @@ _css.css" rel="stylesheet" type="text/css">
 	</div>
 
 
-	<div style='position: absolute; left: 440px; top: 51px;' class='banner'>
+	<div style='position: absolute; margin-left: 430px; margin-top: 46px;' class='banner'>
 
-		<div style='margin-left: 57px; margin-top: 18px;'>
+		<div style='margin-left: 62px; margin-top: 18px;'>
 
-			<div style='width: 560px; margin: 0 auto;float: left;'>
+			<div style='width: 571px; margin: 0 auto;float: left;'>
 
-			当前用户:&nbsp;&nbsp;<?php echo $_smarty_tpl->getVariable('uname')->value;?>
-&nbsp;&nbsp;&nbsp;&nbsp;登录:&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $_smarty_tpl->getVariable('account')->value;?>
-&nbsp;&nbsp;&nbsp;&nbsp;角色:&nbsp;&nbsp;&nbsp;&nbsp;系统管理员  
+			    <span style='width: 18px;'>当前用户:</span>
+			【<?php echo $_smarty_tpl->getVariable('uname')->value;?>
+】<span style='display: inline-block; width: 15px'>&nbsp;</span><span style='width: 18px;'>登录:</span>【<?php echo $_smarty_tpl->getVariable('account')->value;?>
+】<span style='display: inline-block; width: 15px'>&nbsp;</span><span style='width: 18px;'>角色:</span>【系统管理员】 
 		   </div>
 
 
 			<div style='float: left;'>
 
 				<?php echo smarty_modifier_date_format(time(),'%Y-%m-%d');?>
-  <?php echo $_smarty_tpl->getVariable('week')->value;?>
+<span style='width: 17px; display: inline-block;'>&nbsp;</span><?php echo $_smarty_tpl->getVariable('week')->value;?>
  
 			</div>
 

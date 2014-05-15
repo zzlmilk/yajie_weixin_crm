@@ -102,7 +102,7 @@
                 <table width="150" border="0" cellpadding="0" cellspacing="0" class="left-table01" style=''>
                     <tr>
                         <td>
-                            <div style='width: 200px; height: 45px;' class='leftLines'>
+                            <div style='width: 200px; height: 40px;' class='leftLines'>
 
 
                                 系统管理菜单

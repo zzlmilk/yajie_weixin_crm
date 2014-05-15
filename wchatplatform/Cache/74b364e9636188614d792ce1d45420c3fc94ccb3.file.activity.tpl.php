@@ -1,4 +1,23 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 18:07:23
+         compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/Game/activity.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1555855665373405b85dd19-44166797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '74b364e9636188614d792ce1d45420c3fc94ccb3' => 
+    array (
+      0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/Game/activity.tpl',
+      1 => 1400061692,
+    ),
+  ),
+  'nocache_hash' => '1555855665373405b85dd19-44166797',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
+<?php if (!is_callable('smarty_modifier_date_format')) include '/web/www/yajie_weixin_crm/wchatplatform/Config/Smarty/libs/plugins/modifier.date_format.php';
+?><!DOCTYPE html>
 <html> 
     <head>
 
@@ -94,7 +113,7 @@
         }
 
         .bgMask{
-          width: 100%;
+          width: 96%;
           /*height: 40em;*/
           height: 100%;
           /*margin-left:0.3em;*/
@@ -152,42 +171,53 @@
       <div class="regWarp">
 
          <!--  <div class="titleText">活动</div> -->
-          <div class="articleTitle">{$info.activity_name}</div>
+          <div class="articleTitle"><?php echo $_smarty_tpl->getVariable('info')->value['activity_name'];?>
+</div>
           <div class="timeReadNumber">
-            <span>{$info.activity_end_time|date_format:'%m-%d'}</span>
-            <span style=" margin-left: 1em;">阅读{$info.read_number}</span>
+            <span><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('info')->value['activity_end_time'],'%m-%d');?>
+</span>
+            <span style=" margin-left: 1em;">阅读<?php echo $_smarty_tpl->getVariable('info')->value['read_number'];?>
+</span>
           </div>
 
           <div class="textCotent">
-             {$info.activity_html}
+             <?php echo $_smarty_tpl->getVariable('info')->value['activity_html'];?>
+
           </div>
 
           <div class="timeReadNumber">
-            已有人<b>{$info.apply_number}</b>报名
+            已有人<b><?php echo $_smarty_tpl->getVariable('info')->value['apply_number'];?>
+</b>报名
           </div>
 
           <table class="table table-striped" style=" width: 98%; margin: 0 auto;">
 
-            {foreach from=$record item=v}
+            <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('record')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if (count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+?>
 
              <tr>
-                <td class="rowOne">{$v.real_name}</td>
-                <td class="rowtwo">{$v.apply_time|date_format:'%m-%d'}</td>
+                <td class="rowOne"><?php echo $_smarty_tpl->tpl_vars['v']->value['real_name'];?>
+</td>
+                <td class="rowtwo"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['apply_time'],'%m-%d');?>
+</td>
               </tr>
 
-            {/foreach}
+            <?php }} ?>
           </table>
 
         <div style=" text-align: center; margin-top: 2em;">
 
-          {if $today_time > $info.activity_end_time}
+          <?php if ($_smarty_tpl->getVariable('today_time')->value>$_smarty_tpl->getVariable('info')->value['activity_end_time']){?>
           <button type="button" class="btn btn-info maskApply"  style="height: 2em; font-size: 1.5em; margin: 0 auto;  width: 95%;">报名已关闭</button>
 
-          {else}
+          <?php }else{ ?>
 
          <button type="button" class="btn btn-primary maskApply" id="mySign" style="height: 2em; font-size: 1.5em; margin: 0 auto; width: 95%;">报名</button>
      
-          {/if}
+          <?php }?>
         </div>
 
       </div>
@@ -206,10 +236,13 @@
               </div>
 
 
-                <form action='{$WebSiteUrl}?g={$model}&a=game&v=applyAction' class="form-horizontal" method='post'role="form" style=" padding-left: 1.8em; ">
+                <form action='<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
+&a=game&v=applyAction' class="form-horizontal" method='post'role="form" style=" padding-left: 1.8em; ">
                   
 
-                  <input type="hidden" name='id' id='id' value='{$info.activity_id}'>
+                  <input type="hidden" name='id' id='id' value='<?php echo $_smarty_tpl->getVariable('info')->value['activity_id'];?>
+'>
                   <div class="form-group" style=" margin-top: 3em;">
                     <label for="inputEmail3" class="col-sm-2 control-label namePhoneLabelStyle">真实姓名</label>
                     <div class="col-sm-10">

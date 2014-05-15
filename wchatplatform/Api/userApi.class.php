@@ -103,6 +103,7 @@ class userApi {
 
         $array = json_decode($arrayJson, true);
 
+       
         $error = new errorApi();
 
         $error->JudgeError($array);

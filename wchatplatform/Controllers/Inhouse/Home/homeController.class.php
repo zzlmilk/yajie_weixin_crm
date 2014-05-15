@@ -6,6 +6,11 @@ class homeController extends BaseController {
 
         header("Content-type:text/html;charset=utf-8");
 
+
+                print_r($_REQUEST);
+
+        die;
+
         if (!empty($_REQUEST['open_id'])) {
 
             $this->userOpenId = $_REQUEST['open_id'];

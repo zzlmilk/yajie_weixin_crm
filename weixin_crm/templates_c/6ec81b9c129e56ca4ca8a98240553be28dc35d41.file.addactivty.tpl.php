@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 12:16:31
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 11:11:45
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/activty/addactivty.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1789890325372ee1f3db4c9-96779800%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2018548441537430710dd3e9-14250517%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6ec81b9c129e56ca4ca8a98240553be28dc35d41' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/activty/addactivty.tpl',
-      1 => 1395649460,
+      1 => 1400058989,
     ),
   ),
-  'nocache_hash' => '1789890325372ee1f3db4c9-96779800',
+  'nocache_hash' => '2018548441537430710dd3e9-14250517',
   'function' => 
   array (
   ),
@@ -106,7 +106,7 @@ $_smarty_tpl->decodeProperties(array (
                
             </div>
           
-            <p style=" margin-left: 85px;"><button id="addButton" class="btn btn-info">确认添加</button></p>
+            <p style=" margin-left: 710px;"><button id="addButton" class="btn btn-info">确认添加</button></p>
         </form>
     </div>
 </div>

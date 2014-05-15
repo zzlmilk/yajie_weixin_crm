@@ -50,26 +50,4 @@
         <div style=" height: 3em;"></div>
     </body>
     
-    
-     <script>
 
-            var ISWP = !!(navigator.userAgent.match(/Windows\sPhone/i));
-            var sw = 0;
-
-            if (ISWP) {
-                var profile = document.getElementById('post-user');
-                if (profile) {
-                    profile.setAttribute("href", "weixin://profile/gh_fd9ca5a6a0fd");
-                }
-            }
-
-            function viewProfile() {
-                if (typeof WeixinJSBridge != "undefined" && WeixinJSBridge.invoke) {
-                    WeixinJSBridge.invoke('profile', {
-                        'username': 'gh_fd9ca5a6a0fd',
-                        'scene': '57'
-                    });
-                }
-            }
-
-        </script>
