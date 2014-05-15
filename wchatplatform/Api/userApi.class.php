@@ -38,10 +38,8 @@ class userApi {
             $data['open_id'] = $open_id;
             $data['source'] = SOURCE;
             $userInfoJson = transferData(APIURL . "/user/able_user", "post", $data);
+            
             $userInfoArray = json_decode($userInfoJson, true);
-
-
-
 
             return $userInfoArray;
         }

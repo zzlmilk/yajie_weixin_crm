@@ -8,12 +8,11 @@ class homePageController {
 
 
 
-    	 $name = getWeek();
+    	$name = getWeek();
 
 
     	
         $_ENV['smarty']->setDirTemplates('');
-
 
         $_ENV['smarty']->assign('week',$name);
         

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 12:25:09
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 14:14:33
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11188619355372f025aca021-84181978%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:208568333353745b49c152c2-83234373%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '323348291c1e2e4ee0840c94abcb00a98dd962cc' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/login.tpl',
-      1 => 1400040237,
+      1 => 1400134116,
     ),
   ),
-  'nocache_hash' => '11188619355372f025aca021-84181978',
+  'nocache_hash' => '208568333353745b49c152c2-83234373',
   'function' => 
   array (
   ),
@@ -58,7 +58,7 @@ $_smarty_tpl->decodeProperties(array (
     <body class='loginBack'>
         <form action="./publicHandler/process.php" method="post" id="myform">
             <div id="login">
-                <div class="login_name"><span>微信crm网站后台</span>管理中心</div>
+                <div class="login_name"><span>inhouse网站后台</span>管理中心</div>
                 <div class="login_frame">
                     <div id="user">
                         <div>用户名</div>

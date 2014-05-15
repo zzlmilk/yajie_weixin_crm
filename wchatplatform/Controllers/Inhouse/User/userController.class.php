@@ -19,7 +19,7 @@ class UserController extends BaseController {
             
 
 
-            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc1234';
+            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc1234';
 
 
             //$this->userOpenId = 'dasdasd';
@@ -194,6 +194,9 @@ class UserController extends BaseController {
             $error->JudgeError($info);
 
             $this->displayMessage("恭喜绑定成功",1);
+        } else{
+
+            $this->displayMessage("手机号码不能为空",0);
         }
 
     }
@@ -201,10 +204,14 @@ class UserController extends BaseController {
   
     //用户消费记录
     public function userExpense() {
-        // $this->able_register();
+
+
+        $this->able_register();
+
         $error = new errorApi();
         $userMessage["source"] = SOURCE;
         $userMessage["open_id"] = $this->userOpenId;
+
         $userInfo = transferData(APIURL . "/user/get_info", "post", $userMessage);
         $userInfo = json_decode($userInfo, TRUE);
         $userMessage["type"] = 1;
@@ -217,6 +224,18 @@ class UserController extends BaseController {
     }
 
     public function ativating() {
+
+
+        $userApi = new userApi();
+
+        $userInfo = $userApi->ableUser($this->userOpenId);
+
+        if(!empty($userInfo['error']) && $userInfo['error']['error_status'] == 20002){
+
+            $this->displayMessage('用户已绑定',0);
+
+            die;
+        }
 
         $this->display();
     }
