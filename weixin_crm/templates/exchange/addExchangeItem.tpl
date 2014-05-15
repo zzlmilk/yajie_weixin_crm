@@ -53,6 +53,7 @@
                         <option value="0" >虚拟</option>
                         <option value="1" selected="selected">实物</option>
                     </select>
+                    <input name='exchange_type' value="1" type="hidden">
                 </div>
             </div> 
             <div class="form-group"> 
