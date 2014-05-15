@@ -18,6 +18,7 @@
         margin-left: 25px;
         height: 25px;
         line-height: 0px;
+        margin-right: 45px;
         /*        margin: 0 auto;*/
     }
     table tr>th{
@@ -53,7 +54,7 @@
     <div style="">
 
         <div class="selectBar">
-            <input type="text" class="selectText"  placeholder="请输入手机号查询" id="selectText" name="selectText"><button class="btn" style="background-color: skyblue;color:white;border-radius:0px;height: 32px; width: 56px;margin-top: -3px;" type="submit">查询</button>
+            <input type="text" class="selectText"  placeholder="请输入手机号查询" id="selectText" name="selectText"><button class="btn" style="background:url('{$WebSiteUrl}/images/bottomBg.png');color:white;border-radius:0px;height: 32px; width: 61px;margin-top: -3px;" type="submit">查询</button>
            <label for="inputPassword3" style="margin-left: 26px;" class="">筛选排序：</label><input type="radio" name="sortType" checked id="point" value="point">&nbsp;<label for="point" style="margin-right: 17px;"  class="control-label">积分</label><input  type="radio" name="sortType" id="money" value="money">&nbsp;<label for="money" class="control-label">余额</label>
         </div>
     </div>
