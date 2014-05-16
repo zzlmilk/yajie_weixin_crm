@@ -17,6 +17,8 @@
 
         <link href="{$WebSiteUrl}/css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
 
+        <link href="{$WebSiteUrl}/css/crm_table_style.css" rel="stylesheet">
+
         <script>
             var editor;
             KindEditor.ready(function(K) {
@@ -47,7 +49,10 @@
 
     </head>
     <body>
-        <div class="userMangerTitle">添加活动</div>
+             <div class="navBarStyle">
+    当前位置：任务管理 > 添加活动
+</div>
+
 <div id="errorMessage" class="alert alert-danger errorMessage"></div>
 <div style="margin-left:15px;margin-top:15px;">
     <div style="width: 1000px; margin: 0 auto;">

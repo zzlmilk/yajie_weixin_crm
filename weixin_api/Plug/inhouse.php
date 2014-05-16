@@ -44,7 +44,7 @@ class InhousePlug {
 
 		    mssql_select_db('S3_INHOUSE',$conn);
 
-		    $sql = 'select * from gbm01  where gba08c  like "'.$phone.'" ';
+		    $sql = 'select * from gcm12  where gcn04c  like "'.$phone.'" and gcn00c like "002"';
 
 		    $odb_comm=mssql_query($sql);
 
@@ -59,7 +59,7 @@ class InhousePlug {
 
 		    } else{
 
-			    $sql = 'select * from gbm01  where gba01c  like "'.$phone.'" ';
+			    $sql = 'select * from gcm12  where gcn01c  like "'.$phone.'" and gcn00c like "002" ';
 
 			    $odb_comm=mssql_query($sql);
 
@@ -88,53 +88,41 @@ class InhousePlug {
 
 	public function binding($data){
 
-
 		if(!empty($data['phone']) && !empty($data['open_id'])){
+
+			/**
+			 * 从会员开卡记录中 
+			 */
 
 			$array = $this->cardApi($data);
 
-
-
-		
-
 			if($array['res'] == 1){
-
-					/**
-			 * 获取用户积分
-			 */
-
-			$conn = mssql_connect("sqlservername", "S3_INHOUSE", "S3_INHOUSE8472") or die (json_encode($errorArray));
-
-		    mssql_select_db('S3_INHOUSE',$conn);
-
-			$sql = 'select * from gcm12  where gcn01c  like "'.$array['info']['gba01c'].'" ';
-
-			$odb_comm=mssql_query($sql);
-
-			$user=mssql_fetch_array($odb_comm);
 			
 
-				$result['user_name'] = $array['info']['gba03c'];
+				$result['user_name'] = $array['info']['gcn03c'];
 
-				$result['user_phone'] = $array['info']['gba08c'];
+				$result['user_phone'] = $array['info']['gcn04c'];
 
-				$result['user_card'] = $array['info']['gba01c'];
+				$result['user_card'] = $array['info']['gcn01c'];
 
-				$result['birthday'] = strtotime($array['info']['gba17d']);
+				$result['birthday'] = strtotime($array['info']['gcn05c']);
 
-				if(!empty($user)){
+				if(!empty($array['info']['gcn16f'])){
 
-					$code = (int)$user['gcn16f'];
+					$code = (int)$array['info']['gcn16f'];
+
 				} else{
 
 					$code = 0;
-				}
 
-				$result['user_integration'] = $code;
+				}
+				
+
+				$result['user_integration'] = $code ;
 
 				$result['open_id'] = $data['open_id'];
 
-				$this->insertCardRecord($array['info']['gba01c']);
+				$this->insertCardRecord($array['info']['gcn01c']);
 
 				$user = new UserModel();
 
@@ -192,7 +180,7 @@ class InhousePlug {
 
 	public function test(){
 
-		$data['phone'] = '13651661062';
+		$data['phone'] = '13817211847';
 
 		$data['open_id'] = 'ocpOot-COx7UruiqEfag_Lny7dlc1234';
 

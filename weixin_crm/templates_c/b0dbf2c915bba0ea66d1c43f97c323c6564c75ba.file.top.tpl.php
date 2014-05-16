@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 15:26:09
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-16 15:36:03
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/top.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:165820159353746c111c09b0-88810990%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5718263945375bfe363bda7-15178081%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b0dbf2c915bba0ea66d1c43f97c323c6564c75ba' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/top.tpl',
-      1 => 1400138697,
+      1 => 1400146274,
     ),
   ),
-  'nocache_hash' => '165820159353746c111c09b0-88810990',
+  'nocache_hash' => '5718263945375bfe363bda7-15178081',
   'function' => 
   array (
   ),
@@ -33,11 +33,11 @@ _css.css" rel="stylesheet" type="text/css">
 /process.php?login=0' class=''>安全退出</a>
 	</div>
 
-	<div style='position: absolute; top: 28px; left: 1154px; '>
+	<!-- <div style='position: absolute; top: 28px; left: 1154px; '>
 
 		<img src='<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/exit.png'>
-	</div>
+	</div> -->
 
 
 	<div style='position: absolute; margin-left: 430px; margin-top: 51px;' class='banner'>

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 14:51:18
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 16:11:21
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/exchange/ExchangeList.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1807201224537463e6a0f072-28882990%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:912538139537476a9189c74-52364407%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b4d1362235c6329613d70a39b8d6d66de57f5da6' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/exchange/ExchangeList.tpl',
-      1 => 1400133911,
+      1 => 1400140378,
     ),
   ),
-  'nocache_hash' => '1807201224537463e6a0f072-28882990',
+  'nocache_hash' => '912538139537476a9189c74-52364407',
   'function' => 
   array (
   ),
@@ -24,6 +24,8 @@ $_smarty_tpl->decodeProperties(array (
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+<link href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/css/crm_table_style.css" rel="stylesheet">
 <style>
     .dataArea{
         text-align: left;
@@ -52,10 +54,12 @@ $_smarty_tpl->decodeProperties(array (
         text-decoration: none;
     }
 </style>
-<div class="userMangerTitle">礼品列表</div>
+<div class="navBarStyle">
+    当前位置：兑换管理 > 礼品列表
+</div>
 <div style="height: 50px;"></div>
 <div class="dataArea">
-    <table class="table table-striped" >
+    <table class="table table-bordered crmTable" >
         <tr><th>礼品图片</th><th>礼品名称</th><th>礼品类型</th><th style="width: 120px;">兑换积分</th><th>物品简介</th><th>详细介绍</th><th style="display: none">id</th><th>编辑</th><th>删除</th></tr>
         <?php  $_smarty_tpl->tpl_vars['exchangeIteam'] = new Smarty_Variable;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
