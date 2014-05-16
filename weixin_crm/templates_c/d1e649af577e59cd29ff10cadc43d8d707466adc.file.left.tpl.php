@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 16:37:47
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 17:12:41
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:183362439453747cdbc47479-65674275%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2475014335374850921fe39-23920434%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd1e649af577e59cd29ff10cadc43d8d707466adc' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1400143058,
+      1 => 1400143294,
     ),
   ),
-  'nocache_hash' => '183362439453747cdbc47479-65674275',
+  'nocache_hash' => '2475014335374850921fe39-23920434',
   'function' => 
   array (
   ),
@@ -378,7 +378,7 @@ _css.css" rel="stylesheet" type="text/css">
                                     <td width="85%">
 
                                          <div class='left-a' >
-                                        <a style='color: #79107d' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+                                        <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=exchange&functionname=addExchangeItem" target="mainFrame" class="left-fontSmall">添加礼品</a>
 
                                     </div>
