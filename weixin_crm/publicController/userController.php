@@ -14,9 +14,9 @@ class userController implements User {
         $userModel->addOffset(0, $pageSize);
         $userModel->initialize();
         $result = $userModel->vars_all;
-        foreach($result as $k=>$v){
-            $v["birthday"]=date("Y",  time())-date("Y",$v["birthday"]); 
-            $result[$k]["birthday"]=$v["birthday"];
+        foreach ($result as $k => $v) {
+            $v["birthday"] = date("Y", time()) - date("Y", $v["birthday"]);
+            $result[$k]["birthday"] = $v["birthday"];
         }
         $_ENV['smarty']->setDirTemplates('user');
         $_ENV['smarty']->assign('userInfo', $result);
@@ -32,7 +32,7 @@ class userController implements User {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errorFlag = true;
             if (!empty($_POST['selectText'])) {
-                $phone = $_POST['selectText'];
+                $phone = trim($_POST['selectText']);
                 if (!ctype_digit($phone)) {
                     $phoneCache = explode("-", $phone);
                     foreach ($phoneCache as $phoneNumber) {
@@ -46,8 +46,12 @@ class userController implements User {
                     $userModel = new userModel();
                     $userModel->initialize("user_phone = '" . $phone . "'");
                     if ($userModel->vars_number == 1) {
-                        $reVal = $userModel->vars;
-                        $_GET['userId'] = $reVal["user_id"];
+                        $reVal = $userModel->vars_all;
+//                        $_GET['userId'] = $reVal[0]["user_id"];
+                        foreach ($reVal as $k => $v) {
+                            $v["birthday"] = date("Y", time()) - date("Y", $v["birthday"]);
+                            $reVal[$k]["birthday"] = $v["birthday"];
+                        }
                         $errorFlag = false;
                     } else {
                         $this->errorMessage = "未找到对应的手机号码请确认后重新输入";
@@ -60,7 +64,9 @@ class userController implements User {
         if ($errorFlag) {
             $this->userList();
         } else {
-            $this->userEdit();
+            $_ENV['smarty']->setDirTemplates('user');
+            $_ENV['smarty']->assign('userInfo', $reVal);
+            $_ENV['smarty']->display('userList');
         }
     }
 
@@ -76,6 +82,10 @@ class userController implements User {
             $userModel->addOffset($dateCount, $pageSize);
             $userModel->initialize();
             $result = $userModel->vars_all;
+            foreach ($result as $k => $v) {
+                $v["birthday"] = date("Y", time()) - date("Y", $v["birthday"]);
+                $result[$k]["birthday"] = $v["birthday"];
+            }
             $_ENV['smarty']->setDirTemplates('user');
             $_ENV['smarty']->assign('userInfo', $result);
             $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=userListPage";
