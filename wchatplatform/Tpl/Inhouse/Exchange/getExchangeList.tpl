@@ -95,7 +95,8 @@
                     </div>
                 </div>-->
         <div class="registerWarp" style="padding-bottom: 10px;">
-            <p style="text-align: center">亲！看中了哪一款请前往本店前台兑换哦~</p>
+            <p style="text-align: left; padding-left: 8px;color: #979797"><span style="color: orange">*</span>亲！看中了哪一款请前往本店前台兑换哦~</p>
+            <p style="text-align: center;font-we1ight: bold;">我的积分：{$localUserInfo.user_integration}分</p>
             {foreach from=$exchangeList item=exchangeItem key=key}
                 {if $key % 2 eq 0}
                     <div class="giftBox" style="float: left;margin-left: 8px;">

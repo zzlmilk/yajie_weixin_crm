@@ -55,7 +55,7 @@
 
         <div class="selectBar">
             <input type="text" class="selectText"  placeholder="请输入手机号查询" id="selectText" name="selectText"><button class="btn" style="background:url('{$WebSiteUrl}/images/bottomBg.png');color:white;border-radius:0px;height: 32px; width: 61px;margin-top: -3px;" type="submit">查询</button>
-           <label for="inputPassword3" style="margin-left: 26px;" class="">筛选排序：</label><input type="radio" name="sortType" checked id="point" value="point">&nbsp;<label for="point" style="margin-right: 17px;"  class="control-label">积分</label><input  type="radio" name="sortType" id="money" value="money">&nbsp;<label for="money" class="control-label">余额</label>
+            <!--            <label for="inputPassword3" style="margin-left: 26px;" class="">筛选排序：</label><input type="radio" name="sortType" checked id="point" value="point">&nbsp;<label for="point" style="margin-right: 17px;"  class="control-label">积分</label><input  type="radio" name="sortType" id="money" value="money">&nbsp;<label for="money" class="control-label">余额</label>-->
         </div>
     </div>
     <div class="sortBar"></div>
@@ -67,7 +67,7 @@
 
 <div class="dataArea">
     <table class="table table-bordered ">
-        <tr><th style="width: 51px;"></th><th  style="width: 121px;">姓名</th><th style="width: 185px;">电话</th><th style="width: 150px;">年龄</th><th style="width: 141px;">余额</th><th style="width: 154px;">积分</th><th style="width: 206px;">编辑</th></tr>
+        <tr><th style="width: 51px;"></th><th  style="width: 121px;">姓名</th><th style="width: 185px;">电话</th><th style="width: 150px;">年龄</th><th style="width: 154px;">积分</th><th style="width: 206px;">关联微信数据</th></tr>
         {foreach from=$userInfo item=userInfo1 key=key}
             <tr>
                 <td>{$key+1}</td>
@@ -75,9 +75,8 @@
                 <td class="userPhone">{$userInfo1.user_phone}</td>
 <!--                <td>{$userInfo1.birthday|date_format:"%Y-%m-%d"}</td>-->
                 <td>{$userInfo1.birthday}</td>
-                <td>{$userInfo1.user_money}</td>
                 <td>{$userInfo1.user_integration}</td>
-                <td><a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userEdit&userId={$userInfo1.user_id}">编辑</a></td>
+                <td><a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userEdit&userId={$userInfo1.user_id}">关联</a></td>
 
             </tr>
         {/foreach}
@@ -101,6 +100,21 @@
 //$("#selectText").val(cutString);
 //}
 //});
+
+$("#selectText").on("keyup",function(event){
+if(event.ctrlKey&&event.keyCode==86){
+if(!getPhoneRegex($(this).val())){
+$(this).val("");
+}
+}
+else if(event.keyCode!=17){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+
+$("#selectText").val(cutString);
+}}
+
+});
 
 $(".userPhone").each(function(){
 var phoneNumber= $(this).html();

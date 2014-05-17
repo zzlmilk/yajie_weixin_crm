@@ -44,22 +44,22 @@
         <div style="text-align: center"><b style=" color: rgb(240,173,78)">注:图片须为88*88至176*176正方形图片</b></div>
         <div style="height: 35px;"></div>
         <form class="form-horizontal" action="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=addExchangeItem" enctype="multipart/form-data" method="Post">
-            <div class="form-group"> 
-                <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品名称：</label>
-                <div class="col-sm-2">
-                    <input class="form-control inputWidth" type="text" value="" name="exchange_name" id="exchangeName">
-                </div>
-            </div> 
-            <div class="form-group"> 
+<!--            <div class="form-group"> -->
+                <!--<label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品名称：</label>-->
+<!--                <div class="col-sm-2">-->
+                    <input class="form-control " type="hidden" value=" " name="exchange_name" id="exchangeName">
+<!--                </div>
+            </div> -->
+<!--            <div class="form-group"> 
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品类型：</label>
                 <div class="col-sm-2">
                     <select disabled="0" name="exchange_type" id='exchangeType' class="form-control inputWidth">
                         <option value="0" >虚拟</option>
                         <option value="1" selected="selected">实物</option>
-                    </select>
+                    </select>-->
                     <input name='exchange_type' value="1" type="hidden">
-                </div>
-            </div> 
+<!--                </div>
+            </div> -->
             <div class="form-group"> 
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">兑换积分：</label>
                 <div class="col-sm-2">
@@ -79,13 +79,14 @@
                     <input class="inputWidth" style="width: 65px;" name="exampleInputFile"  type="file" id="exampleInputFile">
                 </div>
             </div>
-            <div class="form-group"> 
+<!--            <div class="form-group"> 
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品详情：</label>
 
-                <div class="col-sm-2">
-                    <textarea  class="form-control inputWidth" rows="3"name="exchangez_details" id="exchangezDetails"></textarea>
-                </div>
-            </div>
+                <div class="col-sm-2">-->
+<!--                    <textarea  class="form-control inputWidth" rows="3"name="exchangez_details" id="exchangezDetails">     </textarea>-->
+                    <input name="exchangez_details" type="hidden" class="form-control inputWidth">
+<!--                </div>
+            </div>-->
 
             <p style="text-align: right;margin-right: 35px;"><button data-toggle="modal" data-target="#myModal" type="button" id="addButton" class="btn btn-info">确认添加</button></p>
             <!-- Modal -->
