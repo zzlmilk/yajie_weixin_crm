@@ -247,6 +247,39 @@ class InhousePlug {
 		  }
 		}
 	}
+	/**
+	 *   兑换  验证码
+	 */
+
+	public function  create($data){
+
+		if(!empty($data['open_id']) && !empty($data['exchange_id'])){
+
+
+
+       		$user = new userModel();
+
+            $userInfo = $user->getUserInfo($data['open_id']);
+
+
+            if (count($userInfo) > 0) {
+
+                $result['user_id'] = $userInfo['user_id'];
+
+                $result['exchange_id'] = $data['exchange_id'];
+
+                $exchange_code = new ExchangeCodeModel();
+
+                $guoqishijian = time() - 600000;
+
+			    $array = $exchange_code->create($result);
+
+                AssemblyJson($array);
+            }
+			
+		}
+
+	}
 }
 
 
