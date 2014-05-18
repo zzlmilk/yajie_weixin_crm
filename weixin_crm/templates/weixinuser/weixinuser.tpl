@@ -63,11 +63,16 @@
         <div class="navBarStyle">
             当前位置：系统管理 > 微信数据
         </div>
+        {if $noData eq "1"}
+            <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label">您所选择的微信用户暂无绑定会员卡</label></div>
+        {else}
+        {/if}
         <div class="bigWheelWarp">
             <div style="height: 50px;"></div>
+
             <div class="dataArea">
                 <table class="table table-bordered crmTable" >
-                    <tr><th>昵称</th><th>性别</th><th>城市</th><th>关注时间</th></tr>
+                    <tr><th>昵称</th><th>性别</th><th>城市</th><th>关注时间</th><th>关联用户数据源</th></tr>
                     {foreach from=$weixinUserData item=weixinUserIteam key=key}
                         <tr>
                             <td>{$weixinUserIteam.nickname}</td>
@@ -80,11 +85,13 @@
                             </td>
                             <td>{$weixinUserIteam.country}&nbsp;{$weixinUserIteam.province}&nbsp;{$weixinUserIteam.city}</td>
                             <td>{$weixinUserIteam.subscribe_time|date_format:"%Y-%m-%d"}</td>
+                            <td><a href="{$WebSiteUrl}/pageredirst.php?action=weixinuser&functionname=gotoUserMessage&open_Id={$weixinUserIteam.openid}">关联</a></td>
                         </tr>
                     {/foreach}
                 </table>
+
             </div>
-                <div style="height: 220px;"></div>
+            <div style="height: 220px;"></div>
             <div class='pageStyle'>{$pages}</div> 
         </div>
     </body>

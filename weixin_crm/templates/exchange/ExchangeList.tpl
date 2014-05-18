@@ -48,7 +48,7 @@
             <th style="display: none">id</th><th>编辑</th><th>删除</th></tr>
         {foreach from=$exchangeList item=exchangeIteam key=key}
             <tr>
-                <td><img src="{$WebSiteUrl}/giftImages/small/{$exchangeIteam.exchange_image}" width="80" height="80"></td>
+                <td><img src="{$WebSiteUrl}/giftImages/{$exchangeIteam.exchange_image}" width="80" height="80"></td>
 <!--                <td>{$exchangeIteam.exchange_name}</td>
                 <td>
                     {if $exchangeIteam.exchange_type eq 0}

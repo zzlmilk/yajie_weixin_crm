@@ -46,6 +46,32 @@ class weixinuserController {
         }
     }
 
+    function gotoUserMessage() {
+
+        if (!empty($_REQUEST["open_Id"])) {
+            $noData = "0";
+            $openId = $_REQUEST["open_Id"];
+            $userModel = new userModel();
+            $userModel->initialize("user_open_id = '" . $openId . "'");
+            $result[0] = $userModel->vars;
+            if ($result[0] == null) {
+                $noData = "1"; //显示无数据页面
+                $_ENV['smarty']->assign('noData', $noData);
+                $this->weixinuser();
+                
+            } else {
+                $old = date("Y", time()) - date("Y", $result[0]["birthday"]);
+                $result[0]["birthday"] = $old;
+
+
+                $_ENV['smarty']->setDirTemplates('user');
+                $_ENV['smarty']->assign('userInfo', $result);
+                
+                $_ENV['smarty']->display('userList');
+            }
+        }
+    }
+
 }
 
 ?>
