@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>兑换列表</title>
+        <title>获取验证码</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta content="initial-scale=1.0; maximum-scale=4.0; user-scalable=no;" name="viewport">
         <meta name="viewport" content="width=device-width,user-scalable=yes" />
