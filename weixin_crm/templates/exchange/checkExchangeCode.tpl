@@ -61,7 +61,7 @@
             </div>
         </div>
         <div style="height: 25px;"></div>
-        <p style="width: 100%; text-align: center;"><button id="addButton" type="submit" class="btn btn-info">确认</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="addButton" type="reset" class="btn btn-info">重置</button></p>
+        <p style="width: 100%; text-align: center;"><button id="addButton" type="submit" class="btn btn-info">确认 </button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="addButton" type="reset" class="btn btn-info">重置</button></p>
     </form>
     {if $exchangeIteam neq ""}
         <table class="table table-bordered crmTable" >

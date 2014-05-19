@@ -57,16 +57,16 @@
                 background: #E7E7E7;
                 top: -40px;
                 height: auto;
-                left: -11px;
+                left: -14px;
                 color: white;
-                font-size: 20px; 
+                font-size: 17px; 
                 width: 5px;
             }
             .col-line-first{
                 /*左侧线条上半部分*/
                 width: 2px;
                 margin-right: 10px;
-                height: 8%;
+                height: 38.4px;
                 background-color: gray;
             }
             .col-line-ball{
@@ -82,7 +82,7 @@
                 /*左侧线条下半部分*/
                 width: 2px;
                 margin-right: 10px;
-                height: 13%;
+                height: 62.4px;
                 background-color: gray;
             }
             </style>
@@ -140,7 +140,7 @@
         var years=thisDate.substr(0,4);
         var month=thisDate.substr(4,2);
         var date=thisDate.substr(6,2);
-        $(this).html(years+"-"+month+"-"+date);
+        $(this).html(years+"/"+month+"/"+date);
     })
     $(".timeValue").each(function(){
     var thisDate=$(this).html();
