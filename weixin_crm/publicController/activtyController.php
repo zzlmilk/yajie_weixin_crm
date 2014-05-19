@@ -3,7 +3,7 @@
 
 class activtyController implements activty {
 
-
+	 public $pageSize = 5;
 
 	public function __construct() {
 
@@ -12,6 +12,56 @@ class activtyController implements activty {
         $_ENV['smarty']->setDirTemplates('activty');
     }
 
+    /**
+     * 2014／5/17  报名详情
+     */
+
+    public function activtyList(){
+
+
+
+
+    	if(!empty($_REQUEST['id'])){
+
+
+
+    		if(!empty($_REQUEST['page'])){
+
+    			$page = $_REQUEST['page'];
+
+    		} else{
+
+    			$page = 1;
+    		}	
+
+    		$dateCount = $pageSize * ($page - 1);
+
+    		$pageSize = $this->pageSize;
+
+    		$apply = new ApplyModel();
+
+	        $apply->initialize('activity_id = '.$_REQUEST['id']);
+
+	        $number = $apply->vars_number;
+
+	        $apply->addOffset($dateCount, $pageSize);
+
+	        $apply->initialize();
+
+	        $result = $apply->vars_all;
+	      
+	       
+	        $_ENV['smarty']->assign('userInfo', $result);
+
+	        $url = WebSiteUrl . "/pageredirst.php?action=activty&functionname=activtyList&activity_id=".$_REQUEST['id'];
+	        $page = $_ENV['smarty']->getPages($url, 1, $number, $pageSize);
+	        $_ENV['smarty']->assign('pages', $page);
+	        $_ENV['smarty']->assign('errorMessage', $this->errorMessage);
+	        $_ENV['smarty']->display('activtyList');
+
+    	}
+
+    }
 	public function activty(){
 
 		$activty = new activityModel();

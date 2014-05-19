@@ -206,7 +206,7 @@
               </div>
 
 
-                <form action='{$WebSiteUrl}?g={$model}&a=game&v=applyAction' class="form-horizontal" method='post'role="form" style=" padding-left: 1.8em; ">
+                <form action='?g={$model}&a=game&v=applyAction' class="form-horizontal" method='post'role="form" style=" padding-left: 1.8em; ">
                   
 
                   <input type="hidden" name='id' id='id' value='{$info.activity_id}'>

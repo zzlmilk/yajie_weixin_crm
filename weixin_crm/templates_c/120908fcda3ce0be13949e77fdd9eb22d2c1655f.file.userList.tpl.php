@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 17:17:35
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-19 10:00:29
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18908913475374862f42f1d6-55159865%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2120970942537965bd4ea578-05149732%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '120908fcda3ce0be13949e77fdd9eb22d2c1655f' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl',
-      1 => 1400140229,
+      1 => 1400464713,
     ),
   ),
-  'nocache_hash' => '18908913475374862f42f1d6-55159865',
+  'nocache_hash' => '2120970942537965bd4ea578-05149732',
   'function' => 
   array (
   ),
@@ -78,7 +78,7 @@ $_smarty_tpl->decodeProperties(array (
         <div class="selectBar">
             <input type="text" class="selectText"  placeholder="请输入手机号查询" id="selectText" name="selectText"><button class="btn" style="background:url('<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/bottomBg.png');color:white;border-radius:0px;height: 32px; width: 61px;margin-top: -3px;" type="submit">查询</button>
-           <label for="inputPassword3" style="margin-left: 26px;" class="">筛选排序：</label><input type="radio" name="sortType" checked id="point" value="point">&nbsp;<label for="point" style="margin-right: 17px;"  class="control-label">积分</label><input  type="radio" name="sortType" id="money" value="money">&nbsp;<label for="money" class="control-label">余额</label>
+            <!--            <label for="inputPassword3" style="margin-left: 26px;" class="">筛选排序：</label><input type="radio" name="sortType" checked id="point" value="point">&nbsp;<label for="point" style="margin-right: 17px;"  class="control-label">积分</label><input  type="radio" name="sortType" id="money" value="money">&nbsp;<label for="money" class="control-label">余额</label>-->
         </div>
     </div>
     <div class="sortBar"></div>
@@ -91,7 +91,7 @@ $_smarty_tpl->decodeProperties(array (
 
 <div class="dataArea">
     <table class="table table-bordered ">
-        <tr><th style="width: 51px;"></th><th  style="width: 121px;">姓名</th><th style="width: 185px;">电话</th><th style="width: 150px;">年龄</th><th style="width: 141px;">余额</th><th style="width: 154px;">积分</th><th style="width: 206px;">编辑</th></tr>
+        <tr><th style="width: 51px;"></th><th  style="width: 121px;">姓名</th><th style="width: 185px;">电话</th><th style="width: 150px;">年龄</th><th style="width: 154px;">积分</th><th style="width: 206px;">关联微信数据</th></tr>
         <?php  $_smarty_tpl->tpl_vars['userInfo1'] = new Smarty_Variable;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('userInfo')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -110,13 +110,11 @@ if (count($_from) > 0){
 </td>-->
                 <td><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['birthday'];?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_money'];?>
-</td>
                 <td><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_integration'];?>
 </td>
                 <td><a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=user&functionname=userEdit&userId=<?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_id'];?>
-">编辑</a></td>
+/pageredirst.php?action=user&functionname=gotoWeixinMessage&open_Id=<?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_open_id'];?>
+">关联</a></td>
 
             </tr>
         <?php }} ?>
@@ -143,6 +141,29 @@ if (count($_from) > 0){
 //
 //$("#selectText").val(cutString);
 //}
+//});
+
+$("#selectText").on("keyup",function(event){
+if(event.ctrlKey&&event.keyCode==86){
+if(!getPhoneRegex($(this).val())&&!getMobilPhoneRegex($(this).val())){
+$(this).val("");
+}
+}
+else if(event.keyCode!=17&&event.keyCode!=8){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+
+$("#selectText").val(cutString);
+}}
+
+});
+//$("#selectText").on("keydown",function(event){
+//if(event.keyCode==8){
+//if(getPhoneRegex($(this).val())){
+//return false;
+////}
+//}
+//    
 //});
 
 $(".userPhone").each(function(){
