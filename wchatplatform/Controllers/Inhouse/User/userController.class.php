@@ -126,7 +126,7 @@ class UserController extends BaseController {
         $this->assign("userInfo", $userInfo["user"]);
 
 
-         $this->assign("weixin", $userInfo["weixin_user"]);
+        //$this->assign("weixin", $userInfo["weixin_user"]);
 
 
         $this->display();

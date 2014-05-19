@@ -94,7 +94,7 @@
 
 
             <div style=' width: 18%;margin-left: 5px;min-height: 65px;'>
-                <img src='{$userInfoWeixin.headimgurl}' class='round_photo'>
+                <img src='{$WebSiteUrlPublic}/Inhouse/image/default.png' class='round_photo'>
             </div>
             <div style='height: 0.8em;width: 100%;'>&nbsp;</div>
 
@@ -102,7 +102,7 @@
             <div style=' width: 66%; overflow: hidden; position: absolute; left: 25%; top: 5px;'>
 
                 <div style='margin-top: 4%;  '>
-                    <div class='siteClass' style='font-size:14px;' >昵称:&nbsp; {$userInfoWeixin.nickname}</div>
+                    <div class='siteClass' style='font-size:14px;' >昵称:&nbsp; {$userInfo.user_name}</div>
                 </div>
                 <div class='siteClass' style='font-size:14px;'>积分:&nbsp; {$userInfo.user_integration}</div>
                 <div class='siteClass' style='font-size:14px;'>电话:&nbsp; {$userInfo.user_phone}</div>
