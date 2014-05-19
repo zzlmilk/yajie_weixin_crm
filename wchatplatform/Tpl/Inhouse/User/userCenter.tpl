@@ -15,6 +15,8 @@
 <script src="{$WebSiteUrlPublic}/javascript/init.js" type="text/javascript">
 </script>
 
+<script src="{$WebSiteUrlPublic}/Inhouse/dist/ratchet.js"></script>
+
         <style>
             body{
                 Font-size=62.5%;
@@ -76,7 +78,7 @@
                     <div class='siteClass' style='font-size:14px;' >昵称:&nbsp; {$userInfo.user_name}</div>
                 </div>
                 <div class='siteClass' style='font-size:14px;'>积分:&nbsp; {$userInfo.user_integration}</div>
-                <div class='siteClass' style='font-size:14px;'>卡号:&nbsp; {$userInfo.user_card}</div>
+                <div class='siteClass' style='font-size:14px;'>手机:&nbsp; {$userInfo.user_phone}</div>
 
 
             </div>

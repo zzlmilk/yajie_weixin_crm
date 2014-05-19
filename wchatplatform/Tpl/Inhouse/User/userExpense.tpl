@@ -7,7 +7,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 
-        <script src="{$WebSiteUrlPublic}/Inhouse/dist/ratchet.js"></script>
+       
         <style>
             body{
                 Font-size=62.5%;

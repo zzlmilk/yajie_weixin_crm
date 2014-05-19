@@ -83,6 +83,17 @@ class UserController extends BaseController {
 
         $expenseItem = json_decode($userJsonData, true);
 
+       
+
+        $test = phoneStart($userInfo['user']['user_phone']);
+
+
+
+       
+
+       
+        $userInfo['user']['user_phone'] = phoneStart($userInfo['user']['user_phone']);
+
         if(count($expenseItem['record']) > 0){
 
             $result = $expenseItem['record'];
