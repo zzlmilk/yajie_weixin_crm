@@ -84,14 +84,6 @@ class UserController extends BaseController {
         $expenseItem = json_decode($userJsonData, true);
 
        
-
-        $test = phoneStart($userInfo['user']['user_phone']);
-
-
-
-       
-
-       
         $userInfo['user']['user_phone'] = phoneStart($userInfo['user']['user_phone']);
 
         if(count($expenseItem['record']) > 0){
@@ -108,7 +100,7 @@ class UserController extends BaseController {
 
                 $time = strtotime($v['order_time']);
 
-                $val = date('Y-m-d',$time);
+                $val = date('y/m/d',$time);
 
                 array_push($tempArray, $v['record_commodity']);
 
@@ -138,9 +130,6 @@ class UserController extends BaseController {
 
             $this->assign('record_state',0);
         }
-
-      
-
 
       
         $this->assign("userInfo", $userInfo["user"]);

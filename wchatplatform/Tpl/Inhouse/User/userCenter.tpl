@@ -7,15 +7,14 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 
-       
+
 
         <script src="{$WebSiteUrlPublic}/javascript/hignchats/highcharts.js" type="text/javascript">
-</script>
+        </script>
 
 <script src="{$WebSiteUrlPublic}/javascript/init.js" type="text/javascript">
 </script>
 
-<script src="{$WebSiteUrlPublic}/Inhouse/dist/ratchet.js"></script>
 
         <style>
             body{
@@ -61,7 +60,7 @@
         </style>
     </head>
     <body style="background-color: #E7E7E7;">
-       <div style='  width: 100%; background-color: rgb(255,255,247); position: relative;'>
+        <div style='  width: 100%; background-color: rgb(255,255,247); position: relative;'>
 
             <div style='height: 0.8em;width: 100%;'>&nbsp;</div>
 
@@ -78,8 +77,8 @@
                     <div class='siteClass' style='font-size:14px;' >昵称:&nbsp; {$userInfo.user_name}</div>
                 </div>
                 <div class='siteClass' style='font-size:14px;'>积分:&nbsp; {$userInfo.user_integration}</div>
-                <div class='siteClass' style='font-size:14px;'>手机:&nbsp; {$userInfo.user_phone}</div>
 
+                <div class='siteClass' style='font-size:14px;'>手机:&nbsp; {$userInfo.user_phone}</div>
 
             </div>
 
@@ -92,21 +91,22 @@
         <div id="container" style="width:100%;height:400px"></div>
 
 
+
         {/if}
        
 
+
     </body>
-   <script>
+    <script>
 
        var XVAL = eval('{$XVAL}');
 
        var YVAL = eval('{$YVAL}');
 
+
        var type = '{$record_state}';
-
-
-      
 
        hignchats_init(type,XVAL,YVAL);
 
   </script>
+</html>

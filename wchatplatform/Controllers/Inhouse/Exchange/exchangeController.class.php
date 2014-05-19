@@ -48,8 +48,7 @@ class exchangeController extends BaseController {
         $error = new errorApi();
         $error->JudgeError($exchangeList);
         $error->JudgeError($userInfo);
-//        var_dump($exchangeList);
-        $this->assign("WebImageUrl", WebImageUrl . "small/");
+        $this->assign("WebImageUrl", WebImageUrl);
         $this->assign("exchangeList", $exchangeList);
         $this->assign("localUserInfo", $localUserInfo);
         $this->assign("weixinUserInfo", $weixinUserInfo);
@@ -216,6 +215,9 @@ class exchangeController extends BaseController {
 
 //处理兑换结果
     public function changeGoodsResult() {
+
+
+
         if (isset($_GET['goodsId'])) {
             $postDate["source"] = SOURCE;
             $postDate['open_id'] = $this->userOpenId;
@@ -268,6 +270,21 @@ class exchangeController extends BaseController {
 
     //获取激活码页面
     function getExchangeCode() {
+
+        $user_integration = (int)$_REQUEST['user_intergration'];
+
+        $exchange_integration = (int)$_REQUEST['exchange_integration'];
+
+
+        if($user_integration < $exchange_integration){
+
+            $this->displayMessage('积分不够');
+
+            die;
+
+        }
+
+
         if (!empty($_REQUEST["exchangeId"])) {
             $exchangeId = $_REQUEST["exchangeId"];
             $postDate["source"] = SOURCE;

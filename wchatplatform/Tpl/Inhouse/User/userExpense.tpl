@@ -52,7 +52,7 @@
                 border-bottom: 1px solid #e7e7e7;height: 40px; line-height: 40px; 
             }
             .col-a{
-/*                显示尖角*/
+                /*                显示尖角*/
                 position: relative;
                 background: #E7E7E7;
                 top: -40px;
@@ -85,9 +85,9 @@
                 height: 62.4px;
                 background-color: gray;
             }
-            </style>
-        </head>
-        <body style="background-color: #E7E7E7;">
+        </style>
+    </head>
+    <body style="background-color: #E7E7E7;">
         <div style='  width: 100%; background-color: rgb(255,255,247); position: relative;'>
 
             <div style='height: 0.8em;width: 100%;'>&nbsp;</div>
@@ -105,7 +105,7 @@
                     <div class='siteClass' style='font-size:14px;' >昵称:&nbsp; {$userInfo.user_name}</div>
                 </div>
                 <div class='siteClass' style='font-size:14px;'>积分:&nbsp; {$userInfo.user_integration}</div>
-                <div class='siteClass' style='font-size:14px;'>电话:&nbsp; {$userInfo.user_phone}</div>
+                <div class='siteClass'  style='font-size:14px;'>电话:&nbsp; <span id="userPhone">{$userInfo.user_phone}</span></div>
 
 
             </div>
@@ -141,14 +141,17 @@
         var month=thisDate.substr(4,2);
         var date=thisDate.substr(6,2);
         $(this).html(years+"/"+month+"/"+date);
-    })
+    });
     $(".timeValue").each(function(){
     var thisDate=$(this).html();
     var hours=thisDate.substr(0,2);
     var mintues=thisDate.substr(2,2);
     var seconed=thisDate.substr(4,2);
     $(this).html(hours+":"+mintues+":"+seconed);
-})
+});
+var userPhone=$("#userPhone").html();
+var userPhoneCache=userPhone.substr(0,4)+"****"+userPhone.substr(8);
+$("#userPhone").html(userPhoneCache);
 
     </script>
 </html>

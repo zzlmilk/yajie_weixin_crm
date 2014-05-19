@@ -351,9 +351,7 @@
                                         </tr>
 
                                     {/if}
-
-                                    
-                                     {if $auth_result[39]==1}
+                                    {if $auth_result[39]==1}
 
                                         <tr>
 
@@ -365,10 +363,14 @@
                                                 </div>
                                             </td>
 
-                                        </tr>
 
                                     {/if}
 
+
+
+                                        </tr>
+
+                                  
 
                                 </table>
 
@@ -542,7 +544,7 @@
                                         </tr>
 
                                     {/if}
-                                   
+
 
                                 </table>
 
@@ -750,7 +752,21 @@
 
                                     {/if}
 
+                                    {if $auth_result[34]==1}
+                                        <tr>
 
+                                            <td width="85%">
+
+                                                <div class='left-a' >
+
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=exchangeTotle" target="mainFrame" class="left-fontSmall" >礼品统计</a>
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                    {/if}
 
                                 </table>
                             {/if}

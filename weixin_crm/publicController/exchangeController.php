@@ -3,10 +3,12 @@
 class exchangeController implements exchange {
 
     public $errorMessage = '';
+    public $pageSize = 5;
 
     public function ExchangeList() {
-        $pageSize = 3;
+        $pageSize = $this->pageSize;
         $exchangeModel = new exchangeModel();
+        $exchangeModel->addOrderBy("create_time desc");
         $exchangeModel->initialize();
         $exchangeNumber = $exchangeModel->vars_number;
         $exchangeModel->addOffset(0, $pageSize);
@@ -22,9 +24,10 @@ class exchangeController implements exchange {
 
     public function ExchangeListPage() {
         if (isset($_GET["page"])) {
-            $pageSize = 3;
+            $pageSize = $this->pageSize;
             $pageNumber = $_GET["page"];
             $exchangeModel = new exchangeModel();
+            $exchangeModel->addOrderBy("create_time desc");
             $exchangeModel->initialize();
             $exchangeNumber = $exchangeModel->vars_number;
             $dateCount = $pageSize * ($pageNumber - 1);
@@ -286,6 +289,33 @@ class exchangeController implements exchange {
         $_ENV['smarty']->setDirTemplates('exchange');
         $_ENV['smarty']->assign('errorMessage', $this->errorMessage);
         $_ENV['smarty']->display('checkExchangeCode');
+    }
+
+    public function exchangeTotle() {
+        $exchangeCode = new exchangeCodeVerificationModel();
+        $exchangeCode->addGroupBy("exchange_id");
+        $exchangeCode->addSelect("exchange_id,count(exchange_id) as exchangeNumber");
+        $exchangeCode->initialize();
+        $codeMessage = $exchangeCode->vars_all;
+        $exchange = new exchangeModel();
+        foreach ($codeMessage as $k => $v) {
+//            $codeMessage[$k]["exchangeNumber"];
+            $exchangeId = $codeMessage[$k]["exchange_id"];
+            $exchange->addCondition("exchange_id='$exchangeId'", 1);
+            $exchange->initialize();
+            if ($exchange->vars_number > 0) {
+                $exchangeMessage = $exchange->vars;
+                foreach ($exchangeMessage as $name => $value) {
+                    $codeMessage[$k][$name] = $value;
+                }
+            } else {
+                    $codeMessage[$k]["nodata"]="1";
+            }
+        }
+        var_dump($codeMessage);
+        $_ENV['smarty']->setDirTemplates('exchange');
+        $_ENV['smarty']->assign('codeList', $codeMessage);
+        $_ENV['smarty']->display('exchangeTotle');
     }
 
 }

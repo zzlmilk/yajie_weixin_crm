@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-19 09:59:26
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-19 16:50:47
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2893719625379657e3908c6-18869207%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1891051495379c5e7a49562-95270443%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd1e649af577e59cd29ff10cadc43d8d707466adc' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/left.tpl',
-      1 => 1400464713,
+      1 => 1400489444,
     ),
   ),
-  'nocache_hash' => '2893719625379657e3908c6-18869207',
+  'nocache_hash' => '1891051495379c5e7a49562-95270443',
   'function' => 
   array (
   ),
@@ -386,6 +386,27 @@ _css.css" rel="stylesheet" type="text/css">
                                         </tr>
 
                                     <?php }?>
+                                    <?php if ($_smarty_tpl->getVariable('auth_result')->value[39]==1){?>
+
+                                        <tr>
+
+                                            <td width="85%">
+
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=exchange&functionname=checkExchangeCode" target="mainFrame" class="left-fontSmall" >礼品验证</a>
+
+                                                </div>
+                                            </td>
+
+
+                                    <?php }?>
+
+
+
+                                        </tr>
+
+                                  
 
                                 </table>
 
@@ -568,22 +589,7 @@ _css.css" rel="stylesheet" type="text/css">
                                         </tr>
 
                                     <?php }?>
-                                    <?php if ($_smarty_tpl->getVariable('auth_result')->value[39]==1){?>
 
-                                        <tr>
-
-                                            <td width="85%">
-
-                                                <div class='left-a' >
-                                                    <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=exchange&functionname=checkExchangeCode" target="mainFrame" class="left-fontSmall" >礼品验证</a>
-
-                                                </div>
-                                            </td>
-
-                                        </tr>
-
-                                    <?php }?>
 
                                 </table>
 
@@ -801,7 +807,22 @@ _css.css" rel="stylesheet" type="text/css">
 
                                     <?php }?>
 
+                                    <?php if ($_smarty_tpl->getVariable('auth_result')->value[34]==1){?>
+                                        <tr>
 
+                                            <td width="85%">
+
+                                                <div class='left-a' >
+
+                                                    <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=exchange&functionname=exchangeTotle" target="mainFrame" class="left-fontSmall" >礼品统计</a>
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                    <?php }?>
 
                                 </table>
                             <?php }?>

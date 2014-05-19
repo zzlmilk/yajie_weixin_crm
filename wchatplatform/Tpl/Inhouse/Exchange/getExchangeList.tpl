@@ -110,7 +110,7 @@
                         <div > <a ><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
                         <div style="word-wrap: break-word; word-break: normal;">
                             <p class="summary" style="height:60px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
-                            <p class="integration" style=""><a href="?g={$model}&a=exchange&v=getExchangeCode&open_id={$open_id}&exchangeId={$exchangeItem.exchange_id}">积分: {$exchangeItem.exchange_integration}分</a></p>   
+                            <p class="integration" style=""><a href="?g={$model}&a=exchange&v=getExchangeCode&open_id={$open_id}&exchangeId={$exchangeItem.exchange_id}&exchange_integration={$exchangeItem.exchange_integration}&user_intergration={$localUserInfo.user_integration}">积分: {$exchangeItem.exchange_integration}分</a></p>   
 
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                         <div > <a ><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
                         <div style="word-wrap: break-word; word-break: normal;">
                             <p class="summary" style="height: 60px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
-                            <p class="integration" style=""><a href="?g={$model}&a=exchange&v=getExchangeCode&open_id={$open_id}&exchangeId={$exchangeItem.exchange_id}">积分: {$exchangeItem.exchange_integration}分</a></p>
+                            <p class="integration" style=""><a href="?g={$model}&a=exchange&v=getExchangeCode&open_id={$open_id}&exchangeId={$exchangeItem.exchange_id}&exchange_integration={$exchangeItem.exchange_integration}&user_intergration={$localUserInfo.user_integration}">积分: {$exchangeItem.exchange_integration}分</a></p>
                         </div>
                     </div>
                 {/if}

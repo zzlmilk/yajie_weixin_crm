@@ -1,7 +1,7 @@
 <?php
 
 
-
+echo date('y');
 
 
 

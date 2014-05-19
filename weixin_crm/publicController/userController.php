@@ -9,6 +9,7 @@ class userController implements User {
     public function userList() {
         $pageSize = $this->pageSize;
         $userModel = new userModel();
+        $userModel->addOrderBy("create_time desc");
         $userModel->initialize();
         $userNumber = $userModel->vars_number;
         $userModel->addOffset(0, $pageSize);
@@ -76,6 +77,7 @@ class userController implements User {
             $pageSize = $this->pageSize;
             $pageNumber = $_GET["page"];
             $userModel = new userModel();
+            $userModel->addOrderBy("create_time desc");
             $userModel->initialize();
             $userNumber = $userModel->vars_number;
             $dateCount = $pageSize * ($pageNumber - 1);
