@@ -48,15 +48,15 @@ class exchangeController implements exchange {
 
 //            $imageReturnVal = $this->addImage("exampleInputFile");
 //            if ($imageReturnVal["state"] == 0) {
-                $insertData['exchange_name'] = $_POST['exchange_name'];
-                $insertData['exchange_type'] = $_POST['exchange_type'];
-                $insertData['exchange_integration'] = $_POST['exchange_integration'];
-                $insertData['exchange_summary'] = $_POST['exchange_summary'];
-                $insertData['exchangez_details'] = $_POST['exchangez_details'];
-                $insertData['exchange_image'] = $_POST['exchange_image'];
-                $insertData['create_time'] = time();
-                $this->addExchange($insertData);
-                $this->ExchangeList();
+            $insertData['exchange_name'] = $_POST['exchange_name'];
+            $insertData['exchange_type'] = $_POST['exchange_type'];
+            $insertData['exchange_integration'] = $_POST['exchange_integration'];
+            $insertData['exchange_summary'] = $_POST['exchange_summary'];
+            $insertData['exchangez_details'] = $_POST['exchangez_details'];
+            $insertData['exchange_image'] = $_POST['exchange_image'];
+            $insertData['create_time'] = time();
+            $this->addExchange($insertData);
+            $this->ExchangeList();
 //            } else {
 //
 //                $_SERVER["REQUEST_METHOD"] = "GET";
@@ -253,10 +253,9 @@ class exchangeController implements exchange {
                 } else {
                     if ($exchageCodeMesssage["create_time"] < time() - 600) {
                         $this->errorMessage = "该验证码已经过期请重新获取。";
-                    }else if($exchageCodeMesssage["state"]==1){
+                    } else if ($exchageCodeMesssage["state"] == 1) {
                         $this->errorMessage = "该验证码已被使用，请重新获取。";
-                    }
-                    else {
+                    } else {
                         $userModel = new userModel();
                         $userModel->initialize("user_id = '" . $exchageCodeMesssage['user_id'] . "'");
                         $userMessage = $userModel->vars;
@@ -269,11 +268,12 @@ class exchangeController implements exchange {
                             $this->errorMessage = "用户当前积分为" . $userMessage["user_integration"] . "分，未达到兑换积分要求" . $exchageValue["exchange_integration"] . "分。";
                         } else {
                             $this->errorMessage = "验证成功，礼品相关信息请查看，所显示表格。";
-                            $insertData["code_id"]=$exchageCodeMesssage['exchange_code_id'];
-                            $insertData["create_time"]=  time();
-                            $exchangeCodeVerification=new exchangeCodeVerificationModel();
+                            $insertData["code_id"] = $exchageCodeMesssage['exchange_code_id'];
+                            $insertData["exchange_id"] = $exchageCodeMesssage['exchange_id'];
+                            $insertData["create_time"] = time();
+                            $exchangeCodeVerification = new exchangeCodeVerificationModel();
                             $exchangeCodeVerification->insert($insertData);
-                            $upDate["state"]=1;
+                            $upDate["state"] = 1;
                             $exchangeCode->update($upDate);
                             $_ENV['smarty']->assign('exchangeIteam', $exchageValue);
                         }
