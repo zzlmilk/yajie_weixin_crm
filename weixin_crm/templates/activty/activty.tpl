@@ -50,12 +50,14 @@
 
 <div class="dataArea">
     <table class="table crmTable table-bordered">
-        <tr><th>活动名称</th><th>结束时间</th><th>编辑</th></tr>
+        <tr><th>活动名称</th><th>结束时间</th><th>编辑</th><th>报名活动详情</th></tr>
         {foreach from=$activtyAll item=activtyAlls key=key}
             <tr>
                 <td>{$activtyAlls.activity_name}</td>
                 <td>{$activtyAlls.activity_end_time|date_format:'%Y-%m-%d'}</td>
                 <td><a href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=activtyEdit&id={$activtyAlls.activity_id}">编辑</a></td>
+
+                <td><a href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=activtyList&id={$activtyAlls.activity_id}">报名活动详情</a></td>
 
             </tr>
         {/foreach}

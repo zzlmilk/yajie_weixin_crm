@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-15 15:52:30
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-17 10:43:54
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/activty/activty.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14416096825374723ed05ce7-13544407%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:8668186305376ccea669d06-10447795%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '39f8db7741ea4e5f66fefdf1fa0d60325a92de0b' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/activty/activty.tpl',
-      1 => 1400140338,
+      1 => 1400141642,
     ),
   ),
-  'nocache_hash' => '14416096825374723ed05ce7-13544407',
+  'nocache_hash' => '8668186305376ccea669d06-10447795',
   'function' => 
   array (
   ),
@@ -61,7 +61,12 @@ $_smarty_tpl->decodeProperties(array (
         margin: 0 auto;
     }
 </style>
-<div class="userMangerTitle">活动列表管理</div>
+
+<div class="navBarStyle">
+    当前位置：任务管理 > 活动列表
+</div>
+
+
 <div style="height: 50px;"></div>
 
 <div class="dataArea">
