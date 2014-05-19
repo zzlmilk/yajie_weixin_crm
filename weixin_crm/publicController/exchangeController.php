@@ -47,21 +47,22 @@ class exchangeController implements exchange {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 //            $imageReturnVal = $this->addImage("exampleInputFile");
-            if ($imageReturnVal["state"] == 0) {
+//            if ($imageReturnVal["state"] == 0) {
                 $insertData['exchange_name'] = $_POST['exchange_name'];
                 $insertData['exchange_type'] = $_POST['exchange_type'];
                 $insertData['exchange_integration'] = $_POST['exchange_integration'];
                 $insertData['exchange_summary'] = $_POST['exchange_summary'];
                 $insertData['exchangez_details'] = $_POST['exchangez_details'];
                 $insertData['exchange_image'] = $_POST['exchange_image'];
+                $insertData['create_time'] = time();
                 $this->addExchange($insertData);
                 $this->ExchangeList();
-            } else {
-
-                $_SERVER["REQUEST_METHOD"] = "GET";
-                $this->errorMessage = $imageReturnVal['message'];
-                $this->addExchangeItem();
-            }
+//            } else {
+//
+//                $_SERVER["REQUEST_METHOD"] = "GET";
+//                $this->errorMessage = $imageReturnVal['message'];
+//                $this->addExchangeItem();
+//            }
         } else {
             $_ENV['smarty']->setDirTemplates('exchange');
             $_ENV['smarty']->assign('errorMessage', $this->errorMessage);
