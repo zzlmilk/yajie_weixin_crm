@@ -36,7 +36,7 @@
     }
 </style>
 <div class="navBarStyle">
-    当前位置：兑换管理 > 礼品列表
+    当前位置：统计模块 > 礼品统计
 </div>
 <div style="height: 50px;"></div>
 <div class="dataArea">
@@ -47,12 +47,15 @@
             <th style="display: none">id</th>
         </tr>
             {foreach from=$codeList item=codeIteam key=key}
+                {if $codeIteam.nodata eq "1"}
+                    {else}
             <tr>
                 <td>{$key+1}</td>
-                <td>{$codeIteam.exchange_integration}</td>
                 <td style="text-align: left;width: 50%">{$codeIteam.exchange_summary}</td>
+                <td >{$codeIteam.exchangeNumber}</td>
                 <td  style="display: none">{$codeIteam.exchange_id}</td>
             </tr>
+            {/if}
         {/foreach}
     </table>
 

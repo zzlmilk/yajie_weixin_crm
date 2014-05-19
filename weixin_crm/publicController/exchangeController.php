@@ -9,7 +9,7 @@ class exchangeController implements exchange {
         $pageSize = $this->pageSize;
         $exchangeModel = new exchangeModel();
         $exchangeModel->addOrderBy("create_time desc");
-        $exchangeModel->initialize();
+        $exchangeModel->initialize("state = 0");
         $exchangeNumber = $exchangeModel->vars_number;
         $exchangeModel->addOffset(0, $pageSize);
         $exchangeModel->initialize();
@@ -28,7 +28,7 @@ class exchangeController implements exchange {
             $pageNumber = $_GET["page"];
             $exchangeModel = new exchangeModel();
             $exchangeModel->addOrderBy("create_time desc");
-            $exchangeModel->initialize();
+             $exchangeModel->initialize("state = 0");
             $exchangeNumber = $exchangeModel->vars_number;
             $dateCount = $pageSize * ($pageNumber - 1);
             $exchangeModel->addOffset($dateCount, $pageSize);
@@ -123,8 +123,8 @@ class exchangeController implements exchange {
             $exchange->initialize('exchange_id like "' . $exchangeModel_number . '"');
 
             if ($exchange->vars_number > 0) {
-
-                $exchange->remove();
+                $update["state"]=1;
+                $exchange->update($update);
             }
         }
     }
@@ -309,10 +309,9 @@ class exchangeController implements exchange {
                     $codeMessage[$k][$name] = $value;
                 }
             } else {
-                    $codeMessage[$k]["nodata"]="1";
+                   unset( $codeMessage[$k]);
             }
         }
-        var_dump($codeMessage);
         $_ENV['smarty']->setDirTemplates('exchange');
         $_ENV['smarty']->assign('codeList', $codeMessage);
         $_ENV['smarty']->display('exchangeTotle');
