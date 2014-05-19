@@ -59,6 +59,9 @@ class UserController extends BaseController {
      */
     public function userCenter() {
 
+
+
+
         $this->able_register();
 
 
@@ -74,11 +77,22 @@ class UserController extends BaseController {
         $expenseItem = json_decode($userJsonData, true);
 
 
+
+
         $info = $user_api->getUserInfo($this->userOpenId);
+
+
+        print_r($info);
+
+        die;
         
         $error = new errorApi();
         $error->JudgeError($info);
         
+
+
+
+        $error->JudgeError($expenseItem);
 
         if(count($expenseItem['record']) > 0){
 
@@ -113,17 +127,17 @@ class UserController extends BaseController {
                 unset($tempArray);
             }
 
-        }
-
-        $error = new errorApi();
-
-        $error->JudgeError($expenseItem);
 
         $this->assign("XVAL", json_encode($xval));
 
         $this->assign("YVAL", json_encode($yval));
 
-        $this->assign("userInfo", $userInfo["user"]);
+        }
+
+      
+
+
+        $this->assign("userInfo", $info["user"]);
 
 
         //$this->assign("weixin", $userInfo["weixin_user"]);

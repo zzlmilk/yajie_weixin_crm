@@ -94,7 +94,7 @@
 
 
             <div style=' width: 18%;margin-left: 5px;min-height: 65px;'>
-                <img src='{$WebSiteUrlPublic}/Inhouse/image/default.png' class='round_photo'>
+                <img src='{$WebSiteUrlPublic}/image/default.png' class='round_photo'>
             </div>
             <div style='height: 0.8em;width: 100%;'>&nbsp;</div>
 
