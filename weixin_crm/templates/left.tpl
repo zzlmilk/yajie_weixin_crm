@@ -8,7 +8,7 @@
             body {
                 margin: 0;background:url(images/menu-shadow.png) repeat-y right top #eeeeee;
             }
-           
+
 
         </style>
         <link href="{$WebSiteUrl}/css/{$source}_css.css" rel="stylesheet" type="text/css">
@@ -98,7 +98,7 @@
             }
             </script>{/literal}
             <div class="left_background" style='border-radius: 10px 10px 0 0;'>
-                
+
                 <table width="150" border="0" cellpadding="0" cellspacing="0" class="left-table01" style=''>
                     <tr>
                         <td>
@@ -108,188 +108,188 @@
                                 系统管理菜单
                             </div>
 
-{if $auth_result[2]==1}
-                            <!--                    用户开始-->
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan " id="table1">
-                                <tr>
-                                    <td height="29" onclick="list('1')">
-                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                               
-                                                <td width="85%">
+                            {if $auth_result[2]==1}
+                                <!--                    用户开始-->
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan " id="table1">
+                                    <tr>
+                                        <td height="29" onclick="list('1')">
+                                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
 
-                                                    <img name="img1" id="img1" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
-                                                    <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
-                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >用户管理</a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table id="subtree1" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
-                                {if $auth_result[3]==1}
-                                <tr>
-                                    
-                                    <td width="85%">
+                                                    <td width="85%">
 
-                                        <div class='left-a' >
+                                                        <img name="img1" id="img1" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
+                                                        <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
+                                                        <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >用户管理</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table id="subtree1" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                    {if $auth_result[3]==1}
+                                        <tr>
 
-                                            <a  style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" >客户信息</a>
+                                            <td width="85%">
 
-                                        </div>
-                                        
-                                    </td>
-                                </tr>
+                                                <div class='left-a' >
 
-                                {/if}
+                                                    <a  style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userList" target="mainFrame" class="left-fontSmall" >客户信息</a>
 
-                                {if $auth_result[4]==1}
-                                <tr>
-                                    
-                                    <td width="85%">
+                                                </div>
 
+                                            </td>
+                                        </tr>
 
+                                    {/if}
 
-                                        <div class='left-a' >
+                                    {if $auth_result[4]==1}
+                                        <tr>
 
-                                            <a  style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=pointAndMoneyManage" target="mainFrame" class="left-fontSmall" >积分消费管理</a>
-
-                                        </div>
-                                       
-                                    </td>
-                                </tr>
-                                {/if}
-
-                                {if $auth_result[5]==1}
-                                <tr>
-                                    
-                                    <td width="85%">
-                                       
+                                            <td width="85%">
 
 
-                                          <div class='left-a' >
 
-                                            <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userManage" target="mainFrame" class="left-fontSmall">添加用户</a>
+                                                <div class='left-a' >
 
-                                        </div>
-                                    </td>
-                                </tr>
-                                {/if}
-                            </table>
-{/if}
+                                                    <a  style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=pointAndMoneyManage" target="mainFrame" class="left-fontSmall" >积分消费管理</a>
 
-{if $auth_result[6]==1}
+                                                </div>
 
-                            <!--                    积分开始-->
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan" id="table2">
-                                <tr>
-                                    <td height="29" onclick="list('2')">
-                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                               
-                                                <td width="85%">
+                                            </td>
+                                        </tr>
+                                    {/if}
 
-                                                     <img name="img2" id="img2" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
-                                                    <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
-                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >预约管理</a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table id="subtree2" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                    {if $auth_result[5]==1}
+                                        <tr>
 
-                                {if $auth_result[7]==1}
-                                <tr>
-                                    
-                                    <td width="85%">
-
-                                        <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" >订单管理</a>
-
-                                    </div>
-                                    </td>
-
-                                </tr>
-
-                                {/if}
-
-                                {if $auth_result[8]==1}
-                                <tr>
-                                   
-                                    <td width="85%">
+                                            <td width="85%">
 
 
-                                        <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=orderAdd" target="mainFrame" class="left-fontSmall">新增预约</a>
 
-                                    </div>
+                                                <div class='left-a' >
 
-                                    </td>
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userManage" target="mainFrame" class="left-fontSmall">添加用户</a>
 
-                                </tr>
-                                {/if}
-                            </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {/if}
+                                </table>
+                            {/if}
+
+                            {if $auth_result[6]==1}
+
+                                <!--                    积分开始-->
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan" id="table2">
+                                    <tr>
+                                        <td height="29" onclick="list('2')">
+                                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
+
+                                                    <td width="85%">
+
+                                                        <img name="img2" id="img2" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
+                                                        <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
+                                                        <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >预约管理</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table id="subtree2" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                    {if $auth_result[7]==1}
+                                        <tr>
+
+                                            <td width="85%">
+
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=getOrderlist" target="mainFrame" class="left-fontSmall" >订单管理</a>
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                    {/if}
+
+                                    {if $auth_result[8]==1}
+                                        <tr>
+
+                                            <td width="85%">
+
+
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=order&functionname=orderAdd" target="mainFrame" class="left-fontSmall">新增预约</a>
+
+                                                </div>
+
+                                            </td>
+
+                                        </tr>
+                                    {/if}
+                                </table>
 
 
                             {/if}
 
                             {if $auth_result[9]==1}
 
-                            <!--                    微游戏开始-->
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan" id="table3">
-                                <tr>
-                                    <td height="29" onclick="list('3')">
-                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                
-                                                <td width="85%">
+                                <!--                    微游戏开始-->
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan" id="table3">
+                                    <tr>
+                                        <td height="29" onclick="list('3')">
+                                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
 
-                                                    <img name="img3" id="img3" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
+                                                    <td width="85%">
 
-                                                    <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
+                                                        <img name="img3" id="img3" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
 
-                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >微游戏管理</a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table id="subtree3" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                                        <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
 
-                                {if $auth_result[10]==1}
-                                <tr>
-                                   
-                                    <td width="85%">
-                                        <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall">大转盘礼品列表</a>
+                                                        <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >微游戏管理</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table id="subtree3" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
 
-                                    </div>
-                                    </td>
+                                    {if $auth_result[10]==1}
+                                        <tr>
 
-                                </tr>
+                                            <td width="85%">
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getBigWheelList" target="mainFrame" class="left-fontSmall">大转盘礼品列表</a>
 
-                                {/if}
+                                                </div>
+                                            </td>
 
-                                {if $auth_result[11]==1}
+                                        </tr>
 
-                                <tr>
-                                    
-                                    <td width="85%">
+                                    {/if}
 
-                                        <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" >刮刮卡礼品列表</a>
+                                    {if $auth_result[11]==1}
 
-                                    </div>
-                                    </td>
-                                </tr>
+                                        <tr>
 
-                                {/if}
+                                            <td width="85%">
 
-                            </table>
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=getCardList" target="mainFrame" class="left-fontSmall" >刮刮卡礼品列表</a>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    {/if}
+
+                                </table>
 
 
                             {/if}
@@ -299,60 +299,60 @@
 
 
 
-                            <!--                   兑换开始-->
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan " id="table4">
-                                <tr>
-                                    <td height="29" onclick="list('4')">
-                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                
-                                                <td width="85%">
+                                <!--                   兑换开始-->
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan " id="table4">
+                                    <tr>
+                                        <td height="29" onclick="list('4')">
+                                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
 
-                                                    <img name="img4" id="img4" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
+                                                    <td width="85%">
 
-                                                     <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
-                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >兑换管理</a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table id="subtree4" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                                        <img name="img4" id="img4" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
 
-                                {if $auth_result[13]==1}
-                                <tr>
-                                    
-                                    <td width="85%">
+                                                        <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
+                                                        <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >兑换管理</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table id="subtree4" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
 
+                                    {if $auth_result[13]==1}
+                                        <tr>
 
-                                        <div class='left-a' >
+                                            <td width="85%">
 
 
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=ExchangeList" target="mainFrame" class="left-fontSmall" >礼品列表</a>
+                                                <div class='left-a' >
 
-                                    </div>
-                                    </td>
 
-                                </tr>
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=ExchangeList" target="mainFrame" class="left-fontSmall" >礼品列表</a>
 
-                                {/if}
+                                                </div>
+                                            </td>
 
-                                {if $auth_result[14]==1}
-                                <tr>
-                                    
-                                    <td width="85%">
+                                        </tr>
 
-                                         <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=addExchangeItem" target="mainFrame" class="left-fontSmall">添加礼品</a>
+                                    {/if}
 
-                                    </div>
-                                    </td>
-                                </tr>
+                                    {if $auth_result[14]==1}
+                                        <tr>
 
-                                {/if}
+                                            <td width="85%">
 
-                            </table>
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=addExchangeItem" target="mainFrame" class="left-fontSmall">添加礼品</a>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    {/if}
+
+                                </table>
 
 
                             {/if}
@@ -362,288 +362,303 @@
 
 
 
-                            <!--                   兑换开始-->
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan" id="table5">
-                                <tr>
-                                    <td height="29" onclick="list('5')">
-                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                
-                                                <td width="85%">
+                                <!--                   兑换开始-->
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan" id="table5">
+                                    <tr>
+                                        <td height="29" onclick="list('5')">
+                                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
 
-                                                    <img name="img5" id="img5" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12"> 
+                                                    <td width="85%">
 
-                                                     <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
+                                                        <img name="img5" id="img5" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12"> 
 
-                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >任务管理</a>
-                                                </td>
-                                            </tr>
-                                        </table> 
-                                    </td>
-                                </tr>
-                            </table>
-                            <table id="subtree5" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                                        <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
 
-                                {if $auth_result[16]==1}
-                                <tr>
-                                   
-                                    <td width="85%">
+                                                        <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >任务管理</a>
+                                                    </td>
+                                                </tr>
+                                            </table> 
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table id="subtree5" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
 
-                                         <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=registration&functionname=registrationCount" target="mainFrame" class="left-fontSmall" >签到统计</a>
+                                    {if $auth_result[16]==1}
+                                        <tr>
 
-                                    </div>
-                                    </td>
+                                            <td width="85%">
 
-                                </tr>
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=registration&functionname=registrationCount" target="mainFrame" class="left-fontSmall" >签到统计</a>
 
-                                {/if}
+                                                </div>
+                                            </td>
 
-                                {if $auth_result[17]==1}
+                                        </tr>
 
-                                <tr>
-                                   
-                                    <td width="85%">
+                                    {/if}
 
-                                        <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=activty" target="mainFrame" class="left-fontSmall" >活动</a>
+                                    {if $auth_result[17]==1}
 
-                                         </div>
-                                    </td>
+                                        <tr>
 
+                                            <td width="85%">
 
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=activty" target="mainFrame" class="left-fontSmall" >活动</a>
 
-                                </tr>
-
-                                {/if}
-                                {if $auth_result[18]==1}
-
-                                <tr>
-                                   
-                                    <td width="85%">
-
-                                        <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=addactivty" target="mainFrame" class="left-fontSmall" >添加活动</a>
-
-
-                                    </div>
-                                    </td>
+                                                </div>
+                                            </td>
 
 
 
-                                </tr>
+                                        </tr>
 
-                                {/if}
+                                    {/if}
+                                    {if $auth_result[18]==1}
 
-                                {if $auth_result[19]==1}
-                                <tr>
-                                    
-                                    <td width="85%">
+                                        <tr>
 
-                                        <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=question&functionname=questionCount" target="mainFrame" class="left-fontSmall">问卷统计</a>
+                                            <td width="85%">
 
-                                    </div>
-                                    </td>
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=activty&functionname=addactivty" target="mainFrame" class="left-fontSmall" >添加活动</a>
 
-                                </tr>
 
-                                {/if}
+                                                </div>
+                                            </td>
 
-                            </table>
+
+
+                                        </tr>
+
+                                    {/if}
+
+                                    {if $auth_result[19]==1}
+                                        <tr>
+
+                                            <td width="85%">
+
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=question&functionname=questionCount" target="mainFrame" class="left-fontSmall">问卷统计</a>
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                    {/if}
+
+                                </table>
 
 
                             {/if}
 
                             {if $auth_result[20]==1}
 
-                            <!--                   兑换开始-->
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan" id="table6">
-                                <tr>
-                                    <td height="29" onclick="list('6')">
-                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                               
-                                                <td width="85%">
-                                                    
-                                                    <img name="img6" id="img6" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
+                                <!--                   兑换开始-->
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan" id="table6">
+                                    <tr>
+                                        <td height="29" onclick="list('6')">
+                                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
 
-                                                     <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
-                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >系统管理</a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table id="subtree6" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                                    <td width="85%">
 
-                                {if $auth_result[21]==1}
-                                <tr>
-                                  
-                                    <td width="85%">
+                                                        <img name="img6" id="img6" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
 
-                                         <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=weixinuser&functionname=weixinuser" target="mainFrame" class="left-fontSmall" >微信数据</a>
+                                                        <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
+                                                        <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >系统管理</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table id="subtree6" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
 
-                                         </div>
-                                    </td>
+                                    {if $auth_result[21]==1}
+                                        <tr>
 
-                                </tr>
+                                            <td width="85%">
 
-                                {/if}
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=weixinuser&functionname=weixinuser" target="mainFrame" class="left-fontSmall" >微信数据</a>
 
-                                {if $auth_result[22]==1}
+                                                </div>
+                                            </td>
 
-                                <tr>
-                                   
-                                    <td width="85%">
+                                        </tr>
 
-                                        <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=admin&functionname=admin" target="mainFrame" class="left-fontSmall">管理员账号</a>
+                                    {/if}
 
-                                        </div>
-                                    </td>
+                                    {if $auth_result[22]==1}
 
-                                </tr>
+                                        <tr>
 
-                                {/if}
+                                            <td width="85%">
 
-                                {if $auth_result[23]==1}
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=admin&functionname=admin" target="mainFrame" class="left-fontSmall">管理员账号</a>
 
-                                <tr>
-                                    
-                                    <td width="85%">
+                                                </div>
+                                            </td>
 
-                                        <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=admin&functionname=setAccount" target="mainFrame" class="left-fontSmall" >重置账户密码</a>
+                                        </tr>
 
-                                    </div>
-                                    </td>
+                                    {/if}
 
-                                </tr>
+                                    {if $auth_result[23]==1}
 
-                                {/if}
+                                        <tr>
 
-                            </table>
+                                            <td width="85%">
+
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=admin&functionname=setAccount" target="mainFrame" class="left-fontSmall" >重置账户密码</a>
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                    {/if}
+                                    {if $auth_result[39]==1}
+
+                                        <tr>
+
+                                            <td width="85%">
+
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=checkExchangeCode" target="mainFrame" class="left-fontSmall" >礼品验证</a>
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                    {/if}
+
+                                </table>
 
                             {/if}
 
                             {if $auth_result[24]==1}
 
-                            <!--                   兑换开始-->
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan " id="table7">
-                                <tr>
-                                    <td height="29" onclick="list('7')">
-                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                
-                                                <td width="85%">
+                                <!--                   兑换开始-->
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan " id="table7">
+                                    <tr>
+                                        <td height="29" onclick="list('7')">
+                                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
 
-                                                    <img name="img7" id="img7" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
+                                                    <td width="85%">
 
-                                                      <span style=' display: inline-block; width: 21px;'>&nbsp;</span>
+                                                        <img name="img7" id="img7" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
 
-                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >短信模块</a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table id="subtree7" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                                        <span style=' display: inline-block; width: 21px;'>&nbsp;</span>
 
-                                {if $auth_result[25]==1}
-                                <tr>
-                                    
+                                                        <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >短信模块</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table id="subtree7" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+
+                                    {if $auth_result[25]==1}
+                                        <tr>
 
 
-                                    <td width="85%">
 
-                                        <div class='left-a' >
+                                            <td width="85%">
 
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=SMS&functionname=SMSindex" target="mainFrame" class="left-fontSmall" >客服短信</a>
+                                                <div class='left-a' >
 
-                                    </div>
-                                    </td>
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=SMS&functionname=SMSindex" target="mainFrame" class="left-fontSmall" >客服短信</a>
 
-                                </tr>
+                                                </div>
+                                            </td>
 
-                                {/if}
+                                        </tr>
 
-                            </table>
+                                    {/if}
+
+                                </table>
 
 
                             {/if}
 
                             {if $auth_result[26]==1}
-                            <!--                   兑换开始-->
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan" id="table8">
-                                <tr>
-                                    <td height="29" onclick="list('8')">
-                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                
-                                                <td width="85%">
+                                <!--                   兑换开始-->
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan" id="table8">
+                                    <tr>
+                                        <td height="29" onclick="list('8')">
+                                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
 
-                                                    <img name="img8" id="img8" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
-                                                     <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
-                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >优惠模块</a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table id="subtree8" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                                    <td width="85%">
 
-                                {if $auth_result[27]==1}
-                                <tr>
-                                   
-                                    <td width="85%">
+                                                        <img name="img8" id="img8" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
+                                                        <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
+                                                        <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >优惠模块</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table id="subtree8" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
 
-                                        <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=promoCodeCheck" target="mainFrame" class="left-fontSmall" >验证优惠码</a>
+                                    {if $auth_result[27]==1}
+                                        <tr>
 
-                                    </div>
-                                    </td>
+                                            <td width="85%">
 
-                                </tr>
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=promoCodeCheck" target="mainFrame" class="left-fontSmall" >验证优惠码</a>
 
-                                {/if}
+                                                </div>
+                                            </td>
 
-                                {if $auth_result[28]==1}
+                                        </tr>
 
-                                <tr>
-                                   
-                                    <td width="85%">
+                                    {/if}
 
-                                        <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=addCode" target="mainFrame" class="left-fontSmall" >生成优惠码</a>
+                                    {if $auth_result[28]==1}
 
-                                    </div>
-                                    </td>
+                                        <tr>
 
-                                </tr>
+                                            <td width="85%">
 
-                                {/if}
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=addCode" target="mainFrame" class="left-fontSmall" >生成优惠码</a>
 
-                                {if $auth_result[29]==1}
-                                <tr>
-                                   
-                                    <td width="85%">
+                                                </div>
+                                            </td>
 
-                                         <div class='left-a' >
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=codeList" target="mainFrame" class="left-fontSmall" >优惠码列表</a>
+                                        </tr>
 
-                                    </div>
-                                    </td>
+                                    {/if}
 
-                                </tr>
+                                    {if $auth_result[29]==1}
+                                        <tr>
 
-                                {/if}
+                                            <td width="85%">
 
-                            </table>
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=promoCode&functionname=codeList" target="mainFrame" class="left-fontSmall" >优惠码列表</a>
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                    {/if}
+
+                                </table>
 
                             {/if}
 
@@ -651,43 +666,43 @@
                             {if $auth_result[30] == 1}
 
                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan " id="table12">
-                                <tr>
-                                    <td height="29" onclick="list('12')">
-                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                               
-                                                <td width="85%">
+                                    <tr>
+                                        <td height="29" onclick="list('12')">
+                                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
 
-                                                    <img name="img12" id="img12" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
+                                                    <td width="85%">
 
-                                                     <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
-                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >提示模块</a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table id="subtree12" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                                        <img name="img12" id="img12" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
 
-                                {if $auth_result[31]==1}
-                                <tr>
-                                   
-                                    <td width="85%">
+                                                        <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
+                                                        <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >提示模块</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table id="subtree12" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
 
-                                        <div class='left-a' >
-                                        <a  style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=remind&functionname=remind" target="mainFrame" class="left-fontSmall" >提示模块</a>
+                                    {if $auth_result[31]==1}
+                                        <tr>
 
-                                    </div>
-                                    </td>
+                                            <td width="85%">
 
-                                </tr>
+                                                <div class='left-a' >
+                                                    <a  style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=remind&functionname=remind" target="mainFrame" class="left-fontSmall" >提示模块</a>
 
-                                {/if}
+                                                </div>
+                                            </td>
 
-                                
+                                        </tr>
 
-                            </table>
+                                    {/if}
+
+
+
+                                </table>
                             {/if}
 
 
@@ -695,45 +710,45 @@
                             {if $auth_result[32] == 1}
 
                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03 zhucaidan" id="table13">
-                                <tr>
-                                    <td height="29" onclick="list('13')">
-                                        <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                               
-                                                <td width="85%">
+                                    <tr>
+                                        <td height="29" onclick="list('13')">
+                                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
 
-                                                    <img name="img13" id="img13" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
+                                                    <td width="85%">
 
-                                                     <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
+                                                        <img name="img13" id="img13" src="{$WebSiteUrl}/images/ico04.png" width="12" height="12">
 
-                                                    <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >统计模块</a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table id="subtree13" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
+                                                        <span style=' display: inline-block; width: 18px;'>&nbsp;</span>
 
-                                {if $auth_result[33]==1}
-                                <tr>
-                                    
-                                    <td width="85%">
+                                                        <a href="javascript:vold(0)" target="mainFrame" class="left-font03 left-font" >统计模块</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table id="subtree13" style="DISPLAY: none" width="95%" border="0" align="center" cellpadding="0" ellspacing="0" class="left-table03 tableDefault">
 
-                                         <div class='left-a' >
+                                    {if $auth_result[33]==1}
+                                        <tr>
 
-                                        <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=statistics&functionname=statistics" target="mainFrame" class="left-fontSmall" >统计模块</a>
+                                            <td width="85%">
 
-                                    </div>
-                                    </td>
+                                                <div class='left-a' >
 
-                                </tr>
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=statistics&functionname=statistics" target="mainFrame" class="left-fontSmall" >统计模块</a>
 
-                                {/if}
+                                                </div>
+                                            </td>
 
-                                
+                                        </tr>
 
-                            </table>
+                                    {/if}
+
+
+
+                                </table>
                             {/if}
                         </td>
                     </tr>

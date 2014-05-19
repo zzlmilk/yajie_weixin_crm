@@ -603,6 +603,19 @@ class userController implements User {
         echo $returnVal;
     }
 
+    //关联微信用户信息
+    function gotoWeixinMessage() {
+        if (!empty($_REQUEST["open_Id"])) {
+            $openId = $_REQUEST["open_Id"];
+            $weixinUser = new WeiXinUserModel();
+            $weixinUser->initialize("openid = '" . $openId . "'");
+            $weixinUserData[0] = $weixinUser->vars;
+            $_ENV['smarty']->setDirTemplates('weixinuser');
+            $_ENV['smarty']->assign('weixinUserData', $weixinUserData);
+            $_ENV['smarty']->display('weixinuser');
+        }
+    }
+
 }
 
 ?>

@@ -46,22 +46,23 @@ class exchangeController implements exchange {
     public function addExchangeItem() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            $imageReturnVal = $this->addImage("exampleInputFile");
-            if ($imageReturnVal["state"] == 0) {
+//            $imageReturnVal = $this->addImage("exampleInputFile");
+//            if ($imageReturnVal["state"] == 0) {
                 $insertData['exchange_name'] = $_POST['exchange_name'];
                 $insertData['exchange_type'] = $_POST['exchange_type'];
                 $insertData['exchange_integration'] = $_POST['exchange_integration'];
                 $insertData['exchange_summary'] = $_POST['exchange_summary'];
                 $insertData['exchangez_details'] = $_POST['exchangez_details'];
-                $insertData['exchange_image'] = $imageReturnVal["message"];
+                $insertData['exchange_image'] = $_POST['exchange_image'];
+                $insertData['create_time'] = time();
                 $this->addExchange($insertData);
                 $this->ExchangeList();
-            } else {
-
-                $_SERVER["REQUEST_METHOD"] = "GET";
-                $this->errorMessage = $imageReturnVal['message'];
-                $this->addExchangeItem();
-            }
+//            } else {
+//
+//                $_SERVER["REQUEST_METHOD"] = "GET";
+//                $this->errorMessage = $imageReturnVal['message'];
+//                $this->addExchangeItem();
+//            }
         } else {
             $_ENV['smarty']->setDirTemplates('exchange');
             $_ENV['smarty']->assign('errorMessage', $this->errorMessage);
@@ -97,9 +98,10 @@ class exchangeController implements exchange {
                 $updateVal['exchange_integration'] = $_POST['exchange_integration'];
                 $updateVal['exchange_summary'] = $_POST['exchange_summary'];
                 $updateVal['exchangez_details'] = $_POST['exchangez_details'];
-                if ($_FILES['exampleInputFile']["name"] != "") {
-                    $imageRedata = $this->addImage("exampleInputFile");
-                    $updateVal['exchange_image'] = $imageRedata["message"];
+                if ($_POST['exchange_image'] != "") {
+                    $updateVal['exchange_image'] = $_POST['exchange_image'];
+//                    $imageRedata = $this->addImage("exampleInputFile");
+//                    $updateVal['exchange_image'] = $imageRedata["message"];
                 }
                 $this->updateExchange($updateVal, $_GET["ItemId"]);
                 $this->ExchangeList();
@@ -237,6 +239,44 @@ class exchangeController implements exchange {
 
     public function searchExchange() {
         
+    }
+
+    public function checkExchangeCode() {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (!empty($_POST['exchangeCode'])) {
+                $Code = $_POST['exchangeCode'];
+                $exchangeCode = new exchangeCodeModel();
+                $exchangeCode->initialize("code='" . $Code . "'");
+                $exchageCodeMesssage = $exchangeCode->vars;
+                if ($exchangeCode->vars_number <= 0) {
+                    $this->errorMessage = "验证码错误请确认后重试。";
+                } else {
+                    if ($exchageCodeMesssage["create_time"] < time() - 600) {
+                        $this->errorMessage = "该验证码已经过期请重新获取。";
+                    } else {
+                        $userModel = new userModel();
+                        $userModel->initialize("user_id = '" . $exchageCodeMesssage['user_id'] . "'");
+                        $userMessage = $userModel->vars;
+                        $exchangeModel = new exchangeModel();
+                        $exchangeModel->initialize("exchange_id = '" . $exchageCodeMesssage['exchange_id'] . "'");
+                        $exchageValue = $exchangeModel->vars;
+                        if ($exchangeModel->vars_number <= 0) {
+                            $this->errorMessage = "未获取到验证码对应的礼品信息，请重新获取验证码后重试。";
+                        } else if ($userMessage["user_integration"] < $exchageValue["exchange_integration"]) {
+                            $this->errorMessage = "用户当前积分为" . $userMessage["user_integration"] . "分，未达到兑换积分要求" . $exchageValue["exchange_integration"] . "分。";
+                        } else {
+                            $this->errorMessage = "验证成功，礼品相关信息请查看，所显示表格。";
+                            $_ENV['smarty']->assign('exchangeIteam', $exchageValue);
+                        }
+                    }
+                }
+            } else {
+                $this->errorMessage = "未成功获取验证码 请重试。";
+            }
+        }
+        $_ENV['smarty']->setDirTemplates('exchange');
+        $_ENV['smarty']->assign('errorMessage', $this->errorMessage);
+        $_ENV['smarty']->display('checkExchangeCode');
     }
 
 }

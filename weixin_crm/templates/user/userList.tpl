@@ -76,7 +76,7 @@
 <!--                <td>{$userInfo1.birthday|date_format:"%Y-%m-%d"}</td>-->
                 <td>{$userInfo1.birthday}</td>
                 <td>{$userInfo1.user_integration}</td>
-                <td><a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=userEdit&userId={$userInfo1.user_id}">关联</a></td>
+                <td><a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=gotoWeixinMessage&open_Id={$userInfo1.user_open_id}">关联</a></td>
 
             </tr>
         {/foreach}
@@ -103,11 +103,11 @@
 
 $("#selectText").on("keyup",function(event){
 if(event.ctrlKey&&event.keyCode==86){
-if(!getPhoneRegex($(this).val())){
+if(!getPhoneRegex($(this).val())&&!getMobilPhoneRegex($(this).val())){
 $(this).val("");
 }
 }
-else if(event.keyCode!=17){
+else if(event.keyCode!=17&&event.keyCode!=8){
 if(!getIntRegex($(this).val())){
 var cutString=$(this).val().substr(0, ($(this).val().length)-1);
 
@@ -115,6 +115,14 @@ $("#selectText").val(cutString);
 }}
 
 });
+//$("#selectText").on("keydown",function(event){
+//if(event.keyCode==8){
+//if(getPhoneRegex($(this).val())){
+//return false;
+////}
+//}
+//    
+//});
 
 $(".userPhone").each(function(){
 var phoneNumber= $(this).html();

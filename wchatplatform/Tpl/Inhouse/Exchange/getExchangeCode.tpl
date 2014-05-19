@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>兑换列表</title>
+        <title>获取验证码</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta content="initial-scale=1.0; maximum-scale=4.0; user-scalable=no;" name="viewport">
         <meta name="viewport" content="width=device-width,user-scalable=yes" />
@@ -101,30 +101,11 @@
                         </div>
                     </div>
                 </div>-->
+         <div style="height: 100px;"></div>
         <div class="registerWarp" style="padding-bottom: 10px;">
-            <p style="text-align: left; padding-left: 8px;color: #979797"><span style="color: orange">*</span>亲！看中了哪一款点击积分，获取兑换码到前台兑换哦~</p>
-            <p style="text-align: center;font-we1ight: bold;">我的积分：{$localUserInfo.user_integration}分</p>
-            {foreach from=$exchangeList item=exchangeItem key=key}
-                {if $key % 2 eq 0}
-                    <div class="giftBox" style="float: left;margin-left: 8px;">
-                        <div > <a ><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
-                        <div style="word-wrap: break-word; word-break: normal;">
-                            <p class="summary" style="height:60px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
-                            <p class="integration" style=""><a href="?g={$model}&a=exchange&v=getExchangeCode&open_id={$open_id}&exchangeId={$exchangeItem.exchange_id}">积分: {$exchangeItem.exchange_integration}分</a></p>   
-
-                        </div>
-                    </div>
-                {else}
-                    <div class="giftBox" style="float: right ">
-                        <div > <a ><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
-                        <div style="word-wrap: break-word; word-break: normal;">
-                            <p class="summary" style="height: 60px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
-                            <p class="integration" style=""><a href="?g={$model}&a=exchange&v=getExchangeCode&open_id={$open_id}&exchangeId={$exchangeItem.exchange_id}">积分: {$exchangeItem.exchange_integration}分</a></p>
-                        </div>
-                    </div>
-                {/if}
-            {/foreach}
-            <div style="clear: both;"></div>
+            <p style="text-align: left; padding-left: 8px;color: #979797"><span style="color: orange">*</span>亲！请在10分钟内到前台换取物品哦，兑换码获取时间:{$exchangeCode.create_time|date_format:"%m/%d %H:%M"}</p>
+            
+            <p style="text-align: center;font-we1ight: bold;">兑换码：<strong>{$exchangeCode.code}</strong></p>
             <div style="height: 10px;"></div>
         </div>
 

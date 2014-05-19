@@ -48,7 +48,6 @@ class exchangeController extends BaseController {
         $error = new errorApi();
         $error->JudgeError($exchangeList);
         $error->JudgeError($userInfo);
-
         $this->assign("WebImageUrl", WebImageUrl . "small/");
         $this->assign("exchangeList", $exchangeList);
         $this->assign("localUserInfo", $localUserInfo);
@@ -255,12 +254,6 @@ class exchangeController extends BaseController {
             $exchangeApi = new exchangeApi();
 
             $exchangeReocrd = $exchangeApi->getUserExchangeInfo($this->userOpenId, 'Inhouse');
-
-
-
-
-
-
             $this->assign("WebImageUrl", WebImageUrl . "small/");
 
             $this->assign('exchangeList', $exchangeReocrd);
@@ -269,6 +262,26 @@ class exchangeController extends BaseController {
         } else {
 
             $this->displayMessage('open_id未获取到 请重新从微信公众平台登录');
+        }
+    }
+
+    //获取激活码页面
+    function getExchangeCode() {
+        if (!empty($_REQUEST["exchangeId"])) {
+            $exchangeId = $_REQUEST["exchangeId"];
+            $postDate["source"] = SOURCE;
+            $postDate['open_id'] = $this->userOpenId;
+            $postDate['exchange_id'] = $exchangeId;
+            $exchangeCode = transferData(APIURL . "/exchange/create/", "post", $postDate);
+            $exchangeCode = json_decode($exchangeCode, TRUE);
+            $error = new errorApi();
+
+            $error->JudgeError($exchangeCode);
+            $this->assign('exchangeCode', $exchangeCode);
+
+            $this->display('getExchangeCode');
+        } else {
+            $this->$this->displayMessage("发生了一些小错误，请重试", 0);
         }
     }
 
