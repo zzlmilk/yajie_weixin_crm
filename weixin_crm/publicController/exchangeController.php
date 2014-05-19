@@ -253,7 +253,10 @@ class exchangeController implements exchange {
                 } else {
                     if ($exchageCodeMesssage["create_time"] < time() - 600) {
                         $this->errorMessage = "该验证码已经过期请重新获取。";
-                    } else {
+                    }else if($exchageCodeMesssage["state"]==1){
+                        $this->errorMessage = "该验证码已被使用，请重新获取。";
+                    }
+                    else {
                         $userModel = new userModel();
                         $userModel->initialize("user_id = '" . $exchageCodeMesssage['user_id'] . "'");
                         $userMessage = $userModel->vars;
@@ -266,6 +269,12 @@ class exchangeController implements exchange {
                             $this->errorMessage = "用户当前积分为" . $userMessage["user_integration"] . "分，未达到兑换积分要求" . $exchageValue["exchange_integration"] . "分。";
                         } else {
                             $this->errorMessage = "验证成功，礼品相关信息请查看，所显示表格。";
+                            $insertData["code_id"]=$exchageCodeMesssage['exchange_code_id'];
+                            $insertData["create_time"]=  time();
+                            $exchangeCodeVerification=new exchangeCodeVerificationModel();
+                            $exchangeCodeVerification->insert($insertData);
+                            $upDate["state"]=1;
+                            $exchangeCode->update($upDate);
                             $_ENV['smarty']->assign('exchangeIteam', $exchageValue);
                         }
                     }

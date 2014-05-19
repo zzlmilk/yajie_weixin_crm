@@ -61,7 +61,7 @@
             </div>
         </div>
         <div style="height: 25px;"></div>
-        <p style="width: 100%; text-align: center;"><button id="addButton" type="submit" class="btn btn-info">确认修改</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="addButton" type="reset" class="btn btn-info">重置</button></p>
+        <p style="width: 100%; text-align: center;"><button id="addButton" type="submit" class="btn btn-info">确认</button>&nbsp;&nbsp;&nbsp;&nbsp;<button id="addButton" type="reset" class="btn btn-info">重置</button></p>
     </form>
     {if $exchangeIteam neq ""}
         <table class="table table-bordered crmTable" >
@@ -69,7 +69,7 @@
                 <th style="width: 120px;">兑换积分</th><th>物品简介</th>
                 <th style="display: none">id</th></tr>
             <tr>
-                <td><img src="{$WebSiteUrl}/giftImages/small/{$exchangeIteam.exchange_image}" width="80" height="80"></td>
+                <td><img src="{$WebSiteUrl}/giftImages/{$exchangeIteam.exchange_image}" width="80" height="80"></td>
                 <td>{$exchangeIteam.exchange_integration}</td>
                 <td style="text-align: left;width: 50%">{$exchangeIteam.exchange_summary}</td>
 
