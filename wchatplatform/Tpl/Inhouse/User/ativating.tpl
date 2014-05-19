@@ -24,22 +24,31 @@
     </head>
     <script>
 
-        $(function(){
+    $(function(){
 
         $("#activatNumber").keyup(function() {
-        var value = $("#activatNumber").val();
-        var leng = value.length;
-        if(leng > 2){
-        $("#goActivat").removeAttr("disabled");
-    }
-});
+            var value = $("#activatNumber").val();
+            var leng = value.length;
+            if(leng > 2){
+            $("#goActivat").removeAttr("disabled");
+            }
+        });
 
+        $(".phoneNumberStyle").keypress(function(){
 
-$("#goActivat").click(function() {
-// 添加正则验证        
+            $(".glyphicon").show();
+        })
 
-});
-        
+        $(".glyphicon").click(function(event) {
+            /* Act on the event */
+            $(".phoneNumberStyle").val('');
+            $(".glyphicon").hide();
+        });
+
+        $("#goActivat").click(function() {
+        // 添加正则验证        
+
+        });  
 
 })
     </script>
@@ -60,11 +69,13 @@ $("#goActivat").click(function() {
         .phoneNumberStyle{
             width: 90%;
             margin: 0 auto;
-            border: solid 0.1em rgb(106,106,106);
+            border: solid 1px rgb(106,106,106);
             border-radius: 0.8em;
+            font-size: 1.5em;
+            letter-spacing: 1px;
             -moz-border-radius: 0.8em;
             -webkit-border-radius: 0.8em;
-            height: 3.2em;
+            height: 2.3em;
 
         }
         ::-webkit-input-placeholder { /* WebKit browsers */
@@ -110,28 +121,35 @@ $("#goActivat").click(function() {
             -webkit-border-radius: 0.8em;
             font-weight: bolder;
         }
+         .glyphicon{
+            display: none;
+            color: #ccc;
+            float: right;
+            line-height: 3em;
+            font-size: 1.2em;
+            margin-top: -3em;
+            margin-right: 1em;
+
+        }
     </style>
 
     <body>
-
-        
-        <div class="ativatingWarp">
         <form action="?g={$model}&a=user&v=bind" method='post'>
-
-            <input type='hidden' name='open_id' id='open_id' value='{$open_id}'>
             <div class="ativatingWarp">
 
                 <div class="logoStyle">
                     <img src="{$WebSiteUrlPublic}/image/logo.png"/>
-                </div>
+                </div>  
+
+                <input type='hidden' name='open_id' id='open_id' value='{$open_id}'>
 
                 <div class="form-group">
-                    <input type="tel"  class="form-control phoneNumberStyle" name="phone" id="phoneNumber" placeholder="请输入手机号码">
+                    <input type="tel" class="form-control phoneNumberStyle" name="phone" id="phoneNumber" placeholder="请输入手机号码">
+                    <span class="glyphicon glyphicon-remove-circle">&nbsp;</span>
                 </div>
 
                 <div style=" margin-top: 3em;text-align: center;">
-                    <button type="submit" id="goActivat" class="btn btn-primary btn-sm  btnAtivat"
-                            >GO</button>
+                    <button type="submit" id="goActivat" class="btn btn-primary btn-sm  btnAtivat">GO</button>
                 </div>
 
                 <div style=" height: 3em;"></div>
