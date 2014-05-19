@@ -15,7 +15,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 
 defined('ROOTPATH') or define('ROOTPATH',  ROOT . PROJECT);
 
-defined('WebSiteUrl') or define('WebSiteUrl', 'http://112/yajie_weixin_crm/weixin_crm');
+defined('WebSiteUrl') or define('WebSiteUrl', 'http://localhost/yajie_weixin_crm/weixin_crm');
 
 defined('URLCONTROLLER') or define('URLCONTROLLER', WebSiteUrl.'/publicController');
 

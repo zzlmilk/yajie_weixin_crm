@@ -92,8 +92,8 @@
                 <div class="form-group"> 
                     <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品简介：</label>
                     <div class="col-sm-2">
-                        <input type="text" class="form-control inputWidth" value="{$exchageValue.exchange_summary}" name="exchange_summary" id="exchangeSummary">
-
+<!--                        <input type="text" class="form-control inputWidth" value="{$exchageValue.exchange_summary}" name="exchange_summary" id="exchangeSummary">-->
+                        <textarea  class="form-control inputWidth" rows="3" name="exchange_summary" id="exchangeSummary">{$exchageValue.exchange_summary}</textarea>
                     </div>
 
                 </div>
@@ -212,6 +212,13 @@ WarringStr+="<div class='form-group'><label  class=' control-label labelWidth'>"
 var deleteUrl=$("#deleteUrl").val();
 $("#checkButton").attr("href", deleteUrl+alertText[6]);                
 $(".modal-body").html(WarringStr);
+}
+})
+$("#exchangeIntegration").keyup(function(){
+if(!getIntRegex($(this).val())){
+var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+
+$("#exchangeIntegration").val(cutString);
 }
 })
 buttonDisable($("#addButton"));

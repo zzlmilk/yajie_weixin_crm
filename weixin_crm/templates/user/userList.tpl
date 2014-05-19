@@ -67,7 +67,9 @@
 
 <div class="dataArea">
     <table class="table table-bordered ">
-        <tr><th style="width: 51px;"></th><th  style="width: 121px;">姓名</th><th style="width: 185px;">电话</th><th style="width: 150px;">年龄</th><th style="width: 154px;">积分</th><th style="width: 206px;">关联微信数据</th></tr>
+        <tr><th style="width: 51px;"></th><th  style="width: 121px;">姓名</th><th style="width: 185px;">电话</th><th style="width: 150px;">年龄</th><th style="width: 154px;">积分</th><th>绑定时间</th>
+            <!--<th style="width: 206px;">关联微信数据</th>-->
+        </tr>
         {foreach from=$userInfo item=userInfo1 key=key}
             <tr>
                 <td>{$key+1}</td>
@@ -76,7 +78,8 @@
 <!--                <td>{$userInfo1.birthday|date_format:"%Y-%m-%d"}</td>-->
                 <td>{$userInfo1.birthday}</td>
                 <td>{$userInfo1.user_integration}</td>
-                <td><a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=gotoWeixinMessage&open_Id={$userInfo1.user_open_id}">关联</a></td>
+                <td>{$userInfo1.create_time|date_format:"%Y-%m-%d %H:%M"}</td>
+                <!--<td><a href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=gotoWeixinMessage&open_Id={$userInfo1.user_open_id}">关联</a></td>-->
 
             </tr>
         {/foreach}

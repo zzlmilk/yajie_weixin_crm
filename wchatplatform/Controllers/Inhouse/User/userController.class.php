@@ -79,13 +79,7 @@ class UserController extends BaseController {
 
 
 
-        $info = $user_api->getUserInfo($this->userOpenId);
-
-
-        print_r($info);
-
-        die;
-        
+        $info = $user_api->getUserInfo($this->userOpenId);        
         $error = new errorApi();
         $error->JudgeError($info);
         

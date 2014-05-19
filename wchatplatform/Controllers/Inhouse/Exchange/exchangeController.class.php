@@ -48,7 +48,6 @@ class exchangeController extends BaseController {
         $error = new errorApi();
         $error->JudgeError($exchangeList);
         $error->JudgeError($userInfo);
-//        var_dump($exchangeList);
         $this->assign("WebImageUrl", WebImageUrl);
         $this->assign("exchangeList", $exchangeList);
         $this->assign("localUserInfo", $localUserInfo);

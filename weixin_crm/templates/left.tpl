@@ -351,7 +351,21 @@
                                         </tr>
 
                                     {/if}
+                                    {if $auth_result[39]==1}
 
+                                        <tr>
+
+                                            <td width="85%">
+
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=checkExchangeCode" target="mainFrame" class="left-fontSmall" >礼品验证</a>
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                    {/if}
                                 </table>
 
 
@@ -517,21 +531,6 @@
 
                                                 <div class='left-a' >
                                                     <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=admin&functionname=setAccount" target="mainFrame" class="left-fontSmall" >重置账户密码</a>
-
-                                                </div>
-                                            </td>
-
-                                        </tr>
-
-                                    {/if}
-                                    {if $auth_result[39]==1}
-
-                                        <tr>
-
-                                            <td width="85%">
-
-                                                <div class='left-a' >
-                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=checkExchangeCode" target="mainFrame" class="left-fontSmall" >礼品验证</a>
 
                                                 </div>
                                             </td>
@@ -746,7 +745,21 @@
 
                                     {/if}
 
+                                    {if $auth_result[34]==1}
+                                        <tr>
 
+                                            <td width="85%">
+
+                                                <div class='left-a' >
+
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=exchangeTotle" target="mainFrame" class="left-fontSmall" >礼品统计</a>
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                    {/if}
 
                                 </table>
                             {/if}
