@@ -2,7 +2,7 @@
 
 class companyModel extends Basic {
 
-	public function __construct($id) {
+	public function __construct($id = null) {
 
 		$this->child_name = 'company';
 

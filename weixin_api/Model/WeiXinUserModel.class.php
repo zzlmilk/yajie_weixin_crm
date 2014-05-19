@@ -24,13 +24,22 @@ class WeiXinUserModel extends Basic {
             
             $token = $company->get_info($_REQUEST['source']);
 
-            $token_json = $weixinApi->getToken($token['appid'],$token['app_secret']);
+            if($token['able_api'] == 1){
 
-            $token_array = json_decode($token_json, true);
+                $token_json = $weixinApi->getToken($token['appid'],$token['app_secret']);
 
-            $weixinUser = new WeiXinUserModel();
+                $token_array = json_decode($token_json, true);
 
-             $this->newDB = '';
+                $weixinUser = new WeiXinUserModel();
+
+                $this->newDB = '';
+
+            } else{
+
+                $token_array = 1;
+            }
+
+           
 
             if (is_array($token_array)) {
 
@@ -47,40 +56,40 @@ class WeiXinUserModel extends Basic {
 
 
 
-                if (count($user_array) > 0 && $user_array['subscribe'] == 1 && !empty($user_array['subscribe'])) {
+                    if (count($user_array) > 0 && $user_array['subscribe'] == 1 && !empty($user_array['subscribe'])) {
 
 
-                    $data['subscribe'] = $user_array['subscribe'];
+                        $data['subscribe'] = $user_array['subscribe'];
 
-                    $data['openid'] = $user_array['openid'];
+                        $data['openid'] = $user_array['openid'];
 
-                    $data['sex'] = $user_array['sex'];
+                        $data['sex'] = $user_array['sex'];
 
-                    $data['nickname'] = $user_array['nickname'];
+                        $data['nickname'] = $user_array['nickname'];
 
-                    $data['language'] = $user_array['language'];
+                        $data['language'] = $user_array['language'];
 
-                    $data['city'] = $user_array['city'];
+                        $data['city'] = $user_array['city'];
 
-                    $data['province'] = $user_array['province'];
+                        $data['province'] = $user_array['province'];
 
-                    $data['country'] = $user_array['country'];
+                        $data['country'] = $user_array['country'];
 
-                    $data['headimgurl'] = $user_array['headimgurl'];
+                        $data['headimgurl'] = $user_array['headimgurl'];
 
-                    $data['subscribe_time'] = $user_array['subscribe_time'];
+                        $data['subscribe_time'] = $user_array['subscribe_time'];
 
-                    $weixinUser->insert($data);
-                } else {
+                        $weixinUser->insert($data);
+                    } else {
+
+                        $data['subscribe'] = 0;
+                    }
+
+                }  else{
 
                     $data['subscribe'] = 0;
-                }
-                }  else{
-$data['subscribe'] = 0;
                     
                 }
-
-               
 
                 return $data;
             }

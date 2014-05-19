@@ -9,9 +9,6 @@ class UserController extends BaseController {
 
         header("Content-type:text/html;charset=utf-8");
 
-
-
-
         if (!empty($_REQUEST['open_id'])) {
 
             $this->userOpenId = $_REQUEST['open_id'];
@@ -65,28 +62,23 @@ class UserController extends BaseController {
         $this->able_register();
 
 
+        $user_api = new userApi();
+
         $userMessage["source"] = SOURCE;
         $userMessage["open_id"] = $this->userOpenId;
 
         $userMessage['type'] = 1;
 
-       
         
         $userJsonData = transferData(APIURL . "/user/getUserCardInfo/", "post", $userMessage);
         $expenseItem = json_decode($userJsonData, true);
 
 
+        $info = $user_api->getUserInfo($this->userOpenId);
         
-        $userInfo = transferData(APIURL . "/user/get_info", "post", $userMessage);
-        $userInfo = json_decode($userInfo, TRUE);
         $error = new errorApi();
-        $error->JudgeError($userInfo);
+        $error->JudgeError($info);
         
-
-      
-
-
-
 
         if(count($expenseItem['record']) > 0){
 
@@ -98,17 +90,27 @@ class UserController extends BaseController {
 
             foreach($result as $v){
 
+                $tempArray = array();
+
                 $time = strtotime($v['order_time']);
 
                 $val = date('Y-m-d',$time);
 
+                array_push($tempArray, $v['record_commodity']);
+
+                array_push($tempArray, (int)$v['money']);
+
+
+
                 array_unshift($xval, $val);
 
-                array_unshift($yval, (int)$v['money']);
+                array_unshift($yval,$tempArray);
 
                 // array_push($xval, $val);
 
                 // array_push($yval, (int)$v['money']);
+
+                unset($tempArray);
             }
 
         }

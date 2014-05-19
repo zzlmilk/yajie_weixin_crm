@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-17 10:43:09
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-19 10:00:29
          compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18239302955376ccbd084951-00321312%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2120970942537965bd4ea578-05149732%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '120908fcda3ce0be13949e77fdd9eb22d2c1655f' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/user/userList.tpl',
-      1 => 1400294556,
+      1 => 1400464713,
     ),
   ),
-  'nocache_hash' => '18239302955376ccbd084951-00321312',
+  'nocache_hash' => '2120970942537965bd4ea578-05149732',
   'function' => 
   array (
   ),
@@ -113,7 +113,7 @@ if (count($_from) > 0){
                 <td><?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_integration'];?>
 </td>
                 <td><a href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-/pageredirst.php?action=user&functionname=userEdit&userId=<?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_id'];?>
+/pageredirst.php?action=user&functionname=gotoWeixinMessage&open_Id=<?php echo $_smarty_tpl->tpl_vars['userInfo1']->value['user_open_id'];?>
 ">关联</a></td>
 
             </tr>
@@ -145,11 +145,11 @@ if (count($_from) > 0){
 
 $("#selectText").on("keyup",function(event){
 if(event.ctrlKey&&event.keyCode==86){
-if(!getPhoneRegex($(this).val())){
+if(!getPhoneRegex($(this).val())&&!getMobilPhoneRegex($(this).val())){
 $(this).val("");
 }
 }
-else if(event.keyCode!=17){
+else if(event.keyCode!=17&&event.keyCode!=8){
 if(!getIntRegex($(this).val())){
 var cutString=$(this).val().substr(0, ($(this).val().length)-1);
 
@@ -157,6 +157,14 @@ $("#selectText").val(cutString);
 }}
 
 });
+//$("#selectText").on("keydown",function(event){
+//if(event.keyCode==8){
+//if(getPhoneRegex($(this).val())){
+//return false;
+////}
+//}
+//    
+//});
 
 $(".userPhone").each(function(){
 var phoneNumber= $(this).html();

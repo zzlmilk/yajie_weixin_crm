@@ -53,9 +53,9 @@
 
                  <div class="col-sm-2">
                     <select name="tongjiType" id='tongjiType' class="form-control inputWidth" onchange='locationUrl()'>
-                        <option value="0" {if $tongjiType == 0}selected="selected" {/if}>折现图</option>
+                        <option value="0" {if $tongjiType == 0}selected="selected" {/if}>折线图</option>
                         <option value="1" {if $tongjiType == 1}selected="selected" {/if}>圆柱图</option>
-                         <option value="2" {if $tongjiType == 2}selected="selected" {/if}>饼图</option>
+                        
                     </select>
                 </div>
             </div>
