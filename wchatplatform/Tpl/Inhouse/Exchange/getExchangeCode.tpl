@@ -17,7 +17,9 @@
             .registerWarp{
                 margin: 0 auto;
                 margin-top: 2em;
-                width: 95%;
+                width: 206px;
+                height: 133px;
+                background: url('{$WebSiteUrlPublic}/image/exchangeBox.png');
             }
             .tableSize{
                 width: 100%;
@@ -80,7 +82,7 @@
             }
         </style>
     </head>
-    <body style='background-color: rgb(243,237,227);'>
+    <body style="background: url('{$WebSiteUrlPublic}/image/beijing.png');">
         <!--
                 <div style='  width: 100%; background-color: rgb(255,255,247);position: relative;'>
         
@@ -101,55 +103,13 @@
                         </div>
                     </div>
                 </div>-->
-         <div style="height: 100px;"></div>
-        <div class="registerWarp" style="padding-bottom: 10px;">
-            <p style="text-align: left; padding-left: 8px;color: #979797"><span style="color: orange">*</span>亲！请在10分钟内到前台换取物品哦，兑换码获取时间:{$exchangeCode.create_time|date_format:"%m/%d %H:%M"}</p>
-            
-            <p style="text-align: center;font-we1ight: bold;">兑换码：<strong>{$exchangeCode.code}</strong></p>
+        <div style="height: 100px;"></div>
+        <div class="registerWarp" style="">
+            <div style="height: 50px;"></div>
+            <p style="text-align: center;font-we1ight: bold;background-color: white;width: 85px; margin: 0 auto;height: 25px;line-height: 25px"><strong style="color:#26a4de;font-size: 20px"> {$exchangeCode.code}</strong></p>
+            <div style="height: 10px;"></div>
+             <p style="text-align: center; padding-left: 8px;color: #fff">请在10分钟内到前台换取物品，获取时间:{$exchangeCode.create_time|date_format:"%m/%d %H:%M"}</p>
             <div style="height: 10px;"></div>
         </div>
-
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content" >
-                    <div class="modal-header" style="border: none;">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-
-                    </div>
-                    <div class="modal-body">
-                        <h4 class="modal-title" id="myModalLabel">你确认兑换这个物品么？</h4>
-                    </div>
-                    <div class="modal-footer" style="border: none;">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <a id="checkButton" href=""><button type="button" class="btn btn-primary">确认</button></a>
-                        <input type="hidden" id="gotoUrl" value="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=exchangeItemDelete&ItemId="  />
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
     </body>
-    <script>
-        $(".summary").each(function(){
-        var len=$(this).html().length;
-        if(len>=25){
-        var nowString= $(this).html().substr(0, 25)
-        $(this).html(nowString+"...");
-    }
-});
-$(".submitButton").click(function(){
-var integrationVals=$(this).parent().parent();
-var thisUrl=$(this).attr("href");
-$("#checkButton").attr("href",thisUrl);
-integrationVals=integrationVals.find(".integration").html();
-
-var integration=integrationVals.split(":")[1];
-
-var userIntegration=$("#userIntegration").html();
-var userIntegration=userIntegration.split(":")[1];
-if(parseInt(integration)>parseInt(userIntegration)){
-alert("您的积分余额不足");
-return false;
-}
-});
-    </script>
 </html>
