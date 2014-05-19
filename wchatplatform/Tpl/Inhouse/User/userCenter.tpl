@@ -12,6 +12,9 @@
         <script src="{$WebSiteUrlPublic}/javascript/hignchats/highcharts.js" type="text/javascript">
 </script>
 
+<script src="{$WebSiteUrlPublic}/javascript/init.js" type="text/javascript">
+</script>
+
         <style>
             body{
                 Font-size=62.5%;
@@ -81,61 +84,27 @@
         </div>
 
 
+        {if $record_state == 1}
+
+
         <div id="container" style="width:100%;height:400px"></div>
+
+
+        {/if}
        
 
     </body>
    <script>
 
-
-
        var XVAL = eval('{$XVAL}');
-
-
 
        var YVAL = eval('{$YVAL}');
 
-     $(function () {
-    $('#container').highcharts({
-        title: {
-            text: '',
-            x: -20 //center
-        },
-        subtitle: {
-            text: '',
-            x: -20
-        },
-        xAxis: {
-            categories: XVAL
-        },
-        yAxis: {
-            title: {
-                text: ''
-            },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
-            }]
-        },
-        tooltip: {
-            valueSuffix: ''
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
-        },
-        series: [{
-            name: '金额',
-            data: YVAL
-        }]
-    });
-});
-                
+       var type = '{$record_state}';
 
 
-    
-    </script>
-</html>
+      
+
+       hignchats_init(type,XVAL,YVAL);
+
+  </script>

@@ -3,6 +3,8 @@
 class UserController implements User {
 
 
+    private $object;
+
     public function __construct() {
 
         /**
@@ -18,14 +20,17 @@ class UserController implements User {
 
                 $name = $_REQUEST['source'].'Plug';
 
-                $object = new $name();
+                $this->object = new $name();
+
+
+               
+
 
                 if(!method_exists($this,ACTION_NAME)){
 
-                    if(method_exists($object, ACTION_NAME)){
+                    if(method_exists($this->object, ACTION_NAME)){
 
-
-                        call_user_func(array($object, ACTION_NAME),$_REQUEST);  
+                        call_user_func(array($this->object, ACTION_NAME),$_REQUEST);  
 
                         die;
 
@@ -156,11 +161,20 @@ class UserController implements User {
 
         if (!empty($_REQUEST['source']) && !empty($_REQUEST['open_id'])) {
 
+
             $user = new userModel();
 
             $userInfo = $user->getUserInfo($_REQUEST['open_id']);
 
+           
+
             if (count($userInfo) > 0) {
+
+                
+                if(!empty($_REQUEST['open_id'])){
+
+                    $this->object->updateUserPointer($_REQUEST['open_id']);
+                }
 
                 $weixinUser = new WeiXinUserModel();
 
@@ -201,7 +215,6 @@ class UserController implements User {
     public function update_user_address() {
 
         if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])) {
-
 
             if (!empty($_REQUEST['address_phone']) && !empty($_REQUEST['province_id']) && !empty($_REQUEST['city_id']) && !empty($_REQUEST['area_id']) && !empty($_REQUEST['street']) && !empty($_REQUEST['real_name'])) {
 

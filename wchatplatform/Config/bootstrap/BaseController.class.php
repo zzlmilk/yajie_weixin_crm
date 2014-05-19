@@ -141,7 +141,7 @@ class BaseController {
 
         $userApi = new userApi();
 
-        $userInfo = $userApi->getUserInfo($this->userOpenId, 'company');
+        $userInfo = $userApi->getUserInfo($this->userOpenId);
 
 
         $error = new errorApi();

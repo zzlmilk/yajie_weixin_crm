@@ -52,3 +52,17 @@
         <div class="errorMessage">{$msg}</div>
         <div style=" height: 3em;"></div>
     </body>
+
+    <script type="text/javascript" language="javascript">
+
+    var url = '{$url}';
+
+    
+
+ function reloadyemian()//最好不要用reload这个关键字,因为很容易和其它函数冲突 
+{ 
+window.location.href=url; 
+} 
+ window.setTimeout("reloadyemian();",3000); 
+</script> 
+

@@ -65,7 +65,13 @@ class UserController extends BaseController {
         $this->able_register();
 
 
-        $user_api = new userApi();
+        $userMessage["source"] = SOURCE;
+        $userMessage["open_id"] = $this->userOpenId;
+
+
+        $userInfo = transferData(APIURL . "/user/get_info", "post", $userMessage);
+
+        $userInfo = json_decode($userInfo, TRUE);
 
         $userMessage["source"] = SOURCE;
         $userMessage["open_id"] = $this->userOpenId;
@@ -74,25 +80,8 @@ class UserController extends BaseController {
 
         
         $userJsonData = transferData(APIURL . "/user/getUserCardInfo/", "post", $userMessage);
+
         $expenseItem = json_decode($userJsonData, true);
-
-
-
-
-        $info = $user_api->getUserInfo($this->userOpenId);
-
-
-        print_r($info);
-
-        die;
-        
-        $error = new errorApi();
-        $error->JudgeError($info);
-        
-
-
-
-        $error->JudgeError($expenseItem);
 
         if(count($expenseItem['record']) > 0){
 
@@ -128,16 +117,22 @@ class UserController extends BaseController {
             }
 
 
-        $this->assign("XVAL", json_encode($xval));
+            $this->assign("XVAL", json_encode($xval));
 
-        $this->assign("YVAL", json_encode($yval));
+            $this->assign("YVAL", json_encode($yval));
 
+            $this->assign('record_state',1);
+
+        } else{
+
+            $this->assign('record_state',0);
         }
 
       
 
 
-        $this->assign("userInfo", $info["user"]);
+      
+        $this->assign("userInfo", $userInfo["user"]);
 
 
         //$this->assign("weixin", $userInfo["weixin_user"]);
@@ -197,19 +192,26 @@ class UserController extends BaseController {
      */
 
     public function bind(){
-     
+
         if (!empty($_REQUEST['phone']) && !empty($this->userOpenId)) {
 
 
             $userApi = new userApi();
 
+
             $info = $userApi->bind($_REQUEST['phone'],$this->userOpenId);
 
-            $error =  new errorApi();
+             $error = new errorApi();
 
-            $error->JudgeError($info);
+           $error->JudgeError($info);
 
-            $this->displayMessage("恭喜绑定成功",1);
+            $array = array();
+
+            $array['open_id'] = $this->userOpenId;
+
+            $url = U(SOURCE.'/user/userCenter',$array,1);
+
+            $this->displayMessage("恭喜绑定成功",1,$url);
         } else{
 
             $this->displayMessage("手机号码不能为空",0);

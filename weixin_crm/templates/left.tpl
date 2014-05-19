@@ -352,6 +352,24 @@
 
                                     {/if}
 
+                                    
+                                     {if $auth_result[39]==1}
+
+                                        <tr>
+
+                                            <td width="85%">
+
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=checkExchangeCode" target="mainFrame" class="left-fontSmall" >礼品验证</a>
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                    {/if}
+
+
                                 </table>
 
 
@@ -524,21 +542,7 @@
                                         </tr>
 
                                     {/if}
-                                    {if $auth_result[39]==1}
-
-                                        <tr>
-
-                                            <td width="85%">
-
-                                                <div class='left-a' >
-                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=checkExchangeCode" target="mainFrame" class="left-fontSmall" >礼品验证</a>
-
-                                                </div>
-                                            </td>
-
-                                        </tr>
-
-                                    {/if}
+                                   
 
                                 </table>
 
