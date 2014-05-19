@@ -49,7 +49,7 @@ class exchangeController extends BaseController {
         $error->JudgeError($exchangeList);
         $error->JudgeError($userInfo);
 //        var_dump($exchangeList);
-        $this->assign("WebImageUrl", WebImageUrl . "small/");
+        $this->assign("WebImageUrl", WebImageUrl);
         $this->assign("exchangeList", $exchangeList);
         $this->assign("localUserInfo", $localUserInfo);
         $this->assign("weixinUserInfo", $weixinUserInfo);
