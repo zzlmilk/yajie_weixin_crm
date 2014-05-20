@@ -41,6 +41,19 @@
     .deleteButton:hover{
         color: red;
         text-decoration: none;
+    }  
+    .selectText{
+        height: 32px;
+        border-radius:0px; 
+        border: #c5c5c5 solid 1px;
+        box-shadow: 0px 2px 2px #888 inset; 
+        padding-left: 10px;
+        width: 224px;
+    }
+    .selectBar{
+        padding-left: 25px;
+        margin: 0 auto;
+        width:320px;
     }
 </style>
 <div class="navBarStyle">
@@ -54,27 +67,25 @@
 
 <div class="dataArea">
     <form class="form-horizontal" action="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=checkExchangeCode" method="post">
-        <div class="form-group" style=" width: 450px; margin: 0 auto;"> 
-            <label for="inputEmail3" style="width: auto;" class="col-sm-2 control-label labelWidth">请输入验证码：</label>
-            <div class="col-sm-2">
-                <input class="form-control" style="width: auto;" type="text" value="" name="exchangeCode" id="exchangeCode">
+        <div style="">
+
+            <div class="selectBar">
+                <input type="text" class="selectText"  placeholder="请输入验证码" id="selectText" name="exchangeCode"><button class="btn" style="background:url('{$WebSiteUrl}/images/bottomBg.png');color:white;border-radius:0px;height: 32px; width: 61px;margin-top: -3px;" type="submit">查询</button>
+
             </div>
         </div>
-        <div style="height: 25px;"></div>
-        <p style="width: 100%; text-align: left;padding-left: 455px;"><button id="addButton" type="submit" class="btn btn-info">确认 </button>
-            <!--&nbsp;&nbsp;&nbsp;&nbsp;<button id="addButton" type="reset" class="btn btn-info">重置</button>-->
-        </p>
     </form>
     {if $exchangeIteam neq ""}
         <table class="table table-bordered crmTable" >
             <tr><th>礼品图片</th>
-                <th style="width: 120px;">兑换积分</th><th>物品简介</th>
+                <th style="width: 120px;">兑换积分</th><th>物品简介</th><th>兑换者姓名</th><th>兑换时间</th>
                 <th style="display: none">id</th></tr>
             <tr>
                 <td><img src="{$WebSiteUrl}/giftImages/{$exchangeIteam.exchange_image}" width="80" height="80"></td>
                 <td>{$exchangeIteam.exchange_integration}</td>
                 <td style="text-align: left;width: 50%">{$exchangeIteam.exchange_summary}</td>
-
+                <td>{$exchangeIteam.user_name}</td>
+                <td>{$exchangeIteam.exchange_time|date_format:"%Y-%m-%d %H:%M"}</td>
                 <td  style="display: none">{$exchangeIteam.exchange_id}</td>
             </tr>
         </table>

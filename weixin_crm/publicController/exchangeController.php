@@ -28,7 +28,7 @@ class exchangeController implements exchange {
             $pageNumber = $_GET["page"];
             $exchangeModel = new exchangeModel();
             $exchangeModel->addOrderBy("create_time desc");
-             $exchangeModel->initialize("state = 0");
+            $exchangeModel->initialize("state = 0");
             $exchangeNumber = $exchangeModel->vars_number;
             $dateCount = $pageSize * ($pageNumber - 1);
             $exchangeModel->addOffset($dateCount, $pageSize);
@@ -123,7 +123,7 @@ class exchangeController implements exchange {
             $exchange->initialize('exchange_id like "' . $exchangeModel_number . '"');
 
             if ($exchange->vars_number > 0) {
-                $update["state"]=1;
+                $update["state"] = 1;
                 $exchange->update($update);
             }
         }
@@ -247,7 +247,7 @@ class exchangeController implements exchange {
     public function checkExchangeCode() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (!empty($_POST['exchangeCode'])) {
-                $Code = $_POST['exchangeCode'];
+                $Code =  strtolower($_POST['exchangeCode']);
                 $exchangeCode = new exchangeCodeModel();
                 $exchangeCode->initialize("code='" . $Code . "'");
                 $exchageCodeMesssage = $exchangeCode->vars;
@@ -273,11 +273,14 @@ class exchangeController implements exchange {
                             $this->errorMessage = "验证成功，礼品相关信息请查看，所显示表格。";
                             $insertData["code_id"] = $exchageCodeMesssage['exchange_code_id'];
                             $insertData["exchange_id"] = $exchageCodeMesssage['exchange_id'];
-                            $insertData["create_time"] = time();
+                            $exchangeTime = time();
+                            $insertData["create_time"] = $exchangeTime;
                             $exchangeCodeVerification = new exchangeCodeVerificationModel();
                             $exchangeCodeVerification->insert($insertData);
                             $upDate["state"] = 1;
                             $exchangeCode->update($upDate);
+                            $exchageValue['user_name'] = $userMessage["user_name"];
+                            $exchageValue['exchange_time'] = $exchangeTime;
                             $_ENV['smarty']->assign('exchangeIteam', $exchageValue);
                         }
                     }
@@ -309,7 +312,7 @@ class exchangeController implements exchange {
                     $codeMessage[$k][$name] = $value;
                 }
             } else {
-                   unset( $codeMessage[$k]);
+                unset($codeMessage[$k]);
             }
         }
         $_ENV['smarty']->setDirTemplates('exchange');
