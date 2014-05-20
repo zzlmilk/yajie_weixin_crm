@@ -20,7 +20,7 @@ class gameController extends BaseController {
      */
     public function index() {
 
-        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.appid.'&secret='.secret.'&code=' . $_REQUEST['code'] . '&grant_type=authorization_code';
+        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=' . appid . '&secret=' . secret . '&code=' . $_REQUEST['code'] . '&grant_type=authorization_code';
 
         $result = transferData($url, "get");
 
@@ -79,9 +79,9 @@ class gameController extends BaseController {
 
         if (isset($_REQUEST['gift_id'])) {
             $scratchCard = new scratchCard();
-            $Results = $scratchCard->getScratchCardReceviceAward( $this->userOpenId, $_REQUEST['gift_id']);
+            $Results = $scratchCard->getScratchCardReceviceAward($this->userOpenId, $_REQUEST['gift_id']);
             if (!empty($Results)) {
-                $giftInfo = $scratchCard->getScratchCardInfo( $_REQUEST['gift_id']);
+                $giftInfo = $scratchCard->getScratchCardInfo($_REQUEST['gift_id']);
                 header('Content-type: application/json');
                 echo $giftInfo;
             } else {
@@ -95,7 +95,7 @@ class gameController extends BaseController {
      */
     public function getBigWheel() {
 
-        $resultProJson = transferData(APIURL . '/gift/get_probability_wheel/?source='.SOURCE.'&open_id=' . $_REQUEST['open_id'], 'get');
+        $resultProJson = transferData(APIURL . '/gift/get_probability_wheel/?source=' . SOURCE . '&open_id=' . $_REQUEST['open_id'], 'get');
 
         $resultproArray = json_decode($resultProJson, true);
 
@@ -135,7 +135,7 @@ class gameController extends BaseController {
 
     public function getQuesion() {
 
-        $quesionAll = transferData(APIURL . "/question/get_question/?source=".SOURCE, "get");
+        $quesionAll = transferData(APIURL . "/question/get_question/?source=" . SOURCE, "get");
 
         $quesionResult = json_decode($quesionAll, true);
 
@@ -144,7 +144,7 @@ class gameController extends BaseController {
 
     public function getActivity() {
 
-        $ActivityJson = transferData(APIURL . "/activity/get_activity?source=".SOURCE, "get");
+        $ActivityJson = transferData(APIURL . "/activity/get_activity?source=" . SOURCE, "get");
 
         $ActivityArray = json_decode($ActivityJson, true);
 
@@ -174,15 +174,24 @@ class gameController extends BaseController {
 
             $postDate['quesion_' . $value] = $_REQUEST[$value];
         }
-
         $quesionResultJson = transferData(APIURL . "/question/add_question", "post", $postDate);
 
         $quesionResultArray = json_decode($quesionResultJson, true);
-
-        $url = U('company/user/userCenter', array('open_id' => $_REQUEST['open_id']), 1);
-
-
-        echo 'window.location.href="' . $url . '"';
+        $quersionPoint = $quesionResultArray["fraction"];
+        if ($quersionPoint >= 71) {
+            $message = "您的分数为：" . $quersionPoint . "分<br>您脊椎良好需保持，建议定期脊椎保养。";
+        } else if ($quersionPoint >= 51) {
+            $message = "您的分数为：" . $quersionPoint . "分<br>您有轻微脊椎问题。";
+        } else if ($quersionPoint >= 40) {
+            $message = "您的分数为：" . $quersionPoint . "分<br>您有脊椎問題严重。";
+        } else {
+            $this->displayMessage("统计问卷时出错请重试");
+        }
+        $message.="<br>&nbsp;&nbsp;以上分数仅限于测试题目结果对比，脊椎问题的诱发原因是多种的，只要身体有各种酸、麻、胀、痛等症状，均有可能是脊椎错位导致的，需通过专业方法检测才能得出最终结果。";
+        $this->assign("message",$message);
+        $this->display('questionUpload');
+//        $url = U('company/user/userCenter', array('open_id' => $_REQUEST['open_id']), 1);
+//        echo 'window.location.href="' . $url . '"';
     }
 
     public function applyAction() {
@@ -219,7 +228,7 @@ class gameController extends BaseController {
 
     public function getRandCode() {
 
-        $codeJson = transferData(APIURL . "/code/get_code?source=".SOURCE, "get");
+        $codeJson = transferData(APIURL . "/code/get_code?source=" . SOURCE, "get");
 
         $codeArray = json_decode($codeJson, true);
 
@@ -353,7 +362,7 @@ class gameController extends BaseController {
             if (!empty($awardResult['jump'])) {
 
 
-                $url = WebSiteUrl . '?g='.SOURCE.'&a=user&v=changeGoods&goodsId=' . $awardResult['info']['exchange_id'] . '&open_id=' . $_REQUEST['open_id'];
+                $url = WebSiteUrl . '?g=' . SOURCE . '&a=user&v=changeGoods&goodsId=' . $awardResult['info']['exchange_id'] . '&open_id=' . $_REQUEST['open_id'];
 
                 echo '<script>window.location.href="' . $url . '"</script>';
 
