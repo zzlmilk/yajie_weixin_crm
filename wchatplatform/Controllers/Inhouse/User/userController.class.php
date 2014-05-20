@@ -85,13 +85,15 @@ class UserController extends BaseController {
        
         $userInfo['user']['user_phone'] = phoneStart($userInfo['user']['user_phone']);
 
+        $xval = array();
+
+        $yval = array();
+
         if(count($expenseItem['record']) > 0){
 
             $result = $expenseItem['record'];
 
-            $xval = array();
-
-            $yval = array();
+            
 
             foreach($result as $v){
 
@@ -119,16 +121,25 @@ class UserController extends BaseController {
             }
 
 
-            $this->assign("XVAL", json_encode($xval));
-
-            $this->assign("YVAL", json_encode($yval));
-
-            $this->assign('record_state',1);
+         
 
         } else{
 
-            $this->assign('record_state',0);
+            for($i = 0 ; $i< 12 ; $i++){
+
+                array_push($yval,0);
+
+                array_push($xval,'');
+
+            }
         }
+
+
+        $this->assign("XVAL", json_encode($xval));
+
+        $this->assign("YVAL", json_encode($yval));
+
+        $this->assign('record_state',1);
 
       
         $this->assign("userInfo", $userInfo["user"]);
@@ -235,6 +246,9 @@ class UserController extends BaseController {
         $userJsonData = transferData(APIURL . "/user/getUserCardInfo/", "post", $userMessage);
         $expenseItem = json_decode($userJsonData, true);
         $error->JudgeError($expenseItem);
+
+        $this->assign('state',count($expenseItem["record"]) > 0 ? 1:0);
+
         $this->assign("expenseItem", $expenseItem["record"]);
         $this->assign("userInfoWeixin", $userInfo["weixin_user"]);
         $this->assign("userInfo", $userInfo["user"]);

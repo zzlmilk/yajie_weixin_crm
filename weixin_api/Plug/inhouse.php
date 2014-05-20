@@ -46,6 +46,8 @@ class InhousePlug {
 
 		    $sql = 'select * from gcm12  where gcn04c  like "'.$phone.'" and gcn00c like "002"';
 
+		    //$sql =  'select * from gbm01 where '
+
 		    $odb_comm=mssql_query($sql);
 
 		    $row=mssql_fetch_array($odb_comm);
@@ -122,7 +124,7 @@ class InhousePlug {
 
 				$result['open_id'] = $data['open_id'];
 
-				$this->insertCardRecord($array['info']['gcn01c']);
+				$this->insertCardRecord($array['info']['gcn03c']);
 
 				$user = new UserModel();
 

@@ -64,12 +64,17 @@
 
     var url = '{$url}';
 
-    
+
 
  function reloadyemian()//最好不要用reload这个关键字,因为很容易和其它函数冲突 
 { 
 window.location.href=url; 
 } 
- window.setTimeout("reloadyemian();",3000); 
-</script> 
+
+ if(url!=''){
+        window.setTimeout("reloadyemian();",3000); 
+
+        
+    }
+ </script> 
 

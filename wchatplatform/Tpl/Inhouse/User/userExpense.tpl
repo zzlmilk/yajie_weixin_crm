@@ -112,6 +112,13 @@
 
         </div>
         <div>
+
+            {if $state == 0}
+
+            <div style='text-align: center; margin: 2em auto;'>暂无消费记录</div>
+
+            {else}
+
             {foreach from=$expenseItem item=exchangeList key=key}
                 <div style="float: left;width: 6px; margin-right: 10px;height: auto; margin-left: 10px;">
                     <div class="col-line-first"></div>
@@ -131,6 +138,8 @@
                 </div>
                 <div style="clear: both;"></div>
             {/foreach}
+
+            {/if}
         </div>
 
     </body>

@@ -61,7 +61,7 @@
     <div class="sortBar"></div>
     {if $errorMessage neq ""}
         <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label">{$errorMessage}</label></div>
-    {/if}
+        {/if}
 
 </form>
 
@@ -92,10 +92,10 @@
 <script src="{$WebSiteUrl}/js/icheck.min.js"></script>
 <script>
     $('input').iCheck({
-    checkboxClass: 'icheckbox_flat-blue',
-    radioClass: 'iradio_flat-blue',
-    increaseArea: '5%' // optional
-}); 
+        checkboxClass: 'icheckbox_flat-blue',
+        radioClass: 'iradio_flat-blue',
+        increaseArea: '5%' // optional
+    });
 //$("#selectText").on("input",function(){
 //if(!getIntRegex($(this).val())){
 //var cutString=$(this).val().substr(0, ($(this).val().length)-1);
@@ -104,20 +104,33 @@
 //}
 //});
 
-$("#selectText").on("keyup",function(event){
-if(event.ctrlKey&&event.keyCode==86){
-if(!getPhoneRegex($(this).val())&&!getMobilPhoneRegex($(this).val())){
-$(this).val("");
-}
-}
-else if(event.keyCode!=17&&event.keyCode!=8){
-if(!getIntRegex($(this).val())){
-var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+    $("#selectText").on("keyup", function(event) {
+        
+        var val = $(this).val();
+        
+        var lastString = val.substr(-1);
+        
+        if (event.ctrlKey && event.keyCode == 86) {
+            if (!getPhoneRegex($(this).val()) && !getMobilPhoneRegex($(this).val())) {
+                $(this).val("");
+            }
+        }
+        else if (event.keyCode != 17 && event.keyCode != 8 && event.keyCode!=224 && event.keyCode!=86) {
+            if (!getIntRegex($(this).val())) {
+                var cutString = $(this).val().substr(0, ($(this).val().length) - 1);
 
-$("#selectText").val(cutString);
-}}
+                $("#selectText").val(cutString);
+            }
+        } else if(lastString == 'v'){
+            
+            if (!getIntRegex($(this).val())) {
+                var cutString = $(this).val().substr(0, ($(this).val().length) - 1);
 
-});
+                $("#selectText").val(cutString);
+            }
+        }
+
+    });
 //$("#selectText").on("keydown",function(event){
 //if(event.keyCode==8){
 //if(getPhoneRegex($(this).val())){
@@ -127,11 +140,11 @@ $("#selectText").val(cutString);
 //    
 //});
 
-$(".userPhone").each(function(){
-var phoneNumber= $(this).html();
-var changeValue="";
-changeValue=phoneNumber.substr(0,3)+"-"+phoneNumber.substr(3,3)+"-"+phoneNumber.substr(6);
-$(this).html(changeValue);
-  
-});
+    $(".userPhone").each(function() {
+        var phoneNumber = $(this).html();
+        var changeValue = "";
+        changeValue = phoneNumber.substr(0, 3) + "-" + phoneNumber.substr(3, 3) + "-" + phoneNumber.substr(6);
+        $(this).html(changeValue);
+
+    });
 </script>
