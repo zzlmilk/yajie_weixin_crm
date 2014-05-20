@@ -41,7 +41,7 @@ class WeiXinUserModel extends Basic {
 
            
 
-            if (is_array($token_array)) {
+            if (is_array($token_array) && $token_array!=1) {
 
                 $token = $token_array['access_token'];
 

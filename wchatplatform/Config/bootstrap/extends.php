@@ -391,6 +391,10 @@ function A($module, $sorce, $ext = '.class.php', $file = 'Controller') {
     }
 }
 
+/**
+ * 验证手机
+ */
+
 function checkMobile($phone) {
 
     if (preg_match("/^13[0-9]{1}[0-9]{8}$|15[0189]{1}[0-9]{8}$|189[0-9]{8}$/", $phone)) {
@@ -400,6 +404,17 @@ function checkMobile($phone) {
 
         return false;
     }
+}
+
+/**
+ * 将电话 修改为星号
+ */
+
+function phoneStart($phone){
+
+    $new_phone =substr_replace($phone,'*****',3,5);
+
+    return $new_phone;
 }
 
 ?>

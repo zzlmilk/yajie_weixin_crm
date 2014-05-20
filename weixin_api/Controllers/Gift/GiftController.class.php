@@ -65,9 +65,8 @@ class GiftController implements gift {
 
             $gift_setting = new GiftSettingModel();
 
-            $gift_id = $gift_setting->cipher_probability(2);
+            $array = $gift_setting->cipher_probability(2);
 
-            $array['gift_id'] = $gift_id;
 
             AssemblyJson($array);
         } else {

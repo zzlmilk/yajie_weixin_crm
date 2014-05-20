@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-20 09:45:06
+         compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/Exchange/getExchangeList.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:223572171537ab3a207c693-57484024%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '91aee8b9794e4b9e3021bf7c4142e5ba45ae34d4' => 
+    array (
+      0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/Exchange/getExchangeList.tpl',
+      1 => 1400491686,
+    ),
+  ),
+  'nocache_hash' => '223572171537ab3a207c693-57484024',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -88,7 +106,8 @@
         
         
                     <div style=' width: 18%;'>
-                        <img src="{$weixinUserInfo.headimgurl}"  class="round_photo">
+                        <img src="<?php echo $_smarty_tpl->getVariable('weixinUserInfo')->value['headimgurl'];?>
+"  class="round_photo">
                     </div>
         
         
@@ -96,34 +115,61 @@
                     <div style=' width: 66%; overflow: hidden; position: absolute; left: 20%; top: 5%;'>
         
                         <div style='margin-top:10%;line-height: 15px;'>
-                            <span style='font-size:15px; display: inline-block;  height: 4%;  '>用户昵称：{$weixinUserInfo.nickname}</span>
-                            <span id="userIntegration" style='font-size:15px; display: inline-block;  height: 4%;  '>剩余积分:{$localUserInfo.user_integration}</span>
+                            <span style='font-size:15px; display: inline-block;  height: 4%;  '>用户昵称：<?php echo $_smarty_tpl->getVariable('weixinUserInfo')->value['nickname'];?>
+</span>
+                            <span id="userIntegration" style='font-size:15px; display: inline-block;  height: 4%;  '>剩余积分:<?php echo $_smarty_tpl->getVariable('localUserInfo')->value['user_integration'];?>
+</span>
                         </div>
                     </div>
                 </div>-->
         <div class="registerWarp" style="padding-bottom: 10px;">
             <p style="text-align: left; padding-left: 8px;color: #979797"><span style="color: orange">*</span>亲！看中了哪一款点击积分，获取兑换码到前台兑换哦~</p>
-            <p style="text-align: center;font-we1ight: bold;">我的积分：{$localUserInfo.user_integration}分</p>
-            {foreach from=$exchangeList item=exchangeItem key=key}
-                {if $key % 2 eq 0}
+            <p style="text-align: center;font-we1ight: bold;">我的积分：<?php echo $_smarty_tpl->getVariable('localUserInfo')->value['user_integration'];?>
+分</p>
+            <?php  $_smarty_tpl->tpl_vars['exchangeItem'] = new Smarty_Variable;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('exchangeList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if (count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['exchangeItem']->key => $_smarty_tpl->tpl_vars['exchangeItem']->value){
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['exchangeItem']->key;
+?>
+                <?php if ($_smarty_tpl->tpl_vars['key']->value%2==0){?>
                     <div class="giftBox" style="float: left;margin-left: 8px;">
-                        <div > <a ><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
+                        <div > <a ><img style="width:100%;" width="144" height="144" src="<?php echo $_smarty_tpl->getVariable('WebImageUrl')->value;?>
+<?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_image'];?>
+"></a></div>
                         <div style="word-wrap: break-word; word-break: normal;">
-                            <p class="summary" style="height:60px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
-                            <p class="integration" style=""><a href="?g={$model}&a=exchange&v=getExchangeCode&open_id={$open_id}&exchangeId={$exchangeItem.exchange_id}&exchange_integration={$exchangeItem.exchange_integration}&user_intergration={$localUserInfo.user_integration}">积分: {$exchangeItem.exchange_integration}分</a></p>   
+                            <p class="summary" style="height:60px; padding-right: 10px;padding-left: 10px;"> <?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_summary'];?>
+</p>
+                            <p class="integration" style=""><a href="?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
+&a=exchange&v=getExchangeCode&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+&exchangeId=<?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_id'];?>
+&exchange_integration=<?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_integration'];?>
+&user_intergration=<?php echo $_smarty_tpl->getVariable('localUserInfo')->value['user_integration'];?>
+">积分: <?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_integration'];?>
+分</a></p>   
 
                         </div>
                     </div>
-                {else}
+                <?php }else{ ?>
                     <div class="giftBox" style="float: right ">
-                        <div > <a ><img style="width:100%;" width="144" height="144" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
+                        <div > <a ><img style="width:100%;" width="144" height="144" src="<?php echo $_smarty_tpl->getVariable('WebImageUrl')->value;?>
+<?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_image'];?>
+"></a></div>
                         <div style="word-wrap: break-word; word-break: normal;">
-                            <p class="summary" style="height: 60px; padding-right: 10px;padding-left: 10px;"> {$exchangeItem.exchange_summary}</p>
-                            <p class="integration" style=""><a href="?g={$model}&a=exchange&v=getExchangeCode&open_id={$open_id}&exchangeId={$exchangeItem.exchange_id}&exchange_integration={$exchangeItem.exchange_integration}&user_intergration={$localUserInfo.user_integration}">积分: {$exchangeItem.exchange_integration}分</a></p>
+                            <p class="summary" style="height: 60px; padding-right: 10px;padding-left: 10px;"> <?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_summary'];?>
+</p>
+                            <p class="integration" style=""><a href="?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
+&a=exchange&v=getExchangeCode&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+&exchangeId=<?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_id'];?>
+&exchange_integration=<?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_integration'];?>
+&user_intergration=<?php echo $_smarty_tpl->getVariable('localUserInfo')->value['user_integration'];?>
+">积分: <?php echo $_smarty_tpl->tpl_vars['exchangeItem']->value['exchange_integration'];?>
+分</a></p>
                         </div>
                     </div>
-                {/if}
-            {/foreach}
+                <?php }?>
+            <?php }} ?>
             <div style="clear: both;"></div>
             <div style="height: 10px;"></div>
         </div>
@@ -141,7 +187,8 @@
                     <div class="modal-footer" style="border: none;">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                         <a id="checkButton" href=""><button type="button" class="btn btn-primary">确认</button></a>
-                        <input type="hidden" id="gotoUrl" value="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=exchangeItemDelete&ItemId="  />
+                        <input type="hidden" id="gotoUrl" value="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=exchange&functionname=exchangeItemDelete&ItemId="  />
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->

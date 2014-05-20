@@ -12,6 +12,10 @@
         <script src="{$WebSiteUrlPublic}/javascript/hignchats/highcharts.js" type="text/javascript">
         </script>
 
+<script src="{$WebSiteUrlPublic}/javascript/init.js" type="text/javascript">
+</script>
+
+
         <style>
             body{
                 Font-size=62.5%;
@@ -73,73 +77,36 @@
                     <div class='siteClass' style='font-size:14px;' >昵称:&nbsp; {$userInfo.user_name}</div>
                 </div>
                 <div class='siteClass' style='font-size:14px;'>积分:&nbsp; {$userInfo.user_integration}</div>
-                <div class='siteClass'  style='font-size:14px;'>电话:&nbsp; <span id="userPhone">{$userInfo.user_phone}</span></div>
 
+                <div class='siteClass' style='font-size:14px;'>手机:&nbsp; {$userInfo.user_phone}</div>
 
             </div>
 
         </div>
 
 
+        {if $record_state == 1}
+
+
         <div id="container" style="width:100%;height:400px"></div>
+
+
+
+        {/if}
+       
 
 
     </body>
     <script>
 
+       var XVAL = eval('{$XVAL}');
+
+       var YVAL = eval('{$YVAL}');
 
 
-        var XVAL = eval('{$XVAL}');
+       var type = '{$record_state}';
 
+       hignchats_init(type,XVAL,YVAL);
 
-
-        var YVAL = eval('{$YVAL}');
-
-        $(function () {
-        $('#container').highcharts({
-        title: {
-        text: '',
-        x: -20 //center
-    },
-    subtitle: {
-    text: '',
-    x: -20
-},
-xAxis: {
-categories: XVAL
-},
-yAxis: {
-title: {
-text: ''
-},
-plotLines: [{
-value: 0,
-width: 1,
-color: '#808080'
-}]
-},
-tooltip: {
-valueSuffix: ''
-},
-legend: {
-layout: 'vertical',
-align: 'right',
-verticalAlign: 'middle',
-borderWidth: 0
-},
-series: [{
-name: '金额',
-data: YVAL
-}]
-});
-    
-var userPhone=$("#userPhone").html();
-var userPhoneCache=userPhone.substr(0,4)+"****"+userPhone.substr(8);
-$("#userPhone").html(userPhoneCache);
-});
-                
-
-
-    
-    </script>
+  </script>
 </html>

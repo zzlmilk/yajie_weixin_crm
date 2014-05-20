@@ -2,6 +2,9 @@
 
 class weixinEvent {
 
+
+    
+
     function user_logout() {
 
 
@@ -23,10 +26,6 @@ class weixinEvent {
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
         if (!empty($info['subscribe'])) {
-
-            // $text = $info['subscribe'];
-            // $wechat->text($text)->reply();
-
 
             switch ($info['subscribe']['type']) {
 

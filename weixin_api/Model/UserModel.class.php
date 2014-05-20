@@ -73,6 +73,9 @@ class UserModel extends Basic {
             $data['address_phone'] = $val['user_phone'];
 
 
+            $data['create_time'] = time();
+
+
             if(!empty($val['user_card'])){
 
                 /**

@@ -22,7 +22,6 @@ class UserController extends BaseController {
             //$this->userOpenId = 'dasdasd';
         }
 
-
         $this->assign('open_id', $this->userOpenId);
     }
 
@@ -65,7 +64,13 @@ class UserController extends BaseController {
         $this->able_register();
 
 
-        $user_api = new userApi();
+        $userMessage["source"] = SOURCE;
+        $userMessage["open_id"] = $this->userOpenId;
+
+
+        $userInfo = transferData(APIURL . "/user/get_info", "post", $userMessage);
+
+        $userInfo = json_decode($userInfo, TRUE);
 
         $userMessage["source"] = SOURCE;
         $userMessage["open_id"] = $this->userOpenId;
@@ -74,27 +79,21 @@ class UserController extends BaseController {
 
         
         $userJsonData = transferData(APIURL . "/user/getUserCardInfo/", "post", $userMessage);
+
         $expenseItem = json_decode($userJsonData, true);
 
+       
+        $userInfo['user']['user_phone'] = phoneStart($userInfo['user']['user_phone']);
 
+        $xval = array();
 
-
-        $info = $user_api->getUserInfo($this->userOpenId);        
-        $error = new errorApi();
-        $error->JudgeError($info);
-        
-
-
-
-        $error->JudgeError($expenseItem);
+        $yval = array();
 
         if(count($expenseItem['record']) > 0){
 
             $result = $expenseItem['record'];
 
-            $xval = array();
-
-            $yval = array();
+            
 
             foreach($result as $v){
 
@@ -102,7 +101,7 @@ class UserController extends BaseController {
 
                 $time = strtotime($v['order_time']);
 
-                $val = date('Y-m-d',$time);
+                $val = date('y/m/d',$time);
 
                 array_push($tempArray, $v['record_commodity']);
 
@@ -122,16 +121,28 @@ class UserController extends BaseController {
             }
 
 
+         
+
+        } else{
+
+            for($i = 0 ; $i< 12 ; $i++){
+
+                array_push($yval,0);
+
+                array_push($xval,'');
+
+            }
+        }
+
+
         $this->assign("XVAL", json_encode($xval));
 
         $this->assign("YVAL", json_encode($yval));
 
-        }
+        $this->assign('record_state',1);
 
       
-
-
-        $this->assign("userInfo", $info["user"]);
+        $this->assign("userInfo", $userInfo["user"]);
 
 
         //$this->assign("weixin", $userInfo["weixin_user"]);
@@ -191,19 +202,26 @@ class UserController extends BaseController {
      */
 
     public function bind(){
-     
+
         if (!empty($_REQUEST['phone']) && !empty($this->userOpenId)) {
 
 
             $userApi = new userApi();
 
+
             $info = $userApi->bind($_REQUEST['phone'],$this->userOpenId);
 
-            $error =  new errorApi();
+             $error = new errorApi();
 
-            $error->JudgeError($info);
+           $error->JudgeError($info);
 
-            $this->displayMessage("恭喜绑定成功",1);
+            $array = array();
+
+            $array['open_id'] = $this->userOpenId;
+
+            $url = U(SOURCE.'/user/userCenter',$array,1);
+
+            $this->displayMessage("恭喜绑定成功",1,$url,'个人中心');
         } else{
 
             $this->displayMessage("手机号码不能为空",0);
@@ -228,6 +246,9 @@ class UserController extends BaseController {
         $userJsonData = transferData(APIURL . "/user/getUserCardInfo/", "post", $userMessage);
         $expenseItem = json_decode($userJsonData, true);
         $error->JudgeError($expenseItem);
+
+        $this->assign('state',count($expenseItem["record"]) > 0 ? 1:0);
+
         $this->assign("expenseItem", $expenseItem["record"]);
         $this->assign("userInfoWeixin", $userInfo["weixin_user"]);
         $this->assign("userInfo", $userInfo["user"]);

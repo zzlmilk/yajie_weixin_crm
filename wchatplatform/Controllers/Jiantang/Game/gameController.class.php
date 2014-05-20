@@ -40,7 +40,7 @@ class gameController extends BaseController {
 
     public function gameDa() {
 
-        $this->able_register();
+        //$this->able_register();
 
         $giftApi = new giftApi();
         $info = $giftApi->getUserGameRecord($this->userOpenId, 1);
@@ -53,22 +53,22 @@ class gameController extends BaseController {
 
     public function guaguaka() {
 
-        $this->able_register();
+        //$this->able_register();
 
-        $giftApi = new giftApi();
-        $info = $giftApi->getUserGameRecord($this->userOpenId, 2);
-
-
+        // $giftApi = new giftApi();
+        // $info = $giftApi->getUserGameRecord($this->userOpenId, 2);
 
 
+        
+        // $error = new errorApi();
 
-        $error = new errorApi();
-
-        $error->JudgeError($info);
+        // $error->JudgeError($info);
         $scratchCard = new scratchCard();
+        
         $ScratchCardResults = $scratchCard->getScratchCardResults();
 
 
+       
 
         $this->assign("websiteurl", WebSiteUrl);
         $this->assign("ScratchCardResults", $ScratchCardResults);

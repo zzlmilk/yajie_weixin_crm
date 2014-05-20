@@ -46,6 +46,8 @@ class InhousePlug {
 
 		    $sql = 'select * from gcm12  where gcn04c  like "'.$phone.'" and gcn00c like "002"';
 
+		    //$sql =  'select * from gbm01 where '
+
 		    $odb_comm=mssql_query($sql);
 
 		    $row=mssql_fetch_array($odb_comm);
@@ -122,7 +124,7 @@ class InhousePlug {
 
 				$result['open_id'] = $data['open_id'];
 
-				$this->insertCardRecord($array['info']['gcn01c']);
+				$this->insertCardRecord($array['info']['gcn03c']);
 
 				$user = new UserModel();
 
@@ -279,6 +281,51 @@ class InhousePlug {
 			
 		}
 
+	}
+
+	/**
+	 * 同步用户积分
+	 */
+
+	public function updateUserPointer($open_id){
+
+		if(!empty($open_id)){
+
+
+       		$user = new userModel();
+
+            $userInfo = $user->getUserInfo($open_id);
+
+            if(count($userInfo) > 0){
+            	
+				$conn = mssql_connect("sqlservername", "S3_INHOUSE", "S3_INHOUSE8472") or die (json_encode($errorArray));
+
+				mssql_select_db('S3_INHOUSE',$conn);
+
+			    $sql = 'select * from gcm12  where gcn04c  like "'.$userInfo['user_phone'].'" and gcn00c like "002"';
+
+			    $odb_comm=mssql_query($sql);
+
+			     $row=mssql_fetch_array($odb_comm);
+
+			     if(!empty($row)){
+
+				    if(!empty($row['gcn16f'])){
+
+						$code = (int)$row['gcn16f'];
+
+					} else{
+
+						$code = 0;
+
+					}
+					
+			     	$data['user_integration'] = $code;
+
+			     	$user->updateInfo($data,$userInfo['user_id']);
+			     }
+            }
+		}
 	}
 }
 

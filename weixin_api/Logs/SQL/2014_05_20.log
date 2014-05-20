@@ -1,0 +1,252 @@
+May 20 09:45:56 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.exchange  WHERE 1      
+May 20 09:45:56 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:45:56 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:46:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.exchange  WHERE 1      
+May 20 09:46:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.exchange  WHERE 1      
+May 20 09:46:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:46:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:48:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.exchange  WHERE 1      
+May 20 09:48:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:48:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:50:03 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.exchange  WHERE 1      
+May 20 09:50:26 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info/?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:50:26 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info/?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 16:26:17 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:26:29 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:22 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:24 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:24 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:25 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:25 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:26 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:26 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:26 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:26 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:26 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:27 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:27 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:27 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:27 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:27 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:27 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:28 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:28 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:28 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:28 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:34 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:35 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:28:36 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_wheel/?source=Jiantang&open_id=1234
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 16:42:01 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift_setting  WHERE 1  AND gift_type = 2     
+May 20 16:42:01 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 16:47:20 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 16:48:57 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 16:49:26 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 16:50:58 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 16:52:29 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 16:54:44 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 17:01:32 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_user_gift_record
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 17:01:48 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_user_gift_record
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 17:01:58 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:02:27 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:03:13 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:03:17 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:03:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:03:24 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:04:44 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:05:18 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:07:28 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:07:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:08:10 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:08:17 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:08:18 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:08:18 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:08:19 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:08:21 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:08:25 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:09:39 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:15:06 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:15:07 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:16:46 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:17:07 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:18:20 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:18:33 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:18:43 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:19:50 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:19:51 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:19:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:19:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:19:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:20:24 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:20:26 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:20:26 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:20:27 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:20:28 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:20:28 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:20:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:20:31 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:22:06 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:22:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:22:55 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:23:44 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card/?source=Jiantang
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:23:46 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:23:48 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:24:49 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:25:07 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_id = 4 and gift_type = 2     
+May 20 17:25:07 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/add_record
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 17:25:10 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:25:39 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_id = 2 and gift_type = 2     
+May 20 17:25:39 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/add_record
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 17:25:41 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:29:04 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:29:21 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:29:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:29:31 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:29:32 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:29:46 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_id = 2 and gift_type = 2     
+May 20 17:29:46 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/add_record
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 17:29:49 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:30:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:31:06 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:32:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:33:01 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_id = 3 and gift_type = 2     
+May 20 17:33:01 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/add_record
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 17:33:02 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:35:42 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:35:51 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_id = 3 and gift_type = 2     
+May 20 17:35:51 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/add_record
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 17:35:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:38:29 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_id = 2 and gift_type = 2     
+May 20 17:38:29 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/add_record
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 17:38:32 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     
+May 20 17:42:36 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_gift_info
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_id = 2 and gift_type = 2     
+May 20 17:42:36 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/add_record
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 20 17:42:37 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/gift/get_probability_card
+SELECT * FROM weixin_jiantang.gift  WHERE 1  AND gift_type = 2     

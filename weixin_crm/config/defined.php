@@ -11,11 +11,14 @@ define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 
 defined('PROJECT') or define('PROJECT', '/yajie_weixin_crm/weixin_crm/');
 
-error_reporting(E_ALL ^ E_NOTICE);
+//error_reporting(E_ALL ^ E_NOTICE);
 
 defined('ROOTPATH') or define('ROOTPATH',  ROOT . PROJECT);
 
+
+
 defined('WebSiteUrl') or define('WebSiteUrl', 'http://localhost/yajie_weixin_crm/weixin_crm');
+
 
 defined('URLCONTROLLER') or define('URLCONTROLLER', WebSiteUrl.'/publicController');
 

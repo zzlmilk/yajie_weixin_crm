@@ -1,6 +1,6 @@
 <?php
 
-defined('SOURCE') or define('SOURCE', 'company');
+defined('SOURCE') or define('SOURCE', 'Jiantang');
 
 
 defined('appid') or define('appid', 'wx1273344d7b97cd07');

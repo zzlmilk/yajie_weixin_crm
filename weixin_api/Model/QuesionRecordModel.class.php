@@ -12,13 +12,13 @@ class QuesionRecordModel extends basic {
     public function addData($field, $data, $user) {
 
 
-
-
         $field_array = explode(',', $field);
 
         $array = array();
 
         $k = 0;
+
+        $fraction = 0;
 
         foreach ($field_array as $key => $value) {
 
@@ -28,7 +28,21 @@ class QuesionRecordModel extends basic {
 
             if ($this->vars_number <= 0) {
 
-                $insertData['quesion_answer'] = json_encode($data['quesion_' . $value]);
+
+                $questionconfig = new QuesionConfigModel($data['quesion_'.$value]);
+
+                if($questionconfig->vars_number > 0){
+
+                    $code = $questionconfig->vars['question_value'];
+
+                } else{
+
+                    $code = 0;
+                }
+
+                $fraction+=$code;
+
+                $insertData['quesion_answer'] = $data['quesion_' . $value];
 
                 $insertData['question_id'] = $value;
 
@@ -36,16 +50,13 @@ class QuesionRecordModel extends basic {
 
                 $insertData['ctime'] = time();
 
-                $id = $this->insert($insertData);
+                //$id = $this->insert($insertData);
 
-                if ($id > 0) {
-
-                    $array[$value] = arrayToObject($insertData, 0);
-
-                    $k++;
-                }
+               
             }
         }
+
+        $array['fraction'] = $fraction;
 
         return $array;
     }
