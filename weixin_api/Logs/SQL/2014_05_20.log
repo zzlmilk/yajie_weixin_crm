@@ -1,0 +1,26 @@
+May 20 09:45:56 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.exchange  WHERE 1      
+May 20 09:45:56 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:45:56 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:46:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.exchange  WHERE 1      
+May 20 09:46:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.exchange  WHERE 1      
+May 20 09:46:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:46:52 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:48:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.exchange  WHERE 1      
+May 20 09:48:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:48:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:50:03 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_list?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.exchange  WHERE 1      
+May 20 09:50:26 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info/?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     
+May 20 09:50:26 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info/?source=Inhouse&open_id=ocpOot0i4woNB_BmawtOQ77lztFY
+SELECT * FROM weixin_inhouse.user  WHERE 1  AND user_open_id like "ocpOot0i4woNB_BmawtOQ77lztFY"     

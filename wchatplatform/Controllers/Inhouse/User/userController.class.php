@@ -22,7 +22,6 @@ class UserController extends BaseController {
             //$this->userOpenId = 'dasdasd';
         }
 
-
         $this->assign('open_id', $this->userOpenId);
     }
 
@@ -211,7 +210,7 @@ class UserController extends BaseController {
 
             $url = U(SOURCE.'/user/userCenter',$array,1);
 
-            $this->displayMessage("恭喜绑定成功",1,$url);
+            $this->displayMessage("恭喜绑定成功",1,$url,'个人中心');
         } else{
 
             $this->displayMessage("手机号码不能为空",0);

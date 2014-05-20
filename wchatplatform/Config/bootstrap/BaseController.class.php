@@ -111,16 +111,25 @@ class BaseController {
         exit('<script>window.location.href="' . $url . '";</script>');
     }
 
-    public function displayMessage($msg, $scuess = 0, $url = '') {
+    public function displayMessage($msg, $scuess = 0, $url = '',$name='') {
 
         $this->setDir('Public');
 
         $this->assign('url', $url);
 
         $this->assign('msg', $msg);
+
+        if(!empty($name)){
+
+            $this->assign('name',$name);
+
+        }
         if ($scuess == 0) {
+
             $this->display('message');
+
         } else if ($scuess == 1) {
+            
             $this->display('messageSuccess');
         }
 

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-14 18:08:50
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-20 10:09:11
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/Public/messageSuccess.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:441300064537340b22e05f5-14881303%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1201444931537ab947068a11-94445369%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '30e859d203a90e85c37513cd30842dfcbb38f1c2' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Inhouse/Public/messageSuccess.tpl',
-      1 => 1400059453,
+      1 => 1400551750,
     ),
   ),
-  'nocache_hash' => '441300064537340b22e05f5-14881303',
+  'nocache_hash' => '1201444931537ab947068a11-94445369',
   'function' => 
   array (
   ),
@@ -48,7 +48,7 @@ $_smarty_tpl->decodeProperties(array (
                 /*border: solid 1px red;*/
                 text-align: center;
                 color: rgb(71,71,71);
-                font-size: 1.2em;
+                font-size: 1.1em;
                 height: 3em;
                 line-height: 4em;
             }
@@ -70,6 +70,29 @@ $_smarty_tpl->decodeProperties(array (
 /image/success.png">
         </div>
         <div class="errorMessage"><?php echo $_smarty_tpl->getVariable('msg')->value;?>
-</div>
-        <div style=" height: 3em;"></div>
+
+
+            <?php if ($_smarty_tpl->getVariable('name')->value!=''){?>
+
+            ,系统将于3秒钟后跳转到<?php echo $_smarty_tpl->getVariable('name')->value;?>
+
+
+            <?php }?>
+        </div>
+       
     </body>
+
+    <script type="text/javascript" language="javascript">
+
+    var url = '<?php echo $_smarty_tpl->getVariable('url')->value;?>
+';
+
+    
+
+ function reloadyemian()//最好不要用reload这个关键字,因为很容易和其它函数冲突 
+{ 
+window.location.href=url; 
+} 
+ //window.setTimeout("reloadyemian();",3000); 
+</script> 
+

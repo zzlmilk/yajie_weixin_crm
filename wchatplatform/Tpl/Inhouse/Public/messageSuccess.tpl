@@ -29,7 +29,7 @@
                 /*border: solid 1px red;*/
                 text-align: center;
                 color: rgb(71,71,71);
-                font-size: 1.2em;
+                font-size: 1.1em;
                 height: 3em;
                 line-height: 4em;
             }
@@ -49,8 +49,15 @@
         <div class="errorImg">
             <img src="{$WebSiteUrlPublic}/image/success.png">
         </div>
-        <div class="errorMessage">{$msg}</div>
-        <div style=" height: 3em;"></div>
+        <div class="errorMessage">{$msg}
+
+            {if $name !=''}
+
+            ,系统将于3秒钟后跳转到{$name}
+
+            {/if}
+        </div>
+       
     </body>
 
     <script type="text/javascript" language="javascript">

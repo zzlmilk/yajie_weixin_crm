@@ -43,6 +43,9 @@ class exchangeController extends BaseController {
 
         $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
         $userInfo = json_decode($userInfo, TRUE);
+
+     
+
         $weixinUserInfo = $userInfo['weixin_user'];
         $localUserInfo = $userInfo['user'];
         $error = new errorApi();
