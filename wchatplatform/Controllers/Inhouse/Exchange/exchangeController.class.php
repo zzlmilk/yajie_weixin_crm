@@ -275,7 +275,7 @@ class exchangeController extends BaseController {
             $exchangeCode = transferData(APIURL . "/exchange/create/", "post", $postDate);
             $exchangeCode = json_decode($exchangeCode, TRUE);
             $error = new errorApi();
-
+            $exchangeCode["code"]=  strtoupper($exchangeCode["code"]);
             $error->JudgeError($exchangeCode);
             $this->assign('exchangeCode', $exchangeCode);
 
