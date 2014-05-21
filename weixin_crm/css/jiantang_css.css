@@ -1,0 +1,114 @@
+a:link { text-decoration: none;color: #3394c4}
+
+a:visited { text-decoration: none;color: #3394c4}
+
+
+a:active { text-decoration:none;color: #3394c4}
+a:hover { text-decoration:underline;color: red}
+
+.bobyBackGroud{
+
+	background-image: url(../images/inhouse_background.png);
+
+	width: 1280px;
+
+
+	height: 800px;
+}
+
+.boby{
+
+	margin: 0;
+
+	padding: 0;
+}
+
+.topBackGround{
+
+	background-image: url(../images/inhouse_top.png);	
+
+	width: 1282px;
+
+	height: 90px;
+
+	position: relative;
+}
+
+.banner{
+
+	background-image: url(../images/inhouse_banner.png);	
+
+	width: 811px;
+
+	height: 35px;
+
+
+	font-size: 13px;
+
+	
+}
+
+
+.wordRect{
+
+	-webkit-box-reflect: below 1px -webkit-gradient(linear,0 20%,0 100%,from(transparent),color-stop(0, transparent),to(#000));
+}
+
+
+
+.left-table03 {text-indent:7px;height: 42;font-size:12px;color:#555555;text-decoration:none;background-color:white;border-top:1px solid #fdfdfd;border-bottom:1px solid #dddddd;}
+
+.leftLines{
+
+	background-image: url(../images/inhouse_lines.png) ;
+
+	background-repeat: repeat-x;
+
+
+	color: white;
+
+	text-indent: 32px;
+
+	line-height: 45px;
+
+	font-size: 19px;
+
+	border-radius: 10px 10px 0 0;
+
+	
+
+}
+
+.zhucaidan  tbody tr td{
+
+	background-image: url(../images/inhouse_table_backgroud.png) ;
+
+	width: 199px;
+
+	height: 42px;
+}
+
+.left-font{
+
+	font-size: 16px;
+
+	color: rgb(38,78,99);
+
+	font-weight: bold;
+}
+
+.left-a{
+
+width: 180px;
+
+ height: 29px; 
+
+ font-size: 16px; 
+
+ color: rgb(121, 16, 125); 
+
+ text-indent: 39px;
+
+  line-height: 33px;
+
+}

@@ -1,21 +1,3 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-21 10:14:17
-         compiled from "/web/www/yajie_weixin_crm/weixin_crm/templates/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:624234450537c0bf9625893-07522093%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-$_smarty_tpl->decodeProperties(array (
-  'file_dependency' => 
-  array (
-    '323348291c1e2e4ee0840c94abcb00a98dd962cc' => 
-    array (
-      0 => '/web/www/yajie_weixin_crm/weixin_crm/templates/login.tpl',
-      1 => 1400638436,
-    ),
-  ),
-  'nocache_hash' => '624234450537c0bf9625893-07522093',
-  'function' => 
-  array (
-  ),
-  'has_nocache_code' => false,
-)); /*/%%SmartyHeaderCode%%*/?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -58,8 +40,7 @@ $_smarty_tpl->decodeProperties(array (
     <body class='loginBack'>
         <form action="./publicHandler/process.php" method="post" id="myform">
             <div id="login">
-                <div class="login_name"><span><?php echo $_smarty_tpl->getVariable('source')->value;?>
-网站后台</span>管理中心</div>
+                <div class="login_name"><span>{$source}网站后台</span>管理中心</div>
                 <div class="login_frame">
                     <div id="user">
                         <div>用户名</div>
