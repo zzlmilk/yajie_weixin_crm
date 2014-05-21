@@ -122,6 +122,11 @@ class userController implements User {
             $userPointerRecordModel->addOrderBy("record_id desc");
             $userPointerRecordModel->initialize();
             $pointRecordShow = $userPointerRecordModel->vars_all;
+
+            var_dump($pointRecordShow);
+
+            die;
+
             $_ENV['smarty']->setDirTemplates('user');
             $_ENV['smarty']->assign('pointRecordData', $pointRecordShow);
             $_ENV['smarty']->display('manageView');

@@ -1,0 +1,6 @@
+May 21 13:55:20 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/get_registeration
+{"error":{"error_status":"50002","status_info":"\u627e\u4e0d\u5230\u8be5\u7528\u6237\u7684\u7b7e\u5230\u6570\u636e"}}
+May 21 13:55:21 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/userRegisterationIntegration
+{"res":"0"}
+May 21 13:55:21 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/registration/get_registeration
+{"user_registration_id":"1","user_id":"34","day":"1","today_able":"1","registration_time":"1400601600"}

@@ -1,16 +1,7 @@
 <?php
 
-require_once 'include.php';
 
-
-if(empty($_SESSION['weixin_crm_user_id'])){
-
-
-	header('Location:'.URLADDRESS);
-
-	die;
-
-}
+require_once 'config/defined.php';
 
 if (!empty($_REQUEST['action'])) {
     
@@ -21,7 +12,16 @@ if (!empty($_REQUEST['action'])) {
     } else {
         $function = 'index';
     }
-  
+
+
+    if($action != 'login'  && $function !='loginAction'){
+
+    	if(empty($_SESSION['weixin_crm_user_id'])){
+
+    		header('Location:'.URLADDRESS);
+    	}
+
+    }
  
     $pageController = new $action();
 
