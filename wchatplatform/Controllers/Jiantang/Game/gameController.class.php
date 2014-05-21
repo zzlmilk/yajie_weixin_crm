@@ -54,21 +54,16 @@ class gameController extends BaseController {
     public function guaguaka() {
 
         //$this->able_register();
-
         // $giftApi = new giftApi();
         // $info = $giftApi->getUserGameRecord($this->userOpenId, 2);
-
-
-        
         // $error = new errorApi();
-
         // $error->JudgeError($info);
         $scratchCard = new scratchCard();
-        
+
         $ScratchCardResults = $scratchCard->getScratchCardResults();
 
 
-       
+
 
         $this->assign("websiteurl", WebSiteUrl);
         $this->assign("ScratchCardResults", $ScratchCardResults);
@@ -134,7 +129,6 @@ class gameController extends BaseController {
     }
 
     public function getQuesion() {
-
         $quesionAll = transferData(APIURL . "/question/get_question/?source=" . SOURCE, "get");
 
         $quesionResult = json_decode($quesionAll, true);
@@ -188,7 +182,7 @@ class gameController extends BaseController {
             $this->displayMessage("统计问卷时出错请重试");
         }
         $message.="<br>&nbsp;&nbsp;以上分数仅限于测试题目结果对比，脊椎问题的诱发原因是多种的，只要身体有各种酸、麻、胀、痛等症状，均有可能是脊椎错位导致的，需通过专业方法检测才能得出最终结果。";
-        $this->assign("message",$message);
+        $this->assign("message", $message);
         $this->display('questionUpload');
 //        $url = U('company/user/userCenter', array('open_id' => $_REQUEST['open_id']), 1);
 //        echo 'window.location.href="' . $url . '"';
