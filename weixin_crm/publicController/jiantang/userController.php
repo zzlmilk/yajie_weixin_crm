@@ -106,6 +106,7 @@ class userController implements User {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $userModel = new userModel();
             $userModel->initialize("user_phone = '" . $_POST['userPhone'] . "'");
+
             $result = $userModel->vars;
             if ($userModel->vars_number <= 0) {
                 echo "1";
@@ -120,6 +121,7 @@ class userController implements User {
             $joinString = ' LEFT JOIN user ON user_points_record.user_id = user.user_id ';
             $userPointerRecordModel->addJoin($joinString);
             $userPointerRecordModel->addOrderBy("record_id desc");
+            $userPointerRecordModel->addSelect("*,user_points_record.source as source,user_points_record.create_time as create_time");
             $userPointerRecordModel->initialize();
             $pointRecordShow = $userPointerRecordModel->vars_all;
             $_ENV['smarty']->setDirTemplates('user');
@@ -154,6 +156,7 @@ class userController implements User {
                 $userPointerRecordModel = new userPointerRecordModel();
                 $userPointerRecordModel->addOffset(0, 5);
                 $joinString = ' LEFT JOIN user ON user_points_record.user_id = user.user_id ';
+                $userPointerRecordModel->addSelect("*,user_points_record.source as source,user_points_record.create_time as create_time");
                 $userPointerRecordModel->addJoin($joinString);
                 $userPointerRecordModel->addOrderBy("record_id desc");
                 $userPointerRecordModel->initialize();
