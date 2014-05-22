@@ -92,7 +92,7 @@
                                     实物
                                 {/if}
                             </p>
-                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button  type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>
+                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g={$model}&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button  type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>
 <!--                            <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g=company&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>-->
                         </div>
                     </div>

@@ -77,7 +77,7 @@ class exchangeController extends BaseController {
             $postDate["source"] = SOURCE;
             $postDate['open_id'] = $this->userOpenId;
             $goodsId = $_GET['goodsId'];
-            $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $goodsId, "get");
+            $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $goodsId."&source=".SOURCE,"get");
             $exchangeItem = json_decode($exchangeItem, true);
 
             $error = new errorApi();
