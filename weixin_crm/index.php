@@ -1,7 +1,12 @@
 <?php
 
 
+
+
 include_once 'include.php';
+
+
+var_dump($_SESSION);
 
 if (!empty($_SESSION['weixin_crm_user_id']) && $_SESSION['weixin_crm_user_id'] > 0) {
 

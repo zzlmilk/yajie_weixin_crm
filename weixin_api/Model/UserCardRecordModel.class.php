@@ -40,6 +40,19 @@ class UserCardRecordModel extends Basic {
 
     }
 
+    public function getUserRecord($card){
+
+
+      $recordRecord = new UserCardRecordModel();
+
+
+      $recordRecord->addCondition('record_order like "'.$card.'"');
+
+      $recordRecord->initialize();
+
+      return $recordRecord->vars_number;
+    }
+
     
 
 }

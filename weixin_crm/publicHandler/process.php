@@ -1,11 +1,5 @@
 <?php
 
-include_once '../include.php';
-
-header("Content-type:text/html;charset=utf-8");
-
-print_r($_SESSION);
-
 if (isset($_GET['login'])) {
 
     $soruce = $_SESSION['weixin_crm_source'];
@@ -40,7 +34,6 @@ if (isset($_POST['user'])) {
         $admin->updateVars();
 
         if($token == $_SESSION['weixin_crm_source'] || $souce == 0){
-
 
             $_SESSION['weixin_crm_user_id'] = $admin->vars['admin_id'];
 

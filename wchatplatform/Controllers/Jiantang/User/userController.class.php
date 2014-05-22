@@ -305,7 +305,7 @@ class UserController extends BaseController {
         $postDate['open_id'] = $this->userOpenId;
 
 
-        $userRegistrationA = transferData(APIURL . "/registration/user_registeration", "post", $postDate);
+        $userRegistrationA = transferData(APIURL . "/registration/userRegisterationIntegration", "post", $postDate);
 
         $userRegistration_info = json_decode($userRegistrationA, true);
 

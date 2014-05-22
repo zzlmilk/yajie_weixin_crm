@@ -1,4 +1,0 @@
-Apr 16 15:52:31 [SQL]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
-SELECT * FROM weixin_company.user  WHERE 1  AND user_open_id like "dasdasd"     
-Apr 16 15:52:31 [RETURN]_null_192.168.0.102_/yajie_weixin_crm/weixin_api/user/get_info
-{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}

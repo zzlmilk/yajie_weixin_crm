@@ -5,11 +5,7 @@ class InhousePlug {
 
 	private  $conn;
 
-	public function test134(){
-
-
-		echo 1234;
-	}
+	
 
 
 	private function sql_connect(){
@@ -182,11 +178,82 @@ class InhousePlug {
 
 	public function test(){
 
-		$data['phone'] = '13817211847';
+		$data['phone'] = '13916370853';
 
-		$data['open_id'] = 'ocpOot-COx7UruiqEfag_Lny7dlc1234';
+		$data['open_id'] = 'dadasd';
 
-		$this->binding($data);
+		$array = $this->cardApi($data);
+
+		
+
+
+		 header("Content-type:text/html;charset=utf-8");
+
+		$conn = mssql_connect("sqlservername", "S3_INHOUSE", "S3_INHOUSE8472") or die (json_encode($errorArray));
+
+		mssql_select_db('S3_INHOUSE',$conn);
+
+		$sql = 'select * from ggm01  where gga05c  like "A007258" ';
+
+	    $odb_comm=mssql_query($sql);
+
+	    $Num=mssql_num_rows($odb_comm);
+
+	    $key = 0;
+
+	    for($i=0;$i<$Num;$i++){
+
+		  $record=mssql_fetch_array($odb_comm);
+
+		  $sql_detail = "select * from ggm02 where ggb01c like '".$record['gga01c']."' and ggb00c like  '".$record['gga00c']."'";
+
+		  echo $sql_detail;
+
+		  $detail=mssql_query($sql_detail);
+
+		  $detailNumber=mssql_num_rows($detail);
+
+		  $recordRecord = new UserCardRecordModel();
+
+
+		  $number = $recordRecord->getUserRecord($record['gga01c']);
+
+		  echo $number;
+
+
+		  if($number <= 0 ){
+
+			  	 for($detail_i = 0; $detail_i < $detailNumber ; $detail_i++ ){
+
+				  	 $detail_list =mssql_fetch_array($detail);
+
+				  	 $record_array['record_order'] = $detail_list['ggb01c'];
+
+				  	 $sql_list = "select * from gdm01 where gda01c like '".$detail_list['ggb03c']."'  ";
+
+				  	 $shangpin=mssql_query($sql_list);
+
+				  	 $shanpin_detail =mssql_fetch_array($shangpin);
+
+
+				  	 $record_array['record_commodity'] = $shanpin_detail['gda03c'];
+
+				  	 $record_array['user_card'] = $record['gga05c'];
+
+				  	 $record_array['order_time'] = $record['2'];
+
+				  	 $record_array['begin_time'] = $record['3'];
+
+				  	 $record_array['money'] = $detail_list['ggb11f'];
+
+
+				  	 $userCard = new UserCardRecordModel();
+
+				  	 $userCard->insert($record_array);
+
+			  }
+           }
+		}
 	}
 
 
@@ -245,7 +312,6 @@ class InhousePlug {
 
 		  	 $userCard->insert($record_array);
 
-		  	 $key++;
 		  }
 		}
 	}

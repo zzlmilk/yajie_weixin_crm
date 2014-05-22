@@ -11,6 +11,10 @@ class UserRegistrationRecordModel extends Basic {
 
     public function addRecord($user_id) {
 
+
+
+    
+
         if (!empty($user_id) && $user_id > 0) {
 
             $data['user_id'] = $user_id;
