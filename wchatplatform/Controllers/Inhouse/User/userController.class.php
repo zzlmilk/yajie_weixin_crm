@@ -12,16 +12,7 @@ class UserController extends BaseController {
         if (!empty($_REQUEST['open_id'])) {
 
             $this->userOpenId = $_REQUEST['open_id'];
-        } else {
-            
-
-
-            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc1234';
-
-
-            //$this->userOpenId = 'dasdasd';
-        }
-
+        } 
         $this->assign('open_id', $this->userOpenId);
     }
 
@@ -205,15 +196,13 @@ class UserController extends BaseController {
 
         if (!empty($_REQUEST['phone']) && !empty($this->userOpenId)) {
 
-
             $userApi = new userApi();
-
 
             $info = $userApi->bind($_REQUEST['phone'],$this->userOpenId);
 
-             $error = new errorApi();
+            $error = new errorApi();
 
-           $error->JudgeError($info);
+            $error->JudgeError($info);
 
             $array = array();
 

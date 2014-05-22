@@ -36,7 +36,14 @@ class reserveController extends BaseController {
     public function order() {
 
 
+
+      
+
         $this->able_register();
+
+
+       
+
         //$this->userOpenId = $_REQUEST['open_id'];
         if (isset($_GET['checkReturn'])) {
             $this->assign("checkReturn", $_GET['checkReturn']);

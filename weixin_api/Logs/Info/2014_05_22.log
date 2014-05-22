@@ -1,0 +1,164 @@
+May 22 10:37:03 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=6
+{"error":{"error_status":105,"status_info":"\u53c2\u6570\u540d\u79f0\u9519\u8bef\u6216\u53c2\u6570\u4e3a\u7a7a"}}
+May 22 10:37:43 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=6
+{"error":{"error_status":105,"status_info":"\u53c2\u6570\u540d\u79f0\u9519\u8bef\u6216\u53c2\u6570\u4e3a\u7a7a"}}
+May 22 10:37:52 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=6
+{"error":{"error_status":105,"status_info":"\u53c2\u6570\u540d\u79f0\u9519\u8bef\u6216\u53c2\u6570\u4e3a\u7a7a"}}
+May 22 10:38:02 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=6
+{"error":{"error_status":105,"status_info":"\u53c2\u6570\u540d\u79f0\u9519\u8bef\u6216\u53c2\u6570\u4e3a\u7a7a"}}
+May 22 10:38:03 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=6
+{"error":{"error_status":105,"status_info":"\u53c2\u6570\u540d\u79f0\u9519\u8bef\u6216\u53c2\u6570\u4e3a\u7a7a"}}
+May 22 10:39:12 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=6
+{"error":{"error_status":105,"status_info":"\u53c2\u6570\u540d\u79f0\u9519\u8bef\u6216\u53c2\u6570\u4e3a\u7a7a"}}
+May 22 10:39:13 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=6
+{"error":{"error_status":105,"status_info":"\u53c2\u6570\u540d\u79f0\u9519\u8bef\u6216\u53c2\u6570\u4e3a\u7a7a"}}
+May 22 10:39:13 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=6
+{"error":{"error_status":105,"status_info":"\u53c2\u6570\u540d\u79f0\u9519\u8bef\u6216\u53c2\u6570\u4e3a\u7a7a"}}
+May 22 10:39:17 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/exchange/get_exchange_info?exchange_id=6
+{"error":{"error_status":105,"status_info":"\u53c2\u6570\u540d\u79f0\u9519\u8bef\u6216\u53c2\u6570\u4e3a\u7a7a"}}
+May 22 12:38:31 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:39:15 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:39:45 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:39:58 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:39:59 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:40:00 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:40:01 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:40:02 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:40:03 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:40:04 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:40:19 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:40:21 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:41:16 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:41:17 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:41:59 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:42:15 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:42:45 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"error":{"error_status":20004,"status_info":"\u7528\u6237\u672a\u6ce8\u518c"}}
+May 22 12:42:45 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user
+{"success":"1"}
+May 22 12:43:59 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user
+{"success":"1"}
+May 22 12:44:06 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user/
+{"success":"1"}
+May 22 12:44:06 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/add
+{"error":{"error_status":20003,"status_info":"\u624b\u673a\u5df2\u88ab\u6ce8\u518c"}}
+May 22 12:44:09 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user
+{"success":"1"}
+May 22 12:44:21 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user/
+{"success":"1"}
+May 22 12:44:23 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/add
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:44:23 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/add
+{"user":{"user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","address_phone":"13111111111","create_time":1400733861,"user_id":36},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:44:23 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:44:23 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:44:23 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{},"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"}}
+May 22 12:44:23 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+May 22 12:44:54 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:44:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:44:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{},"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"}}
+May 22 12:44:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+May 22 12:45:54 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:45:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:45:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{},"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"}}
+May 22 12:45:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+May 22 12:46:02 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:46:02 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:46:02 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{},"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"}}
+May 22 12:46:02 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+May 22 12:48:00 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:48:00 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:48:00 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{},"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"}}
+May 22 12:48:00 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+May 22 12:48:13 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:48:13 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:48:13 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{},"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"}}
+May 22 12:48:13 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+May 22 12:48:30 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:48:30 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:48:30 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{},"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"}}
+May 22 12:48:30 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+May 22 12:49:51 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:49:51 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:49:51 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{},"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"}}
+May 22 12:49:51 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+May 22 12:50:04 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:50:04 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:50:04 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{},"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"}}
+May 22 12:50:04 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+May 22 12:50:37 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:50:37 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:50:37 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{},"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"}}
+May 22 12:50:37 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+May 22 12:50:44 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:50:44 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:50:44 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{},"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"}}
+May 22 12:50:44 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]
+May 22 12:50:54 [ERROR]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"type":8,"message":"Undefined index: subscribe","file":"\/web\/www\/yajie_weixin_crm\/weixin_api\/Model\/WeiXinUserModel.class.php","line":59}
+May 22 12:50:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+{"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"},"weixin_user":{"subscribe":0},"error":{"error_status":100,"status_info":null}}
+May 22 12:50:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+{"order":{},"user":{"user_id":"36","user_open_id":"ocpOot-COx7UruiqEfag_Lny7dlc","user_name":"dasdas","user_phone":"13111111111","sex":"1","birthday":"315504000","user_money":"0","user_integration":"0","user_state":"0","province_id":"0","city_id":"0","area_id":"0","street":null,"real_name":null,"address_phone":"13111111111","source":"","create_time":"1400733861"}}
+May 22 12:50:54 [RETURN]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+[{"merchandise_id":"1","merchandise_name":"\u6d4b\u8bd51","merchandise_money":"1.00"},{"merchandise_id":"2","merchandise_name":"\u6d4b\u8bd52","merchandise_money":"2.00"},{"merchandise_id":"3","merchandise_name":"\u6d4b\u8bd53","merchandise_money":"3.00"},{"merchandise_id":"4","merchandise_name":"\u6d4b\u8bd54","merchandise_money":"4.00"}]

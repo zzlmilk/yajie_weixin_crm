@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-22 12:50:54
+         compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/Reserve/order.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:795061449537d822eed8971-48497659%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'fc7adcd95cf8072805b6193169e26cfa396aa0bd' => 
+    array (
+      0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/Reserve/order.tpl',
+      1 => 1400734253,
+    ),
+  ),
+  'nocache_hash' => '795061449537d822eed8971-48497659',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,18 +23,19 @@
         <meta content="initial-scale=1.0; maximum-scale=4.0; user-scalable=no;" name="viewport">
         <meta name="viewport" content="width=device-width,user-scalable=yes" />
         <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{$WebSiteUrlPublic}/css/bootstrap-datetimepicker.css" media="screen">
+        <link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/css/bootstrap-datetimepicker.css" media="screen">
         <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
         <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
 
-        {if $checkReturn eq 1}
+        <?php if ($_smarty_tpl->getVariable('checkReturn')->value==1){?>
             <title>修改预约</title>
-        {else}
+        <?php }else{ ?>
             <title>预约</title>
-        {/if}
+        <?php }?>
         <style>
             body{
                 Font-size=62.5%;
@@ -90,11 +109,17 @@
 
         
         <div class="registerWarp">
-            {if $checkReturn eq 1}
-                <form class=""  method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=order&v=orderCheck&checkReturn=1&open_id={$open_id}">
-                {else}
-                    <form class=""  method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=order&v=orderCheck&open_id={$open_id}"><!-- action=""-->
-                    {/if}
+            <?php if ($_smarty_tpl->getVariable('checkReturn')->value==1){?>
+                <form class=""  method='post' role="form" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
+&a=order&v=orderCheck&checkReturn=1&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+">
+                <?php }else{ ?>
+                    <form class=""  method='post' role="form" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
+&a=order&v=orderCheck&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+"><!-- action=""-->
+                    <?php }?>
                     <div class="form-group" style="width: 100%;">
                         <table class='table-bordered col-sm-10' style="width:100%;">
                             <tr style="background-color: #fff;height: 4em;">
@@ -114,11 +139,12 @@
                                 <td class="timesAlert">              
                                     <div id="" class=" date form_datetime ">
                                         <label for="inputPassword" style=" height: 3em; line-height: 3em;"  class="col-sm-2 control-label">日期</label>
-                                        {if $checkReturn eq 1}
-                                            <input id="orderDate" name="orderDateInput"  class="form-control lineDis"  style=" margin-top: -3.2em;" type="text" value="{$returnVal.orderDateInput}" readonly>
-                                        {else}
+                                        <?php if ($_smarty_tpl->getVariable('checkReturn')->value==1){?>
+                                            <input id="orderDate" name="orderDateInput"  class="form-control lineDis"  style=" margin-top: -3.2em;" type="text" value="<?php echo $_smarty_tpl->getVariable('returnVal')->value['orderDateInput'];?>
+" readonly>
+                                        <?php }else{ ?>
                                             <input id="orderDate" name="orderDateInput"  class="form-control lineDis" style=" margin-top: -3.2em;"  type="text" value="" readonly>
-                                        {/if}
+                                        <?php }?>
                                         <span class="add-on"><i class="icon-th"></i></span>
                                         <input type="hidden" value="2014-01-01" id="orderDateWithNoWeek">
                                         <span class="glyphicon glyphicon-chevron-right floatIconText"></span>
@@ -130,11 +156,12 @@
                                 <td >                        
                                     <div id="orderTime" class="date form_datetime ">
                                         <label for="orderTime" style=" height: 3em; line-height: 3em;" class="col-sm-2 control-label">时间</label>
-                                        {if $checkReturn eq 1}
-                                            <input id="orderTimeInput" name="orderTimeInput"  class="form-control lineDis" style=" margin-top: -3.2em;"  type="text" value="{$returnVal.orderTimeInput}" readonly>
-                                        {else}
+                                        <?php if ($_smarty_tpl->getVariable('checkReturn')->value==1){?>
+                                            <input id="orderTimeInput" name="orderTimeInput"  class="form-control lineDis" style=" margin-top: -3.2em;"  type="text" value="<?php echo $_smarty_tpl->getVariable('returnVal')->value['orderTimeInput'];?>
+" readonly>
+                                        <?php }else{ ?>
                                             <input id="orderTimeInput" name="orderTimeInput"  class="form-control lineDis" style=" margin-top: -3.2em;"  type="text" value="" readonly>
-                                        {/if}
+                                        <?php }?>
                                         <input type="hidden" id="nowCheckTimes" value=""/>
                                         <span class="add-on"><i class="icon-th"></i></span>
                                         <span class="glyphicon glyphicon-chevron-right floatIconText"></span>
@@ -151,10 +178,19 @@
                             <div class="col-sm-10">
                                 <select  class="form-control" id="orderMerchandise" name="orderMerchandise" >
 
-                                    {foreach from=$selectVal item=selectItem key=key}
-                                        <option value="{$selectItem.merchandise_id}">{$selectItem.merchandise_name} {$selectItem.merchandise_money}元</option>
+                                    <?php  $_smarty_tpl->tpl_vars['selectItem'] = new Smarty_Variable;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('selectVal')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if (count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['selectItem']->key => $_smarty_tpl->tpl_vars['selectItem']->value){
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['selectItem']->key;
+?>
+                                        <option value="<?php echo $_smarty_tpl->tpl_vars['selectItem']->value['merchandise_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['selectItem']->value['merchandise_name'];?>
+ <?php echo $_smarty_tpl->tpl_vars['selectItem']->value['merchandise_money'];?>
+元</option>
 
-                                    {/foreach}
+                                    <?php }} ?>
 
                                 </select>
                             </div>
@@ -163,11 +199,12 @@
                         <div class="form-group" style=" margin-right: 3em;">
                             <label for="orderObject" class="col-sm-2 control-label">指定</label>
                             <div class="col-sm-10">
-                                {if $checkReturn eq 1}
-                                    <input type="name" class="form-control" id="orderObject" value="{$returnVal.orderObject}" name="orderObject" placeholder="请输入预约指定">
-                                {else}
+                                <?php if ($_smarty_tpl->getVariable('checkReturn')->value==1){?>
+                                    <input type="name" class="form-control" id="orderObject" value="<?php echo $_smarty_tpl->getVariable('returnVal')->value['orderObject'];?>
+" name="orderObject" placeholder="请输入预约指定">
+                                <?php }else{ ?>
                                     <input type="name" class="form-control" id="orderObject" value="" name="orderObject" placeholder="请输入预约指定">
-                                {/if}
+                                <?php }?>
                             </div>
                         </div>
                         <div class="form-group" style=" margin-right: 3em;">
@@ -181,32 +218,30 @@
 
         </div>
 
-        {*  <div id="Bk" style=" display: none;width: 100%;height: 100%;background-color:black;opacity: 0.5; position: absolute; left: 0; top: 0;z-index: 100;"></div>
-        <div id="context" style=" overflow:scroll;display: none;width: 70%;margin: 0 auto; background-color: white; position:fixed;height:80%; z-index: 150;top:90%; left: 15%">
-        <div style="background-color: white;width: 100%; text-align: center">
-        <ul class="no-list-type" id="porpleNumList">
-
-        </ul>
-        </div>
-        </div>*}
-        {if $checkReturn eq 1}
-            <input id="selectValueCache" value="{$returnVal.orderMerchandise}" type="hidden" >
-        {else}
+        
+        <?php if ($_smarty_tpl->getVariable('checkReturn')->value==1){?>
+            <input id="selectValueCache" value="<?php echo $_smarty_tpl->getVariable('returnVal')->value['orderMerchandise'];?>
+" type="hidden" >
+        <?php }else{ ?>
             <input id="selectValueCache" value="1" type="hidden" > 
-        {/if}
+        <?php }?>
 
-        {if $checkReturn eq 1}
-            <input id="porpleCount" value="{$returnVal.porpleCountSubmit}" type="hidden" >
-        {else if $returnVal.porpleCountSubmit eq  ''}
+        <?php if ($_smarty_tpl->getVariable('checkReturn')->value==1){?>
+            <input id="porpleCount" value="<?php echo $_smarty_tpl->getVariable('returnVal')->value['porpleCountSubmit'];?>
+" type="hidden" >
+        <?php }elseif($_smarty_tpl->getVariable('returnVal')->value['porpleCountSubmit']==''){?>
             <input id="porpleCount" value="1" type="hidden" >
-        {else}
+        <?php }else{ ?>
             <input id="porpleCount" value="1" type="hidden" >
-        {/if}
+        <?php }?>
     </body> 
 
-    <script src="{$WebSiteUrlPublic}/javascript/ctrlSelect.js"></script>
-    <script src="{$WebSiteUrlPublic}/javascript/bootstrap-datetimepicker.js"></script>
-    <script src="{$WebSiteUrlPublic}/javascript/bootstrap-datetimepicker.zh-CN.js"  charset="UTF-8"></script>
+    <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/javascript/ctrlSelect.js"></script>
+    <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/javascript/bootstrap-datetimepicker.js"></script>
+    <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/javascript/bootstrap-datetimepicker.zh-CN.js"  charset="UTF-8"></script>
     <script type="text/javascript">
         $("html").click(function(){
         $("#orderDate").datetimepicker('hide');

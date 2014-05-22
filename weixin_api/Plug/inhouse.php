@@ -16,6 +16,46 @@ class InhousePlug {
 
 	}
 
+	/**
+     * 获取用户资料 博卡   需动态获取 用户积分信息
+     */
+    public function get_info() {
+
+        if (!empty($_REQUEST['source']) && !empty($_REQUEST['open_id'])) {
+
+
+            $user = new userModel();
+
+            $userInfo = $user->getUserInfo($_REQUEST['open_id']);
+
+            if (count($userInfo) > 0) {
+
+               
+                $this->updateUserPointer($_REQUEST['open_id']);
+    
+
+                $weixinUser = new WeiXinUserModel();
+
+                $weixinUserInfo = $weixinUser->getWeiXinInfo($userInfo['user_open_id'], $userInfo['user_id']);
+
+                $array['user'] = arrayToObject($userInfo, 0);
+
+                $array['weixin_user'] = arrayToObject($weixinUserInfo, 0);
+
+                AssemblyJson($array);
+            }
+        } else {
+
+            echoErrorCode(105);
+        }
+    }
+
+
+    /**
+     * 获取用户数据
+     */
+
+
 	public function cardApi($data){
 
 		/**
