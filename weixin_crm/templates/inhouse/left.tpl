@@ -176,6 +176,22 @@
                                             </td>
                                         </tr>
                                     {/if}
+
+                                    {if $auth_result[40]==1}
+                                        <tr>
+
+                                            <td width="85%">
+
+
+
+                                                <div class='left-a' >
+
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=user&functionname=AbnormalUser" target="mainFrame" class="left-fontSmall">异常用户数据</a>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {/if}
                                 </table>
                             {/if}
 

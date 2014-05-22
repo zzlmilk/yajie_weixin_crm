@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-21 10:40:38
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-22 18:06:22
          compiled from "/web/www/yajie_weixin_crm/weixin_crm//templates/inhouse/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1484024898537c1226cfc340-28490367%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:321667080537dcc1e0715c1-44235132%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bd38ac4810135673308654fba778027171cfd875' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm//templates/inhouse/left.tpl',
-      1 => 1400489444,
+      1 => 1400751368,
     ),
   ),
-  'nocache_hash' => '1484024898537c1226cfc340-28490367',
+  'nocache_hash' => '321667080537dcc1e0715c1-44235132',
   'function' => 
   array (
   ),
@@ -197,6 +197,23 @@ _css.css" rel="stylesheet" type="text/css">
 
                                                     <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=user&functionname=userManage" target="mainFrame" class="left-fontSmall">添加用户</a>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <?php }?>
+
+                                    <?php if ($_smarty_tpl->getVariable('auth_result')->value[40]==1){?>
+                                        <tr>
+
+                                            <td width="85%">
+
+
+
+                                                <div class='left-a' >
+
+                                                    <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=user&functionname=AbnormalUser" target="mainFrame" class="left-fontSmall">异常用户数据</a>
 
                                                 </div>
                                             </td>

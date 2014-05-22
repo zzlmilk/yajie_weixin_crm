@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-21 10:38:27
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-22 16:38:12
          compiled from "/web/www/yajie_weixin_crm/weixin_crm//templates/inhouse/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1728606534537c11a3124b08-85080001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:659649920537db774c8a998-48834846%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0f85ae044867d63ed18f1ea81d81a303ce8b6f86' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm//templates/inhouse/login.tpl',
-      1 => 1400638436,
+      1 => 1400747865,
     ),
   ),
-  'nocache_hash' => '1728606534537c11a3124b08-85080001',
+  'nocache_hash' => '659649920537db774c8a998-48834846',
   'function' => 
   array (
   ),
@@ -56,7 +56,8 @@ $_smarty_tpl->decodeProperties(array (
         </style>
     </head>
     <body class='loginBack'>
-        <form action="./publicHandler/process.php" method="post" id="myform">
+        <form action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=login&functionname=loginAction" method="post" id="myform">
             <div id="login">
                 <div class="login_name"><span><?php echo $_smarty_tpl->getVariable('source')->value;?>
 网站后台</span>管理中心</div>

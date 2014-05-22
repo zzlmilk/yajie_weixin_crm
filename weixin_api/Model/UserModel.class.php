@@ -91,6 +91,12 @@ class UserModel extends Basic {
                 $data['user_integration'] = $val['user_integration'];
             }
 
+
+             if(!empty($val['company_code'])){
+
+                $data['company_code'] = $val['company_code'];
+            }
+
             $user = new UserModel();
 
             $user_id = $user->insert($data);

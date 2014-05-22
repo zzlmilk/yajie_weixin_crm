@@ -38,7 +38,7 @@
         </style>
     </head>
     <body class='loginBack'>
-        <form action="./publicHandler/process.php" method="post" id="myform">
+        <form action="{$WebSiteUrl}/pageredirst.php?action=login&functionname=loginAction" method="post" id="myform">
             <div id="login">
                 <div class="login_name"><span>{$source}网站后台</span>管理中心</div>
                 <div class="login_frame">

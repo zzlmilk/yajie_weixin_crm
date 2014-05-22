@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-21 10:40:38
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-22 16:47:24
          compiled from "/web/www/yajie_weixin_crm/weixin_crm//templates/inhouse/top.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1146319692537c1226954b79-76658765%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:272721686537db99c69b8a9-51654030%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7346ea9b7b364051b788fb7bdb10bd82846913b0' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm//templates/inhouse/top.tpl',
-      1 => 1400146274,
+      1 => 1400747985,
     ),
   ),
-  'nocache_hash' => '1146319692537c1226954b79-76658765',
+  'nocache_hash' => '272721686537db99c69b8a9-51654030',
   'function' => 
   array (
   ),
@@ -29,8 +29,8 @@ _css.css" rel="stylesheet" type="text/css">
 
 		<img src='<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /images/lock.png'>
-		<a style='color: white;font-size: 14px;display: inline-block' href='<?php echo $_smarty_tpl->getVariable('URLHANDLER')->value;?>
-/process.php?login=0' class=''>安全退出</a>
+		<a style='color: white;font-size: 14px;display: inline-block' href='<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=login&functionname=logout' class=''>安全退出</a>
 	</div>
 
 	<!-- <div style='position: absolute; top: 28px; left: 1154px; '>
