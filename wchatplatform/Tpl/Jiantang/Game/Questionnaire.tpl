@@ -116,7 +116,7 @@
                         {/foreach}
 
                         <!-- <div style=" padding-left: 1em;"> -->
-                        <button type="submit" class="btn btn-primary" id='buttonSubmit'>提&nbsp;&nbsp;&nbsp;交</button>
+                        <button type="submit" class="btn btn-primary" style="margin-left: 15px;" id='buttonSubmit'>提&nbsp;&nbsp;&nbsp;交</button>
                         <!-- </div> -->
                 </fieldset>
         </div>
