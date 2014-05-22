@@ -1,0 +1,220 @@
+May 22 12:38:31 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:39:15 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "1234"     
+May 22 12:39:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:39:58 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:39:59 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:40:00 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:40:01 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:40:02 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:40:03 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:40:04 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:40:19 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:40:21 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:41:16 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:41:17 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:41:59 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:42:15 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:42:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:42:45 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:43:59 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:44:06 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user/
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:44:06 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/add
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_phone = 13524446830     
+May 22 12:44:09 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:44:21 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/able_user/
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:44:21 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/add
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_phone = 13111111111     
+May 22 12:44:21 [SQL]__0.0.0.0_/yajie_weixin_crm/weixin_api/user/add
+insert into weixin_jiantang.user (user_name,user_phone,sex,birthday,user_open_id,address_phone,create_time) values('dasdas','13111111111','1','315504000','ocpOot-COx7UruiqEfag_Lny7dlc','13111111111','1400733861')
+May 22 12:44:21 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/add
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:44:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:44:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:44:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:44:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:44:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1400733863 and user_id = 36 and order_state !=2     
+May 22 12:44:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 36 and order_state = 0 and appointment_time >= 1400688000     
+May 22 12:44:23 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 22 12:44:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:44:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:44:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:44:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:44:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1400733894 and user_id = 36 and order_state !=2     
+May 22 12:44:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 36 and order_state = 0 and appointment_time >= 1400688000     
+May 22 12:44:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 22 12:45:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:45:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:45:53 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:45:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:45:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1400733954 and user_id = 36 and order_state !=2     
+May 22 12:45:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 36 and order_state = 0 and appointment_time >= 1400688000     
+May 22 12:45:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 22 12:46:01 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:46:01 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:46:01 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:46:02 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:46:02 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1400733962 and user_id = 36 and order_state !=2     
+May 22 12:46:02 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 36 and order_state = 0 and appointment_time >= 1400688000     
+May 22 12:46:02 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 22 12:47:59 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:47:59 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:47:59 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:48:00 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:48:00 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1400734080 and user_id = 36 and order_state !=2     
+May 22 12:48:00 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 36 and order_state = 0 and appointment_time >= 1400688000     
+May 22 12:48:00 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 22 12:48:13 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:48:13 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:48:13 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:48:13 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:48:13 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1400734093 and user_id = 36 and order_state !=2     
+May 22 12:48:13 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 36 and order_state = 0 and appointment_time >= 1400688000     
+May 22 12:48:13 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 22 12:48:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:48:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:48:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:48:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:48:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1400734110 and user_id = 36 and order_state !=2     
+May 22 12:48:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 36 and order_state = 0 and appointment_time >= 1400688000     
+May 22 12:48:30 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 22 12:49:51 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:49:51 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:49:51 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:49:51 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:49:51 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1400734191 and user_id = 36 and order_state !=2     
+May 22 12:49:51 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 36 and order_state = 0 and appointment_time >= 1400688000     
+May 22 12:49:51 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 22 12:50:03 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:50:03 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:50:03 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:50:04 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:50:04 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1400734204 and user_id = 36 and order_state !=2     
+May 22 12:50:04 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 36 and order_state = 0 and appointment_time >= 1400688000     
+May 22 12:50:04 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 22 12:50:37 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:50:37 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:50:37 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:50:37 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:50:37 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1400734237 and user_id = 36 and order_state !=2     
+May 22 12:50:37 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 36 and order_state = 0 and appointment_time >= 1400688000     
+May 22 12:50:37 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 22 12:50:43 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:50:43 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:50:43 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:50:44 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:50:44 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1400734244 and user_id = 36 and order_state !=2     
+May 22 12:50:44 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 36 and order_state = 0 and appointment_time >= 1400688000     
+May 22 12:50:44 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 22 12:50:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:50:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:50:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin.company  WHERE 1  AND company_token like "Jiantang"     
+May 22 12:50:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "ocpOot-COx7UruiqEfag_Lny7dlc"     
+May 22 12:50:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1400734254 and user_id = 36 and order_state !=2     
+May 22 12:50:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 36 and order_state = 0 and appointment_time >= 1400688000     
+May 22 12:50:54 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      

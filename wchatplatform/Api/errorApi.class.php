@@ -38,6 +38,12 @@ class errorApi extends BaseController {
                     if(SOURCE == 'Inhouse'){
 
                         U(SOURCE.'/user/ativating', $var);
+
+                    }  else{
+
+
+                         U(SOURCE.'/user/register', $var);
+
                     }
                     
 

@@ -80,6 +80,9 @@ class exchangeController extends BaseController {
             $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $goodsId."&source=".SOURCE,"get");
             $exchangeItem = json_decode($exchangeItem, true);
 
+
+          
+
             $error = new errorApi();
 
             $error->JudgeError($exchangeItem);
@@ -87,6 +90,10 @@ class exchangeController extends BaseController {
             if ($exchangeItem['exchange_info']["exchange_type"] == "1") {
                 $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
                 $userInfo = json_decode($userInfo, TRUE);
+
+
+                 
+
 
                 $error = new errorApi();
 

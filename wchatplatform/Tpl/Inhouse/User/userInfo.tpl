@@ -85,12 +85,9 @@
 
                 <div style='height: 0.2em;width: 100%;'>&nbsp;</div>
 
-
                 <div style=' width: 18%; margin-left: 5px;'>
                     <img src='{$userinfo.headimgurl}' class='round_photo'>
                 </div>
-
-
 
                 <div style=' width: 75%; overflow: hidden; position: absolute; left: 20%; top: 5%;'>
 
@@ -118,8 +115,6 @@
                     <div class="integration"><div class=" inline userTitleStyle" >生日</div><div class="inline userMessage">{$userBirthday}</div></div>
                 </div>
             </div>
-
-
         </div>
     </body>
 </html>

@@ -170,12 +170,7 @@ class UserController implements User {
 
             if (count($userInfo) > 0) {
 
-                
-                if(!empty($_REQUEST['open_id'])){
-
-                    $this->object->updateUserPointer($_REQUEST['open_id']);
-                }
-
+            
                 $weixinUser = new WeiXinUserModel();
 
                 $weixinUserInfo = $weixinUser->getWeiXinInfo($userInfo['user_open_id'], $userInfo['user_id']);

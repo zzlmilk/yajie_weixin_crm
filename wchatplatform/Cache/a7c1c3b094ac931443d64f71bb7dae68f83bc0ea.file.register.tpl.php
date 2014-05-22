@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-22 12:44:00
+         compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/User/register.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:589361816537d809003dfe5-90224312%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'a7c1c3b094ac931443d64f71bb7dae68f83bc0ea' => 
+    array (
+      0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/User/register.tpl',
+      1 => 1400733839,
+    ),
+  ),
+  'nocache_hash' => '589361816537d809003dfe5-90224312',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 
 <!DOCTYPE html>
 <html> 
@@ -86,18 +104,22 @@ document.write("</select> 日 ")
     <boby>
         <div class="registerWarp">
 
-            <form class="form-horizontal"  method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=user&v=submitRegister">
+            <form class="form-horizontal"  method='post' role="form" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
+&a=user&v=submitRegister">
                 
-                {*赠送人时 出现的提示信息*}
-                {if $state == 1}
+                
+                <?php if ($_smarty_tpl->getVariable('state')->value==1){?>
                 <div  class="form-group" style=" margin-right: 2em; height: 4em;">
-                    {$info.weixin_user.nickname} 赠送优惠券给你,请注册后,进行领取
+                    <?php echo $_smarty_tpl->getVariable('info')->value['weixin_user']['nickname'];?>
+ 赠送优惠券给你,请注册后,进行领取
                     
                     
                 </div>
                 
-                {/if}
-                <input type="hidden" name="open_id" value="{$open_id}" />
+                <?php }?>
+                <input type="hidden" name="open_id" value="<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+" />
 
 `
                 <div class="form-group" style=" margin-right: 3em;">
@@ -109,9 +131,11 @@ document.write("</select> 日 ")
 
                 
                 
-                <input type='hidden' name='vars' id='vars' value='{$vars}'>
+                <input type='hidden' name='vars' id='vars' value='<?php echo $_smarty_tpl->getVariable('vars')->value;?>
+'>
 
-                <input type="hidden" name="open_id" value="{$open_id}" />
+                <input type="hidden" name="open_id" value="<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+" />
 
 
                 <div class="form-group" style=" margin-right: 3em;">
@@ -157,7 +181,8 @@ document.write("</select> 日 ")
 
     </boby>
 
-    <script src="{$WebSiteUrlPublic}/javascript/rexexTest.js"></script>
+    <script src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/javascript/rexexTest.js"></script>
     <script>
     $("#registerButton").click(function(){
         var phoneNum=$("#phoneNumber").val();
