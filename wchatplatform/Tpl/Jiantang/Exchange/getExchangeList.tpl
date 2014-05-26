@@ -121,7 +121,7 @@
         <input type="hidden" value="{$localUserInfo.user_integration}" id="userPoint">
         <div class="titleTag">
             <ul style="margin-top: -10px;margin-right: -8px;" >
-                {if  $groupBy eq "300point"}
+                {if  $groupBy eq "300point" or $groupBy eq ""}
                     <li class="titleTagActive titleBorderRight" style=""><a class="">300积分</a><div style="border-bottom: 3px solid orange;"></div></li>
                     <li class="titleBorderRight"><a href="{$WebSiteUrl}?g={$model}&a=exchange&v=getExchangeList&groupBy=500point&open_id={$open_id}">500积分</a></li>
                     <li><a href="{$WebSiteUrl}?g={$model}&a=exchange&v=getExchangeList&groupBy=1000point&open_id={$open_id}">1000积分</a></li>
@@ -145,7 +145,11 @@
             {else}
                 {foreach from=$exchangeList item=exchangeItem key=key}
                     <div class="giftListStyle">
-                        <div style="float: left;margin: 10px"> <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><img width="80" height="80" src="{$WebImageUrl}{$exchangeItem.exchange_image}"></a></div>
+                        <div style="float: left;margin: 10px"> 
+<!--                            <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}">-->
+                                <img width="80" height="80" src="{$WebImageUrl}{$exchangeItem.exchange_image}">
+<!--                            </a>-->
+                        </div>
                         <div style="float: left;margin: 10px;width: 58%;">
                             <div style="word-wrap: break-word; word-break: normal;">
                                 <p>
