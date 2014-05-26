@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-20 17:32:53
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-26 12:01:11
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/Game/guaguaka.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1018303486537b21455a0574-12555029%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1553004725382bc87359da6-82274955%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f43faccf0fcdca93f2b3e7c7376f235b14a5ea5a' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/Game/guaguaka.tpl',
-      1 => 1400578301,
+      1 => 1401076869,
     ),
   ),
-  'nocache_hash' => '1018303486537b21455a0574-12555029',
+  'nocache_hash' => '1553004725382bc87359da6-82274955',
   'function' => 
   array (
   ),
@@ -33,33 +33,48 @@ $_smarty_tpl->decodeProperties(array (
         <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
 /ggk/wScratchPad.js"></script>  
     </head>
-    <body id='bobyGame'>
+    <body id='bobyGame' style='background: #910d0d url(<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
+/ggk/guaguaka_back.png) no-repeat center ;width: 320px; height: 504px; margin: 0 auto;'>
 
         <style>
             .wScratchPad3{
                 display:inline-block;
-                position:relative; 
-                border:solid #ccc 1px;
-                margin-left: 5%;
-                margin-right: 5%;
-                margin-top: 3%;
-                width: 90%;
-                height: 20em;
+              
+                width: 270px;
+                height: 133px;
                 overflow: hidden;
+
+
+               margin: 8px 8px;
 
             }
 
 
         </style>
-         <div style='height: 1em;'>&nbsp;</div>
-        <div style=' text-align: center;background-color: rgb(243,237,227); width: 80%; margin: 0 auto; line-height: 2em;'>脊会员您好，欢迎来刮刮乐获得意想不到的礼品，每天限玩一次</div>
-        
-        <div style=' height: 1em;'>&nbsp;</div>
+    
         <input type="hidden" value="<?php echo $_smarty_tpl->getVariable('websiteurl')->value;?>
 " id="apiRoute" >
         <input type="hidden" value="<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
 " id="open_id" >
-        <div id="wScratchPad3" class="wScratchPad3"></div>
+
+        <div style='height: 162px;'>&nbsp;</div>
+
+        <div style='width: 286px; height: 151px; background-color: white;margin-left: 17px; margin-right: '>
+
+            <div id="wScratchPad3" class="wScratchPad3"></div>
+        </div>
+
+        <div style='font-size: 13px; color: white; margin-top: 34px; margin-left:60px;'>
+
+            <div>脊会员您好！欢迎来刮刮乐获得意想不到</div>
+
+            <div>的礼品，每天限玩一次哦～</div>
+
+            <div>快来试试手气把！</div>
+
+
+        </div>
+        
 
         <script type="text/javascript">
 
@@ -90,30 +105,6 @@ $_smarty_tpl->decodeProperties(array (
             });
 
 
-            $("#getLottery").click(function() {
-                $.post(
-                        requestUrl,
-                        {
-                            gift_id: giftId,
-                            open_id: $("#open_id").val()
-                        },
-                function(rData) {
-                    if (rData == "1") {
-                        $("#getLottery").hide();
-                        $(".modal-body").html();
-                        $(".modal-body").html("发生错误");
-                    } else {
-                        var message = "恭喜你获得" + rData['gift_integration'] + "积分";
-                        $("#getLottery").hide();
-                        $(".modal-body").html();
-                        $(".modal-body").html(message);
-                    }
-
-                }
-                );
-            });
-//刮刮卡
-
             var WebSiteUrlPublic = '<?php echo $_smarty_tpl->getVariable('WebSiteUrlPublic')->value;?>
 ';
 
@@ -129,7 +120,14 @@ $_smarty_tpl->decodeProperties(array (
                         if (alertFlag) {
                             var cent = 786;
                             var changeSize = win / cent;
-                            var changeSize = (changeSize / 0.4) * 10;
+
+                           
+
+                            var changeSize = (changeSize / 1) * 10;
+
+                            
+
+
                             if (percent > changeSize) {
 
                                 alertFlag = false;

@@ -51,42 +51,56 @@ class GiftSettingModel extends Basic {
  
             $state_sum += $v_array['gift_probability'];
 
-            $array1['id'] = $v_array['gift_id'];
+            $prize_arr[$v_array['gift_id']]['id'] = $v_array['gift_id'];
 
-            $array1['v'] = $v_array['gift_probability'];
+            $prize_arr[$v_array['gift_id']]['v'] = $v_array['gift_probability'];
 
-            $array1['image'] = $v_array['gift_image'];
+            $prize_arr[$v_array['gift_id']]['image'] = $v_array['gift_image'];
 
-            $array1['award'] = 1;
-
-            array_push($prize_arr, $array1);
-
-
+            $prize_arr[$v_array['gift_id']]['award'] = 1;
                   
        }
+
+
+
 
         /**
          * 生成 12个 数组  begin
          */
-        for ($var = count($prize_arr) + 1; $var <= 12; $var++) {
+        for ($var = 1; $var <= 12; $var++) {
 
-            $array1['id'] = $var;
 
-            $array1['v'] = 100 - $state_sum;
+            if(empty($prize_arr[$var])){
 
-            $array1['image'] = '';
+                $prize_arr[$var]['id'] = $var;
 
-             $array1['award'] = 0;
+                $prize_arr[$var]['v'] = 100 - $state_sum;
 
-            array_push($prize_arr, $array1);
+                $prize_arr[$var]['image'] = rand(1,3);
+
+                $prize_arr[$var]['award'] = 0;
+
+            }
+
            
         }
+
+
+
+
+  
+        $tempArray = array();
+
 
         foreach ($prize_arr as $key => $val) {
 
             $arr[$val['id']] = $val['v'];
 
+             $tempArray[$val['id']] = $val;  
+
         }
+
+       
 
 
        
@@ -94,9 +108,8 @@ class GiftSettingModel extends Basic {
          * 生成 end  计算概率begin
          */
         $rid = $gift->get_rand($arr);
-
     
-        return $prize_arr[$rid];
+        return $tempArray[$rid];
     }
 
 }

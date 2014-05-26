@@ -26,7 +26,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 #inner-cont {
 	position: absolute;
 	width: 100%;
-	top: 150px;/* -moz-transform: rotate(-5deg);
+	top: 162px;/* -moz-transform: rotate(-5deg);
 	-webkit-transform: rotate(-5deg);
 	-o-transform: rotate(-5deg);
 	-ms-transform: rotate(-5deg);
@@ -39,9 +39,9 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 	margin: 0 auto;
 }
 #inner {
-	width : 70px;
+	width : 54px;
 	max-width: 112px;
-	height: 142px;
+	/*height: 142px;*/
 	margin: 0 auto;
 	cursor: pointer;
 }

@@ -4,12 +4,14 @@
  * and open the template in the editor.
  */
 
-var webUrl = '{$websiteUrl}'
+var webUrl = '{$websiteUrl}';
+
+var model = '{$model}';
 
 function sendGiftAward(open_id, id, type) {
 
     $.ajax({
-        url: webUrl + "?g=company&a=game&v=getBigWheeSendAward",
+        url: webUrl + "?g="+model+"&a=game&v=getBigWheeSendAward",
         type: "get",
         data: {
             open_id: open_id,

@@ -232,6 +232,26 @@ class PromoCodeRecordModel extends basic {
         return $array;
     }
 
+
+    public function getUserRecordStaus($userinfo){
+
+
+        $join_str = array(array("promo_code", "promo_code.promo_code_id", "promo_code_record.promo_code_id"));
+
+        $this->addJoin($join_str);
+
+        $where = ' code_end_time <= ' . mktime(0, 0, 0) .' and user_id = ' . $userinfo['user_id'] . '   and (state = 1 or state = 0 )';
+        
+       
+        $this->addGroupBy('code_merchandise');
+
+        $this->initialize($where);
+
+        return $this->vars_number;
+       
+
+    }
+
 }
 
 ?>

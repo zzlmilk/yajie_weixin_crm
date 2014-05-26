@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-22 12:50:54
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-26 13:22:19
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/Reserve/order.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:795061449537d822eed8971-48497659%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1028363115382cf8b157fe4-35337057%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fc7adcd95cf8072805b6193169e26cfa396aa0bd' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/Reserve/order.tpl',
-      1 => 1400734253,
+      1 => 1401081724,
     ),
   ),
-  'nocache_hash' => '795061449537d822eed8971-48497659',
+  'nocache_hash' => '1028363115382cf8b157fe4-35337057',
   'function' => 
   array (
   ),
@@ -110,14 +110,12 @@ $_smarty_tpl->decodeProperties(array (
         
         <div class="registerWarp">
             <?php if ($_smarty_tpl->getVariable('checkReturn')->value==1){?>
-                <form class=""  method='post' role="form" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
-&a=order&v=orderCheck&checkReturn=1&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+                <form class=""  method='post' role="form" action="?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
+&a=reserve&v=orderCheck&checkReturn=1&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
 ">
                 <?php }else{ ?>
-                    <form class=""  method='post' role="form" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
-&a=order&v=orderCheck&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
+                    <form class=""  method='post' role="form" action="?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
+&a=reserve&v=orderCheck&open_id=<?php echo $_smarty_tpl->getVariable('open_id')->value;?>
 "><!-- action=""-->
                     <?php }?>
                     <div class="form-group" style="width: 100%;">
@@ -286,7 +284,9 @@ minuteStep:15,
 autoclose:true,
 minView:0,
 forceParse:false,
-language:"zh-CN"
+language:"zh-CN",
+beginHour:"9",
+endHour:"22"
 });
 //$("#orderTime").datetimepicker({
 //format: "hh:ii",

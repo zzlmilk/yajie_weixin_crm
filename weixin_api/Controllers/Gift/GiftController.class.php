@@ -29,6 +29,7 @@ class GiftController implements gift {
 
     public function recevice_award() {
 
+      
         if (!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])) {
 
             if (!empty($_REQUEST['gift_id']) && $_REQUEST['gift_id'] > 0) {
@@ -37,13 +38,13 @@ class GiftController implements gift {
 
                 $userinfo = $userModel->getUserInfo($_REQUEST['open_id']);
 
-
                 $gift = new giftModel();
 
                 if (!empty($_REQUEST['gift_type'])) {
 
                     $gift_info = $gift->getGiftInfo($_REQUEST['gift_id'], $_REQUEST['gift_type']);
 
+                
                     $gift->getAwardByGift($gift_info, $_REQUEST['open_id']);
                 } else {
 
@@ -85,16 +86,18 @@ class GiftController implements gift {
 
             $gift = new GiftModel();
 
+            $giftInfoObject = array();
+
             $giftInfo = $gift->getGiftInfo($_REQUEST['gift_id'], $_REQUEST['gift_type']);
 
             if (count($giftInfo) > 0) {
 
                 $giftInfoObject = arrayToObject($giftInfo, 0);
 
-                AssemblyJson($giftInfoObject);
-            } else {
-                echoErrorCode(70001);
-            }
+               
+            } 
+
+             AssemblyJson($giftInfoObject);
         } else {
 
             echoErrorCode(105);

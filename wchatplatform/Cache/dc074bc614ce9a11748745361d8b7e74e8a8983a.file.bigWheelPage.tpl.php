@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-20 16:26:53
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-23 11:38:25
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/Game/bigWheelPage.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1959910900537b11cdc0f179-28161945%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1763298159537ec2b148c650-86971086%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'dc074bc614ce9a11748745361d8b7e74e8a8983a' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/Game/bigWheelPage.tpl',
-      1 => 1400574330,
+      1 => 1400816293,
     ),
   ),
-  'nocache_hash' => '1959910900537b11cdc0f179-28161945',
+  'nocache_hash' => '1763298159537ec2b148c650-86971086',
   'function' => 
   array (
   ),
@@ -180,6 +180,7 @@ $_smarty_tpl->decodeProperties(array (
                             open_id: $('#open_id').val(),
                         },
                         beforeSend: function() {
+
                             running = true;
                             timer = setInterval(function() {
                                 i += 5;
@@ -189,14 +190,12 @@ $_smarty_tpl->decodeProperties(array (
                         },
                         success: function(data) {
                             
-                          
+                            gift_id = data.gift_id.id;
 
-                            gift_id = data.gift_id;
-
-                            var temp = (parseInt(gift_id) - 1) * 30 + 6;
+        
+                            var temp = (parseInt(gift_id) - 1) * 30 - 5;
 
                             lostDeg.push(temp);
-
 
                             prize = gift_id;
 

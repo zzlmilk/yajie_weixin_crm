@@ -44,7 +44,7 @@
         </style>
     </head>
     <body style='background-color: rgb(243,237,227);'>
-        <form method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=order&v=order&checkReturn=1&open_id={$open_id}">
+        <form method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=reserve&v=order&checkReturn=1&open_id={$open_id}">
             <div class="cardBackground"  style='background-color: #fff;position: relative;'>
                 <div style="position: absolute; right: 15px; top:0;z-index: 150;">
                     {if $returnVal.orderState=="1"}
@@ -114,7 +114,7 @@
                         {if $returnVal.orderState=="1"}
 
                         {else}
-                            <a href="{$WebSiteUrl}?g={$model}&a=order&v=payment&open_id={$open_id}"><button type="button" style="width: 180px;" class="btn btn-primary">确&nbsp;&nbsp;&nbsp;认</button></a>
+                            <a href="{$WebSiteUrl}?g={$model}&a=reserve&v=payment&open_id={$open_id}"><button type="button" style="width: 180px;" class="btn btn-primary">确&nbsp;&nbsp;&nbsp;认</button></a>
                         {/if}
 
                     </div>

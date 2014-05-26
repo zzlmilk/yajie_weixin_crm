@@ -245,6 +245,21 @@ class OrderModel extends Basic {
         }
     }
 
+
+    public function getAppointmentTime($user_id){
+
+
+        $order = new OrderModel();
+
+        $order->addCondition('appointment_time > ' . time() . ' and user_id = ' . $user_id . ' and order_state !=2', 1);
+
+        $order->initialize();
+
+
+        return $order->vars_number;
+
+    }
+
 }
 
 ?>

@@ -155,6 +155,7 @@
                             open_id: $('#open_id').val(),
                         },
                         beforeSend: function() {
+
                             running = true;
                             timer = setInterval(function() {
                                 i += 5;
@@ -164,14 +165,12 @@
                         },
                         success: function(data) {
                             
-                          
+                            gift_id = data.gift_id.id;
 
-                            gift_id = data.gift_id;
-
-                            var temp = (parseInt(gift_id) - 1) * 30 + 6;
+        
+                            var temp = (parseInt(gift_id) - 1) * 30 - 5;
 
                             lostDeg.push(temp);
-
 
                             prize = gift_id;
 

@@ -266,6 +266,30 @@ class UserController implements User {
         }
     }
 
+
+    /**
+     * 用户 兑换  订单  优惠吗 状态
+     */
+
+    public function get_info_status(){
+
+        if(!empty($_REQUEST['open_id']) && !empty($_REQUEST['source'])){
+
+            $userModel = new userModel();
+
+            $array = $userModel->getUserStatus($_REQUEST['open_id']);
+
+
+            AssemblyJson($array);
+
+        } else{
+
+            echoErrorCode(105);
+
+        }
+
+    }
+
 }
 
 ?>

@@ -44,7 +44,7 @@
         </style>
     </head>
     <body style='background-color: rgb(243,237,227);'>
-        <form method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=order&v=orderPayPage&payType=store&open_id={$open_id}">
+        <form method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=reserve&v=orderPayPage&payType=store&open_id={$open_id}">
         <div class="cardBackground"  style='background-color: #fff;position: relative;'>
             <div class="form-group" style=" margin-top: 1.5em; margin-bottom: 0px;">
                 <div style="height: 1em;"></div>

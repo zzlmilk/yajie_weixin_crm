@@ -9,11 +9,21 @@ class ExchangeModel extends Basic {
         parent::__construct();
     }
 
-    public function getExchangeList() {
+    public function getExchangeList($begin = 0,$end = 100000) {
+
+       if(empty($begin)){
+
+          $begin = 0;
+       }
+
+       if(empty($end)){
+
+          $end = 100000;
+       }
 
         $this->clearUp();
 
-        $this->initialize();
+        $this->initialize('exchange_integration > '.$begin.' and exchange_integration <='.$end);
 
         if ($this->vars_number > 0) {
 

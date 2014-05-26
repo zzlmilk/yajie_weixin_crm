@@ -261,6 +261,33 @@ class UserModel extends Basic {
         }
     }
 
+    /**
+     * 用户状态
+     */
+
+    public function getUserStatus($open_id){
+
+        $userinfo = $this->getUserInfo($open_id);
+
+
+        $codeModel = new PromoCodeRecordModel();
+
+        $array['code_number'] =  $codeModel->getUserRecordStaus($userinfo);
+
+        $orderModel = new orderModel();
+
+        $array['order_number'] = $orderModel->getAppointmentTime($userinfo['user_id']);
+
+
+        $exchangeModel = new ExchangeRecordModel();
+
+        $array['exchange_number']  = $exchangeModel->getuserExchangeStatus($userinfo['user_id']);
+
+
+        return $array;
+
+    }
+
 }
 
 ?>
