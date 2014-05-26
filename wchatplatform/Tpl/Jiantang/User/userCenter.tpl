@@ -33,6 +33,11 @@
                 border-left: 41px solid transparent;
 
             }  
+            .prompt{
+                font-size: 12px;
+                color: red;
+                font-style: italic;
+            }
 
         </style>
     </head>
@@ -92,6 +97,7 @@
                         <!-- <span class="media-object icon icon-person pull-left"></span> -->
                         <div class="media-body" onclick='window.location.href = "{$websiteUrl}?g={$model}&a=user&v=userInfo&open_id={$open_id}"'>
                             我的资料
+
                         </div>
                     </a>
                 </li>
@@ -100,6 +106,9 @@
                         <!--   <span class="media-object icon icon-star-filled pull-left"></span> -->
                         <div class="media-body"  onclick='window.location.href = "{$websiteUrl}?g={$model}&a=code&v=promoMessage&open_id={$open_id}"'>
                             优惠信息
+                            {if $messagePrompt.code_number neq 0}
+                                <div class="prompt">您有{$messagePrompt.code_number}张优惠券将过期</div>
+                            {/if}
                         </div>
                     </a>
                 </li>
@@ -117,6 +126,9 @@
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
                         <div class="media-body"  onclick='window.location.href = "{$websiteUrl}?g={$model}&a=exchange&v=getUserExchangeRecord&open_id={$open_id}"'>
                             兑换信息
+                            {if $messagePrompt.exchange_number neq 0}
+                                <div class="prompt">您有{$messagePrompt.exchange_number}个礼品已经发货</div>
+                            {/if}
                         </div>
                     </a>
                 </li>
@@ -126,6 +138,9 @@
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
                         <div class="media-body" style=' cursor: pointer; ' onclick='window.location.href = "{$websiteUrl}?g={$model}&a=order&v=orderCheck&open_id={$open_id}"'>
                             订单信息
+                            {if $messagePrompt.order_number neq 0}
+                                <div class="prompt">您有订单正在进行</div>
+                            {/if}
                         </div>
                     </a>
                 </li>
@@ -139,13 +154,13 @@
                     </a>
                 </li>
 
-                <li class="table-view-cell media">
-                    <a class="push-right" href="inbox.html" data-transition="slide-in">
-                        <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-                        <div class="media-body">
-                            我的任务
-                        </div>
-                    </a>
-                </li>
+                <!--                <li class="table-view-cell media">
+                                    <a class="push-right" href="inbox.html" data-transition="slide-in">
+                                          <span class="media-object icon icon-trash pull-left"></span> 
+                                        <div class="media-body">
+                                            我的任务
+                                        </div>
+                                    </a>
+                                </li>-->
             </ul>
         </div>

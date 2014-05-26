@@ -38,26 +38,41 @@ class exchangeController extends BaseController {
         $postDate["source"] = SOURCE;
         $postDate['open_id'] = $this->userOpenId;
         //$this->userOpenId = $_REQUEST['open_id'];
-        $exchangeList = transferData(APIURL . "/exchange/get_exchange_list?source=".SOURCE."&open_id=" . $this->userOpenId, "get");
+        $groupBy = isset($_GET["groupBy"]) ? $_GET["groupBy"] : "";
+        if ($groupBy == "" || $groupBy == "300point") {
+            $postDate["start_point"] = 0;
+            $postDate["end_point"] = 300;
+        } else if ($groupBy == "500point") {
+            $postDate["start_point"] = 301;
+            $postDate["end_point"] = 500;
+        } else if ($groupBy == "1000point") {
+            $postDate["start_point"] = 501;
+            $postDate["end_point"] = 1000;
+        } else {
+            $postDate["start_point"] = 0;
+            $postDate["end_point"] = 300;
+        }
+        $exchangeList = transferData(APIURL . "/exchange/get_exchange_list", "post",$postDate);
         $exchangeList = json_decode($exchangeList, true);
         $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
         $userInfo = json_decode($userInfo, TRUE);
-        $weixinUserInfo=$userInfo['weixin_user'];
-        $localUserInfo=$userInfo['user'];
+        $weixinUserInfo = $userInfo['weixin_user'];
+        $localUserInfo = $userInfo['user'];
         $error = new errorApi();
         $error->JudgeError($exchangeList);
         $error->JudgeError($userInfo);
-        $this->assign("WebImageUrl", WebImageUrl . "small/");
+        $this->assign("WebImageUrl", WebImageUrl);
         $this->assign("exchangeList", $exchangeList);
         $this->assign("localUserInfo", $localUserInfo);
         $this->assign("weixinUserInfo", $weixinUserInfo);
+        $this->assign("groupBy", $groupBy);
         $this->display("getExchangeList");
     }
 
     //兑换物品详情
     public function exchangeGoods() {
         // $this->userOpenId = $_REQUEST['open_id'];
-        $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'].'&source='.SOURCE, "get");
+        $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $_GET['goodsId'] . '&source=' . SOURCE, "get");
         $exchangeItem = json_decode($exchangeItem, true);
 
         $error = new errorApi();
@@ -77,11 +92,11 @@ class exchangeController extends BaseController {
             $postDate["source"] = SOURCE;
             $postDate['open_id'] = $this->userOpenId;
             $goodsId = $_GET['goodsId'];
-            $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $goodsId."&source=".SOURCE,"get");
+            $exchangeItem = transferData(APIURL . "/exchange/get_exchange_info?exchange_id=" . $goodsId . "&source=" . SOURCE, "get");
             $exchangeItem = json_decode($exchangeItem, true);
 
 
-          
+
 
             $error = new errorApi();
 
@@ -92,7 +107,7 @@ class exchangeController extends BaseController {
                 $userInfo = json_decode($userInfo, TRUE);
 
 
-                 
+
 
 
                 $error = new errorApi();

@@ -61,26 +61,26 @@
             <div style="text-align: center"><b style=" color: rgb(240,173,78)">注:图片选择完成后请点击保存按钮以完成上传</b></div>
             <div style="height: 35px;"></div>
             <form class="form-horizontal" action="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=exchangeUpdate&ItemId={$exchageValue.exchange_id}" enctype="multipart/form-data" method="Post">
-                <!--                <div class="form-group"> 
-                                    <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品名称：</label>
-                                    <div class="col-sm-2">
-                                        <input class="form-control inputWidth" type="text" value="{$exchageValue.exchange_name}" name="exchange_name" id="exchangeName">
-                                    </div>
-                                </div> -->
-                <!--                <div class="form-group"> 
-                                    <label for="inputEmail3" class="col-sm-2 control-label labelWidth" >礼品类型：</label>
-                                    <div class="col-sm-2">
-                                        <select name="exchange_type" id='exchangeType' class="form-control inputWidth">
-                {if $exchageValue.exchange_type eq 0}
-                    <option value="0" selected="selected">虚拟</option>
-                    <option value="1">实物</option>
-                {else}
-                    <option value="0">虚拟</option>
-                    <option value="1" selected="selected">实物</option>
-                {/if}
-            </select>
-        </div>
-    </div> -->
+                <div class="form-group"> 
+                    <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品名称：</label>
+                    <div class="col-sm-2">
+                        <input class="form-control inputWidth" type="text" value="{$exchageValue.exchange_name}" name="exchange_name" id="exchangeName">
+                    </div>
+                </div> 
+                <div class="form-group"> 
+                    <label for="inputEmail3" class="col-sm-2 control-label labelWidth" >礼品类型：</label>
+                    <div class="col-sm-2">
+                        <select name="exchange_type" id='exchangeType' class="form-control inputWidth">
+                            {if $exchageValue.exchange_type eq 0}
+                                <option value="0" selected="selected">虚拟</option>
+                                <option value="1">实物</option>
+                            {else}
+                                <option value="0">虚拟</option>
+                                <option value="1" selected="selected">实物</option>
+                            {/if}
+                        </select>
+                    </div>
+                </div> 
                 <input name='exchange_type' value="1" type="hidden">
                 <div class="form-group"> 
                     <label for="inputEmail3" class="col-sm-2 control-label labelWidth">兑换积分：</label>

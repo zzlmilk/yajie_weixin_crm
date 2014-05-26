@@ -173,6 +173,14 @@ class UserController extends BaseController {
         $userApi = new userApi();
 
         $userInfo = $userApi->getUserInfo($this->userOpenId);
+        $postDate["source"] = SOURCE;
+        $postDate['open_id'] = $this->userOpenId;
+        $messagePrompt = transferData(APIURL . "/user/get_info_status", "post", $postDate);
+        $messagePrompt = json_decode($messagePrompt, TRUE);
+        $messagePrompt["code_number"] = 1;
+        $messagePrompt["order_number"] = 2;
+        $messagePrompt["exchange_number"] = 3;
+        $this->assign('messagePrompt', $messagePrompt);
         if (!empty($userInfo)) {
 
             $this->assign('userinfo', $userInfo);

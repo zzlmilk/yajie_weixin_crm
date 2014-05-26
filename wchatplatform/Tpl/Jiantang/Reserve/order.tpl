@@ -91,9 +91,9 @@
         
         <div class="registerWarp">
             {if $checkReturn eq 1}
-                <form class=""  method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=order&v=orderCheck&checkReturn=1&open_id={$open_id}">
+                <form class=""  method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=reserve&v=orderCheck&checkReturn=1&open_id={$open_id}">
                 {else}
-                    <form class=""  method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=order&v=orderCheck&open_id={$open_id}"><!-- action=""-->
+                    <form class=""  method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=reserve&v=orderCheck&open_id={$open_id}"><!-- action=""-->
                     {/if}
                     <div class="form-group" style="width: 100%;">
                         <table class='table-bordered col-sm-10' style="width:100%;">

@@ -70,22 +70,22 @@
         <div style="text-align: center"><b style=" color: rgb(240,173,78)">注:图片选择完成后请点击保存按钮以完成上传</b></div>
         <div style="height: 35px;"></div>
         <form class="form-horizontal" action="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=addExchangeItem" enctype="multipart/form-data" method="Post">
-            <!--            <div class="form-group"> -->
-            <!--<label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品名称：</label>-->
-            <!--                <div class="col-sm-2">-->
-            <input class="form-control " type="hidden" value=" " name="exchange_name" id="exchangeName">
-            <!--                </div>
-                        </div> -->
-            <!--            <div class="form-group"> 
-                            <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品类型：</label>
-                            <div class="col-sm-2">
-                                <select disabled="0" name="exchange_type" id='exchangeType' class="form-control inputWidth">
-                                    <option value="0" >虚拟</option>
-                                    <option value="1" selected="selected">实物</option>
-                                </select>-->
-            <input name='exchange_type' value="1" type="hidden">
-            <!--                </div>
-                        </div> -->
+            <div class="form-group"> 
+                <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品名称：</label>
+                <div class="col-sm-2">
+                    <input class="form-control " type="hidden" value=" " name="exchange_name" id="exchangeName">
+                </div>
+            </div> 
+            <div class="form-group"> 
+                <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品类型：</label>
+                <div class="col-sm-2">
+                    <select disabled="0" name="exchange_type" id='exchangeType' class="form-control inputWidth">
+                        <option value="0" >虚拟</option>
+                        <option value="1" selected="selected">实物</option>
+                    </select>
+                    <input name='exchange_type' value="1" type="hidden">
+                </div>
+            </div> 
             <div class="form-group"> 
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">兑换积分：</label>
                 <div class="col-sm-2">

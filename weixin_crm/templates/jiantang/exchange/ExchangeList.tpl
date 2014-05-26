@@ -49,14 +49,14 @@
             {foreach from=$exchangeList item=exchangeIteam key=key}
             <tr>
                 <td><img src="{$WebSiteUrl}/giftImages/{$exchangeIteam.exchange_image}" width="80" height="80"></td>
-<!--                <td>{$exchangeIteam.exchange_name}</td>
+                <td>{$exchangeIteam.exchange_name}</td>
                 <td>
                 {if $exchangeIteam.exchange_type eq 0}
                     虚拟
                 {else}
                     实物
                 {/if} 
-            </td>-->
+            </td>
                 <td>{$exchangeIteam.exchange_integration}</td>
                 <td style="text-align: left;width: 50%">{$exchangeIteam.exchange_summary}</td>
                 {if $exchangeIteam.create_time eq ""}

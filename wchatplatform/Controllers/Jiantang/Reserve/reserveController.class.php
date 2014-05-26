@@ -61,7 +61,7 @@ class reserveController extends BaseController {
         if ($_GET["checkReturn"] == 1) {
             
         } else if ((int) $orderTime > $nowTime) {
-            $this->displayMessage("你已经有正在进行的订单，请执行<a href='" . WebSiteUrl . "?g=".SOURCE."&a=order&v=orderCheck&open_id=" . $this->userOpenId . "'>编辑</a>操作");
+            $this->displayMessage("你已经有正在进行的订单，请执行<a href='" . WebSiteUrl . "?g=".SOURCE."&a=reserve&v=orderCheck&open_id=" . $this->userOpenId . "'>查看订单</a>操作");
         }
         $selectReturnVal = transferData(APIURL . "/order/get_merchandise", "get");
         

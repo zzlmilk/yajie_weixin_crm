@@ -20,23 +20,56 @@
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
         <script src="{$WebSiteUrlPublic}/javascript/jquery.form.js"></script>
+        <script src="{$WebSiteUrlPublic}/javascript/customInput.jquery.js"></script>
 
         <title>问卷调查</title>
     </head>
-    <script>
-
-    </script>
-
-
     <style>
         body{
             Font-size=62.5%;
+        }
+        .registerWarp{
+            width: 290px;
+            margin: 0 auto;
         }
         .form-control{
             width: 80%;
         }
         .radio-inline{
             float: left;
+        }
+
+        .custom-radio { 
+            position: relative; 
+
+        }
+        .custom-radio input {
+            position: absolute;
+            left: 1px;
+            top: 0px;
+            margin: 0;
+            z-index: 0;
+        }
+        .custom-radio label {
+            display: block;
+            position: relative;
+            z-index: 1;
+            /*            font-size: 1.3em;*/
+            padding-right: 1em;
+            line-height: 1;
+            padding-left: 24px;
+            margin-left: -20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .custom-radio label { 
+            background: url("{$WebSiteUrlPublic}/image/radioButton.png") no-repeat; 
+        }
+        .custom-radio label {
+            background-position: -15px -3px;
+        }
+        .custom-radio label.checked {
+            background-position: -15px -29px;  
         }
     </style>
 
@@ -51,11 +84,11 @@
 
                 <input type='hidden' name='open_id' id='open_id' value='{$open_id}'>
                 <fieldset>
-                    <div style=" padding-left: 2em;">
-                        <legend>第一部分 - 基本信息</legend>
-                    </div>
+                    <!--                    <div style=" padding-left: 2em;">
+                                            <legend>第一部分 - 基本信息</legend>
+                                        </div>-->
 
-                    <div style="padding-left: 2em;">
+                    <div style="">
                         {foreach from=$info item=infos key=k}
 
 
@@ -75,13 +108,13 @@
                                         {foreach from=$infos.question_answer_1 item=v key=key}
                                             {if $key eq 0}
                                                 <div class="radio-inline">
-                                                    <input type="radio" name="{$infos.question_id}" id="question_{$infos.question_id}" value="{$key+1}" checked>
-                                                    {$v}
+                                                    <input type="radio" name="{$infos.question_id}" id="question_{$infos.question_id}_{$key+1}" value="{$key+1}" checked>
+                                                    <label for="question_{$infos.question_id}_{$key+1}">{$v}</label>
                                                 </div>
                                             {else}
                                                 <div class="radio-inline">
-                                                    <input type="radio" name="{$infos.question_id}" id="question_{$infos.question_id}" value="{$key+1}" >
-                                                    {$v}
+                                                    <input type="radio" name="{$infos.question_id}" id="question_{$infos.question_id}_{$key+1}" value="{$key+1}" >
+                                                    <label for="question_{$infos.question_id}_{$key+1}">{$v}</label>
                                                 </div>
                                             {/if}
 
@@ -116,7 +149,7 @@
                         {/foreach}
 
                         <!-- <div style=" padding-left: 1em;"> -->
-                        <button type="submit" class="btn btn-primary" style="margin-left: 15px;" id='buttonSubmit'>提&nbsp;&nbsp;&nbsp;交</button>
+                        <button type="submit" class="btn btn-primary" style="margin-left: 15px;width: 225px;" id='buttonSubmit'>提&nbsp;&nbsp;&nbsp;交</button>
                         <!-- </div> -->
                 </fieldset>
         </div>
@@ -125,37 +158,34 @@
 
 <div style=" height: 2em;"></div>
 {if $message neq ""}
-<div>{$message}</div>
+    <div>{$message}</div>
 {/if}
 </html>
 <script>
-    
-    
-   
+    $("input:radio").customInput();
+    //    var title = $('#title').val();
+    //
+    //    var titleArray = title.split(',');
+    //
+    //    var number = 0;
 
-    var title = $('#title').val();
-
-    var titleArray = title.split(',');
-
-    var number = 0;
-
-//    $('#buttonSubmit').click(function() {
-//
-//    $("#questionForm").ajaxSubmit({
-//    success: function(data) {
-//                
-//              
-//    eval(data);
-//
-//               
-//},
-//error: function(xhr) {
-//
-//alert(xhr.responseText);
-//}
-//});
-//
-//})
+    //    $('#buttonSubmit').click(function() {
+    //
+    //    $("#questionForm").ajaxSubmit({
+    //    success: function(data) {
+    //                
+    //              
+    //    eval(data);
+    //
+    //               
+    //},
+    //error: function(xhr) {
+    //
+    //alert(xhr.responseText);
+    //}
+    //});
+    //
+    //})
 
 </script>
 </body>
