@@ -136,7 +136,7 @@
                 <li class="table-view-cell media">
                     <a class="push-right"  data-transition="slide-in">
                         <!--  <span class="media-object icon icon-trash pull-left"></span> -->
-                        <div class="media-body" style=' cursor: pointer; ' onclick='window.location.href = "{$websiteUrl}?g={$model}&a=order&v=orderCheck&open_id={$open_id}"'>
+                        <div class="media-body" style=' cursor: pointer; ' onclick='window.location.href = "{$websiteUrl}?g={$model}&a=reserve&v=orderCheck&open_id={$open_id}"'>
                             订单信息
                             {if $messagePrompt.order_number neq 0}
                                 <div class="prompt">您有订单正在进行</div>
