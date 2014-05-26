@@ -29,8 +29,7 @@
             }
             .giftListStyle{
                 background-color: #fff;
-                height: 100px;
-                border-top:1px solid #e4e4e4;
+
                 border-bottom: 1px solid #e4e4e4;
             }
             .round_photo{
@@ -119,6 +118,7 @@
                     <div style="float: left">1000积分 |</div>
                 </div>-->
         <input type="hidden" value="{$localUserInfo.user_integration}" id="userPoint">
+
         <div class="titleTag">
             <ul style="margin-top: -10px;margin-right: -8px;" >
                 {if  $groupBy eq "300point" or $groupBy eq ""}
@@ -137,6 +137,7 @@
             </ul>
             <div style="clear: both;"></div>
         </div>
+        <div style=" border-top:1px solid #e4e4e4;"></div>
         <div class="registerWarp">
 
             {if $exchangeList eq ""}
@@ -147,8 +148,8 @@
                     <div class="giftListStyle">
                         <div style="float: left;margin: 10px"> 
 <!--                            <a href="{$WebSiteUrl}?g={$model}&a=exchange&v=exchangeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}">-->
-                                <img width="80" height="80" src="{$WebImageUrl}{$exchangeItem.exchange_image}">
-<!--                            </a>-->
+                            <img width="80" height="80" src="{$WebImageUrl}{$exchangeItem.exchange_image}">
+                            <!--                            </a>-->
                         </div>
                         <div style="float: left;margin: 10px;width: 58%;">
                             <div style="word-wrap: break-word; word-break: normal;">
@@ -166,6 +167,7 @@
                                 <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g={$model}&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-primary btn-xs" style="width: 55px;">兑换</button></a></div>
                             </div>
                         </div>
+                        <div style="clear:both;"></div>
                     </div>
                 {/foreach}
             {/if}
