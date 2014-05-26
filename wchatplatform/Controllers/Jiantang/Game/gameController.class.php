@@ -10,7 +10,7 @@ class gameController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            //$this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+            $this->userOpenId = 'oIUY-tzD2rRdkycAc5ceQjtI1-ok';
         }
         $this->assign('open_id', $this->userOpenId);
     }
@@ -57,10 +57,9 @@ class gameController extends BaseController {
         $this->able_register();
 
         $giftApi = new giftApi();
+
         $info = $giftApi->getUserGameRecord($this->userOpenId, 2);
 
-
-        
         $error = new errorApi();
 
         $error->JudgeError($info);
@@ -68,9 +67,6 @@ class gameController extends BaseController {
         $scratchCard = new scratchCard();
 
         $ScratchCardResults = $scratchCard->getScratchCardResults();
-
-
-
 
         $this->assign("websiteurl", WebSiteUrl);
         $this->assign("ScratchCardResults", $ScratchCardResults);
@@ -239,7 +235,6 @@ class gameController extends BaseController {
     public function getGameAward() {
 
 
-
          $gift = new giftApi();
 
 
@@ -254,56 +249,42 @@ class gameController extends BaseController {
 
             $this->assign('type', $_REQUEST['gift_type']);
 
+
             if ($_REQUEST['gift_type'] == 1) {
 
-                switch ($_REQUEST['gift_id']) {
-
-                    case '1':
-                        $name = '恭喜你,你获得了1等奖';
-                        break;
-                    case '5':
-                        $name = '恭喜你,你获得了2等奖';
-                        break;
-                    case '9':
-                        $name = '恭喜你,你获得了3等奖';
-                        break;
 
 
-                    default :
+                if(count($giftArray) > 0){
 
-                        $this->getBigWheelText();
 
-                        die;
+                    $name = '恭喜你,你获得了1张'.$giftArray['gift_name'];
 
-                        break;
+                }  else{
+
+
+                    $this->getBigWheelText();
+
+                    die;
                 }
+
             } else {
 
-                switch ($_REQUEST['gift_id']) {
 
 
-                    case '11':
-                        $name = '恭喜你,你获得了1等奖';
-                        break;
-                    case '12':
-                        $name = '恭喜你,你获得了2等奖';
-                        break;
-                    case '13':
-                        $name = '恭喜你,你获得了3等奖';
-                        break;
 
-                    default :
+                if(count($giftArray) > 0){
 
 
-                        $gift->addCardRecord($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['gift_type']);
+                    $name = '恭喜你,你获得了'.$giftArray['gift_name'];
 
+                }  else{
 
-                        $this->getBigWheelText();
+                      //$gift->addCardRecord($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['gift_type']);
+                     
+                      $this->getBigWheelText();
 
-                        die;
-
-                        break;
                 }
+
             }
 
 
@@ -338,14 +319,15 @@ class gameController extends BaseController {
 
 
         $this->setDir('Public');
+
         
         if (!empty($_REQUEST['gift_id']) && !empty($_REQUEST['open_id'])) {
 
             $gift = new giftApi();
+            
             $awardResult = $gift->sendUserGift($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['type']);
 
-
-            $gift->addCardRecord($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['type']);
+            //$gift->addCardRecord($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['type']);
 
 
 

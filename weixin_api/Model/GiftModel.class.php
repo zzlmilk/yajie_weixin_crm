@@ -15,8 +15,11 @@ class GiftModel extends Basic {
         //概率数组的总概率精度
         $proSum = array_sum($proArr);
 
+
         //概率数组循环
         foreach ($proArr as $key => $proCur) {
+
+           
             $randNum = mt_rand(1, $proSum);
             if ($randNum <= $proCur) {
                 $result = $key;
@@ -144,8 +147,7 @@ class GiftModel extends Basic {
                      */
                     $code = new PromoCodeModel();
 
-                    $codeInfo = $code->getCode();
-
+                    $codeInfo = $code->getCode($info['gift_type'],$info['gift_commodity']);
 
                     $codeRecord = new PromoCodeRecordModel();
 
@@ -156,6 +158,9 @@ class GiftModel extends Basic {
                     AssemblyJson($array);
 
                     break;
+
+
+
             }
         }
     }

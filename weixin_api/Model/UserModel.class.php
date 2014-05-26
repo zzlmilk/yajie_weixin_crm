@@ -91,6 +91,12 @@ class UserModel extends Basic {
                 $data['user_integration'] = $val['user_integration'];
             }
 
+
+             if(!empty($val['company_code'])){
+
+                $data['company_code'] = $val['company_code'];
+            }
+
             $user = new UserModel();
 
             $user_id = $user->insert($data);
@@ -253,6 +259,33 @@ class UserModel extends Basic {
 
             $user->update($data);
         }
+    }
+
+    /**
+     * 用户状态
+     */
+
+    public function getUserStatus($open_id){
+
+        $userinfo = $this->getUserInfo($open_id);
+
+
+        $codeModel = new PromoCodeRecordModel();
+
+        $array['code_number'] =  $codeModel->getUserRecordStaus($userinfo);
+
+        $orderModel = new orderModel();
+
+        $array['order_number'] = $orderModel->getAppointmentTime($userinfo['user_id']);
+
+
+        $exchangeModel = new ExchangeRecordModel();
+
+        $array['exchange_number']  = $exchangeModel->getuserExchangeStatus($userinfo['user_id']);
+
+
+        return $array;
+
     }
 
 }

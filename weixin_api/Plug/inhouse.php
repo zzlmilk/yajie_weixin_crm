@@ -132,41 +132,33 @@ class InhousePlug {
 			 * 从会员开卡记录中 
 			 */
 
-			$array = $this->cardApi($data);
+			$userInfo = $this->getUserCard($data['phone']);
 
-			if($array['res'] == 1){
-			
+		    if($userInfo['res'] == 1){
 
-				$result['user_name'] = $array['info']['gcn03c'];
-
-				$result['user_phone'] = $array['info']['gcn04c'];
-
-				$result['user_card'] = $array['info']['gcn01c'];
-
-				$result['birthday'] = strtotime($array['info']['gcn05c']);
-
-				if(!empty($array['info']['gcn16f'])){
-
-					$code = (int)$array['info']['gcn16f'];
-
-				} else{
-
-					$code = 0;
-
-				}
+		    	$integration = $this->getUserInter($userInfo);
 				
+				$result['user_name'] = $userInfo['info']['gba03c'];
 
-				$result['user_integration'] = $code ;
+				$result['user_phone'] = $userInfo['info']['gba08c'];
+
+				$result['user_card'] = $userInfo['info']['gba01c'];
+
+				$result['birthday'] = strtotime($userInfo['info']['gba17d']);
+
+				$result['user_integration'] = $integration ;
 
 				$result['open_id'] = $data['open_id'];
 
-				$this->insertCardRecord($array['info']['gcn03c']);
+				$result['company_code'] = $userInfo['info']['gba00c'];
+
+				$this->insertCardRecord($userInfo['info']['gba01c']);
 
 				$user = new UserModel();
 
-                $user->insertUser($result);
+	            $user->insertUser($result);
 
-                
+	                
 			} else{
 
 				echoErrorCode(20006);
@@ -178,6 +170,9 @@ class InhousePlug {
 		}
 	}
 
+	/**
+	 * 获取用户  近5条 消费记录
+	 */
 
 	public function getUserCardInfo($data){
 
@@ -216,84 +211,182 @@ class InhousePlug {
 		}
 	}
 
+
+	/**
+	 * 获取用户积分信息
+	 */
+
+
+	public function getUserInter($userInfo){
+
+		if(!empty($userInfo)){
+
+			$this->sql_connect();
+
+			$sql = 'select * from gcm12  where gcn04c  like "'.$userInfo['info']['gba08c'].'" and gcn00c like "'.$userInfo['info']['gba00c'].'"';
+
+		    //$sql =  'select * from gbm01 where '
+
+		    $odb_comm=mssql_query($sql);
+
+		    $result=mssql_fetch_array($odb_comm);
+
+		    if(!empty($result['gcn16f'])){
+
+		    	return $result['gcn16f'];
+
+		    } else{
+
+		    	return 0;
+		    }
+		}
+
+	}
+
+
+	/**
+	 * 获取用户卡号  通过gbm01 表  如查询出多条数据  则获取ggm01中  订单开始时间 最大值  
+	 */
+
+	public function getUserCard($phone){
+
+		header("Content-type:text/html;charset=utf-8");
+
+		$errorArray = array();
+
+	    $errorArray['res'] = 0;
+
+	    if(!empty($phone)){
+
+	    	$this->sql_connect();
+
+	    	$searchUserSql = 'select * from gbm01 where gba08c like "'.$phone.'" ';
+
+	    	$odb_comm=mssql_query($searchUserSql);
+
+		    $user_number = mssql_num_rows($odb_comm);
+
+		    if($user_number > 0){
+
+		    	$tempArray = array();
+
+		    	$userArray = array();
+
+	    		for($user_var = 0; $user_var < $user_number ; $user_var++ ){
+
+	    			 $user_list =mssql_fetch_array($odb_comm);
+
+	    			 $userArray[$user_list['gba01c'].'_'.$user_list['gba00c']] = $user_list;
+
+	    			 $sql = 'select max(gga02d) from ggm01  where   gga00c like "'.$user_list['gba00c'].'"  and  gga09c  like "'.$user_list['gba01c'].'"';
+
+	    			 $result=mssql_query($sql);
+
+		             $user_order_list = mssql_num_rows($result);
+
+		             for($order_var = 0; $order_var < $user_order_list ; $order_var++ ){
+
+		             	 $order_list =mssql_fetch_array($result);
+
+		             	 if(!empty($order_list[0])){
+
+		             	 	$tempArray[$order_list[0]] = $user_list['gba01c'].'_'.$user_list['gba00c'];
+		                  }
+
+		             }
+				}
+
+		    }
+		    $new_array = array_flip($tempArray);
+
+		    $minArray = max($new_array);
+
+		    $user_key = $tempArray[$minArray];
+
+
+		    if(!empty($userArray[$user_key])){
+
+		    	$array['res'] = 1;
+
+			    $array['info'] = $userArray[$user_key];
+
+			    /**
+			     * 
+			     */
+			    unset($userArray[$user_key]);
+
+			    foreach($userArray  as $v){
+
+			     	$data['user_name'] = $v['gba03c'];
+
+					$data['user_phone'] = $v['gba08c'];
+
+					$data['user_card'] = $v['gba01c'];
+
+					$data['birthday'] = strtotime($v['gba17d']);
+
+					$data['company_code'] = $v['gba00c'];
+
+					$AbormalUser = new AbnormalUserModel();
+
+					$AbormalUser->insert($data);
+
+			     }
+
+		    } else{
+
+		    	$array['res'] = 2;
+		    }
+
+	    }  else{
+
+
+	    }
+
+	    return $array;
+
+
+	}
+
 	public function test(){
 
-		$data['phone'] = '13916370853';
+		$data['phone'] = '13817230818';
 
-		$data['open_id'] = 'dadasd';
+		//$data['phone'] = '13761820013';
 
-		$array = $this->cardApi($data);
+		$userInfo = $this->getUserCard($data['phone']);
 
-		
-
-
-		 header("Content-type:text/html;charset=utf-8");
-
-		$conn = mssql_connect("sqlservername", "S3_INHOUSE", "S3_INHOUSE8472") or die (json_encode($errorArray));
-
-		mssql_select_db('S3_INHOUSE',$conn);
-
-		$sql = 'select * from ggm01  where gga05c  like "A007258" ';
-
-	    $odb_comm=mssql_query($sql);
-
-	    $Num=mssql_num_rows($odb_comm);
-
-	    $key = 0;
-
-	    for($i=0;$i<$Num;$i++){
-
-		  $record=mssql_fetch_array($odb_comm);
-
-		  $sql_detail = "select * from ggm02 where ggb01c like '".$record['gga01c']."' and ggb00c like  '".$record['gga00c']."'";
-
-		  echo $sql_detail;
-
-		  $detail=mssql_query($sql_detail);
-
-		  $detailNumber=mssql_num_rows($detail);
-
-		  $recordRecord = new UserCardRecordModel();
+	    if($userInfo['res'] == 1){
 
 
-		  $number = $recordRecord->getUserRecord($record['gga01c']);
+	    	$integration = $this->getUserInter($userInfo);
+			
+			$result['user_name'] = $userInfo['info']['gba03c'];
 
-		  echo $number;
+			$result['user_phone'] = $userInfo['info']['gba08c'];
 
+			$result['user_card'] = $userInfo['info']['gba01c'];
 
-		  if($number <= 0 ){
+			$result['birthday'] = strtotime($userInfo['info']['gba17d']);
 
-			  	 for($detail_i = 0; $detail_i < $detailNumber ; $detail_i++ ){
+			$result['user_integration'] = $integration ;
 
-				  	 $detail_list =mssql_fetch_array($detail);
+			$result['open_id'] = $data['open_id'];
 
-				  	 $record_array['record_order'] = $detail_list['ggb01c'];
+			$result['company_code'] = $userInfo['info']['gba00c'];
 
-				  	 $sql_list = "select * from gdm01 where gda01c like '".$detail_list['ggb03c']."'  ";
+			$this->insertCardRecord($userInfo['info']['gba01c']);
 
-				  	 $shangpin=mssql_query($sql_list);
+			$user = new UserModel();
 
-				  	 $shanpin_detail =mssql_fetch_array($shangpin);
+            $user->insertUser($result);
 
+                
+		} else{
 
-				  	 $record_array['record_commodity'] = $shanpin_detail['gda03c'];
-
-				  	 $record_array['user_card'] = $record['gga05c'];
-
-				  	 $record_array['order_time'] = $record['2'];
-
-				  	 $record_array['begin_time'] = $record['3'];
-
-				  	 $record_array['money'] = $detail_list['ggb11f'];
-
-
-				  	 $userCard = new UserCardRecordModel();
-
-				  	 $userCard->insert($record_array);
-
-			  }
-           }
+			echoErrorCode(20006);
 		}
+		
 	}
 
 
@@ -308,9 +401,13 @@ class InhousePlug {
 
 		$sql = 'select * from ggm01  where gga05c  like "'.$card.'" ';
 
+
+
+
 	    $odb_comm=mssql_query($sql);
 
 	    $Num=mssql_num_rows($odb_comm);
+
 
 	    $key = 0;
 
@@ -347,6 +444,8 @@ class InhousePlug {
 
 		  	 $record_array['money'] = $detail_list['ggb11f'];
 
+
+		  	 //var_dump($record_array);
 
 		  	 $userCard = new UserCardRecordModel();
 
@@ -408,7 +507,7 @@ class InhousePlug {
 
 				mssql_select_db('S3_INHOUSE',$conn);
 
-			    $sql = 'select * from gcm12  where gcn04c  like "'.$userInfo['user_phone'].'" and gcn00c like "002"';
+			    $sql = 'select * from gcm12  where gcn04c  like "'.$userInfo['user_phone'].'" and gcn00c like "'.$userInfo['company_code'].'"';
 
 			    $odb_comm=mssql_query($sql);
 

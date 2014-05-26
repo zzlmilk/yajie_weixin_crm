@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-22 12:44:00
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-22 13:02:13
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/User/register.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:589361816537d809003dfe5-90224312%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1347646600537d84d5db9f36-12770240%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a7c1c3b094ac931443d64f71bb7dae68f83bc0ea' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/User/register.tpl',
-      1 => 1400733839,
+      1 => 1400733873,
     ),
   ),
-  'nocache_hash' => '589361816537d809003dfe5-90224312',
+  'nocache_hash' => '1347646600537d84d5db9f36-12770240',
   'function' => 
   array (
   ),

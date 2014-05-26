@@ -239,8 +239,8 @@
 			{
 				this.sp.css({backgroundImage: 'url('+this.settings.image+')'});
                                 this.sp.css({backgroundRepeat: 'no-repeat'});
-                                this.sp.css({backgroundSize: '80%'});
-                                this.sp.css({width: '100%'});
+                                this.sp.css({height: '137px'});
+                                this.sp.css({width: '272px'});
                                 this.sp.attr("id", "picChange");
 			}
 		},

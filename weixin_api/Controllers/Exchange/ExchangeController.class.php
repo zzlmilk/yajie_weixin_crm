@@ -49,7 +49,7 @@ class ExchangeController implements exchange {
 
             $exchangeModel = new ExchangeModel();
 
-            $exchangeListArray = $exchangeModel->getExchangeList();
+            $exchangeListArray = $exchangeModel->getExchangeList($_REQUEST['start_point'],$_REQUEST['end_point']);
 
             if (count($exchangeListArray) > 0) {
 

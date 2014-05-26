@@ -148,6 +148,8 @@ class BaseController {
 
         $vars = 'action=url&url=' . urlencode($url) . '&open_id=' . $this->userOpenId;
 
+
+    
         $userApi = new userApi();
 
         $userInfo = $userApi->getUserInfo($this->userOpenId);

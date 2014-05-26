@@ -1,37 +1,36 @@
 <?php
-//此文件用于快速测试UTF8编码的文件是不是加了BOM，并可自动移除
-$basedir="."; //修改此行为需要检测的目录，点表示当前目录
-$auto=1; //是否自动移除发现的BOM信息。1为是，0为否。
-//link: http://www.jbxue.com
-//以下不用改动
-if ($dh = opendir($basedir)) {
-while (($file = readdir($dh)) !== false) {
-if ($file!='.' && $file!='..' && !is_dir($basedir."/".$file))
-echo "filename: $file ".checkBOM("$basedir/$file")." <br>";
+require_once('lib/nusoap.php');
+
+echo '<h2>Hello</h2>';
+
+$client = new nusoap_client('http://www.jianzhou.sh.cn/JianzhouSMSWSServer/services/BusinessService?wsdl', true);
+$client->soap_defencoding = 'utf-8';
+$client->decode_utf8      = false;
+$client->xml_encoding     = 'utf-8';
+$err = $client->getError();
+if ($err) {
+    echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
 }
-closedir($dh);
-}
-function checkBOM ($filename) {
-global $auto;
-$contents=file_get_contents($filename);
-$charset[1]=substr($contents, 0, 1);
-$charset[2]=substr($contents, 1, 1);
-$charset[3]=substr($contents, 2, 1);
-if (ord($charset[1])==239 && ord($charset[2])==187 && ord($charset[3])==191) {
-if ($auto==1) {
-$rest=substr($contents, 3);
-rewrite ($filename, $rest);
-return ("<font color=red>BOM found, automatically removed.</font>");
+$params = array(
+    'account' => 'test',
+    'password' => '111111',
+    'destmobile' =>  "13524446830",
+    'msgText' => "sds【城建投资】",
+);
+
+$result = $client->call('sendBatchMessage', $params, 'http://www.jianzhou.sh.cn/JianzhouSMSWSServer/services/BusinessService');
+if ($client->fault) {
+    echo '<h2>Fault (This is expected)</h2><pre>'; print_r($result); echo '</pre>';
 } else {
-return ("<font color=red>BOM found.</font>");
+    $err = $client->getError();
+    if ($err) {
+        echo '<h2>Error</h2><pre>' . $err . '</pre>';
+    } else {
+        echo '<h2>Result</h2><pre>'; print_r($result); echo '</pre>';
+    }
 }
-}else
-return ("BOM Not Found.");
-}
-function rewrite ($filename, $data) {
-$filenum=fopen($filename,"w");
-flock($filenum,LOCK_EX);
-fwrite($filenum,$data);
-fclose($filenum);
-}
+
+
+echo '<h2>Hello2</h2>';
+
 ?>

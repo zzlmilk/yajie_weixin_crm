@@ -16,33 +16,73 @@ class giftController implements gift {
 
     public function updateGiftRate() {
 
+
         if (!empty($_REQUEST['gift_type']) && $_REQUEST['gift_type'] > 0) {
 
-            $giftSettingModel = new giftSettingModel();
+            $gift = new giftModel();
 
-            $giftSettingModel->initialize('gift_type = ' . $_REQUEST['gift_type']);
+            $gift->initialize('gift_type = ' . $_REQUEST['gift_type']);
 
-            if ($giftSettingModel->vars_number > 0) {
+            $probabilityArray = $_REQUEST['probability'];
 
+
+            $sumProbability = array_sum($probabilityArray);
+
+             if ($_REQUEST['gift_type'] == "1") {
+                        //$this->getBigWheelList();
+
+               $url  = WebSiteUrl.'/pageredirst.php?action=gift&functionname=getBigWheelList';
+
+
+             } else if ($_REQUEST['gift_type'] == "2") {
+
+
+                $url  = WebSiteUrl.'/pageredirst.php?action=gift&functionname=getCardList';
+             }
+
+
+            if ($gift->vars_number > 0 && $sumProbability <=100) {
 
                 $data = array();
 
-                if ($_REQUEST['gift_one_probability'] != null && $_REQUEST['gift_two_probability'] != null && $_REQUEST['gift_three_probability'] != null) {
+                foreach($gift->vars_all as $k=>$v){
+
+                    if($v['gift_probability']!=$probabilityArray[$k]){
+
+                        $giftDetail = new giftModel();
+
+                        $giftDetail->addCondition('gift_key ='.$v['gift_key'],1);
+
+                        $giftDetail->initialize();
 
 
-                    $data['gift_one_probability'] = $_POST['gift_one_probability'];
-                    $data['gift_two_probability'] = $_POST['gift_two_probability'];
-                    $data['gift_three_probability'] = $_POST['gift_three_probability'];
+                        $update['gift_probability'] = $probabilityArray[$k];
 
-                    $giftSettingModel->update($data);
-                    $_ENV['smarty']->assign('requestVal', "1");
-                    if ($_REQUEST['gift_type'] == "1") {
-                        $this->getBigWheelList();
-                    } else if ($_REQUEST['gift_type'] == "2") {
-                        $this->getCardList();
+                        $giftDetail->update($update);
+
                     }
-                }
-            }
+
+                } 
+
+                $_ENV['smarty']->setDirTemplates('');
+
+                $_ENV['smarty']->assign('link',$url);
+
+                $_ENV['smarty']->assign('message','修改成功');
+
+                $_ENV['smarty']->display('message');
+
+            } else{
+                     
+                $_ENV['smarty']->setDirTemplates('');
+
+                $_ENV['smarty']->assign('link',$url);
+
+                $_ENV['smarty']->assign('message','概率总值不能大于100');
+
+                $_ENV['smarty']->display('message');
+
+           }
         }
     }
 
@@ -50,12 +90,12 @@ class giftController implements gift {
      *  获取刮刮卡礼品列表
      */
     public function getCardList() {
-        $giftSetting = new giftSettingModel(1);
+        $gift = new giftModel();
 
-        $giftSetting->initialize('gift_type = 2');
+        $gift->initialize('gift_type = 2');
 
 
-        $_ENV['smarty']->assign('giftSetting', $giftSetting->vars);
+        $_ENV['smarty']->assign('giftSetting', $gift->vars_all);
 
         $_ENV['smarty']->setDirTemplates('gift');
 
@@ -70,12 +110,14 @@ class giftController implements gift {
     public function getBigWheelList() {
 
 
-        $giftSetting = new giftSettingModel(1);
+        $giftSetting = new giftModel();
 
         $giftSetting->initialize('gift_type = 1');
 
 
-        $_ENV['smarty']->assign('giftSetting', $giftSetting->vars);
+       
+
+        $_ENV['smarty']->assign('giftSetting', $giftSetting->vars_all);
 
 
         $_ENV['smarty']->setDirTemplates('gift');

@@ -158,7 +158,17 @@
                         </div>
                         <div class="promoTitle">{$codeInfoItem.code_name}</div>
                         <div style="text-align: center;">
-                            <div class="serviceNumStyle" style="display: inline-block">{$codeInfoItem.commodity_cost}</div><div style="display: inline-block;font-size: 20px;">折</div>
+
+                            {if $codeInfoItem.commodity_type == 2}
+
+
+                                 <div class="serviceNumStyle" style="display: inline-block;font-size: 38px;">{$codeInfoItem.commodity_name}</div>
+                            {else}
+
+                                 <div class="serviceNumStyle" style="display: inline-block">{$codeInfoItem.commodity_cost}</div><div style="display: inline-block;font-size: 20px;">{$codeInfoItem.commodity_unit}</div>
+
+                            {/if}
+                           
                         </div>
                         <div class="whereFrom">
                             
@@ -200,7 +210,16 @@
                     <div class="cardBackground cardBackgroundColorEffective"  style='position: relative;'>
                         <div class="promoTitle">{$codeInfoItem.code_name}</div>
                         <div style="text-align: center;">
-                            <div class="serviceNumStyle" style="display: inline-block">{$codeInfoItem.commodity_cost}</div><div style="display: inline-block;font-size: 20px;">折</div>
+                           
+                            {if $codeInfoItem.commodity_type == 2}
+
+
+                                 <div class="serviceNumStyle" style="display: inline-block;font-size: 38px;">{$codeInfoItem.commodity_name}</div>
+                            {else}
+
+                                 <div class="serviceNumStyle" style="display: inline-block">{$codeInfoItem.commodity_cost}</div><div style="display: inline-block;font-size: 20px;">{$codeInfoItem.commodity_unit}</div>
+
+                            {/if}
                         </div>
                         <div class="whereFrom">
                               来自：

@@ -37,6 +37,22 @@ class ExchangeRecordModel extends Basic {
         }
     }
 
+
+    public function getuserExchangeStatus($user_id){
+
+        if(!empty($user_id) && $user_id > 0){
+
+
+            $this->addCondition('user_id = '.$user_id.' and status = 1',1);
+
+            $this->initialize();
+
+            return $this->vars_number;
+
+        }
+
+    }
+
 }
 
 ?>

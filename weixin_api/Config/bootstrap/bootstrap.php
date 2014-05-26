@@ -50,6 +50,9 @@ class website {
 
         $url->dispatcher();
 
+         $logs = apiLog . date("Y_m_d") . '.log';
+
+        log_write(json_encode($_REQUEST), $logs, 'COME');
         R(MODULE_URL, MODULE_DIR_NAME);
     }
 

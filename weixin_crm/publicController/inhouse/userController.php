@@ -618,6 +618,155 @@ class userController implements User {
         }
     }
 
+    public function AbnormalUserList($page,$pagesecord){
+
+       
+
+           
+
+            $pageSize = $this->pageSize;
+
+             $dateCount = $pageSize * ($page - 1);
+
+
+            $AbnormalUser = new AbnormalUserModel();
+
+
+            //$AbnormalUser->addOrderBy('user_state ASC');
+
+            $AbnormalUser->initialize('user_state = 0');
+
+            $number = $AbnormalUser->vars_number;
+
+            $AbnormalUser->addOffset($dateCount, $pageSize);
+
+            $AbnormalUser->initialize('user_state = 0');
+
+            $result = $AbnormalUser->vars_all;
+           
+            $_ENV['smarty']->assign('info', $result);
+
+            $url_user = WebSiteUrl . "/pageredirst.php?action=user&functionname=AbnormalUser&type=1&ablepage=".$pagesecord;
+
+            $page = $_ENV['smarty']->getPages($url_user, $page, $number, $pageSize);
+
+            $_ENV['smarty']->setDirTemplates('user');
+
+            $_ENV['smarty']->assign('pages', $page);
+
+
+    }
+    public function AbnormalUser(){
+
+
+           if(!empty($_REQUEST['page'])){
+
+              $page = $_REQUEST['page'];
+
+           } else{
+
+              $page = 1;
+
+           }
+
+
+           switch ($_REQUEST['type']) {
+               case '1':
+                   
+
+                    $list_page = $page;
+
+
+
+                    $state_page = ($_REQUEST['ablepage'] > 0 ) ? $_REQUEST['ablepage'] : 1;
+
+                   break;
+
+              case '2':
+
+
+                    $state_page = $page;
+
+                    $list_page = ($_REQUEST['ablepage'] > 0 ) ? $_REQUEST['ablepage'] : 1;
+
+                    break;
+               
+               default:
+                   
+
+                    $state_page = 1;
+
+                    $list_page = 1;
+
+                   break;
+           }
+
+            $this->AbnormalUserState($state_page,$list_page);
+
+            $this->AbnormalUserList($list_page,$state_page);
+            
+            $_ENV['smarty']->display('AbnormalUser');
+
+    }
+
+
+    public function AbnormalUserStateUpdate(){
+
+        if(!empty($_REQUEST['id'])){
+
+            $table = new AbnormalUserModel();
+
+            $table->initialize('user_id = '.$_REQUEST['id']);
+
+            if($table->vars_number > 0){
+
+                $table->vars['user_state'] = 1;
+
+                $table->updateVars();
+
+                echo '<script>alert("修改成功！");window.location.href="'.WebSiteUrl.'/pageredirst.php?action=user&functionname=AbnormalUser"</script>';
+
+                die;
+
+            }
+
+        }
+    }
+
+
+    public function AbnormalUserState($page,$pagesecord){
+
+            
+
+            $pageSize = $this->pageSize;
+
+
+            $dateCount = $pageSize * ($page - 1);
+
+          
+            $AbnormalUser = new AbnormalUserModel();
+
+            $AbnormalUser->initialize('user_state =  1');
+
+            $number = $AbnormalUser->vars_number;
+
+            $AbnormalUser->addOffset($dateCount, $pageSize);
+
+            $AbnormalUser->initialize('user_state =  1');
+
+            $result = $AbnormalUser->vars_all;
+           
+            $_ENV['smarty']->assign('info_state', $result);
+
+            $url = WebSiteUrl . "/pageredirst.php?action=user&functionname=AbnormalUser&type=2&ablepage=".$pagesecord;
+
+            $page = $_ENV['smarty']->getPages($url, $page, $number, $pageSize);
+
+            $_ENV['smarty']->assign('pages_state', $page);
+           
+            
+    }
+
 }
 
 ?>

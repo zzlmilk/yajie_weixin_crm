@@ -108,15 +108,6 @@ class CodeController implements Code {
 
             $codeDetail = $code->getCode($codeType);
 
-
-
-
-//            $codeR = new PromoCodeRecordModel();
-//
-//            $info = $codeR->addCode($codeDetail['promo_code_id'], $_REQUEST['open_id']);
-
-
-
             AssemblyJson($codeDetail);
         } else {
 

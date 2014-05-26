@@ -20,6 +20,8 @@
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
+        <link href="{$WebSiteUrl}/css/crm_table_style.css" rel="stylesheet">
+
 
         <title>大转盘游戏配置信息</title>
     </head>
@@ -29,48 +31,6 @@
         e.preventDefault()
         $(this).tab('show');
     })
-
-    var a = 0;
-
-    $("#editOneProbability").click(function(){
-    if((a%2) == 1){
-    $(this).html("修 改");
-    $("#gift_one_probability").attr('ReadOnly', true);
-    a++;
-}else{
-$(this).html("保 存");
-$("#gift_one_probability").attr('ReadOnly', false);
-a++;
-}
-
-});
-$("#editTwoProbability").click(function(){
-if((a%2) == 1){
-$(this).html("修 改");
-$("#gift_two_probability").attr('ReadOnly', true);
-a++;
-}else{
-$(this).html("保 存");
-$("#gift_two_probability").attr('ReadOnly', false);
-a++;
-}
-
-});
-$("#editThreeProbability").click(function(){
-if((a%2) == 1){
-$(this).html("修 改");
-$("#gift_three_probability").attr('ReadOnly', true);
-a++;
-}else{
-$(this).html("保 存");
-$("#gift_three_probability").attr('ReadOnly', false);
-a++;
-}
-
-})
-});
-
-
     </script>
 
 
@@ -100,29 +60,32 @@ a++;
             width:12%; 
         }
         .rowLocation{
-            margin-top: 3em;
+            margin-top: 10px;
+
+            clear: both;
+
+            height: 34px;
+
+            line-height: 37px;
         }
     </style>
 
     <boby>
 
-        <div class="bigWheelWarp">
-            <div class="titleStyle">大转盘游戏配置信息</div>
+        <div class="navBarStyle">
+    当前位置：微游戏管理 > 大转盘游戏配置信息
+</div>
 
-            <ul class="nav nav-tabs" id="myTab">
-                <li class="active"><a href="#probability" data-toggle="tab">概率配置</a></li>
-                <li><a href="#prize" data-toggle="tab">奖品配置</a></li>
-                <li><a href="#complex" data-toggle="tab">综合配置</a></li>
-                <li><a href="#gameTest" data-toggle="tab">游戏测试</a></li>
-                <li><a href="#other" data-toggle="tab">其他</a></li>
-            </ul>
+
+        <div class="bigWheelWarp">
+           
 
             <div class="tab-content">
 
 
 
                 <div style="color: #428bca; margin-top: 1em; padding-left: 1.5em; width: 50%;">
-                    提示: 概率的配置信息目前只给出一 二 三等奖的概率配置, 概率以百分比计算,所填概率之和必须小于100, 一百减去一二三等奖概率之和剩余概率由其他项平均分配!
+                    提示:概率以百分比计算,所填概率之和必须小于100, 一百减去当前概率之和,剩余概率由其他项平均分配!
                     <br /><b style=" color: rgb(240,173,78)">注:所填写的概率必须为整数</b>
                 </div>
                 {if $requestVal eq "1"}
@@ -134,21 +97,18 @@ a++;
                     <form action="{$WebSiteUrl}/pageredirst.php?action=gift&functionname=updateGiftRate" method='post' id='form1' name='form1' >
 
                         <input type="hidden" name="gift_type" value="1"/>
-                        <div class="rowLocation">
-                            <label for="inputPassword3" class="control-label col-sm-2 fontStyle">当前一等奖概率</label>
-                            <input type="text" ReadOnly="true" name='gift_one_probability' id="gift_one_probability" class="form-control nowProbability" value="{$giftSetting.gift_one_probability}" placeholder="所显示为当前概率">
-                            <button type="button" class="btn btn-warning" id="editOneProbability" style=" letter-spacing: 0.2em;">修改</button>
+
+                        {foreach from=$giftSetting item=setting}
+
+                        <div class="rowLocation" style='clear: both;'>
+                            <label for="inputPassword3" class="control-label col-sm-2 ">{$setting.gift_name}概率</label>
+                            <input type="text" name='probability[]' id="" class="form-control nowProbability" value="{$setting.gift_probability}" placeholder="所显示为当前概率">
+                           
                         </div>
-                        <div class="rowLocation">
-                            <label for="inputPassword3" class="control-label col-sm-2 fontStyle">当前二等奖概率</label>
-                            <input type="text" ReadOnly="true" id="gift_two_probability"  name='gift_two_probability' class="form-control nowProbability" value="{$giftSetting.gift_two_probability}" placeholder="所显示为当前概率">  
-                            <button type="button" class="btn btn-warning" id="editTwoProbability" style=" letter-spacing: 0.2em;">修改</button>
-                        </div>
-                        <div class="rowLocation">
-                            <label for="inputPassword3" class="control-label col-sm-2 fontStyle">当前三等奖概率</label>
-                            <input type="text" ReadOnly="true" id="gift_three_probability"  name='gift_three_probability'  class="form-control nowProbability" value="{$giftSetting.gift_three_probability}" placeholder="所显示为当前概率">
-                            <button type="button" class="btn btn-warning" id="editThreeProbability" style=" letter-spacing: 0.2em;">修改</button>
-                        </div>
+
+
+                        {/foreach}
+                       
 
                         <div style=" margin-top: 3em;margin-left: 31.5em;">
                             <button type="submit" class="btn btn-primary" id="submitProbabilityInfo" style=" letter-spacing: 0.2em;"   onclick='$("form1").submit();' >提交信息</button>
@@ -159,10 +119,6 @@ a++;
                 </div>
 
 
-                <div class="tab-pane" id="prize">奖品配置模块</div>
-                <div class="tab-pane" id="complex">综合配置模块</div>
-                <div class="tab-pane" id="gameTest">游戏测试模块</div>
-                <div class="tab-pane" id="other">其他模块配置</div>
             </div>
 
         </div>

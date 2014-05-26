@@ -42,7 +42,10 @@
 	var Datetimepicker = function (element, options) {
 		var that = this;
 
+
+
 		this.element = $(element);
+
 
 		this.language = options.language || this.element.data('date-language') || "en";
 		this.language = this.language in dates ? this.language : "en";
@@ -67,6 +70,14 @@
 		this.pickerPosition = options.pickerPosition || this.element.data('picker-position') || 'bottom-right';
 		this.showMeridian = options.showMeridian || this.element.data('show-meridian') || false;
 		this.initialDate = options.initialDate || new Date();
+
+
+		this.beginHour = parseInt(options.beginHour) || 0;
+
+		this.endHour = parseInt(options.endHour) || 24;
+
+
+
 
 		this._attachEvents();
 
@@ -585,7 +596,7 @@
 
 			html = [];
 			var txt = '', meridian = '', meridianOld = '';
-			for (var i = 0; i < 24; i++) {
+			for (var i = this.beginHour; i < this.endHour; i++) {
 				var actual = UTCDate(year, month, dayMonth, i);
 				clsName = '';
 				// We want the previous hour for the startDate

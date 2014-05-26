@@ -13,7 +13,7 @@ class UserController extends BaseController {
 
             $this->userOpenId = $_REQUEST['open_id'];
         } else {
-            $this->userOpenId = 'ocpOot-COx7UruiqEfag_Lny7dlc';
+            $this->userOpenId = 'oIUY-tzD2rRdkycAc5ceQjtI1-ok';
 
 
             //$this->userOpenId = 'dasdasd';

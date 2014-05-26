@@ -467,6 +467,9 @@ function curlGet($url) {
     return $result;
 }
 
+
+
+
 /**
  * 调用模块的操作方法 /user/get_info    模块 + 方法名
  * @param string $url 调用地址

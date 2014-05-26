@@ -7,7 +7,7 @@
 	<div style='position: absolute; top:10px; left: 1140px; '>
 
 		<img src='{$WebSiteUrl}/images/lock.png'>
-		<a style='color: white;font-size: 14px;display: inline-block' href='{$URLHANDLER}/process.php?login=0' class=''>安全退出</a>
+		<a style='color: white;font-size: 14px;display: inline-block' href='{$WebSiteUrl}/pageredirst.php?action=login&functionname=logout' class=''>安全退出</a>
 	</div>
 
 	<!-- <div style='position: absolute; top: 28px; left: 1154px; '>
