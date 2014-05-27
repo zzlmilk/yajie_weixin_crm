@@ -89,6 +89,9 @@
             .titleBorderRight{
                 border-right: 1px solid #e4e4e4;
             }
+            .summary{
+                font-size: 14px;
+            }
         </style>
     </head>
     <body style='background-color: rgb(243,237,227);'>
@@ -151,7 +154,7 @@
                             <img width="80" height="80" src="{$WebImageUrl}{$exchangeItem.exchange_image}">
                             <!--                            </a>-->
                         </div>
-                        <div style="float: left;margin: 10px;width: 58%;">
+                        <div style="float: left;margin: 10px;width: 62%;margin-left: 0px;">
                             <div style="word-wrap: break-word; word-break: normal;">
                                 <p>
                                     <span  class="summary">{$exchangeItem.exchange_name}</span> 
@@ -160,7 +163,7 @@
 
 
                                 </p>
-                                <p style="color: #b4b4b4">
+                                <p style="color: #b4b4b4;font-size: 12px;margin-top: -8px;">
                                     {$exchangeItem.exchange_summary}
                                 </p>
 <!--                                <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g={$model}&a=exchange&v=changeGoods&goodsId={$exchangeItem.exchange_id}&open_id={$open_id}"><button  type="button" class="btn btn-warning btn-xs ">兑换</button></a></div>-->

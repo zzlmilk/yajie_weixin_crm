@@ -364,13 +364,27 @@
                                             </td>
 
 
-                                    {/if}
+                                        {/if}
+                                        {if $auth_result[41]==1}
+
+                                        <tr>
+
+                                            <td width="85%">
+
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=exchangeManagement" target="mainFrame" class="left-fontSmall" >礼品管理</a>
+
+                                                </div>
+                                            </td>
+
+
+                                        {/if}
 
 
 
-                                        </tr>
+                                    </tr>
 
-                                  
+
 
                                 </table>
 
