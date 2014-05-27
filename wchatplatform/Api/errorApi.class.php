@@ -46,7 +46,6 @@ class errorApi extends BaseController {
 
                     }
                     
-
                     die;
                     break;
 

@@ -279,7 +279,7 @@ class gameController extends BaseController {
 
                 }  else{
 
-                      //$gift->addCardRecord($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['gift_type']);
+                      $gift->addCardRecord($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['gift_type']);
                      
                       $this->getBigWheelText();
 
@@ -327,7 +327,7 @@ class gameController extends BaseController {
             
             $awardResult = $gift->sendUserGift($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['type']);
 
-            //$gift->addCardRecord($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['type']);
+            $gift->addCardRecord($_REQUEST['gift_id'], $_REQUEST['open_id'], $_REQUEST['type']);
 
 
 

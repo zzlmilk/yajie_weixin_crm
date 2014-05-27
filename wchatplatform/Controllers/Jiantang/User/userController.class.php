@@ -133,9 +133,15 @@ class UserController extends BaseController {
                                     }
                                 }
 
+                                $array = array();
 
+                                $array['open_id'] = $_REQUEST['open_id'];
 
-                                U(MODULE_DIR_NAME . '/user/userCenter', array('open_id' => $_REQUEST['open_id']));
+                                $url = U(SOURCE.'/user/userCenter',$array,1);
+
+                                $this->displayMessage("恭喜绑定成功",1,$url,'个人中心');
+
+                                //U(SOURCE . '/user/userCenter', array('open_id' => $_REQUEST['open_id']));
                             }
                         } else {
 
