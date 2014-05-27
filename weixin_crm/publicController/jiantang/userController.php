@@ -104,8 +104,21 @@ class userController implements User {
     public function pointAndMoneyManage() {
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $phone = trim($_POST['userPhone']);
+            if (!ctype_digit($phone)) {
+                $phoneCache = explode("-", $phone);
+                foreach ($phoneCache as $phoneNumber) {
+                    $intPhone.=$phoneNumber;
+                }
+                $phone = $intPhone;
+            }
+            if (!ctype_digit($phone)) {
+                echo "2";
+                die;
+//                $this->errorMessage = "手机号码格式不正确，请以13955555555或 139-555-55555形式查询";
+            }
             $userModel = new userModel();
-            $userModel->initialize("user_phone = '" . $_POST['userPhone'] . "'");
+            $userModel->initialize("user_phone = '" . $phone . "'");
 
             $result = $userModel->vars;
             if ($userModel->vars_number <= 0) {
@@ -125,7 +138,7 @@ class userController implements User {
             $userPointerRecordModel->initialize();
             $pointRecordShow = $userPointerRecordModel->vars_all;
 
-         
+
             $_ENV['smarty']->setDirTemplates('user');
             $_ENV['smarty']->assign('pointRecordData', $pointRecordShow);
             $_ENV['smarty']->display('manageView');

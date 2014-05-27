@@ -240,7 +240,7 @@ class PromoCodeRecordModel extends basic {
 
         $this->addJoin($join_str);
 
-        $where = ' code_end_time <= ' . mktime(0, 0, 0) .' and user_id = ' . $userinfo['user_id'] . '   and (state = 1 or state = 0 )';
+        $where = ' code_end_time >= ' . mktime(0, 0, 0) .' and code_end_time < '.(mktime(0,0,0) + 2*86400).' and user_id = ' . $userinfo['user_id'] . '   and (state = 1 or state = 0 )';
         
        
         $this->addGroupBy('code_merchandise');

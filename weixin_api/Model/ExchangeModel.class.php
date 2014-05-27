@@ -57,6 +57,8 @@ class ExchangeModel extends Basic {
 
             if ($this->vars_number > 0) {
 
+                $result['type'] = $this->vars['exchange_type'];
+
                 $userModel = new userModel();
 
                 $userinfo = $userModel->getUserInfo($result['open_id']);

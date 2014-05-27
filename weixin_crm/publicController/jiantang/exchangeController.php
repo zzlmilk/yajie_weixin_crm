@@ -244,10 +244,11 @@ class exchangeController implements exchange {
         
     }
 
+    //礼品兑换验证码（inhouse） 2014.5
     public function checkExchangeCode() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (!empty($_POST['exchangeCode'])) {
-                $Code =  strtolower($_POST['exchangeCode']);
+                $Code = strtolower($_POST['exchangeCode']);
                 $exchangeCode = new exchangeCodeModel();
                 $exchangeCode->initialize("code='" . $Code . "'");
                 $exchageCodeMesssage = $exchangeCode->vars;
@@ -294,6 +295,7 @@ class exchangeController implements exchange {
         $_ENV['smarty']->display('checkExchangeCode');
     }
 
+    //兑换统计（hot商品）2014.5
     public function exchangeTotle() {
         $exchangeCode = new exchangeCodeVerificationModel();
         $exchangeCode->addGroupBy("exchange_id");
@@ -318,6 +320,41 @@ class exchangeController implements exchange {
         $_ENV['smarty']->setDirTemplates('exchange');
         $_ENV['smarty']->assign('codeList', $codeMessage);
         $_ENV['smarty']->display('exchangeTotle');
+    }
+
+    public function exchangeManagement() {
+        $exchangeRecord = new exchangeRecordModel();
+        $joinString = ' LEFT JOIN user ON exchange_record.user_id = user.user_id left join exchange on exchange.exchange_id=exchange_record.exchange_id ';
+        $exchangeRecord->addJoin($joinString);
+        $exchangeRecord->initialize("exchange_state = '1'");
+        $exchangeRecordMessage = $exchangeRecord->vars_all;
+        $_ENV['smarty']->setDirTemplates('exchange');
+        $_ENV['smarty']->assign('exchangeRecordMessage', $exchangeRecordMessage);
+        $_ENV['smarty']->display('exchangeManagement');
+    }
+
+    public function exchangeManagementChange() {
+        $errorMessage = "";
+        if (isset($_REQUEST["recordId"])) {
+            $recordId = $_REQUEST["recordId"];
+            if (!empty($recordId)) {
+                $exchangeRecord = new exchangeRecordModel();
+                $exchangeRecord->initialize("exchange_record_id ='$recordId'");
+                $updateVal['status'] = 1;
+                $exchangeRecord->update($updateVal);
+            } else {
+                $errorMessage = "出现错误请刷新后重试";
+            }
+        } else {
+            $errorMessage = "出现错误请刷新后重试";
+        }
+        $_ENV['smarty']->assign('errorMessage', $errorMessage);
+        $this->exchangeManagement();
+//        $exchangeRecordMessage = $exchangeRecord->vars_all;
+//        var_dump($exchangeRecordMessage);
+//        $_ENV['smarty']->setDirTemplates('exchange');
+//        $_ENV['smarty']->assign('exchangeRecordMessage', $exchangeRecordMessage);
+//        $_ENV['smarty']->display('exchangeManagement');
     }
 
 }

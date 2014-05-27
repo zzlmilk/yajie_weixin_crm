@@ -18,6 +18,8 @@ class ExchangeRecordModel extends Basic {
 
         $data['exchange_time'] = time();
 
+        $data['exchange_state'] = $result['type'];
+
 
         $this->insert($data);
 
