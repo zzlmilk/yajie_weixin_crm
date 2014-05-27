@@ -129,6 +129,7 @@
 <script src="{$WebSiteUrl}/js/timeClass.js"></script>
 <script>
     $("#getUser").click(function(){ 
+    alert($("#userPhone").val());
     $("#errorPrint").html("");
     $.ajax({
     url:"{$WebSiteUrl}/pageredirst.php?action=user&functionname=pointAndMoneyManage",
@@ -139,6 +140,10 @@
 success:function(rData){
 if(rData=="1"){
 $("#errorPrint").html("未寻找到结果，请确认后重试");
+$("#userData").css("display","none");
+}
+else if(rData=="2"){
+$("#errorPrint").html("手机号码格式不正确，请以13955555555或 139-555-55555形式查询");
 $("#userData").css("display","none");
 }
 else{
@@ -286,11 +291,49 @@ $("#resourceNumber").val("");
 });
 }
 })
-$("#userPhone").on("input",function(){
-if(!getIntRegex($(this).val())){
-var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+//$("#userPhone").on("input",function(){
+//if(!getIntRegex($(this).val())){
+//var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+//
+//$("#userPhone").val(cutString);
+//}
+//});
 
-$("#userPhone").val(cutString);
+$("#userPhone").on("keyup", function(event) {
+        
+var val = $(this).val();
+        
+var lastString = val.substr(-1);
+        
+if (event.ctrlKey && event.keyCode == 86) {
+if (!getPhoneRegex($(this).val()) && !getMobilPhoneRegex($(this).val())) {
+$(this).val("");
+}
+}
+else if (event.keyCode != 17 && event.keyCode != 8 && event.keyCode!=224 && event.keyCode!=86) {
+if (!getIntRegex($(this).val())) {
+var cutString = $(this).val().substr(0, ($(this).val().length) - 1);
+
+$(this).val(cutString);
+}
+} else if(lastString == 'v'){
+            
+if (!getIntRegex($(this).val())) {
+var cutString = $(this).val().substr(0, ($(this).val().length) - 1);
+
+$(this).val(cutString);
+}
+}
+
+});
+
+
+$("#resourceNumber").on("keyup",function(){
+if(!getIntRegex($(this).val())){
+//var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+var cutString="";
+
+$(this).val(cutString);
 }
 });
 
