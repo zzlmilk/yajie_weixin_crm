@@ -42,10 +42,10 @@
 <div class="dataArea">
     <table class="table table-bordered crmTable" >
         <tr><th>礼品图片</th>
-            <!--            <th>礼品名称</th><th>礼品类型</th>-->
+                        <th style="width: 120px;">礼品名称</th><th style="width: 120px;">礼品类型</th>
             <th style="width: 120px;">兑换积分</th><th>物品简介</th>
-            <th>添加时间</th>
-            <th style="display: none">id</th><th>编辑</th><th>删除</th></tr>
+            <th style="width:140px;">添加时间</th>
+            <th style="display: none">id</th><th style="width:40px;">编辑</th><th style="width:40px;">删除</th></tr>
             {foreach from=$exchangeList item=exchangeIteam key=key}
             <tr>
                 <td><img src="{$WebSiteUrl}/giftImages/{$exchangeIteam.exchange_image}" width="80" height="80"></td>
@@ -58,11 +58,11 @@
                 {/if} 
             </td>
                 <td>{$exchangeIteam.exchange_integration}</td>
-                <td style="text-align: left;width: 50%">{$exchangeIteam.exchange_summary}</td>
+                <td style="text-align: left;width: 30%">{$exchangeIteam.exchange_summary}</td>
                 {if $exchangeIteam.create_time eq ""}
                     <td style="text-align: center;">暂无</td>
                 {else}
-                    <td style="text-align: left;">{$exchangeIteam.create_time|date_format:"%Y-%m-%d %H:%M"}</td>
+                    <td style="text-align: center;">{$exchangeIteam.create_time|date_format:"%Y-%m-%d %H:%M"}</td>
                 {/if}
                 <td  style="display: none">{$exchangeIteam.exchange_id}</td>
                 <td><a href="{$WebSiteUrl}/pageredirst.php?action=exchange&functionname=editExchangeItem&ItemId={$exchangeIteam.exchange_id}">编辑</a></td>
@@ -111,7 +111,7 @@ WarringStr+="<div class='form-group'><label  class=' control-label labelWidth'>"
 +"</div>";
 }
 var deleteUrl=$("#deleteUrl").val();
-$("#checkButton").attr("href", deleteUrl+alertText[4]);                
+$("#checkButton").attr("href", deleteUrl+alertText[6]);                
 $(".modal-body").html(WarringStr);
 })
 </script>

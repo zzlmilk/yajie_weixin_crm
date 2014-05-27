@@ -73,7 +73,7 @@
             <div class="form-group"> 
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品名称：</label>
                 <div class="col-sm-2">
-                    <input class="form-control " type="hidden" value=" " name="exchange_name" id="exchangeName">
+                    <input class="form-control inputWidth" type="text" value=" " name="exchange_name" id="exchangeName">
                 </div>
             </div> 
             <div class="form-group"> 
