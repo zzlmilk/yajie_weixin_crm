@@ -54,7 +54,7 @@
             <th style="width: 120px;">用户名称</th>
             <th style="width: 120px;">用户电话</th>
             <th style="width:140px;">兑换时间</th>
-            <th style="display: none">id</th><th style="width:80px;">收货状态</th><th style="width:80px;">确认</th></tr>
+            <th style="display: none">id</th><th style="width:80px;">收货状态</th><th style="width:80px;">状态确认</th></tr>
             {foreach from=$exchangeRecordMessage item=messageIteam key=key}
             <tr>
 
@@ -72,16 +72,20 @@
                 <td  style="display: none">{$messageIteam.exchange_record_id}</td>
                 <td>
                     {if $messageIteam.status eq 0}
-                        未收货
-                    {else}
+                        未发货
+                    {else if $messageIteam.status eq 1}
+                        已发货
+                    {else if $messageIteam.status eq 2}
                         已收货
+                    {else}
+                        状态未知
                     {/if} 
                 </td>
                 <td>
                     {if $messageIteam.status eq 0}
-                        <a href="#"  data-toggle="modal" data-target="#myModal" class="deleteButton ">确认收货</a>
-                    {else}
-                        <span href="#"class="nocheck ">确认收货</span>
+                        <a href="#" data-toggle="modal" data-target="#myModal" class="sendButton ">确认发货</a>
+                    {else if $messageIteam.status eq 1}
+                        <a href="#" data-toggle="modal" data-target="#myModal" class="resultsButton ">确认收货</a>
                     {/if} 
 
                 </td>
@@ -111,14 +115,19 @@
 </div>
 <div style="text-align: center">{$pages}</div> 
 <script>
-    $(".deleteButton").click(function (){
+
+    $(".sendButton").click(function(){
+    $("#myModalLabel").html("你要确认已经发货么？");
     var alertTitle=new Array();
     var alertText=new Array();
     var WarringStr ="";
+    
     var textObject=$(this).parent().parent().find("td");
+
     $(textObject).each(function(index){
     alertText[index]=$(this).html();
 })
+
 $("th").each(function(index){
 alertTitle[index]=$(this).html();
 })
@@ -129,7 +138,35 @@ WarringStr+="<div class='form-group'><label  class=' control-label labelWidth'>"
 +"</div>";
 }
 var deleteUrl=$("#deleteUrl").val();
-$("#checkButton").attr("href", deleteUrl+alertText[5]);                
+$("#checkButton").attr("href", deleteUrl+alertText[5]+"&actionType=send");                
 $(".modal-body").html(WarringStr);
+
+});
+$(".resultsButton").click(function(){
+
+var alertTitle=new Array();
+var alertText=new Array();
+var WarringStr ="";
+    
+var textObject=$(this).parent().parent().find("td");
+
+$(textObject).each(function(index){
+alertText[index]=$(this).html();
 })
+
+$("th").each(function(index){
+alertTitle[index]=$(this).html();
+})
+
+for (var i=0 ;i<(alertTitle.length)-3;i++){
+WarringStr+="<div class='form-group'><label  class=' control-label labelWidth'>"+alertTitle[i]+":</label>"
++"<label  class='control-label labelWidth'>"+alertText[i]+"</label>"
++"</div>";
+}
+var deleteUrl=$("#deleteUrl").val();
+$("#checkButton").attr("href", deleteUrl+alertText[5]+"&actionType=results");                
+$(".modal-body").html(WarringStr);
+
+});
+
 </script>
