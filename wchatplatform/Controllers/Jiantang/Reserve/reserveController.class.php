@@ -321,7 +321,7 @@ class reserveController extends BaseController {
             if ($_GET["payType"] == "weixin") {
                 
             } else if ($_GET["payType"] == "store") {
-                $this->displayMessage("您已经成功提交订单，请在预约时间内到店消费。<a href='" . WebSiteUrl . "?g=".SOURCE."&a=order&v=orderCheck&open_id=" . $this->userOpenId . "'>查看订单</a>");
+                $this->displayMessage("您已经成功提交订单，请在预约时间内到店消费。<a href='" . WebSiteUrl . "?g=".SOURCE."&a=reserve&v=orderCheck&open_id=" . $this->userOpenId . "'>查看订单</a>",1);
             }
 //                $pay = transferData(APIURL . "/order/revise_order_pay", "post", $payData);
 //                $pay = json_decode($pay, TRUE);

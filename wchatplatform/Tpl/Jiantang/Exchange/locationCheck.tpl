@@ -91,8 +91,8 @@
             </form>
         </div>
     </body>
-    <script src="{$WebSiteUrlPublic}/company/script/defined.js"></script>
-    <script src="{$WebSiteUrlPublic}/company/script/rexexTest.js"></script>
+    <script src="{$WebSiteUrlPublic}/javascript/defined.js"></script>
+    <script src="{$WebSiteUrlPublic}/javascript/rexexTest.js"></script>
     <script>
         //省市切换
         $("#province").change(function() {

@@ -2018,3 +2018,31 @@ May 26 13:25:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
 SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 26 and order_state = 0 and appointment_time >= 1401033600     
 May 26 13:25:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
 SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 26 13:29:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "oIUY-tzD2rRdkycAc5ceQjtI1-ok"     
+May 26 13:29:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "oIUY-tzD2rRdkycAc5ceQjtI1-ok"     
+May 26 13:29:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "oIUY-tzD2rRdkycAc5ceQjtI1-ok"     
+May 26 13:29:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1401082145 and user_id = 26 and order_state !=2     
+May 26 13:29:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+UPDATE weixin_jiantang.order SET order_id='7', order_code='2014052610500188', appointment_time='1401073200', order_money='', orders_remarks='', appointment_object='', merchandise_id='1', order_number='3', user_id='26', user_phone='13524446830', order_type='1', order_pay_state='0', order_state='0', order_time='1401072601', commodity_id='0' WHERE 1  AND appointment_time < 1401082145 and user_id = 26 and order_state !=2
+May 26 13:29:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 26 and order_state = 0 and appointment_time >= 1401033600     
+May 26 13:29:05 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
+May 26 13:35:25 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "oIUY-tzD2rRdkycAc5ceQjtI1-ok"     
+May 26 13:35:25 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/user/get_info
+SELECT * FROM weixin_jiantang.weixin_user  WHERE 1  AND openid like "oIUY-tzD2rRdkycAc5ceQjtI1-ok"     
+May 26 13:35:25 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.user  WHERE 1  AND user_open_id like "oIUY-tzD2rRdkycAc5ceQjtI1-ok"     
+May 26 13:35:25 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND appointment_time < 1401082525 and user_id = 26 and order_state !=2     
+May 26 13:35:25 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+UPDATE weixin_jiantang.order SET order_id='7', order_code='2014052610500188', appointment_time='1401073200', order_money='', orders_remarks='', appointment_object='', merchandise_id='1', order_number='3', user_id='26', user_phone='13524446830', order_type='1', order_pay_state='0', order_state='0', order_time='1401072601', commodity_id='0' WHERE 1  AND appointment_time < 1401082525 and user_id = 26 and order_state !=2
+May 26 13:35:25 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_order
+SELECT * FROM weixin_jiantang.order  WHERE 1  AND user_id = 26 and order_state = 0 and appointment_time >= 1401033600     
+May 26 13:35:25 [SQL]_null_0.0.0.0_/yajie_weixin_crm/weixin_api/order/get_merchandise
+SELECT * FROM weixin_company.merchandise  WHERE 1      
