@@ -163,6 +163,31 @@ class ExchangeController implements exchange {
         }
     }
 
+
+    /**
+     * 修改记录状态
+     */
+
+    public function revise_record_state(){
+
+        if(!empty($_REQUEST['id']) && !empty($_REQUEST['source'])){
+
+            $exchangeRecord = new exchangeRecordModel();
+
+            $number = $exchangeRecord->updateState($_REQUEST['id']);
+
+            $array['res'] = $number;
+
+            AssemblyJson($array);
+
+
+        } else{
+
+            echoErrorCode(105);
+        }
+
+    }
+
 }
 
 ?>

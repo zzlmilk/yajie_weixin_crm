@@ -86,7 +86,7 @@ document.write("</select> 日 ")
     <boby>
         <div class="registerWarp">
 
-            <form class="form-horizontal"  method='post' role="form" action="{$WebSiteUrl}?g={$model}&a=user&v=submitRegister">
+            <form class="form-horizontal"  method='post' role="form" action="?g={$model}&a=user&v=submitRegister">
                 
                 {*赠送人时 出现的提示信息*}
                 {if $state == 1}
