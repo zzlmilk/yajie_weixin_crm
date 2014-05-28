@@ -186,7 +186,7 @@ class weixinEvent {
 
         $userCode = $wechat->getRev()->getRevFrom(); //获取微信号码 查询数据库 查看是否已经绑定帐号
 
-        $text = '电话:0112312351625367';
+        $text = '客服微信：133-9112-9112';
         $wechat->text($text)->reply();
     }
 

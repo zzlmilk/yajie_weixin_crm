@@ -13,10 +13,14 @@ class website {
          * 初始化 加载配置文件
          */
         include_once 'defined.php';
+
         /**
          * 引入扩展函数库
          */
         include_once 'extends.php';
+
+
+       
 
 
         include_once 'BaseController.class.php';
@@ -27,6 +31,8 @@ class website {
          * 载入 路由 规则
          */
         include_once 'Dispatcher.class.php';
+
+
     }
 
     public function run() {
@@ -68,9 +74,6 @@ class website {
              * 实例化类
              */
             $className = MODULE_NAME_CONTROLLER;
-
-
-          
 
             $module = new $className();
 

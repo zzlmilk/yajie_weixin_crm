@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-22 13:02:13
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-28 12:23:46
          compiled from "/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/User/register.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1347646600537d84d5db9f36-12770240%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:704456195538564d2be4866-46758189%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a7c1c3b094ac931443d64f71bb7dae68f83bc0ea' => 
     array (
       0 => '/web/www/yajie_weixin_crm/wchatplatform/Tpl/Jiantang/User/register.tpl',
-      1 => 1400733873,
+      1 => 1401250988,
     ),
   ),
-  'nocache_hash' => '1347646600537d84d5db9f36-12770240',
+  'nocache_hash' => '704456195538564d2be4866-46758189',
   'function' => 
   array (
   ),
@@ -104,8 +104,7 @@ document.write("</select> 日 ")
     <boby>
         <div class="registerWarp">
 
-            <form class="form-horizontal"  method='post' role="form" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
-?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
+            <form class="form-horizontal"  method='post' role="form" action="?g=<?php echo $_smarty_tpl->getVariable('model')->value;?>
 &a=user&v=submitRegister">
                 
                 

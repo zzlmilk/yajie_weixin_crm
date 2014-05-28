@@ -139,7 +139,7 @@ class UserController extends BaseController {
 
                                 $url = U(SOURCE.'/user/userCenter',$array,1);
 
-                                $this->displayMessage("恭喜绑定成功",1,$url,'个人中心');
+                                $this->displayMessage("恭喜注册成功",1,$url,'个人中心');
 
                                 //U(SOURCE . '/user/userCenter', array('open_id' => $_REQUEST['open_id']));
                             }
