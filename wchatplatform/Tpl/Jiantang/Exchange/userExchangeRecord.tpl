@@ -76,9 +76,9 @@
                                 {$exchangeItem.exchange_info.exchange_summary}
                             </p>
                             {if $exchangeItem.exchange_record.status eq 1}
-                                <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g={$model}&a=exchange&v=changeGoodsState&goodsId={$exchangeItem.exchange_record.exchange_record_id}&open_id={$open_id}"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-primary btn-xs" style="width: 55px;">确认收货</button></a></div>
-                            {else}
-
+                                <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g={$model}&a=exchange&v=changeGoodsState&goodsId={$exchangeItem.exchange_record.exchange_record_id}&open_id={$open_id}"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-primary btn-xs" style="width: auto;">确认收货</button></a></div>
+                            {else if $exchangeItem.exchange_record.status eq 2}
+                                <div style="width: 100%; text-align: right;"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-primary btn-xs" style="width: auto;" disabled="yes">已经收货</button></div>
                             {/if}
                         </div>
                     </div>
