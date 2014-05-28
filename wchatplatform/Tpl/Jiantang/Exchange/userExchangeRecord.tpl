@@ -4,7 +4,7 @@
         <title>兑换列表</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta content="initial-scale=1.0; maximum-scale=4.0; user-scalable=no;" name="viewport">
-        <meta name="viewport" content="width=device-width,user-scalable=yes" />
+        <meta name="viewport" content="width=device-width" />
         <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
         <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
@@ -76,9 +76,9 @@
                                 {$exchangeItem.exchange_info.exchange_summary}
                             </p>
                             {if $exchangeItem.exchange_record.status eq 1}
-                                <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g={$model}&a=exchange&v=changeGoodsState&goodsId={$exchangeItem.exchange_record.exchange_record_id}&open_id={$open_id}"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-primary btn-xs" style="width: 55px;">确认收货</button></a></div>
-                            {else}
-
+                                <div style="width: 100%; text-align: right;"><a class="submitButton"  href="{$WebSiteUrl}?g={$model}&a=exchange&v=changeGoodsState&goodsId={$exchangeItem.exchange_record.exchange_record_id}&open_id={$open_id}"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-primary btn-xs" style="width: auto;">确认收货</button></a></div>
+                            {else if $exchangeItem.exchange_record.status eq 2}
+                                <div style="width: 100%; text-align: right;"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-primary btn-xs" style="width: auto;" disabled="yes">已经收货</button></div>
                             {/if}
                         </div>
                     </div>
