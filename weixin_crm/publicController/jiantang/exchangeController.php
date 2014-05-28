@@ -326,6 +326,7 @@ class exchangeController implements exchange {
         $exchangeRecord = new exchangeRecordModel();
         $joinString = ' LEFT JOIN user ON exchange_record.user_id = user.user_id left join exchange on exchange.exchange_id=exchange_record.exchange_id ';
         $exchangeRecord->addJoin($joinString);
+        $exchangeRecord->addOrderBy("status");
         $exchangeRecord->initialize("exchange_state = '1'");
         $exchangeRecordMessage = $exchangeRecord->vars_all;
         $_ENV['smarty']->setDirTemplates('exchange');
@@ -333,20 +334,31 @@ class exchangeController implements exchange {
         $_ENV['smarty']->display('exchangeManagement');
     }
 
+//管理收发货状态
     public function exchangeManagementChange() {
         $errorMessage = "";
         if (isset($_REQUEST["recordId"])) {
             $recordId = $_REQUEST["recordId"];
             if (!empty($recordId)) {
-                $exchangeRecord = new exchangeRecordModel();
-                $exchangeRecord->initialize("exchange_record_id ='$recordId'");
-                $updateVal['status'] = 1;
-                $exchangeRecord->update($updateVal);
+                if (isset($_REQUEST["actionType"]) && !empty($_REQUEST["actionType"])) {
+
+
+                    $exchangeRecord = new exchangeRecordModel();
+                    $exchangeRecord->initialize("exchange_record_id ='$recordId'");
+                    if ($_REQUEST["actionType"] == "send") {
+                       $updateVal['status'] = $changeType = 1;
+                    } else if ($_REQUEST["actionType"] == "results") {
+                       $updateVal['status'] = $changeType = 2;
+                    }
+                    $exchangeRecord->update($updateVal);
+                } else {
+                    $errorMessage = "出现错误请刷新后重试,或者联系管理员";
+                }
             } else {
-                $errorMessage = "出现错误请刷新后重试";
+                $errorMessage = "出现错误请刷新后重试,或者联系管理员";
             }
         } else {
-            $errorMessage = "出现错误请刷新后重试";
+            $errorMessage = "出现错误请刷新后重试,或者联系管理员";
         }
         $_ENV['smarty']->assign('errorMessage', $errorMessage);
         $this->exchangeManagement();

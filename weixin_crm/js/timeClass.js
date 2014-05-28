@@ -52,3 +52,30 @@ function getDateTimeMessage(startTime,useDays,timeFormat){
             break;
     }
 }
+
+function chcekValue(obj,urlStr){
+alert(obj.html());
+    var alertTitle=new Array();
+    var alertText=new Array();
+    var WarringStr ="";
+
+    var textObject=obj.parent().parent().find("td");
+
+    $(textObject).each(function(index){
+        alertText[index]=obj.html();
+    })
+
+    $("th").each(function(index){
+        alertTitle[index]=$(this).html();
+    })
+
+    for (var i=0 ;i<(alertTitle.length)-3;i++){
+        WarringStr+="<div class='form-group'><label  class=' control-label labelWidth'>"+alertTitle[i]+":</label>"
+        +"<label  class='control-label labelWidth'>"+alertText[i]+"</label>"
+        +"</div>";
+    }
+    var deleteUrl=$("#deleteUrl").val();
+    $("#checkButton").attr("href", deleteUrl+alertText[5]+"&actionType="+urlStr);                
+    $(".modal-body").html(WarringStr);
+
+}

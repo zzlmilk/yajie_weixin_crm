@@ -1,5 +1,4 @@
-<?php
-
+WebImageUrl<?php
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -52,7 +51,7 @@ class exchangeController extends BaseController {
             $postDate["start_point"] = 0;
             $postDate["end_point"] = 300;
         }
-        $exchangeList = transferData(APIURL . "/exchange/get_exchange_list", "post",$postDate);
+        $exchangeList = transferData(APIURL . "/exchange/get_exchange_list", "post", $postDate);
         $exchangeList = json_decode($exchangeList, true);
         $userInfo = transferData(APIURL . "/user/get_info", "post", $postDate);
         $userInfo = json_decode($userInfo, TRUE);
@@ -79,7 +78,7 @@ class exchangeController extends BaseController {
 
         $error->JudgeError($exchangeItem);
 
-        $this->assign("WebImageUrl", WebImageUrl . "small/");
+        $this->assign("WebImageUrl", WebImageUrl);
         $this->assign("exchangeInfo", $exchangeItem["exchange_info"]);
         $this->display("exchangeGoods");
     }
@@ -275,13 +274,7 @@ class exchangeController extends BaseController {
             $exchangeApi = new exchangeApi();
 
             $exchangeReocrd = $exchangeApi->getUserExchangeInfo($this->userOpenId, 'company');
-
-
-
-
-
-
-            $this->assign("WebImageUrl", WebImageUrl . "small/");
+            $this->assign("WebImageUrl", WebImageUrl);
 
             $this->assign('exchangeList', $exchangeReocrd);
 
@@ -289,6 +282,22 @@ class exchangeController extends BaseController {
         } else {
 
             $this->displayMessage('open_id未获取到 请重新从微信公众平台登录');
+        }
+    }
+
+    //用户收货
+    public function changeGoodsState() {
+        if (isset($_GET['goodsId'])) {
+            $postDate["source"] = SOURCE;
+            $postDate["id"] = $_GET['goodsId'];
+            $exchangeData = transferData(APIURL . "/exchange/revise_record_state", "post", $postDate);
+            $exchangeData = json_decode($exchangeData, TRUE);
+            var_dump($exchangeData);
+            if($exchangeData['res']==1){
+                $this->getUserExchangeRecord();
+            }else{
+                $this->displayMessage("网络请求失败或者您已经确认收货");
+            }
         }
     }
 
