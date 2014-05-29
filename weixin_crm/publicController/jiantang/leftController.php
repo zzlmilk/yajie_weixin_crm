@@ -12,7 +12,7 @@ class leftController {
         
         $mainContent = $admin->admin_auth($admin->vars['admin_auth']);
         
-     
+       
         $_ENV['smarty']->assign('auth_result', $mainContent);
 
 

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-22 17:33:39
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-28 10:13:57
          compiled from "/web/www/yajie_weixin_crm/weixin_crm//templates/jiantang/exchange/addExchangeItem.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:455375577537dc4738dffe4-40773117%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:8567538425385466524a537-47387336%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '30e50a7e7d9e431fada6acb19942ea5c54d2ac92' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm//templates/jiantang/exchange/addExchangeItem.tpl',
-      1 => 1400488781,
+      1 => 1401181171,
     ),
   ),
-  'nocache_hash' => '455375577537dc4738dffe4-40773117',
+  'nocache_hash' => '8567538425385466524a537-47387336',
   'function' => 
   array (
   ),
@@ -92,22 +92,22 @@ $_smarty_tpl->decodeProperties(array (
         <div style="height: 35px;"></div>
         <form class="form-horizontal" action="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
 /pageredirst.php?action=exchange&functionname=addExchangeItem" enctype="multipart/form-data" method="Post">
-            <!--            <div class="form-group"> -->
-            <!--<label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品名称：</label>-->
-            <!--                <div class="col-sm-2">-->
-            <input class="form-control " type="hidden" value=" " name="exchange_name" id="exchangeName">
-            <!--                </div>
-                        </div> -->
-            <!--            <div class="form-group"> 
-                            <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品类型：</label>
-                            <div class="col-sm-2">
-                                <select disabled="0" name="exchange_type" id='exchangeType' class="form-control inputWidth">
-                                    <option value="0" >虚拟</option>
-                                    <option value="1" selected="selected">实物</option>
-                                </select>-->
-            <input name='exchange_type' value="1" type="hidden">
-            <!--                </div>
-                        </div> -->
+            <div class="form-group"> 
+                <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品名称：</label>
+                <div class="col-sm-2">
+                    <input class="form-control inputWidth" type="text" value="" name="exchange_name" id="exchangeName">
+                </div>
+            </div> 
+            <div class="form-group"> 
+                <label for="inputEmail3" class="col-sm-2 control-label labelWidth">礼品类型：</label>
+                <div class="col-sm-2">
+                    <select disabled="0" name="exchange_type" id='exchangeType' class="form-control inputWidth">
+                        <option value="0" >虚拟</option>
+                        <option value="1" selected="selected">实物</option>
+                    </select>
+                    <input name='exchange_type' value="1" type="hidden">
+                </div>
+            </div> 
             <div class="form-group"> 
                 <label for="inputEmail3" class="col-sm-2 control-label labelWidth">兑换积分：</label>
                 <div class="col-sm-2">
@@ -253,7 +253,8 @@ $(".modal-body").html(WarringStr);
 })
 $("#exchangeIntegration").keyup(function(){
 if(!getIntRegex($(this).val())){
-var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+//var cutString=$(this).val().substr(0, ($(this).val().length)-1);
+var cutString="";
 
 $("#exchangeIntegration").val(cutString);
 }

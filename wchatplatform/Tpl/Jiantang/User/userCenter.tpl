@@ -144,15 +144,15 @@
                         </div>
                     </a>
                 </li>
-
+<!-- 
                 <li class="table-view-cell media">
                     <a class="push-right" href="inbox.html" data-transition="slide-in">
-                        <!--  <span class="media-object icon icon-trash pull-left"></span> -->
+                         <span class="media-object icon icon-trash pull-left"></span>
                         <div class="media-body">
                             会员健康信息
                         </div>
                     </a>
-                </li>
+                </li> -->
 
                 <!--                <li class="table-view-cell media">
                                     <a class="push-right" href="inbox.html" data-transition="slide-in">

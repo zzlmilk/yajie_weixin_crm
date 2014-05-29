@@ -55,6 +55,36 @@ class ExchangeRecordModel extends Basic {
 
     }
 
+
+    public function updateState($id){
+
+        if(!empty($id) && $id > 0){
+
+            $this->initialize('exchange_record_id ='.$id);
+
+            if($this->vars_number > 0){
+
+
+                if($this->vars['status'] == 2){
+
+                    return 0;
+
+                } else{
+
+                     $update['status'] = 2;
+
+                    $this->update($update);
+
+
+                    return 1;
+                }
+
+               
+            }
+        }
+
+    }
+
 }
 
 ?>

@@ -45,7 +45,7 @@ class adminModel extends Basic {
     function admin_auth($path) {
         $path_1 = explode(',',$path);
         foreach ((array) $path_1 as $kk => $vv) {
-            $maincontnet[$vv] = 1;
+            $maincontnet[(int)$vv] = 1;
         }
         return $maincontnet;
     }

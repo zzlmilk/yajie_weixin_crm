@@ -29,7 +29,7 @@ class BaseController {
             if (!empty($this->dir_name)) {
 
                 $this->smarty_dir = $this->dir_name;
-            } else {
+            } else { 
 
                 $this->smarty_dir = MODULE_DIR;
             }

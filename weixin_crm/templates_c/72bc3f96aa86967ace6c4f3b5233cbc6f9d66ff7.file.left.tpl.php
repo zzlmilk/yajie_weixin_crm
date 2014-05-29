@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-21 11:27:15
+<?php /* Smarty version Smarty-3.0-RC2, created on 2014-05-28 10:17:03
          compiled from "/web/www/yajie_weixin_crm/weixin_crm//templates/jiantang/left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1203753916537c1d13ec1b69-76669861%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7686749295385471f348ed6-78088983%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '72bc3f96aa86967ace6c4f3b5233cbc6f9d66ff7' => 
     array (
       0 => '/web/www/yajie_weixin_crm/weixin_crm//templates/jiantang/left.tpl',
-      1 => 1400489444,
+      1 => 1401243419,
     ),
   ),
-  'nocache_hash' => '1203753916537c1d13ec1b69-76669861',
+  'nocache_hash' => '7686749295385471f348ed6-78088983',
   'function' => 
   array (
   ),
@@ -400,13 +400,28 @@ _css.css" rel="stylesheet" type="text/css">
                                             </td>
 
 
-                                    <?php }?>
+                                        <?php }?>
+                                        <?php if ($_smarty_tpl->getVariable('auth_result')->value[41]==1){?>
+
+                                        <tr>
+
+                                            <td width="85%">
+
+                                                <div class='left-a' >
+                                                    <a style='color: #3394c4' href="<?php echo $_smarty_tpl->getVariable('WebSiteUrl')->value;?>
+/pageredirst.php?action=exchange&functionname=exchangeManagement" target="mainFrame" class="left-fontSmall" >礼品管理</a>
+
+                                                </div>
+                                            </td>
+
+
+                                        <?php }?>
 
 
 
-                                        </tr>
+                                    </tr>
 
-                                  
+
 
                                 </table>
 
