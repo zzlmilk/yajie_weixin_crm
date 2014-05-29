@@ -20,14 +20,20 @@ class questionController implements question {
     }
 
     public function questionCount() {
-//        $nowDay = date("Y-m-d");
-//        $nowDay = $nowDay . " 00:00";
-//        $todayStart = strtotime($nowDay);
-//        $todayEnd = 86399 + $todayStart;
-//        $registrationCount = new userRegistrationRecordModel();
-//        $registrationCount->initialize("record_time between $todayStart and $todayEnd");
-//        $registrationValue = $registrationCount->vars_number;
-      //  $_ENV['smarty']->assign('registrationNumber', $registrationValue);
+        $question = new questionModel();
+        $questionRecord = new questionStatisticsModel();
+        $recordArray = array();
+        $question->initialize();
+        $questionValue = $question->vars_all;
+        
+        foreach ($questionValue as $k => $value) {
+            $questionRecord->addCondition("question_id ='" . $value['question_id'] . "'", 1);
+            $questionRecord->initialize();
+            $querecordValue = $questionRecord->vars;
+            array_push($recordArray, $querecordValue);
+        }
+        $_ENV['smarty']->assign('record', $recordArray);
+        $_ENV['smarty']->assign('questionValue', $questionValue);
         $_ENV['smarty']->display('questionCount');
     }
 

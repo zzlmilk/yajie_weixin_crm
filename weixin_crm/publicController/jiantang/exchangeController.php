@@ -329,6 +329,24 @@ class exchangeController implements exchange {
         $exchangeRecord->addOrderBy("status");
         $exchangeRecord->initialize("exchange_state = '1'");
         $exchangeRecordMessage = $exchangeRecord->vars_all;
+        foreach ($exchangeRecordMessage as $key => $value) {
+            $provinceId = $value['province_id'];
+            $cityId = $value['city_id'];
+            $areaId = $value['area_id'];
+            $area = new areaModel();
+            $area->addCondition("area_id=$provinceId");
+            $area->initialize();
+            $province = $area->vars;
+            $area->addCondition("area_id=$cityId", 1);
+            $area->initialize();
+            $city = $area->vars;
+            $area->addCondition("area_id=$areaId", 1);
+            $area->initialize();
+            $areaName = $area->vars;
+            $exchangeRecordMessage[$key]['province'] = $province;
+            $exchangeRecordMessage[$key]['city'] = $city;
+            $exchangeRecordMessage[$key]['area'] = $areaName;
+        }
         $_ENV['smarty']->setDirTemplates('exchange');
         $_ENV['smarty']->assign('exchangeRecordMessage', $exchangeRecordMessage);
         $_ENV['smarty']->display('exchangeManagement');
@@ -346,9 +364,9 @@ class exchangeController implements exchange {
                     $exchangeRecord = new exchangeRecordModel();
                     $exchangeRecord->initialize("exchange_record_id ='$recordId'");
                     if ($_REQUEST["actionType"] == "send") {
-                       $updateVal['status'] = $changeType = 1;
+                        $updateVal['status'] = $changeType = 1;
                     } else if ($_REQUEST["actionType"] == "results") {
-                       $updateVal['status'] = $changeType = 2;
+                        $updateVal['status'] = $changeType = 2;
                     }
                     $exchangeRecord->update($updateVal);
                 } else {

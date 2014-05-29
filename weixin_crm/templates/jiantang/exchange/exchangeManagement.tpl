@@ -38,6 +38,9 @@
         color:#e4e4e4;
         cursor: pointer;
     }
+    .tableFont{
+        font-size: 14px;
+    }
 </style>
 <div class="navBarStyle">
     当前位置：兑换管理 > 礼品管理
@@ -47,14 +50,16 @@
     <div class="sortBar alert alert-warning"><label for="inputPassword3" class="control-label">{$errorMessage}</label></div>
 {/if}
 <div class="dataArea">
-    <table class="table table-bordered crmTable" >
+    <table class="table table-bordered crmTable tableFont" >
         <tr>
             <th style="width: 120px;">礼品名称</th>
             <th style="width: 120px;">兑换积分</th>
             <th style="width: 120px;">用户名称</th>
             <th style="width: 120px;">用户电话</th>
             <th style="width:140px;">兑换时间</th>
-            <th style="display: none">id</th><th style="width:80px;">收货状态</th><th style="width:80px;">状态确认</th></tr>
+            <th style="width: 30%;">送货地址</th>
+            <th style="display: none">id</th>
+            <th style="width:80px;">收货状态</th><th style="width:80px;">状态确认</th></tr>
             {foreach from=$exchangeRecordMessage item=messageIteam key=key}
             <tr>
 
@@ -69,7 +74,11 @@
                 {else}
                     <td style="text-align: center;">{$messageIteam.create_time|date_format:"%Y-%m-%d %H:%M"}</td>
                 {/if}
+                <td style="text-align: left;">
+                    {$messageIteam.province}{$messageIteam.city}{$messageIteam.area}{$messageIteam.street}
+                </td>
                 <td  style="display: none">{$messageIteam.exchange_record_id}</td>
+
                 <td>
                     {if $messageIteam.status eq 0}
                         未发货
@@ -164,7 +173,7 @@ WarringStr+="<div class='form-group'><label  class=' control-label labelWidth'>"
 +"</div>";
 }
 var deleteUrl=$("#deleteUrl").val();
-$("#checkButton").attr("href", deleteUrl+alertText[5]+"&actionType=results");                
+$("#checkButton").attr("href", deleteUrl+alertText[6]+"&actionType=results");                
 $(".modal-body").html(WarringStr);
 
 });

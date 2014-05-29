@@ -53,7 +53,7 @@ function getDateTimeMessage(startTime,useDays,timeFormat){
     }
 }
 
-function chcekValue(obj,urlStr){
+function checkValue(obj,urlStr){
 alert(obj.html());
     var alertTitle=new Array();
     var alertText=new Array();

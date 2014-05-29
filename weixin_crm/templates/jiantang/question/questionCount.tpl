@@ -36,8 +36,9 @@
                 line-height: 3em;
             }
             .textStyle{
-                text-align: center;
+                text-align: left;
                 margin-top: 2em;
+                padding-left: 8em;
             }
             .textWidth{
                 width:50%;
@@ -58,18 +59,12 @@
             <div class="tab-content">
                 <!-- 概率配置模块 -->
                 <div class="tab-pane active textWidth" id="probability" >
-                    <div class='textStyle form-group'><label  class=' control-label labelWidth' style='text-align: left;'>你的姓名是什么:</label>
-                        <label  class='control-label labelWidth'>A：5人&nbsp;&nbsp;B:15人&nbsp;&nbsp;C:8人&nbsp;&nbsp;D:6人</label>
+                    {foreach from=$questionValue item=questionItem key=k}
+                    <div class='textStyle form-group'><label  class=' control-label labelWidth' style='text-align: left;'>{$questionItem.question_title}</label>
+                        <label  class='control-label labelWidth'>A：{$record.$k.question_1}人&nbsp;&nbsp;B:{$record.$k.question_2}人&nbsp;&nbsp;C:{$record.$k.question_3}人</label>
                     </div>
-                    <div class='textStyle form-group'><label  class=' control-label labelWidth'  style='text-align: left;'>你的性别是什么:</label>
-                        <label  class='control-label labelWidth'>A：10人&nbsp;&nbsp;B:10人&nbsp;&nbsp;C:7人&nbsp;&nbsp;D:6人</label>
-                    </div>
-                    <div class='textStyle form-group'><label  class=' control-label labelWidth'  style='text-align: left;'>你的兴趣有:</label>
-                        <label  class='control-label labelWidth'>A：9人&nbsp;&nbsp;B:14人&nbsp;&nbsp;C:7人&nbsp;&nbsp;D:4人</label>
-                    </div>
-                    <div class='textStyle form-group'><label  class=' control-label labelWidth'  style='text-align: left;'>你的自我介绍:</label>
-                        <label  class='control-label labelWidth'>A：15人&nbsp;&nbsp;B:5人&nbsp;&nbsp;C:8人&nbsp;&nbsp;D:6人</label>
-                    </div>
+                    {/foreach}
+                    
                 </div>
             </div>
 

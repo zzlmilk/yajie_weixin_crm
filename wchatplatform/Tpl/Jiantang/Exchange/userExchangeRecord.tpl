@@ -3,8 +3,7 @@
     <head>
         <title>兑换列表</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta content="initial-scale=1.0; maximum-scale=4.0; user-scalable=no;" name="viewport">
-        <meta name="viewport" content="width=device-width" />
+        <meta content="initial-scale=1.0;width=device-width; maximum-scale=1.0; user-scalable=no;" name="viewport">
         <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
         <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
